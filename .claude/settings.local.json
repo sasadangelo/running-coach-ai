@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Skill(skill-creator)",
+      "Bash(python3:*)",
+      "Skill(training-plan)",
+      "Bash(chmod:*)",
+      "Bash(mkdir:*)",
+      "Skill(running-coach)",
+      "Skill(training-dashboard)",
+      "Skill(garmin-sync)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": []
+}

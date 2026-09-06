@@ -24,7 +24,7 @@
 |----------|-------|------|
 | **Ripetute** (200m/400m, poi 800m) | **5:20-5:30/km** | Fartlek leggero: 200m con recupero 1', 400m con recupero 2'. Da metà piano si aggiungono gli 800m (recupero ~2'30"), eventualmente un 1600m più avanti se ti va |
 | **Tempo/Soglia** | **6:00-6:20/km** | Parti verso 6:00-6:10, è normale calare verso 6:15-6:20 nelle ultime ripetizioni |
-| **Lungo** | 6:30-6:50/km come riferimento | Corsa continua; se non riesci a mantenerla, rallenta o cammina in autonomia |
+| **Lungo** | **6:40-7:00/km come riferimento attuale** | Corsa continua; se la FC sale troppo, rallenta o cammina in autonomia |
 | **Recupero (jog tra le ripetute/tempo)** | ~8:30/km | Jog leggero, non camminata |
 | **Riscaldamento/Defaticamento** | ~8:00/km | |
 
@@ -84,7 +84,7 @@
 
 - **Ripetute**: 1km risc., 8 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 3.60km, ~31min
 - **Tempo**: 1km risc., 4 x 500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
-- **Lungo**: 0.4km risc. partendo piano, 4.2km continui @ 6:30-6:50/km, 0.4km def. — 5.00km, ~35min; nessuna fermata programmata
+- **Lungo**: 5' riscaldamento molto facile, 4.2km a ritmo conversazionale (indicativamente 6:40-7:00/km), 5' defaticamento — FC indicativa 145-160
 
 ### Settimana 3 (14-20 settembre) — Fase A
 **Volume totale**: 14.15 km

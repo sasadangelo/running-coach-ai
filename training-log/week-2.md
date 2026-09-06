@@ -3,17 +3,40 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 7.99 km
-- **Total Time**: 1:05:46
-- **Total Elevation**: 10 m
+- **Total Activities**: 3
+- **Total Distance**: 12.00 km
+- **Total Time**: 1:35:14
+- **Total Elevation**: 13 m
 
 ### Running Totals
-- **Total Run Time**: 0:33:38
-- **Total Walk Time**: 0:32:10
+- **Total Run Time**: 0:57:22
+- **Total Walk Time**: 0:37:58
 
 ## Activities
 
+### 2026-09-06 18:56:14 - Lungo 4 Km
+
+**Type**: Run
+**Distance**: 4.01 km
+**Duration**: 0:29:28
+**Pace**: 7:22/km
+**Run time**: 0:23:44
+**Walk time**: 0:05:48
+**Elevation**: 3 m
+**Heart Rate**: 151 bpm (max: 168)
+**Note**: Lungo 4Km. Fermato a camminare 3 volte oltre zona 2. Resistenza aerobica ancora scarsa.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace     | HR  | Elevation |
+|-----|----------|---------|----------|-----|-----------|
+| 1   | 1.00 km  | 0:06:40 | 6:44/km  | 141 | 0 m       |
+| 2   | 1.00 km  | 0:07:28 | 7:28/km  | 154 | 1 m       |
+| 3   | 1.00 km  | 0:07:41 | 7:41/km  | 151 | 0 m       |
+| 4   | 1.00 km  | 0:07:34 | 7:34/km  | 156 | 2 m       |
+| 5   | 0.01 km  | 0:00:05 | 10:55/km | 164 | 0 m       |
+
+---
 ### 2026-09-04 18:28:30 - Tempo 2x1.5 Km
 
 **Type**: Run

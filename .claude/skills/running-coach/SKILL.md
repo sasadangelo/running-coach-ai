@@ -7,6 +7,10 @@ description: Weekly running coaching sessions that analyze training logs against
 
 Weekly coaching sessions that compare actual training against the planned training schedule, analyze performance metrics (primarily running, with complementary cross-training analysis), and provide guidance on progress and adjustments.
 
+## Subagent
+
+Delegate the coaching session to the `running-coach` subagent in `.claude/agents/running-coach/AGENTS.md`. Use this skill as the operating context and verify that the subagent follows the workflow, coaching, and data-source rules below.
+
 **Training Data Sources**: This skill supports multiple ways to access training data:
 - **Garmin Connect** (automatic sync via garmin-sync skill)
 - **Other platforms** (Apple Health, etc. - provided by athlete)

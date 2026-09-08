@@ -9,7 +9,7 @@ description: Downloads and syncs training data from Garmin Connect using a local
 
 This skill downloads training data from Garmin Connect and creates weekly markdown summaries in the `training-log` folder. It uses the `garminconnect` Python library directly (via `scripts/garmin_sync.py`) rather than an MCP server.
 
-Each activity gets its own section with distance, duration, pace, a run/walk time split, heart rate, any Garmin note, and (when the activity has more than one lap) a lap-by-lap table - useful for checking pace consistency across ripetute/tempo reps.
+Each activity gets its own section with distance, duration, pace, a run/walk time split, heart rate, any Garmin note, and (when the activity has more than one lap) a lap-by-lap table - useful for checking pace consistency across ripetute/tempo reps. The sync also maintains `health-log/daily-health.md` with daily resting heart rate, overnight HRV, and sleep summaries.
 
 There are two ways to run it:
 - **Auto-sync (default)**: the athlete just says "/garmin-sync" or "sync my training" with no week number. Syncs every missing/stale week since the last sync automatically - see "Auto-Sync Workflow" below.
@@ -55,7 +55,8 @@ python3 .claude/skills/garmin-sync/scripts/garmin_sync_weeks.py
 2. Continues forward in fixed 7-day blocks (Monday-Sunday by default - see `--week-start`) from there, one new week number per block, up to and including the block containing today.
 3. Re-syncs the last existing week too if today still falls within it, so newly logged activities get picked up.
 4. Writes/overwrites `training-log/week-N.md` for every week it (re)syncs via `garmin_sync.py`.
-5. Makes sure `training-plan.md` documents the week-start convention (adds a note near the top if one isn't already there).
+5. Syncs daily health and sleep data from the first existing training-log date through today via `garmin_sync_health.py`.
+6. Makes sure `training-plan.md` documents the week-start convention (adds a note near the top if one isn't already there).
 
 **If it errors that training-log is empty and no `--start-date` was given**: this is the very first sync - there's no way to know when the athlete's log should begin. Ask the athlete what calendar date their first training week should start on, then run:
 ```bash
@@ -98,6 +99,12 @@ The script will:
 4. For each remaining activity, fetch lap splits via `get_activity_splits` (shown only when there's more than one lap) and compute a run/walk time split from second-by-second speed samples via `get_activity_details`
 5. Write `training-log/week-{n}.md` with one section per activity plus weekly totals
 
+Daily recovery and sleep data can be synced directly with:
+```bash
+python3 .claude/skills/garmin-sync/scripts/garmin_sync_health.py --start-date YYYY-MM-DD [--end-date YYYY-MM-DD]
+```
+It writes `health-log/daily-health.md`. The displayed acceptable ranges are rolling 7-day average +/- 1 rolling standard deviation, requiring at least three observations. They are descriptive wearable-data baselines, not medical thresholds.
+
 **If the script errors on login**: Garmin occasionally requires an MFA code on first login from a new machine; the `garminconnect` library will prompt for it interactively in the terminal. Subsequent runs reuse the cached token in `GARMINTOKENS` (default `~/.garmin-running-coach-tokens`) and won't prompt again. If you see a 401 immediately after "Logging in...", the cached token directory is usually stale or was written by a different tool/library version - delete it (or point `GARMINTOKENS` at a fresh directory) and retry. Don't point `GARMINTOKENS` at a directory shared with another Garmin integration - incompatible cached tokens there cause exactly this kind of confusing failure.
 
 **If dependencies are missing**: the script will tell you to `pip install -r .claude/skills/garmin-sync/requirements.txt`.
@@ -126,5 +133,6 @@ Laps are fetched for every activity and shown whenever there's more than one (a 
 
 - **scripts/garmin_sync.py**: Standalone script - logs in to Garmin Connect, fetches a week of activities, drops stray blips, pulls lap splits and a run/walk split for each, and writes `training-log/week-{n}.md`. Run with `--help` for all options. No database or external services are used; it depends only on `garminconnect` and `python-dotenv`.
 - **scripts/garmin_sync_weeks.py**: Continues `training-log/`'s week numbering forward in fixed 7-day (Monday-Sunday by default) blocks from the last synced week, re-syncing the current in-progress week too, and calls `garmin_sync.py` for each one. Needs `--start-date` only on the very first run (empty training-log). Also documents the week-start convention in `training-plan.md` if missing. Stdlib only - no extra dependencies. Run with `--dry-run` to preview without hitting Garmin, or `--help` for all options.
+- **scripts/garmin_sync_health.py**: Fetches daily resting heart rate, overnight HRV, and daily sleep summaries, then writes rolling 7-day baselines to `health-log/daily-health.md`.
 - **requirements.txt**: Python dependencies for this skill.
 - **.env.sample**: Template for the `GARMIN_EMAIL` / `GARMIN_PASSWORD` / `GARMINTOKENS` environment variables.

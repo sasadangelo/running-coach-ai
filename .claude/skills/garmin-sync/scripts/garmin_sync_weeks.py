@@ -130,6 +130,7 @@ def parse_args():
     parser.add_argument("--unit", choices=["mi", "km"], default="km", help="Distance/pace/elevation unit (default: km)")
     parser.add_argument("--min-distance-km", type=float, default=0.8, help="Passed through to garmin_sync.py")
     parser.add_argument("--dry-run", action="store_true", help="Show which weeks would be synced without calling Garmin")
+    parser.add_argument("--skip-health", action="store_true", help="Skip daily HRV, resting HR, and sleep sync")
     return parser.parse_args()
 
 
@@ -186,6 +187,23 @@ def main():
         if result.returncode != 0:
             print(f"garmin_sync.py failed for week {week_num}, stopping.", file=sys.stderr)
             sys.exit(result.returncode)
+
+    if not args.skip_health:
+        health_script = script_dir / "garmin_sync_health.py"
+        health_start = min(start for start, _end in [*existing.values(), *pending.values()])
+        health_end = date.today()
+        health_cmd = [
+            sys.executable, str(health_script),
+            "--start-date", health_start.isoformat(),
+            "--end-date", health_end.isoformat(),
+        ]
+        if args.dry_run:
+            print("  (dry run) " + " ".join(health_cmd))
+        else:
+            result = subprocess.run(health_cmd)
+            if result.returncode != 0:
+                print("garmin_sync_health.py failed, stopping.", file=sys.stderr)
+                sys.exit(result.returncode)
 
     verb = "Would sync" if args.dry_run else "Synced"
     print(f"\nDone. {verb} {len(pending)} week(s): {', '.join(str(w) for w in sorted(pending))}")

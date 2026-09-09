@@ -73,7 +73,7 @@
 
 ## Programma Settimana per Settimana
 
-### Settimana 1 (2-6 settembre) — Fase A
+### ✅ Settimana 1 (2-6 settembre) — Fase A
 **Volume programmato residuo**: 9.80 km + allunghi
 
 - **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 3' riposo), 1km def. — 5.00km, ~37min

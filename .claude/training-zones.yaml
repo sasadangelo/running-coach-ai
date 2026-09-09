@@ -1,0 +1,23 @@
+# Update these values each week before running .claude/scripts/calculate_hr_zones.py.
+method: karvonen
+
+heart_rate:
+  max: 192
+  resting_average: 58
+
+zones:
+  - name: Zone 1
+    min_percent: 50
+    max_percent: 60
+  - name: Zone 2
+    min_percent: 60
+    max_percent: 75
+  - name: Zone 3
+    min_percent: 75
+    max_percent: 85
+  - name: Zone 4
+    min_percent: 85
+    max_percent: 93
+  - name: Zone 5
+    min_percent: 93
+    max_percent: 100

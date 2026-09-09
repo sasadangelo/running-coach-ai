@@ -58,6 +58,8 @@ python3 .claude/skills/garmin-sync/scripts/garmin_sync_weeks.py
 5. Syncs daily health and sleep data from the first existing training-log date through today via `garmin_sync_health.py`.
 6. Makes sure `training-plan.md` documents the week-start convention (adds a note near the top if one isn't already there).
 
+The Garmin sync does **not** currently update the athlete's maximum heart rate. It updates resting heart rate, HRV, and sleep, but FC max must be explicitly provided or confirmed by the athlete before `.claude/training-zones.yaml` is changed. Do not infer FC max from a single activity or from an estimated maximum.
+
 **If it errors that training-log is empty and no `--start-date` was given**: this is the very first sync - there's no way to know when the athlete's log should begin. Ask the athlete what calendar date their first training week should start on, then run:
 ```bash
 python3 .claude/skills/garmin-sync/scripts/garmin_sync_weeks.py --start-date YYYY-MM-DD

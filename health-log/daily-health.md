@@ -23,7 +23,7 @@ Ranges are descriptive recovery signals, not medical reference ranges or diagnos
 | 2026-09-06 | 57 bpm     | 58-63 bpm           | 53 ms       | 41-51 ms            |
 | 2026-09-07 | 58 bpm     | 58-61 bpm           | 43 ms       | 41-51 ms            |
 | 2026-09-08 | 60 bpm     | 58-61 bpm           | 47 ms       | 41-49 ms            |
-| 2026-09-09 | N/A bpm    | 58-60 bpm           | N/A ms      | 42-50 ms            |
+| 2026-09-09 | 53 bpm     | 56-61 bpm           | 57 ms       | 42-53 ms            |
 
 ## Sleep
 
@@ -45,7 +45,7 @@ Ranges are descriptive recovery signals, not medical reference ranges or diagnos
 | 2026-09-06 | 5h 01m      | 0h 45m     | 0h 55m    | 65    |
 | 2026-09-07 | 6h 13m      | 0h 58m     | 1h 18m    | 75    |
 | 2026-09-08 | 6h 49m      | 0h 52m     | 0h 50m    | 73    |
-| 2026-09-09 | N/A         | N/A        | N/A       | N/A   |
+| 2026-09-09 | 5h 49m      | 1h 05m     | 1h 15m    | 77    |
 
 ## Interpretation Notes
 

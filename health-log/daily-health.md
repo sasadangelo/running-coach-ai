@@ -1,4 +1,4 @@
-# Daily Health Log: 2026-08-24 to 2026-09-11
+# Daily Health Log: 2026-08-24 to 2026-09-13
 
 Baseline: rolling 7-day average; acceptable range is average +/- 1 rolling standard deviation.
 Ranges are descriptive recovery signals, not medical reference ranges or diagnoses.
@@ -26,6 +26,8 @@ Ranges are descriptive recovery signals, not medical reference ranges or diagnos
 | 2026-09-09 | 53 bpm     | 56-61 bpm           | 57 ms       | 42-53 ms            |
 | 2026-09-10 | 56 bpm     | 55-60 bpm           | 56 ms       | 43-55 ms            |
 | 2026-09-11 | 55 bpm     | 55-59 bpm           | 58 ms       | 46-57 ms            |
+| 2026-09-12 | 55 bpm     | 54-58 bpm           | 56 ms       | 48-58 ms            |
+| 2026-09-13 | 53 bpm     | 53-58 bpm           | 59 ms       | 48-59 ms            |
 
 ## Sleep
 
@@ -50,6 +52,8 @@ Ranges are descriptive recovery signals, not medical reference ranges or diagnos
 | 2026-09-09 | 5h 49m      | 1h 05m     | 1h 15m    | 77    |
 | 2026-09-10 | 5h 51m      | 0h 58m     | 0h 37m    | 70    |
 | 2026-09-11 | 7h 05m      | 0h 33m     | 1h 21m    | 82    |
+| 2026-09-12 | 6h 46m      | 0h 37m     | 1h 01m    | 72    |
+| 2026-09-13 | 6h 17m      | 1h 08m     | 1h 22m    | 79    |
 
 ## Interpretation Notes
 

@@ -42,6 +42,25 @@ def hrv_value(client: Garmin, day: str) -> float | None:
     return float(value) if value is not None else None
 
 
+def weight_values(data: dict) -> dict[str, float]:
+    """Extract daily Garmin weights, normalizing Garmin grams to kilograms."""
+    result = {}
+    for row in data.get("dateWeightList") or []:
+        day = row.get("calendarDate") or row.get("date")
+        if not day:
+            continue
+        metrics = row.get("allWeightMetrics") or row.get("weightMetrics") or []
+        candidates = metrics if isinstance(metrics, list) else [metrics]
+        for metric in candidates:
+            if not isinstance(metric, dict):
+                continue
+            value = metric.get("weight") or metric.get("weightInGrams")
+            if value is not None:
+                result[day] = float(value) / 1000
+                break
+    return result
+
+
 def as_minutes(seconds: object) -> str:
     if seconds is None:
         return "N/A"
@@ -119,6 +138,17 @@ def build_markdown(rows: list[dict], start: date, end: date) -> str:
     ))
     lines.extend([
         "",
+        "## Weight",
+        "",
+        "Garmin body-composition data; missing values are kept as N/A.",
+        "",
+    ])
+    lines.extend(markdown_table(
+        ["Date", "Weight"],
+        [[row["date"], fmt(row.get("weight"), 1) + " kg"] for row in rows],
+    ))
+    lines.extend([
+        "",
         "## Sleep",
         "",
     ])
@@ -173,11 +203,22 @@ def main():
     print(f"Fetching Garmin health and sleep data from {start} to {end}...")
     client = login(email, password, token_dir)
     sleep_by_day = sleep_values(client.get_sleep_daily(start.isoformat(), end.isoformat()) or [])
+    try:
+        weight_by_day = weight_values(client.get_body_composition(start.isoformat(), end.isoformat()) or {})
+    except Exception as exc:
+        print(f"warning: could not fetch Garmin weight data: {exc}", file=sys.stderr)
+        weight_by_day = {}
     rows = []
     current = start
     while current <= end:
         day = current.isoformat()
-        row = {"date": day, "resting_hr": None, "hrv": None, "sleep": sleep_by_day.get(day, {})}
+        row = {
+            "date": day,
+            "resting_hr": None,
+            "hrv": None,
+            "weight": weight_by_day.get(day),
+            "sleep": sleep_by_day.get(day, {}),
+        }
         try:
             row["resting_hr"] = resting_heart_rate(client, day)
         except Exception as exc:

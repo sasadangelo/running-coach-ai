@@ -7,6 +7,7 @@
 - **Total Distance**: 12.00 km
 - **Total Time**: 1:35:14
 - **Total Elevation**: 13 m
+- **Total Calories**: 957 kcal (3/3 activities with data)
 
 ### Running Totals
 - **Total Run Time**: 0:57:22
@@ -23,6 +24,7 @@
 **Run time**: 0:23:44
 **Walk time**: 0:05:48
 **Elevation**: 3 m
+**Calories**: 317 kcal
 **Heart Rate**: 151 bpm (max: 168)
 **Note**: Lungo 4Km. Fermato a camminare 3 volte oltre zona 2. Resistenza aerobica ancora scarsa.
 
@@ -46,6 +48,7 @@
 **Run time**: 0:17:16
 **Walk time**: 0:24:48
 **Elevation**: 5 m
+**Calories**: 369 kcal
 **Heart Rate**: 138 bpm (max: 176)
 **Note**: 2x1.5 km a 6:00-6:20 min/km. Buona prima ripetuta. Seconda ripetuta fermato a camminare 2 volte.
 
@@ -71,6 +74,7 @@
 **Run time**: 0:16:22
 **Walk time**: 0:07:22
 **Elevation**: 5 m
+**Calories**: 271 kcal
 **Heart Rate**: 158 bpm (max: 176)
 
 #### Lap Details

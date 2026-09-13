@@ -7,6 +7,7 @@
 - **Total Distance**: 9.65 km
 - **Total Time**: 1:14:55
 - **Total Elevation**: 15 m
+- **Total Calories**: 783 kcal (3/3 activities with data)
 
 ### Running Totals
 - **Total Run Time**: 0:43:04
@@ -23,6 +24,7 @@
 **Run time**: 0:13:59
 **Walk time**: 0:10:41
 **Elevation**: 5 m
+**Calories**: 263 kcal
 **Heart Rate**: 153 bpm (max: 174)
 
 #### Lap Details
@@ -44,6 +46,7 @@
 **Run time**: 0:14:58
 **Walk time**: 0:09:25
 **Elevation**: 4 m
+**Calories**: 267 kcal
 **Heart Rate**: 156 bpm (max: 177)
 
 #### Lap Details
@@ -65,6 +68,7 @@
 **Run time**: 0:14:07
 **Walk time**: 0:12:01
 **Elevation**: 6 m
+**Calories**: 253 kcal
 **Heart Rate**: 147 bpm (max: 169)
 
 #### Lap Details

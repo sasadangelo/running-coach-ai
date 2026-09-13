@@ -30,3 +30,7 @@ Default periods are 8, 16, and 24 weeks. They are planning choices, not medical 
 ## Daily coaching
 
 When the athlete reports food, record it in `nutrition-log/daily-food.md` and use the profile, current Garmin weight trend, training load, hunger, sleep, and available cafeteria/home-dinner options. Give practical substitutions rather than rigid meal prescriptions. Do not infer calories or macros when portions are unknown; ask for one missing quantity at a time.
+
+At the beginning of each daily entry in `nutrition-log/daily-food.md`, add one brief synthesis with the nutrition score, calorie score, macro score, Garmin training calories, and a short quality status. Keep it compact and do not repeat the full meal analysis there. For weekly and monthly views, use the same compact format with averages and state how many days were logged.
+
+The athlete usually does not provide precise weights or measurements. Do not block the assessment waiting for exact portions: estimate calories and macros from standard portions, state the assumptions, and give a plausible range. Use the estimate to assess alignment with the daily targets and the protein/carbohydrate/fat distribution. Ask for a precise quantity only when it would materially improve the estimate, and continue to provide the best current estimate.

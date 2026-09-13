@@ -3,17 +3,42 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 7.13 km
-- **Total Time**: 1:00:57
-- **Total Elevation**: 53 m
+- **Total Activities**: 3
+- **Total Distance**: 11.34 km
+- **Total Time**: 1:32:08
+- **Total Elevation**: 58 m
+- **Total Calories**: 874 kcal (3/3 activities with data)
 
 ### Running Totals
-- **Total Run Time**: 0:28:04
-- **Total Walk Time**: 0:33:30
+- **Total Run Time**: 0:59:14
+- **Total Walk Time**: 0:33:33
 
 ## Activities
 
+### 2026-09-13 19:13:30 - Corsa 4.2 km
+
+**Type**: Run
+**Distance**: 4.21 km
+**Duration**: 0:31:11
+**Pace**: 7:25/km
+**Run time**: 0:31:10
+**Walk time**: 0:00:03
+**Elevation**: 5 m
+**Calories**: 316 kcal
+**Heart Rate**: 154 bpm (max: 162)
+**Note**: Corsa Lunga 4.2 Km tutta di fila senza stop. 16 min in zona 3 e 17 in zona 1 e 2. Garmin aveva messo FC max a 194 poi abbassata a 192 poi a 191. Fc non ha mai superato 160 però risulta zona 3 già a 157. Io ho cercato di correre con respiro controllato in maniera confortevole il più possibile. A freddo gambe e bacino leggermente affaticati.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:10 | 7:11/km | 142 | 1 m       |
+| 2   | 1.00 km  | 0:07:17 | 7:17/km | 158 | 1 m       |
+| 3   | 1.00 km  | 0:07:29 | 7:29/km | 158 | 0 m       |
+| 4   | 1.00 km  | 0:07:39 | 7:39/km | 158 | 2 m       |
+| 5   | 0.21 km  | 0:01:36 | 7:52/km | 160 | 0 m       |
+
+---
 ### 2026-09-11 19:09:15 - Tempo 4x500 m 200m recupero
 
 **Type**: Run
@@ -23,6 +48,7 @@
 **Run time**: 0:14:29
 **Walk time**: 0:14:29
 **Elevation**: 6 m
+**Calories**: 272 kcal
 **Heart Rate**: 139 bpm (max: 165)
 **Note**: 4x500 200m recupero a 6:00-6:20 min/km. Mobilità prima e stretching dopo. Tutto bene completato come se avessi potuto fare di più. Vo2max in leggero aumento. Secondo garmin allenamento è stato buono al 74%. Pensavo di più visto che l'ho seguito alla lettera.
 
@@ -51,6 +77,7 @@
 **Run time**: 0:13:35
 **Walk time**: 0:19:01
 **Elevation**: 47 m
+**Calories**: 286 kcal
 **Heart Rate**: 135 bpm (max: 167)
 **Note**: Riscaldamento 500m camminata 500 jogging. 8x200 con 1' recupero in camminata (jogging non riuscivo). Corsa tra 5:10 -5:46 min/km. Ultime 2 ripetute un po' a fatica a 5:38 e 5:46. Defaticamento 500m camminata. Alla fine un po' di mobilità e stretching.
 

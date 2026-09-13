@@ -99,7 +99,7 @@ The script will:
 2. Fetch all "Run"-type activities in the date range via `get_activities_by_date`
 3. Drop stray sub-threshold activities (default under 0.8km - accidental watch start/stop blips, not real sessions); it prints which ones it ignored
 4. For each remaining activity, fetch lap splits via `get_activity_splits` (shown only when there's more than one lap) and compute a run/walk time split from second-by-second speed samples via `get_activity_details`
-5. Write `training-log/week-{n}.md` with one section per activity plus weekly totals
+5. Write `training-log/week-{n}.md` with one section per activity, including Garmin's calorie estimate when available, plus weekly totals
 
 Daily recovery and sleep data can be synced directly with:
 ```bash

@@ -96,6 +96,15 @@ def is_noise_activity(activity: dict, min_distance_km: float) -> bool:
     return distance_km < min_distance_km
 
 
+def activity_calories(activity: dict) -> float | None:
+    """Return Garmin's activity calorie estimate, handling API field variants."""
+    for key in ("activeKilocalories", "activeCalories", "calories", "kilocalories"):
+        value = activity.get(key)
+        if value is not None:
+            return float(value)
+    return None
+
+
 def compute_run_walk_split(client: Garmin, activity_id: int) -> tuple[float, float] | tuple[None, None]:
     """
     Estimate time spent running vs walking within an activity from
@@ -243,6 +252,7 @@ def build_activity_section(activity: dict, laps: list, run_walk_split: tuple, un
     duration_s = activity.get("movingDuration") or activity.get("duration", 0.0) or 0.0
     speed = activity.get("averageSpeed", 0.0) or 0.0
     elevation = meters_to_elevation(activity.get("elevationGain", 0.0) or 0.0, unit)
+    calories = activity_calories(activity)
     avg_hr = activity.get("averageHR")
     max_hr = activity.get("maxHR")
     run_s, walk_s = run_walk_split
@@ -259,6 +269,8 @@ def build_activity_section(activity: dict, laps: list, run_walk_split: tuple, un
         f"**Walk time**: {format_duration(walk_s) if walk_s is not None else 'N/A'}",
         f"**Elevation**: {elevation:.0f} {elevation_unit_label(unit)}",
     ]
+    if calories is not None:
+        lines.append(f"**Calories**: {calories:.0f} kcal")
     if avg_hr:
         hr_line = f"**Heart Rate**: {avg_hr:.0f} bpm"
         if max_hr:
@@ -299,6 +311,8 @@ def build_markdown(activities: list, start: date, end: date, unit: str) -> str:
     total_distance_m = 0.0
     total_duration_s = 0.0
     total_elevation_m = 0.0
+    total_calories = 0.0
+    activities_with_calories = 0
     total_run_s = 0.0
     total_walk_s = 0.0
 
@@ -306,6 +320,10 @@ def build_markdown(activities: list, start: date, end: date, unit: str) -> str:
         total_distance_m += activity.get("distance", 0.0) or 0.0
         total_duration_s += activity.get("movingDuration") or activity.get("duration", 0.0) or 0.0
         total_elevation_m += activity.get("elevationGain", 0.0) or 0.0
+        calories = activity_calories(activity)
+        if calories is not None:
+            total_calories += calories
+            activities_with_calories += 1
         total_run_s += run_s or 0.0
         total_walk_s += walk_s or 0.0
 
@@ -319,6 +337,7 @@ def build_markdown(activities: list, start: date, end: date, unit: str) -> str:
         f"- **Total Distance**: {meters_to_distance(total_distance_m, unit):.2f} {distance_unit_label(unit)}",
         f"- **Total Time**: {format_duration(total_duration_s)}",
         f"- **Total Elevation**: {meters_to_elevation(total_elevation_m, unit):.0f} {elevation_unit_label(unit)}",
+        f"- **Total Calories**: {total_calories:.0f} kcal ({activities_with_calories}/{len(activities)} activities with data)",
         "",
         "### Running Totals",
         f"- **Total Run Time**: {format_duration(total_run_s)}",

@@ -15,14 +15,18 @@ Use this agent for the athlete's initial nutrition interview, calorie and macron
 
 - Garmin weight is a consumer-device estimate. Use a multi-day trend, not a single weigh-in.
 - Read `health-log/daily-health.md` for synced weight, sleep, resting HR, and HRV when available.
+- Read the relevant `training-log/week-N.md` for Garmin activity calories. When coaching a day with a synced workout, record the Garmin estimate in `nutrition-log/daily-food.md` as a separate activity line and use it as context; do not automatically subtract it from food intake or add it back to the calorie target.
 - Read `nutrition-log/measurements.md` for manually entered waist circumference.
-- Do not infer missing weight, waist, body-fat, or meal quantities.
+- Do not present missing weight, waist, body-fat, or meal quantities as measured facts; for meals, use clearly labeled standard-portion estimates when exact quantities are unavailable.
 - Keep the current configured heart-rate maximum unchanged; nutrition coaching must not alter training zones.
 
 ## Daily meal coaching
 
 - Read `nutrition-log/nutrition-profile.json` and `nutrition-log/daily-food.md` when they exist.
-- When the athlete reports what they ate, estimate only what the reported portions support. Ask for one missing portion or label detail at a time.
+- Add a daily score when the food log has enough information: calorie adherence (50%) and macro distribution (50%). Score calories against the configured food target without automatically adding Garmin exercise calories; use Garmin calories as context. For each macro, score closeness to its target and show the protein, carbohydrate, and fat subscores. If food quality inputs such as vegetables, fruit, fiber, hydration, or alcohol are not logged, mark that part as incomplete rather than guessing it.
+- Maintain `nutrition-log/nutrition-summary.md` with daily rows plus weekly and month-to-date summaries. Calculate weekly and monthly averages only from days with a food log, show the number of logged days versus calendar days, and mark the summary as partial when coverage is incomplete.
+- When the athlete reports what they ate, estimate what the reported portions support and extend it with standard-portion assumptions when needed. Ask for one missing portion or label detail at a time only when it would materially improve the estimate.
+- The athlete generally does not provide precise measurements. Make a useful estimate from standard portions anyway, explicitly state the assumptions, provide a plausible calorie and macro range, and compare the central estimate with the daily targets.
 - Offer practical choices around the athlete's real routine: three lunches at the work cafeteria and dinner cooked by the wife.
 - At the cafeteria, prioritize a protein source, vegetables or fruit, a controllable carbohydrate portion, and sauces/oils kept visible when possible.
 - For dinner, adapt the family meal rather than requiring a separate meal: suggest plate proportions, portion adjustments, and a carbohydrate increase around hard running sessions.

@@ -24,7 +24,7 @@
 |----------|-------|------|
 | **Ripetute** (200m/400m, poi 800m) | **5:20-5:30/km** | Fartlek leggero: 200m con recupero 1', 400m con recupero 2'. Da metà piano si aggiungono gli 800m (recupero ~2'30"), eventualmente un 1600m più avanti se ti va |
 | **Tempo/Soglia** | **6:00-6:20/km** | Parti verso 6:00-6:10, è normale calare verso 6:15-6:20 nelle ultime ripetizioni |
-| **Lungo** | **6:40-7:00/km come riferimento attuale** | Corsa continua; se la FC sale troppo, rallenta o cammina in autonomia |
+| **Lungo** | **7:15-7:40/km come riferimento attuale** | Corsa continua; se la FC sale troppo, rallenta o cammina in autonomia |
 | **Recupero (jog tra le ripetute/tempo)** | ~8:30/km | Jog leggero, non camminata |
 | **Riscaldamento/Defaticamento** | ~8:00/km | |
 
@@ -73,67 +73,71 @@
 
 ## Programma Settimana per Settimana
 
-### ✅ Settimana 1 (2-6 settembre) — Fase A
-**Volume programmato residuo**: 9.80 km + allunghi
+### ✅ Settimana 1 (2-6 settembre) — Fase A — CONCLUSA
+**Volume programmato residuo**: 9.00 km + allunghi
 
 - **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 3' riposo), 1km def. — 5.00km, ~37min
-- **Lungo**: 4km continui @ 6:30-6:50/km partendo piano, poi qualche allungo breve e 0.4km def. — 4.80km + allunghi, ~35min; nessuna fermata programmata
+- **Lungo**: 4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.00km + allunghi, ~30min; nessuna fermata programmata
 
-### Settimana 2 (7-13 settembre) — Fase A
-**Volume totale**: 13.95 km
+### ✅ Settimana 2 (7-13 settembre) — Fase A — CONCLUSA
+**Volume totale**: 12.40 km
 
 - **Ripetute**: 1km risc., 8 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 3.60km, ~31min
 - **Tempo**: 1km risc., 4 x 500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
-- **Lungo**: 5' riscaldamento molto facile, 4.2km a ritmo conversazionale (indicativamente 6:40-7:00/km), 5' defaticamento — FC indicativa 145-160
+- **Lungo**: 4.2km a ritmo conversazionale (indicativamente 7:15-7:40/km) — FC indicativa 145-160
+
+**Esito:** completate tutte e 3 le sedute previste. Lungo corso per 4.21 km senza fermate; volume Garmin della settimana: 11.90 km, inclusi 5 allunghi post-lungo.
 
 ### Settimana 3 (14-20 settembre) — Fase A
-**Volume totale**: 14.15 km
+**Volume totale**: 13.00 km
 
 - **Ripetute**: 1km risc., 10 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 4.00km, ~35min
 - **Tempo**: 1km risc., 3 x 700m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.50km, ~32min
-- **Lungo**: 0.4km risc. partendo piano, 4.25km continui @ 6:30-6:50/km, 0.4km def. — 5.05km, ~35min; nessuna fermata programmata
+- **Lungo**: 4.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.50km, ~32min; nessuna fermata programmata
 
 ### Settimana 4 — Scarico (21-27 settembre) — Fase B
-**Volume totale**: 12.40 km (-14% rispetto a S3)
+**Volume totale**: 11.00 km (-15% rispetto a S3)
+
+**Scarico confermato:** riduzione del volume con intensità mantenuta. Rispetto a S3: 20% in meno di ripetute, 29% in meno di lavoro tempo e 22% in meno di lungo. Nei ritmi resta nella parte iniziale delle fasce, senza cercare il limite più veloce.
 
 - **Ripetute**: 1km risc., 8 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 3.60km, ~31min
 - **Tempo**: 1km risc., 3 x 500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 3.90km, ~29min
-- **Lungo**: 0.4km risc. partendo piano, 3.5km continui @ 6:30-6:50/km, 0.4km def. — 4.30km, ~30min; nessuna fermata programmata
+- **Lungo**: 3.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 3.50km, ~25min; nessuna fermata programmata
 
 ### Settimana 5 (28 settembre - 4 ottobre) — Fase C
-**Volume totale**: 14.85 km
+**Volume totale**: 13.60 km
 
 - **Ripetute**: 1km risc., 12 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 4.40km, ~39min
 - **Tempo**: 1km risc., 3 x 800m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.80km, ~34min
-- **Lungo**: 0.4km risc. partendo piano, 4.4km continui @ 6:30-6:50/km, 0.4km def. — 5.20km, ~37min; nessuna fermata programmata
+- **Lungo**: 4.4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.40km, ~32min; nessuna fermata programmata
 
 ### Settimana 6 (5-11 ottobre) — Fase C
-**Volume totale**: 17.25 km
+**Volume totale**: 16.00 km
 
 - **Ripetute**: 1km risc., 15 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 5.00km, ~46min
 - **Tempo**: 1km risc., 2 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
-- **Lungo**: 0.4km risc. partendo piano, 6.4km continui @ 6:30-6:50/km, 0.4km def. — 7.20km, ~52min *(sessione più lunga della settimana)*
+- **Lungo**: 6.4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.40km, ~47min *(sessione più lunga della settimana)*
 
 ### Settimana 7 (12-18 ottobre) — Fase C
-**Volume totale**: 18.00 km
+**Volume totale**: 16.90 km
 
 - **Ripetute**: 1km risc., 10 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 6.00km, ~53min
 - **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 5.20km, ~36min
-- **Lungo**: 0.4km risc. partendo piano, 5.7km continui @ 6:30-6:50/km, 0.4km def. — 6.50km, ~47min; nessuna fermata programmata
+- **Lungo**: 5.7km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.70km, ~42min; nessuna fermata programmata
 
 ### Settimana 8 — Scarico (19-25 ottobre) — Fase D
-**Volume totale**: 13.20 km (-25% rispetto a S7)
+**Volume totale**: 12.80 km (-26% rispetto a S7)
 
 - **Ripetute**: 1km risc., 6 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 4.40km, ~41min
 - **Tempo**: 1km risc., 2 x 1000m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.20km, ~30min
-- **Lungo**: 0.4km risc. partendo piano, 4.2km continui @ 6:30-6:50/km, 0.4km def. — 5.00km, ~39min *(primo tentativo di lungo continuo)*
+- **Lungo**: 4.2km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.20km, ~31min *(primo tentativo di lungo continuo)*
 
 ### Settimana 9 (26 ottobre - 1 novembre) — Fase E
 **Volume totale**: 14.20 km
 
 - **Ripetute**: 1km risc., 8 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 5.20km, ~47min
 - **Tempo**: 1km risc., 2000m continui @ 6:00-6:20/km, 1km def. — 4.00km, ~28min *(test tempo continuo)*
-- **Lungo**: 0.4km risc. partendo piano, 5.0km continui @ 6:30-6:50/km, 0.4km def. — 5.80km, ~45min *(prova generale: l'intera distanza di gara, di corsa continua)*
+- **Lungo**: 5.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.00km, ~37min *(prova generale: l'intera distanza di gara, di corsa continua)*
 
 ### Settimana 10 — Gara 1 (2-8 novembre) — Fase F
 **Volume totale (esclusa gara)**: ~3.40 km
@@ -148,21 +152,21 @@
 
 - **Ripetute**: 1km risc., 4 x 200m @ 5:20-5:30/km (rec. 1') + 2 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 3.60km, ~33min
 - **Tempo**: 1km risc., 2 x 600m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 3.40km, ~25min
-- **Lungo**: 0.4km risc. partendo piano, 4.0km continui @ 6:30-6:50/km, 0.4km def. — 4.80km, ~37min; nessuna fermata programmata
+- **Lungo**: 4.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.00km, ~30min; nessuna fermata programmata
 
 ### Settimana 12 (16-22 novembre) — Fase H
 **Volume totale**: 16.10 km
 
 - **Ripetute**: 1km risc., 4 x 400m @ 5:20-5:30/km (rec. 2') + 2 x 800m @ 5:20-5:30/km (rec. 2'30"), 1km def. — 5.20km, ~46min
 - **Tempo**: 1km risc., 2 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
-- **Lungo**: 0.4km risc. partendo piano, 5.5km continui @ 6:30-6:50/km, 0.4km def. — 6.30km, ~49min; nessuna fermata programmata
+- **Lungo**: 5.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.50km, ~41min; nessuna fermata programmata
 
 ### Settimana 13 (23-29 novembre) — Fase H
-**Volume totale**: 18.60 km
+**Volume totale**: 17.80 km
 
 - **Ripetute**: 1km risc., 3 x 400m @ 5:20-5:30/km (rec. 2') + 3 x 800m @ 5:20-5:30/km (rec. 2'30"), 1km def. — 5.60km, ~49min *(se ti senti bene, prova a sostituire un 800m con un 1600m)*
 - **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 5.20km, ~36min
-- **Lungo**: 0.4km risc. partendo piano, 7.0km continui @ 6:30-6:50/km, 0.4km def. — 7.80km, ~60min *(più lunga uscita del piano — ottimo indicatore di quanto potrai correre in gara)*
+- **Lungo**: 7.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 7.00km, ~52min *(più lunga uscita del piano — ottimo indicatore di quanto potrai correre in gara)*
 
 ### Settimana 14 — Gara 2 (30 novembre - 6 dicembre) — Fase I
 **Volume totale (esclusa gara)**: ~3.80 km
@@ -259,8 +263,8 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 
 ## Note Importanti
 
-- **Il lungo è sempre in corsa continua**: il ritmo di riferimento (6:30-6:50/km) non è un obbligo. Parti piano e, se non riesci a mantenere la corsa, rallenta o cammina; la scelta è lasciata a te.
-- **6:30-6:50/km è solo 20-30 sec più lento del tempo run**: se durante il lungo fai fatica, non forzare il ritmo. L'obiettivo principale è aumentare gradualmente i km corsi senza fermate programmate.
+- **Il lungo è sempre una seduta unica in corsa continua**: non aggiungere riscaldamento o defaticamento separati. Il nuovo riferimento (7:15-7:40/km) non è un obbligo: parti piano e chiudi naturalmente; se non riesci a mantenere la corsa, rallenta o cammina.
+- **7:15-7:40/km è un riferimento realistico per la fase attuale**: se durante il lungo fai fatica, non forzare il ritmo. L'obiettivo principale è aumentare gradualmente i km corsi senza fermate programmate.
 - **Ripetute e tempo restano ai ritmi reali**: 5:20-5:30/km e 6:00-6:20/km sono quello che hai già dimostrato di reggere. Se un giorno ti senti più lento (caldo, stanchezza), va bene rallentare 10-15 sec/km — l'importante è lo sforzo percepito, non il numero esatto.
 - **Caldo**: se le temperature sono ancora alte, sposta le sessioni di qualità a mattina presto o sera.
 - **Infortuni/dolori**: qualsiasi dolore persistente (non il normale affaticamento muscolare) è motivo per saltare o modificare una sessione. Meglio una sessione in meno che uno stop di settimane.

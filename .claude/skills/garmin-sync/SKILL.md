@@ -58,7 +58,9 @@ python3 .claude/skills/garmin-sync/scripts/garmin_sync_weeks.py
 5. Syncs daily health and sleep data from the first existing training-log date through today via `garmin_sync_health.py`.
 6. Makes sure `training-plan.md` documents the week-start convention (adds a note near the top if one isn't already there).
 
-The Garmin sync does **not** currently update the athlete's maximum heart rate. It updates resting heart rate, HRV, and sleep, but FC max must be explicitly provided or confirmed by the athlete before `.claude/training-zones.yaml` is changed. Do not infer FC max from a single activity or from an estimated maximum.
+After the health sync (step 5), update `heart_rate.resting_average` in `.claude/training-zones.yaml` to the mean resting HR over the trailing 7 calendar days (the same window as the "7d acceptable range" column in `health-log/daily-health.md` - its midpoint is that mean), then run `python3 .claude/scripts/calculate_hr_zones.py` to recalculate the zones and refresh `health-log/heart-rate-zones.md` and the current week's training log. Do this every auto-sync, not just when the athlete asks - it's what keeps the zones matched to current fitness. Skip it only if resting HR data is unavailable for the period.
+
+The Garmin sync does **not** update the athlete's maximum heart rate, though. It updates resting heart rate, HRV, and sleep, but FC max must be explicitly provided or confirmed by the athlete before `.claude/training-zones.yaml` is changed. Do not infer FC max from a single activity or from an estimated maximum.
 
 **If it errors that training-log is empty and no `--start-date` was given**: this is the very first sync - there's no way to know when the athlete's log should begin. Ask the athlete what calendar date their first training week should start on, then run:
 ```bash
@@ -106,6 +108,8 @@ Daily recovery and sleep data can be synced directly with:
 python3 .claude/skills/garmin-sync/scripts/garmin_sync_health.py --start-date YYYY-MM-DD [--end-date YYYY-MM-DD]
 ```
 It writes `health-log/daily-health.md`. The displayed acceptable ranges are rolling 7-day average +/- 1 rolling standard deviation, requiring at least three observations. They are descriptive wearable-data baselines, not medical thresholds.
+
+After this, also update `heart_rate.resting_average` in `.claude/training-zones.yaml` to the current 7-day resting HR mean and run `python3 .claude/scripts/calculate_hr_zones.py` (see the note in the Auto-Sync Workflow above) so the zones stay current. FC max still requires explicit athlete confirmation before changing it.
 
 **If the script errors on login**: Garmin occasionally requires an MFA code on first login from a new machine; the `garminconnect` library will prompt for it interactively in the terminal. Subsequent runs reuse the cached token in `GARMINTOKENS` (default `~/.garmin-running-coach-tokens`) and won't prompt again. If you see a 401 immediately after "Logging in...", the cached token directory is usually stale or was written by a different tool/library version - delete it (or point `GARMINTOKENS` at a fresh directory) and retry. Don't point `GARMINTOKENS` at a directory shared with another Garmin integration - incompatible cached tokens there cause exactly this kind of confusing failure.
 

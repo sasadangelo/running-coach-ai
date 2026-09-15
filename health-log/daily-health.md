@@ -1,4 +1,4 @@
-# Daily Health Log: 2026-08-24 to 2026-09-14
+# Daily Health Log: 2026-08-24 to 2026-09-15
 
 Baseline: rolling 7-day average; acceptable range is average +/- 1 rolling standard deviation.
 Ranges are descriptive recovery signals, not medical reference ranges or diagnoses.
@@ -28,36 +28,16 @@ Ranges are descriptive recovery signals, not medical reference ranges or diagnos
 | 2026-09-11 | 55 bpm     | 55-59 bpm           | 58 ms       | 46-57 ms            |
 | 2026-09-12 | 55 bpm     | 54-58 bpm           | 56 ms       | 48-58 ms            |
 | 2026-09-13 | 53 bpm     | 53-58 bpm           | 59 ms       | 48-59 ms            |
-| 2026-09-14 | N/A bpm    | 53-58 bpm           | N/A ms      | 52-59 ms            |
+| 2026-09-14 | 59 bpm     | 53-58 bpm           | 52 ms       | 51-59 ms            |
+| 2026-09-15 | 55 bpm     | 53-57 bpm           | 53 ms       | 54-58 ms            |
 
 ## Weight
 
-Garmin body-composition data; missing values are kept as N/A.
+Garmin body-composition data; only days with a recorded weigh-in are listed. 7d avg is the mean of weigh-ins in the trailing 7 calendar days (needs at least 3 to display).
 
-| Date       | Weight |
-| ---------- | ------ |
-| 2026-08-24 | N/A kg |
-| 2026-08-25 | N/A kg |
-| 2026-08-26 | N/A kg |
-| 2026-08-27 | N/A kg |
-| 2026-08-28 | N/A kg |
-| 2026-08-29 | N/A kg |
-| 2026-08-30 | N/A kg |
-| 2026-08-31 | N/A kg |
-| 2026-09-01 | N/A kg |
-| 2026-09-02 | N/A kg |
-| 2026-09-03 | N/A kg |
-| 2026-09-04 | N/A kg |
-| 2026-09-05 | N/A kg |
-| 2026-09-06 | N/A kg |
-| 2026-09-07 | N/A kg |
-| 2026-09-08 | N/A kg |
-| 2026-09-09 | N/A kg |
-| 2026-09-10 | N/A kg |
-| 2026-09-11 | N/A kg |
-| 2026-09-12 | N/A kg |
-| 2026-09-13 | N/A kg |
-| 2026-09-14 | N/A kg |
+| Date       | Weight  | 7d avg |
+| ---------- | ------- | ------ |
+| 2026-09-15 | 78.9 kg | N/A kg |
 
 ## Sleep
 
@@ -84,7 +64,8 @@ Garmin body-composition data; missing values are kept as N/A.
 | 2026-09-11 | 7h 05m      | 0h 33m     | 1h 21m    | 82    |
 | 2026-09-12 | 6h 46m      | 0h 37m     | 1h 01m    | 72    |
 | 2026-09-13 | 6h 17m      | 1h 08m     | 1h 22m    | 79    |
-| 2026-09-14 | N/A         | N/A        | N/A       | N/A   |
+| 2026-09-14 | 5h 06m      | 1h 03m     | N/A       | 52    |
+| 2026-09-15 | 6h 58m      | 1h 45m     | 1h 23m    | 79    |
 
 ## Interpretation Notes
 

@@ -135,19 +135,10 @@ def log_entry(config: dict, zones: list[dict], calculated_on: date) -> str:
 
 
 def write_log(path: Path, config: dict, zones: list[dict], calculated_on: date) -> None:
-    heading = "# Heart-Rate Zones Log\n\n"
-    existing = path.read_text() if path.exists() else heading
+    heading = "# Heart-Rate Zones\n\n"
     entry = log_entry(config, zones, calculated_on)
-    marker = f"## {calculated_on.isoformat()}"
-    if marker in existing:
-        before, remainder = existing.split(marker, 1)
-        next_entry = remainder.find("\n## ")
-        after = remainder[next_entry:] if next_entry >= 0 else ""
-        existing = before.rstrip() + "\n\n" + entry + after
-    else:
-        existing = existing.rstrip() + "\n\n" + entry
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(existing.rstrip() + "\n")
+    path.write_text((heading + entry).rstrip() + "\n")
 
 
 def current_week_file(directory: Path, calculated_on: date) -> Path:

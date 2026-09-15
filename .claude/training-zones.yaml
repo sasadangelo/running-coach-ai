@@ -3,7 +3,7 @@ method: karvonen
 
 heart_rate:
   max: 194
-  resting_average: 58
+  resting_average: 55
 
 zones:
   - name: Zone 1

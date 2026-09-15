@@ -136,17 +136,24 @@ def build_markdown(rows: list[dict], start: date, end: date) -> str:
         ["Date", "Resting HR", "7d acceptable range", "HRV (RMSSD)", "7d acceptable range"],
         recovery_rows,
     ))
+    weight_values_list = [row.get("weight") for row in rows]
+    weight_rows = []
+    for index, row in enumerate(rows):
+        if row.get("weight") is None:
+            continue
+        weight_avg, _ = rolling_stats(weight_values_list, index)
+        weight_rows.append([row["date"], fmt(row["weight"], 1) + " kg", fmt(weight_avg, 1) + " kg"])
     lines.extend([
         "",
         "## Weight",
         "",
-        "Garmin body-composition data; missing values are kept as N/A.",
+        "Garmin body-composition data; only days with a recorded weigh-in are listed. 7d avg is the mean of weigh-ins in the trailing 7 calendar days (needs at least 3 to display).",
         "",
     ])
-    lines.extend(markdown_table(
-        ["Date", "Weight"],
-        [[row["date"], fmt(row.get("weight"), 1) + " kg"] for row in rows],
-    ))
+    if weight_rows:
+        lines.extend(markdown_table(["Date", "Weight", "7d avg"], weight_rows))
+    else:
+        lines.append("No weigh-ins recorded in this period.")
     lines.extend([
         "",
         "## Sleep",

@@ -2,6 +2,14 @@
 
 Formato compatto: una riga per pasto con item, porzione assunta e stima kcal/macro. Il dettaglio completo (assunzioni, range di incertezza) resta solo nella conversazione al momento della stima; qui va solo l'esito. Per consigli settimanali/mensili usare `nutrition-summary.md`.
 
+## 2026-09-16 — 1.395 kcal (target 1.820) | P 64 g, C 122 g, G 69 g | score 71/100
+
+- Colazione: 2 caffè senza zucchero — trascurabile
+- Merenda: 1 banana — ~105 kcal
+- Pranzo: pasta al pomodoro con pancetta (80 g pasta secca, dato) e pecorino; pancetta e pecorino a porzione standard assunta — ~575 kcal
+- Cena: 2 mozzarelline (assunte ~100 g cad., 200 g totali) + pomodori conditi + 2 fette di pane — ~710 kcal
+- Note: niente colazione vera, proteine ben sotto target, grassi sopra target (mozzarella); frutta presente, verdura solo come contorno; nessun dato Garmin
+
 ## 2026-09-15 — in corso
 
 - Colazione: solo caffè (assunto senza zucchero) — trascurabile

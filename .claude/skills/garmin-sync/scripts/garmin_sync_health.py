@@ -46,18 +46,21 @@ def weight_values(data: dict) -> dict[str, float]:
     """Extract daily Garmin weights, normalizing Garmin grams to kilograms."""
     result = {}
     for row in data.get("dateWeightList") or []:
-        day = row.get("calendarDate") or row.get("date")
+        day = row.get("calendarDate")
         if not day:
             continue
-        metrics = row.get("allWeightMetrics") or row.get("weightMetrics") or []
-        candidates = metrics if isinstance(metrics, list) else [metrics]
-        for metric in candidates:
-            if not isinstance(metric, dict):
-                continue
-            value = metric.get("weight") or metric.get("weightInGrams")
-            if value is not None:
-                result[day] = float(value) / 1000
-                break
+        value = row.get("weight") or row.get("weightInGrams")
+        if value is None:
+            metrics = row.get("allWeightMetrics") or row.get("weightMetrics") or []
+            candidates = metrics if isinstance(metrics, list) else [metrics]
+            for metric in candidates:
+                if not isinstance(metric, dict):
+                    continue
+                value = metric.get("weight") or metric.get("weightInGrams")
+                if value is not None:
+                    break
+        if value is not None:
+            result[day] = float(value) / 1000
     return result
 
 

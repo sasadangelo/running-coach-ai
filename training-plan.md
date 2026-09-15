@@ -96,12 +96,14 @@
 - **Lungo**: 4.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.50km, ~32min; nessuna fermata programmata
 
 ### Settimana 4 — Scarico (21-27 settembre) — Fase B
-**Volume totale**: 11.00 km (-15% rispetto a S3)
+**Volume totale**: 10.60 km (-18% rispetto a S3)
 
-**Scarico confermato:** riduzione del volume con intensità mantenuta. Rispetto a S3: 20% in meno di ripetute, 29% in meno di lavoro tempo e 22% in meno di lungo. Nei ritmi resta nella parte iniziale delle fasce, senza cercare il limite più veloce.
+**Scarico confermato:** riduzione del volume con intensità mantenuta. Rispetto a S3: 20% in meno di ripetute e 22% in meno di lungo. Nei ritmi resta nella parte iniziale delle fasce, senza cercare il limite più veloce.
+
+**Tempo sostituito con corsa facile:** il Load Focus di Garmin segnala eccedenza di carico aerobico alto (accumulata da ripetute/tempo/lungo, le uniche tipologie di sessione di queste settimane, senza mai un giorno di puro facile). In questa settimana di scarico il tempo (lavoro sostenuto a soglia, il principale contributo a quel carico) è sostituito con una corsa facile vera, a parità di tempo di lavoro.
 
 - **Ripetute**: 1km risc., 8 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 3.60km, ~31min
-- **Tempo**: 1km risc., 3 x 500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 3.90km, ~29min
+- **Corsa facile**: 3.5km continui @ 7:35-8:13/km — 3.50km, ~28min
 - **Lungo**: 3.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 3.50km, ~25min; nessuna fermata programmata
 
 ### Settimana 5 (28 settembre - 4 ottobre) — Fase C

@@ -37,6 +37,8 @@ Garmin body-composition data; only days with a recorded weigh-in are listed. 7d 
 
 | Date       | Weight  | 7d avg |
 | ---------- | ------- | ------ |
+| 2026-09-06 | 79.8 kg | N/A kg |
+| 2026-09-09 | 79.5 kg | N/A kg |
 | 2026-09-15 | 78.9 kg | N/A kg |
 
 ## Sleep

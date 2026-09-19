@@ -3,18 +3,45 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 4.43 km
-- **Total Time**: 0:34:21
-- **Total Elevation**: 8 m
-- **Total Calories**: 362 kcal (2/2 activities with data)
+- **Total Activities**: 3
+- **Total Distance**: 8.95 km
+- **Total Time**: 1:07:37
+- **Total Elevation**: 11 m
+- **Total Calories**: 713 kcal (3/3 activities with data)
 
 ### Running Totals
-- **Total Run Time**: 0:22:27
-- **Total Walk Time**: 0:12:21
+- **Total Run Time**: 0:50:39
+- **Total Walk Time**: 0:17:33
 
 ## Activities
 
+### 2026-09-18 08:27:23 - Tempo 3x700 m Rec 200m
+
+**Type**: Run
+**Distance**: 4.51 km
+**Duration**: 0:33:16
+**Pace**: 7:24/km
+**Run time**: 0:28:12
+**Walk time**: 0:05:12
+**Elevation**: 3 m
+**Calories**: 351 kcal
+**Heart Rate**: 152 bpm (max: 170)
+**Note**: Buon Allenamento. Riscaldamento in jogging. 1 Recupero in jogging e 1 in camminata. Primi 200m defaticamento camminata il resto jogging. Nessun problema particolare a parte le orecchie che danno sempre un po' fastidio. Oggi ho cominciato ad allenarmi di mattina.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace     | HR  | Elevation |
+|-----|----------|---------|----------|-----|-----------|
+| 1   | 1.00 km  | 0:07:34 | 7:40/km  | 131 | 1 m       |
+| 2   | 0.70 km  | 0:04:15 | 6:05/km  | 160 | 0 m       |
+| 3   | 0.20 km  | 0:01:38 | 8:12/km  | 160 | 0 m       |
+| 4   | 0.70 km  | 0:04:19 | 6:11/km  | 166 | 1 m       |
+| 5   | 0.20 km  | 0:02:30 | 12:31/km | 152 | 0 m       |
+| 6   | 0.70 km  | 0:04:20 | 6:11/km  | 157 | 0 m       |
+| 7   | 1.00 km  | 0:08:33 | 8:33/km  | 154 | 1 m       |
+| 8   | 0.01 km  | 0:00:07 | 9:51/km  | 156 | 0 m       |
+
+---
 ### 2026-09-15 19:19:20 - 10x200 con 1' Rec.
 
 **Type**: Run
@@ -81,13 +108,13 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 194 bpm
-- **FC riposo media**: 55 bpm
-- **Riserva cardiaca**: 139 bpm
+- **FC riposo media**: 57 bpm
+- **Riserva cardiaca**: 137 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |
-| Zone 1 | 50-60% | 125-138 bpm |
-| Zone 2 | 60-75% | 138-159 bpm |
-| Zone 3 | 75-85% | 159-173 bpm |
+| Zone 1 | 50-60% | 126-139 bpm |
+| Zone 2 | 60-75% | 139-160 bpm |
+| Zone 3 | 75-85% | 160-173 bpm |
 | Zone 4 | 85-93% | 173-184 bpm |
 | Zone 5 | 93-100% | 184-194 bpm |

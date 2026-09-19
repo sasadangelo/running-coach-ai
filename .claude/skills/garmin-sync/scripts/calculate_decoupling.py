@@ -30,6 +30,7 @@ MIN_DURATION_MINUTES = 20
 MIN_SPEED_M_S = 0.3  # drop stopped/near-zero samples (traffic lights, etc.)
 WALK_SPEED_THRESHOLD_M_S = 1.96  # same threshold as garmin_sync.py's run/walk split (~8:30/km)
 MAX_WALK_FRACTION = 0.10  # more than this and it isn't a continuous effort
+DEFAULT_WARMUP_MINUTES = 10  # excluded before the half/half split - cold-start HR lag would otherwise inflate decoupling
 
 TYPE_LABELS = {
     "resistenza": "Resistenza aerobica",
@@ -77,16 +78,11 @@ def extract_series(client: Garmin, activity_id: int) -> list[tuple[float, float,
     return series
 
 
-def compute_decoupling(series: list[tuple[float, float, float]]) -> dict:
+def compute_decoupling(series: list[tuple[float, float, float]], warmup_minutes: float = DEFAULT_WARMUP_MINUTES) -> dict:
     if not series:
         raise ValueError("No usable HR/speed samples in this activity")
 
     total_duration = series[-1][0]
-    if total_duration < MIN_DURATION_MINUTES * 60:
-        raise ValueError(
-            f"Activity is only {total_duration / 60:.1f} min of continuous effort; "
-            f"need at least {MIN_DURATION_MINUTES} min for a reliable decoupling estimate"
-        )
 
     walk_seconds = sum(1 for s in series if s[2] < WALK_SPEED_THRESHOLD_M_S)
     walk_fraction = walk_seconds / len(series)
@@ -97,9 +93,25 @@ def compute_decoupling(series: list[tuple[float, float, float]]) -> dict:
             "Decoupling only applies to sustained, uninterrupted runs (long runs, or a continuous tempo block)."
         )
 
-    half = total_duration / 2
-    first_half = [s for s in series if s[0] <= half]
-    second_half = [s for s in series if s[0] > half]
+    # Cold-start HR lags well behind pace for the first several minutes, which would
+    # otherwise inflate the first-half efficiency factor and overstate decoupling.
+    # Exclude that warm-up window and split only what's left.
+    warmup_seconds = warmup_minutes * 60
+    analysis_series = [s for s in series if s[0] >= warmup_seconds]
+    if not analysis_series:
+        raise ValueError(f"The {warmup_minutes:.0f}-min warm-up window covers the entire activity; nothing left to analyze")
+
+    start = analysis_series[0][0]
+    analysis_duration = analysis_series[-1][0] - start
+    if analysis_duration < MIN_DURATION_MINUTES * 60:
+        raise ValueError(
+            f"Only {analysis_duration / 60:.1f} min of continuous effort after excluding the "
+            f"{warmup_minutes:.0f}-min warm-up; need at least {MIN_DURATION_MINUTES} min for a reliable decoupling estimate"
+        )
+
+    half = start + analysis_duration / 2
+    first_half = [s for s in analysis_series if s[0] <= half]
+    second_half = [s for s in analysis_series if s[0] > half]
 
     def avg(samples: list[tuple[float, float, float]], idx: int) -> float:
         return sum(s[idx] for s in samples) / len(samples)
@@ -112,6 +124,8 @@ def compute_decoupling(series: list[tuple[float, float, float]]) -> dict:
 
     return {
         "total_minutes": total_duration / 60,
+        "warmup_minutes": warmup_minutes,
+        "analysis_minutes": analysis_duration / 60,
         "hr1": hr1, "speed1": speed1, "ef1": ef1,
         "hr2": hr2, "speed2": speed2, "ef2": ef2,
         "decoupling_pct": decoupling_pct,
@@ -178,7 +192,8 @@ def update_log(path: Path, day: str, session_type: str, activity_name: str, dist
         "# Aerobic Decoupling Log",
         "",
         "Pace:HR decoupling puro (split a meta tempo, efficiency factor passo/FC in ciascuna meta) su sessioni a sforzo continuo di almeno "
-        f"{MIN_DURATION_MINUTES} minuti. Sotto il 5% e considerato buona tenuta aerobica per quel tipo di sforzo; valori piu alti indicano margine di miglioramento, non un problema.",
+        f"{MIN_DURATION_MINUTES} minuti, calcolato sui minuti successivi ai primi {DEFAULT_WARMUP_MINUTES} di riscaldamento (esclusi perche a freddo la FC parte molto piu bassa del passo e gonfierebbe il decoupling apparente). "
+        "Sotto il 5% e considerato buona tenuta aerobica per quel tipo di sforzo; valori piu alti indicano margine di miglioramento, non un problema.",
         "",
         "- **Resistenza aerobica**: decoupling sui lunghi (ritmo facile).",
         "- **Capacita aerobica**: decoupling su un tempo continuo a ritmo soglia/sub-soglia (nessuna sessione di questo tipo nel piano attuale).",
@@ -197,6 +212,7 @@ def parse_args():
     parser.add_argument("--activity-id", type=int, help="Skip lookup and use this Garmin activity ID directly")
     parser.add_argument("--type", choices=["resistenza", "capacita"], default="resistenza", help="Which pillar this session measures (default: resistenza)")
     parser.add_argument("--output", default=DEFAULT_OUTPUT, help=f"Log file to update (default: {DEFAULT_OUTPUT})")
+    parser.add_argument("--warmup-minutes", type=float, default=DEFAULT_WARMUP_MINUTES, help=f"Minutes to exclude as warm-up before splitting the effort (default: {DEFAULT_WARMUP_MINUTES})")
     return parser.parse_args()
 
 
@@ -220,7 +236,7 @@ def main() -> int:
             activity = find_activity(client, args.date, args.activity_name)
 
         series = extract_series(client, activity["activityId"])
-        result = compute_decoupling(series)
+        result = compute_decoupling(series, warmup_minutes=args.warmup_minutes)
     except ValueError as exc:
         print(f"Error: {exc}", file=sys.stderr)
         return 1
@@ -229,6 +245,7 @@ def main() -> int:
 
     print(f"Activity: {activity.get('activityName')} ({args.date})")
     print(f"Duration: {result['total_minutes']:.1f} min | Distance: {distance_km:.2f} km")
+    print(f"Warm-up excluded: {result['warmup_minutes']:.0f} min | Analysis window: {result['analysis_minutes']:.1f} min")
     print(f"1st half: {pace_str(result['speed1'])}, {result['hr1']:.0f} bpm")
     print(f"2nd half: {pace_str(result['speed2'])}, {result['hr2']:.0f} bpm")
     print(f"Decoupling: {result['decoupling_pct']:.1f}% ({TYPE_LABELS[args.type]})")

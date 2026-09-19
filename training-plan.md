@@ -107,37 +107,37 @@
 - **Lungo**: 3.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 3.50km, ~25min; nessuna fermata programmata
 
 ### Settimana 5 (28 settembre - 4 ottobre) — Fase C
-**Volume totale**: 13.60 km
+**Volume totale**: 14.20 km
 
 - **Ripetute**: 1km risc., 12 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 4.40km, ~39min
 - **Tempo**: 1km risc., 3 x 800m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.80km, ~34min
-- **Lungo**: 4.4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.40km, ~32min; nessuna fermata programmata
+- **Lungo**: 5.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.00km, ~37min; nessuna fermata programmata
 
 ### Settimana 6 (5-11 ottobre) — Fase C
-**Volume totale**: 16.00 km
+**Volume totale**: 15.30 km
 
 - **Ripetute**: 1km risc., 15 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 5.00km, ~46min
 - **Tempo**: 1km risc., 2 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
-- **Lungo**: 6.4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.40km, ~47min *(sessione più lunga della settimana)*
-
-### Settimana 7 (12-18 ottobre) — Fase C
-**Volume totale**: 16.90 km
-
-- **Ripetute**: 1km risc., 10 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 6.00km, ~53min
-- **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 5.20km, ~36min
 - **Lungo**: 5.7km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.70km, ~42min; nessuna fermata programmata
 
+### Settimana 7 (12-18 ottobre) — Fase C
+**Volume totale**: 16.80 km
+
+- **Ripetute**: 1km risc., 8 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 5.20km, ~47min *(introduce il blocco da 400m, stesso volume di reps della settimana precedente)*
+- **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 5.20km, ~36min
+- **Lungo**: 6.4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.40km, ~47min *(sessione più lunga della settimana, picco prima dello scarico)*
+
 ### Settimana 8 — Scarico (19-25 ottobre) — Fase D
-**Volume totale**: 12.80 km (-26% rispetto a S7)
+**Volume totale**: 12.80 km (-24% rispetto a S7)
 
 - **Ripetute**: 1km risc., 6 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 4.40km, ~41min
 - **Tempo**: 1km risc., 2 x 1000m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.20km, ~30min
-- **Lungo**: 4.2km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.20km, ~31min *(primo tentativo di lungo continuo)*
+- **Lungo**: 4.2km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.20km, ~31min *(scarico: volume ridotto, corpo fresco in vista del test di S9)*
 
 ### Settimana 9 (26 ottobre - 1 novembre) — Fase E
-**Volume totale**: 14.20 km
+**Volume totale**: 15.00 km
 
-- **Ripetute**: 1km risc., 8 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 5.20km, ~47min
+- **Ripetute**: 1km risc., 10 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 6.00km, ~53min
 - **Tempo**: 1km risc., 2000m continui @ 6:00-6:20/km, 1km def. — 4.00km, ~28min *(test tempo continuo)*
 - **Lungo**: 5.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.00km, ~37min *(prova generale: l'intera distanza di gara, di corsa continua)*
 
@@ -164,10 +164,10 @@
 - **Lungo**: 5.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.50km, ~41min; nessuna fermata programmata
 
 ### Settimana 13 (23-29 novembre) — Fase H
-**Volume totale**: 17.80 km
+**Volume totale**: 18.60 km
 
 - **Ripetute**: 1km risc., 3 x 400m @ 5:20-5:30/km (rec. 2') + 3 x 800m @ 5:20-5:30/km (rec. 2'30"), 1km def. — 5.60km, ~49min *(se ti senti bene, prova a sostituire un 800m con un 1600m)*
-- **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 5.20km, ~36min
+- **Tempo**: 1km risc., 3 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 6.00km, ~42min *(finalmente supera il volume soglia di S7 — è l'unica sessione che finora non aveva mai ripreso il picco)*
 - **Lungo**: 7.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 7.00km, ~52min *(più lunga uscita del piano — ottimo indicatore di quanto potrai correre in gara)*
 
 ### Settimana 14 — Gara 2 (30 novembre - 6 dicembre) — Fase I

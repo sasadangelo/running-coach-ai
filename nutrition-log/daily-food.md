@@ -2,17 +2,25 @@
 
 Formato compatto: una riga per pasto con item, porzione assunta e stima kcal/macro. Il dettaglio completo (assunzioni, range di incertezza) resta solo nella conversazione al momento della stima; qui va solo l'esito. Per consigli settimanali/mensili usare `nutrition-summary.md`.
 
-## 2026-09-16 — 1.395 kcal (target 1.820) | P 64 g, C 122 g, G 69 g | score 71/100
+## 2026-09-19 — in corso (giornata non completa, nessuno score)
+
+- Colazione: 1 caffè — trascurabile
+- Note: solo colazione registrata finora, resto della giornata da aggiungere; niente colazione vera anche oggi (pattern ricorrente, come il 15/09)
+
+## 2026-09-18 — 1.610 kcal (target 1.820) | P 59 g, C 186 g, G 69 g | score 81/100
+
+- Colazione (post-corsa): 1 banana (~105 kcal) + toast con bresaola, 2 fette pan bauletto (stima coerente con voce del 14/09, ~180 kcal) + 2 caffè senza zucchero — ~290 kcal
+- Pranzo: pasta al pesto (~100 g pasta secca, porzione standard assunta, non specificata) con pesto genovese (~2 cucchiai) — ~520 kcal
+- Cena: 2 uova in purgatorio (pomodoro e olio) + 4 fette di pane per la scarpetta (2+2, porzione standard assunta) + una manciata di arachidi salate (~30 g) — ~800 kcal
+- Note: proteine ben sotto target (circa metà), grassi sopra target (olio uova/pesto/arachidi), sodio elevato per arachidi salate; allenamento Garmin mattutino 351 kcal (Tempo 3x700m Rec 200m)
+
+## 2026-09-15 — 1.395 kcal (target 1.820) | P 64 g, C 122 g, G 69 g | score 71/100
 
 - Colazione: 2 caffè senza zucchero — trascurabile
 - Merenda: 1 banana — ~105 kcal
 - Pranzo: pasta al pomodoro con pancetta (80 g pasta secca, dato) e pecorino; pancetta e pecorino a porzione standard assunta — ~575 kcal
 - Cena: 2 mozzarelline (assunte ~100 g cad., 200 g totali) + pomodori conditi + 2 fette di pane — ~710 kcal
 - Note: niente colazione vera, proteine ben sotto target, grassi sopra target (mozzarella); frutta presente, verdura solo come contorno; nessun dato Garmin
-
-## 2026-09-15 — in corso
-
-- Colazione: solo caffè (assunto senza zucchero) — trascurabile
 
 ## 2026-09-14 — 2.340 kcal (target 1.820) | P 135 g, C 212 g, G 103 g | score 70/100
 

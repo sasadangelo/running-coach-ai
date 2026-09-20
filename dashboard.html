@@ -132,6 +132,85 @@ S3: [<span class="success">✓</span>] Ripetute 10x200 [<span class="success">�
             <p class="muted text-sm mt-2">Sotto il 5% = buona tenuta aerobica per quel tipo di sforzo. Il 20/09 è leggermente più alto perché corso più veloce (7:13 vs 7:27/km) a FC quasi identica — coerente con la fatica reale riportata negli ultimi 700m, non un segnale isolato.</p>
         </div>
 
+        <!-- Training Load (CTL/ATL/TSB) -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">CARICO DI ALLENAMENTO (CTL / ATL / TSB)</h2>
+            <p class="muted text-sm mb-3">Stile TrainingPeaks, dal TSS giornaliero (NGP/IF di ogni sessione). 27 giorni di storico su 42 necessari perché il CTL converga (~64%) — ancora in fase di costruzione.</p>
+            <svg viewBox="0 0 900 320" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                <!-- CTL/ATL gridlines -->
+                <line x1="45" y1="205" x2="875" y2="205" stroke="#1a7a1a" stroke-width="1"/>
+                <line x1="45" y1="157.5" x2="875" y2="157.5" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <line x1="45" y1="110" x2="875" y2="110" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <line x1="45" y1="62.5" x2="875" y2="62.5" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <line x1="45" y1="15" x2="875" y2="15" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <text x="38" y="209" text-anchor="end" fill="#5aaa5a" font-size="11" font-family="Courier New">0</text>
+                <text x="38" y="161.5" text-anchor="end" fill="#5aaa5a" font-size="11" font-family="Courier New">5</text>
+                <text x="38" y="114" text-anchor="end" fill="#5aaa5a" font-size="11" font-family="Courier New">10</text>
+                <text x="38" y="66.5" text-anchor="end" fill="#5aaa5a" font-size="11" font-family="Courier New">15</text>
+                <text x="38" y="19" text-anchor="end" fill="#5aaa5a" font-size="11" font-family="Courier New">20</text>
+
+                <!-- ATL line (fatica) -->
+                <polyline fill="none" stroke="#ffff33" stroke-width="2" points="45.0,166.1 76.9,170.8 108.8,132.8 140.8,143.2 172.7,108.1 204.6,122.4 236.5,133.8 268.5,100.5 300.4,115.7 332.3,128.1 364.2,79.6 396.2,97.6 428.1,64.4 460.0,84.3 491.9,53.0 523.8,73.9 555.8,92.9 587.7,64.4 619.6,84.3 651.5,53.9 683.5,75.8 715.4,35.9 747.3,59.7 779.2,80.5 811.2,42.5 843.1,66.3 875.0,23.5"/>
+                <!-- CTL line (fitness) -->
+                <polyline fill="none" stroke="#33ff33" stroke-width="3" points="45.0,198.3 76.9,198.3 108.8,191.7 140.8,191.7 172.7,185.1 204.6,185.1 236.5,186.0 268.5,179.3 300.4,179.3 332.3,180.3 364.2,170.8 396.2,171.8 428.1,164.2 460.0,165.1 491.9,158.4 523.8,159.4 555.8,160.3 587.7,153.7 619.6,155.6 651.5,148.0 683.5,149.9 715.4,141.3 747.3,143.2 779.2,144.2 811.2,136.6 843.1,138.5 875.0,129.0"/>
+
+                <!-- TSB bars (forma) -->
+                <line x1="45" y1="260" x2="875" y2="260" stroke="#5aaa5a" stroke-width="1"/>
+                <rect x="34.2" y="260.0" width="21.5" height="0.5" fill="#33ff33" opacity="0.75"/>
+                <rect x="66.2" y="260.0" width="21.5" height="11.0" fill="#ffff33" opacity="0.75"/>
+                <rect x="98.1" y="260.0" width="21.5" height="9.1" fill="#ffff33" opacity="0.75"/>
+                <rect x="130.0" y="260.0" width="21.5" height="19.5" fill="#ffff33" opacity="0.75"/>
+                <rect x="161.9" y="260.0" width="21.5" height="16.1" fill="#ffff33" opacity="0.75"/>
+                <rect x="193.9" y="260.0" width="21.5" height="25.5" fill="#ffff33" opacity="0.75"/>
+                <rect x="225.8" y="260.0" width="21.5" height="20.8" fill="#ffff33" opacity="0.75"/>
+                <rect x="257.7" y="260.0" width="21.5" height="17.3" fill="#ffff33" opacity="0.75"/>
+                <rect x="289.6" y="260.0" width="21.5" height="25.9" fill="#ffff33" opacity="0.75"/>
+                <rect x="321.5" y="260.0" width="21.5" height="21.1" fill="#ffff33" opacity="0.75"/>
+                <rect x="353.5" y="260.0" width="21.5" height="17.3" fill="#ffff33" opacity="0.75"/>
+                <rect x="385.4" y="260.0" width="21.5" height="30.3" fill="#ffff33" opacity="0.75"/>
+                <rect x="417.3" y="260.0" width="21.5" height="24.6" fill="#ffff33" opacity="0.75"/>
+                <rect x="449.2" y="260.0" width="21.5" height="33.4" fill="#ffff33" opacity="0.75"/>
+                <rect x="481.2" y="260.0" width="21.5" height="26.8" fill="#ffff33" opacity="0.75"/>
+                <rect x="513.1" y="260.0" width="21.5" height="35.0" fill="#ffff33" opacity="0.75"/>
+                <rect x="545.0" y="260.0" width="21.5" height="28.1" fill="#ffff33" opacity="0.75"/>
+                <rect x="576.9" y="260.0" width="21.5" height="22.4" fill="#ffff33" opacity="0.75"/>
+                <rect x="608.9" y="260.0" width="21.5" height="29.6" fill="#ffff33" opacity="0.75"/>
+                <rect x="640.8" y="260.0" width="21.5" height="23.6" fill="#ffff33" opacity="0.75"/>
+                <rect x="672.7" y="260.0" width="21.5" height="31.2" fill="#ffff33" opacity="0.75"/>
+                <rect x="704.6" y="260.0" width="21.5" height="24.6" fill="#ffff33" opacity="0.75"/>
+                <rect x="736.5" y="260.0" width="21.5" height="35.0" fill="#ffff33" opacity="0.75"/>
+                <rect x="768.5" y="260.0" width="21.5" height="27.4" fill="#ffff33" opacity="0.75"/>
+                <rect x="800.4" y="260.0" width="21.5" height="21.1" fill="#ffff33" opacity="0.75"/>
+                <rect x="832.3" y="260.0" width="21.5" height="31.2" fill="#ffff33" opacity="0.75"/>
+                <rect x="864.2" y="260.0" width="21.5" height="24.0" fill="#ffff33" opacity="0.75"/>
+                <text x="38" y="264" text-anchor="end" fill="#5aaa5a" font-size="11" font-family="Courier New">0</text>
+
+                <!-- X axis date labels -->
+                <text x="45" y="312" text-anchor="start" fill="#5aaa5a" font-size="11" font-family="Courier New">25/08</text>
+                <text x="204.6" y="312" text-anchor="middle" fill="#5aaa5a" font-size="11" font-family="Courier New">30/08</text>
+                <text x="364.2" y="312" text-anchor="middle" fill="#5aaa5a" font-size="11" font-family="Courier New">04/09</text>
+                <text x="523.8" y="312" text-anchor="middle" fill="#5aaa5a" font-size="11" font-family="Courier New">09/09</text>
+                <text x="683.5" y="312" text-anchor="middle" fill="#5aaa5a" font-size="11" font-family="Courier New">14/09</text>
+                <text x="843.1" y="312" text-anchor="middle" fill="#5aaa5a" font-size="11" font-family="Courier New">19/09</text>
+
+                <!-- Legend -->
+                <line x1="600" y1="8" x2="620" y2="8" stroke="#33ff33" stroke-width="3"/>
+                <text x="624" y="12" fill="#66ff66" font-size="12" font-family="Courier New">CTL</text>
+                <line x1="670" y1="8" x2="690" y2="8" stroke="#ffff33" stroke-width="2"/>
+                <text x="694" y="12" fill="#ffff33" font-size="12" font-family="Courier New">ATL</text>
+                <rect x="740" y="4" width="12" height="8" fill="#ffff33" opacity="0.75"/>
+                <text x="756" y="12" fill="#ffff33" font-size="12" font-family="Courier New">TSB &lt; 0</text>
+            </svg>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-lg mt-4">
+                <div><span class="muted">CTL oggi:</span> <span class="accent">8.0</span></div>
+                <div><span class="muted">ATL oggi:</span> <span class="accent">19.1</span></div>
+                <div><span class="muted">TSB oggi:</span> <span class="warning">-7.6</span> <span class="muted text-sm">(zona grigia)</span></div>
+                <div><span class="muted">ACWR oggi:</span> <span class="warning">2.40</span> <span class="muted text-sm">(rischio elevato*)</span></div>
+            </div>
+            <p class="muted text-sm mt-3">Fasce TSB standard: &gt;+25 molto fresco, +5/+25 fresco, -10/+5 zona grigia, -30/-10 zona ottimale di allenamento, &lt;-30 alto rischio. TSB -7.6 è quindi zona grigia, non ancora la zona di carico produttivo (-30/-10) né un rischio — coerente comunque con 4 settimane senza uno scarico vero.</p>
+            <p class="muted text-sm mt-2">*ACWR = ATL/CTL (Gabbett): &lt;0.8 sotto-allenato, 0.8-1.3 basso rischio, 1.3-1.5 attenzione, &gt;1.5 rischio elevato. Il valore di oggi (2.40) sembra allarmante ma è in gran parte un artefatto: il CTL è ancora al 64% del transitorio (27/42 giorni), quindi il denominatore è artificialmente basso e gonfia il rapporto — da rileggere quando il CTL si sarà assestato, non da prendere alla lettera ora.</p>
+        </div>
+
         <!-- Coach's Commentary -->
         <div class="card p-6 rounded-lg border-4">
             <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">💬 COMMENTO DEL COACH</h2>

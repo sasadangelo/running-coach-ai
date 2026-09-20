@@ -8,6 +8,7 @@
 - **Total Time**: 1:32:08
 - **Total Elevation**: 58 m
 - **Total Calories**: 874 kcal (3/3 activities with data)
+- **Total TSS**: 103 (3/3 activities with a valid NGP/IF)
 
 ### Running Totals
 - **Total Run Time**: 0:59:14
@@ -21,12 +22,15 @@
 **Distance**: 4.21 km
 **Duration**: 0:31:11
 **Pace**: 7:25/km
+**NGP medio**: 7:25/km
+**IF**: 0.82
+**TSS**: 35
 **Run time**: 0:31:10
 **Walk time**: 0:00:03
 **Elevation**: 5 m
 **Calories**: 316 kcal
 **Heart Rate**: 154 bpm (max: 162)
-**Note**: Corsa Lunga 4.2 Km tutta di fila senza stop. 16 min in zona 3 e 17 in zona 1 e 2. Garmin aveva messo FC max a 194 poi abbassata a 192 poi a 191. Fc non ha mai superato 160 però risulta zona 3 già a 157. Io ho cercato di correre con respiro controllato in maniera confortevole il più possibile. A freddo gambe e bacino leggermente affaticati.
+**Note**: Corsa 4.2 Km tutta di fila senza stop. 16 min in zona 3 e 17 in zona 1 e 2. Garmin aveva messo FC max a 194 poi abbassata a 192 poi a 191. Fc non ha mai superato 160 però risulta zona 3 già a 157. Io ho cercato di correre con respiro controllato in maniera confortevole il più possibile. A freddo gambe e bacino leggermente affaticati.
 
 #### Lap Details
 
@@ -45,6 +49,9 @@
 **Distance**: 3.51 km
 **Duration**: 0:28:49
 **Pace**: 8:15/km
+**NGP medio**: 7:21/km
+**IF**: 0.83
+**TSS**: 33
 **Run time**: 0:14:29
 **Walk time**: 0:14:29
 **Elevation**: 6 m
@@ -74,6 +81,9 @@
 **Distance**: 3.62 km
 **Duration**: 0:32:08
 **Pace**: 9:01/km
+**NGP medio**: 7:25/km
+**IF**: 0.82
+**TSS**: 36
 **Run time**: 0:13:35
 **Walk time**: 0:19:01
 **Elevation**: 47 m

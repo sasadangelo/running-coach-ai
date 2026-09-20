@@ -5,6 +5,12 @@ heart_rate:
   max: 194
   resting_average: 57
 
+pace:
+  # Threshold pace, used as the IF (Intensity Factor) denominator for NGP-based
+  # IF/TSS in garmin_sync.py. Currently Garmin's threshold estimate (training-plan.md);
+  # update when a real threshold test/race gives a better number.
+  threshold_sec_per_km: 364  # 6:04/km
+
 zones:
   - name: Zone 1
     min_percent: 50

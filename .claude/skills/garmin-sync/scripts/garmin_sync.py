@@ -30,6 +30,11 @@ except ImportError:
     load_dotenv = None
 
 try:
+    import yaml
+except ImportError:
+    yaml = None
+
+try:
     from garminconnect import Garmin
 except ImportError:
     print(
@@ -73,6 +78,41 @@ DEFAULT_MIN_ACTIVITY_DISTANCE_KM = 0.8
 
 WALK_SPEED_THRESHOLD_M_S = 1.96  # ~8:30/km - below this a sample counts as walking
 
+NGP_WINDOW_SECONDS = 30  # rolling-average window before the quartic mean, same convention as TrainingPeaks' NGP/NP
+
+TRAINING_ZONES_CONFIG = ".claude/training-zones.yaml"
+
+
+def load_threshold_speed_m_s(config_path: str = TRAINING_ZONES_CONFIG) -> float | None:
+    """Load threshold pace (pace.threshold_sec_per_km) from training-zones.yaml, as m/s."""
+    if yaml is None:
+        return None
+    path = Path(config_path)
+    if not path.exists():
+        return None
+    try:
+        config = yaml.safe_load(path.read_text()) or {}
+    except Exception:  # noqa: BLE001 - malformed config shouldn't crash the sync
+        return None
+    threshold_sec_per_km = ((config.get("pace") or {}).get("threshold_sec_per_km"))
+    if not threshold_sec_per_km:
+        return None
+    return 1000.0 / threshold_sec_per_km
+
+
+def compute_if(ngp_speed_m_s: float | None, threshold_speed_m_s: float | None) -> float | None:
+    """Intensity Factor = NGP speed / threshold speed (TrainingPeaks convention)."""
+    if not ngp_speed_m_s or not threshold_speed_m_s:
+        return None
+    return ngp_speed_m_s / threshold_speed_m_s
+
+
+def compute_tss(duration_s: float, intensity_factor: float | None) -> float | None:
+    """Training Stress Score = duration_hours * IF^2 * 100 (TrainingPeaks convention)."""
+    if intensity_factor is None or duration_s <= 0:
+        return None
+    return (duration_s / 3600.0) * (intensity_factor**2) * 100.0
+
 
 def login(email: str, password: str, token_dir: str) -> Garmin:
     """Log in to Garmin Connect, reusing a cached session token if available."""
@@ -105,34 +145,36 @@ def activity_calories(activity: dict) -> float | None:
     return None
 
 
-def compute_run_walk_split(client: Garmin, activity_id: int) -> tuple[float, float] | tuple[None, None]:
+def fetch_activity_details(client: Garmin, activity_id: int) -> dict | None:
+    """Fetch full per-second activity detail once, shared by run/walk split and NGP."""
+    try:
+        return client.get_activity_details(activity_id)
+    except Exception as exc:  # noqa: BLE001 - soft warning, don't abort the sync
+        print(f"  warning: could not fetch details for activity {activity_id}: {exc}", file=sys.stderr)
+        return None
+
+
+def _metric_index(details: dict, key: str) -> int | None:
+    for descriptor in details.get("metricDescriptors", []) if isinstance(details, dict) else []:
+        if descriptor.get("key") == key:
+            return descriptor.get("metricsIndex")
+    return None
+
+
+def compute_run_walk_split(details: dict | None) -> tuple[float, float] | tuple[None, None]:
     """
     Estimate time spent running vs walking within an activity from
-    second-by-second speed samples. Garmin doesn't expose a simple
-    "run time" / "walk time" field on the activity summary, so this fetches
-    full activity detail (like runanalyze's GarminSyncService does for
-    HR/speed) and classifies each sample against WALK_SPEED_THRESHOLD_M_S.
+    second-by-second speed samples, classifying each sample against
+    WALK_SPEED_THRESHOLD_M_S.
 
     Returns (run_seconds, walk_seconds), or (None, None) if detail samples
     aren't available for this activity.
     """
-    try:
-        details = client.get_activity_details(activity_id)
-    except Exception as exc:  # noqa: BLE001 - soft warning, don't abort the sync
-        print(f"  warning: could not fetch details for run/walk split on activity {activity_id}: {exc}", file=sys.stderr)
+    if not details:
         return None, None
 
-    descriptors = details.get("metricDescriptors", []) if isinstance(details, dict) else []
-    speed_index = None
-    duration_index = None
-    for descriptor in descriptors:
-        key = descriptor.get("key")
-        idx = descriptor.get("metricsIndex")
-        if key == "directSpeed":
-            speed_index = idx
-        elif key == "sumDuration":
-            duration_index = idx
-
+    speed_index = _metric_index(details, "directSpeed")
+    duration_index = _metric_index(details, "sumDuration")
     if speed_index is None or duration_index is None:
         return None, None
 
@@ -158,6 +200,65 @@ def compute_run_walk_split(client: Garmin, activity_id: int) -> tuple[float, flo
         prev_ts = ts
 
     return run_seconds, walk_seconds
+
+
+def compute_ngp(details: dict | None) -> float | None:
+    """
+    Normalized Graded Pace speed (m/s), TrainingPeaks-style: grade-adjusted
+    speed (Garmin's own directGradeAdjustedSpeed, already corrected for
+    elevation) smoothed over a rolling NGP_WINDOW_SECONDS window, then
+    combined via a quartic mean (4th-power average, 4th root) so sustained
+    surges count for more than a simple average - the same non-linear
+    weighting TrainingPeaks uses for Normalized Power/NGP.
+
+    Intentionally NOT gated on walk fraction: the quartic mean already does
+    the right thing with a mix of hard efforts and walked/slow recovery -
+    the hard segments dominate the 4th-power sum and the slow ones are
+    naturally discounted, which is the whole point of NP/NGP (built for
+    exactly this kind of variable-intensity session, e.g. intervals with
+    walked recovery). It's least reliable on sessions with only one or two
+    isolated brief surges in an otherwise slow/uncertain effort (e.g. the
+    free-form pre-plan runs in week 1) - there a single surge can dominate
+    the quartic mean more than it represents the session as a whole. Read
+    those with more skepticism; they aren't used for coaching decisions
+    anyway.
+
+    Assumes 1 Hz samples (Garmin's activity detail stream); falls back to
+    None if grade-adjusted speed or duration aren't available.
+    """
+    if not details:
+        return None
+
+    gap_index = _metric_index(details, "directGradeAdjustedSpeed")
+    duration_index = _metric_index(details, "sumDuration")
+    if gap_index is None or duration_index is None:
+        return None
+
+    entries = details.get("activityDetailMetrics", []) if isinstance(details, dict) else []
+    series = []
+    for entry in entries:
+        values = entry.get("metrics", [])
+        if max(gap_index, duration_index) >= len(values):
+            continue
+        ts, gap = values[duration_index], values[gap_index]
+        if ts is None or gap is None:
+            continue
+        series.append((ts, gap))
+
+    if len(series) < NGP_WINDOW_SECONDS:
+        return None
+
+    speeds = [gap for _, gap in series]
+    window = NGP_WINDOW_SECONDS
+    rolling_avgs = []
+    running_sum = sum(speeds[:window])
+    rolling_avgs.append(running_sum / window)
+    for i in range(window, len(speeds)):
+        running_sum += speeds[i] - speeds[i - window]
+        rolling_avgs.append(running_sum / window)
+
+    quartic_mean = (sum(v**4 for v in rolling_avgs) / len(rolling_avgs)) ** 0.25
+    return quartic_mean
 
 
 def meters_to_distance(meters: float, unit: str) -> float:
@@ -243,7 +344,9 @@ def format_markdown_table(headers: list[str], rows: list[list[str]]) -> list[str
     return lines
 
 
-def build_activity_section(activity: dict, laps: list, run_walk_split: tuple, unit: str) -> str:
+def build_activity_section(
+    activity: dict, laps: list, run_walk_split: tuple, ngp_speed: float | None, threshold_speed_m_s: float | None, unit: str
+) -> str:
     name = activity.get("activityName", "Untitled Activity")
     start_time = (activity.get("startTimeLocal") or "").replace("T", " ")
     label = activity_label(activity)
@@ -257,6 +360,8 @@ def build_activity_section(activity: dict, laps: list, run_walk_split: tuple, un
     max_hr = activity.get("maxHR")
     run_s, walk_s = run_walk_split
     note = sanitize_note(activity.get("description") or "")
+    intensity_factor = compute_if(ngp_speed, threshold_speed_m_s)
+    tss = compute_tss(duration_s, intensity_factor)
 
     lines = [
         f"### {start_time} - {name}",
@@ -265,6 +370,14 @@ def build_activity_section(activity: dict, laps: list, run_walk_split: tuple, un
         f"**Distance**: {distance:.2f} {distance_unit_label(unit)}",
         f"**Duration**: {format_duration(duration_s)}",
         f"**Pace**: {format_pace(speed, unit)}/{distance_unit_label(unit)}",
+    ]
+    if ngp_speed is not None:
+        lines.append(f"**NGP medio**: {format_pace(ngp_speed, unit)}/{distance_unit_label(unit)}")
+    if intensity_factor is not None:
+        lines.append(f"**IF**: {intensity_factor:.2f}")
+    if tss is not None:
+        lines.append(f"**TSS**: {tss:.0f}")
+    lines += [
         f"**Run time**: {format_duration(run_s) if run_s is not None else 'N/A'}",
         f"**Walk time**: {format_duration(walk_s) if walk_s is not None else 'N/A'}",
         f"**Elevation**: {elevation:.0f} {elevation_unit_label(unit)}",
@@ -307,7 +420,7 @@ def build_activity_section(activity: dict, laps: list, run_walk_split: tuple, un
     return "\n".join(lines)
 
 
-def build_markdown(activities: list, start: date, end: date, unit: str) -> str:
+def build_markdown(activities: list, start: date, end: date, unit: str, threshold_speed_m_s: float | None) -> str:
     total_distance_m = 0.0
     total_duration_s = 0.0
     total_elevation_m = 0.0
@@ -315,10 +428,13 @@ def build_markdown(activities: list, start: date, end: date, unit: str) -> str:
     activities_with_calories = 0
     total_run_s = 0.0
     total_walk_s = 0.0
+    total_tss = 0.0
+    activities_with_tss = 0
 
-    for activity, _laps, (run_s, walk_s) in activities:
+    for activity, _laps, (run_s, walk_s), ngp_speed in activities:
         total_distance_m += activity.get("distance", 0.0) or 0.0
-        total_duration_s += activity.get("movingDuration") or activity.get("duration", 0.0) or 0.0
+        activity_duration_s = activity.get("movingDuration") or activity.get("duration", 0.0) or 0.0
+        total_duration_s += activity_duration_s
         total_elevation_m += activity.get("elevationGain", 0.0) or 0.0
         calories = activity_calories(activity)
         if calories is not None:
@@ -326,6 +442,10 @@ def build_markdown(activities: list, start: date, end: date, unit: str) -> str:
             activities_with_calories += 1
         total_run_s += run_s or 0.0
         total_walk_s += walk_s or 0.0
+        tss = compute_tss(activity_duration_s, compute_if(ngp_speed, threshold_speed_m_s))
+        if tss is not None:
+            total_tss += tss
+            activities_with_tss += 1
 
     lines = [
         f"# Training Log: {start.isoformat()} to {end.isoformat()}",
@@ -338,6 +458,10 @@ def build_markdown(activities: list, start: date, end: date, unit: str) -> str:
         f"- **Total Time**: {format_duration(total_duration_s)}",
         f"- **Total Elevation**: {meters_to_elevation(total_elevation_m, unit):.0f} {elevation_unit_label(unit)}",
         f"- **Total Calories**: {total_calories:.0f} kcal ({activities_with_calories}/{len(activities)} activities with data)",
+    ]
+    if activities_with_tss:
+        lines.append(f"- **Total TSS**: {total_tss:.0f} ({activities_with_tss}/{len(activities)} activities with a valid NGP/IF)")
+    lines += [
         "",
         "### Running Totals",
         f"- **Total Run Time**: {format_duration(total_run_s)}",
@@ -347,8 +471,8 @@ def build_markdown(activities: list, start: date, end: date, unit: str) -> str:
         "",
     ]
 
-    for activity, laps, run_walk_split in activities:
-        lines.extend(build_activity_section(activity, laps, run_walk_split, unit).splitlines())
+    for activity, laps, run_walk_split, ngp_speed in activities:
+        lines.extend(build_activity_section(activity, laps, run_walk_split, ngp_speed, threshold_speed_m_s, unit).splitlines())
 
     return "\n".join(lines)
 
@@ -410,14 +534,20 @@ def main():
             laps = []
         else:
             print(f"  found {len(laps)} laps for '{activity.get('activityName')}'")
+        details = fetch_activity_details(client, activity["activityId"])
         print(f"  computing run/walk split for '{activity.get('activityName')}'...")
-        run_walk_split = compute_run_walk_split(client, activity["activityId"])
-        enriched_activities.append((activity, laps, run_walk_split))
+        run_walk_split = compute_run_walk_split(details)
+        ngp_speed = compute_ngp(details)
+        enriched_activities.append((activity, laps, run_walk_split, ngp_speed))
 
     # Most recent first, to match the training-log convention used elsewhere in this project
     enriched_activities.sort(key=lambda item: item[0].get("startTimeLocal", ""), reverse=True)
 
-    markdown = build_markdown(enriched_activities, start, end, args.unit)
+    threshold_speed_m_s = load_threshold_speed_m_s()
+    if threshold_speed_m_s is None:
+        print("  note: no pace.threshold_sec_per_km in .claude/training-zones.yaml - skipping IF/TSS", file=sys.stderr)
+
+    markdown = build_markdown(enriched_activities, start, end, args.unit, threshold_speed_m_s)
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

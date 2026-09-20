@@ -8,6 +8,7 @@
 - **Total Time**: 1:35:14
 - **Total Elevation**: 13 m
 - **Total Calories**: 957 kcal (3/3 activities with data)
+- **Total TSS**: 111 (3/3 activities with a valid NGP/IF)
 
 ### Running Totals
 - **Total Run Time**: 0:57:22
@@ -15,12 +16,15 @@
 
 ## Activities
 
-### 2026-09-06 18:56:14 - Lungo 4 Km
+### 2026-09-06 18:56:14 - Corsa 4 Km
 
 **Type**: Run
 **Distance**: 4.01 km
 **Duration**: 0:29:28
 **Pace**: 7:22/km
+**NGP medio**: 7:05/km
+**IF**: 0.86
+**TSS**: 36
 **Run time**: 0:23:44
 **Walk time**: 0:05:48
 **Elevation**: 3 m
@@ -45,6 +49,9 @@
 **Distance**: 4.73 km
 **Duration**: 0:42:03
 **Pace**: 8:53/km
+**NGP medio**: 7:41/km
+**IF**: 0.79
+**TSS**: 44
 **Run time**: 0:17:16
 **Walk time**: 0:24:48
 **Elevation**: 5 m
@@ -71,6 +78,9 @@
 **Distance**: 3.26 km
 **Duration**: 0:23:43
 **Pace**: 7:17/km
+**NGP medio**: 6:47/km
+**IF**: 0.90
+**TSS**: 32
 **Run time**: 0:16:22
 **Walk time**: 0:07:22
 **Elevation**: 5 m

@@ -2,10 +2,19 @@
 
 Formato compatto: una riga per pasto con item, porzione assunta e stima kcal/macro. Il dettaglio completo (assunzioni, range di incertezza) resta solo nella conversazione al momento della stima; qui va solo l'esito. Per consigli settimanali/mensili usare `nutrition-summary.md`.
 
-## 2026-09-19 — in corso (giornata non completa, nessuno score)
+## 2026-09-20 — in corso (giornata non completa, nessuno score)
 
 - Colazione: 1 caffè — trascurabile
-- Note: solo colazione registrata finora, resto della giornata da aggiungere; niente colazione vera anche oggi (pattern ricorrente, come il 15/09)
+- Dopo allenamento (post-lungo): toast con bresaola, 2 fette pan bauletto (stima coerente con 14/09 e 18/09, ~180 kcal) + 1 banana (~105 kcal) — ~285 kcal
+- Note: giornata in corso, resto da aggiungere; allenamento Garmin mattutino 412 kcal (Lungo 4,51 km 339 kcal + Allunghi 73 kcal)
+
+## 2026-09-19 — 1.425 kcal (target 1.820) | P 46 g, C 158 g, G 52 g | score 73/100
+
+- Colazione: 1 caffè — trascurabile
+- Mattina (prima di pranzo): 1 banana — ~105 kcal
+- Pranzo: pasta e fagioli (1 piatto e mezzo, porzione abbondante assunta) + un po' di porchetta (~70 g, porzione standard assunta) — ~730 kcal
+- Cena: 4 fette di pane con crema di olive (~50 g totali, porzione standard assunta) + 1 spritz — ~585 kcal
+- Note: proteine molto sotto target, carboidrati sotto target, grassi vicini al target; alcol presente (spritz); nessuna verdura; nessun allenamento Garmin quel giorno
 
 ## 2026-09-18 — 1.610 kcal (target 1.820) | P 59 g, C 186 g, G 69 g | score 81/100
 

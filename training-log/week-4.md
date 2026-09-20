@@ -3,18 +3,56 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 3
-- **Total Distance**: 8.95 km
-- **Total Time**: 1:07:37
-- **Total Elevation**: 11 m
-- **Total Calories**: 713 kcal (3/3 activities with data)
+- **Total Activities**: 5
+- **Total Distance**: 14.38 km
+- **Total Time**: 1:49:41
+- **Total Elevation**: 20 m
+- **Total Calories**: 1125 kcal (5/5 activities with data)
 
 ### Running Totals
-- **Total Run Time**: 0:50:39
-- **Total Walk Time**: 0:17:33
+- **Total Run Time**: 1:25:46
+- **Total Walk Time**: 0:24:41
 
 ## Activities
 
+### 2026-09-20 08:39:05 - 8xAllunghi
+
+**Type**: Run
+**Distance**: 0.92 km
+**Duration**: 0:09:03
+**Pace**: 9:56/km
+**Run time**: 0:02:10
+**Walk time**: 0:07:01
+**Elevation**: 0 m
+**Calories**: 73 kcal
+**Heart Rate**: 126 bpm (max: 136)
+
+---
+### 2026-09-20 07:56:34 - Lungo 4.5 Km
+
+**Type**: Run
+**Distance**: 4.51 km
+**Duration**: 0:33:00
+**Pace**: 7:20/km
+**Run time**: 0:32:57
+**Walk time**: 0:00:07
+**Elevation**: 9 m
+**Calories**: 339 kcal
+**Heart Rate**: 147 bpm (max: 160)
+**Note**: Primo lungo di mattina. Ottimo allenamento. Corsa continua 4.5 km. Zona 2 completa. Battito più basso del solito segno che il piano allenamento va bene. 5 secondi in meno al km scorsa volta.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:28 | 7:30/km | 128 | 1 m       |
+| 2   | 1.00 km  | 0:07:08 | 7:08/km | 149 | 4 m       |
+| 3   | 1.00 km  | 0:07:14 | 7:15/km | 152 | 2 m       |
+| 4   | 1.00 km  | 0:07:24 | 7:24/km | 154 | 1 m       |
+| 5   | 0.50 km  | 0:03:44 | 7:29/km | 153 | 0 m       |
+| 6   | 0.01 km  | 0:00:02 | 7:36/km | 154 | 0 m       |
+
+---
 ### 2026-09-18 08:27:23 - Tempo 3x700 m Rec 200m
 
 **Type**: Run

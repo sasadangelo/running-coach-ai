@@ -3,114 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Allenamento | Roma 5K + Best Woman 10K</title>
+<title>Dashboard Allenamento — Roma 5K + Best Woman 10K</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-:root { --bg:#080c09; --panel:#0d160e; --green:#39ff72; --bright:#b6ffc3; --yellow:#ffe66d; --muted:#6aa579; --line:#1d873e; }
-body { background:var(--bg); color:var(--green); font-family:"Courier New",monospace; }
-body:before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.08; background:repeating-linear-gradient(0deg, transparent 0 3px, #fff 4px); }
-.card { background:var(--panel); border:1px solid var(--line); box-shadow:0 0 18px rgba(57,255,114,.12); }
-.accent { color:var(--bright); } .warning { color:var(--yellow); } .muted { color:var(--muted); }
-pre { white-space:pre-wrap; overflow-x:auto; } .rule { border-color:var(--line); }
+    body {
+        background: #0a0a0a;
+        color: #33ff33;
+        font-family: 'Courier New', monospace;
+    }
+    .card {
+        background: #0f0f0f;
+        border: 2px solid #33ff33;
+        box-shadow: 0 0 10px rgba(51, 255, 51, 0.3);
+    }
+    .accent { color: #66ff66; }
+    .warning { color: #ffff33; }
+    .success { color: #33ff33; }
+    .muted { color: #5aaa5a; }
+    pre { font-family: 'Courier New', monospace; white-space: pre-wrap; }
+    h1, h2 { text-shadow: 0 0 6px rgba(51,255,51,0.4); }
 </style>
 </head>
 <body class="p-4 md:p-8 min-h-screen">
-<main class="max-w-6xl mx-auto space-y-6">
-<header class="card p-6 md:p-8">
-  <p class="muted text-sm">RUNNING-COACH // SNAPSHOT 13-09-2026</p>
-  <h1 class="text-3xl md:text-5xl font-bold mt-3">DASHBOARD ALLENAMENTO</h1>
-  <p class="accent text-lg md:text-xl mt-3">Roma 5K · 8 novembre 2026 &nbsp;|&nbsp; Best Woman 10K · 6 dicembre 2026</p>
-  <p class="muted mt-2">Settimana 3 di 14 · 3 sessioni di qualità ogni settimana · settimane lunedì-domenica</p>
-</header>
+<div class="max-w-6xl mx-auto">
 
-<section class="grid grid-cols-1 md:grid-cols-4 gap-4">
-  <div class="card p-5"><p class="muted text-sm">SETTIMANE</p><p class="text-3xl accent mt-2">3 / 14</p><p class="text-sm mt-1">settimane completate</p></div>
-  <div class="card p-5"><p class="muted text-sm">SESSIONI</p><p class="text-3xl accent mt-2">5 / 5</p><p class="text-sm mt-1">completate · 100%</p></div>
-  <div class="card p-5"><p class="muted text-sm">VOLUME</p><p class="text-3xl accent mt-2">20.08 km</p><p class="text-sm mt-1">85% del previsto</p></div>
-  <div class="card p-5"><p class="muted text-sm">STATO</p><p class="text-2xl mt-3">ON TRACK</p><p class="warning text-sm mt-1">resistenza aerobica in costruzione</p></div>
-</section>
+    <!-- Header -->
+    <header class="card p-6 rounded-lg mb-6">
+        <h1 class="text-3xl md:text-4xl font-bold mb-2">DASHBOARD ALLENAMENTO</h1>
+        <p class="text-lg md:text-xl accent">🎯 Gara 1: Roma 5K — 8 novembre 2026 — corsa continua, senza fermarsi</p>
+        <p class="text-lg md:text-xl accent">🎯 Gara 2: Best Woman 10K — 6 dicembre 2026 — massimizzare i km corsi di fila</p>
+        <p class="text-base md:text-lg muted mt-3">Settimana 3 di 14 completata &middot; Fase A (Ripresa) conclusa &middot; Fase B (Scarico) da domani, 21 settembre</p>
+    </header>
 
-<section class="card p-6">
-  <h2 class="text-2xl font-bold border-b rule pb-3">PANORAMICA E PROGRESSO</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
-    <div><p class="muted">Obiettivo Roma 5K</p><p class="accent">corsa continua senza fermarsi</p></div>
-    <div><p class="muted">Obiettivo Best Woman 10K</p><p class="accent">massimizzare i km corsi</p></div>
-    <div><p class="muted">Fase attuale</p><p class="accent">A · Ripresa · Settimana 3 di 3</p></div>
-    <div><p class="muted">Prossima settimana</p><p class="accent">Settimana 4 · 14-20 settembre</p></div>
-  </div>
-  <pre class="mt-6 accent">A RIPRESA       [██░] 2/3 settimane
-B SCARICO        [░]   settimana 4
-C SVILUPPO       [░░░] settimane 5-7
-D SCARICO        [░]   settimana 8
-E TEST           [░]   settimana 9
-F GARA 5K        [░]   settimana 10
-G RECUPERO       [░]   settimana 11
-H VERSO 10K      [░░]  settimane 12-13
-I GARA 10K       [░]   settimana 14</pre>
-</section>
+    <div class="space-y-6">
 
-<section class="card p-6">
-  <h2 class="text-2xl font-bold border-b rule pb-3">CHILOMETRAGGIO</h2>
-  <pre class="mt-5 text-sm md:text-base">Storico pre-piano  24-30 ago   [██████████████████░░]  9.65 km
-Piano S1            31 ago-06 set [█████████████████░░░] 12.00 km / 9.80 km residui
-Piano S2            07-13 set     [████████████████░░░░] 11.34 km / 13.95 km        81%
+        <!-- Plan Overview -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">PANORAMICA PIANO</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg">
+                <div><span class="muted">Durata piano:</span> <span class="accent">14 settimane</span> (10 verso 5K + 4 verso 10K)</div>
+                <div><span class="muted">Settimane completate:</span> <span class="accent">3 / 14</span></div>
+                <div><span class="muted">Giorni a Roma 5K:</span> <span class="accent">49 giorni (7 settimane)</span></div>
+                <div><span class="muted">Giorni a Best Woman 10K:</span> <span class="accent">77 giorni (11 settimane)</span></div>
+                <div><span class="muted">FC max / riposo:</span> <span class="accent">194 / 57 bpm</span> (Karvonen)</div>
+                <div><span class="muted">Volume totale pianificato:</span> <span class="accent">172.80 km</span> sull'intero piano</div>
+            </div>
+            <p class="muted text-sm mt-4">Nota: prima dell'avvio ufficiale del piano (2 settembre), una settimana di ripresa libera dal 24 al 30 agosto (9.65 km, non conteggiata nel piano) ha aiutato a valutare il punto di partenza.</p>
+        </div>
 
-Volume 3 settimane:  32.99 km totali
-Media:               11.00 km/settimana
-Sessione piu lunga: 4.21 km continuativi</pre>
-  <p class="muted text-sm mt-4">Le prime due settimane formali del piano sono comprese nelle settimane 2 e 3 del log continuo; la settimana 1 Garmin era una settimana di ripresa pre-piano.</p>
-</section>
+        <!-- Phase Progress -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">PROGRESSO FASI</h2>
+            <pre class="text-sm md:text-base">
+Fase A — Ripresa       (S1-S3)   <span class="success">✓✓✓ COMPLETATA</span>
+Fase B — Scarico       (S4)      <span class="accent">○ da domani</span>
+Fase C — Sviluppo      (S5-S7)   ○○○
+Fase D — Scarico       (S8)      ○
+Fase E — Test/Rifinit. (S9)      ○
+Fase F — Scarico Gara1 (S10)     ○   → <span class="warning">Roma 5K, 8 nov</span>
+Fase G — Recupero      (S11)     ○
+Fase H — Sviluppo 10K  (S12-S13) ○○
+Fase I — Scarico Gara2 (S14)     ○   → <span class="warning">Best Woman 10K, 6 dic</span>
+            </pre>
+        </div>
 
-<section class="card p-6">
-  <h2 class="text-2xl font-bold border-b rule pb-3">COMPLETAMENTO SESSIONI</h2>
-  <pre class="mt-5">Piano S1  [✓] Tempo 2x1500   [✓] Lungo 4 km
-Piano S2  [✓] 8x200          [✓] Tempo 4x500   [✓] Lungo 4.2 km
+        <!-- On Track Status -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">STATO: <span class="success">→ IN LINEA CON IL PIANO ✓</span></h2>
+            <div class="space-y-3">
+                <div>
+                    <div class="flex justify-between mb-1"><span>Completamento sessioni</span><span class="accent">100%</span></div>
+                    <pre class="text-sm">[████████████████████] 8/8 sessioni pianificate + 3 extra</pre>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-1"><span>Volume vs piano (S1-S3)</span><span class="accent">110%</span></div>
+                    <pre class="text-sm">[████████████████████] 37.72 / 34.40 km</pre>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-lg mt-3">
+                    <div><span class="muted">Media settimanale:</span> <span class="accent">12.57 km/sett</span></div>
+                    <div><span class="muted">Settimana più intensa:</span> <span class="accent">S3 — 14.38 km</span></div>
+                </div>
+            </div>
+        </div>
 
-Totale: 5/5 sessioni chiave completate (100%)
-Extra: 5 allunghi dopo il lungo · lavoro tecnico, non sessione aggiuntiva</pre>
-</section>
+        <!-- Weekly Mileage -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">CHILOMETRAGGIO SETTIMANALE</h2>
+            <pre class="text-sm md:text-base">
+S1 (31ago-6set) [████████████████████] 12.00 / 9.00  km (133%) <span class="success">✓</span>
+S2 (7-13 set)   [██████████████████░░] 11.34 / 12.40 km  (91%) <span class="success">✓</span>
+S3 (14-20 set)  [████████████████████] 14.38 / 13.00 km (111%) <span class="success">✓</span>
+S4 (21-27 set)  [░░░░░░░░░░░░░░░░░░░░]  0.00 / 10.60 km   (0%) <span class="accent">→ scarico</span>
+            </pre>
+            <div class="grid grid-cols-2 gap-4 text-lg mt-4">
+                <div><span class="muted">Totale corso (piano):</span> <span class="accent">37.72 km</span></div>
+                <div><span class="muted">Calorie Garmin (3 sett.):</span> <span class="accent">2.956 kcal</span></div>
+            </div>
+        </div>
 
-<section class="card p-6">
-  <h2 class="text-2xl font-bold border-b rule pb-3">ADERENZA AI RITMI</h2>
-  <div class="space-y-4 mt-5">
-    <div><p><span class="muted">Ripetute 200 m · target 5:20-5:30/km</span></p><p class="accent">5:11-5:46/km · eseguite, lieve calo nelle ultime 2</p></div>
-    <div><p><span class="muted">Tempo 500 m · target 6:00-6:20/km</span></p><p class="accent">6:03, 6:03, 6:03, 6:11/km · centrato</p></div>
-    <div><p><span class="muted">Lungo · riferimento 6:40-7:00/km</span></p><p class="warning">7:25/km · continuo e controllato, ma non completamente facile</p></div>
-    <div><p><span class="muted">Recuperi prescritti</span></p><p class="accent">Cammino invece di jog: adattamento coerente con la fase di ripresa</p></div>
-  </div>
-</section>
+        <!-- Session Completion -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">COMPLETAMENTO SEDUTE</h2>
+            <pre class="text-sm md:text-base">
+S1: [<span class="success">✓</span>] Tempo 2x1.5km   [<span class="success">✓</span>] Lungo 4km                          (+1 corsa extra)
+S2: [<span class="success">✓</span>] Ripetute 8x200  [<span class="success">✓</span>] Tempo 4x500m  [<span class="success">✓</span>] Lungo 4.2km continuo
+S3: [<span class="success">✓</span>] Ripetute 10x200 [<span class="success">✓</span>] Tempo 3x700m  [<span class="success">✓</span>] Lungo 4.5km continuo (+2 extra: allunghi, corsa)
+            </pre>
+        </div>
 
-<section class="card p-6">
-  <h2 class="text-2xl font-bold border-b rule pb-3">SEGNALI DI RECUPERO</h2>
-  <pre class="mt-5">FC riposo       60 bpm (08/09) -> 53 bpm (13/09)   trend favorevole
-HRV RMSSD       47 ms (08/09) -> 59 ms (13/09)      trend favorevole
-Sonno recente   6h49, 5h49, 5h51, 7h05, 6h46, 6h17
-FC max loggata  167 bpm nella settimana                 non e FCmax
-VO2max Garmin   circa 44.3 -> 43.6                       variazione singola</pre>
-  <p class="muted text-sm mt-4">Dati Garmin: segnali di recupero incoraggianti, da interpretare insieme a sintomi, sonno e sensazioni. La FCmax resta non verificata.</p>
-</section>
+        <!-- Pace Adherence -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">ADERENZA AI RITMI</h2>
+            <div class="space-y-2 text-lg">
+                <div><span class="muted">Ripetute (5:20-5:30/km):</span> <span class="success">5:19-5:24/km ✓ IN LINEA</span> <span class="muted text-sm">(cala nelle ultime rep per fatica)</span></div>
+                <div><span class="muted">Tempo (6:00-6:20/km):</span> <span class="success">6:05-6:09/km ✓ OTTIMO</span></div>
+                <div><span class="muted">Lungo (7:15-7:40/km, guidato da FC):</span> <span class="success">7:20-7:25/km ✓ IN LINEA</span> <span class="muted text-sm">(FC in calo: 151→147 bpm a parità di ritmo)</span></div>
+            </div>
+            <p class="mt-4 warning text-sm">⚠ Punto da monitorare: nelle ripetute il recupero è spesso camminato invece che jogging leggero — segnale di fatica in accumulo, coerente col perché lo scarico arriva ora.</p>
+        </div>
 
-<section class="card p-6 border-2">
-  <h2 class="text-2xl font-bold border-b rule pb-3">COMMENTO DEL COACH</h2>
-  <div class="space-y-4 mt-5 leading-relaxed">
-    <p>Due settimane formali, cinque sedute chiave completate: questo e il dato piu importante. Le ripetute e il tempo stanno rispondendo bene, con il 4x500 quasi da metronomo. Il motore breve c'e.</p>
-    <p>Il lungo di oggi e stato un passo avanti vero: 4,21 km senza fermarti, partendo piano e correggendo il ritmo quando hai capito che salire verso 6:40 non era sostenibile. Non e stato un lungo “facilissimo”, ma e stato un lungo utile: hai costruito continuita invece di inseguire il passo.</p>
-    <p class="warning">La priorita non e accorciare il lungo: e renderlo progressivamente piu sostenibile mantenendo la distanza prevista. I lunghi restano lunghi; la preferenza per ripetute e tempo serve solo a capire dove trovi piu motivazione e come distribuire il carico mentale.</p>
-    <p class="accent">Verdetto: ON TRACK. Prossimo obiettivo: consolidare la continuita e arrivare allo scarico senza trasformare ogni lungo in una gara contro il ritmo.</p>
-  </div>
-</section>
+        <!-- Aerobic Efficiency (bonus) -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">EFFICIENZA AEROBICA (DECOUPLING)</h2>
+            <pre class="text-sm md:text-base">
+13/09  Corsa 4.2km   [███████░░░░░░░░░░░░░]  3.0%  <span class="success">✓ ottima tenuta</span>
+20/09  Lungo 4.5km   [███████████░░░░░░░░░]  4.8%  <span class="success">✓ ancora buona</span>
+            </pre>
+            <p class="muted text-sm mt-2">Sotto il 5% = buona tenuta aerobica per quel tipo di sforzo. Il 20/09 è leggermente più alto perché corso più veloce (7:13 vs 7:27/km) a FC quasi identica — coerente con la fatica reale riportata negli ultimi 700m, non un segnale isolato.</p>
+        </div>
 
-<section class="card p-6">
-  <h2 class="text-2xl font-bold border-b rule pb-3">PROSSIMA SETTIMANA · S4 · 14-20 SETTEMBRE</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
-    <div><p class="muted">Ripetute</p><p class="accent">10x200 @ 5:20-5:30</p><p class="text-sm mt-1">4.00 km</p></div>
-    <div><p class="muted">Tempo</p><p class="accent">3x700 @ 6:00-6:20</p><p class="text-sm mt-1">4.50 km</p></div>
-    <div><p class="muted">Lungo</p><p class="accent">4.5 km continui</p><p class="text-sm mt-1">seduta unica, senza risc./def. separati</p></div>
-  </div>
-  <p class="muted mt-5">Volume previsto: 13.00 km · focus: continuita del lungo e qualita senza inseguire la FC Garmin. Questa e la quarta settimana del log continuo.</p>
-</section>
+        <!-- Coach's Commentary -->
+        <div class="card p-6 rounded-lg border-4">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">💬 COMMENTO DEL COACH</h2>
+            <div class="space-y-4 text-base leading-relaxed">
+                <p>Allora, tiriamo le somme di queste prime 3 settimane ufficiali: <span class="accent font-bold">sei perfettamente in linea con il piano</span>, anzi qualcosa di più. Tutte e 8 le sedute pianificate completate al 100%, più tre uscite bonus. Il volume è sempre stato pari o sopra il target (+10% cumulato), e non è volume buttato lì — è qualità vera.</p>
 
-<footer class="text-center muted text-sm py-4">Generato il 13 settembre 2026 · dashboard.html · dati aggiornati da Garmin</footer>
-</main>
+                <p><span class="accent font-bold">I punti forti:</span><br>
+                Il tempo è quasi chirurgico: 6:05-6:09/km contro un target di 6:00-6:20, settimana dopo settimana. Le ripetute sono centrate in media (5:19-5:24 contro 5:20-5:30). E il lungo? Questa è la storia più bella: da corsa spezzata con 3 pause a camminare (S1) a corsa continua al 100% (S3), con la FC che è scesa da 151 a 147 bpm a parità di ritmo. Il decoupling aerobico lo conferma: 3.0% e 4.8%, entrambi sotto la soglia del 5% di buona tenuta.</p>
+
+                <p><span class="warning font-bold">Il punto da tenere d'occhio:</span><br>
+                Nelle ripetute il recupero tra le rep è spesso camminato invece che in leggero jogging, e la fatica percepita è cresciuta verso la fine della settimana. Niente di allarmante — sono 4 settimane di carico continuo dal 24 agosto senza una vera pausa — ma è esattamente il segnale che rende perfetto il tempismo dello scarico che parte domani.</p>
+
+                <p><span class="success font-bold">Il punto:</span><br>
+                Sei on track, il motore aerobico sta migliorando proprio dove doveva (era il punto debole dichiarato a inizio piano), e la settimana di scarico non è un passo indietro — è quello che ti permette di affrontare la Fase C fresco. Goditela senza sensi di colpa per il volume più basso.</p>
+            </div>
+        </div>
+
+        <!-- Next Week Preview -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">ANTEPRIMA PROSSIMA SETTIMANA (S4 — Scarico, 21-27 set)</h2>
+            <p class="text-lg mb-4"><span class="muted">Volume target:</span> <span class="accent">10.60 km</span> <span class="muted text-sm">(-18% vs pianificato S3, -26% vs reale S3)</span></p>
+            <div class="space-y-2">
+                <p class="accent font-bold">Sedute chiave:</p>
+                <ul class="list-disc list-inside muted space-y-1 ml-4">
+                    <li>Ripetute: 8 x 200m @ 5:20-5:30/km (rec. 1')</li>
+                    <li>Corsa facile: 3.5km continui @ 7:35-8:13/km (sostituisce il tempo questa settimana)</li>
+                    <li>Lungo: 3.5km continui @ 7:15-7:40/km</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="mt-8 text-center muted text-sm py-4">
+        <p>Generato: 2026-09-20 &middot; dashboard.html &middot; Dati da training-plan.md e training-log/week-*.md</p>
+        <p>Aggiorna la pagina dopo il prossimo sync per vedere i dati più recenti.</p>
+    </footer>
+</div>
 </body>
 </html>

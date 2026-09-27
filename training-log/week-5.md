@@ -3,19 +3,44 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 7.88 km
-- **Total Time**: 0:56:43
-- **Total Elevation**: 6 m
-- **Total Calories**: 601 kcal (2/2 activities with data)
+- **Total Activities**: 3
+- **Total Distance**: 11.40 km
+- **Total Time**: 1:22:01
+- **Total Elevation**: 10 m
+- **Total Calories**: 866 kcal (3/3 activities with data)
 - **Total TSS**: 72 (2/2 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 0:51:13
-- **Total Walk Time**: 0:05:55
+- **Total Run Time**: 1:16:27
+- **Total Walk Time**: 0:06:01
 
 ## Activities
 
+### 2026-09-27 07:40:18 - Corsa Lenta (scarico)
+
+**Type**: Run
+**Distance**: 3.52 km
+**Duration**: 0:25:18
+**Pace**: 7:12/km
+**NGP medio**: 7:11/km
+**Run time**: 0:25:14
+**Walk time**: 0:00:06
+**Elevation**: 4 m
+**Calories**: 265 kcal
+**Heart Rate**: 146 bpm (max: 158)
+**Note**: 3 allenamento di scarico. Corsa lenta. Nessun problema tranne che molto muco sceso in gola, per i primi 2 km ho sputato parecchio. Credo serva un po' di decongestionamento con aerosol e Respirin.
+**Nota extra**: oggi ho fatto anche un'escursione al Parco Vejo di circa 10 km a camminare con la famiglia: è stata abbastanza faticosa e non credo che questa camminata giovi allo scarico, quindi va considerata come un carico aggiuntivo.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:34 | 7:35/km | 132 | 2 m       |
+| 2   | 1.00 km  | 0:07:13 | 7:13/km | 151 | 3 m       |
+| 3   | 1.00 km  | 0:06:59 | 6:59/km | 153 | 0 m       |
+| 4   | 0.52 km  | 0:03:32 | 6:50/km | 156 | 0 m       |
+
+---
 ### 2026-09-25 07:59:40 - Corsa Lenta 3.5 Km (scarico)
 
 **Type**: Run
@@ -49,8 +74,6 @@
 **Duration**: 0:31:35
 **Pace**: 7:21/km
 **NGP medio**: 6:48/km
-**IF**: 0.89
-**TSS**: 42
 **Run time**: 0:26:23
 **Walk time**: 0:05:36
 **Elevation**: 3 m

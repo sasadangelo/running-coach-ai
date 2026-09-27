@@ -1,6 +1,6 @@
 # Heart-Rate Zones
 
-## 2026-09-25
+## 2026-09-27
 
 - **Metodo**: Karvonen
 - **FC max**: 194 bpm

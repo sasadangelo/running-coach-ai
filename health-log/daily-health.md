@@ -1,4 +1,4 @@
-# Daily Health Log: 2026-08-24 to 2026-09-27
+# Daily Health Log: 2026-08-24 to 2026-10-02
 
 Baseline: rolling 7-day average; acceptable range is average +/- 1 rolling standard deviation.
 Ranges are descriptive recovery signals, not medical reference ranges or diagnoses.
@@ -42,6 +42,11 @@ Ranges are descriptive recovery signals, not medical reference ranges or diagnos
 | 2026-09-25 | 55 bpm     | 55-59 bpm           | 57 ms       | 52-59 ms            |
 | 2026-09-26 | 59 bpm     | 55-60 bpm           | 56 ms       | 51-59 ms            |
 | 2026-09-27 | 53 bpm     | 54-60 bpm           | 55 ms       | 51-59 ms            |
+| 2026-09-28 | 57 bpm     | 54-59 bpm           | 49 ms       | 50-58 ms            |
+| 2026-09-29 | 57 bpm     | 54-58 bpm           | 52 ms       | 52-58 ms            |
+| 2026-09-30 | 58 bpm     | 55-58 bpm           | 53 ms       | 51-57 ms            |
+| 2026-10-01 | 55 bpm     | 54-58 bpm           | 58 ms       | 51-57 ms            |
+| 2026-10-02 | 57 bpm     | 55-58 bpm           | 54 ms       | 51-57 ms            |
 
 ## Weight
 
@@ -58,7 +63,10 @@ Garmin body-composition data; only days with a recorded weigh-in are listed. 7d 
 | 2026-09-21 | 79.6 kg | 79.1 kg |
 | 2026-09-22 | 78.1 kg | 78.9 kg |
 | 2026-09-24 | 78.1 kg | 78.8 kg |
-| 2026-09-27 | 78.6 kg | 78.6 kg |
+| 2026-09-25 | 78.1 kg | 78.7 kg |
+| 2026-09-27 | 78.6 kg | 78.5 kg |
+| 2026-09-29 | 77.2 kg | 78.0 kg |
+| 2026-10-01 | 78.4 kg | 78.1 kg |
 
 ## Sleep
 
@@ -99,6 +107,11 @@ Garmin body-composition data; only days with a recorded weigh-in are listed. 7d 
 | 2026-09-25 | 7h 42m      | 1h 26m     | 0h 36m    | 70    |
 | 2026-09-26 | 6h 51m      | 0h 46m     | 1h 00m    | 71    |
 | 2026-09-27 | 5h 36m      | 0h 39m     | 1h 21m    | 72    |
+| 2026-09-28 | 6h 17m      | 0h 45m     | 1h 23m    | 77    |
+| 2026-09-29 | 5h 29m      | 0h 46m     | 0h 33m    | 71    |
+| 2026-09-30 | 4h 30m      | N/A        | 0h 31m    | 48    |
+| 2026-10-01 | 7h 18m      | 1h 02m     | 1h 44m    | 88    |
+| 2026-10-02 | 7h 25m      | 0h 55m     | 0h 45m    | 58    |
 
 ## Interpretation Notes
 

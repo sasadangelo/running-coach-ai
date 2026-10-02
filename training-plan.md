@@ -88,14 +88,16 @@
 
 **Esito:** completate tutte e 3 le sedute previste. Lungo corso per 4.21 km senza fermate; volume Garmin della settimana: 11.90 km, inclusi 5 allunghi post-lungo.
 
-### Settimana 3 (14-20 settembre) — Fase A
+### ✅ Settimana 3 (14-20 settembre) — Fase A — CONCLUSA
 **Volume totale**: 13.00 km
 
 - **Ripetute**: 1km risc., 10 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 4.00km, ~35min
 - **Tempo**: 1km risc., 3 x 700m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.50km, ~32min
 - **Lungo**: 4.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.50km, ~32min; nessuna fermata programmata
 
-### Settimana 4 — Scarico (21-27 settembre) — Fase B
+**Esito:** completate tutte e 3 le sedute previste. Lungo corso per 4.51 km (33:00, 7:20/km medio), seguito da 8 allunghi; volume Garmin della settimana: 14.38 km.
+
+### ✅ Settimana 4 — Scarico (21-27 settembre) — Fase B — CONCLUSA
 **Volume totale**: 10.60 km (-18% rispetto a S3)
 
 **Scarico confermato:** riduzione del volume con intensità mantenuta. Rispetto a S3: 20% in meno di ripetute e 22% in meno di lungo. Nei ritmi resta nella parte iniziale delle fasce, senza cercare il limite più veloce.
@@ -105,6 +107,8 @@
 - **Ripetute**: 1km risc., 8 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 3.60km, ~31min
 - **Corsa facile**: 3.5km continui @ 7:35-8:13/km — 3.50km, ~28min
 - **Lungo**: 3.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 3.50km, ~25min; nessuna fermata programmata
+
+**Esito:** completate tutte e 3 le sedute previste. Corsa facile e lungo da 3.52 km ciascuno (7:09/km e 7:12/km medi); volume Garmin della settimana: 11.40 km.
 
 ### Settimana 5 (28 settembre - 4 ottobre) — Fase C
 **Volume totale**: 14.20 km
@@ -187,17 +191,20 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 **Perché questo schema**:
 - **Drills solo prima delle Ripetute**: attivano il sistema neuromuscolare e la reattività — sprecati prima di Tempo/Lungo, che sono sforzi di potenza aerobica/resistenza, non di velocità.
 - **Niente forza dopo le Ripetute**: è la sessione più impegnativa dal punto di vista neuromuscolare, meglio lasciarle il recupero pieno piuttosto che aggiungere altro carico sulle gambe.
-- **Forza dopo Tempo e Lungo**: muscoli già caldi, e l'interferenza con la qualità della sessione successiva è minima visto che la prossima sessione di qualità arriva 1-2 giorni dopo.
+- **Forza solo dopo il Lungo della domenica**: è l'unico momento disponibile in settimana, i muscoli sono già caldi e le Ripetute del martedì arrivano dopo due giorni pieni di recupero.
+- **Priorità alla fascia plantare**: il blocco parte dal calf raise sull'asciugamano (storico di fascite plantare) e ogni stretching include l'allungamento della fascia.
 - **Stretching statico sempre dopo, mai prima**: statico a freddo prima di correre riduce la potenza muscolare; dinamico prima, statico dopo.
 
 ### Checklist — Giorno Ripetute
 
-**Prima (mobilità + drills, ~10-12 min totali)**
+**Prima — mobilità (~5 min)**
 - [ ] Leg swing avanti/indietro — 10 per gamba
 - [ ] Leg swing laterale — 10 per gamba
 - [ ] Cerchi con le anche — 10 per lato
 - [ ] Affondo camminato con rotazione del busto — 8-10 passi
 - [ ] Caviglie: cerchi + flessione/estensione dinamica — 10 per lato
+
+**Prima — drills (~5-7 min)**
 - [ ] Skip A (ginocchia alte) — 2 x 20-30m
 - [ ] Skip B (calciata avanti-giù) — 2 x 20-30m
 - [ ] Calciata dietro (talloni ai glutei) — 2 x 20-30m
@@ -205,6 +212,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Corsa laterale incrociata (carioca) — 2 x 20-30m
 
 **Dopo (solo stretching statico, ~8-10 min, 20-30 sec per lato)**
+- [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
 - [ ] Polpaccio (gastrocnemio ginocchio esteso + soleo ginocchio flesso)
 - [ ] Ischiocrurali (gamba tesa)
 - [ ] Quadricipite (in piedi, tallone al gluteo)
@@ -222,11 +230,8 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Affondo camminato con rotazione del busto — 8-10 passi
 - [ ] Caviglie: cerchi + flessione/estensione dinamica — 10 per lato
 
-**Dopo (forza breve poi stretching, ~20-25 min totali)**
-- [ ] Plank — 2 x 30-45 sec
-- [ ] Glute bridge — 2 x 15 ripetizioni
-- [ ] Calf raise monopodalico — 2 x 15 per gamba
-- [ ] Side plank — 2 x 20-30 sec per lato
+**Dopo (solo stretching statico, ~8-10 min)**
+- [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
 - [ ] Polpaccio — 20-30 sec per lato
 - [ ] Ischiocrurali — 20-30 sec per lato
 - [ ] Quadricipite — 20-30 sec per lato
@@ -242,14 +247,13 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Affondo camminato con rotazione del busto — 8-10 passi
 - [ ] Caviglie: cerchi + flessione/estensione dinamica — 10 per lato
 
-**Dopo (forza completa poi stretching, ~30-35 min totali)**
-- [ ] Plank — 2-3 x 30-45 sec
-- [ ] Side plank — 2-3 x 20-30 sec per lato
-- [ ] Glute bridge / hip thrust monopodalico — 2-3 x 12-15 per gamba
-- [ ] Squat monopodalico o step-up su gradino — 2-3 x 8-10 per gamba
-- [ ] Calf raise monopodalico — 2-3 x 15-20 per gamba (tendine d'Achille)
-- [ ] Bird-dog — 2-3 x 10 per lato
-- [ ] Clamshell (apertura anca laterale) — 2-3 x 15 per lato
+**Dopo (forza poi stretching, ~20-25 min totali)**
+- [ ] Calf raise con dita sull'asciugamano arrotolato — 3 x 8-12 per gamba, lento (3 sec su, 2 fermo, 3 giù) *(priorità: protegge la fascia plantare)*
+- [ ] Glute bridge — 2 x 15
+- [ ] Squat a corpo libero — 2 x 12-15
+- [ ] Step-up su gradino — 2 x 8-10 per gamba
+- [ ] Side plank — 2 x 20-30 sec per lato
+- [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
 - [ ] Polpaccio — 20-30 sec per lato
 - [ ] Ischiocrurali — 20-30 sec per lato
 - [ ] Quadricipite — 20-30 sec per lato
@@ -258,7 +262,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 
 **Note per tutte e tre le checklist**:
 - Tutto a corpo libero, nessun attrezzo necessario.
-- **Progressione**: le prime 2-3 settimane usa questi volumi così come sono; poi, se ti senti a tuo agio, aggiungi un giro o allunga i tempi di isometria (plank, side plank) di 10-15 sec.
+- **Progressione**: blocco di forza introdotto dalla Settimana 5 (4 ottobre), partendo da zero. Le prime due domeniche tienilo leggero (anche serie minime): l'indolenzimento non deve compromettere le Ripetute del martedì. Poi, se ti senti a tuo agio, aggiungi una serie o allunga il side plank di 10-15 sec.
 - **Settimane di scarico e gara (S4, S8, S10, S11, S14)**: salta la forza o fai solo metà esercizi — il corpo deve arrivare fresco, non stanco. Mobilità e stretching restano sempre, costano poco e aiutano il recupero.
 
 ---

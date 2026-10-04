@@ -110,12 +110,14 @@
 
 **Esito:** completate tutte e 3 le sedute previste. Corsa facile e lungo da 3.52 km ciascuno (7:09/km e 7:12/km medi); volume Garmin della settimana: 11.40 km.
 
-### Settimana 5 (28 settembre - 4 ottobre) — Fase C
+### ✅ Settimana 5 (28 settembre - 4 ottobre) — Fase C — CONCLUSA
 **Volume totale**: 14.20 km
 
 - **Ripetute**: 1km risc., 12 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 4.40km, ~39min
 - **Tempo**: 1km risc., 3 x 800m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.80km, ~34min
 - **Lungo**: 5.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.00km, ~37min; nessuna fermata programmata
+
+**Esito:** completate tutte e 3 le sedute previste. Tempo 3x800 a 6:04/6:00/6:05, primo Tempo interamente di corsa. Lungo corso per 5.01 km (35:53, 7:11/km medio, FC 149) con decoupling aerobico 2.1%, seguito da 7 allunghi e dal primo blocco di forza; volume Garmin della settimana: 16.17 km.
 
 ### Settimana 6 (5-11 ottobre) — Fase C
 **Volume totale**: 15.30 km

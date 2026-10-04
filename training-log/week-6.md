@@ -3,19 +3,64 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 10.20 km
-- **Total Time**: 1:12:27
-- **Total Elevation**: 8 m
-- **Total Calories**: 787 kcal (2/2 activities with data)
-- **Total TSS**: 96 (2/2 activities with a valid NGP/IF)
+- **Total Activities**: 4
+- **Total Distance**: 16.16 km
+- **Total Time**: 1:56:47
+- **Total Elevation**: 13 m
+- **Total Calories**: 1242 kcal (4/4 activities with data)
+- **Total TSS**: 147 (4/4 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 1:02:34
-- **Total Walk Time**: 0:10:13
+- **Total Run Time**: 1:40:02
+- **Total Walk Time**: 0:17:20
 
 ## Activities
 
+### 2026-10-04 08:37:43 - 7x Allunghi
+
+**Type**: Run
+**Distance**: 0.96 km
+**Duration**: 0:08:27
+**Pace**: 9:01/km
+**NGP medio**: 8:13/km
+**IF**: 0.74
+**TSS**: 8
+**Run time**: 0:01:54
+**Walk time**: 0:06:43
+**Elevation**: 0 m
+**Calories**: 79 kcal
+**Heart Rate**: 134 bpm (max: 143)
+**Note**: 7 Allunghi da 80m con ritmo 3:40 a 4:10
+
+---
+### 2026-10-04 07:57:29 - Corsa Lenta Lunga 5 Km
+
+**Type**: Run
+**Distance**: 5.01 km
+**Duration**: 0:35:53
+**Pace**: 7:11/km
+**NGP medio**: 7:10/km
+**IF**: 0.85
+**TSS**: 43
+**Run time**: 0:35:34
+**Walk time**: 0:00:24
+**Elevation**: 5 m
+**Calories**: 376 kcal
+**Heart Rate**: 149 bpm (max: 157)
+**Note**: Buon allenamento. Garmin ha dato 91%. Mobilita. Ritmo quasi sempre < 155. Inizio lento a 7:50 / 7:40. Nessun problema. Con aerosol di fluimucil anche il muco ha dato meno fastidio. Penso che avrei potuto fare tranquillamente altro Km a fatica forse 2. Ho fatto esercizi di forza: - 2x 12 squat - 2x 12 calf raise - 2x 10 step - 2x 10 ponte glutei - 1x 20" sideplank ambo i lati Stretching
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:18 | 7:23/km | 131 | 1 m       |
+| 2   | 1.00 km  | 0:07:01 | 7:01/km | 152 | 1 m       |
+| 3   | 1.00 km  | 0:07:08 | 7:08/km | 153 | 1 m       |
+| 4   | 1.00 km  | 0:07:09 | 7:09/km | 154 | 2 m       |
+| 5   | 1.00 km  | 0:07:15 | 7:15/km | 154 | 0 m       |
+| 6   | 0.01 km  | 0:00:02 | 8:05/km | 152 | 0 m       |
+
+---
 ### 2026-10-02 07:31:47 - Tempo 3x800 m
 
 **Type**: Run
@@ -106,8 +151,8 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 194 bpm
-- **FC riposo media**: 56.57 bpm
-- **Riserva cardiaca**: 137.43 bpm
+- **FC riposo media**: 56.83 bpm
+- **Riserva cardiaca**: 137.17000000000002 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |

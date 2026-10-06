@@ -22,7 +22,7 @@
 
 | Sessione | Ritmo | Note |
 |----------|-------|------|
-| **Ripetute** (200m/400m, poi 800m) | **5:20-5:30/km** | Fartlek leggero: 200m con recupero 1', 400m con recupero 2'. Da metà piano si aggiungono gli 800m (recupero ~2'30"), eventualmente un 1600m più avanti se ti va |
+| **Ripetute** (200m/400m, poi 800m) | **5:10-5:30/km** (fino alla S5: 5:20-5:30) | Tempo del giro: 200m in 1:02-1:06, 400m in 2:04-2:12, 800m in 4:08-4:24 — sulle distanze brevi guarda il tempo del giro, non il ritmo istantaneo. 5:10 è un pavimento. Fartlek leggero: 200m con recupero 1', 400m con recupero 2'. Da metà piano si aggiungono gli 800m (recupero ~2'30"), eventualmente un 1600m più avanti se ti va |
 | **Tempo/Soglia** | **6:00-6:20/km** | Parti verso 6:00-6:10, è normale calare verso 6:15-6:20 nelle ultime ripetizioni |
 | **Lungo** | **7:15-7:40/km come riferimento attuale** | Corsa continua; se la FC sale troppo, rallenta o cammina in autonomia |
 | **Recupero (jog tra le ripetute/tempo)** | ~8:30/km | Jog leggero, non camminata |
@@ -122,35 +122,35 @@
 ### Settimana 6 (5-11 ottobre) — Fase C
 **Volume totale**: 15.30 km
 
-- **Ripetute**: 1km risc., 15 x 200m @ 5:20-5:30/km (rec. 1'), 1km def. — 5.00km, ~46min
+- **Ripetute**: 1km risc., 15 x 200m @ 5:10-5:30/km (rec. 1'), 1km def. — 5.00km, ~46min
 - **Tempo**: 1km risc., 2 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
 - **Lungo**: 5.7km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.70km, ~42min; nessuna fermata programmata
 
 ### Settimana 7 (12-18 ottobre) — Fase C
 **Volume totale**: 16.80 km
 
-- **Ripetute**: 1km risc., 8 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 5.20km, ~47min *(introduce il blocco da 400m, stesso volume di reps della settimana precedente)*
+- **Ripetute**: 1km risc., 8 x 400m @ 5:10-5:30/km (rec. 2'), 1km def. — 5.20km, ~47min *(introduce il blocco da 400m, stesso volume di reps della settimana precedente)*
 - **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 5.20km, ~36min
 - **Lungo**: 6.4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.40km, ~47min *(sessione più lunga della settimana, picco prima dello scarico)*
 
 ### Settimana 8 — Scarico (19-25 ottobre) — Fase D
 **Volume totale**: 12.80 km (-24% rispetto a S7)
 
-- **Ripetute**: 1km risc., 6 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 4.40km, ~41min
+- **Ripetute**: 1km risc., 6 x 400m @ 5:10-5:30/km (rec. 2'), 1km def. — 4.40km, ~41min
 - **Tempo**: 1km risc., 2 x 1000m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.20km, ~30min
 - **Lungo**: 4.2km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.20km, ~31min *(scarico: volume ridotto, corpo fresco in vista del test di S9)*
 
 ### Settimana 9 (26 ottobre - 1 novembre) — Fase E
 **Volume totale**: 15.00 km
 
-- **Ripetute**: 1km risc., 10 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 6.00km, ~53min
+- **Ripetute**: 1km risc., 10 x 400m @ 5:10-5:30/km (rec. 2'), 1km def. — 6.00km, ~53min
 - **Tempo**: 1km risc., 2000m continui @ 6:00-6:20/km, 1km def. — 4.00km, ~28min *(test tempo continuo)*
 - **Lungo**: 5.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.00km, ~37min *(prova generale: l'intera distanza di gara, di corsa continua)*
 
 ### Settimana 10 — Gara 1 (2-8 novembre) — Fase F
 **Volume totale (esclusa gara)**: ~3.40 km
 
-- **Martedì — Ripetute leggere**: 0.5km risc., 4 x 200m @ 5:20-5:30/km (rec. 1'), 0.5km def. — 1.80km
+- **Martedì — Ripetute leggere**: 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1'), 0.5km def. — 1.80km
 - **Giovedì — Shakeout**: 0.3km risc., 1km @ ~7:45/km facile, rec. — 1.60km, corsa breve e leggera
 - **Venerdì/Sabato**: riposo completo
 - **Domenica 8 novembre — GARA: Roma 5K**. Obiettivo: correrla tutta di corsa continua. Parti controllato (vicino a 7:00-7:30/km i primi km, non ai ritmi da tempo/ripetute), e se ti senti bene stringi negli ultimi 1-2km. L'obiettivo è arrivare in fondo correndo, non il tempo.
@@ -158,28 +158,28 @@
 ### Settimana 11 — Recupero (9-15 novembre) — Fase G
 **Volume totale**: 11.80 km
 
-- **Ripetute**: 1km risc., 4 x 200m @ 5:20-5:30/km (rec. 1') + 2 x 400m @ 5:20-5:30/km (rec. 2'), 1km def. — 3.60km, ~33min
+- **Ripetute**: 1km risc., 4 x 200m @ 5:10-5:30/km (rec. 1') + 2 x 400m @ 5:10-5:30/km (rec. 2'), 1km def. — 3.60km, ~33min
 - **Tempo**: 1km risc., 2 x 600m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 3.40km, ~25min
 - **Lungo**: 4.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.00km, ~30min; nessuna fermata programmata
 
 ### Settimana 12 (16-22 novembre) — Fase H
 **Volume totale**: 16.10 km
 
-- **Ripetute**: 1km risc., 4 x 400m @ 5:20-5:30/km (rec. 2') + 2 x 800m @ 5:20-5:30/km (rec. 2'30"), 1km def. — 5.20km, ~46min
+- **Ripetute**: 1km risc., 4 x 400m @ 5:10-5:30/km (rec. 2') + 2 x 800m @ 5:10-5:30/km (rec. 2'30"), 1km def. — 5.20km, ~46min
 - **Tempo**: 1km risc., 2 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
 - **Lungo**: 5.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.50km, ~41min; nessuna fermata programmata
 
 ### Settimana 13 (23-29 novembre) — Fase H
 **Volume totale**: 18.60 km
 
-- **Ripetute**: 1km risc., 3 x 400m @ 5:20-5:30/km (rec. 2') + 3 x 800m @ 5:20-5:30/km (rec. 2'30"), 1km def. — 5.60km, ~49min *(se ti senti bene, prova a sostituire un 800m con un 1600m)*
+- **Ripetute**: 1km risc., 3 x 400m @ 5:10-5:30/km (rec. 2') + 3 x 800m @ 5:10-5:30/km (rec. 2'30"), 1km def. — 5.60km, ~49min *(se ti senti bene, prova a sostituire un 800m con un 1600m)*
 - **Tempo**: 1km risc., 3 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 6.00km, ~42min *(finalmente supera il volume soglia di S7 — è l'unica sessione che finora non aveva mai ripreso il picco)*
 - **Lungo**: 7.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 7.00km, ~52min *(più lunga uscita del piano — ottimo indicatore di quanto potrai correre in gara)*
 
 ### Settimana 14 — Gara 2 (30 novembre - 6 dicembre) — Fase I
 **Volume totale (esclusa gara)**: ~3.80 km
 
-- **Martedì — Ripetute leggere**: 0.5km risc., 4 x 200m @ 5:20-5:30/km (rec. 1') + 1 x 400m @ 5:20-5:30/km (rec. 2'), 0.5km def. — 2.20km
+- **Martedì — Ripetute leggere**: 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1') + 1 x 400m @ 5:10-5:30/km (rec. 2'), 0.5km def. — 2.20km
 - **Giovedì — Shakeout**: 0.3km risc., 1km @ ~7:45/km — 1.60km, corsa breve e leggera
 - **Venerdì/Sabato**: riposo completo
 - **Domenica 6 dicembre — GARA: Best Woman 10K**. Obiettivo: correre di corsa continua quanti più km possibile. In base alla progressione, un tratto continuo di 7-8km è realistico prima di dover eventualmente camminare un po' — se ti senti bene, spingi oltre. Non c'è nessuna vergogna a camminare un tratto: l'obiettivo è i km corsi, non finire tutta senza fermarsi a tutti i costi.
@@ -273,7 +273,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 
 - **Il lungo è sempre una seduta unica in corsa continua**: non aggiungere riscaldamento o defaticamento separati. Il nuovo riferimento (7:15-7:40/km) non è un obbligo: parti piano e chiudi naturalmente; se non riesci a mantenere la corsa, rallenta o cammina.
 - **7:15-7:40/km è un riferimento realistico per la fase attuale**: se durante il lungo fai fatica, non forzare il ritmo. L'obiettivo principale è aumentare gradualmente i km corsi senza fermate programmate.
-- **Ripetute e tempo restano ai ritmi reali**: 5:20-5:30/km e 6:00-6:20/km sono quello che hai già dimostrato di reggere. Se un giorno ti senti più lento (caldo, stanchezza), va bene rallentare 10-15 sec/km — l'importante è lo sforzo percepito, non il numero esatto.
+- **Ripetute e tempo restano ai ritmi reali**: 5:10-5:30/km e 6:00-6:20/km sono quello che hai già dimostrato di reggere. Se un giorno ti senti più lento (caldo, stanchezza), va bene rallentare 10-15 sec/km — l'importante è lo sforzo percepito, non il numero esatto.
 - **Caldo**: se le temperature sono ancora alte, sposta le sessioni di qualità a mattina presto o sera.
 - **Infortuni/dolori**: qualsiasi dolore persistente (non il normale affaticamento muscolare) è motivo per saltare o modificare una sessione. Meglio una sessione in meno che uno stop di settimane.
 - **Le due gare**: la 5K è un obiettivo di completamento (corsa continua). La 10K è un obiettivo di massimizzazione (più km possibile di corsa) — dato il tuo storico (10K già corsa a maggio) e i ritmi reali che stai dimostrando, è molto probabile che tu riesca a correre gran parte o tutta la distanza, ma il piano non lo dà per scontato e costruisce comunque una base solida.

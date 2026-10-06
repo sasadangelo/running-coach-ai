@@ -3,7 +3,7 @@ method: karvonen
 
 heart_rate:
   max: 194
-  resting_average: 56.83
+  resting_average: 57.17
 
 pace:
   # Threshold pace, used as the IF (Intensity Factor) denominator for NGP-based

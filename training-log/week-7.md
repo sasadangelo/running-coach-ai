@@ -3,19 +3,49 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 1
-- **Total Distance**: 6.30 km
-- **Total Time**: 0:45:33
-- **Total Elevation**: 6 m
-- **Total Calories**: 494 kcal (1/1 activities with data)
-- **Total TSS**: 60 (1/1 activities with a valid NGP/IF)
+- **Total Activities**: 2
+- **Total Distance**: 10.90 km
+- **Total Time**: 1:17:10
+- **Total Elevation**: 10 m
+- **Total Calories**: 840 kcal (2/2 activities with data)
+- **Total TSS**: 103 (2/2 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 0:34:28
-- **Total Walk Time**: 0:11:21
+- **Total Run Time**: 1:05:37
+- **Total Walk Time**: 0:11:51
 
 ## Activities
 
+### 2026-10-09 08:28:22 - Tempo 2x1200 m
+
+**Type**: Run
+**Distance**: 4.61 km
+**Duration**: 0:31:37
+**Pace**: 6:52/km
+**NGP medio**: 6:42/km
+**IF**: 0.90
+**TSS**: 43
+**Run time**: 0:31:09
+**Walk time**: 0:00:30
+**Elevation**: 4 m
+**Calories**: 346 kcal
+**Heart Rate**: 157 bpm (max: 173)
+**Note**: Buon allenamento. In target ma ho fatto più fatica dello scorso tempo run. Non credo avrei potuto fare di più, sarei arrivato al limite. Battito salito fino a 169-171 molto vicino alla soglia di 173. Nel recupero sono sceso di 10 battiti a 8 min/km. Riscaldamento a 7:30 e defaticamento a 7:50 (ho dovuto cominciare a 8:00). Ho sempre corso.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:29 | 7:29/km | 134 | 2 m       |
+| 2   | 1.00 km  | 0:06:03 | 6:03/km | 164 | 1 m       |
+| 3   | 0.20 km  | 0:01:14 | 6:09/km | 168 | 0 m       |
+| 4   | 0.20 km  | 0:01:36 | 8:02/km | 164 | 0 m       |
+| 5   | 1.00 km  | 0:06:04 | 6:05/km | 168 | 1 m       |
+| 6   | 0.20 km  | 0:01:20 | 6:41/km | 171 | 0 m       |
+| 7   | 1.00 km  | 0:07:48 | 7:49/km | 159 | 0 m       |
+| 8   | 0.01 km  | 0:00:02 | 8:56/km | 159 | 0 m       |
+
+---
 ### 2026-10-06 08:15:45 - 15x200 con 1' Rec.
 
 **Type**: Run
@@ -76,12 +106,12 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 194 bpm
-- **FC riposo media**: 57.17 bpm
-- **Riserva cardiaca**: 136.82999999999998 bpm
+- **FC riposo media**: 56.67 bpm
+- **Riserva cardiaca**: 137.32999999999998 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |
-| Zone 1 | 50-60% | 126-139 bpm |
+| Zone 1 | 50-60% | 125-139 bpm |
 | Zone 2 | 60-75% | 139-160 bpm |
 | Zone 3 | 75-85% | 160-173 bpm |
 | Zone 4 | 85-93% | 173-184 bpm |

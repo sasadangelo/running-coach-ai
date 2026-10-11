@@ -127,7 +127,7 @@
 - **Tempo**: 1km risc., 2 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
 - **Lungo**: 5.7km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.70km, ~42min; nessuna fermata programmata
 
-**Esito:** completate tutte e 3 le sedute previste. Ripetute 15x200 con 14/15 in fascia (1:01-1:06). Tempo 2x1200 a 6:03/6:05, FC di picco 169-171. Lungo corso per 5.71 km (40:42, 7:09/km medio, FC 149, max 158) tutto di corsa, con FC ≤155 per il 98-99% del tempo e decoupling aerobico ~3.7% (partenza un po' veloce ai km 2-3). Seguito da 8 allunghi e dal secondo blocco di forza; volume Garmin della settimana: 17.50 km.
+**Esito:** completate tutte e 3 le sedute previste. Ripetute 15x200 con 14/15 in fascia (1:01-1:06). Tempo 2x1200 a 6:03/6:05, FC di picco 169-171. Lungo corso per 5.71 km (40:42, 7:09/km medio, FC 149, max 158) tutto di corsa, con FC ≤155 per il 98-99% del tempo e decoupling aerobico 4.3% (partenza un po' veloce ai km 2-3). Seguito da 8 allunghi e dal secondo blocco di forza; volume Garmin della settimana: 17.50 km.
 
 ### Settimana 7 (12-18 ottobre) — Fase C
 **Volume totale**: 16.80 km

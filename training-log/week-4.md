@@ -41,6 +41,7 @@
 **NGP medio**: 7:19/km
 **IF**: 0.83
 **TSS**: 38
+**Decoupling**: 4.8%
 **ES**: 6.9 (Primi km)
 **Run time**: 0:32:57
 **Walk time**: 0:00:07

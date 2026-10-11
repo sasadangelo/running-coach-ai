@@ -35,7 +35,7 @@
 - **Status:** Completato, 5.71km tutti di corsa (i 16" di "walk time" nel log sono un artefatto della soglia di velocità dello script, non camminata reale)
 - **Pacing:** 7:24 / 7:02 / 6:56 / 7:02 / 7:13 / 7:17 (0.7km), media 7:09. Più veloce della fascia indicativa 7:15-7:40, ma il vincolo vero era la FC ed è stato rispettato.
 - **Heart Rate:** media 149, max 158. 1° km a 131 (riscaldamento corretto), poi stabile 151-154.
-- **Decoupling:** ~3.7% (km 2-3 a ~6:59 con FC 152 contro km 4-6 a ~7:10 con FC 154), leggermente sopra l'obiettivo del 3%. Causa principale: partenza un po' allegra tra il 2° e il 3° km (6:56).
+- **Decoupling:** 4.3% (calcolo standard sui dati al secondo, primi 10' esclusi: 1a metà 6:59/km a 153 bpm, 2a metà 7:14/km a 154 bpm; la stima iniziale di ~3.7% dalle medie dei giri era approssimata), sopra l'obiettivo del 3% ma sotto la soglia del 5%. Causa principale: partenza un po' allegra tra il 2° e il 3° km (6:56).
 - **Notes:** correre ~7:00 in Z2 indica che la base aerobica sta migliorando. Gli 8 allunghi dopo il lungo sono stati registrati come attività separata (0.89km, FC max 143).
 
 ### Session 4: Forza (domenica 11 ottobre, secondo blocco)
@@ -75,6 +75,37 @@
 - Lungo da 6.4km della Settimana 7: km 2-4 a 7:10-7:15 anche se le gambe vorrebbero di più, FC ≤155, obiettivo decoupling ≤3%.
 - Fascia plantare sx: se la sensazione mattutina si ripresenta o persiste ai primi passi, segnalarlo subito (calf raise e stretching del polpaccio restano utili).
 - Forza: terzo blocco come indicato nel Cross-Training Summary (unica progressione: side plank a 30"; non dimenticare il glute bridge).
+
+## Appunti dell'11 ottobre: metriche e ritmi
+Discussione con l'atleta, nata da una conversazione con Gemini su come misurare la resistenza. Le metriche sono già attive; le proposte sui ritmi **non sono ancora applicate al piano**.
+
+### Metriche introdotte
+- **Endurance Score (ES)** sui lunghi: `(velocità / FC) × km × 100 × C × M_dec × H` (continuità, deriva, memoria dell'ultimo lungo simile). ES è n/d se il decoupling non è calcolabile (corsa sotto i 30' o troppo camminata). 9 categorie, da "Avvio" a "Elite / Ultra", tarate su circa 1.5-2 punti per km. Andamento: 6.1 → 6.9 → 7.6 → 8.8 (oggi, ingresso in "Base"). Dettaglio in `health-log/endurance-score.md`.
+- **Capacity Score (CS)** sui Tempo: solo blocchi continui di almeno 20', con passo e FC senza i primi 2', C = quota in fascia, deriva tra le due metà. Nessuna seduta finora lo raggiunge: il primo candidato è il 3500m di S12. Dettaglio in `health-log/capacity-score.md`.
+- **Decoupling** dei lunghi: ora scritto in automatico a ogni sync in `health-log/aerobic-decoupling.md` e nei file week. Il lungo dell'11/10 è 4.3% (non ~3.7%, che era una stima dalle medie dei giri).
+
+### Le tre metriche del runner: come misurarle
+- **VO2max (potenza aerobica):** test dei 7' (quello che l'atleta usava anni fa), VAM = velocità del test, VO2max ≈ 3.5 × VAM (km/h). Errore sul valore assoluto ~8-10%, ma buono per il trend (±2-3%) se le condizioni sono uguali: stesso percorso piatto (meglio la pista), stesso riscaldamento, gambe fresche. Quando: dopo il recupero post-5K, al posto di una seduta di ripetute, solo se la fascia plantare è tranquilla. Il riferimento più preciso è un test cardiopolmonare (CPET) in laboratorio, che misura VO2max, soglie ventilatorie, economia e FC max reale; da valutare come base dopo la 10K, per tarare il test dei 7'.
+- **Soglia:** dalla Roma 5K (circa 30'): FC di soglia = media degli ultimi 20' (Friel), passo di soglia dal VDOT. Il picco finale dà anche un limite inferiore realistico della FC max.
+- **Economia:** costo per km nel lungo (%FC di riserva × VO2max del test, diviso la velocità) più le dinamiche di corsa allo stesso passo (oggi cadenza 167 spm, contatto al suolo 282 ms, rapporto verticale 9.6%).
+- **Rapporto 10K / test dei 7':** riferimento storico 95% (10K in 53', test a ~5:02/km). Oggi sarà più basso perché la resistenza è indietro. Il 5% di allora non va riapplicato finché il rapporto non torna vicino al 95%.
+
+### Stime Garmin
+- **VO2max 43.1:** probabilmente ottimista. Il VDOT delle gare 2026 è 26-28 (5K di marzo 27.7, 10K di maggio 26.4); il 10K storico in 53' valeva 37.4. Possibile causa: FC max impostata a 194, mai vista nei log (massimo 177).
+- **Soglia 6:04/km - 173 bpm:** risale ad aprile 2026. Il passo corrisponde a VDOT 32 (5K in ~29'), più veloce della 5K di marzo: probabilmente ottimista, ma la FC di 173 è plausibile. Indizi: FC 169-171 e sensazione "al limite" nel 2x1200 (gli ultimi 200m a 6:41 erano traffico, quindi non sono una prova di calo). IF e TSS dipendono da questo passo.
+- **Tabelle di Daniels:** affidabili per ricavare i ritmi da una gara recente, meno per prevedere distanze molto più lunghe quando la resistenza è indietro (5K→10K: allungare la stima di 1-2').
+
+### Proposte sui ritmi (da decidere)
+Principio: i ritmi si ricavano da prestazioni reali (Roma 5K, poi test dei 7'), non dal VO2max. Fasce di 20" al km, perché quelle da 10" sono difficili da centrare.
+- **200m:** 5:10-5:30 invariato, ma non sotto 5:10. Recupero camminato accettabile: lavoro di velocità, il recupero completo va bene.
+- **400m (prime sedute):** 5:20-5:40/km (2:08-2:16), non allo stesso ritmo dei 200. Il ritmo R del piano corrisponde a VDOT 32-34, quello stimato è 28-30. Recupero 2': prima metà camminata, poi jog se riesce; se la FC è sopra 150 all'inizio della ripetuta successiva, recupero a 2'30".
+- **800m:** 5:35-5:55/km (4:28-4:44) a ritmo I. L'attuale 4:08-4:24 della tabella è un errore (ritmo R su una ripetuta da ritmo I).
+- **1600m:** da togliere dalle ripetute. Per l'atleta dura ~9', oltre il limite di 3-5' del ritmo I, quindi è un lavoro di soglia già coperto dal Tempo. Da rivalutare quando scenderà verso i 6-7'.
+- **Tempo continuo (S9-S12):** 6:10-6:30/km con tetto di FC ~168 fino agli ultimi 500m, invece di 6:00-6:20. Il test da 2000m di S9 è il controllo: se a 6:15 la FC è stabile, si torna verso 6:05-6:10.
+- **Regolarità come criterio:** le ripetute devono restare entro 2-3" l'una dall'altra. Se le ultime calano di 3-4", nella seduta successiva si sta nella metà lenta della fascia.
+- **Lungo:** invariato, governato dalla FC (≤155). Se man mano che il lungo cresce serve scendere a 7:20-7:30, va bene.
+- **Da riconciliare:** la sezione Focus qui sotto chiede recuperi corricchiati sulle ripetute, mentre queste proposte accettano il recupero camminato sulle 200. Da decidere insieme alle fasce.
+- **Dopo la Roma 5K:** ricalcolare i ritmi dal VDOT e aggiornare FC max, soglia e zone in `.claude/training-zones.yaml`.
 
 ## Focus for Next Week
 - Applicare la regola del sonno <5h prima di ripetute e Tempo.

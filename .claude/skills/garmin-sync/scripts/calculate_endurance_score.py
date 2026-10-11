@@ -18,8 +18,9 @@ ES = (speed_m_s / HR_avg) * distance_km * 100 * C * M_dec * H
 
 Long runs are the Sunday runs in training-log/ (excluding strides), or the
 dates passed with --date. Besides the summary in health-log/endurance-score.md,
-each long run's section in training-log/week-N.md gets an "**ES**:" line
-(re-running replaces it, so it is safe after every garmin_sync).
+each long run's section in training-log/week-N.md gets "**Decoupling**:" and
+"**ES**:" lines, and its decoupling is recorded in health-log/aerobic-decoupling.md
+(re-running replaces all of them, so it is safe after every garmin_sync).
 
 Usage:
     python3 .claude/skills/garmin-sync/scripts/calculate_endurance_score.py
@@ -43,6 +44,7 @@ from calculate_decoupling import (  # noqa: E402
     find_activity,
     login,
     markdown_table,
+    update_log,
 )
 
 try:
@@ -52,6 +54,7 @@ except ImportError:
 
 DEFAULT_LOGS_DIR = "training-log"
 DEFAULT_OUTPUT = "health-log/endurance-score.md"
+DECOUPLING_LOG = "health-log/aerobic-decoupling.md"
 MIN_STOP_SECONDS = 15
 SIMILAR_DISTANCE_RATIO = 0.85
 
@@ -60,6 +63,7 @@ DISTANCE_RE = re.compile(r"^\*\*Distance\*\*:\s*([\d.]+) km")
 HR_RE = re.compile(r"^\*\*Heart Rate\*\*:\s*(\d+) bpm")
 DURATION_RE = re.compile(r"^\*\*Duration\*\*:\s*(\d+):(\d+):(\d+)")
 ES_LINE_PREFIX = "**ES**:"
+DECOUPLING_LINE_PREFIX = "**Decoupling**:"
 RUN_TIME_PREFIX = "**Run time**:"
 
 # (upper bound, name, typical continuous long run, description). The bounds assume
@@ -181,16 +185,17 @@ def score_run(client, run: dict, previous_longs: list[dict]) -> dict:
     cont = continuity(speed_series)
 
     try:
-        decoupling_pct = compute_decoupling(extract_series(client, activity["activityId"]))["decoupling_pct"]
+        decoupling = compute_decoupling(extract_series(client, activity["activityId"]))
     except ValueError:
-        decoupling_pct = None
+        decoupling = None
+    decoupling_pct = None if decoupling is None else decoupling["decoupling_pct"]
 
     days, h = recency(run, previous_longs)
     speed = run["distance_km"] * 1000 / run["duration_s"]
     base = speed / run["hr_avg"] * run["distance_km"] * 100
     m_dec = None if decoupling_pct is None else decoupling_multiplier(decoupling_pct)
     es = None if m_dec is None else base * cont["c"] * m_dec * h
-    return {**run, **cont, "speed": speed, "base": base, "decoupling_pct": decoupling_pct,
+    return {**run, **cont, "speed": speed, "base": base, "decoupling": decoupling, "decoupling_pct": decoupling_pct,
             "m_dec": m_dec, "days": days, "h": h, "es": es}
 
 
@@ -244,8 +249,11 @@ def write_log(path: Path, results: list[dict]) -> None:
     path.write_text("\n".join(lines))
 
 
-def annotate_week_logs(logs_dir: str, results: list[dict]) -> None:
-    """Write (or replace) the "**ES**:" line, just before "**Run time**:", in each long run's section."""
+def annotate_week_logs(logs_dir: str, results: list[dict], prefix: str, key: str, format_fn) -> None:
+    """Write (or replace) the `prefix` line, just before "**Run time**:", in each activity's section.
+
+    Activities in `results` whose `key` is None get the line removed.
+    """
     by_key = {(r["date"].isoformat(), r["name"]): r for r in results}
     for path in glob.glob(str(Path(logs_dir) / "week-*.md")):
         text = Path(path).read_text()
@@ -256,10 +264,10 @@ def annotate_week_logs(logs_dir: str, results: list[dict]) -> None:
             m = ACTIVITY_RE.match(line)
             if m:
                 current = by_key.get((m.group(1), m.group(2).strip()))
-            elif current and line.startswith(ES_LINE_PREFIX):
+            elif current and line.startswith(prefix):
                 continue
-            elif current and current["es"] is not None and line.startswith(RUN_TIME_PREFIX):
-                out.append(f"{ES_LINE_PREFIX} {current['es']:.1f} ({level(current['es'])})")
+            elif current and current[key] is not None and line.startswith(RUN_TIME_PREFIX):
+                out.append(f"{prefix} {format_fn(current[key])}")
             out.append(line)
         if out != lines:
             Path(path).write_text("\n".join(out) + ("\n" if text.endswith("\n") else ""))
@@ -307,8 +315,12 @@ def main() -> int:
               f"C {r['c']:.2f} ({r['stops']} stop), dec {dec}, H {r['h']:.2f}")
 
     write_log(Path(args.output), results)
-    annotate_week_logs(args.logs_dir, results)
-    print(f"Logged to {args.output} and {args.logs_dir}/week-*.md")
+    annotate_week_logs(args.logs_dir, results, DECOUPLING_LINE_PREFIX, "decoupling_pct", lambda v: f"{v:.1f}%")
+    annotate_week_logs(args.logs_dir, results, ES_LINE_PREFIX, "es", lambda v: f"{v:.1f} ({level(v)})")
+    for r in results:
+        if r["decoupling"] is not None:
+            update_log(Path(DECOUPLING_LOG), r["date"].isoformat(), "resistenza", r["name"], r["distance_km"], r["decoupling"])
+    print(f"Logged to {args.output}, {DECOUPLING_LOG} and {args.logs_dir}/week-*.md")
     return 0
 
 

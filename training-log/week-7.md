@@ -42,6 +42,7 @@
 **NGP medio**: 7:09/km
 **IF**: 0.85
 **TSS**: 49
+**ES**: 8.8 (Base)
 **Run time**: 0:40:29
 **Walk time**: 0:00:16
 **Elevation**: 4 m

@@ -56,6 +56,7 @@ python3 .claude/skills/garmin-sync/scripts/garmin_sync_weeks.py
 3. Re-syncs the last existing week too if today still falls within it, so newly logged activities get picked up.
 4. Writes/overwrites `training-log/week-N.md` for every week it (re)syncs via `garmin_sync.py`.
 5. Syncs daily health and sleep data from the first existing training-log date through today via `garmin_sync_health.py`.
+5b. Computes the Endurance Score of every long run (Sunday runs, strides excluded) via `calculate_endurance_score.py`: adds an `**ES**:` line to each long run in `training-log/week-N.md` and rewrites `health-log/endurance-score.md` with the full breakdown. It runs over the whole log, not per week, because the score's recency factor needs earlier long runs.
 6. Makes sure `training-plan.md` documents the week-start convention (adds a note near the top if one isn't already there).
 
 After the health sync (step 5), update `heart_rate.resting_average` in `.claude/training-zones.yaml` to the mean resting HR over the trailing 7 calendar days (the same window as the "7d acceptable range" column in `health-log/daily-health.md` - its midpoint is that mean), then run `python3 .claude/scripts/calculate_hr_zones.py` to recalculate the zones and refresh `health-log/heart-rate-zones.md` and the current week's training log. Do this every auto-sync, not just when the athlete asks - it's what keeps the zones matched to current fitness. Skip it only if resting HR data is unavailable for the period.

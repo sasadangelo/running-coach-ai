@@ -205,6 +205,14 @@ def main():
                 print("garmin_sync_health.py failed, stopping.", file=sys.stderr)
                 sys.exit(result.returncode)
 
+    # Endurance Score needs every long run so far (recency factor), so it runs
+    # once over the whole log rather than inside each per-week garmin_sync.py.
+    es_cmd = [sys.executable, str(script_dir / "calculate_endurance_score.py"), "--logs-dir", str(training_log_dir)]
+    if args.dry_run:
+        print("  (dry run) " + " ".join(es_cmd))
+    elif subprocess.run(es_cmd).returncode != 0:
+        print("warning: calculate_endurance_score.py failed - ES not updated.", file=sys.stderr)
+
     verb = "Would sync" if args.dry_run else "Synced"
     print(f"\nDone. {verb} {len(pending)} week(s): {', '.join(str(w) for w in sorted(pending))}")
 

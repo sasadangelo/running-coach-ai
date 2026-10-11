@@ -9,6 +9,7 @@
 - **Giorni di allenamento**: 3 giorni/settimana, tutti e 3 sessioni di qualità (ripetute, tempo, lungo) — nessuna corsa lenta di riempimento
 - **Durata piano**: 14 settimane (10 verso la 5K + 4 verso la 10K)
 - **Settimane di allenamento**: da lunedì a domenica
+- **Obiettivi oltre questo piano**: vedi [obiettivi-lungo-termine.md](obiettivi-lungo-termine.md) (prima la salute, poi la prestazione)
 
 ## Contesto e perché il piano è calibrato così
 

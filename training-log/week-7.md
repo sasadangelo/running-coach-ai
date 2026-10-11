@@ -3,19 +3,65 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 10.90 km
-- **Total Time**: 1:17:10
-- **Total Elevation**: 10 m
-- **Total Calories**: 840 kcal (2/2 activities with data)
-- **Total TSS**: 103 (2/2 activities with a valid NGP/IF)
+- **Total Activities**: 4
+- **Total Distance**: 17.50 km
+- **Total Time**: 2:06:11
+- **Total Elevation**: 14 m
+- **Total Calories**: 1337 kcal (4/4 activities with data)
+- **Total TSS**: 159 (4/4 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 1:05:37
-- **Total Walk Time**: 0:11:51
+- **Total Run Time**: 1:47:56
+- **Total Walk Time**: 0:18:40
 
 ## Activities
 
+### 2026-10-11 09:10:52 - 8xAllunghi
+
+**Type**: Run
+**Distance**: 0.89 km
+**Duration**: 0:08:19
+**Pace**: 9:26/km
+**NGP medio**: 8:25/km
+**IF**: 0.72
+**TSS**: 7
+**Run time**: 0:01:50
+**Walk time**: 0:06:33
+**Elevation**: 0 m
+**Calories**: 71 kcal
+**Heart Rate**: 130 bpm (max: 143)
+**Note**: 8 Allunghi a fine corsa lenta. Dopo allunghi leggera sensazione indolenzimento anca dx ma subito sparita.
+
+---
+### 2026-10-11 08:08:30 - Corsa (Lungo) 5.7 Km
+
+**Type**: Run
+**Distance**: 5.71 km
+**Duration**: 0:40:42
+**Pace**: 7:09/km
+**NGP medio**: 7:09/km
+**IF**: 0.85
+**TSS**: 49
+**Run time**: 0:40:29
+**Walk time**: 0:00:16
+**Elevation**: 4 m
+**Calories**: 426 kcal
+**Heart Rate**: 149 bpm (max: 158)
+**Note**: Corsa lunga 5.7km cercando di stare sotto 155 bpm. Ci sono riuscito per il 98/99 % del tempo. Sensazioni buone nessun problema particolare. A fine corsa adduttori e pianta del piede sx leggeri sensazioni di fatica. Ma parliamo di remote sensazioni. Ieri a letto stessa sensazione remotissima su fascite plantare sx sparita appena poggiato piede a terra.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:23 | 7:24/km | 131 | 2 m       |
+| 2   | 1.00 km  | 0:07:02 | 7:02/km | 151 | 0 m       |
+| 3   | 1.00 km  | 0:06:55 | 6:56/km | 153 | 1 m       |
+| 4   | 1.00 km  | 0:07:02 | 7:02/km | 154 | 0 m       |
+| 5   | 1.00 km  | 0:07:12 | 7:13/km | 154 | 0 m       |
+| 6   | 0.70 km  | 0:05:06 | 7:17/km | 154 | 1 m       |
+| 7   | 0.01 km  | 0:00:02 | 7:42/km | 153 | 0 m       |
+
+---
 ### 2026-10-09 08:28:22 - Tempo 2x1200 m
 
 **Type**: Run
@@ -106,8 +152,8 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 194 bpm
-- **FC riposo media**: 56.67 bpm
-- **Riserva cardiaca**: 137.32999999999998 bpm
+- **FC riposo media**: 56.43 bpm
+- **Riserva cardiaca**: 137.57 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |

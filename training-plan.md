@@ -55,16 +55,16 @@
 **Focus**: seconda settimana di scarico prima del test finale.
 
 ### Fase E — Test e Rifinitura (S9, 26 ott-1 nov)
-**Focus**: tempo continuo e lungo continuo (5km) come prova generale della gara.
+**Focus**: settimana di carico dopo lo scarico: test del tempo continuo (2000m), ripetute 10x400 e lungo da 7km, nuovo picco.
 
 ### Fase F — Scarico Gara 1 (S10, 2-8 nov)
 **Focus**: arrivare freschi. **Domenica 8 nov: Roma 5K.**
 
-### Fase G — Recupero (S11, 9-15 nov)
-**Focus**: settimana leggera post-gara, il corpo assorbe lo sforzo.
+### Fase G — Recupero breve (S11, 9-15 nov)
+**Focus**: mezza settimana di recupero. Corsa facile al posto delle ripetute, poi Tempo e lungo normali: la 5K è una tappa verso la 10K, non deve fermare la progressione.
 
 ### Fase H — Sviluppo verso 10K (S12-S13, 16-29 nov)
-**Focus**: il lungo continuo cresce verso 5.5-7km, avvicinandosi alla distanza di gara.
+**Focus**: il lungo continuo cresce verso 7.5-8.5km, avvicinandosi alla distanza di gara; il Tempo continuo sale a 3000-3500m.
 
 ### Fase I — Scarico Gara 2 (S14, 30 nov-6 dic)
 **Focus**: arrivare freschi. **Domenica 6 dic: Best Woman 10K.**
@@ -119,12 +119,14 @@
 
 **Esito:** completate tutte e 3 le sedute previste. Tempo 3x800 a 6:04/6:00/6:05, primo Tempo interamente di corsa. Lungo corso per 5.01 km (35:53, 7:11/km medio, FC 149) con decoupling aerobico 2.1%, seguito da 7 allunghi e dal primo blocco di forza; volume Garmin della settimana: 16.17 km.
 
-### Settimana 6 (5-11 ottobre) — Fase C
+### ✅ Settimana 6 (5-11 ottobre) — Fase C — CONCLUSA
 **Volume totale**: 15.30 km
 
 - **Ripetute**: 1km risc., 15 x 200m @ 5:10-5:30/km (rec. 1'), 1km def. — 5.00km, ~46min
 - **Tempo**: 1km risc., 2 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
 - **Lungo**: 5.7km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.70km, ~42min; nessuna fermata programmata
+
+**Esito:** completate tutte e 3 le sedute previste. Ripetute 15x200 con 14/15 in fascia (1:01-1:06). Tempo 2x1200 a 6:03/6:05, FC di picco 169-171. Lungo corso per 5.71 km (40:42, 7:09/km medio, FC 149, max 158) tutto di corsa, con FC ≤155 per il 98-99% del tempo e decoupling aerobico ~3.7% (partenza un po' veloce ai km 2-3). Seguito da 8 allunghi e dal secondo blocco di forza; volume Garmin della settimana: 17.50 km.
 
 ### Settimana 7 (12-18 ottobre) — Fase C
 **Volume totale**: 16.80 km
@@ -134,18 +136,22 @@
 - **Lungo**: 6.4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.40km, ~47min *(sessione più lunga della settimana, picco prima dello scarico)*
 
 ### Settimana 8 — Scarico (19-25 ottobre) — Fase D
-**Volume totale**: 12.80 km (-24% rispetto a S7)
+**Volume totale**: 12.60 km (-25% rispetto a S7)
+
+**Tempo sostituito con corsa facile** (deciso l'11 ottobre, come nello scarico di S4): dopo S4, con il Tempo sostituito da una corsa facile, l'atleta è ripartito più fresco e S5 ha portato il miglior Tempo fino a quel momento. Lo scarico toglie quindi il lavoro a soglia e mantiene solo lo stimolo neuromuscolare delle ripetute. L'ultimo Tempo prima del test continuo da 2000m di S9 resta il 2x1500 di S7.
 
 - **Ripetute**: 1km risc., 6 x 400m @ 5:10-5:30/km (rec. 2'), 1km def. — 4.40km, ~41min
-- **Tempo**: 1km risc., 2 x 1000m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.20km, ~30min
+- **Corsa facile**: 4.0km continui @ 7:35-8:13/km, FC ≤150 (se la FC lo consente il passo può essere più veloce, come in S4) — 4.00km, ~30min
 - **Lungo**: 4.2km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.20km, ~31min *(scarico: volume ridotto, corpo fresco in vista del test di S9)*
 
 ### Settimana 9 (26 ottobre - 1 novembre) — Fase E
-**Volume totale**: 15.00 km
+**Volume totale**: 17.00 km (+1% rispetto a S7; il carico sale soprattutto in qualità: ripetute +25%, primo Tempo continuo)
+
+**Revisione dell'11 ottobre (S9-S13):** la 5K è una tappa verso la 10K. Nel piano originale il lungo restava sotto il picco di S7 (6.4km) per sei settimane, con tre settimane su quattro a carico ridotto. Ora restano lo scarico di S8 e l'avvicinamento alla gara di S10, il recupero post-gara si riduce a mezza settimana e il lungo riprende a crescere fino a 8.5km in S13 (mai più di +1km rispetto al lungo precedente). Dal test di S9 il Tempo diventa un blocco continuo che cresce di 500m a settimana: 2000, 2500, 3000, 3500m. **Condizione**: se la fascia plantare sx torna a farsi sentire al mattino, si torna ai volumi originali.
 
 - **Ripetute**: 1km risc., 10 x 400m @ 5:10-5:30/km (rec. 2'), 1km def. — 6.00km, ~53min
 - **Tempo**: 1km risc., 2000m continui @ 6:00-6:20/km, 1km def. — 4.00km, ~28min *(test tempo continuo)*
-- **Lungo**: 5.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.00km, ~37min *(prova generale: l'intera distanza di gara, di corsa continua)*
+- **Lungo**: 7.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 7.00km, ~51min *(nuovo picco, +0.6km su S7; a una settimana dalla gara, ritmo rigorosamente facile)*
 
 ### Settimana 10 — Gara 1 (2-8 novembre) — Fase F
 **Volume totale (esclusa gara)**: ~3.40 km
@@ -155,26 +161,26 @@
 - **Venerdì/Sabato**: riposo completo
 - **Domenica 8 novembre — GARA: Roma 5K**. Obiettivo: correrla tutta di corsa continua. Parti controllato (vicino a 7:00-7:30/km i primi km, non ai ritmi da tempo/ripetute), e se ti senti bene stringi negli ultimi 1-2km. L'obiettivo è arrivare in fondo correndo, non il tempo.
 
-### Settimana 11 — Recupero (9-15 novembre) — Fase G
-**Volume totale**: 11.80 km
+### Settimana 11 — Recupero breve (9-15 novembre) — Fase G
+**Volume totale**: 15.00 km
 
-- **Ripetute**: 1km risc., 4 x 200m @ 5:10-5:30/km (rec. 1') + 2 x 400m @ 5:10-5:30/km (rec. 2'), 1km def. — 3.60km, ~33min
-- **Tempo**: 1km risc., 2 x 600m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 3.40km, ~25min
-- **Lungo**: 4.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.00km, ~30min; nessuna fermata programmata
+- **Martedì — Corsa facile** (al posto delle ripetute, a 2 giorni dalla gara): 4.0km continui @ 7:35-8:13/km, FC ≤150 — 4.00km, ~30min
+- **Tempo**: 1km risc., 2500m continui @ 6:00-6:20/km, 1km def. — 4.50km, ~32min *(+500m rispetto al test di S9; se a 4 giorni dalla gara le gambe sono ancora pesanti, resta a 2000m)*
+- **Lungo**: 6.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.50km, ~48min; nessuna fermata programmata
 
 ### Settimana 12 (16-22 novembre) — Fase H
-**Volume totale**: 16.10 km
+**Volume totale**: 17.70 km
 
 - **Ripetute**: 1km risc., 4 x 400m @ 5:10-5:30/km (rec. 2') + 2 x 800m @ 5:10-5:30/km (rec. 2'30"), 1km def. — 5.20km, ~46min
-- **Tempo**: 1km risc., 2 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 4.60km, ~33min
-- **Lungo**: 5.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 5.50km, ~41min; nessuna fermata programmata
+- **Tempo**: 1km risc., 3000m continui @ 6:00-6:20/km, 1km def. — 5.00km, ~35min
+- **Lungo**: 7.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 7.50km, ~55min; nessuna fermata programmata
 
 ### Settimana 13 (23-29 novembre) — Fase H
-**Volume totale**: 18.60 km
+**Volume totale**: 19.60 km
 
 - **Ripetute**: 1km risc., 3 x 400m @ 5:10-5:30/km (rec. 2') + 3 x 800m @ 5:10-5:30/km (rec. 2'30"), 1km def. — 5.60km, ~49min *(se ti senti bene, prova a sostituire un 800m con un 1600m)*
-- **Tempo**: 1km risc., 3 x 1200m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 6.00km, ~42min *(finalmente supera il volume soglia di S7 — è l'unica sessione che finora non aveva mai ripreso il picco)*
-- **Lungo**: 7.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 7.00km, ~52min *(più lunga uscita del piano — ottimo indicatore di quanto potrai correre in gara)*
+- **Tempo**: 1km risc., 3500m continui @ 6:00-6:20/km, 1km def. — 5.50km, ~39min *(blocco continuo più lungo del piano)*
+- **Lungo**: 8.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 8.50km, ~62min *(più lunga uscita del piano — ottimo indicatore di quanto potrai correre in gara)*
 
 ### Settimana 14 — Gara 2 (30 novembre - 6 dicembre) — Fase I
 **Volume totale (esclusa gara)**: ~3.80 km
@@ -182,7 +188,7 @@
 - **Martedì — Ripetute leggere**: 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1') + 1 x 400m @ 5:10-5:30/km (rec. 2'), 0.5km def. — 2.20km
 - **Giovedì — Shakeout**: 0.3km risc., 1km @ ~7:45/km — 1.60km, corsa breve e leggera
 - **Venerdì/Sabato**: riposo completo
-- **Domenica 6 dicembre — GARA: Best Woman 10K**. Obiettivo: correre di corsa continua quanti più km possibile. In base alla progressione, un tratto continuo di 7-8km è realistico prima di dover eventualmente camminare un po' — se ti senti bene, spingi oltre. Non c'è nessuna vergogna a camminare un tratto: l'obiettivo è i km corsi, non finire tutta senza fermarsi a tutti i costi.
+- **Domenica 6 dicembre — GARA: Best Woman 10K**. Obiettivo: correre di corsa continua quanti più km possibile. In base alla progressione (lungo fino a 8.5km in S13), un tratto continuo di 8-9km è realistico prima di dover eventualmente camminare un po' — se ti senti bene, spingi oltre. Non c'è nessuna vergogna a camminare un tratto: l'obiettivo è i km corsi, non finire tutta senza fermarsi a tutti i costi.
 
 ---
 
@@ -203,23 +209,25 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Leg swing avanti/indietro — 10 per gamba
 - [ ] Leg swing laterale — 10 per gamba
 - [ ] Cerchi con le anche — 10 per lato
+- [ ] Circonduzioni del bacino — 10 per lato
 - [ ] Affondo camminato con rotazione del busto — 8-10 passi
-- [ ] Caviglie: cerchi + flessione/estensione dinamica — 10 per lato
+- [ ] Caviglie: cerchi + flessione/estensione dinamica — 20 per lato
 
 **Prima — drills (~5-7 min)**
 - [ ] Skip A (ginocchia alte) — 2 x 20-30m
 - [ ] Skip B (calciata avanti-giù) — 2 x 20-30m
 - [ ] Calciata dietro (talloni ai glutei) — 2 x 20-30m
-- [ ] Balzi/bounding leggeri — 2 x 20-30m
+- [ ] Doppio skip frontale e laterale — 2 x 20-30m
+- [ ] ~~Balzi/bounding leggeri~~ — *sospesi dall'11 ottobre: carico pliometrico sulla fascia plantare; da reintrodurre solo dopo qualche settimana senza segnali al piede sx*
 - [ ] Corsa laterale incrociata (carioca) — 2 x 20-30m
 
 **Dopo (solo stretching statico, ~8-10 min, 20-30 sec per lato)**
 - [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
-- [ ] Polpaccio (gastrocnemio ginocchio esteso + soleo ginocchio flesso)
-- [ ] Ischiocrurali (gamba tesa)
+- [ ] Polpaccio — gastrocnemio a ginocchio teso + soleo a ginocchio leggermente piegato (tallone che scende dal gradino)
+- [ ] Ischiocrurali (gamba tesa, piede sul muretto)
 - [ ] Quadricipite (in piedi, tallone al gluteo)
 - [ ] Flessori dell'anca (affondo statico, bacino in avanti)
-- [ ] Piriforme/gluteo (figura a 4)
+- [ ] Piriforme/gluteo (figura a 4) — *se lo stretching dell'anca col piede sul muretto non allunga già il gluteo*
 
 *Niente forza oggi — le gambe hanno già dato il massimo.*
 
@@ -229,16 +237,17 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Leg swing avanti/indietro — 10 per gamba
 - [ ] Leg swing laterale — 10 per gamba
 - [ ] Cerchi con le anche — 10 per lato
+- [ ] Circonduzioni del bacino — 10 per lato
 - [ ] Affondo camminato con rotazione del busto — 8-10 passi
-- [ ] Caviglie: cerchi + flessione/estensione dinamica — 10 per lato
+- [ ] Caviglie: cerchi + flessione/estensione dinamica — 20 per lato
 
 **Dopo (solo stretching statico, ~8-10 min)**
 - [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
-- [ ] Polpaccio — 20-30 sec per lato
-- [ ] Ischiocrurali — 20-30 sec per lato
+- [ ] Polpaccio — gastrocnemio a ginocchio teso + soleo a ginocchio piegato (tallone dal gradino) — 20-30 sec per lato
+- [ ] Ischiocrurali (piede sul muretto) — 20-30 sec per lato
 - [ ] Quadricipite — 20-30 sec per lato
 - [ ] Flessori dell'anca — 20-30 sec per lato
-- [ ] Piriforme/gluteo — 20-30 sec per lato
+- [ ] Piriforme/gluteo (figura a 4) — 20-30 sec per lato — *se lo stretching dell'anca col piede sul muretto non allunga già il gluteo*
 
 ### Checklist — Giorno Lungo
 
@@ -246,8 +255,9 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Leg swing avanti/indietro — 10 per gamba
 - [ ] Leg swing laterale — 10 per gamba
 - [ ] Cerchi con le anche — 10 per lato
+- [ ] Circonduzioni del bacino — 10 per lato
 - [ ] Affondo camminato con rotazione del busto — 8-10 passi
-- [ ] Caviglie: cerchi + flessione/estensione dinamica — 10 per lato
+- [ ] Caviglie: cerchi + flessione/estensione dinamica — 20 per lato
 
 **Dopo (forza poi stretching, ~20-25 min totali)**
 - [ ] Calf raise con dita sull'asciugamano arrotolato — 3 x 8-12 per gamba, lento (3 sec su, 2 fermo, 3 giù) *(priorità: protegge la fascia plantare)*
@@ -256,15 +266,16 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Step-up su gradino — 2 x 8-10 per gamba
 - [ ] Side plank — 2 x 20-30 sec per lato
 - [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
-- [ ] Polpaccio — 20-30 sec per lato
-- [ ] Ischiocrurali — 20-30 sec per lato
+- [ ] Polpaccio — gastrocnemio a ginocchio teso + soleo a ginocchio piegato (tallone dal gradino) — 20-30 sec per lato
+- [ ] Ischiocrurali (piede sul muretto) — 20-30 sec per lato
 - [ ] Quadricipite — 20-30 sec per lato
 - [ ] Flessori dell'anca — 20-30 sec per lato
-- [ ] Piriforme/gluteo — 20-30 sec per lato
+- [ ] Piriforme/gluteo (figura a 4) — 20-30 sec per lato — *se lo stretching dell'anca col piede sul muretto non allunga già il gluteo*
 
 **Note per tutte e tre le checklist**:
 - Tutto a corpo libero, nessun attrezzo necessario.
 - **Progressione**: blocco di forza introdotto dalla Settimana 5 (4 ottobre), partendo da zero. Le prime due domeniche tienilo leggero (anche serie minime): l'indolenzimento non deve compromettere le Ripetute del martedì. Poi, se ti senti a tuo agio, aggiungi una serie o allunga il side plank di 10-15 sec.
+- **Stato forza (11 ottobre)**: eseguiti due blocchi con calf raise 2x12, glute bridge 2x15 (dimenticato l'11), squat 2x12, step-up 1x10 per gamba, side plank 2x20". Dal 18 ottobre: calf raise 3x12 per gamba (il volume previsto, priorità fascia plantare) e side plank 2x30", resto invariato. Passo successivo: step-up 2x10 e/o squat 3x12, se l'indolenzimento del lunedì resta di un giorno.
 - **Settimane di scarico e gara (S4, S8, S10, S11, S14)**: salta la forza o fai solo metà esercizi — il corpo deve arrivare fresco, non stanco. Mobilità e stretching restano sempre, costano poco e aiutano il recupero.
 
 ---

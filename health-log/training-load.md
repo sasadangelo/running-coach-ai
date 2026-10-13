@@ -10,8 +10,7 @@ Stile TrainingPeaks, calcolato dal TSS giornaliero (somma dei TSS per attivita i
 Fasce TSB (convenzione TrainingPeaks/Coggan): >+25 molto fresco, +5/+25 fresco, -10/+5 zona grigia, -30/-10 zona ottimale di allenamento, <-30 alto rischio.
 Fasce ACWR (Gabbett): <0.8 sotto-allenato, 0.8-1.3 basso rischio, 1.3-1.5 attenzione, >1.5 rischio infortunio elevato.
 
-**Stato attuale (2026-09-20)**: CTL 8.0 | ATL 19.1 | TSB -7.6 (zona grigia (ne fresco ne in costruzione produttiva)) | ACWR 2.40 (rischio infortunio elevato)
-- Solo 27 giorni di storico su 42 necessari perche il CTL converga del tutto (~64% del transitorio) - i numeri (TSB e soprattutto ACWR, che dipende direttamente dal CTL) sono ancora in fase di costruzione: un CTL artificialmente basso gonfia l'ACWR rispetto a quello che sara una volta assestato. Non prenderli come plateau stabile.
+**Stato attuale (2026-10-13)**: CTL 12.6 | ATL 25.9 | TSB -8.2 (zona grigia (ne fresco ne in costruzione produttiva)) | ACWR 2.05 (rischio infortunio elevato)
 
 | Data | TSS | CTL | ATL | TSB | ACWR |
 | ---------- | ---: | ---: | ---: | ---: | ---: |
@@ -42,3 +41,26 @@ Fasce ACWR (Gabbett): <0.8 sotto-allenato, 0.8-1.3 basso rischio, 1.3-1.5 attenz
 | 2026-09-18 | 41 | 7.2 | 17.1 | -6.7 | 2.37 |
 | 2026-09-19 | 0 | 7.0 | 14.6 | -9.9 | 2.08 |
 | 2026-09-20 | 46 | 8.0 | 19.1 | -7.6 | 2.40 |
+| 2026-09-21 | 0 | 7.8 | 16.4 | -11.2 | 2.11 |
+| 2026-09-22 | 0 | 7.6 | 14.0 | -8.6 | 1.85 |
+| 2026-09-23 | 0 | 7.4 | 12.0 | -6.5 | 1.63 |
+| 2026-09-24 | 0 | 7.2 | 10.3 | -4.6 | 1.43 |
+| 2026-09-25 | 31 | 7.8 | 13.3 | -3.1 | 1.70 |
+| 2026-09-26 | 0 | 7.6 | 11.4 | -5.5 | 1.49 |
+| 2026-09-27 | 0 | 7.4 | 9.8 | -3.8 | 1.31 |
+| 2026-09-28 | 0 | 7.3 | 8.4 | -2.3 | 1.15 |
+| 2026-09-29 | 51 | 8.3 | 14.5 | -1.1 | 1.74 |
+| 2026-09-30 | 0 | 8.1 | 12.4 | -6.2 | 1.53 |
+| 2026-10-01 | 0 | 7.9 | 10.6 | -4.3 | 1.34 |
+| 2026-10-02 | 45 | 8.8 | 15.5 | -2.7 | 1.77 |
+| 2026-10-03 | 0 | 8.6 | 13.3 | -6.7 | 1.55 |
+| 2026-10-04 | 51 | 9.6 | 18.7 | -4.7 | 1.95 |
+| 2026-10-05 | 0 | 9.4 | 16.0 | -9.1 | 1.71 |
+| 2026-10-06 | 60 | 10.6 | 22.3 | -6.7 | 2.11 |
+| 2026-10-07 | 0 | 10.3 | 19.1 | -11.7 | 1.85 |
+| 2026-10-08 | 0 | 10.1 | 16.4 | -8.8 | 1.63 |
+| 2026-10-09 | 43 | 10.9 | 20.2 | -6.3 | 1.86 |
+| 2026-10-10 | 0 | 10.6 | 17.3 | -9.3 | 1.63 |
+| 2026-10-11 | 56 | 11.7 | 22.8 | -6.7 | 1.96 |
+| 2026-10-12 | 0 | 11.4 | 19.6 | -11.2 | 1.72 |
+| 2026-10-13 | 64 | 12.6 | 25.9 | -8.2 | 2.05 |

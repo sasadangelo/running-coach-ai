@@ -28,6 +28,18 @@
 - Sonno: 6h13 e 6h42 le ultime due notti, meglio della settimana scorsa ma ancora sotto le 7h.
 - **Fascia plantare sx: terzo segnale in quattro giorni** (10/10 mattina a letto, "remotissima"; 11/10 pianta del piede affaticata a fine lungo; 13/10 dopo le 400, sparito con lo stretching). Tutti lievi e transitori, ma ripetuti.
 
+## Aggiornamento 14/10 (mattina dopo le 400)
+- **Fascia plantare sx:** primi passi del mattino puliti, nessun sintomo. Il test è superato e il Tempo di venerdì resta confermato.
+- **Anca/bacino:** leggero indolenzimento intorno all'anca al risveglio, passato in fretta. È la seconda volta in pochi giorni (11/10 anca dx dopo gli allunghi). È coerente con l'ipotesi del gluteo medio dx: priorità agli esercizi di abduzione già indicati.
+- **Recupero:** FC a riposo 60 (intervallo a 7 giorni 55-58), HRV 51 ms, in lieve calo da fine settembre (media settimanale ~54-55 → 51-52 negli ultimi 3 giorni, circa -5%), sonno 5h44. Lettura: la FC alta si spiega con la seduta più dura del piano (TSS 64) fatta alle 18 e il sonno sotto le 6 ore (stesso schema del 6/10, rientrato in un giorno). L'HRV in calo, il carico in crescita (terza settimana di carico, TSB -8) e il debito di sonno dei giorni feriali indicano una lieve stanchezza in accumulo, ancora gestibile; lo scarico di S8 parte lunedì 19.
+- **Regola per il Tempo di venerdì 16/10:** controllo di FC a riposo e HRV al mattino. Se FC ≤58 e HRV ≥50: 2x1500 a 6:08-6:15, FC ≤168 negli ultimi 500m. Se FC ≥60 o HRV <50: corsa facile o Tempo ridotto (es. 2x1000). Mercoledì e giovedì priorità al sonno (letto entro le 22:30).
+
+## Decisioni del 15 ottobre
+- **FC max 185** in `.claude/training-zones.yaml` (Garmin resta a 194): zone Karvonen Z2 133-153, Z3 153-166, Z4 166-176. **FC di soglia ~165** (forbice 163-166), passo di soglia ~6:10-6:15/km.
+- **Piano aggiornato:** tabella dei ritmi (400m 5:20-5:40, 800m 5:35-5:55, Tempo a ripetute 6:00-6:20 puntando a 6:08-6:15, Tempo continuo 6:10-6:30 con FC ~165), tabella FC, criterio di regolarità, 1600m tolto, recupero camminato ammesso sulle ripetute brevi. Sedute S8-S14 allineate.
+- **VO2max stimato:** 40.7 ml/kg/min (mediana delle ultime 4 settimane, dai tratti stabili con FC max 185); Garmin indica 42-43 con FC max 194. Log in `health-log/vo2max.md`, aggiornato a ogni sync.
+- Il primo Tempo continuo di almeno 20' (Capacity Score) è il 3500m di **S13**, non di S12. La fascia del CS è allineata a 6:10-6:30.
+
 ## Recommendations
 - **Test dei primi passi del 14/10 mattina:** se c'è dolore o rigidità al tallone/arco, il Tempo di venerdì diventa una corsa facile e scatta la condizione della revisione S9-S13 (ritorno ai volumi originali). Se è tutto pulito, Tempo 2x1500 come da piano, partendo a 6:05-6:10.
 - **Allunghi dopo il lungo di domenica:** saltarli o al massimo 4 morbidi questa settimana.

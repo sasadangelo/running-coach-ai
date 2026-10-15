@@ -95,7 +95,7 @@ Discussione con l'atleta, nata da una conversazione con Gemini su come misurare 
 - **Soglia 6:04/km - 173 bpm:** risale ad aprile 2026. Il passo corrisponde a VDOT 32 (5K in ~29'), più veloce della 5K di marzo: probabilmente ottimista, ma la FC di 173 è plausibile. Indizi: FC 169-171 e sensazione "al limite" nel 2x1200 (gli ultimi 200m a 6:41 erano traffico, quindi non sono una prova di calo). IF e TSS dipendono da questo passo.
 - **Tabelle di Daniels:** affidabili per ricavare i ritmi da una gara recente, meno per prevedere distanze molto più lunghe quando la resistenza è indietro (5K→10K: allungare la stima di 1-2').
 
-### Proposte sui ritmi (da decidere)
+### Proposte sui ritmi (applicate al piano il 15 ottobre, con FC max 185 e FC di soglia ~165)
 Principio: i ritmi si ricavano da prestazioni reali (Roma 5K, poi test dei 7'), non dal VO2max. Fasce di 20" al km, perché quelle da 10" sono difficili da centrare.
 - **200m:** 5:10-5:30 invariato, ma non sotto 5:10. Recupero camminato accettabile: lavoro di velocità, il recupero completo va bene.
 - **400m (prime sedute):** 5:20-5:40/km (2:08-2:16), non allo stesso ritmo dei 200. Il ritmo R del piano corrisponde a VDOT 32-34, quello stimato è 28-30. Recupero 2': prima metà camminata, poi jog se riesce; se la FC è sopra 150 all'inizio della ripetuta successiva, recupero a 2'30".

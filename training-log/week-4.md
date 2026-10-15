@@ -43,6 +43,7 @@
 **TSS**: 38
 **Decoupling**: 4.8%
 **ES**: 6.9 (Primi km)
+**Economia**: EF 0.915 m/battito · M 0.924 · RES 84.5
 **Run time**: 0:32:57
 **Walk time**: 0:00:07
 **Elevation**: 9 m

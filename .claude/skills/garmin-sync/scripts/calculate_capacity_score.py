@@ -53,7 +53,7 @@ BLOCK_PACE_LIMIT_SEC_KM = 400  # 6:40/km: faster than warm-up/cool-down (7:10-7:
 MAX_GAP_SECONDS = 20  # brief dips below the limit (a bend, a crossing) don't split the block
 LAG_SECONDS = 120
 SMOOTHING_SECONDS = 30
-TEMPO_BAND_SEC_KM = (360, 380)  # 6:00-6:20/km, the plan's Tempo band
+TEMPO_BAND_SEC_KM = (370, 390)  # 6:10-6:30/km, the plan's continuous Tempo band (revised 15 Oct)
 
 # (upper bound, name, typical continuous threshold block, description). The bounds
 # assume roughly 1.6-2 CS per minute at threshold: a more efficient runner moves

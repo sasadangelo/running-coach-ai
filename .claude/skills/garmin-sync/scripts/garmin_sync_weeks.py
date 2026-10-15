@@ -207,8 +207,9 @@ def main():
 
     # Endurance Score needs every long run so far (recency factor), so it runs
     # once over the whole log rather than inside each per-week garmin_sync.py.
-    # Capacity Score runs alongside it so both scores share the same refresh.
-    for score_script in ("calculate_endurance_score.py", "calculate_capacity_score.py"):
+    # Capacity Score, VO2max, threshold-pace and running-economy estimates run alongside it so they share the same refresh.
+    for score_script in ("calculate_endurance_score.py", "calculate_capacity_score.py", "calculate_vo2max.py", "calculate_threshold.py", "calculate_economy.py",
+                         "monthly_profile.py"):
         score_cmd = [sys.executable, str(script_dir / score_script), "--logs-dir", str(training_log_dir)]
         if args.dry_run:
             print("  (dry run) " + " ".join(score_cmd))

@@ -23,6 +23,15 @@
 - **Mobilità pre-corsa:** oscillazioni delle gambe laterali e avanti/indietro, rotazioni dell'anca dx e sx avanti e indietro, distensioni della caviglia 20, rotazioni della caviglia 20 per lato.
 - **Drills:** skip A, skip C, high knee, piedi al sedere, saltelli, carioca. **I saltelli sono un carico pliometrico per la fascia plantare**, come i balzi già sospesi l'11/10, e oggi la fascia sx si è fatta sentire dopo la seduta. Da sospendere finché la fascia non resta tranquilla per qualche settimana. Sono saltelli sulle punte a piedi pari (pogo): l'atterraggio sull'avampiede tende la fascia a ogni rimbalzo. Al loro posto: passi laterali in mezzo squat, 10 per lato (attivano il gluteo medio). Reintroduzione dopo 3-4 settimane senza segnali: 2x10 saltelli bassi su fondo morbido, poi progressione.
 
+### Session 2: Tempo 2x1500 (venerdì 16 ottobre)
+- **Status:** Completata, tutta di corsa
+- **Pacing:** 1ª frazione 6:15 + 6:11 (~6:14 medio), 2ª 6:13 + 6:23 negli ultimi 500m (~6:16 medio). Dentro la fascia impostata sull'orologio (6:05-6:25), per la prima volta nella metà lenta della fascia del piano invece che a 6:00-6:05. Leggero calo solo negli ultimi 500m.
+- **Heart Rate:** 161-164 nella 1ª frazione, 164-167 nella 2ª; massimo 169, mai sopra 168 prima degli ultimi 500m. Recupero di 200m in jog a 7:55 (FC 161).
+- **Soglia:** lo script stima **6:15/km a 165 bpm** ("Tempo a ripetute"), in linea con 6:11-6:21 delle sedute precedenti e con il VDOT ~31. Conferma la soglia a ~165 bpm e ~6:15/km.
+- **Notes (atleta):** meno faticosa del 2x1200 della settimana scorsa; nella prima frazione sentiva di poter arrivare a 2km con poco sforzo. Attribuisce il miglioramento alle 8x400 (positive per lui anche anni fa). Il motivo principale è più probabilmente il ritmo: 6:14-6:16 invece di 6:03-6:05, cioè attorno alla soglia invece che sopra. Buon segnale per il test continuo da 2000m di S9 (6:10-6:30).
+- **Fascia plantare sx:** leggera sensazione a fine corsa, sparita dopo pochi minuti. È il secondo episodio dopo una seduta di qualità (13/10 dopo le 400), sempre transitorio e con mattine pulite. **Sede (16/10): sempre lo stesso punto, l'arco del piede sinistro spostato verso destra, cioè sul lato interno (mediale), non sotto il tallone.** Compare dopo i lavori veloci, quando si spinge di più sull'avampiede. **L'atleta precisa che non è dolore ma una sensazione post-corsa** che passa in pochi minuti: segnale da osservare, non un problema. Da rivalutare solo se cambia natura: se il dolore compare durante la corsa, se resta al mattino o se c'è gonfiore, valutazione da un fisioterapista o podologo (fascia nel tratto centrale contro tendine tibiale posteriore). Aggiunto il piede corto (short foot) 3x10 per lato, 5" di tenuta.
+- **Mattina del 16/10:** FC a riposo 55, HRV 55 ms, entrambi rientrati nella norma dopo il picco del 14/10.
+
 ## Health & Sleep Context
 - FC a riposo 7-13 ottobre 55-58 bpm (media 56.0, zone ricalcolate, invariate); HRV 49-57 ms, nella norma.
 - Sonno: 6h13 e 6h42 le ultime due notti, meglio della settimana scorsa ma ancora sotto le 7h.

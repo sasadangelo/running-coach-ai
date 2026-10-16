@@ -4,7 +4,7 @@ Score di capacita aerobica dei Tempo run: `CS = (velocita m/s / FC) x minuti di 
 
 - **Blocco**: il tratto continuo piu lungo sotto 6:40/km; riscaldamento e defaticamento esclusi. Solo blocchi di almeno 20 minuti: le sedute a ripetute non hanno CS.
 - **Passo e FC del blocco**: medie del blocco senza i primi 2 minuti, in cui la FC sta ancora salendo.
-- **C (controllo del passo)**: quota del blocco corsa nella fascia Tempo 6:00-6:20/km (passo medio su 30s).
+- **C (controllo del passo)**: quota del blocco corsa nella fascia Tempo 6:10-6:30/km (passo medio su 30s).
 - **M_drift (deriva)**: decoupling passo:FC tra prima e seconda meta del blocco; 1.0 se <= 5%, altrimenti 1 - (decoupling - 5)/100.
 - **Da guardare oltre al CS**: la FC del blocco a parita di passo. Se scende nelle settimane, la capacita aerobica sta migliorando.
 

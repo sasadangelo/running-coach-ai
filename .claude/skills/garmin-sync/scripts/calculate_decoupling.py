@@ -48,7 +48,10 @@ def find_activity(client: Garmin, day: str, name_contains: str | None) -> dict:
     activities = client.get_activities_by_date(day, day)
     running = [a for a in activities if "running" in (a.get("activityType", {}) or {}).get("typeKey", "").lower()]
     if name_contains:
-        running = [a for a in running if name_contains.lower() in (a.get("activityName") or "").lower()]
+        named = [a for a in running if name_contains.lower() in (a.get("activityName") or "").lower()]
+        # The activity may have been renamed on Garmin after the log was written:
+        # with a single run that day, the name doesn't matter.
+        running = named or (running if len(running) == 1 else [])
 
     if not running:
         raise ValueError(f"No running activity found on {day}" + (f" matching '{name_contains}'" if name_contains else ""))

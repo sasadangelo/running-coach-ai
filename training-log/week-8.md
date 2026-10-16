@@ -3,19 +3,49 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 1
-- **Total Distance**: 6.43 km
-- **Total Time**: 0:48:40
-- **Total Elevation**: 4 m
-- **Total Calories**: 505 kcal (1/1 activities with data)
-- **Total TSS**: 64 (1/1 activities with a valid NGP/IF)
+- **Total Activities**: 2
+- **Total Distance**: 11.64 km
+- **Total Time**: 1:23:32
+- **Total Elevation**: 6 m
+- **Total Calories**: 905 kcal (2/2 activities with data)
+- **Total TSS**: 112 (2/2 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 0:33:05
-- **Total Walk Time**: 0:15:46
+- **Total Run Time**: 1:07:56
+- **Total Walk Time**: 0:15:48
 
 ## Activities
 
+### 2026-10-16 07:49:55 - Tempo 2x1500 m
+
+**Type**: Run
+**Distance**: 5.21 km
+**Duration**: 0:34:52
+**Pace**: 6:42/km
+**NGP medio**: 6:38/km
+**IF**: 0.91
+**TSS**: 49
+**Run time**: 0:34:51
+**Walk time**: 0:00:02
+**Elevation**: 2 m
+**Calories**: 400 kcal
+**Heart Rate**: 158 bpm (max: 169)
+**Note**: Buon allenamento. 2x1500 sono risultati meno faticosi dei 2x1200 scorsa week. Secondo me l'allenamento 8x400 ha portato buoni benefici (ricordo che i 400 anche anni fa erano positivi per me). Nella prima ripetuta sentivo di poter arrivare con piccolo sforzo a 2km. Leggera sensazione a fine corsa su fascite plantare scomparsa dopo pochi min.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:02 | 7:02/km | 138 | 1 m       |
+| 2   | 1.00 km  | 0:06:15 | 6:15/km | 161 | 1 m       |
+| 3   | 0.50 km  | 0:03:06 | 6:11/km | 164 | 0 m       |
+| 4   | 0.20 km  | 0:01:35 | 7:55/km | 161 | 0 m       |
+| 5   | 1.00 km  | 0:06:13 | 6:13/km | 164 | 0 m       |
+| 6   | 0.50 km  | 0:03:11 | 6:23/km | 167 | 0 m       |
+| 7   | 1.00 km  | 0:07:27 | 7:27/km | 160 | 0 m       |
+| 8   | 0.01 km  | 0:00:03 | 7:48/km | 157 | 0 m       |
+
+---
 ### 2026-10-13 18:06:45 - 8x400 con 2' Rec.
 
 **Type**: Run
@@ -57,18 +87,3 @@
 | 19  | 0.01 km  | 0:00:02 | 9:34/km  | 147 | 0 m       |
 
 ---
-
-## Heart-Rate Zones
-
-- **Metodo**: Karvonen
-- **FC max**: 185 bpm
-- **FC riposo media**: 56.0 bpm
-- **Riserva cardiaca**: 129.0 bpm
-
-| Zona | % HRR | FC |
-| --- | ---: | ---: |
-| Zone 1 | 50-60% | 121-133 bpm |
-| Zone 2 | 60-75% | 133-153 bpm |
-| Zone 3 | 75-85% | 153-166 bpm |
-| Zone 4 | 85-93% | 166-176 bpm |
-| Zone 5 | 93-100% | 176-185 bpm |

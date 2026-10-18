@@ -135,7 +135,7 @@ After syncing, tell the athlete:
 
 ## Notes on the run/walk time split
 
-Garmin doesn't expose a simple "time spent running" / "time spent walking" field on the activity summary. `scripts/garmin_sync.py` estimates it from second-by-second speed samples (`get_activity_details`), classifying each sample against `WALK_SPEED_THRESHOLD_M_S` (1.96 m/s, ~8:30/km) - at or above that speed counts as running, below counts as walking. This is a heuristic: a slow jog recovery between reps will register as "walk time" too. Adjust the threshold constant if it's misclassifying for this athlete's paces.
+Garmin doesn't expose a simple "time spent running" / "time spent walking" field on the activity summary. `scripts/garmin_sync.py` estimates it from second-by-second speed samples (`get_activity_details`), classifying each sample against `WALK_SPEED_THRESHOLD_M_S` (1.85 m/s, ~9:00/km) - at or above that speed counts as running, below counts as walking. This is a heuristic: a slow jog recovery between reps will register as "walk time" too. Adjust the threshold constant if it's misclassifying for this athlete's paces.
 
 ## Notes on laps
 

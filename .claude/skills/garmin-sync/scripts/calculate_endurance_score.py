@@ -7,7 +7,8 @@ ES = (speed_m_s / HR_avg) * distance_km * 100 * C * M_dec * H
   brings the score onto a readable scale.
 - C (continuity) = (run_time / total_time)^2 * max(0.2, 1 - 0.05 * n_stops).
   A stop is a walk segment of at least MIN_STOP_SECONDS below running speed;
-  shorter dips (traffic lights, GPS noise) are ignored.
+  shorter dips (traffic lights, GPS noise) are ignored, and so is the time before
+  the first and after the last running sample (watch started while standing still).
 - M_dec (aerobic drift) = 1.0 if decoupling <= 5%, else max(0.5, 1 - (dec - 5) / 100).
   Decoupling comes from calculate_decoupling.compute_decoupling (10-min warm-up
   excluded, >= 20 min left to analyse). When it can't be computed (too short or
@@ -124,7 +125,13 @@ def extract_speed_series(client, activity_id: int) -> list[tuple[float, float]]:
 
 
 def continuity(series: list[tuple[float, float]]) -> dict:
-    """Run/total time ratio and number of walk breaks lasting >= MIN_STOP_SECONDS."""
+    """Run/total time ratio and number of walk breaks lasting >= MIN_STOP_SECONDS.
+
+    Samples before the first and after the last running sample are dropped: standing
+    still with the watch started (GPS lock, start/finish) is not a break in the run.
+    """
+    running = [i for i, (_t, speed) in enumerate(series) if speed >= WALK_SPEED_THRESHOLD_M_S]
+    series = series[running[0]:running[-1] + 1] if running else []
     run_s = walk_s = 0.0
     stops = 0
     segment = 0.0
@@ -230,7 +237,7 @@ def write_log(path: Path, results: list[dict]) -> None:
         "",
         "Score di resistenza aerobica dei lunghi: `ES = (velocita m/s / FC media) x km x 100 x C x M_dec x H`.",
         "",
-        f"- **C (continuita)**: (tempo di corsa / tempo totale)^2 x max(0.2, 1 - 0.05 x stop). Uno stop e una camminata di almeno {MIN_STOP_SECONDS}s sotto ~8:30/km.",
+        f"- **C (continuita)**: (tempo di corsa / tempo totale)^2 x max(0.2, 1 - 0.05 x stop). Uno stop e una camminata di almeno {MIN_STOP_SECONDS}s sotto ~9:00/km.",
         "- **M_dec (deriva)**: 1.0 se decoupling <= 5%, altrimenti 1 - (decoupling - 5)/100. Decoupling dallo stesso calcolo di `aerobic-decoupling.md`. Quando non e calcolabile (corsa sotto i 30 min o troppo camminata) ES e n/d: senza deriva misurata lo score non e confrontabile. Il lungo conta comunque per H.",
         f"- **H (memoria)**: giorni dall'ultimo lungo di almeno l'{SIMILAR_DISTANCE_RATIO * 100:.0f}% della distanza: <= 14 -> 1.0, 15-30 -> 0.90, oltre o mai -> 0.75.",
         "",

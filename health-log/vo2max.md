@@ -1,6 +1,6 @@
 # VO2max Log
 
-**Stima attuale: 40.7 ml/kg/min** (mediana delle corse degli ultimi 28 giorni).
+**Stima attuale: 40.8 ml/kg/min** (mediana delle corse degli ultimi 28 giorni).
 
 Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, corsa in piano, velocita corretta per la pendenza), `%FCR = (FC - 57) / (185 - 57)`, `VO2max = 3.5 + (VO2 - 3.5) / %FCR` (Swain).
 
@@ -19,5 +19,6 @@ Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, cors
 | 2026-10-02 | Tempo 3x800 m                | 12             | 6:40/km           | 162 bpm  | 40.8           | 43            |
 | 2026-10-04 | Corsa Lenta Lunga 5 Km       | 26             | 7:10/km           | 153 bpm  | 40.7           | 43            |
 | 2026-10-09 | Tempo 2x1200 m               | 14             | 6:42/km           | 165 bpm  | 39.1           | 43            |
-| 2026-10-11 | Corsa (Lungo) 5.7 Km         | 28             | 7:05/km           | 154 bpm  | 40.8           | 43            |
-| 2026-10-16 | Tempo 2x1500 m               | 19             | 6:35/km           | 163 bpm  | 40.6           | 43            |
+| 2026-10-11 | Corsa (Lungo) 5.7 Km         | 28             | 7:05/km           | 154 bpm  | 40.9           | 43            |
+| 2026-10-16 | Tempo 2x1500 m               | 19             | 6:35/km           | 163 bpm  | 40.7           | 43            |
+| 2026-10-18 | Lungo 6.4 Km                 | 36             | 7:16/km           | 150 bpm  | 41.7           | 43            |

@@ -28,7 +28,7 @@ except ImportError:
 DEFAULT_OUTPUT = "health-log/aerobic-decoupling.md"
 MIN_DURATION_MINUTES = 20
 MIN_SPEED_M_S = 0.3  # drop stopped/near-zero samples (traffic lights, etc.)
-WALK_SPEED_THRESHOLD_M_S = 1.96  # same threshold as garmin_sync.py's run/walk split (~8:30/km)
+WALK_SPEED_THRESHOLD_M_S = 1.85  # same threshold as garmin_sync.py's run/walk split (~9:00/km)
 MAX_WALK_FRACTION = 0.10  # more than this and it isn't a continuous effort
 DEFAULT_WARMUP_MINUTES = 10  # excluded before the half/half split - cold-start HR lag would otherwise inflate decoupling
 

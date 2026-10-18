@@ -8,7 +8,7 @@
 - **Total Time**: 2:06:11
 - **Total Elevation**: 14 m
 - **Total Calories**: 1337 kcal (4/4 activities with data)
-- **Total TSS**: 159 (4/4 activities with a valid NGP/IF)
+- **Total TSS**: 169 (4/4 activities with a valid NGP/IF)
 
 ### Running Totals
 - **Total Run Time**: 1:47:56
@@ -23,8 +23,8 @@
 **Duration**: 0:08:19
 **Pace**: 9:26/km
 **NGP medio**: 8:25/km
-**IF**: 0.72
-**TSS**: 7
+**IF**: 0.74
+**TSS**: 8
 **Run time**: 0:01:50
 **Walk time**: 0:06:33
 **Elevation**: 0 m
@@ -40,10 +40,10 @@
 **Duration**: 0:40:42
 **Pace**: 7:09/km
 **NGP medio**: 7:09/km
-**IF**: 0.85
-**TSS**: 49
+**IF**: 0.87
+**TSS**: 52
 **Decoupling**: 4.3%
-**ES**: 8.8 (Base)
+**ES**: 8.9 (Base)
 **Economia**: EF 0.912 m/battito · M 0.934 · RES 85.2
 **Run time**: 0:40:29
 **Walk time**: 0:00:16
@@ -72,8 +72,8 @@
 **Duration**: 0:31:37
 **Pace**: 6:52/km
 **NGP medio**: 6:42/km
-**IF**: 0.90
-**TSS**: 43
+**IF**: 0.93
+**TSS**: 46
 **Run time**: 0:31:09
 **Walk time**: 0:00:30
 **Elevation**: 4 m
@@ -102,8 +102,8 @@
 **Duration**: 0:45:33
 **Pace**: 7:17/km
 **NGP medio**: 6:51/km
-**IF**: 0.89
-**TSS**: 60
+**IF**: 0.91
+**TSS**: 63
 **Run time**: 0:34:28
 **Walk time**: 0:11:21
 **Elevation**: 6 m

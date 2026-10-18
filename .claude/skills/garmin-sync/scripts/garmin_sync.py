@@ -76,7 +76,7 @@ RUNNING_TYPE_KEYS = {
 # rather than a real training bout, so it's noise in the weekly log.
 DEFAULT_MIN_ACTIVITY_DISTANCE_KM = 0.8
 
-WALK_SPEED_THRESHOLD_M_S = 1.96  # ~8:30/km - below this a sample counts as walking
+WALK_SPEED_THRESHOLD_M_S = 1.85  # ~9:00/km - below this a sample counts as walking
 
 NGP_WINDOW_SECONDS = 30  # rolling-average window before the quartic mean, same convention as TrainingPeaks' NGP/NP
 

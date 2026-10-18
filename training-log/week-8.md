@@ -3,19 +3,52 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 11.64 km
-- **Total Time**: 1:23:32
-- **Total Elevation**: 6 m
-- **Total Calories**: 905 kcal (2/2 activities with data)
-- **Total TSS**: 112 (2/2 activities with a valid NGP/IF)
+- **Total Activities**: 3
+- **Total Distance**: 18.05 km
+- **Total Time**: 2:10:23
+- **Total Elevation**: 11 m
+- **Total Calories**: 1381 kcal (3/3 activities with data)
+- **Total TSS**: 176 (3/3 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 1:07:56
-- **Total Walk Time**: 0:15:48
+- **Total Run Time**: 1:56:04
+- **Total Walk Time**: 0:14:51
 
 ## Activities
 
+### 2026-10-18 07:38:51 - Lungo 6.4 Km
+
+**Type**: Run
+**Distance**: 6.41 km
+**Duration**: 0:46:51
+**Pace**: 7:22/km
+**NGP medio**: 7:19/km
+**IF**: 0.85
+**TSS**: 57
+**Decoupling**: 1.3%
+**ES**: 10.0 (Base)
+**Economia**: EF 0.932 m/battito · M 0.924 · RES 86.1
+**Run time**: 0:46:47
+**Walk time**: 0:00:24
+**Elevation**: 5 m
+**Calories**: 476 kcal
+**Heart Rate**: 146 bpm (max: 155)
+**Note**: Buon allenamento. Causa trasloco ieri ho cercato di tenerlo easy. Nessun problema fascite prima, durante e dopo. Un remoto sentore c'è ma è al limite della percettibilita'. Avrei potuto fare altro Km ma a fatica. Quasi sempre <=151 tranne qualche punta fino a 155.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:39 | 7:58/km | 128 | 1 m       |
+| 2   | 1.00 km  | 0:07:18 | 7:18/km | 148 | 1 m       |
+| 3   | 1.00 km  | 0:07:16 | 7:16/km | 148 | 1 m       |
+| 4   | 1.00 km  | 0:07:13 | 7:13/km | 148 | 0 m       |
+| 5   | 1.00 km  | 0:07:01 | 7:02/km | 152 | 1 m       |
+| 6   | 1.00 km  | 0:07:22 | 7:22/km | 151 | 0 m       |
+| 7   | 0.40 km  | 0:03:00 | 7:30/km | 149 | 1 m       |
+| 8   | 0.01 km  | 0:00:02 | 8:01/km | 147 | 0 m       |
+
+---
 ### 2026-10-16 07:49:55 - Tempo 2x1500 m
 
 **Type**: Run
@@ -23,8 +56,8 @@
 **Duration**: 0:34:52
 **Pace**: 6:42/km
 **NGP medio**: 6:38/km
-**IF**: 0.91
-**TSS**: 49
+**IF**: 0.94
+**TSS**: 52
 **Run time**: 0:34:51
 **Walk time**: 0:00:02
 **Elevation**: 2 m
@@ -53,10 +86,10 @@
 **Duration**: 0:48:40
 **Pace**: 7:36/km
 **NGP medio**: 6:50/km
-**IF**: 0.89
-**TSS**: 64
-**Run time**: 0:33:05
-**Walk time**: 0:15:46
+**IF**: 0.91
+**TSS**: 68
+**Run time**: 0:34:26
+**Walk time**: 0:14:25
 **Elevation**: 4 m
 **Calories**: 505 kcal
 **Heart Rate**: 149 bpm (max: 170)

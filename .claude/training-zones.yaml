@@ -3,16 +3,17 @@ method: karvonen
 
 heart_rate:
   max: 185
-  resting_average: 56.86
+  resting_average: 57.14
   # Lactate-threshold HR (Friel): last-20-min average of the 2026 races (~165) and 10K races of 10 years ago, age-corrected.
   # Used by calculate_threshold.py; re-check at each race.
   threshold: 165
 
 pace:
   # Threshold pace, used as the IF (Intensity Factor) denominator for NGP-based
-  # IF/TSS in garmin_sync.py. Currently Garmin's threshold estimate (training-plan.md);
+  # IF/TSS in garmin_sync.py. Median of the last three Tempo estimates in
+  # health-log/threshold.md (6:11, 6:21, 6:15), replacing Garmin's 6:04 on 2026-10-18;
   # update when a real threshold test/race gives a better number.
-  threshold_sec_per_km: 364  # 6:04/km
+  threshold_sec_per_km: 375  # 6:15/km
 
 zones:
   - name: Zone 1

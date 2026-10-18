@@ -1,4 +1,4 @@
-# Daily Health Log: 2026-08-24 to 2026-10-16
+# Daily Health Log: 2026-08-24 to 2026-10-18
 
 Baseline: rolling 7-day average; acceptable range is average +/- 1 rolling standard deviation.
 Ranges are descriptive recovery signals, not medical reference ranges or diagnoses.
@@ -61,6 +61,8 @@ Ranges are descriptive recovery signals, not medical reference ranges or diagnos
 | 2026-10-14 | 60 bpm     | 55-58 bpm           | 51 ms       | 51-54 ms            |
 | 2026-10-15 | 58 bpm     | 55-59 bpm           | 49 ms       | 51-54 ms            |
 | 2026-10-16 | 55 bpm     | 55-59 bpm           | 55 ms       | 51-55 ms            |
+| 2026-10-17 | 57 bpm     | 56-59 bpm           | 49 ms       | 50-54 ms            |
+| 2026-10-18 | 57 bpm     | 56-59 bpm           | 49 ms       | 49-53 ms            |
 
 ## Weight
 
@@ -146,6 +148,8 @@ Garmin body-composition data; only days with a recorded weigh-in are listed. 7d 
 | 2026-10-14 | 5h 44m      | 1h 12m     | 0h 50m    | 71    |
 | 2026-10-15 | 5h 21m      | 0h 59m     | 0h 23m    | 65    |
 | 2026-10-16 | 6h 19m      | 1h 15m     | 0h 47m    | 56    |
+| 2026-10-17 | 7h 32m      | 1h 40m     | 1h 15m    | 67    |
+| 2026-10-18 | 5h 44m      | 0h 56m     | 1h 00m    | 70    |
 
 ## Interpretation Notes
 

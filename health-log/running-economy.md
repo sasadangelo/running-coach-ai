@@ -13,3 +13,4 @@ Economia di corsa a passo fisso: solo i tratti a 7:00-7:20/km (passo medio su 30
 | 2026-09-27 | Corsa Lenta (scarico)  | 9                | 7:11/km | 152 bpm | 0.916          | 1092       | 163 spm | 289 ms            | 9.72%              | 0.912 | 83.5 |
 | 2026-10-04 | Corsa Lenta Lunga 5 Km | 19               | 7:10/km | 153 bpm | 0.911          | 1098       | 165 spm | 286 ms            | 9.67%              | 0.920 | 83.8 |
 | 2026-10-11 | Corsa (Lungo) 5.7 Km   | 18               | 7:08/km | 154 bpm | 0.912          | 1096       | 169 spm | 280 ms            | 9.58%              | 0.934 | 85.2 |
+| 2026-10-18 | Lungo 6.4 Km           | 19               | 7:11/km | 149 bpm | 0.932          | 1073       | 167 spm | 284 ms            | 9.66%              | 0.924 | 86.1 |

@@ -21,10 +21,19 @@
 
 | Obiettivo | Probabilità stimata | Note |
 |---|---|---|
+| **Mezza maratona sotto 2h** | ~55-60% (2028, seconda mezza) | Serve VDOT ~34 (10K in ~55-56') e lunghi da 16-18 km. La prima mezza (2:05-2:15 stimato) si corre senza puntare al tempo |
 | Battere il PB 10K del 2017 (~53') | ~40% (2028) | A 54-55 anni vale circa un 48-49' corso a 43 anni |
-| Prima maratona | ~70% (2028) | Solo se un giorno la scelgo davvero: richiede volumi e lunghi che pesano sul piede |
+| 5K sotto 25' | ~30-35% (2028) | Equivale a un 10K in ~52': un po' oltre il PB |
+| Prima maratona (tutta di corsa) | ~70% (2028) | Solo se un giorno la scelgo davvero: richiede volumi e lunghi che pesano sul piede |
 | 10K sotto 50' | ~15-20% (2028-29) | Il tetto realistico è 47-50' intorno ai 54-55 anni |
+| Maratona sotto 4h | ~20-25% (2029) | Richiede un 10K in ~51' e 50-60 km/settimana per mesi: oltre il volume ottimale per la salute (35-45 km) e pesante per la fascia. In conflitto con la priorità |
+| 10K sotto 45' | ~1-3% | Age grading ~70% a 54 anni: oltre il livello di quando avevo 43 anni |
 | 10K sotto 40' | ~0 | Corrisponde a un age grading del 75%, il livello di chi vince la categoria nelle gare regionali |
+| 5K sotto 20' | ~0 | Age grading ~76% a 54 anni, livello da podio di categoria |
+
+**Tetti realistici** (il meglio possibile intorno ai 54-55 anni, se tutto va bene): 5K ~24-25' · 10K ~47-50' · mezza maratona ~1:52-1:57 · maratona ~4:05-4:20.
+
+*Stime aggiunte il 18 ottobre 2026 (mezza sotto 2h, 5K sotto 25' e 20', 10K sotto 45', maratona sotto 4h, tetti): proiezioni da VDOT attuale (~30, soglia ~6:15/km), età e PB del 2017 (VDOT ~37), non calcoli precisi. Si rivedono dopo la Roma 5K e la 10K di dicembre, poi dopo ogni gara obiettivo: servono a capire cosa è possibile senza ossessione, con la salute sempre prima.*
 
 **Indicatore di prontezza per la 5K sotto 30':** Tempo continuo da 3000-3500 m a 6:00/km o meglio, chiuso con margine.
 

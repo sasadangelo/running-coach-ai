@@ -138,7 +138,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 
 **Esito:** completate tutte e 3 le sedute previste. Ripetute 15x200 con 14/15 in fascia (1:01-1:06). Tempo 2x1200 a 6:03/6:05, FC di picco 169-171. Lungo corso per 5.71 km (40:42, 7:09/km medio, FC 149, max 158) tutto di corsa, con FC ≤155 per il 98-99% del tempo e decoupling aerobico 4.3% (partenza un po' veloce ai km 2-3). Seguito da 8 allunghi e dal secondo blocco di forza; volume Garmin della settimana: 17.50 km.
 
-### Settimana 7 (12-18 ottobre) — Fase C
+### ✅ Settimana 7 (12-18 ottobre) — Fase C
 **Volume totale**: 16.80 km
 
 - **Ripetute**: 1km risc., 8 x 400m @ 5:10-5:30/km (rec. 2'), 1km def. — 5.20km, ~47min *(introduce il blocco da 400m, stesso volume di reps della settimana precedente)*

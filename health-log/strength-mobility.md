@@ -8,6 +8,7 @@ La metrica chiave è la **differenza destra/sinistra**: `asimmetria % = (lato mi
 
 ### Forza
 1. **Calf raise su una gamba** (polpaccio, Achille, fascia plantare). In piedi su un gradino con l'avampiede, tallone libero, un dito al muro solo per l'equilibrio. Su e giù per tutta l'escursione, ritmo regolare (1" su, 1" giù). Si conta finché la salita resta completa. Riferimento: 25 o più per lato.
+   **Variante sul pavimento** (senza gradino, e più prudente per la fascia plantare): scalzi su pavimento duro, si sale il più in alto possibile e si scende fino a toccare terra col tallone. Per controllare l'altezza si fissa un punto sul muro all'altezza degli occhi alla prima ripetizione: quando la testa non ci arriva più, ci si ferma. Riferimento: 20-25 per lato. Annotare sempre la variante usata ed eseguire il test ogni mese nello stesso modo. Massimo 40 ripetizioni.
 2. **Side plank** (gluteo medio, core laterale). Sull'avambraccio, corpo in linea, piedi sovrapposti. Tempo massimo finché il bacino non scende. Riferimento: 60" o più per lato.
 3. **Glute bridge su una gamba** (gluteo). Supino, un piede a terra con ginocchio piegato, l'altra gamba tesa in alto. Si sale fino ad allineare spalla, anca e ginocchio. Ripetizioni finché il bacino resta in linea, senza ruotare. Riferimento: 20 o più per lato.
 

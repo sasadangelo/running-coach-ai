@@ -13,12 +13,12 @@ Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, cors
 | Data       | Attivita                     | Minuti stabili | Passo medio (GAP) | FC media | VO2max stimato | VO2max Garmin |
 | ---------- | ---------------------------- | -------------- | ----------------- | -------- | -------------- | ------------- |
 | 2026-09-13 | Corsa 4.2 km                 | 21             | 7:34/km           | 158 bpm  | 37.0           | 42            |
-| 2026-09-20 | Lungo 4.5 Km                 | 21             | 7:17/km           | 152 bpm  | 40.4           | 42            |
+| 2026-09-20 | Lungo 4.5 Km                 | 21             | 7:17/km           | 152 bpm  | 40.3           | 42            |
 | 2026-09-25 | Corsa Lenta 3.5 Km (scarico) | 15             | 7:02/km           | 154 bpm  | 41.0           | 43            |
-| 2026-09-27 | Corsa Lenta (scarico)        | 15             | 7:03/km           | 153 bpm  | 41.4           | 42            |
+| 2026-09-27 | Corsa Lenta (scarico)        | 15             | 7:03/km           | 153 bpm  | 41.3           | 42            |
 | 2026-10-02 | Tempo 3x800 m                | 12             | 6:40/km           | 162 bpm  | 40.8           | 43            |
-| 2026-10-04 | Corsa Lenta Lunga 5 Km       | 26             | 7:10/km           | 153 bpm  | 40.7           | 43            |
+| 2026-10-04 | Corsa Lenta Lunga 5 Km       | 26             | 7:10/km           | 153 bpm  | 40.6           | 43            |
 | 2026-10-09 | Tempo 2x1200 m               | 14             | 6:42/km           | 165 bpm  | 39.1           | 43            |
-| 2026-10-11 | Corsa (Lungo) 5.7 Km         | 28             | 7:05/km           | 154 bpm  | 40.9           | 43            |
-| 2026-10-16 | Tempo 2x1500 m               | 19             | 6:35/km           | 163 bpm  | 40.7           | 43            |
-| 2026-10-18 | Lungo 6.4 Km                 | 36             | 7:16/km           | 150 bpm  | 41.7           | 43            |
+| 2026-10-11 | Corsa (Lungo) 5.7 Km         | 28             | 7:05/km           | 154 bpm  | 40.8           | 43            |
+| 2026-10-16 | Tempo 2x1500 m               | 19             | 6:35/km           | 163 bpm  | 40.6           | 43            |
+| 2026-10-18 | Lungo 6.4 Km                 | 36             | 7:16/km           | 150 bpm  | 41.6           | 43            |

@@ -27,6 +27,9 @@ Le osservazioni vengono prima annotate nel [registro degli esperimenti](esperime
 2. [Da dove viene l'energia (e perché conviene partire piano)](02-energia-partire-piano.md) — ATP e i tre sistemi energetici, debito di ossigeno, perché partire forte si paga (accumulo nei 5-10K, glicogeno in maratona), pacing
 3. [La struttura di una seduta](03-struttura-seduta.md) — riscaldamento (mobilità, corsa progressiva, drills, allunghi), defaticamento, stretching, cosa serve per ogni tipo di seduta
 4. [Ritmi, zone e sedute](04-ritmi-zone-sedute.md) — le soglie, le zone, la regola della durata di gara, seduta = zona × frazione × recupero, misurare la soglia
+5. [Le scuole di pensiero](05-scuole-di-pensiero.md) — fartlek svedese, interval training tedesco, Lydiard, van Aaken, scuola italiana (Arcelli, Canova), Daniels, polarizzato (Seiler), doppia soglia norvegese, e cosa hanno in comune
+
+**Fonti:** [la mia biblioteca](biblioteca.md), i libri letti e cosa mi è rimasto di ciascuno.
 
 ## Prossimi capitoli (idee)
 - Economia di corsa: cadenza, contatto al suolo, rapporto verticale

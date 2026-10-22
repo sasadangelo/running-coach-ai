@@ -94,6 +94,7 @@ Nella cartella [teoria/](teoria/README.md) raccolgo quello che imparo strada fac
 2. [Da dove viene l'energia (e perché conviene partire piano)](teoria/02-energia-partire-piano.md)
 3. [La struttura di una seduta](teoria/03-struttura-seduta.md)
 4. [Ritmi, zone e sedute](teoria/04-ritmi-zone-sedute.md)
+5. [Le scuole di pensiero](teoria/05-scuole-di-pensiero.md)
 
 ## Avvertenza
 

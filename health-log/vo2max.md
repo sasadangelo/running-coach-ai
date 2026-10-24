@@ -22,3 +22,4 @@ Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, cors
 | 2026-10-11 | Corsa (Lungo) 5.7 Km         | 28             | 7:05/km           | 154 bpm  | 40.8           | 43            |
 | 2026-10-16 | Tempo 2x1500 m               | 19             | 6:35/km           | 163 bpm  | 40.6           | 43            |
 | 2026-10-18 | Lungo 6.4 Km                 | 36             | 7:16/km           | 150 bpm  | 41.6           | 43            |
+| 2026-10-23 | Corsa Lenta 4km (Scarico)    | 19             | 7:04/km           | 152 bpm  | 41.3           | 43            |

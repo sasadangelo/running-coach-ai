@@ -113,5 +113,5 @@ Gli studi dicono che il defaticamento incide poco sulla prestazione del giorno d
 ## Da approfondire
 - [ ] Riscaldamento con il freddo e con il caldo
 - [ ] Il riscaldamento di gara in pratica: tempi, griglia di partenza, cosa fare se si aspetta a lungo
-- [ ] Routine di mobilità per runner over 50 (anche come seduta a sé)
+- [ ] Routine di mobilità per runner over 50 (anche come seduta a sé): esercizi nel capitolo [08](08-mobilita-propriocezione.md), drills nel [09](09-drills.md)
 - [ ] Recupero attivo il giorno dopo: corsa, bici, camminata

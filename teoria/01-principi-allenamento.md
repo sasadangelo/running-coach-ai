@@ -148,7 +148,7 @@ L'allenamento si organizza in **cicli** con obiettivi diversi, invece di fare se
 - **Mesociclo**: blocchi di 3-6 settimane con un focus (base, sviluppo, specifico, scarico, gara).
 - **Microciclo**: la settimana.
 
-È l'applicazione dei principi precedenti nel tempo: sovraccarico e recupero (cicli di carico e scarico), specificità (dal generale allo specifico avvicinandosi alla gara), variazione (fasi diverse).
+È l'applicazione dei principi precedenti nel tempo: sovraccarico e recupero (cicli di carico e scarico), specificità (dal generale allo specifico avvicinandosi alla gara), variazione (fasi diverse). Tutti i livelli, il taper e la transizione nel capitolo [07](07-periodizzazione.md).
 
 ---
 

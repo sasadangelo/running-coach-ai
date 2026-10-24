@@ -26,17 +26,23 @@ Le osservazioni vengono prima annotate nel [registro degli esperimenti](esperime
 1. [I principi dell'allenamento](01-principi-allenamento.md) — supercompensazione e recupero, specificità, sovraccarico, gradualità, individualizzazione, reversibilità, variazione, periodizzazione, continuità, rendimenti decrescenti
 2. [Da dove viene l'energia (e perché conviene partire piano)](02-energia-partire-piano.md) — ATP e i tre sistemi energetici, debito di ossigeno, perché partire forte si paga (accumulo nei 5-10K, glicogeno in maratona), pacing
 3. [La struttura di una seduta](03-struttura-seduta.md) — riscaldamento (mobilità, corsa progressiva, drills, allunghi), defaticamento, stretching, cosa serve per ogni tipo di seduta
-4. [Ritmi, zone e sedute](04-ritmi-zone-sedute.md) — le soglie, le zone, la regola della durata di gara, seduta = zona × frazione × recupero, misurare la soglia
+4. [Ritmi, zone e sedute](04-ritmi-zone-sedute.md) — soglia aerobica, soglia anaerobica e VO2max (definizioni e varianti), i ritmi per fasce con i nomi delle scuole (Daniels E/M/T/I/R, scuola italiana, Garmin, Seiler), la regola della durata di gara, seduta = zona × frazione × recupero, misurare la soglia
 5. [Le scuole di pensiero](05-scuole-di-pensiero.md) — fartlek svedese, interval training tedesco, Lydiard, van Aaken, scuola italiana (Arcelli, Canova), Daniels, polarizzato (Seiler), doppia soglia norvegese, e cosa hanno in comune
+6. [Il VDOT: un numero per gare e ritmi](06-vdot.md) — cos'è (VO2max "efficace", non VO2max), le due curve di Daniels e Gilbert, dai tempi di gara ai ritmi E/M/T/I/R, limiti e alternative (Riegel, McMillan), come e quando aggiornarlo, il mio VDOT dal 2017 a oggi
+7. [La periodizzazione: dalla seduta alla stagione](07-periodizzazione.md) — seduta, microciclo, mesociclo (3+1, 2+1, 1+1), macrociclo, anno e pluriennale; taper e transizione (come ci si riposa a fine ciclo); modelli lineare, a blocchi, ondulato, inverso; il piano autunnale 2026 come esempio
+8. [Mobilità e propriocezione](08-mobilita-propriocezione.md) — mobilità contro flessibilità, cosa fa davvero lo stretching, caviglia e anca, equilibrio su una gamba e piede, esercizi e progressioni
+9. [Le andature (drills)](09-drills.md) — skip A, B, C, carioca, andature saltate, allunghi; quando farli e cosa possono (e non possono) fare per la tecnica
+10. [La forza per il runner](10-forza.md) — prevenzione degli infortuni ed economia di corsa, polpaccio prima di tutto, esercizi su una gamba, programmazione nella settimana e nella stagione, il primo test di forza
+11. [Gli allunghi](11-allunghi.md) — cosa sono (e cosa non sono: sprint, ripetute), perché non stancano, varianti (in salita, lanciati, su erba), dosaggio, velocità giusta e sicurezza, i miei allunghi troppo veloci
+
+**Appendici:** [A. Tabelle VDOT](appendice-a-tabelle-vdot.md) — tempi equivalenti (1500 m-maratona) e ritmi di allenamento per VDOT 25-60
 
 **Fonti:** [la mia biblioteca](biblioteca.md), i libri letti e cosa mi è rimasto di ciascuno.
 
 ## Prossimi capitoli (idee)
 - Economia di corsa: cadenza, contatto al suolo, rapporto verticale
-- Periodizzazione in pratica: base, sviluppo, specifico, scarico
 - Distribuzione dell'intensità: polarizzato, piramidale, 80/20
 - Allenamento in salita
-- Forza per runner over 50
 - Caldo e prestazione
 - Le metriche: cosa misurano davvero e con quale errore (VO2max, VDOT, EF, decoupling, CTL/ATL)
 

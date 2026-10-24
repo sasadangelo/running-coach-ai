@@ -271,11 +271,11 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Caviglie: cerchi + flessione/estensione dinamica — 20 per lato
 
 **Dopo (forza poi stretching, ~20-25 min totali)**
-- [ ] Calf raise con dita sull'asciugamano arrotolato — 3 x 8-12 per gamba, lento (3 sec su, 2 fermo, 3 giù) *(priorità: protegge la fascia plantare)*
+- [ ] Calf raise con dita sull'asciugamano arrotolato — 3 x 8-12 per gamba, lento (3 sec su, 2 fermo, 3 giù), **+1 serie sul sinistro** *(priorità: protegge la fascia plantare)*
 - [ ] Glute bridge — 2 x 15
-- [ ] Squat a corpo libero — 2 x 12-15
+- [ ] Mezzo squat su una gamba davanti allo specchio — 2 x 6-8 per gamba, lento, **+1 serie sul sinistro**: bacino in bolla e ginocchio sopra il piede, ci si ferma quando uno dei due cede *(sostituisce lo squat a corpo libero dal 1° novembre)*
 - [ ] Step-up su gradino — 2 x 8-10 per gamba
-- [ ] Side plank — 2 x 20-30 sec per lato
+- [ ] Side plank — 2 x 30 sec per lato, **+1 serie sul sinistro**
 - [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
 - [ ] Polpaccio — gastrocnemio a ginocchio teso + soleo a ginocchio piegato (tallone dal gradino) — 20-30 sec per lato
 - [ ] Ischiocrurali (piede sul muretto) — 20-30 sec per lato
@@ -287,6 +287,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - Tutto a corpo libero, nessun attrezzo necessario.
 - **Progressione**: blocco di forza introdotto dalla Settimana 5 (4 ottobre), partendo da zero. Le prime due domeniche tienilo leggero (anche serie minime): l'indolenzimento non deve compromettere le Ripetute del martedì. Poi, se ti senti a tuo agio, aggiungi una serie o allunga il side plank di 10-15 sec.
 - **Stato forza (11 ottobre)**: eseguiti due blocchi con calf raise 2x12, glute bridge 2x15 (dimenticato l'11), squat 2x12, step-up 1x10 per gamba, side plank 2x20". Dal 18 ottobre: calf raise 3x12 per gamba (il volume previsto, priorità fascia plantare) e side plank 2x30", resto invariato. Passo successivo: step-up 2x10 e/o squat 3x12, se l'indolenzimento del lunedì resta di un giorno.
+- **Dopo il test del 24 ottobre** ([health-log/strength-mobility.md](health-log/strength-mobility.md)): lato sinistro più debole in tutti i test (polpaccio, side plank, equilibrio; nello squat su gamba sx il bacino scende e il ginocchio entra). Da qui la serie in più sul sinistro e il mezzo squat su una gamba. **Equilibrio su una gamba ogni giorno**, fuori dal blocco (es. lavando i denti): 30" per lato, occhi aperti poi chiusi. Prossimo test: 21 novembre.
 - **Settimane di scarico e gara (S4, S8, S10, S11, S14)**: salta la forza o fai solo metà esercizi — il corpo deve arrivare fresco, non stanco. Mobilità e stretching restano sempre, costano poco e aiutano il recupero.
 
 ---

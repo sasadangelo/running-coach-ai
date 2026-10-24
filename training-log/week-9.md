@@ -3,19 +3,46 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 1
-- **Total Distance**: 5.37 km
-- **Total Time**: 0:39:17
-- **Total Elevation**: 4 m
-- **Total Calories**: 418 kcal (1/1 activities with data)
-- **Total TSS**: 56 (1/1 activities with a valid NGP/IF)
+- **Total Activities**: 2
+- **Total Distance**: 9.37 km
+- **Total Time**: 1:07:46
+- **Total Elevation**: 8 m
+- **Total Calories**: 718 kcal (2/2 activities with data)
+- **Total TSS**: 93 (2/2 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 0:30:19
-- **Total Walk Time**: 0:09:26
+- **Total Run Time**: 0:58:37
+- **Total Walk Time**: 0:09:39
 
 ## Activities
 
+### 2026-10-23 07:57:49 - Corsa Lenta 4km (Scarico)
+
+**Type**: Run
+**Distance**: 4.01 km
+**Duration**: 0:28:29
+**Pace**: 7:07/km
+**NGP medio**: 7:06/km
+**IF**: 0.88
+**TSS**: 37
+**Run time**: 0:28:18
+**Walk time**: 0:00:13
+**Elevation**: 4 m
+**Calories**: 300 kcal
+**Heart Rate**: 149 bpm (max: 157)
+**Note**: Buon allenamento. Nessun problema se non la difficoltà di andare piano. Ad ogni modo, il muco anche a ritmi così lenti e fastidioso e mi porta a sputare frequentemente a causa della sua discesa in gola.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:17 | 7:17/km | 142 | 2 m       |
+| 2   | 1.00 km  | 0:07:06 | 7:06/km | 149 | 2 m       |
+| 3   | 1.00 km  | 0:06:57 | 6:57/km | 152 | 0 m       |
+| 4   | 1.00 km  | 0:07:07 | 7:07/km | 154 | 0 m       |
+| 5   | 0.01 km  | 0:00:02 | 6:37/km | 154 | 0 m       |
+
+---
 ### 2026-10-20 08:10:11 - 6x400 con 2' Rec.
 
 **Type**: Run
@@ -53,3 +80,18 @@
 | 15  | 0.01 km  | 0:00:06 | 11:17/km | 150 | 0 m       |
 
 ---
+
+## Heart-Rate Zones
+
+- **Metodo**: Karvonen
+- **FC max**: 185 bpm
+- **FC riposo media**: 56.14 bpm
+- **Riserva cardiaca**: 128.86 bpm
+
+| Zona | % HRR | FC |
+| --- | ---: | ---: |
+| Zone 1 | 50-60% | 121-133 bpm |
+| Zone 2 | 60-75% | 133-153 bpm |
+| Zone 3 | 75-85% | 153-166 bpm |
+| Zone 4 | 85-93% | 166-176 bpm |
+| Zone 5 | 93-100% | 176-185 bpm |

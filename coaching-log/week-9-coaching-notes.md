@@ -32,3 +32,20 @@
 - Test di forza e mobilità spostato a **giovedì** (un giorno in più di recupero).
 - Corsa facile 4km con FC ≤150, anche a 8:00/km; se al mattino voglia zero e FC a riposo >58, ridurla a 3km.
 - Lungo 4.2km come da piano.
+
+### Session 2: Corsa facile 4km (venerdì 23 ottobre)
+- **Status:** Completata, tutta di corsa (FC al polso).
+- **Pacing:** 7:17, 7:06, 6:57, 7:07 (media 7:07/km). Indicazione: 7:30-7:50 con FC sotto 150. **Troppo veloce di 20-30"/km**; il 3° km (6:57) è a ritmo medio.
+- **Heart Rate:** media 149, ma in salita per tutta la corsa: 142 → 149 → 152 → 154 (max 157). Dal 3° km sopra il tetto di 150.
+- **Mattina:** FC a riposo **60** (sopra l'intervallo 54-58, primo valore alto dello scarico), sonno 5h45. La regola concordata (FC a riposo >58 → 3km) non è stata applicata, anche se la voglia c'era.
+- **Notes (atleta):** "nessun problema se non la difficoltà di andare piano". Muco fastidioso anche a ritmo lento, scende in gola e lo costringe a sputare spesso (tema ORL).
+- **Lettura:** la difficoltà di andare piano è il limite più comune dei runner amatori, ed è il tema della primavera (zona grigia, esperimento E1). Lo scarico serve a recuperare: una corsa facile corsa a ritmo medio toglie una parte del beneficio. Niente di grave per una singola corsa, ma è la seconda seduta dello scarico che costa più del previsto.
+
+## Aggiornamento 23/10: test e postura
+- **Test di forza e mobilità:** non fatto giovedì per mancanza di tempo; spostato a **sabato 24** (giorno senza corsa). Creato il PDF stampabile `health-log/test-forza-mobilita.pdf` con protocollo e scheda dei risultati.
+- **Postura (osservazione della moglie, alla partenza a gambe fresche):** gomito sinistro più alto, tronco spostato di 3-5° a destra. Presente da subito, quindi non da fatica. Da escludere anche cause banali (oggetti in mano o in tasca da un lato). Escluse le cause banali: l'atleta usa un marsupio da corsa e non porta nulla in mano o in tasca. Restano: gluteo medio dx (test di sabato), rigidità iniziale (video di domenica, inizio contro fine), differenza di lunghezza delle gambe o postura abituale (solo con un fisioterapista). Coerente con l'ipotesi del gluteo medio dx (vedi 13-14/10). Da verificare con il test (side plank, squat su una gamba) e con il video del lungo di domenica.
+
+## Aggiornamento 24/10: risultati del test di forza e mobilità
+- **Risultati (dx/sx):** calf raise 16/13, side plank 36"/29", bridge su una gamba 32/27, equilibrio a occhi chiusi 37"/18", squat su una gamba ok/a sx bacino che scende e ginocchio che entra, ginocchio-muro 10.5/9.5 cm, Thomas ok/ok. Dettagli e tabella in `health-log/strength-mobility.md`.
+- **Lettura:** il lato debole è il **sinistro** in tutti i test (asimmetrie 16-19%, 40% nell'equilibrio). L'ipotesi del gluteo medio dx debole **non è confermata**. Il fastidio all'anca dx potrebbe venire dal lato forte che compensa, ma resta un'ipotesi. Polpacci e side plank sotto il riferimento su entrambi i lati; glutei e flessori dell'anca a posto.
+- **Decisione:** esercizi su entrambi i lati con una serie in più sul sinistro (calf raise, side plank, equilibrio). Aggiunto il mezzo squat su gamba sx allo specchio. Prossimo test sabato 21/11. Calf raise fatto sul pavimento: ripeterlo così. Video del lungo di domenica per l'inclinazione del tronco.

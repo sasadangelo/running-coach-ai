@@ -48,5 +48,5 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 ## Prossimi esperimenti già programmati
 - **Test continuo 2000 m (S9), con la fascia:** verifica di soglia (~6:15/km, FC ~165).
 - **Roma 5K (8/11):** VDOT reale contro la stima (~30) e contro la primavera (~28). Ipotesi: 30:30-31:30.
-- **Test di forza e mobilità (S8, poi ogni mese):** asimmetrie dx/sx e loro rapporto con fascia plantare e anca.
+- **Test di forza e mobilità (S8, poi ogni mese):** asimmetrie dx/sx e loro rapporto con fascia plantare e anca. Prima misurazione 24/10/2026: lato sinistro più debole in tutti i test (16-19%, equilibrio 40%), contro l'ipotesi iniziale del gluteo medio dx. Una sola misura: da confermare il 21/11.
 - **Lunghi 7-8.5 km (S9-S13):** il decoupling resta sotto il 5% allungando la distanza?

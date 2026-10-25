@@ -50,6 +50,8 @@
 
 ### Calendario indicativo
 
+Piani di allenamento, settimane e gare per ogni piano: [periodizzazione-pluriennale.md](periodizzazione-pluriennale.md).
+
 *Periodi ipotetici: le date reali vanno verificate sui calendari FIDAL Lazio o sui siti delle gare.*
 
 | Mese | Gara | Tipo |

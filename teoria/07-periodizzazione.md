@@ -128,7 +128,7 @@ Nella pratica i modelli si mescolano. Le regole comuni: **un focus per blocco**,
 
 **Limiti:** un solo macrociclo, con molte cose cambiate insieme (piano, ritmi, sonno, forza). Che gli scarichi abbiano aiutato è plausibile, ma con questi dati non è dimostrabile.
 
-**Il prossimo passo:** dopo la 10K del 6 dicembre, **2 settimane di transizione** (metà dicembre), poi un nuovo macrociclo verso la 5K sotto 30' (gennaio-febbraio 2027), con la forza in palestra da gennaio. Per l'età, valutare mesocicli 2+1 quando il volume supera quello di quest'autunno.
+**Il prossimo passo:** dopo la 10K del 6 dicembre, **2 settimane di transizione** (metà dicembre), poi un nuovo macrociclo verso la 5K sotto 30' (gennaio-febbraio 2027), con la forza in palestra da gennaio. Per l'età, valutare mesocicli 2+1 quando il volume supera quello di quest'autunno. Il piano completo 2026-2028 è in [periodizzazione-pluriennale.md](../periodizzazione-pluriennale.md).
 
 ## 6. Cosa vale per tutti
 

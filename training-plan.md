@@ -145,7 +145,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 - **Tempo**: 1km risc., 2 x 1500m @ 6:00-6:20/km (rec. 200m jog), 1km def. — 5.20km, ~36min
 - **Lungo**: 6.4km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.40km, ~47min *(sessione più lunga della settimana, picco prima dello scarico)*
 
-### Settimana 8 — Scarico (19-25 ottobre) — Fase D
+### ✅ Settimana 8 — Scarico (19-25 ottobre) — Fase D
 **Volume totale**: 12.60 km (-25% rispetto a S7)
 
 **Tempo sostituito con corsa facile** (deciso l'11 ottobre, come nello scarico di S4): dopo S4, con il Tempo sostituito da una corsa facile, l'atleta è ripartito più fresco e S5 ha portato il miglior Tempo fino a quel momento. Lo scarico toglie quindi il lavoro a soglia e mantiene solo lo stimolo neuromuscolare delle ripetute. L'ultimo Tempo prima del test continuo da 2000m di S9 resta il 2x1500 di S7.

@@ -51,7 +51,7 @@ Dopo una 5K bastano 4-5 giorni: una settimana di sola corsa facile, poi si ripar
 
 ### P3 · Primavera: 10K sotto 1h
 - **12 settimane:** 3+1, 3+1, 2 specifiche + 2 di avvicinamento.
-- **Gare:** marzo 🏃 (5K a ritmo Tempo o 10K facile), aprile 5K 🏃 a ritmo Tempo, maggio 10K 🎯 **sotto 1h** (6:00/km, VDOT ~32.3).
+- **Gare:** marzo 🏃 (5K a ritmo Tempo o 10K facile), aprile 5K 🏃 a ritmo Tempo, maggio 10K 🎯 **sotto 1h** (6:00/km, VDOT ~32.3). **Scegliere una 10K di inizio maggio (o fine aprile) con partenza al mattino:** da metà maggio il caldo comincia a pesare (Race for the Cure 2026: oltre 24°C).
 - **Volume:** 25 → ~30 km. **Al raggiungimento dei ~30 km si passa a 4 giorni**: il giorno in più è una corsa facile, non una nuova seduta di qualità.
 - **Lungo:** fino a 11-12 km.
 
@@ -62,6 +62,7 @@ Due settimane leggere. A fine giugno una 5K serale 🏃 per divertimento, se il 
 - **7 settimane**, nessuna gara (caldo).
 - **Contenuto:** quasi tutto lento, al mattino presto; allunghi; forza; un solo lavoro di qualità leggero a settimana (fartlek o salite brevi).
 - **Volume:** 30 → ~32 km su 4 giorni; lungo 12-13 km.
+- **Il passo non conta:** d'estate si giudicano FC e sensazioni, e si confronta con l'estate prima, mai con la primavera. Il calo di passo col caldo è fisiologia, non forma persa ([pattern 6](storico/pattern-ricorrenti.md)).
 - **Scopo:** costruire la base per la mezza senza il carico delle gare. Se il caldo pesa, il volume si sposta su bici o ellittica.
 
 ### P5 · Autunno: prima mezza maratona
@@ -95,3 +96,18 @@ Due macrocicli più lunghi, perché la base c'è:
 5. **Il volume cresce solo con corse facili:** la qualità resta 2 sedute a settimana.
 6. **La fascia plantare decide su tutto:** se il fastidio al mattino torna, si riducono i volumi prima di qualsiasi altra cosa.
 7. **Si rivede tutto dopo ogni gara obiettivo:** tempi, VDOT e probabilità in [obiettivi-lungo-termine.md](obiettivi-lungo-termine.md).
+8. **La regola di novembre.** Dal 2019 al 2024 ogni stagione si è fermata tra fine ottobre e novembre: picchi di lavoro e, prima dello smart working, corse serali al buio dopo il cambio d'ora. Contromisure:
+   - **correre al mattino** nei giorni fissi (oggi martedì e venerdì dopo l'accompagnamento a scuola, domenica mattina); la sera solo come eccezione. Il 4° giorno di P3 andrà trovato anche lui al mattino;
+   - **settimana minima nei periodi di lavoro pesante:** invece di fermarsi, 2 dei 3 giorni fissi (es. martedì e domenica) con corse facili da 20-30', senza qualità. Il piano si mette in pausa, la corsa no;
+   - **mai più di 7 giorni senza correre** senza una ragione di salute: dopo una settimana, una corsa facile da 20' anche se il resto salta;
+   - **segnali da guardare:** FC a riposo e HRV fuori norma per più giorni, sonno corto, la voglia che cala. Si alleggerisce prima di arrivare allo stop.
+9. **Il piano si adatta ai parametri del giorno; si riprogramma solo se i problemi durano.** Ogni mattina di seduta si guardano 5 segnali: FC a riposo (sopra l'intervallo dei 7 giorni; non conta nelle notti senza orologio), HRV (sotto l'intervallo), sonno (sotto le 6 ore), fascia plantare ai primi passi, sensazioni (gambe pesanti, voglia zero, sintomi di malanno).
+
+   | Segnali fuori norma | Cosa si fa oggi |
+   |---|---|
+   | **0** | seduta come da piano |
+   | **1** | seduta da piano ma più leggera: 2-3 ripetute in meno o Tempo nella metà lenta della fascia; lento e lungo invariati, rigorosamente facili |
+   | **2 o più**, oppure fascia al mattino, oppure sintomi di malanno | corsa facile da 20-30' al posto della seduta, o riposo |
+
+   **Quando si cambia il programma:** se i segnali restano fuori norma per **3 giorni o più**, o se **2 sedute di fila** sono state adattate, si anticipa la settimana di scarico e il resto del piano slitta di una settimana. Un segnale da solo è rumore; più segnali per più giorni sono un messaggio.
+

@@ -294,6 +294,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 
 ## Note Importanti
 
+- **Prontezza del giorno**: prima di ogni seduta si controllano FC a riposo, HRV, sonno, fascia plantare e sensazioni, e la seduta si adatta (0 segnali: da piano; 1: più leggera; 2 o più: corsa facile o riposo). Se i segnali durano 3 giorni o 2 sedute di fila vengono adattate, si anticipa lo scarico. Regola completa: [periodizzazione-pluriennale.md](periodizzazione-pluriennale.md), regola 9.
 - **Il lungo è sempre una seduta unica in corsa continua**: non aggiungere riscaldamento o defaticamento separati. Il nuovo riferimento (7:15-7:40/km) non è un obbligo: parti piano e chiudi naturalmente; se non riesci a mantenere la corsa, rallenta o cammina.
 - **7:15-7:40/km è un riferimento realistico per la fase attuale**: se durante il lungo fai fatica, non forzare il ritmo. L'obiettivo principale è aumentare gradualmente i km corsi senza fermate programmate.
 - **Ripetute e tempo restano ai ritmi reali**: 200m a 5:10-5:30, 400m a 5:20-5:40, 800m a 5:35-5:55, Tempo a ripetute a 6:00-6:20 (puntando a 6:08-6:15), Tempo continuo a 6:10-6:30 (revisione del 15 ottobre). Se un giorno ti senti più lento (caldo, stanchezza), va bene rallentare 10-15 sec/km — l'importante è lo sforzo percepito, non il numero esatto.

@@ -1,6 +1,6 @@
 # Analisi 2018: l'anno delle interruzioni
 
-**Analisi del 25 ottobre 2026.** Dati Garmin in `storico/2018/` (settimane lunedì-domenica), più le ultime corse di dicembre 2017 in `storico/2017/`. Contesto raccontato dall'atleta. Anno precedente: [analisi-2016-2017.md](analisi-2016-2017.md).
+**Analisi del 25 ottobre 2026.** Dati Garmin in `storico/2018/` (settimane lunedì-domenica), più le ultime corse di dicembre 2017 in `storico/2017/`. Contesto raccontato dall'atleta. Anno precedente: [2017](analisi-2017.md) · successivo: [2019](analisi-2019.md).
 
 ## I numeri
 

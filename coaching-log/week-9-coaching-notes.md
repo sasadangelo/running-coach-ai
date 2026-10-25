@@ -49,3 +49,30 @@
 - **Risultati (dx/sx):** calf raise 16/13, side plank 36"/29", bridge su una gamba 32/27, equilibrio a occhi chiusi 37"/18", squat su una gamba ok/a sx bacino che scende e ginocchio che entra, ginocchio-muro 10.5/9.5 cm, Thomas ok/ok. Dettagli e tabella in `health-log/strength-mobility.md`.
 - **Lettura:** il lato debole è il **sinistro** in tutti i test (asimmetrie 16-19%, 40% nell'equilibrio). L'ipotesi del gluteo medio dx debole **non è confermata**. Il fastidio all'anca dx potrebbe venire dal lato forte che compensa, ma resta un'ipotesi. Polpacci e side plank sotto il riferimento su entrambi i lati; glutei e flessori dell'anca a posto.
 - **Decisione:** esercizi su entrambi i lati con una serie in più sul sinistro (calf raise, side plank, equilibrio). Aggiunto il mezzo squat su gamba sx allo specchio. Prossimo test sabato 21/11. Calf raise fatto sul pavimento: ripeterlo così. Video del lungo di domenica per l'inclinazione del tronco.
+
+### Session 3: Lungo 4.2km, corso a ritmo recupero (domenica 25 ottobre)
+- **Status:** Completata, tutta di corsa (6" di cammino).
+- **Pacing:** 7:54, 8:01, 8:05, 8:13 (media 8:04/km). Indicazione: 7:15-7:40. Più lento della fascia del lungo, **a ritmo recupero**: per l'ultima seduta dello scarico va benissimo.
+- **Heart Rate:** media 139, max 150 (130 → 140 → 145 → 141). Lento vero, sotto la soglia aerobica. Decoupling 1.3%.
+- **Mattina:** FC a riposo 60 (come il 23; il 60 del 24 è senza dati notturni e non conta), HRV **45**, sotto l'intervallo 48-53. Sonno 8h12. L'atleta: "oggi sto bene".
+- **Notes (atleta):** "Prima volta che riesco a correre in modo continuo così lento e con FC così bassa." Villa vuota per l'allestimento di una gara: "potevo corricchiare senza essere giudicato". Venerdì invece il ritmo veloce "è venuto così", non per la sensazione di essere guardato. **Il trucco: passi corti, rilassato, senza pensare a correre.**
+- **Corpo:** anca dx senza problemi da tempo; fascia plantare sx "appena appena", nulla di che; fastidio lievissimo a polpacci e quadricipiti nella corsa lenta (più passi e più tempo in piedi; polpacci deboli al test del 24).
+- **Dopo:** mobilità prima, 4 allunghi e stretching dopo. Forza saltata (ammesso nello scarico). Video della postura non fatto (la moglie lavorava, difficile portarla al parco): al lungo del 1° novembre, da solo, con il telefono appoggiato su una panchina.
+
+## Week Summary (finale)
+- **Actual:** ripetute 6x400 (5.37km), corsa facile 4.0km, lungo 4.2km a ritmo recupero, test di forza e mobilità. **13.58 km** (pianificati 12.60), TSS 127.
+
+## Progress Assessment
+**In linea.** Lo scarico ha fatto il suo lavoro solo in parte: le ripetute di martedì sono state la seduta più dura del piano e la corsa facile è stata troppo veloce. Ma la settimana chiude con la scoperta più utile da mesi: l'atleta **sa correre piano** quando usa passi corti e si rilassa. Il vero limitante resta il **sonno**: notti corte in settimana (media 6h46, 2 notti su 7 sopra le 7h), FC a riposo a 60 e HRV basso a fine settimana, pur sentendosi bene.
+
+## Recommendations
+- **Martedì 27 (10x400):** FC a riposo <58 → seduta piena. FC ≥58 con HRV ancora sotto 48, o stanchezza → 6-8 ripetute.
+- **Venerdì 30 (test 2000m continui, con la fascia):** vale solo con una buona notte giovedì; se giovedì si va a letto dopo mezzanotte, spostarlo a sabato.
+- **Lento e lungo:** stesso trucco di oggi (passi corti, rilassato) per non scendere sotto la fascia: lungo 7:15-7:40 come da piano (riferimento 7:15-7:25), governato dalla FC (~148-150, tetto 155), primo km ~7:45-8:00. Il confronto con l'E di Daniels (7:28-8:23 per VDOT 30-31) si rivede dopo la Roma 5K.
+- **Domenica 1/11 (lungo 7km):** video della postura da solo (telefono su una panchina, passaggi di andata e ritorno a inizio e fine corsa); nuovo blocco di forza con serie in più a sx e mezzo squat su una gamba.
+- **Ogni giorno:** equilibrio su una gamba (3', sx-dx-sx).
+- **Sonno:** letto alle 22:30, priorità a lunedì e giovedì sera.
+
+## Focus for Next Week
+1. **Dormire bene lunedì e giovedì**, per arrivare freschi alle due sedute chiave.
+2. **Passi corti e rilassato** in ogni lento.

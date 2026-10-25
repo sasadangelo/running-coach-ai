@@ -25,10 +25,10 @@
 <circle cx="240.0" cy="255.0" r="4" fill="#5aaa5a" stroke="#0f0f0f" stroke-width="2"><title>Settembre 2026 · VO2max: 40.6 (indice 100)</title></circle>
 <circle cx="196.7" cy="230.0" r="4" fill="#5aaa5a" stroke="#0f0f0f" stroke-width="2"><title>Settembre 2026 · EF: 0.915 (indice 100)</title></circle>
 <circle cx="196.7" cy="180.0" r="4" fill="#5aaa5a" stroke="#0f0f0f" stroke-width="2"><title>Settembre 2026 · M: 0.918 (indice 100)</title></circle>
-<polygon points="240.0,55.0 287.6,232.5 240.0,255.9 197.5,229.5 195.3,179.2" fill="#33ff33" fill-opacity="0.12" stroke="#33ff33" stroke-width="2"/>
+<polygon points="240.0,55.0 287.6,232.5 240.0,255.6 197.5,229.5 195.3,179.2" fill="#33ff33" fill-opacity="0.12" stroke="#33ff33" stroke-width="2"/>
 <circle cx="240.0" cy="55.0" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 (in corso) · ES: 10.0 (indice 143)</title></circle>
 <circle cx="287.6" cy="232.5" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 (in corso) · Soglia: 6:15/km (indice 102)</title></circle>
-<circle cx="240.0" cy="255.9" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 (in corso) · VO2max: 40.8 (indice 100)</title></circle>
+<circle cx="240.0" cy="255.6" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 (in corso) · VO2max: 40.7 (indice 100)</title></circle>
 <circle cx="197.5" cy="229.5" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 (in corso) · EF: 0.912 (indice 100)</title></circle>
 <circle cx="195.3" cy="179.2" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 (in corso) · M: 0.924 (indice 101)</title></circle>
 <rect x="20" y="424" width="14" height="10" fill="#5aaa5a" rx="2"/>

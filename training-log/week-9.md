@@ -3,19 +3,48 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 9.37 km
-- **Total Time**: 1:07:46
-- **Total Elevation**: 8 m
-- **Total Calories**: 718 kcal (2/2 activities with data)
-- **Total TSS**: 93 (2/2 activities with a valid NGP/IF)
+- **Total Activities**: 3
+- **Total Distance**: 13.58 km
+- **Total Time**: 1:41:39
+- **Total Elevation**: 9 m
+- **Total Calories**: 1017 kcal (3/3 activities with data)
+- **Total TSS**: 127 (3/3 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 0:58:37
-- **Total Walk Time**: 0:09:39
+- **Total Run Time**: 1:32:27
+- **Total Walk Time**: 0:09:45
 
 ## Activities
 
+### 2026-10-25 07:47:07 - Corsa Recupero (Scarico)
+
+**Type**: Run
+**Distance**: 4.21 km
+**Duration**: 0:33:52
+**Pace**: 8:04/km
+**NGP medio**: 8:03/km
+**IF**: 0.78
+**TSS**: 34
+**Decoupling**: 1.3%
+**ES**: 6.3 (Primi km)
+**Run time**: 0:33:50
+**Walk time**: 0:00:06
+**Elevation**: 1 m
+**Calories**: 299 kcal
+**Heart Rate**: 139 bpm (max: 150)
+**Note**: Prima volta che riesco a correre in modo continuo cosi lento e con fc così bassa.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:52 | 7:54/km | 130 | 0 m       |
+| 2   | 1.00 km  | 0:08:01 | 8:01/km | 140 | 0 m       |
+| 3   | 1.00 km  | 0:08:05 | 8:05/km | 145 | 0 m       |
+| 4   | 1.00 km  | 0:08:13 | 8:13/km | 141 | 1 m       |
+| 5   | 0.21 km  | 0:01:41 | 8:09/km | 141 | 0 m       |
+
+---
 ### 2026-10-23 07:57:49 - Corsa Lenta 4km (Scarico)
 
 **Type**: Run
@@ -85,13 +114,13 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 185 bpm
-- **FC riposo media**: 56.14 bpm
-- **Riserva cardiaca**: 128.86 bpm
+- **FC riposo media**: 56.5 bpm
+- **Riserva cardiaca**: 128.5 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |
-| Zone 1 | 50-60% | 121-133 bpm |
-| Zone 2 | 60-75% | 133-153 bpm |
+| Zone 1 | 50-60% | 121-134 bpm |
+| Zone 2 | 60-75% | 134-153 bpm |
 | Zone 3 | 75-85% | 153-166 bpm |
 | Zone 4 | 85-93% | 166-176 bpm |
 | Zone 5 | 93-100% | 176-185 bpm |

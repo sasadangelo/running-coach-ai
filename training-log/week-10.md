@@ -3,19 +3,46 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 1
-- **Total Distance**: 7.57 km
-- **Total Time**: 0:56:26
-- **Total Elevation**: 11 m
-- **Total Calories**: 607 kcal (1/1 activities with data)
-- **Total TSS**: 81 (1/1 activities with a valid NGP/IF)
+- **Total Activities**: 2
+- **Total Distance**: 11.58 km
+- **Total Time**: 1:23:28
+- **Total Elevation**: 15 m
+- **Total Calories**: 916 kcal (2/2 activities with data)
+- **Total TSS**: 121 (2/2 activities with a valid NGP/IF)
 
 ### Running Totals
-- **Total Run Time**: 0:37:27
-- **Total Walk Time**: 0:19:25
+- **Total Run Time**: 1:04:06
+- **Total Walk Time**: 0:19:49
 
 ## Activities
 
+### 2026-10-29 07:33:52 - Tempo 2Km
+
+**Type**: Run
+**Distance**: 4.01 km
+**Duration**: 0:27:02
+**Pace**: 6:45/km
+**NGP medio**: 6:38/km
+**IF**: 0.94
+**TSS**: 40
+**Run time**: 0:26:39
+**Walk time**: 0:00:24
+**Elevation**: 4 m
+**Calories**: 309 kcal
+**Heart Rate**: 158 bpm (max: 169)
+**Note**: Buon test spostato ad oggi perché ho estrazione molare domani. Stamani HRV a 49 e FC rest 63 ma stavo bene e ho deciso di fare il test. All'inizio è stata dura stare nel range di ritmo perché mi veniva facile correre più forte e per 700 metri ho dovuto guardare orologio per rallentare. Sono contento il coach abbia stabilito solo un tempo 2K, 2.5K l'avrei fatto ma 3K sarebbe stata dura. A fine corsa si è fatta sentire sensazione alla fascite plantare sparita poco dopo. Ad ogni modo è un punto sensibile che sarebbe il caso di far vedere prima che arrivino carichi più importanti. Interessante ora Garmin calcola la frequenza di respirazione media 38 brpm max 45 non so se può essere utile e associarlo al talk test.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:18 | 7:18/km | 144 | 2 m       |
+| 2   | 1.00 km  | 0:06:10 | 6:10/km | 164 | 2 m       |
+| 3   | 1.00 km  | 0:06:14 | 6:14/km | 167 | 0 m       |
+| 4   | 1.00 km  | 0:07:18 | 7:19/km | 158 | 0 m       |
+| 5   | 0.01 km  | 0:00:02 | 6:29/km | 157 | 0 m       |
+
+---
 ### 2026-10-27 07:56:16 - 10x400 con 2' Rec.
 
 **Type**: Run
@@ -61,3 +88,18 @@
 | 23  | 0.00 km  | 0:00:01 | 4:36/km  | 156 | 0 m       |
 
 ---
+
+## Heart-Rate Zones
+
+- **Metodo**: Karvonen
+- **FC max**: 185 bpm
+- **FC riposo media**: 60.0 bpm
+- **Riserva cardiaca**: 125.0 bpm
+
+| Zona | % HRR | FC |
+| --- | ---: | ---: |
+| Zone 1 | 50-60% | 123-135 bpm |
+| Zone 2 | 60-75% | 135-154 bpm |
+| Zone 3 | 75-85% | 154-166 bpm |
+| Zone 4 | 85-93% | 166-176 bpm |
+| Zone 5 | 93-100% | 176-185 bpm |

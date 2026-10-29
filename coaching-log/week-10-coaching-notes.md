@@ -29,5 +29,23 @@ Nelle prime settimane l'allenamento viene assorbito bene. La stanchezza al risve
 
 ### Allenamento
 - Il piano verso la Roma 5K dell'8 novembre non cambia.
-- **Martedì 27 (test):** se al mattino l'HRV è ancora intorno a 44 e le sensazioni sono pesanti, si fa con più margine.
+- **Martedì 27 (10x400):** se al mattino l'HRV è ancora intorno a 44 e le sensazioni sono pesanti, si fa con più margine. *(Correzione del 27: il test della settimana è il Tempo continuo da 2000 m, non la seduta di martedì.)*
+
+## Aggiornamento 27-28 ottobre
+
+### 10x400 (mar 27)
+- Tutte le 10 ripetute fra 2:07 e 2:17, quasi tutte nella fascia 2:08-2:16; solo la nona cala (2:17), chiusura a 2:14. Sono 4 ripetute in più del 6x400 di S8, allo stesso ritmo.
+- **Senza fascia** (dimenticata): FC dal polso, piatta a ~155 sia nelle ripetute sia nei recuperi. Non dice nulla sul recupero; anche il massimo di 170 non è affidabile.
+
+### Estrazione molare (ven 30, ore 11) + Augmentin per 3 giorni
+- Niente sforzo intenso per 48-72 ore (rischio di alveolite secca). L'Augmentin (amoxicillina + acido clavulanico) non dà problemi ai tendini: la corsa facile va bene se l'atleta si sente bene. Prenderlo ai pasti; se dà disturbi intestinali, bere di più.
+- Nuovo calendario: **test Tempo 2000 m giovedì 29** (con fascia), riposo da venerdì a domenica, **lungo facile 5-6 km lunedì 2** con l'ok del dentista, **ripetute leggere mercoledì 4**, poi tutto come da piano fino alla gara.
+- 28/10, indicazioni del medico: giovedì 29 la corsa va bene (test confermato); venerdì 30 e sabato 31 niente attività; domenica 1 il medico dirà se e quando si può riprendere. Il lungo di lunedì 2 si fa solo con il suo ok.
+- I dati di FC a riposo e HRV dal 30/10 al 1/11 sono falsati: esclusi dalla lettura del recupero e dalla media per le zone.
+
+### Test Tempo continuo 2000 m (gio 29)
+- 2000 m a 6:10 e 6:14 (media circa 6:12), FC 164 e 167, picco 169 (con fascia H9: dato affidabile). Soglia stimata dallo script: **6:16/km**, coerente con i 6:15 in uso. La FC di soglia di ~165 è confermata, quindi ritmi e zone restano come sono.
+- Prima del test FC a riposo 62-63 (sopra la fascia) e HRV 49: c'era un segnale, l'atleta si sentiva bene e ha corso nella metà veloce della fascia senza calare. Primo Tempo continuo superato; in S11 si passa a 2500 m.
+- Fascia plantare sx: sensazione a fine corsa, sparita poco dopo. L'atleta vuole farla vedere prima dei carichi della 10K: d'accordo. Da controllare al risveglio (condizione della revisione dell'11/10).
+- Frequenza respiratoria Garmin: media 38, max 45 atti/min. Si registra come osservazione, non come metrica di decisione.
 - Da tenere d'occhio ogni mattina: HRV settimanale, FC a riposo e sensazioni al risveglio. Il rischio dello stop d'autunno (pattern 1) è attivo.

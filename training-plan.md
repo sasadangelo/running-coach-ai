@@ -160,14 +160,18 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 
 **Revisione dell'11 ottobre (S9-S13):** la 5K è una tappa verso la 10K. Nel piano originale il lungo restava sotto il picco di S7 (6.4km) per sei settimane, con tre settimane su quattro a carico ridotto. Ora restano lo scarico di S8 e l'avvicinamento alla gara di S10, il recupero post-gara si riduce a mezza settimana e il lungo riprende a crescere fino a 8.5km in S13 (mai più di +1km rispetto al lungo precedente). Dal test di S9 il Tempo diventa un blocco continuo che cresce di 500m a settimana: 2000, 2500, 3000, 3500m. **Condizione**: se la fascia plantare sx torna a farsi sentire al mattino, si torna ai volumi originali.
 
-- **Ripetute**: 1km risc., 10 x 400m @ 5:20-5:40/km (rec. 2'), 1km def. — 6.00km, ~53min
-- **Tempo**: 1km risc., 2000m continui @ 6:10-6:30/km, 1km def. — 4.00km, ~28min *(test tempo continuo)*
-- **Lungo**: 7.0km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 7.00km, ~51min *(nuovo picco, +0.6km su S7; a una settimana dalla gara, ritmo rigorosamente facile)*
+**Modifica del 28 ottobre (estrazione molare venerdì 30 ore 11, poi Augmentin per 3 giorni):** niente sforzo intenso per 48-72 ore dopo l'estrazione, per non far staccare il coagulo. Il Tempo passa a giovedì, il lungo esce dalla settimana e va a lunedì 2, ridotto. Non serve per la 5K (già corsi 6.4km di fila): il 7km si recupera in S11-S12. Con l'Augmentin la corsa facile va bene, se l'atleta si sente bene. I dati di recupero dal 30/10 al 1/11 sono alterati da intervento, antidolorifici e antibiotico e non vanno letti come fatica da allenamento.
+
+- **Ripetute** (mar 27): 1km risc., 10 x 400m @ 5:20-5:40/km (rec. 2'), 1km def. — 6.00km, ~53min
+- **Tempo** (gio 29, con fascia H9): 1km risc., 2000m continui @ 6:10-6:30/km, 1km def. — 4.00km, ~28min *(test tempo continuo; se al mattino ci sono 2 o più segnali di prontezza negativi: corsa facile, e il test si sposta in S11 a 2000m)*
+- **Ven 30**: estrazione, nessuna corsa. **Sab 31 e dom 1**: riposo (al massimo una camminata), niente forza.
+- ~~**Lungo**: 7.0km~~ → spostato a lunedì 2 novembre (vedi S10)
 
 ### Settimana 10 — Gara 1 (2-8 novembre) — Fase F
-**Volume totale (esclusa gara)**: ~3.40 km
+**Volume totale (esclusa gara)**: ~8.90-9.40 km (con il lungo spostato da S9)
 
-- **Martedì — Ripetute leggere**: 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1'), 0.5km def. — 1.80km
+- **Lunedì 2 — Lungo facile**: 5-6km continui @ 7:15-7:40/km, FC ~148-150 — solo se la bocca è a posto e il dentista ha dato l'ok all'attività (72h dall'estrazione); altrimenti si salta. Portare da bere.
+- **Mercoledì 4 — Ripetute leggere** (spostate da martedì, per non correre due giorni di fila): 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1'), 0.5km def. — 1.80km
 - **Giovedì — Shakeout**: 0.3km risc., 1km @ ~7:45/km facile, rec. — 1.60km, corsa breve e leggera
 - **Venerdì/Sabato**: riposo completo
 - **Domenica 8 novembre — GARA: Roma 5K**. Obiettivo: correrla tutta di corsa continua. Parti controllato (vicino a 7:00-7:30/km i primi km, non ai ritmi da tempo/ripetute), e se ti senti bene stringi negli ultimi 1-2km. L'obiettivo è arrivare in fondo correndo, non il tempo.

@@ -15,11 +15,20 @@ window the 30s-smoothed speed must stay within STEADY_TOLERANCE of its mean and
 HR must vary by at most MAX_HR_SWING bpm (a cool-down after hard reps has a
 steady pace but a falling HR). Runs with more than MAX_WALK_FRACTION of walking
 (interval sessions with walked recoveries) are skipped.
-Each run gets the median of its samples; the current estimate is the median
-of the runs in the last CURRENT_WINDOW_DAYS days.
+Each run gets the median of its samples, but a single run is noisy (2 bpm of
+day-to-day HR drift move it by ~1 point), so the logged VO2max is not that
+value: each run updates a time-decayed mean weighted by steady minutes (time
+constant TREND_TAU_DAYS), as Garmin does. A 36-minute long run moves it more
+than a Tempo with 12 usable minutes, and older runs fade out. The current
+estimate is the value after the last run; the median of the single-run values
+in the last CURRENT_WINDOW_DAYS days is kept as a cross-check.
 
-HR_max and HR_rest come from .claude/training-zones.yaml, so the estimate is
-only as good as the configured HR max. ACSM assumes average running economy:
+HR_max comes from .claude/training-zones.yaml. HR_rest is the one of the run's
+own week (mean resting HR of the 7 days up to the run, from daily-health.md,
+nights without sleep data excluded), so past runs don't shift when today's
+resting HR changes; the YAML value is the fallback when there are fewer than
+MIN_RESTING_DAYS readings. The estimate is only as good as the configured HR
+max. ACSM assumes average running economy:
 a less economical runner is slightly underestimated. Treat it as a trend, with
 an absolute error of a few ml/kg/min; a field test (e.g. 7-minute test) or a
 lab CPET is the independent check.
@@ -29,10 +38,12 @@ Usage:
 """
 
 import argparse
+import math
 import os
+import re
 import statistics
 import sys
-from datetime import timedelta
+from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -52,6 +63,7 @@ except ImportError:
 
 DEFAULT_OUTPUT = "health-log/vo2max.md"
 ZONES_CONFIG = ".claude/training-zones.yaml"
+DAILY_HEALTH = "health-log/daily-health.md"
 WARMUP_SECONDS = 600
 STEADY_WINDOW_SECONDS = 120
 STEADY_TOLERANCE = 0.06
@@ -62,6 +74,66 @@ MAX_HR_SWING = 8
 MAX_WALK_FRACTION = 0.10
 MIN_SAMPLES = 300  # ~5 minutes of steady running at 1 Hz
 CURRENT_WINDOW_DAYS = 28
+TREND_TAU_DAYS = 21
+RESTING_WINDOW_DAYS = 7
+MIN_RESTING_DAYS = 3
+ROW_RE = re.compile(r"^\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*([^|]*?)\s*\|")
+
+
+def load_daily_resting(path: str) -> dict[date, float]:
+    """Resting HR per day from daily-health.md, skipping nights without sleep data.
+
+    Without the watch overnight Garmin reports the daytime minimum, which runs higher.
+    """
+    file = Path(path)
+    if not file.exists():
+        return {}
+    resting, no_sleep, section = {}, set(), None
+    for line in file.read_text().splitlines():
+        if line.startswith("## "):
+            section = line[3:].strip()
+            continue
+        match = ROW_RE.match(line)
+        if not match:
+            continue
+        day, value = date.fromisoformat(match.group(1)), match.group(2)
+        if section == "Recovery" and value.split()[0].replace(".", "").isdigit():
+            resting[day] = float(value.split()[0])
+        elif section == "Sleep" and value.startswith("N/A"):
+            no_sleep.add(day)
+    return {d: v for d, v in resting.items() if d not in no_sleep}
+
+
+def resting_for(day: date, daily: dict[date, float], fallback: float) -> float:
+    values = [daily[d] for d in (day - timedelta(days=i) for i in range(RESTING_WINDOW_DAYS)) if d in daily]
+    return statistics.mean(values) if len(values) >= MIN_RESTING_DAYS else fallback
+
+
+def add_trend(results: list[dict]) -> None:
+    """Time-decayed mean weighted by steady minutes, stored as r["trend"]."""
+    weighted = weight = 0.0
+    previous = None
+    for r in results:
+        if previous is not None:
+            decay = math.exp(-(r["date"] - previous).days / TREND_TAU_DAYS)
+            weighted, weight = weighted * decay, weight * decay
+        weighted += r["steady_minutes"] * r["vo2max"]
+        weight += r["steady_minutes"]
+        r["trend"] = weighted / weight
+        previous = r["date"]
+
+
+def garmin_precise_vo2max(client, day: date) -> float | None:
+    """Garmin's one-decimal VO2max for the day (the activity summary only has the rounded value)."""
+    try:
+        metrics = client.get_max_metrics(day.isoformat())
+    except Exception:
+        return None
+    for entry in metrics if isinstance(metrics, list) else [metrics]:
+        value = ((entry or {}).get("generic") or {}).get("vo2MaxPreciseValue")
+        if value is not None:
+            return float(value)
+    return None
 
 
 def load_hr_config(path: str) -> tuple[float, float]:
@@ -132,35 +204,54 @@ def steady_estimates(samples: list[tuple[float, float, float]], hr_max: float, h
     return estimates
 
 
-def write_log(path: Path, results: list[dict], current: float | None, hr_max: float, hr_rest: float) -> None:
-    headers = ["Data", "Attivita", "Minuti stabili", "Passo medio (GAP)", "FC media", "VO2max stimato", "VO2max Garmin"]
+def write_log(path: Path, results: list[dict], median: float | None, hr_max: float) -> None:
+    headers = ["Data", "Attivita", "Minuti stabili", "Passo medio (GAP)", "FC media", "FC riposo", "VO2max stimato", "VO2max Garmin"]
     rows = [[
         r["date"].isoformat(),
         r["name"],
         f"{r['steady_minutes']:.0f}",
         pace_str(r["speed"]),
         f"{r['hr']:.0f} bpm",
-        f"{r['vo2max']:.1f}",
-        "n/d" if r["garmin"] is None else f"{r['garmin']:.0f}",
+        f"{r['hr_rest']:.1f}",
+        f"{r['trend']:.1f}",
+        "n/d" if r["garmin"] is None else f"{r['garmin']:.1f}",
     ] for r in results]
-    current_line = (f"**Stima attuale: {current:.1f} ml/kg/min** (mediana delle corse degli ultimi {CURRENT_WINDOW_DAYS} giorni)."
-                    if current is not None else f"Nessuna corsa valida negli ultimi {CURRENT_WINDOW_DAYS} giorni.")
+    if results:
+        last = results[-1]
+        # dVO2max/dHR from Swain: (VO2max - 3.5) / (HR - HR_rest) points per bpm.
+        sensitivity = (last["vo2max"] - 3.5) / (last["hr"] - last["hr_rest"])
+        median_text = f"mediana delle singole corse degli ultimi {CURRENT_WINDOW_DAYS} giorni {median:.1f}" if median is not None else "nessuna corsa negli ultimi 28 giorni"
+        current_line = (f"**Stima attuale: {last['trend']:.1f} ml/kg/min** (al {last['date'].isoformat()}; "
+                        f"controllo: {median_text}).")
+        noise_line = (f"- **Perche non si usa la singola corsa:** con i valori dell'ultima corsa 1 bpm di FC vale {sensitivity:.2f} punti, "
+                      f"quindi 2 bpm di variazione giornaliera (sonno, stress, caldo, sensore) sposterebbero la stima di ~{2 * sensitivity:.1f}, "
+                      "mentre il VO2max vero cambia in settimane o mesi.")
+    else:
+        current_line, noise_line = "Nessuna corsa con abbastanza tratti stabili.", ""
     lines = [
         "# VO2max Log",
         "",
         current_line,
         "",
         f"Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, corsa in piano, velocita corretta per la pendenza), "
-        f"`%FCR = (FC - {hr_rest:.0f}) / ({hr_max:.0f} - {hr_rest:.0f})`, `VO2max = 3.5 + (VO2 - 3.5) / %FCR` (Swain).",
+        f"`%FCR = (FC - FC riposo) / ({hr_max:.0f} - FC riposo)`, `VO2max = 3.5 + (VO2 - 3.5) / %FCR` (Swain).",
         "",
+        f"- **VO2max stimato:** ogni corsa aggiorna la stima senza sostituirla, come fa Garmin. E la media delle stime delle corse fatte fin li, "
+        f"pesata sui minuti stabili e sull'eta: il peso di una corsa si dimezza ogni {TREND_TAU_DAYS * math.log(2):.0f} giorni "
+        f"(costante di tempo {TREND_TAU_DAYS} giorni). Un lungo da 36' sposta la stima tre volte piu di un Tempo con 12' utili. "
+        "La stima attuale e quella dopo l'ultima corsa.",
+        *([noise_line] if noise_line else []),
         f"- **Tratti usati:** solo ritmo stabile (passo entro +/-{STEADY_TOLERANCE * 100:.0f}% per almeno {STEADY_WINDOW_SECONDS // 60} minuti), "
         f"FC stabile (oscillazione massima {MAX_HR_SWING} bpm), dopo i primi {WARMUP_SECONDS // 60} minuti e con FC sopra il {MIN_HRR * 100:.0f}% della riserva. "
         f"Recuperi, transizioni, defaticamenti dopo lavori intensi e ripetute brevi restano esclusi, cosi come le corse con piu del {MAX_WALK_FRACTION * 100:.0f}% di camminata.",
         f"- **Per corsa:** mediana dei tratti stabili; servono almeno {MIN_SAMPLES // 60} minuti stabili.",
-        f"- **FC max {hr_max:.0f} e FC a riposo {hr_rest:.0f}** da `.claude/training-zones.yaml`: la stima dipende soprattutto dalla FC max.",
+        f"- **FC max {hr_max:.0f}** da `.claude/training-zones.yaml`: la stima dipende soprattutto dalla FC max. "
+        f"**FC a riposo** della settimana della corsa (media dei {RESTING_WINDOW_DAYS} giorni fino alla corsa da `daily-health.md`, notti senza orologio escluse): "
+        "cosi le corse passate non cambiano quando cambia la FC a riposo di oggi.",
         "- **Limiti:** la formula ACSM presume un'economia di corsa media; caldo, poco sonno e stanchezza alzano la FC e abbassano la stima. Da leggere come trend; l'errore sul valore assoluto e di qualche punto. "
         "Verifica indipendente: test dei 7' (VO2max ~ 3.5 x VAM in km/h) o test cardiopolmonare.",
-        "- **VO2max Garmin:** calcolato da Garmin con la sua FC max (194 nel profilo Garmin), quindi tendenzialmente piu alto.",
+        "- **VO2max Garmin:** valore con un decimale del giorno della corsa (metriche giornaliere Garmin; se manca, quello intero dell'attivita). "
+        "Calcolato da Garmin con la sua FC max (194 nel profilo Garmin), quindi tendenzialmente piu alto.",
         "",
         *(markdown_table(headers, rows) if rows else ["Nessuna corsa con abbastanza tratti stabili."]),
         "",
@@ -174,6 +265,7 @@ def parse_args():
     parser.add_argument("--logs-dir", default=DEFAULT_LOGS_DIR)
     parser.add_argument("--output", default=DEFAULT_OUTPUT)
     parser.add_argument("--config", default=ZONES_CONFIG)
+    parser.add_argument("--daily-health", default=DAILY_HEALTH)
     return parser.parse_args()
 
 
@@ -188,7 +280,8 @@ def main() -> int:
         print("Set GARMIN_EMAIL and GARMIN_PASSWORD before running this script.", file=sys.stderr)
         return 1
 
-    hr_max, hr_rest = load_hr_config(args.config)
+    hr_max, fallback_rest = load_hr_config(args.config)
+    daily_resting = load_daily_resting(args.daily_health)
     runs = parse_logged_runs(args.logs_dir)
     token_dir = os.path.expanduser(os.getenv("GARMINTOKENS") or "~/.garmin-running-coach-tokens")
     client = login(email, password, token_dir)
@@ -203,29 +296,34 @@ def main() -> int:
         walk_fraction = sum(1 for s in samples if s[2] < MIN_RUNNING_SPEED_M_S) / max(len(samples), 1)
         if walk_fraction > MAX_WALK_FRACTION:
             continue
+        hr_rest = resting_for(run["date"], daily_resting, fallback_rest)
         estimates = steady_estimates(samples, hr_max, hr_rest)
         if len(estimates) < MIN_SAMPLES:
             continue
         r = {
             **run,
+            "hr_rest": hr_rest,
             "steady_minutes": len(estimates) / 60,
             "vo2max": statistics.median(e[0] for e in estimates),
             "speed": statistics.mean(e[1] for e in estimates),
             "hr": statistics.mean(e[2] for e in estimates),
-            "garmin": activity.get("vO2MaxValue"),
+            "garmin": garmin_precise_vo2max(client, run["date"]) or activity.get("vO2MaxValue"),
         }
         results.append(r)
-        print(f"{r['date']} {r['name']}: VO2max {r['vo2max']:.1f} ({r['steady_minutes']:.0f} min stabili, "
-              f"{pace_str(r['speed'])} @ {r['hr']:.0f} bpm; Garmin {r['garmin']})")
+        print(f"{r['date']} {r['name']}: VO2max singola corsa {r['vo2max']:.1f} ({r['steady_minutes']:.0f} min stabili, "
+              f"{pace_str(r['speed'])} @ {r['hr']:.0f} bpm, riposo {hr_rest:.1f}; Garmin {r['garmin']})")
 
-    current = None
+    median = None
     if results:
+        add_trend(results)
         cutoff = results[-1]["date"] - timedelta(days=CURRENT_WINDOW_DAYS)
         recent = [r["vo2max"] for r in results if r["date"] > cutoff]
-        current = statistics.median(recent) if recent else None
-        print(f"Current estimate: {current:.1f} (median of {len(recent)} runs)")
+        median = statistics.median(recent) if recent else None
+        for r in results:
+            print(f"{r['date']} {r['name']}: VO2max stimato {r['trend']:.1f}")
+        print(f"Current estimate: {results[-1]['trend']:.1f} (median of {len(recent)} single runs in {CURRENT_WINDOW_DAYS} days: {median:.1f})")
 
-    write_log(Path(args.output), results, current, hr_max, hr_rest)
+    write_log(Path(args.output), results, median, hr_max)
     print(f"Logged to {args.output}")
     return 0
 

@@ -93,8 +93,8 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 185 bpm
-- **FC riposo media**: 60.0 bpm
-- **Riserva cardiaca**: 125.0 bpm
+- **FC riposo media**: 60.3 bpm
+- **Riserva cardiaca**: 124.7 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |

@@ -6,8 +6,8 @@ Valore del mese e, tra parentesi, indice con **100 = primo mese con dati** (per 
 | -------------------- | ------- | -------------- | ----------------------- |
 | Resistenza aerobica  | ES      | 7.0 (100)      | 10.0 (143)              |
 | Capacita aerobica    | CS      | n/d            | n/d                     |
-| Potenza aerobica     | Soglia  | 6:22/km (100)  | 6:16/km (102)           |
-| VO2max               | VO2max  | 40.9 (100)     | 40.9 (100)              |
+| Potenza aerobica     | Soglia  | 6:22/km (100)  | 6:15/km (102)           |
+| VO2max               | VO2max  | 39.3 (100)     | 40.4 (103)              |
 | Economia (cuore)     | EF      | 0.915 (100)    | 0.912 (100)             |
 | Economia (meccanica) | M       | 0.918 (100)    | 0.924 (101)             |
 | Economia (totale)    | RES     | 84.0 (100)     | 85.2 (101)              |

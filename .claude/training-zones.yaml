@@ -3,7 +3,7 @@ method: karvonen
 
 heart_rate:
   max: 185
-  resting_average: 60.0
+  resting_average: 60.3
   # Lactate-threshold HR (Friel): last-20-min average of the 2026 races (~165) and 10K races of 10 years ago, age-corrected.
   # Used by calculate_threshold.py; re-check at each race.
   threshold: 165

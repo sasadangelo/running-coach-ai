@@ -3,19 +3,57 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 11.58 km
-- **Total Time**: 1:23:28
-- **Total Elevation**: 15 m
-- **Total Calories**: 916 kcal (2/2 activities with data)
-- **Total TSS**: 121 (2/2 activities with a valid NGP/IF)
+- **Total Activities**: 3
+- **Total Distance**: 18.59 km
+- **Total Time**: 2:14:04
+- **Total Elevation**: 23 m
+- **Total Calories**: 1451 kcal (3/3 activities with data)
+- **Total TSS**: 184 (3/3 activities with a valid NGP/IF)
+- **Average RPE**: 3.7/10 (3/3 activities rated)
+- **Total sRPE**: 515 (RPE x minutes, rated activities only)
 
 ### Running Totals
-- **Total Run Time**: 1:04:06
-- **Total Walk Time**: 0:19:49
+- **Total Run Time**: 1:54:43
+- **Total Walk Time**: 0:20:06
 
 ## Activities
 
+### 2026-11-01 09:40:35 - Lungo 7 Km
+
+**Type**: Run
+**Distance**: 7.01 km
+**Duration**: 0:50:37
+**Pace**: 7:16/km
+**NGP medio**: 7:13/km
+**IF**: 0.87
+**TSS**: 63
+**Decoupling**: 0.7%
+**ES**: 10.6 (Base)
+**Economia**: EF 0.897 m/battito · M 0.928 · RES 83.2
+**RPE**: 3/10
+**sRPE**: 152
+**Sensazione**: Forte (75/100)
+**Run time**: 0:50:37
+**Walk time**: 0:00:17
+**Elevation**: 8 m
+**Calories**: 535 kcal
+**Heart Rate**: 153 bpm (max: 159)
+**Note**: Corsa dopo intervento odontoiatrico. Non potendo sputare è stato un po' più difficile da gestire muco. Ad ogni modo, buon allenamento. Ritmo andava naturale verso il 6:40 e ho dovuto controllare la corsa per rimanere nel ritmo stabilito. Ho notato battito più alto del solito. Comunque potevo fare tranquillamente un altro Km e con un po' di sforzo forse anche 2.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:18 | 7:34/km | 140 | 2 m       |
+| 2   | 1.00 km  | 0:07:14 | 7:14/km | 153 | 3 m       |
+| 3   | 1.00 km  | 0:07:09 | 7:09/km | 155 | 1 m       |
+| 4   | 1.00 km  | 0:07:15 | 7:16/km | 155 | 1 m       |
+| 5   | 1.00 km  | 0:07:14 | 7:14/km | 156 | 0 m       |
+| 6   | 1.00 km  | 0:07:12 | 7:12/km | 157 | 1 m       |
+| 7   | 1.00 km  | 0:07:13 | 7:13/km | 155 | 0 m       |
+| 8   | 0.01 km  | 0:00:02 | 6:29/km | 154 | 0 m       |
+
+---
 ### 2026-10-29 07:33:52 - Tempo 2Km
 
 **Type**: Run
@@ -25,6 +63,9 @@
 **NGP medio**: 6:38/km
 **IF**: 0.94
 **TSS**: 40
+**RPE**: 3/10
+**sRPE**: 81
+**Sensazione**: Forte (75/100)
 **Run time**: 0:26:39
 **Walk time**: 0:00:24
 **Elevation**: 4 m
@@ -52,6 +93,9 @@
 **NGP medio**: 6:45/km
 **IF**: 0.93
 **TSS**: 81
+**RPE**: 5/10
+**sRPE**: 282
+**Sensazione**: Normale (50/100)
 **Run time**: 0:37:27
 **Walk time**: 0:19:25
 **Elevation**: 11 m
@@ -93,8 +137,8 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 185 bpm
-- **FC riposo media**: 60.3 bpm
-- **Riserva cardiaca**: 124.7 bpm
+- **FC riposo media**: 60.1 bpm
+- **Riserva cardiaca**: 124.9 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |

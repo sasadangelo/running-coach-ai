@@ -145,6 +145,31 @@ def activity_calories(activity: dict) -> float | None:
     return None
 
 
+# Garmin's post-run self-evaluation, stored in the activity's summaryDTO
+FEEL_LABELS = {0: "Molto debole", 25: "Debole", 50: "Normale", 75: "Forte", 100: "Molto forte"}
+
+
+def fetch_self_evaluation(client: Garmin, activity_id: int) -> tuple[float | None, int | None]:
+    """Return (RPE 1-10, feel 0-100) from the athlete's post-run self-evaluation, if given.
+
+    Garmin stores RPE as directWorkoutRpe on a 10-100 scale; it is not in the
+    activity list, only in the full activity summary.
+    """
+    try:
+        summary = (client.get_activity(activity_id) or {}).get("summaryDTO") or {}
+    except Exception as exc:  # noqa: BLE001 - soft warning, don't abort the sync
+        print(f"  warning: could not fetch self-evaluation for activity {activity_id}: {exc}", file=sys.stderr)
+        return None, None
+    rpe = summary.get("directWorkoutRpe")
+    feel = summary.get("directWorkoutFeel")
+    return (rpe / 10.0 if rpe is not None else None), feel
+
+
+def compute_session_rpe(rpe: float | None, duration_s: float) -> float | None:
+    """Foster session-RPE load: RPE (1-10) x duration in minutes."""
+    return rpe * duration_s / 60.0 if rpe is not None else None
+
+
 def fetch_activity_details(client: Garmin, activity_id: int) -> dict | None:
     """Fetch full per-second activity detail once, shared by run/walk split and NGP."""
     try:
@@ -362,6 +387,9 @@ def build_activity_section(
     note = sanitize_note(activity.get("description") or "")
     intensity_factor = compute_if(ngp_speed, threshold_speed_m_s)
     tss = compute_tss(duration_s, intensity_factor)
+    rpe = activity.get("selfEvaluationRpe")
+    feel = activity.get("selfEvaluationFeel")
+    session_rpe = compute_session_rpe(rpe, duration_s)
 
     lines = [
         f"### {start_time} - {name}",
@@ -377,6 +405,11 @@ def build_activity_section(
         lines.append(f"**IF**: {intensity_factor:.2f}")
     if tss is not None:
         lines.append(f"**TSS**: {tss:.0f}")
+    if rpe is not None:
+        lines.append(f"**RPE**: {rpe:g}/10")
+        lines.append(f"**sRPE**: {session_rpe:.0f}")
+    if feel is not None:
+        lines.append(f"**Sensazione**: {FEEL_LABELS.get(feel, str(feel))} ({feel}/100)")
     lines += [
         f"**Run time**: {format_duration(run_s) if run_s is not None else 'N/A'}",
         f"**Walk time**: {format_duration(walk_s) if walk_s is not None else 'N/A'}",
@@ -430,6 +463,8 @@ def build_markdown(activities: list, start: date, end: date, unit: str, threshol
     total_walk_s = 0.0
     total_tss = 0.0
     activities_with_tss = 0
+    total_session_rpe = 0.0
+    rpe_values = []
 
     for activity, _laps, (run_s, walk_s), ngp_speed in activities:
         total_distance_m += activity.get("distance", 0.0) or 0.0
@@ -446,6 +481,10 @@ def build_markdown(activities: list, start: date, end: date, unit: str, threshol
         if tss is not None:
             total_tss += tss
             activities_with_tss += 1
+        rpe = activity.get("selfEvaluationRpe")
+        if rpe is not None:
+            rpe_values.append(rpe)
+            total_session_rpe += compute_session_rpe(rpe, activity_duration_s)
 
     lines = [
         f"# Training Log: {start.isoformat()} to {end.isoformat()}",
@@ -461,6 +500,9 @@ def build_markdown(activities: list, start: date, end: date, unit: str, threshol
     ]
     if activities_with_tss:
         lines.append(f"- **Total TSS**: {total_tss:.0f} ({activities_with_tss}/{len(activities)} activities with a valid NGP/IF)")
+    if rpe_values:
+        lines.append(f"- **Average RPE**: {sum(rpe_values) / len(rpe_values):.1f}/10 ({len(rpe_values)}/{len(activities)} activities rated)")
+        lines.append(f"- **Total sRPE**: {total_session_rpe:.0f} (RPE x minutes, rated activities only)")
     lines += [
         "",
         "### Running Totals",
@@ -538,6 +580,7 @@ def main():
         print(f"  computing run/walk split for '{activity.get('activityName')}'...")
         run_walk_split = compute_run_walk_split(details)
         ngp_speed = compute_ngp(details)
+        activity["selfEvaluationRpe"], activity["selfEvaluationFeel"] = fetch_self_evaluation(client, activity["activityId"])
         enriched_activities.append((activity, laps, run_walk_split, ngp_speed))
 
     # Most recent first, to match the training-log convention used elsewhere in this project

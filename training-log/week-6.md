@@ -9,6 +9,8 @@
 - **Total Elevation**: 13 m
 - **Total Calories**: 1242 kcal (4/4 activities with data)
 - **Total TSS**: 156 (4/4 activities with a valid NGP/IF)
+- **Average RPE**: 3.2/10 (4/4 activities rated)
+- **Total sRPE**: 414 (RPE x minutes, rated activities only)
 
 ### Running Totals
 - **Total Run Time**: 1:40:02
@@ -25,6 +27,9 @@
 **NGP medio**: 8:13/km
 **IF**: 0.76
 **TSS**: 8
+**RPE**: 2/10
+**sRPE**: 17
+**Sensazione**: Forte (75/100)
 **Run time**: 0:01:54
 **Walk time**: 0:06:43
 **Elevation**: 0 m
@@ -45,6 +50,9 @@
 **Decoupling**: 2.1%
 **ES**: 7.8 (Primi km)
 **Economia**: EF 0.911 m/battito · M 0.920 · RES 83.8
+**RPE**: 3/10
+**sRPE**: 108
+**Sensazione**: Forte (75/100)
 **Run time**: 0:35:34
 **Walk time**: 0:00:24
 **Elevation**: 5 m
@@ -73,6 +81,9 @@
 **NGP medio**: 6:40/km
 **IF**: 0.94
 **TSS**: 48
+**RPE**: 4/10
+**sRPE**: 131
+**Sensazione**: Forte (75/100)
 **Run time**: 0:32:26
 **Walk time**: 0:00:17
 **Elevation**: 5 m
@@ -103,6 +114,9 @@
 **NGP medio**: 6:55/km
 **IF**: 0.90
 **TSS**: 54
+**RPE**: 4/10
+**sRPE**: 159
+**Sensazione**: Normale (50/100)
 **Run time**: 0:30:08
 **Walk time**: 0:09:56
 **Elevation**: 3 m

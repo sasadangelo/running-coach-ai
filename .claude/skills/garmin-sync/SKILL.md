@@ -9,7 +9,7 @@ description: Downloads and syncs training data from Garmin Connect using a local
 
 This skill downloads training data from Garmin Connect and creates weekly markdown summaries in the `training-log` folder. It uses the `garminconnect` Python library directly (via `scripts/garmin_sync.py`) rather than an MCP server.
 
-Each activity gets its own section with distance, duration, pace, a run/walk time split, heart rate, any Garmin note, and (when the activity has more than one lap) a lap-by-lap table - useful for checking pace consistency across ripetute/tempo reps. The sync also maintains `health-log/daily-health.md` with daily resting heart rate, overnight HRV, and sleep summaries.
+Each activity gets its own section with distance, duration, pace, a run/walk time split, heart rate, the athlete's own RPE rating, any Garmin note, and (when the activity has more than one lap) a lap-by-lap table - useful for checking pace consistency across ripetute/tempo reps. The sync also maintains `health-log/daily-health.md` with daily resting heart rate, overnight HRV, and sleep summaries.
 
 There are two ways to run it:
 - **Auto-sync (default)**: the athlete just says "/garmin-sync" or "sync my training" with no week number. Syncs every missing/stale week since the last sync automatically - see "Auto-Sync Workflow" below.
@@ -107,7 +107,8 @@ The script will:
 2. Fetch all "Run"-type activities in the date range via `get_activities_by_date`
 3. Drop stray sub-threshold activities (default under 0.8km - accidental watch start/stop blips, not real sessions); it prints which ones it ignored
 4. For each remaining activity, fetch lap splits via `get_activity_splits` (shown only when there's more than one lap) and compute a run/walk time split from second-by-second speed samples via `get_activity_details`
-5. Write `training-log/week-{n}.md` with one section per activity, including Garmin's calorie estimate when available, plus weekly totals
+5. Fetch the athlete's post-run self-evaluation via `get_activity` (`summaryDTO.directWorkoutRpe`, 10-100 scale, and `directWorkoutFeel`, 0-100): written as `**RPE**` (1-10), `**sRPE**` (Foster session load = RPE x minutes) and `**Sensazione**` when the athlete rated the run
+6. Write `training-log/week-{n}.md` with one section per activity, including Garmin's calorie estimate when available, plus weekly totals (average RPE and total sRPE over rated activities)
 
 Daily recovery and sleep data can be synced directly with:
 ```bash

@@ -155,7 +155,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 - **Lungo**: 4.2km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 4.20km, ~31min *(scarico: volume ridotto, corpo fresco in vista del test di S9)*
 - **Test di forza e mobilità** (prima misurazione, ~15 min, in un giorno senza corsa): vedi [health-log/strength-mobility.md](health-log/strength-mobility.md). Da ripetere ogni mese.
 
-### Settimana 9 (26 ottobre - 1 novembre) — Fase E
+### ✅ Settimana 9 (26 ottobre - 1 novembre) — Fase E — CONCLUSA
 **Volume totale**: 17.00 km (+1% rispetto a S7; il carico sale soprattutto in qualità: ripetute +25%, primo Tempo continuo)
 
 **Revisione dell'11 ottobre (S9-S13):** la 5K è una tappa verso la 10K. Nel piano originale il lungo restava sotto il picco di S7 (6.4km) per sei settimane, con tre settimane su quattro a carico ridotto. Ora restano lo scarico di S8 e l'avvicinamento alla gara di S10, il recupero post-gara si riduce a mezza settimana e il lungo riprende a crescere fino a 8.5km in S13 (mai più di +1km rispetto al lungo precedente). Dal test di S9 il Tempo diventa un blocco continuo che cresce di 500m a settimana: 2000, 2500, 3000, 3500m. **Condizione**: se la fascia plantare sx torna a farsi sentire al mattino, si torna ai volumi originali.
@@ -165,12 +165,14 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 - **Ripetute** (mar 27): 1km risc., 10 x 400m @ 5:20-5:40/km (rec. 2'), 1km def. — 6.00km, ~53min
 - **Tempo** (gio 29, con fascia H9): 1km risc., 2000m continui @ 6:10-6:30/km, 1km def. — 4.00km, ~28min *(test tempo continuo; se al mattino ci sono 2 o più segnali di prontezza negativi: corsa facile, e il test si sposta in S11 a 2000m)*
 - **Ven 30**: estrazione, nessuna corsa. **Sab 31 e dom 1**: riposo (al massimo una camminata), niente forza.
-- ~~**Lungo**: 7.0km~~ → spostato a lunedì 2 novembre (vedi S10)
+- **Lungo** (dom 1): 7.0km continui @ 7:15-7:40/km — corso domenica 1 novembre per intero (7:16/km, FC 153, decoupling 0.7%), anziché ridotto a lunedì 2. Lo spostamento a lunedì non serve più.
+
+**Consuntivo S9**: 18.59 km (109% del piano), TSS 184, RPE medio 3.7. 10x400 tutte fra 2:07 e 2:17; test Tempo 2000 m a 6:10-6:14, soglia confermata a ~6:15/km.
 
 ### Settimana 10 — Gara 1 (2-8 novembre) — Fase F
-**Volume totale (esclusa gara)**: ~8.90-9.40 km (con il lungo spostato da S9)
+**Volume totale (esclusa gara)**: ~3.40 km (il lungo spostato da S9 è stato corso domenica 1 novembre)
 
-- **Lunedì 2 — Lungo facile**: 5-6km continui @ 7:15-7:40/km, FC ~148-150 — solo se la bocca è a posto e il dentista ha dato l'ok all'attività (72h dall'estrazione); altrimenti si salta. Portare da bere.
+- **Lunedì 2 e martedì 3**: riposo dalla corsa (mobilità e stretching sì).
 - **Mercoledì 4 — Ripetute leggere** (spostate da martedì, per non correre due giorni di fila): 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1'), 0.5km def. — 1.80km
 - **Giovedì — Shakeout**: 0.3km risc., 1km @ ~7:45/km facile, rec. — 1.60km, corsa breve e leggera
 - **Venerdì/Sabato**: riposo completo

@@ -49,3 +49,36 @@ Nelle prime settimane l'allenamento viene assorbito bene. La stanchezza al risve
 - Fascia plantare sx: sensazione a fine corsa, sparita poco dopo. L'atleta vuole farla vedere prima dei carichi della 10K: d'accordo. Da controllare al risveglio (condizione della revisione dell'11/10).
 - Frequenza respiratoria Garmin: media 38, max 45 atti/min. Si registra come osservazione, non come metrica di decisione.
 - Da tenere d'occhio ogni mattina: HRV settimanale, FC a riposo e sensazioni al risveglio. Il rischio dello stop d'autunno (pattern 1) è attivo.
+
+### Lungo 7 km (dom 1 novembre)
+- Corso domenica per intero, anziché ridotto (5-6 km) a lunedì 2 come previsto dopo l'estrazione. 7.01 km a 7:16/km, dal km 2 alla fine fra 7:09 e 7:16, FC 153 di media (155-157 a metà corsa, max 159), RPE 3, sensazione "Forte". L'atleta: il passo veniva naturale verso 6:40 e l'ha frenato; avrebbe potuto fare un altro km, forse due.
+- **Decoupling 0.7%** ed **ES 10.6**: entrambi i migliori di sempre, nel lungo più lungo.
+- FC più alta del solito per lo stesso passo (153 contro 150 del 6.4 km del 18/10): EF 0.897, il più basso finora. Non è perdita di forma: la FC a riposo è a 60-62 dall'estrazione (prima ~56-57) per intervento, antidolorifici e antibiotico, più il muco da gestire senza poter sputare. Se fra una settimana non torna verso 57, se ne riparla.
+- **Domanda dell'atleta: accelerare il lento a 7:00-7:05 per portare il decoupling al 3%?** No. Il decoupling non è un obiettivo da "consumare": sotto il 5% dice che la tenuta aerobica c'è, ed è il via libera ad allungare, non ad accelerare. A 7:13 la FC era già al tetto della Z2 (154); a 7:00 sarebbe in Z3. Il passo del lento lo decide la FC (lungo ~148-150, tetto 155): se a 7:05 la FC sta a 148 va bene, se sale a 158 si rallenta. Il passo scenderà da solo con la forma, e si vedrà in EF ed economia.
+
+## Nuova metrica: RPE da Garmin (1/11)
+- Il sync ora scarica il voto di fine corsa (RPE 1-10 e "sensazione"), con sRPE = RPE × minuti (Foster), e la media settimanale. Storico aggiunto a tutte le settimane.
+- Per tipo di seduta: ripetute 4-5, Tempo 3-4, lungo 3, facile/recupero 1-2. Le uniche sedute votate 5 sono le ripetute da 400. L'unica "Debole" è il 6x400 del 20/10 (settimana di HRV bassa e notti corte).
+- Uso: metrica soggettiva da leggere accanto al TSS e al recupero. Conta lo scostamento dal solito per quel tipo di seduta (es. un lungo votato 5), non il numero singolo.
+
+## Week Summary (finale)
+- **Actual:** 10x400 (7.57 km), test Tempo 2000 m continui (4.01 km), lungo 7.0 km. **18.59 km** (pianificati 17.00), TSS 184, sRPE 515, RPE medio 3.7. La settimana più voluminosa del piano.
+
+## Chiusura di ottobre
+- 15 corse, **71.5 km** (+31% su settembre), 8.6 h, TSS 695 (+31%), RPE medio 3.4 (settembre 3.5): più lavoro con la stessa fatica percepita.
+- Profilo: ES 10.0 (+43%), soglia 6:15/km (+2%), VO2max 40.4 (+3%), meccanica +1%, EF stabile.
+- Recupero: FC a riposo 57.5 (sett. 57.4), HRV 51.1 (52.4), sonno medio **6h43** (6h09), 11 notti ≥7h su 29 (4).
+- 1/11: aggiunti a week-5 (S4) i TSS mancanti del 22 e 27 settembre; carico e TSS di settembre ricalcolati (529).
+
+## Progress Assessment
+**In anticipo sugli obiettivi.** 26/26 sedute, soglia confermata, lungo a 7 km con decoupling minimo: la Roma 5K corsa tutta è ampiamente alla portata. Punti aperti: fascia plantare sx (da far vedere prima della 10K) e recupero dall'estrazione.
+
+## Recommendations (S10, settimana della gara)
+- **Lun 2 e mar 3:** riposo dalla corsa (il lungo di lunedì non serve più). Mobilità e stretching sì.
+- **Mer 4:** 4x200 leggere. **Gio 5:** shakeout 1 km facile. **Ven 6-sab 7:** riposo, a letto entro le 22:30.
+- **Dom 8, Roma 5K:** primi km a 7:00-7:30, si stringe solo negli ultimi 1-2 km. Con la fascia: FC media dal 10' (soglia) e picco della volata (limite minimo della FC max).
+- **Fascia plantare:** prenotare la visita (medico sportivo o fisioterapista) per dopo la gara.
+
+## Focus for Next Week
+1. Arrivare freschi alla gara: niente km extra.
+2. Partenza controllata alla 5K.

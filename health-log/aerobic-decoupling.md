@@ -13,3 +13,4 @@ Pace:HR decoupling puro (split a meta tempo, efficiency factor passo/FC in ciasc
 | 2026-10-11 | Resistenza aerobica | Corsa (Lungo) 5.7 Km     | 5.71 km  | 40.8 min | 6:59/km       | 153 bpm    | 7:14/km       | 154 bpm    | 4.3%       |
 | 2026-10-18 | Resistenza aerobica | Lungo 6.4 Km             | 6.41 km  | 47.2 min | 7:16/km       | 148 bpm    | 7:15/km       | 151 bpm    | 1.3%       |
 | 2026-10-25 | Resistenza aerobica | Corsa Recupero (Scarico) | 4.21 km  | 33.9 min | 8:04/km       | 143 bpm    | 8:12/km       | 142 bpm    | 1.3%       |
+| 2026-11-01 | Resistenza aerobica | Lungo 7 Km               | 7.01 km  | 50.9 min | 7:14/km       | 155 bpm    | 7:14/km       | 156 bpm    | 0.7%       |

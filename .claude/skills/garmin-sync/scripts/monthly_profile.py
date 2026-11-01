@@ -54,8 +54,10 @@ METRICS = [
     ("ef", "EF", "Economia (cuore)", "running-economy.md", "EF (m/battito)", number, statistics.median, True, "{:.3f}"),
     ("m", "M", "Economia (meccanica)", "running-economy.md", "M", number, statistics.median, True, "{:.3f}"),
     ("res", "RES", "Economia (totale)", "running-economy.md", "RES", number, statistics.median, True, "{:.1f}"),
+    ("fs", "FS", "Forza", "strength-mobility.md", "FS", number, statistics.median, True, "{:.0f}"),
+    ("mcs", "MCS", "Mobilita e controllo", "strength-mobility.md", "MCS", number, statistics.median, True, "{:.0f}"),
 ]
-RADAR_KEYS = ["es", "cs", "thr", "vo2", "ef", "m"]  # RES left out: it is EF x M
+RADAR_KEYS = ["es", "cs", "thr", "vo2", "ef", "m", "fs", "mcs"]  # RES left out: it is EF x M
 
 
 def read_table(path: Path) -> list[dict]:
@@ -193,7 +195,8 @@ def write_markdown(path: Path, months, table, today: date) -> None:
         *markdown_table(head, rows),
         "",
         "Le metriche si muovono a velocita diverse: ES, EF e meccanica in settimane, soglia in 4-6 settimane, VO2max in mesi. "
-        "Il mese in corso e parziale. Il CS compare dal primo Tempo continuo di almeno 20' (S13).",
+        "Il mese in corso e parziale. Il CS compare dal primo Tempo continuo di almeno 20' (S13). "
+        "Forza (FS) e Mobilita e controllo (MCS) vengono dal test mensile di health-log/strength-mobility.md (primo test 24/10/2026).",
         "",
     ]
     path.write_text("\n".join(lines))

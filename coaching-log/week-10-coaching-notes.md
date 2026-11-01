@@ -56,6 +56,16 @@ Nelle prime settimane l'allenamento viene assorbito bene. La stanchezza al risve
 - FC più alta del solito per lo stesso passo (153 contro 150 del 6.4 km del 18/10): EF 0.897, il più basso finora. Non è perdita di forma: la FC a riposo è a 60-62 dall'estrazione (prima ~56-57) per intervento, antidolorifici e antibiotico, più il muco da gestire senza poter sputare. Se fra una settimana non torna verso 57, se ne riparla.
 - **Domanda dell'atleta: accelerare il lento a 7:00-7:05 per portare il decoupling al 3%?** No. Il decoupling non è un obiettivo da "consumare": sotto il 5% dice che la tenuta aerobica c'è, ed è il via libera ad allungare, non ad accelerare. A 7:13 la FC era già al tetto della Z2 (154); a 7:00 sarebbe in Z3. Il passo del lento lo decide la FC (lungo ~148-150, tetto 155): se a 7:05 la FC sta a 148 va bene, se sale a 158 si rallenta. Il passo scenderà da solo con la forma, e si vedrà in EF ed economia.
 
+### Mobilità e forza (dom 1 novembre, giorno del lungo)
+- **Prima:** leg swing avanti/indietro e laterali, cerchi con le anche dx e sx, caviglie (flesso-estensione e rotazioni). Dimenticato di nuovo l'affondo camminato con rotazione del busto: è l'esercizio che salta sempre.
+- **Dopo:** squat 3x12; calf raise 3x20 + 1x20 solo sx; ponte glutei 3x20 + 1x20 su una gamba sx; side plank 20" per lato; step-up 1x10. Serie in più sul sinistro come deciso dopo il test del 24/10.
+- **Rispetto alla checklist del lungo:**
+  - Lo squat a corpo libero dal 1° novembre è sostituito dal **mezzo squat su una gamba** davanti allo specchio (2 x 6-8 per gamba, +1 serie sx): è l'esercizio diretto sul difetto trovato al test (bacino che scende, ginocchio che entra a sx).
+  - Calf raise: se le 3x20 erano su due piedi, lo stimolo è più basso di quello previsto (3 x 8-12 **su una gamba**, lento 3-2-3). Il test misura la singola gamba, ed è lì che sx è a 13.
+  - Side plank: 20" è sotto il previsto (2 x 30" + 1 serie sx) e sotto il test (29-36").
+  - Step-up: previsto 2 x 8-10 per gamba.
+- **S10 (settimana della gara):** forza dimezzata o saltata, e niente forza dopo mercoledì. Mobilità ed equilibrio su una gamba ogni giorno restano.
+
 ## Nuova metrica: RPE da Garmin (1/11)
 - Il sync ora scarica il voto di fine corsa (RPE 1-10 e "sensazione"), con sRPE = RPE × minuti (Foster), e la media settimanale. Storico aggiunto a tutte le settimane.
 - Per tipo di seduta: ripetute 4-5, Tempo 3-4, lungo 3, facile/recupero 1-2. Le uniche sedute votate 5 sono le ripetute da 400. L'unica "Debole" è il 6x400 del 20/10 (settimana di HRV bassa e notti corte).

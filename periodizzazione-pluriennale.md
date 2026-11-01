@@ -8,27 +8,29 @@ Come si arriva agli obiettivi a lungo termine, piano per piano. **Le date delle 
 
 ```
  2026          2027                                                                    2028
- set  ott  nov  dic  gen  feb  mar  apr  mag  giu  lug  ago  set  ott  nov  dic  gen ...
- ├──── P1 ─────┤T├──── P2 ────┤r├───── P3 ──────┤T├── P4 ──┤├────── P5 ───────┤P6├─T─┤
-  autunno 2026  │  5K sotto 30'  │  10K sotto 1h   │ base estiva │  prima mezza   │10K │
-          5K🎯 10K🎯   10K🏃  5K🎯    🏃   🏃   10K🎯 5K🏃          10K🏃 🏃  HM🎯  10K🎯
- T = transizione · r = settimana di recupero · 🎯 gara obiettivo · 🏃 gara allenante
+ set  ott  nov  dic  gen  feb  mar  apr  mag  giu  lug  ago  set  ott  nov  dic  gen  feb  mar
+ ├────── P1 ─────┤T├───── P2 ────┤r├─ P3 ─┤T├─── P4 ───┤├──────── P5 ────────┤T├─── P6 ───┤
+  autunno 2026     5K sotto 30'    10K<1h base estiva  Best Woman sotto 55'    prima mezza
+          5K🎯 10K🎯 10K🏃 10K🏃 5K🎯 7.5K🏃 10K🎯🏃 5K🏃            10K🏃  🏃   10K🎯        HM🎯
+ T = transizione · r = settimana di recupero · 🎯 gara obiettivo · 🏃 gara allenante · HM = RomaOstia
 ```
 
 | # | Piano | Periodo | Settimane | Gare 🎯 | Gare 🏃 | Volume di picco | Giorni di corsa |
 |---|---|---|---|---|---|---|---|
 | **P1** | Autunno 2026: 5K e 10K tutte di corsa | 2 set - 6 dic 2026 | 14 | 2 | 0 | ~20 km | 3 |
 | — | Transizione | 7-20 dic 2026 | 2 | | | | |
-| **P2** | Inverno: 5K sotto 30' | 21 dic 2026 - 28 feb 2027 | 10 | 1 | 1 | ~25 km | 3 |
-| — | Recupero dopo la 5K | 1-7 mar 2027 | 1 | | | | |
-| **P3** | Primavera: 10K sotto 1h | 8 mar - 30 mag 2027 | 12 | 1 | 2 | ~30 km | 3 → 4 |
-| — | Transizione | 31 mag - 13 giu 2027 | 2 | | 1 (5K serale) | | |
-| **P4** | Estate: base | 14 giu - 1 ago 2027 | 7 | 0 | 0 | ~32 km | 4 |
-| **P5** | Autunno: prima mezza maratona | 2 ago - 14 nov 2027 | 15 | 1 | 2 | ~38 km | 4 |
-| **P6** | Dicembre: 10K sotto 55' | 15 nov - 19 dic 2027 | 5 | 1 | 0 | ~32 km | 4 |
-| — | Transizione | 20 dic 2027 - 9 gen 2028 | 3 | | | | |
+| **P2** | Inverno: 5K sotto 30' (Acea, 13/3) | 21 dic 2026 - 13 mar 2027 | 12 | 1 | 2 | ~25 km | 3 |
+| — | Recupero dopo la 5K | 14-20 mar 2027 | 1 | | | | |
+| **P3** | Primavera: 10K sotto 1h (Tor Vergata, 2/5) | 21 mar - 2 mag 2027 | 6 | 1 | 1 | ~28-30 km | 3 → 4 |
+| — | Transizione | 3-16 mag 2027 | 2 | | 1 (Race for the Cure) | | |
+| **P4** | Estate: base | 17 mag - 1 ago 2027 | 11 | 0 | 1 (5K serale) | ~32 km | 4 |
+| **P5** | Autunno: Best Woman 10K sotto 55' | 2 ago - 5 dic 2027 | 18 | 1 | 2 | ~35 km | 4 |
+| — | Transizione | 6-26 dic 2027 | 3 | | | | |
+| **P6** | Inverno: prima mezza maratona (RomaOstia) | 27 dic 2027 - fine feb 2028 | ~9 | 1 | 0 | ~38 km | 4 |
 
-**Totale 2027:** 5 piani (49 settimane, con 2 transizioni e 1 settimana di recupero), **4 gare obiettivo** e **6 gare allenanti**. È la regola di [obiettivi a lungo termine](obiettivi-lungo-termine.md#gare): circa una gara al mese escluso luglio-agosto, una su tre corsa al massimo, 3-4 obiettivi all'anno a 6-8 settimane di distanza. Fa eccezione la coppia mezza-10K di novembre-dicembre (5 settimane), voluta: la 10K raccoglie la forma della mezza.
+**Totale 2027:** 4 piani più l'inizio di P6 (47 settimane, con 2 transizioni e 1 settimana di recupero), **3 gare obiettivo** e **7 gare allenanti**. È la regola di [obiettivi a lungo termine](obiettivi-lungo-termine.md#gare): circa una gara al mese escluso luglio-agosto, una su tre corsa al massimo, 3-4 obiettivi all'anno ad almeno 6-8 settimane di distanza (Acea → Tor Vergata 7 settimane, Best Woman → RomaOstia 12).
+
+**Revisione del 1/11/2026 (calendario gare del Lazio 2026-2027):** a febbraio non ci sono 5K, quindi l'obiettivo si sposta all'Acea Water Fun Run del 13/3 e P2 passa a 12 settimane. P3 si accorcia a 6 settimane, perché Tor Vergata (2/5) resta la 10K giusta: inizio maggio e al mattino. La Best Woman resta l'obiettivo di dicembre, essendo la 10K preferita e veloce. La Mezza di Fiumicino (~28/11) è esclusa perché cade una settimana prima; Sabaudia è troppo lontana (1h30 da casa), quindi la prima mezza passa alla **RomaOstia di fine febbraio 2028**: vicina, piatta, al fresco. L'autunno 2027 diventa un blocco lungo tutto per la Best Woman, senza il carico di una mezza nelle gambe.
 
 ## I piani, uno per uno
 
@@ -41,49 +43,52 @@ Come si arriva agli obiettivi a lungo termine, piano per piano. **Le date delle 
 Prima settimana quasi libera (camminate, 1-2 corse brevi se se ne ha voglia), seconda solo lento. Si scrive P2 con il VDOT della 10K.
 
 ### P2 · Inverno: 5K sotto 30'
-- **10 settimane:** 3+1 (base e forza), 3+1 (soglia e ripetute), 1 settimana specifica + 1 di taper.
-- **Gare:** 10K a gennaio (es. Corsa di Miguel) 🏃 **facile, al posto del lungo**; 5K a fine febbraio 🎯 **sotto 30'** (6:00/km, VDOT ~30.8).
+- **12 settimane:** 3+1 (base e forza), 3+1 (soglia e ripetute), 2 specifiche + 1 di avvicinamento + 1 di taper.
+- **Gare:** Corsa di Miguel 10K (17/1) e CorriFregene 10K (14/2) 🏃 **facili, al posto del lungo**; **Acea Water Fun Run 5K (sabato 13/3)** 🎯 **sotto 30'** (6:00/km, VDOT ~30.8).
+- **Da decidere quando si scrive il piano:** con i mesocicli 3+1, Miguel e Fregene cadono alla fine della 4ª e dell'8ª settimana, cioè negli scarichi. Si può spostare uno scarico, oppure usare la 10K molto facile come unica seduta lunga della settimana di scarico.
+- **Acea:** è la corsa non competitiva del weekend della Maratona di Roma, con migliaia di persone. Bisogna partire davanti, vicino all'inizio della griglia, e accettare che il primo km costi qualche secondo. Il tempo è quello del Garmin.
 - **Volume:** 20 → ~25 km su 3 giorni. **Forza in palestra 2 volte a settimana** da gennaio.
 - **Condizione di prontezza:** Tempo continuo da 3000-3500 m a 6:00/km o meglio, chiuso con margine.
 
-### Recupero · 1-7 marzo 2027
+### Recupero · 14-20 marzo 2027
 Dopo una 5K bastano 4-5 giorni: una settimana di sola corsa facile, poi si riparte senza una transizione vera.
 
 ### P3 · Primavera: 10K sotto 1h
-- **12 settimane:** 3+1, 3+1, 2 specifiche + 2 di avvicinamento.
-- **Gare:** marzo 🏃 (5K a ritmo Tempo o 10K facile), aprile 5K 🏃 a ritmo Tempo, maggio 10K 🎯 **sotto 1h** (6:00/km, VDOT ~32.3). **Scegliere una 10K di inizio maggio (o fine aprile) con partenza al mattino:** da metà maggio il caldo comincia a pesare (Race for the Cure 2026: oltre 24°C).
+- **6 settimane:** 3 di carico (la prima di ripresa), 1 specifica, 2 di avvicinamento. È corto perché parte dalla base di P2 senza transizione: è un blocco di rifinitura, non di costruzione.
+- **Gare:** Roma Appia Run 7.5K (11/4, non competitiva) 🏃 **facile, al posto del lungo**, con 2-3 km di riscaldamento prima per arrivare a ~10 km (basolato dell'Appia: piede attento, niente spinta); **Corri a Tor Vergata 10K (2/5, ore 9)** 🎯 **sotto 1h** (6:00/km, VDOT ~32.3). È inizio maggio e al mattino: da metà maggio il caldo comincia a pesare (Race for the Cure 2026: oltre 24°C).
+- **Da rivedere dopo l'Acea:** da VDOT ~30.8 a ~32.3 in 7 settimane è un salto ambizioso. Se la 5K esce sopra i 30', Tor Vergata si corre per migliorarsi e il sotto 1h si sposta all'autunno.
 - **Volume:** 25 → ~30 km. **Al raggiungimento dei ~30 km si passa a 4 giorni**: il giorno in più è una corsa facile, non una nuova seduta di qualità.
 - **Lungo:** fino a 11-12 km.
 
-### Transizione · 31 maggio - 13 giugno 2027
-Due settimane leggere. A fine giugno una 5K serale 🏃 per divertimento, se il caldo lo permette.
+### Transizione · 3-16 maggio 2027
+Due settimane leggere dopo la 10K. Domenica 9/5 la **Race for the Cure Roma** 🏃, la gara di tradizione: si corre facile, per esserci, perché una settimana dopo una 10K al massimo il recupero non è finito (e nel 2026 c'erano oltre 24°C).
 
 ### P4 · Estate: base
-- **7 settimane**, nessuna gara (caldo).
+- **11 settimane** (17 maggio - 1 agosto). Unica gara: una 5K serale 🏃 per divertimento a giugno, se il caldo lo permette.
 - **Contenuto:** quasi tutto lento, al mattino presto; allunghi; forza; un solo lavoro di qualità leggero a settimana (fartlek o salite brevi).
 - **Volume:** 30 → ~32 km su 4 giorni; lungo 12-13 km.
 - **Il passo non conta:** d'estate si giudicano FC e sensazioni, e si confronta con l'estate prima, mai con la primavera. Il calo di passo col caldo è fisiologia, non forma persa ([pattern 6](storico/pattern-ricorrenti.md)).
-- **Scopo:** costruire la base per la mezza senza il carico delle gare. Se il caldo pesa, il volume si sposta su bici o ellittica.
+- **Scopo:** costruire la base per l'autunno senza il carico delle gare. Se il caldo pesa, il volume si sposta su bici o ellittica.
 
-### P5 · Autunno: prima mezza maratona
-- **15 settimane:** 3+1, 3+1, 3+1, 1 specifica + 2 di taper. Dopo i 52 anni e con il volume più alto di sempre, valutare **2+1** se FC a riposo, HRV o fascia plantare lo chiedono.
-- **Gare:** settembre 10K 🏃 **facile, al posto del lungo**; ottobre 5K o 10K 🏃 a ritmo Tempo (facoltativa); **mezza a ottobre-novembre** 🎯, corsa **senza puntare al tempo** (stima 2:05-2:15).
-- **Volume:** 32 → ~38 km su 4 giorni (5 solo se serve); lungo fino a **16-18 km**.
-- **Condizione:** la fascia plantare. È il piano che la carica di più: se il fastidio al mattino torna, si allunga il piano o si sposta la mezza, non si forza.
+### P5 · Autunno: Best Woman 10K sotto 55'
+- **18 settimane:** 3+1, 3+1, 3+1, 3+1, 1 specifica + 1 di taper. Dopo i 52 anni e con il volume più alto di sempre, valutare **2+1** se FC a riposo, HRV o fascia plantare lo chiedono.
+- **Gare:** Corricolonna 10K (26/9, stimata) 🏃 **facile, al posto del lungo**; Trofeo S. Ippolito (3/10) 🏃 facoltativo, a ritmo Tempo; **Best Woman 10K (~5/12, Fiumicino)** 🎯 **sotto 55'** (5:30/km, VDOT ~35.8), la 10K preferita e veloce.
+- **Volume:** 32 → ~35 km su 4 giorni; lungo fino a **14-15 km**. Il blocco è per la 10K, ma il lungo cresce lo stesso: è la base della mezza di febbraio.
+- **Condizione:** la fascia plantare. Se il fastidio al mattino torna, si allunga il piano o si rinuncia al tempo alla Best Woman, non si forza.
 
-### P6 · Dicembre: 10K sotto 55'
-- **5 settimane:** 2 di recupero dalla mezza (la prima quasi libera, la seconda solo lento), 2 di lavoro specifico breve (soglia e ritmo gara), 1 di taper.
-- **Gara:** 10K 🎯 **sotto 55'** (5:30/km, VDOT ~35.8), 4-6 settimane dopo la mezza.
-- **Volume:** ~30-32 km.
-- **Se la mezza costa più del previsto,** la 10K si corre facile 🏃 e l'obiettivo si sposta alla primavera 2028.
+### Transizione · 6-26 dicembre 2027
+Tre settimane: la prima quasi libera, poi corse facili. Chiude un anno con 3 gare obiettivo e il primo volume da 35 km. È il momento per la visita medico-sportiva e, se si vuole, il test da sforzo con i gas (VO2max, soglie e FC max veri).
 
-### Transizione · 20 dicembre 2027 - 9 gennaio 2028
-Tre settimane, la più lunga: chiude un anno con 4 gare obiettivo e il primo volume da 35-40 km. È il momento per la visita medico-sportiva e, se si vuole, il test da sforzo con i gas (VO2max, soglie e FC max veri).
+### P6 · Inverno: prima mezza maratona
+- **~9 settimane** (27 dicembre 2027 - fine febbraio 2028): 2+1, 3+1, 1 di taper. È corto perché parte dalla base dell'autunno, con il lungo già a 14-15 km.
+- **Gara:** **RomaOstia Half Marathon** (fine febbraio 2028; nel 2027 il 28/2, data 2028 da verificare) 🎯, corsa **senza puntare al tempo** (stima 2:05-2:15). Vicina a casa, piatta, al fresco.
+- **Volume:** 35 → ~38 km su 4 giorni; lungo fino a **16-18 km**.
+- **Condizione:** è il piano che carica di più la fascia plantare. Se il fastidio al mattino torna, si allunga il piano e si sceglie un'altra mezza di primavera, non si forza.
 
 ## 2028, in breve
 
 Due macrocicli più lunghi, perché la base c'è:
-- **Primavera 2028 (~16 settimane):** 10K veloce 🎯 (verso il PB del 2017, ~53') o 5K sotto 25'. Una sola delle due come obiettivo, l'altra come gara allenante.
+- **Primavera 2028 (~10-12 settimane, dopo 2-3 settimane di recupero dalla RomaOstia):** 10K veloce 🎯 (verso il PB del 2017, ~53') o 5K sotto 25'. Una sola delle due come obiettivo, l'altra come gara allenante.
 - **Autunno 2028 (~16-18 settimane):** **seconda mezza, sotto 2h** 🎯 (5:41/km). Con le formule di Daniels serve **VDOT ~36.5**, cioè un 10K in ~54' (vedi [appendice VDOT](teoria/appendice-a-tabelle-vdot.md)).
 - Volume 35-45 km su 4-5 giorni, il punto ottimale per la salute. La maratona resta fuori dal piano, a meno di sceglierla consapevolmente.
 

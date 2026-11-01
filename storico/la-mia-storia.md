@@ -63,10 +63,10 @@ Il piano pluriennale ([periodizzazione](../periodizzazione-pluriennale.md)) port
 
 | Quando | Obiettivo | VDOT necessario | VDOT atteso |
 |---|---|---|---|
-| febbraio 2027 | 5K sotto 30' | 30.8 | 31-32 |
+| marzo 2027 | 5K sotto 30' | 30.8 | 31-32 |
 | maggio 2027 | 10K sotto 1h | 32.3 | 32.5-34 |
-| autunno 2027 | prima mezza maratona | — | — |
-| dicembre 2027 | 10K sotto 55' | 35.8 | 34.5-36.5 |
+| dicembre 2027 | 10K sotto 55' (Best Woman) | 35.8 | 34.5-36.5 |
+| febbraio 2028 | prima mezza maratona (RomaOstia) | — | — |
 | 2028 | mezza sotto 2h | 36.5 | 36-38.5 |
 | 2028 | battere il 53' del 2017 | 37.4 | 36-38.5 |
 

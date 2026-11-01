@@ -56,6 +56,6 @@
 
 ## Da battere
 - **Serie di 32 settimane:** la serie in corso (9 settimane) la supera **la settimana del 5 aprile 2027**, se ogni settimana c'è almeno una corsa (anche nelle transizioni, con 1-2 corse brevi). Per il [piano pluriennale](../periodizzazione-pluriennale.md) è il record più importante.
-- **Corsa più lunga (15 km):** arriva con i lunghi della mezza (P5, autunno 2027).
-- **Settimana più lunga (36.4 km):** arriva con P5 (~38 km di picco).
+- **Corsa più lunga (15 km):** arriva con i lunghi dell'autunno 2027 (P5, fino a 14-15 km) o al più tardi con quelli della mezza (P6, inverno 2027-28).
+- **Settimana più lunga (36.4 km):** arriva con P6 (~38 km di picco, inverno 2027-28).
 - **10 km in 53':** obiettivo bonus del 2028.

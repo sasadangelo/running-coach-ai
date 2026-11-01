@@ -12,16 +12,16 @@
 |---|---|---|---|
 | 8 novembre 2026 | Roma 5K tutta di corsa, al meglio (senza puntare al tempo) | ~95% | ⏳ |
 | 6 dicembre 2026 | Best Woman 10K, corsa tutta o quasi (almeno 8-9 km continui) | ~70% tutta di corsa | ⏳ |
-| gen-feb 2027 | **5K sotto 30'** | ~75-80% (~90% entro la primavera) | ⏳ |
-| primavera 2027 | **10K sotto 1h** | ~85-90% | ⏳ |
-| primavera-autunno 2027 | **Prima mezza maratona** | ~90%+ | ⏳ |
-| fine 2027 | **10K sotto 55'** | ~70% | ⏳ |
+| 13 marzo 2027 | **5K sotto 30'** (Acea Water Fun Run) | ~80% (12 settimane di preparazione; la partenza affollata può costare qualche secondo) | ⏳ |
+| 2 maggio 2027 | **10K sotto 1h** (Corri a Tor Vergata) | ~80-85% (7 settimane dopo la 5K) | ⏳ |
+| dicembre 2027 | **10K sotto 55'** (Best Woman, la 10K preferita) | ~70-75% (un autunno intero dedicato, senza una mezza prima) | ⏳ |
+| fine febbraio 2028 | **Prima mezza maratona** (RomaOstia) | ~90%+ | ⏳ |
 
 **Possibilità aperte (bonus, da non inseguire forzando):**
 
 | Obiettivo | Probabilità stimata | Note |
 |---|---|---|
-| **Mezza maratona sotto 2h** | ~55-60% (2028, seconda mezza) | Serve VDOT ~34 (10K in ~55-56') e lunghi da 16-18 km. La prima mezza (2:05-2:15 stimato) si corre senza puntare al tempo |
+| **Mezza maratona sotto 2h** | ~55-60% (2028, seconda mezza) | Serve VDOT ~34 (10K in ~55-56') e lunghi da 16-18 km. La prima mezza (RomaOstia, febbraio 2028, 2:05-2:15 stimato) si corre senza puntare al tempo |
 | Battere il PB 10K del 2017 (~53') | ~40% (2028) | A 54-55 anni vale circa un 48-49' corso a 43 anni |
 | 5K sotto 25' | ~30-35% (2028) | Equivale a un 10K in ~52': un po' oltre il PB |
 | Prima maratona (tutta di corsa) | ~70% (2028) | Solo se un giorno la scelgo davvero: richiede volumi e lunghi che pesano sul piede |
@@ -52,22 +52,26 @@
 
 Piani di allenamento, settimane e gare per ogni piano: [periodizzazione-pluriennale.md](periodizzazione-pluriennale.md).
 
-*Periodi ipotetici: le date reali vanno verificate sui calendari FIDAL Lazio o sui siti delle gare.*
+*Date dal calendario gare del Lazio 2026-2027 (maratoneta.it, letto il 1/11/2026). Quelle dopo giugno 2027 sono stimate dalle edizioni precedenti: vanno verificate quando escono i calendari.*
 
 | Mese | Gara | Tipo |
 |---|---|---|
 | novembre 2026 | Roma 5K (8 nov) | 🎯 tutta di corsa |
 | dicembre 2026 | Best Woman 10K (6 dic) | 🎯 tutta di corsa |
-| gennaio 2027 | 10K (es. Corsa di Miguel) | 🏃 facile, al posto del lungo |
-| febbraio 2027 | 5K | 🎯 **sotto 30'** |
-| marzo 2027 | 5K o 10K | 🏃 5K a ritmo Tempo o 10K facile |
-| aprile 2027 | 5K | 🏃 a ritmo Tempo |
-| maggio 2027 | 10K | 🎯 **sotto 1h** |
-| giugno 2027 | 5K serale | 🏃 per divertimento |
+| 17 gennaio 2027 | Corsa di Miguel 10K (Roma) | 🏃 facile, al posto del lungo |
+| 14 febbraio 2027 | CorriFregene 10K (ore 8:45, piatta) | 🏃 facile, al posto del lungo |
+| sabato 13 marzo 2027 | Acea Water Fun Run 5K (Roma, non competitiva, weekend della maratona) | 🎯 **sotto 30'** |
+| 11 aprile 2027 | Roma Appia Run 7.5K (non competitiva) | 🏃 facile, al posto del lungo: 2-3 km di riscaldamento prima per arrivare a ~10 km; attenzione al basolato |
+| 2 maggio 2027 | Corri a Tor Vergata 10K (ore 9, nazionale) | 🎯 **sotto 1h** |
+| 9 maggio 2027 | Race for the Cure Roma | 🏃 la gara di tradizione: corsa facile, per esserci, una settimana dopo Tor Vergata |
+| giugno 2027 | 5K serale (da trovare) | 🏃 per divertimento |
 | luglio-agosto 2027 | — | pausa gare (caldo) |
-| settembre 2027 | 10K | 🏃 facile, al posto del lungo |
-| ottobre-novembre 2027 | **Prima mezza maratona** | 🎯 la grande soddisfazione del 2027 |
-| dicembre 2027 | 10K | 🎯 **sotto 55'** (4-6 settimane dopo la mezza) |
+| 26 settembre 2027 (stimata) | Corricolonna 10K | 🏃 facile, al posto del lungo (percorso con salite: il passo non conta) |
+| 3 ottobre 2027 | Trofeo S. Ippolito (Fiumicino) | 🏃 facoltativa, distanza da verificare |
+| ~5 dicembre 2027 | **Best Woman 10K** (Fiumicino, la 10K preferita) | 🎯 **sotto 55'** |
+| fine febbraio 2028 | **RomaOstia Half Marathon** | 🎯 **prima mezza maratona**, senza puntare al tempo |
+
+**Scartate:** la Mezza di Fiumicino (~28/11), che cade una settimana prima della Best Woman e la rovinerebbe; Sabaudia (inizio novembre), troppo lontana; la Mezza dei Castelli Romani (3/10), collinare; le gare a meno di 2-3 settimane da un obiettivo (Vola Ciampino 7/3, Talenti Run 21/3, Granai Run 18/4); i trail, per la fascia plantare; Rincorriamo la Pace (Ostia), per il caldo. Nel 2027 il 5K di febbraio non c'è: l'obiettivo è passato all'Acea del 13 marzo.
 
 ## Come ci arrivo
 

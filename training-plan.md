@@ -174,7 +174,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 
 - **Lunedì 2**: riposo dalla corsa (mobilità e stretching sì).
 - **Martedì 3 — Ripetute leggere** (riportate a martedì il 1/11: il lungo è stato corso domenica, quindi martedì è a due giorni dall'ultima corsa). Se FC a riposo >60 per l'estrazione, metà lenta della fascia: 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1'), 0.5km def. — 1.80km
-- **Giovedì 5 — Shakeout**: 0.3km risc., 1km @ ~7:45/km facile, rec. — 1.60km, corsa breve e leggera
+- **Giovedì 5 — Shakeout** (12-15 minuti, 1.6 km in tutto): 300 m camminando e corricchiando, 1 km di corsa facile a ~7:45/km, 300 m di defaticamento. Se vuoi, alla fine 2-3 allunghi rilassati da 60-80 m. Deve sciogliere le gambe, non stancarle
 - **Venerdì 6 e sabato 7**: riposo completo
 - **Domenica 8 novembre — GARA: Roma 5K**, corsa progressiva, al meglio ma non a tutta. **Km 1-2** a 6:30-6:40/km, FC sotto 163; **km 3** a 6:15-6:20, attorno alla soglia (~165); **km 4-5** liberi, si spinge se ne hai. Atteso ~31:30-32:00. Con la fascia H9: FC media dal 10' alla fine (verifica della FC di soglia) e picco della volata (limite minimo della FC max).
   - *Perché non a 7:00-7:30 (decisione del 1/11):* quella partenza era pensata quando il lungo era di 4-5 km; oggi il lungo è di 7 km e il Tempo continuo a 6:12 è stato votato RPE 3. Correrla tutta non è più in dubbio, e una partenza così lenta falserebbe sia il VDOT sia la FC di soglia. Perché non a tutta: fascia plantare da far vedere, estrazione di una settimana prima, e una gara al massimo costerebbe una settimana di recupero.

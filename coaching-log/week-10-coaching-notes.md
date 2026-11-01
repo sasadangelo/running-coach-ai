@@ -84,8 +84,9 @@ Nelle prime settimane l'allenamento viene assorbito bene. La stanchezza al risve
 **In anticipo sugli obiettivi.** 26/26 sedute, soglia confermata, lungo a 7 km con decoupling minimo: la Roma 5K corsa tutta è ampiamente alla portata. Punti aperti: fascia plantare sx (da far vedere prima della 10K) e recupero dall'estrazione.
 
 ## Recommendations (S10, settimana della gara)
-- **Lun 2 e mar 3:** riposo dalla corsa (il lungo di lunedì non serve più). Mobilità e stretching sì.
-- **Mer 4:** 4x200 leggere. **Gio 5:** shakeout 1 km facile. **Ven 6-sab 7:** riposo, a letto entro le 22:30.
+- **Lun 2:** riposo dalla corsa. Mobilità ed equilibrio sì.
+- **Mar 3:** 4x200 leggere (riportate a martedì su richiesta dell'atleta, che è a casa: il lungo è stato domenica, quindi due giorni di distanza). Se FC a riposo >60, metà lenta della fascia.
+- **Gio 5:** shakeout 1 km facile (scelta dell'atleta). **Ven 6-sab 7:** riposo completo, a letto entro le 22:30.
 - **Dom 8, Roma 5K, progressiva** (deciso il 1/11 su domanda dell'atleta: una partenza a 7:00-7:30 falserebbe VDOT e FC di soglia): km 1-2 a 6:30-6:40 (FC <163), km 3 a 6:15-6:20, km 4-5 liberi; atteso ~31:30-32:00. Con la fascia: FC media dal 10' (soglia) e picco della volata (limite minimo della FC max). Se in settimana FC a riposo >60 o HRV bassa: partenza prudente e gara non usata per i ritmi.
 - **Ritmi dopo la gara:** il VDOT di una gara non tirata al massimo è un valore minimo. I ritmi si alzano solo se supera quello del test di soglia (~30-31); altrimenti restano invariati.
 - **Fascia plantare:** prenotare la visita (medico sportivo o fisioterapista) per dopo la gara.

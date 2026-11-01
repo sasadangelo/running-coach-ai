@@ -60,10 +60,10 @@ Piani di allenamento, settimane e gare per ogni piano: [periodizzazione-plurienn
 | dicembre 2026 | Best Woman 10K (6 dic) | 🎯 tutta di corsa |
 | 17 gennaio 2027 | Corsa di Miguel 10K (Roma) | 🏃 facile, al posto del lungo |
 | 14 febbraio 2027 | CorriFregene 10K (ore 8:45, piatta) | 🏃 facile, al posto del lungo |
-| sabato 13 marzo 2027 | Acea Water Fun Run 5K (Roma, non competitiva, weekend della maratona) | 🎯 **sotto 30'** |
+| sabato 13 marzo 2027 | Acea Water Fun Run 5K (Roma, non competitiva, weekend della maratona) | 🎯 **sotto 30'**. Il percorso 2026 misurava 4.87 km sul Garmin: conta il tempo ai 5.00 km del Garmin (su 4.87 km l'equivalente è ~29:13) |
 | 11 aprile 2027 | Roma Appia Run 7.5K (non competitiva) | 🏃 facile, al posto del lungo: 2-3 km di riscaldamento prima per arrivare a ~10 km; attenzione al basolato |
 | 2 maggio 2027 | Corri a Tor Vergata 10K (ore 9, nazionale) | 🎯 **sotto 1h** |
-| 9 maggio 2027 | Race for the Cure Roma | 🏃 la gara di tradizione: corsa facile, per esserci, una settimana dopo Tor Vergata |
+| 9 maggio 2027 | Race for the Cure Roma (10 km) | 🏃 la gara di tradizione: corsa facile, per esserci, una settimana dopo Tor Vergata; se le gambe sono stanche, anche con tratti camminati |
 | giugno 2027 | 5K serale (da trovare) | 🏃 per divertimento |
 | luglio-agosto 2027 | — | pausa gare (caldo) |
 | 26 settembre 2027 (stimata) | Corricolonna 10K | 🏃 facile, al posto del lungo (percorso con salite: il passo non conta) |

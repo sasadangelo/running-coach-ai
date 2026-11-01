@@ -46,7 +46,7 @@ Prima settimana quasi libera (camminate, 1-2 corse brevi se se ne ha voglia), se
 - **12 settimane:** 3+1 (base e forza), 3+1 (soglia e ripetute), 2 specifiche + 1 di avvicinamento + 1 di taper.
 - **Gare:** Corsa di Miguel 10K (17/1) e CorriFregene 10K (14/2) 🏃 **facili, al posto del lungo**; **Acea Water Fun Run 5K (sabato 13/3)** 🎯 **sotto 30'** (6:00/km, VDOT ~30.8).
 - **Da decidere quando si scrive il piano:** con i mesocicli 3+1, Miguel e Fregene cadono alla fine della 4ª e dell'8ª settimana, cioè negli scarichi. Si può spostare uno scarico, oppure usare la 10K molto facile come unica seduta lunga della settimana di scarico.
-- **Acea:** è la corsa non competitiva del weekend della Maratona di Roma, con migliaia di persone. Bisogna partire davanti, vicino all'inizio della griglia, e accettare che il primo km costi qualche secondo. Il tempo è quello del Garmin.
+- **Acea:** è la corsa non competitiva del weekend della Maratona di Roma, con migliaia di persone. Bisogna partire davanti, vicino all'inizio della griglia, e accettare che il primo km costi qualche secondo. Il tempo è quello del Garmin, e il percorso 2026 era di 4.87 km: l'obiettivo si misura ai **5.00 km del Garmin** (su 4.87 km l'equivalente è ~29:13).
 - **Volume:** 20 → ~25 km su 3 giorni. **Forza in palestra 2 volte a settimana** da gennaio.
 - **Condizione di prontezza:** Tempo continuo da 3000-3500 m a 6:00/km o meglio, chiuso con margine.
 
@@ -61,7 +61,7 @@ Dopo una 5K bastano 4-5 giorni: una settimana di sola corsa facile, poi si ripar
 - **Lungo:** fino a 11-12 km.
 
 ### Transizione · 3-16 maggio 2027
-Due settimane leggere dopo la 10K. Domenica 9/5 la **Race for the Cure Roma** 🏃, la gara di tradizione: si corre facile, per esserci, perché una settimana dopo una 10K al massimo il recupero non è finito (e nel 2026 c'erano oltre 24°C).
+Due settimane leggere dopo la 10K. Domenica 9/5 la **Race for the Cure Roma** (10 km) 🏃, la gara di tradizione: si corre facile, anche con tratti camminati se le gambe sono stanche, per esserci, perché una settimana dopo una 10K al massimo il recupero non è finito (e nel 2026 c'erano oltre 24°C).
 
 ### P4 · Estate: base
 - **11 settimane** (17 maggio - 1 agosto). Unica gara: una 5K serale 🏃 per divertimento a giugno, se il caldo lo permette.

@@ -489,10 +489,88 @@ Notti ≥ 7h               4/29       11/29
                 <div><span class="muted">CTL oggi:</span> <span class="accent">17.5</span></div>
                 <div><span class="muted">ATL oggi:</span> <span class="accent">25.3</span></div>
                 <div><span class="muted">TSB oggi:</span> <span class="warning">-2.6</span> <span class="muted text-sm">(zona grigia)</span></div>
-                <div><span class="muted">ACWR oggi:</span> <span class="warning">1.44</span> <span class="muted text-sm">(vedi nota*)</span></div>
+                <div><span class="muted">ACWR oggi:</span> <span class="warning">1.44</span> <span class="muted text-sm">(attenzione)</span></div>
             </div>
             <p class="muted text-sm mt-3">Il CTL (forma di fondo) continua a salire: ~8 a fine settembre, 14.4 il 18/10, 17.5 oggi. Lo scarico di S8 lo ha solo fermato, senza farlo scendere, mentre l'ATL è calato: è quello che deve fare uno scarico. Il 1/11 sono stati aggiunti i TSS mancanti di due sedute di S4 (22 e 27 settembre): i valori di fine settembre sono un po' più alti di prima. Fasce TSB standard: &gt;+25 molto fresco, +5/+25 fresco, -10/+5 zona grigia, -30/-10 zona ottimale di allenamento, &lt;-30 alto rischio. Con il volume basso di S10 il TSB salirà verso il positivo il giorno della gara.</p>
-            <p class="muted text-sm mt-2">*ACWR = ATL/CTL (Gabbett): 0.8-1.3 basso rischio, &gt;1.5 rischio elevato. Con un CTL ancora basso e solo 3 sedute a settimana il rapporto oscilla molto nei giorni di seduta (1.4-1.6 in S9, contro 1.7-1.9 a metà ottobre), quindi va letto con cautela. La tendenza è giusta: la base cresce e il rapporto scende.</p>
+        </div>
+
+        <!-- Injury risk (ACWR) -->
+        <div class="card p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">RISCHIO INFORTUNIO (ACWR)</h2>
+            <p class="muted text-sm mb-3">ACWR = ATL/CTL (Gabbett): quanto il carico dell'ultima settimana supera la base delle ultime sei. Fasce: &lt;0.8 sotto-allenato, 0.8-1.3 basso rischio, 1.3-1.5 attenzione, &gt;1.5 rischio elevato. Si valuta solo dopo 42 giorni di storico, quando il CTL si è assestato: prima il rapporto è gonfiato da una base artificialmente bassa (fino a 6.0 a fine agosto). Passa sopra un punto per il valore del giorno.</p>
+            <svg viewBox="0 0 900 250" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ACWR giornaliero e rischio infortunio">
+<rect x="45" y="177.5" width="745" height="22.5" fill="#5aaa5a" opacity="0.06"/>
+<text x="797" y="192.8" text-anchor="start" fill="#5aaa5a" font-family="Courier New" font-size="10" opacity="0.9">sotto-allenato</text>
+<rect x="45" y="121.2" width="745" height="56.2" fill="#33ff33" opacity="0.14"/>
+<text x="797" y="153.4" text-anchor="start" fill="#33ff33" font-family="Courier New" font-size="10" opacity="0.9">basso rischio</text>
+<rect x="45" y="98.8" width="745" height="22.5" fill="#ffff33" opacity="0.14"/>
+<text x="797" y="114.0" text-anchor="start" fill="#ffff33" font-family="Courier New" font-size="10" opacity="0.9">attenzione</text>
+<rect x="45" y="20.0" width="745" height="78.8" fill="#ff5555" opacity="0.14"/>
+<text x="797" y="63.4" text-anchor="start" fill="#ff5555" font-family="Courier New" font-size="10" opacity="0.9">rischio elevato</text>
+<line x1="45" y1="177.5" x2="790" y2="177.5" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="181.5" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">0.8</text>
+<line x1="45" y1="121.2" x2="790" y2="121.2" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="125.2" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">1.3</text>
+<line x1="45" y1="98.8" x2="790" y2="98.8" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="102.8" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">1.5</text>
+<line x1="45" y1="42.5" x2="790" y2="42.5" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="46.5" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">2.0</text>
+<rect x="45" y="20" width="439.2" height="180" fill="#0f0f0f" opacity="0.85"/>
+<text x="264.6" y="105" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="12">non valutabile</text>
+<text x="264.6" y="121" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="10">storico &lt; 42 giorni (CTL non assestato)</text>
+<polyline fill="none" stroke="#1a7a1a" stroke-width="1.5" points="45.0,20.0 56.1,20.0 67.2,20.0 78.4,20.0 89.5,20.0 100.6,20.0 111.7,20.0 122.8,20.0 134.0,20.0 145.1,20.0 156.2,20.0 167.3,20.0 178.4,20.0 189.6,20.0 200.7,20.0 211.8,20.0 222.9,20.0 234.0,20.0 245.1,20.0 256.3,20.0 267.4,20.0 278.5,20.0 289.6,35.8 300.7,20.0 311.9,32.4 323.0,20.0 334.1,30.1 345.2,20.0 356.3,38.0 367.5,66.1 378.6,49.3 389.7,76.3 400.8,58.3 411.9,84.1 423.1,42.5 434.2,70.6 445.3,94.3 456.4,60.5 467.5,85.3 478.7,51.5 489.8,77.4"/>
+<polyline fill="none" stroke="#66ff66" stroke-width="2" points="489.8,77.4 500.9,40.3 512.0,67.3 523.1,92.0 534.3,68.4 545.4,93.1 556.5,59.4 567.6,85.3 578.7,49.3 589.9,76.3 601.0,99.9 612.1,76.3 623.2,98.8 634.3,72.9 645.4,97.6 656.6,74.0 667.7,97.6 678.8,119.0 689.9,106.6 701.0,125.8 712.2,115.6 723.3,133.6 734.4,87.5 745.5,108.9 756.6,98.8 767.8,119.0 778.9,137.0 790.0,105.5"/>
+<circle cx="489.8" cy="77.4" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>05/10 · ACWR 1.69 · rischio infortunio elevato</title></circle>
+<circle cx="500.9" cy="40.3" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>06/10 · ACWR 2.02 · rischio infortunio elevato</title></circle>
+<circle cx="512.0" cy="67.3" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>07/10 · ACWR 1.78 · rischio infortunio elevato</title></circle>
+<circle cx="523.1" cy="92.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>08/10 · ACWR 1.56 · rischio infortunio elevato</title></circle>
+<circle cx="534.3" cy="68.4" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>09/10 · ACWR 1.77 · rischio infortunio elevato</title></circle>
+<circle cx="545.4" cy="93.1" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>10/10 · ACWR 1.55 · rischio infortunio elevato</title></circle>
+<circle cx="556.5" cy="59.4" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>11/10 · ACWR 1.85 · rischio infortunio elevato</title></circle>
+<circle cx="567.6" cy="85.3" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>12/10 · ACWR 1.62 · rischio infortunio elevato</title></circle>
+<circle cx="578.7" cy="49.3" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>13/10 · ACWR 1.94 · rischio infortunio elevato</title></circle>
+<circle cx="589.9" cy="76.3" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>14/10 · ACWR 1.70 · rischio infortunio elevato</title></circle>
+<circle cx="601.0" cy="99.9" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>15/10 · ACWR 1.49 · fascia di attenzione</title></circle>
+<circle cx="612.1" cy="76.3" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>16/10 · ACWR 1.70 · rischio infortunio elevato</title></circle>
+<circle cx="623.2" cy="98.8" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>17/10 · ACWR 1.50 · fascia di attenzione</title></circle>
+<circle cx="634.3" cy="72.9" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>18/10 · ACWR 1.73 · rischio infortunio elevato</title></circle>
+<circle cx="645.4" cy="97.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>19/10 · ACWR 1.51 · rischio infortunio elevato</title></circle>
+<circle cx="656.6" cy="74.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>20/10 · ACWR 1.72 · rischio infortunio elevato</title></circle>
+<circle cx="667.7" cy="97.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>21/10 · ACWR 1.51 · rischio infortunio elevato</title></circle>
+<circle cx="678.8" cy="119.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>22/10 · ACWR 1.32 · fascia di attenzione</title></circle>
+<circle cx="689.9" cy="106.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>23/10 · ACWR 1.43 · fascia di attenzione</title></circle>
+<circle cx="701.0" cy="125.8" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>24/10 · ACWR 1.26 · fascia a basso rischio</title></circle>
+<circle cx="712.2" cy="115.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>25/10 · ACWR 1.35 · fascia di attenzione</title></circle>
+<circle cx="723.3" cy="133.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>26/10 · ACWR 1.19 · fascia a basso rischio</title></circle>
+<circle cx="734.4" cy="87.5" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>27/10 · ACWR 1.60 · rischio infortunio elevato</title></circle>
+<circle cx="745.5" cy="108.9" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>28/10 · ACWR 1.41 · fascia di attenzione</title></circle>
+<circle cx="756.6" cy="98.8" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>29/10 · ACWR 1.50 · rischio infortunio elevato</title></circle>
+<circle cx="767.8" cy="119.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>30/10 · ACWR 1.32 · fascia di attenzione</title></circle>
+<circle cx="778.9" cy="137.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>31/10 · ACWR 1.16 · fascia a basso rischio</title></circle>
+<circle cx="790.0" cy="105.5" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>01/11 · ACWR 1.44 · fascia di attenzione</title></circle>
+<line x1="489.8" y1="71.1" x2="556.5" y2="71.1" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S6 · ACWR medio 1.75</title></line>
+<text x="523.1" y="63.1" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S6 1.75</text>
+<line x1="567.6" y1="79.8" x2="634.3" y2="79.8" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S7 · ACWR medio 1.67</title></line>
+<text x="601.0" y="71.8" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S7 1.67</text>
+<line x1="645.4" y1="105.2" x2="712.2" y2="105.2" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S8 · ACWR medio 1.44</title></line>
+<text x="678.8" y="97.2" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S8 1.44</text>
+<line x1="723.3" y1="112.9" x2="790.0" y2="112.9" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S9 · ACWR medio 1.37</title></line>
+<text x="756.6" y="104.9" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S9 1.37</text>
+<text x="45.0" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">26/08</text>
+<text x="111.7" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/09</text>
+<text x="267.4" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">15/09</text>
+<text x="445.3" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/10</text>
+<text x="601.0" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">15/10</text>
+<text x="790.0" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/11</text>
+<line x1="560" y1="240" x2="580" y2="240" stroke="#66ff66" stroke-width="2"/><text x="584" y="244" fill="#66ff66" font-family="Courier New" font-size="12">ACWR giornaliero</text>
+<line x1="730" y1="240" x2="750" y2="240" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/><text x="754" y="244" fill="#ffffff" font-family="Courier New" font-size="12">media settimana</text>
+</svg>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg mt-4">
+                <div><span class="muted">Oggi:</span> <span class="warning">1.44 · attenzione</span></div>
+                <div><span class="muted">Media S9:</span> <span class="warning">1.37 · attenzione</span></div>
+                <div><span class="muted">Tendenza:</span> <span class="success">↓ in calo da S6</span></div>
+            </div>
+            <p class="muted text-sm mt-3">Con 3 sedute a settimana l'ACWR giornaliero sale nei giorni di corsa e scende in quelli di riposo: conta la media della settimana, non il singolo picco. Le medie raccontano la storia: <span class="accent">S6 1.75 → S7 1.67 → S8 1.44 → S9 1.37</span>. A inizio ottobre il carico è cresciuto molto più in fretta della base, ed è anche il periodo in cui la fascia plantare ha cominciato a farsi sentire (13, 16 e 17 ottobre): una coincidenza da tenere a mente, non una prova di causa. Lo scarico di S8 ha riportato il rapporto verso la fascia di attenzione, e con il volume basso di S10 dovrebbe entrare nella fascia a basso rischio. Le soglie di Gabbett vengono da atleti di squadra che si allenano quasi ogni giorno: per chi corre 3 volte a settimana sono un'indicazione, non un limite rigido. Obiettivo per il blocco verso la 10K: media settimanale sotto 1.5, idealmente 1.3.</p>
         </div>
 
         <!-- Coach's Commentary -->
@@ -511,7 +589,7 @@ Notti ≥ 7h               4/29       11/29
                 la fascia plantare sinistra (falla vedere prima della 10K) e la FC a riposo, salita a 60-62 con l'estrazione. Se tra una settimana non è tornata verso 57, ne riparliamo.</p>
 
                 <p><span class="success font-bold">Il punto:</span><br>
-                ottobre è stato il mese della resistenza: +31% di km con lo stesso RPE e mezz'ora di sonno in più a notte. Ora la settimana della gara: poco volume, gambe fresche, e domenica la Roma 5K corsa tutta, partendo piano.</p>
+                ottobre è stato il mese della resistenza: +31% di km con lo stesso RPE e mezz'ora di sonno in più a notte. Ora la settimana della gara: poco volume, gambe fresche, e domenica la Roma 5K progressiva: due km controllati, uno a soglia, poi quello che hai.</p>
             </div>
         </div>
 
@@ -525,7 +603,7 @@ Notti ≥ 7h               4/29       11/29
                     <li>Mercoledì 4 — Ripetute leggere: 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1'), 0.5km def.</li>
                     <li>Giovedì 5 — Shakeout: 0.3km risc., 1km @ ~7:45/km facile — corsa breve e leggera.</li>
                     <li>Venerdì 6 e sabato 7 — Riposo completo, a letto entro le 22:30.</li>
-                    <li><span class="warning">Domenica 8 — Roma 5K</span>: tutta di corsa. I primi km a 7:00-7:30/km, se stai bene stringi negli ultimi 1-2 km. Con la fascia: FC media dal 10' (FC di soglia) e picco della volata.</li>
+                    <li><span class="warning">Domenica 8 — Roma 5K</span>, progressiva: km 1-2 a 6:30-6:40 (FC &lt;163), km 3 a 6:15-6:20, km 4-5 liberi. Atteso ~31:30-32:00. Con la fascia: FC media dal 10' (FC di soglia) e picco della volata. Se in settimana la FC a riposo resta sopra 60 o l'HRV è bassa: partenza prudente a 7:00-7:30.</li>
                 </ul>
             </div>
         </div>

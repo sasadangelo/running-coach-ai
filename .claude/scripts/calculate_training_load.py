@@ -23,6 +23,9 @@ from pathlib import Path
 
 CTL_DAYS = 42
 ATL_DAYS = 7
+# The injury-risk read of ACWR needs a settled CTL: before CTL_DAYS of history the
+# chronic load is artificially low and ATL/CTL is inflated (6.0 on day one).
+ACWR_RELIABLE_AFTER_DAYS = CTL_DAYS
 
 DATE_RE = re.compile(r"^### (\d{4}-\d{2}-\d{2}) ")
 TSS_RE = re.compile(r"^\*\*TSS\*\*:\s*([\d.]+)")
@@ -80,10 +83,12 @@ def interpret_tsb(tsb: float) -> str:
     return "zona ad alto rischio (sovraccarico)"
 
 
-def interpret_acwr(acwr: float | None) -> str:
+def interpret_acwr(acwr: float | None, days_logged: int = ACWR_RELIABLE_AFTER_DAYS) -> str:
     """Acute:Chronic Workload Ratio (Gabbett) - injury-risk read on ATL relative to CTL."""
     if acwr is None:
         return "n/d"
+    if days_logged < ACWR_RELIABLE_AFTER_DAYS:
+        return f"non valutabile (storico < {ACWR_RELIABLE_AFTER_DAYS} giorni)"
     if acwr < 0.8:
         return "sotto-allenato"
     if acwr <= 1.3:
@@ -111,6 +116,9 @@ def build_markdown(rows: list[dict]) -> str:
         "Fasce TSB (convenzione TrainingPeaks/Coggan): >+25 molto fresco, +5/+25 fresco, -10/+5 zona grigia, "
         "-30/-10 zona ottimale di allenamento, <-30 alto rischio.",
         "Fasce ACWR (Gabbett): <0.8 sotto-allenato, 0.8-1.3 basso rischio, 1.3-1.5 attenzione, >1.5 rischio infortunio elevato.",
+        f"Il rischio si valuta solo dopo {ACWR_RELIABLE_AFTER_DAYS} giorni di storico, quando il CTL si e assestato: prima l'ACWR "
+        "e gonfiato da un CTL artificialmente basso. Con 3 sedute a settimana l'ACWR sale nei giorni di seduta e scende nei "
+        "giorni di riposo: conta la tendenza, non il singolo picco.",
         "",
     ]
 
@@ -122,7 +130,7 @@ def build_markdown(rows: list[dict]) -> str:
     acwr = last["atl"] / last["ctl"] if last["ctl"] else None
     lines.append(
         f"**Stato attuale ({last['date'].isoformat()})**: CTL {last['ctl']:.1f} | ATL {last['atl']:.1f} | "
-        f"TSB {last['tsb']:+.1f} ({interpret_tsb(last['tsb'])}) | ACWR {acwr:.2f} ({interpret_acwr(acwr)})" if acwr is not None else
+        f"TSB {last['tsb']:+.1f} ({interpret_tsb(last['tsb'])}) | ACWR {acwr:.2f} ({interpret_acwr(acwr, days_logged)})" if acwr is not None else
         f"**Stato attuale ({last['date'].isoformat()})**: CTL {last['ctl']:.1f} | ATL {last['atl']:.1f} | "
         f"TSB {last['tsb']:+.1f} ({interpret_tsb(last['tsb'])})"
     )
@@ -135,13 +143,14 @@ def build_markdown(rows: list[dict]) -> str:
         )
     lines.append("")
 
-    lines.append("| Data | TSS | CTL | ATL | TSB | ACWR |")
-    lines.append("| ---------- | ---: | ---: | ---: | ---: | ---: |")
-    for row in rows:
+    lines.append("| Data | TSS | CTL | ATL | TSB | ACWR | Rischio |")
+    lines.append("| ---------- | ---: | ---: | ---: | ---: | ---: | --- |")
+    for day_number, row in enumerate(rows, 1):
         row_acwr = row["atl"] / row["ctl"] if row["ctl"] else None
         acwr_str = f"{row_acwr:.2f}" if row_acwr is not None else "n/d"
+        risk = interpret_acwr(row_acwr, day_number) if day_number >= ACWR_RELIABLE_AFTER_DAYS else "-"
         lines.append(
-            f"| {row['date'].isoformat()} | {row['tss']:.0f} | {row['ctl']:.1f} | {row['atl']:.1f} | {row['tsb']:+.1f} | {acwr_str} |"
+            f"| {row['date'].isoformat()} | {row['tss']:.0f} | {row['ctl']:.1f} | {row['atl']:.1f} | {row['tsb']:+.1f} | {acwr_str} | {risk} |"
         )
     lines.append("")
 
@@ -171,7 +180,7 @@ def main():
     if rows:
         last = rows[-1]
         acwr = last["atl"] / last["ctl"] if last["ctl"] else None
-        acwr_part = f" | ACWR {acwr:.2f} ({interpret_acwr(acwr)})" if acwr is not None else ""
+        acwr_part = f" | ACWR {acwr:.2f} ({interpret_acwr(acwr, len(rows))})" if acwr is not None else ""
         print(f"CTL {last['ctl']:.1f} | ATL {last['atl']:.1f} | TSB {last['tsb']:+.1f} ({interpret_tsb(last['tsb'])}){acwr_part}")
     print(f"Wrote {output_path} ({len(rows)} days)")
 

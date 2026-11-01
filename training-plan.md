@@ -48,7 +48,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 
 **Criterio di regolarità** (ripetute e Tempo): le frazioni devono restare entro 2-3" l'una dall'altra, l'ultima veloce come la prima. Se sono regolari, nella seduta successiva si può stare nella metà veloce della fascia; se le ultime calano di 3-4", nella metà lenta.
 
-**Revisione dei ritmi del 15 ottobre**: fasce di 400m, 800m e Tempo continuo riviste (appunti dell'11/10 nelle note di week-7, confermati dalle 8x400 del 13/10 a 2:08-2:14), FC max portata a 185, 1600m tolto dalle ripetute, recupero camminato ammesso sulle ripetute brevi. Dopo la Roma 5K tutti i ritmi si ricalcolano dal VDOT della gara.
+**Revisione dei ritmi del 15 ottobre**: fasce di 400m, 800m e Tempo continuo riviste (appunti dell'11/10 nelle note di week-7, confermati dalle 8x400 del 13/10 a 2:08-2:14), FC max portata a 185, 1600m tolto dalle ripetute, recupero camminato ammesso sulle ripetute brevi. Dopo la Roma 5K si confronta il VDOT della gara con quello del test di soglia del 29/10 (6:15/km, VDOT ~30-31): la gara è progressiva, non a tutta, quindi il suo VDOT è un valore minimo. I ritmi si alzano solo se il VDOT della gara è più alto; se è più basso restano ancorati al test. Il primo VDOT vero arriverà da una gara corsa a fondo (la 5K di febbraio o la 10K, se chiusa forte).
 
 ## Struttura del Piano
 
@@ -176,7 +176,9 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 - **Mercoledì 4 — Ripetute leggere** (spostate da martedì, per non correre due giorni di fila): 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1'), 0.5km def. — 1.80km
 - **Giovedì — Shakeout**: 0.3km risc., 1km @ ~7:45/km facile, rec. — 1.60km, corsa breve e leggera
 - **Venerdì/Sabato**: riposo completo
-- **Domenica 8 novembre — GARA: Roma 5K**. Obiettivo: correrla tutta di corsa continua. Parti controllato (vicino a 7:00-7:30/km i primi km, non ai ritmi da tempo/ripetute), e se ti senti bene stringi negli ultimi 1-2km. L'obiettivo è arrivare in fondo correndo, non il tempo.
+- **Domenica 8 novembre — GARA: Roma 5K**, corsa progressiva, al meglio ma non a tutta. **Km 1-2** a 6:30-6:40/km, FC sotto 163; **km 3** a 6:15-6:20, attorno alla soglia (~165); **km 4-5** liberi, si spinge se ne hai. Atteso ~31:30-32:00. Con la fascia H9: FC media dal 10' alla fine (verifica della FC di soglia) e picco della volata (limite minimo della FC max).
+  - *Perché non a 7:00-7:30 (decisione del 1/11):* quella partenza era pensata quando il lungo era di 4-5 km; oggi il lungo è di 7 km e il Tempo continuo a 6:12 è stato votato RPE 3. Correrla tutta non è più in dubbio, e una partenza così lenta falserebbe sia il VDOT sia la FC di soglia. Perché non a tutta: fascia plantare da far vedere, estrazione di una settimana prima, e una gara al massimo costerebbe una settimana di recupero.
+  - **Condizione:** se in settimana la FC a riposo resta sopra 60 o l'HRV è bassa, si torna alla partenza prudente (7:00-7:30, si stringe negli ultimi 1-2 km) e la gara non si usa per i ritmi.
 
 ### Settimana 11 — Recupero breve (9-15 novembre) — Fase G
 **Volume totale**: 15.00 km

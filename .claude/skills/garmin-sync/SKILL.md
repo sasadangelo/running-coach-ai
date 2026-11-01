@@ -108,6 +108,7 @@ The script will:
 3. Drop stray sub-threshold activities (default under 0.8km - accidental watch start/stop blips, not real sessions); it prints which ones it ignored
 4. For each remaining activity, fetch lap splits via `get_activity_splits` (shown only when there's more than one lap) and compute a run/walk time split from second-by-second speed samples via `get_activity_details`
 5. Fetch the athlete's post-run self-evaluation via `get_activity` (`summaryDTO.directWorkoutRpe`, 10-100 scale, and `directWorkoutFeel`, 0-100): written as `**RPE**` (1-10), `**sRPE**` (Foster session load = RPE x minutes) and `**Sensazione**` when the athlete rated the run
+5b. Fetch the weather at the start of each run via `get_activity_weather` (nearest station, for this athlete Roma Fiumicino airport; imperial units converted to Celsius): written as `**Meteo**` with temperature, apparent temperature, dew point, humidity, sky and the summer heat band (`caldo` / `molto caldo`, thresholds in `periodizzazione-pluriennale.md`, P4). It is shade air temperature at a sea-ventilated airport, so running in the sun feels 3-5°C hotter; dew point is the reliable value
 6. Write `training-log/week-{n}.md` with one section per activity, including Garmin's calorie estimate when available, plus weekly totals (average RPE and total sRPE over rated activities)
 
 Daily recovery and sleep data can be synced directly with:

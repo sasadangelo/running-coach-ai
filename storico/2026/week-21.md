@@ -30,6 +30,7 @@
 **Elevation**: 8 m
 **Calories**: 453 kcal
 **Heart Rate**: 152 bpm (max: 167)
+**Meteo**: 21°C, rugiada 11°C, umidità 53%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Temperature 26-31. Carico. Allenamento recuperato. Stop dopo 30 min poi altro stop prima dei 45.
 
 #### Lap Details
@@ -59,6 +60,7 @@
 **Elevation**: 10 m
 **Calories**: 365 kcal
 **Heart Rate**: 150 bpm (max: 164)
+**Meteo**: 20°C, rugiada 9°C, umidità 48%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Temperatura 26-29. Carico. Corsa 35'. Primo stop a 25' poi altro stop.
 
 #### Lap Details

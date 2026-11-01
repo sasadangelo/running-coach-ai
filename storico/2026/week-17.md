@@ -30,6 +30,7 @@
 **Elevation**: 3 m
 **Calories**: 459 kcal
 **Heart Rate**: 154 bpm (max: 167)
+**Meteo**: 11°C, rugiada 9°C, umidità 88%, sereno (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 
@@ -58,6 +59,7 @@
 **Elevation**: 5 m
 **Calories**: 409 kcal
 **Heart Rate**: 159 bpm (max: 172)
+**Meteo**: 12°C, rugiada 3°C, umidità 56%, sereno (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 
@@ -85,6 +87,7 @@
 **Elevation**: 4 m
 **Calories**: 254 kcal
 **Heart Rate**: 145 bpm (max: 154)
+**Meteo**: 16°C, rugiada 15°C, umidità 94%, sereno (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 

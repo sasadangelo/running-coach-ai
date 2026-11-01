@@ -30,6 +30,7 @@
 **Elevation**: 0 m
 **Calories**: 376 kcal
 **Heart Rate**: 164 bpm (max: 176)
+**Meteo**: 13°C, rugiada 10°C, umidità 82%, poco nuvoloso (stazione Pontecagnano Air Force Base, aria all'ombra)
 
 #### Lap Details
 
@@ -57,6 +58,7 @@
 **Elevation**: 1 m
 **Calories**: 71 kcal
 **Heart Rate**: 140 bpm (max: 157)
+**Meteo**: 14°C, rugiada 11°C, umidità 78%, foschia (stazione Roma Fiumicino, aria all'ombra)
 
 ---
 ### 2026-03-03 08:01:17 - Fiumicino Corsa
@@ -73,6 +75,7 @@
 **Elevation**: 4 m
 **Calories**: 272 kcal
 **Heart Rate**: 156 bpm (max: 171)
+**Meteo**: 10°C, rugiada 9°C, umidità 94%, sereno (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 

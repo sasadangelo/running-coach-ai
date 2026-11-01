@@ -35,6 +35,7 @@
 **Elevation**: 3 m
 **Calories**: 317 kcal
 **Heart Rate**: 151 bpm (max: 168)
+**Meteo**: 28°C (percepiti 32°C), rugiada 24°C, umidità 78% · **molto caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Lungo 4Km. Fermato a camminare 3 volte oltre zona 2. Resistenza aerobica ancora scarsa.
 
 #### Lap Details
@@ -65,6 +66,7 @@
 **Elevation**: 5 m
 **Calories**: 369 kcal
 **Heart Rate**: 138 bpm (max: 176)
+**Meteo**: 30°C (percepiti 35°C), rugiada 24°C, umidità 70%, sereno · **molto caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 2x1.5 km a 6:00-6:20 min/km. Buona prima ripetuta. Seconda ripetuta fermato a camminare 2 volte.
 
 #### Lap Details
@@ -94,6 +96,7 @@
 **Elevation**: 5 m
 **Calories**: 271 kcal
 **Heart Rate**: 158 bpm (max: 176)
+**Meteo**: 29°C (percepiti 32°C), rugiada 23°C, umidità 69% · **molto caldo** (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 

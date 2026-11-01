@@ -32,6 +32,7 @@
 **Elevation**: 0 m
 **Calories**: 73 kcal
 **Heart Rate**: 126 bpm (max: 136)
+**Meteo**: 22°C, rugiada 16°C, umidità 69%, sereno (stazione Roma Fiumicino, aria all'ombra)
 
 ---
 ### 2026-09-20 07:56:34 - Lungo 4.5 Km
@@ -54,6 +55,7 @@
 **Elevation**: 9 m
 **Calories**: 339 kcal
 **Heart Rate**: 147 bpm (max: 160)
+**Meteo**: 20°C, rugiada 17°C, umidità 80%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Primo lungo di mattina. Ottimo allenamento. Corsa continua 4.5 km. Zona 2 completa. Battito più basso del solito segno che il piano allenamento va bene. 5 secondi in meno al km scorsa volta.
 
 #### Lap Details
@@ -85,6 +87,7 @@
 **Elevation**: 3 m
 **Calories**: 351 kcal
 **Heart Rate**: 152 bpm (max: 170)
+**Meteo**: 23°C, rugiada 19°C, umidità 79%, quasi sereno · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon Allenamento. Riscaldamento in jogging. 1 Recupero in jogging e 1 in camminata. Primi 200m defaticamento camminata il resto jogging. Nessun problema particolare a parte le orecchie che danno sempre un po' fastidio. Oggi ho cominciato ad allenarmi di mattina.
 
 #### Lap Details
@@ -118,6 +121,7 @@
 **Elevation**: 6 m
 **Calories**: 289 kcal
 **Heart Rate**: 154 bpm (max: 169)
+**Meteo**: 26°C, rugiada 18°C, umidità 61%, sereno · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 1 km riscaldamento corsa. 10x200 solo la prima ho recuperato in jogging resto camminando. Defaticamento cammino corsa meno di 1km ero davvero stanco.
 
 #### Lap Details
@@ -162,6 +166,7 @@
 **Elevation**: 2 m
 **Calories**: 73 kcal
 **Heart Rate**: 132 bpm (max: 149)
+**Meteo**: 26°C, rugiada 18°C, umidità 65% · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 

@@ -165,6 +165,77 @@ def fetch_self_evaluation(client: Garmin, activity_id: int) -> tuple[float | Non
     return (rpe / 10.0 if rpe is not None else None), feel
 
 
+# Garmin's weather payload is in imperial units and English descriptions
+WEATHER_DESC_IT = {
+    "Fair": "sereno", "Clear": "sereno", "Sunny": "sereno", "Mostly Sunny": "quasi sereno",
+    "Partly Cloudy": "poco nuvoloso", "Mostly Cloudy": "nuvoloso", "Cloudy": "coperto",
+    "Fog": "nebbia", "Haze": "foschia", "Light Rain": "pioggia debole", "Rain": "pioggia",
+    "Showers": "rovesci", "Thunderstorms": "temporale", "Windy": "ventoso",
+    "Mostly Clear": "quasi sereno", "Mist": "foschia", "Drizzle": "pioggerella",
+}
+# Garmin reports either the ICAO or the WMO id of the same airport station, often without a name
+WEATHER_STATIONS = {"LIRF": "Roma Fiumicino", "16242": "Roma Fiumicino"}
+
+
+def fahrenheit_to_celsius(value: float | None) -> float | None:
+    return (value - 32) * 5 / 9 if value is not None else None
+
+
+def fetch_weather(client: Garmin, activity_id: int) -> dict | None:
+    """Weather at the start of the run from the nearest station (not the wrist sensor), in Celsius.
+
+    It is shade air temperature at an open, sea-ventilated airport: running in the sun on
+    asphalt feels several degrees hotter. Dew point is the reliable part.
+    """
+    try:
+        raw = client.get_activity_weather(activity_id) or {}
+    except Exception as exc:  # noqa: BLE001 - soft warning, don't abort the sync
+        print(f"  warning: could not fetch weather for activity {activity_id}: {exc}", file=sys.stderr)
+        return None
+    if raw.get("temp") is None:
+        return None
+    station = raw.get("weatherStationDTO") or {}
+    desc = (raw.get("weatherTypeDTO") or {}).get("desc")
+    return {
+        "temp_c": fahrenheit_to_celsius(raw.get("temp")),
+        "apparent_c": fahrenheit_to_celsius(raw.get("apparentTemp")),
+        "dew_point_c": fahrenheit_to_celsius(raw.get("dewPoint")),
+        "humidity": raw.get("relativeHumidity"),
+        "desc": desc if desc and desc.lower() != "unknown" else None,
+        "station": WEATHER_STATIONS.get(station.get("id") or "", station.get("name") or station.get("id") or ""),
+    }
+
+
+def heat_band(weather: dict) -> str | None:
+    """Summer decision bands (periodizzazione-pluriennale.md, P4): apparent temperature or dew point."""
+    apparent = weather["apparent_c"] if weather["apparent_c"] is not None else weather["temp_c"]
+    dew = weather["dew_point_c"]
+    if apparent > 28 or (dew is not None and dew > 21):
+        return "molto caldo"
+    if apparent >= 24 or (dew is not None and dew >= 18):
+        return "caldo"
+    return None
+
+
+def format_weather(weather: dict) -> str:
+    parts = [f"{weather['temp_c']:.0f}°C"]
+    if weather["apparent_c"] is not None and round(weather["apparent_c"]) != round(weather["temp_c"]):
+        parts[0] += f" (percepiti {weather['apparent_c']:.0f}°C)"
+    if weather["dew_point_c"] is not None:
+        parts.append(f"rugiada {weather['dew_point_c']:.0f}°C")
+    if weather["humidity"] is not None:
+        parts.append(f"umidità {weather['humidity']:.0f}%")
+    if weather["desc"]:
+        parts.append(WEATHER_DESC_IT.get(weather["desc"], weather["desc"].lower()))
+    text = ", ".join(parts)
+    band = heat_band(weather)
+    if band:
+        text += f" · **{band}**"
+    if weather["station"]:
+        text += f" (stazione {weather['station']}, aria all'ombra)"
+    return text
+
+
 def compute_session_rpe(rpe: float | None, duration_s: float) -> float | None:
     """Foster session-RPE load: RPE (1-10) x duration in minutes."""
     return rpe * duration_s / 60.0 if rpe is not None else None
@@ -422,6 +493,9 @@ def build_activity_section(
         if max_hr:
             hr_line += f" (max: {max_hr:.0f})"
         lines.append(hr_line)
+    weather = activity.get("weather")
+    if weather:
+        lines.append(f"**Meteo**: {format_weather(weather)}")
     if note:
         lines.append(f"**Note**: {note}")
     lines.append("")
@@ -581,6 +655,7 @@ def main():
         run_walk_split = compute_run_walk_split(details)
         ngp_speed = compute_ngp(details)
         activity["selfEvaluationRpe"], activity["selfEvaluationFeel"] = fetch_self_evaluation(client, activity["activityId"])
+        activity["weather"] = fetch_weather(client, activity["activityId"])
         enriched_activities.append((activity, laps, run_walk_split, ngp_speed))
 
     # Most recent first, to match the training-log convention used elsewhere in this project

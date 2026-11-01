@@ -38,6 +38,7 @@
 **Elevation**: 8 m
 **Calories**: 535 kcal
 **Heart Rate**: 153 bpm (max: 159)
+**Meteo**: 13°C, rugiada 5°C, umidità 56%, coperto (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Corsa dopo intervento odontoiatrico. Non potendo sputare è stato un po' più difficile da gestire muco. Ad ogni modo, buon allenamento. Ritmo andava naturale verso il 6:40 e ho dovuto controllare la corsa per rimanere nel ritmo stabilito. Ho notato battito più alto del solito. Comunque potevo fare tranquillamente un altro Km e con un po' di sforzo forse anche 2.
 
 #### Lap Details
@@ -71,6 +72,7 @@
 **Elevation**: 4 m
 **Calories**: 309 kcal
 **Heart Rate**: 158 bpm (max: 169)
+**Meteo**: 12°C, rugiada 8°C, umidità 78% (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon test spostato ad oggi perché ho estrazione molare domani. Stamani HRV a 49 e FC rest 63 ma stavo bene e ho deciso di fare il test. All'inizio è stata dura stare nel range di ritmo perché mi veniva facile correre più forte e per 700 metri ho dovuto guardare orologio per rallentare. Sono contento il coach abbia stabilito solo un tempo 2K, 2.5K l'avrei fatto ma 3K sarebbe stata dura. A fine corsa si è fatta sentire sensazione alla fascite plantare sparita poco dopo. Ad ogni modo è un punto sensibile che sarebbe il caso di far vedere prima che arrivino carichi più importanti. Interessante ora Garmin calcola la frequenza di respirazione media 38 brpm max 45 non so se può essere utile e associarlo al talk test.
 
 #### Lap Details
@@ -101,6 +103,7 @@
 **Elevation**: 11 m
 **Calories**: 607 kcal
 **Heart Rate**: 152 bpm (max: 170)
+**Meteo**: 13°C, rugiada 11°C, umidità 85% (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon Allenamento. Sicuramente tosto. Ho fatto mobilità,  drills, riscaldamento 1 km, 10x400 e poi defaticamento. Come sempre la terza ripetuta è tosta ma anche la nona lo è stata. Non ho provato nemmeno a recuperare corricchiando, tutto camminata. Per il resto tutto ok.
 
 #### Lap Details

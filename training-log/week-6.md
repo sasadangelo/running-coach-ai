@@ -35,6 +35,7 @@
 **Elevation**: 0 m
 **Calories**: 79 kcal
 **Heart Rate**: 134 bpm (max: 143)
+**Meteo**: 21°C, rugiada 17°C, umidità 78% (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 7 Allunghi da 80m con ritmo 3:40 a 4:10
 
 ---
@@ -58,6 +59,7 @@
 **Elevation**: 5 m
 **Calories**: 376 kcal
 **Heart Rate**: 149 bpm (max: 157)
+**Meteo**: 18°C, rugiada 17°C, umidità 93%, quasi sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon allenamento. Garmin ha dato 91%. Mobilita. Ritmo quasi sempre < 155. Inizio lento a 7:50 / 7:40. Nessun problema. Con aerosol di fluimucil anche il muco ha dato meno fastidio. Penso che avrei potuto fare tranquillamente altro Km a fatica forse 2. Ho fatto esercizi di forza: - 2x 12 squat - 2x 12 calf raise - 2x 10 step - 2x 10 ponte glutei - 1x 20" sideplank ambo i lati Stretching
 
 #### Lap Details
@@ -89,6 +91,7 @@
 **Elevation**: 5 m
 **Calories**: 361 kcal
 **Heart Rate**: 156 bpm (max: 171)
+**Meteo**: 18°C, rugiada 15°C, umidità 85%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Primo tempo run fatto tutto di corsa. Garmin dice eseguito bene al 90%. Ho fatto mobilità, corsa e stretching come al solito. Soddisfatto. Impercettibile sensazione alla fascite plantare, essendo un problema che ho sempre avuto mi chiedo se la sola mobilità delle Caviglie è sufficiente a prevenire eventuali problemi futuri.
 
 #### Lap Details
@@ -122,6 +125,7 @@
 **Elevation**: 3 m
 **Calories**: 426 kcal
 **Heart Rate**: 151 bpm (max: 168)
+**Meteo**: 15°C, rugiada 14°C, umidità 97%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Primo allenamento carico dopo settimana scarico. 12 ripetute solo 2 perfettamente in target 10 leggermente più veloci di pochi secondi. Del resto non è facile essere precisi. Solo 1 recupero in jogging altri in camminata. Meno problemi di muco stavolta. Temperature finalmente ragionevoli. L'allenamento garmin includeva 15 ripetute le ultime 3 volutamente saltate perché non parte del programma.
 
 #### Lap Details

@@ -30,6 +30,7 @@
 **Elevation**: 5 m
 **Calories**: 456 kcal
 **Heart Rate**: 151 bpm (max: 159)
+**Meteo**: 20°C, rugiada 14°C, umidità 69%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Corsa lunga lenta 45' senza stop. Credo che con questo caldo 7:20/7:30 sia il mio easy pace. Sentivo di poter correre ancora per molto. Aerobic Decoupling 4.83% (togliendo primo Km). Questo significa che, probabilmente, il mio passo aerobico è di 7:20 - 7:40 min/Km.
 
 #### Lap Details
@@ -59,6 +60,7 @@
 **Elevation**: 7 m
 **Calories**: 401 kcal
 **Heart Rate**: 152 bpm (max: 164)
+**Meteo**: 23°C, rugiada 18°C, umidità 74% (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 
@@ -86,6 +88,7 @@
 **Elevation**: 12 m
 **Calories**: 410 kcal
 **Heart Rate**: 150 bpm (max: 163)
+**Meteo**: 24°C, rugiada 19°C, umidità 72% · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Temperatura 26-29 gradi. Seconda settimana carico. Cercato di coprire 40 min ma a 30 ho camminato. Poi di nuovo a 35. HRR 20 bpm.
 
 #### Lap Details

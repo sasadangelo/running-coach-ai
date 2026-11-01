@@ -36,6 +36,7 @@
 **Elevation**: 4 m
 **Calories**: 265 kcal
 **Heart Rate**: 146 bpm (max: 158)
+**Meteo**: 16°C, rugiada 8°C, umidità 62%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 3 allenamento di scarico. Corsa lenta. Nessun problema tranne che molto muco sceso in gola, per i primi 2 km ho sputato parecchio. Credo serva un po' di decongestionamento con aerosol e Respirin.
 **Nota extra**: oggi ho fatto anche un'escursione al Parco Vejo di circa 10 km a camminare con la famiglia: è stata abbastanza faticosa e non credo che questa camminata giovi allo scarico, quindi va considerata come un carico aggiuntivo.
 
@@ -63,6 +64,7 @@
 **Elevation**: 3 m
 **Calories**: 265 kcal
 **Heart Rate**: 146 bpm (max: 159)
+**Meteo**: 19°C, rugiada 18°C, umidità 92%, poco nuvoloso (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 2 allenamento scarico. Corsa lenta continua e rilassata, battito 146 di media che si è stabilizzato sui 153/154 verso la fine in piena zona aerobica. Ritmo più veloce delle precedenti corse lente di 10/15" nonostante non l'ho percepito. Tutto bene.
 
 #### Lap Details
@@ -92,6 +94,7 @@
 **Elevation**: 3 m
 **Calories**: 336 kcal
 **Heart Rate**: 148 bpm (max: 166)
+**Meteo**: 19°C, rugiada 16°C, umidità 83%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Primo allenamento scarico. Mobilità, drills, riscaldamento e defaticamento in jogging. Tre recuperi in jogging e 5 in camminata. Tutte le ripetute in target tranne la 5 troppo veloce. Buon allenamento secondo me. Temperature in calo. Garmin lo classifica al 35% perché allenamento era 10x200 ma io dovevo farne solo 8.
 
 #### Lap Details

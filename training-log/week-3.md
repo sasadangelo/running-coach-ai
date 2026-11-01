@@ -37,6 +37,7 @@
 **Elevation**: 5 m
 **Calories**: 316 kcal
 **Heart Rate**: 154 bpm (max: 162)
+**Meteo**: 26°C, rugiada 18°C, umidità 63% · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Corsa 4.2 Km tutta di fila senza stop. 16 min in zona 3 e 17 in zona 1 e 2. Garmin aveva messo FC max a 194 poi abbassata a 192 poi a 191. Fc non ha mai superato 160 però risulta zona 3 già a 157. Io ho cercato di correre con respiro controllato in maniera confortevole il più possibile. A freddo gambe e bacino leggermente affaticati.
 
 #### Lap Details
@@ -67,6 +68,7 @@
 **Elevation**: 6 m
 **Calories**: 272 kcal
 **Heart Rate**: 139 bpm (max: 165)
+**Meteo**: 26°C, rugiada 18°C, umidità 62% · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 4x500 200m recupero a 6:00-6:20 min/km. Mobilità prima e stretching dopo. Tutto bene completato come se avessi potuto fare di più. Vo2max in leggero aumento. Secondo garmin allenamento è stato buono al 74%. Pensavo di più visto che l'ho seguito alla lettera.
 
 #### Lap Details
@@ -102,6 +104,7 @@
 **Elevation**: 47 m
 **Calories**: 286 kcal
 **Heart Rate**: 135 bpm (max: 167)
+**Meteo**: 28°C (percepiti 31°C), rugiada 24°C, umidità 84% · **molto caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Riscaldamento 500m camminata 500 jogging. 8x200 con 1' recupero in camminata (jogging non riuscivo). Corsa tra 5:10 -5:46 min/km. Ultime 2 ripetute un po' a fatica a 5:38 e 5:46. Defaticamento 500m camminata. Alla fine un po' di mobilità e stretching.
 
 #### Lap Details

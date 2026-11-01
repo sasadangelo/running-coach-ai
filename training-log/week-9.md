@@ -37,6 +37,7 @@
 **Elevation**: 1 m
 **Calories**: 299 kcal
 **Heart Rate**: 139 bpm (max: 150)
+**Meteo**: 11°C, rugiada 7°C, umidità 77% (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Prima volta che riesco a correre in modo continuo cosi lento e con fc così bassa.
 
 #### Lap Details
@@ -67,6 +68,7 @@
 **Elevation**: 4 m
 **Calories**: 300 kcal
 **Heart Rate**: 149 bpm (max: 157)
+**Meteo**: 10°C, rugiada 9°C, umidità 91%, nuvoloso (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon allenamento. Nessun problema se non la difficoltà di andare piano. Ad ogni modo, il muco anche a ritmi così lenti e fastidioso e mi porta a sputare frequentemente a causa della sua discesa in gola.
 
 #### Lap Details
@@ -97,6 +99,7 @@
 **Elevation**: 4 m
 **Calories**: 418 kcal
 **Heart Rate**: 148 bpm (max: 191)
+**Meteo**: 13°C, rugiada 12°C, umidità 94%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Allenamento durissimo. Doveva essere il primo allenamento di scarico ma anche se solo 6 ripetizione è stato peggiore del 8x400 della scorsa settimana. Già stamane la voglia non era troppa. I dati del sonno sono sbagliati, sono andato a letto dopo mezzanotte. Bisogna capire se è corretto mettere allenamenti così duri nella settimana di scarico. La terza ripetizione è stata assurda, la fc è arrivata a 191 e avevo la fascia polar h9. Forse si è alzata così perché ho provato 2 volte un recupero di camminata e poi jogging. Ad ogni modo, alla sesta ero sfinito. Prima volta che arrivi esausto a fine allenamento. Nessun problema di fascite.
 
 #### Lap Details

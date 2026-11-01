@@ -38,6 +38,7 @@
 **Elevation**: 5 m
 **Calories**: 476 kcal
 **Heart Rate**: 146 bpm (max: 155)
+**Meteo**: 16°C, rugiada 14°C, umidità 88%, poco nuvoloso (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon allenamento. Causa trasloco ieri ho cercato di tenerlo easy. Nessun problema fascite prima, durante e dopo. Un remoto sentore c'è ma è al limite della percettibilita'. Avrei potuto fare altro Km ma a fatica. Quasi sempre <=151 tranne qualche punta fino a 155.
 
 #### Lap Details
@@ -71,6 +72,7 @@
 **Elevation**: 2 m
 **Calories**: 400 kcal
 **Heart Rate**: 158 bpm (max: 169)
+**Meteo**: 12°C, rugiada 12°C, umidità 100%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon allenamento. 2x1500 sono risultati meno faticosi dei 2x1200 scorsa week. Secondo me l'allenamento 8x400 ha portato buoni benefici (ricordo che i 400 anche anni fa erano positivi per me). Nella prima ripetuta sentivo di poter arrivare con piccolo sforzo a 2km. Leggera sensazione a fine corsa su fascite plantare scomparsa dopo pochi min.
 
 #### Lap Details
@@ -104,6 +106,7 @@
 **Elevation**: 4 m
 **Calories**: 505 kcal
 **Heart Rate**: 149 bpm (max: 170)
+**Meteo**: 22°C, rugiada 6°C, umidità 35% (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Terza settimana di carico. È stato uno degli allenamenti più duri fatti finora. Solo un recupero in jogging molto lento poi altri camminando. 1Km di riscaldamento e defaticamento. Credo di essere stato sempre nel target.
 
 #### Lap Details

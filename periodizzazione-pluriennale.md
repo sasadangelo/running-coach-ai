@@ -69,6 +69,20 @@ Due settimane leggere dopo la 10K. Domenica 9/5 la **Race for the Cure Roma** �
 - **Volume:** 30 → ~32 km su 4 giorni; lungo 12-13 km.
 - **Il passo non conta:** d'estate si giudicano FC e sensazioni, e si confronta con l'estate prima, mai con la primavera. Il calo di passo col caldo è fisiologia, non forma persa ([pattern 6](storico/pattern-ricorrenti.md)).
 - **Scopo:** costruire la base per l'autunno senza il carico delle gare. Se il caldo pesa, il volume si sposta su bici o ellittica.
+- **Perché conta:** nel 2026 l'ultima corsa è del 5 luglio, poi 7 settimane a 0 km. Lo stesso era successo nel 2016, 2017, 2019, 2021 e 2025. Lo scopo dell'estate è **non fermarsi**: il successo si misura in **settimane con almeno 2 corse**, non in km.
+- **All'alba:** da metà giugno la scuola è chiusa, quindi si esce alle 6:00-6:30 (22-24°C invece dei 28-30 delle 8:30). Anche il lungo del weekend parte a quell'ora.
+- **Si decide con il meteo dell'ora della corsa.** I valori sono quelli della stazione (aria all'ombra all'aeroporto di Fiumicino, gli stessi della riga **Meteo** del log); al sole sull'asfalto si percepiscono 3-5°C in più. Il punto di rugiada è il dato più affidabile, perché il sole non lo cambia.
+
+  | All'ora della corsa | Cosa si fa |
+  |---|---|
+  | percepita sotto 24°C e rugiada sotto 18°C | seduta come da piano |
+  | percepita 24-28°C o rugiada 18-21°C (**caldo**) | seduta più corta o più facile; la qualità diventa allunghi |
+  | percepita sopra 28°C o rugiada sopra 21°C (**molto caldo**) | corsa facile da 20-30' all'alba, oppure bici o ellittica per lo stesso tempo |
+
+- **Acclimatamento:** servono 10-14 giorni di corse regolari e brevi. I primi giorni caldi di fine maggio e di giugno sono i peggiori, ed è lì che di solito arrivava lo stop: si accorcia, non si salta.
+- **Acqua:** nel lungo, borraccia o un giro con i nasoni; sopra l'ora anche sali.
+- **Mai più di 7 giorni senza correre** (regola 8). Nelle ondate di calore bastano 2 corse facili da 20-30' all'alba; il resto si fa in bici o ellittica.
+- **Le regole del caldo valgono fino a metà settembre**, quindi anche nelle prime settimane di P5.
 
 ### P5 · Autunno: Best Woman 10K sotto 55'
 - **18 settimane:** 3+1, 3+1, 3+1, 3+1, 1 specifica + 1 di taper. Dopo i 52 anni e con il volume più alto di sempre, valutare **2+1** se FC a riposo, HRV o fascia plantare lo chiedono.

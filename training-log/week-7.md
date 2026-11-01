@@ -32,6 +32,7 @@
 **Elevation**: 0 m
 **Calories**: 71 kcal
 **Heart Rate**: 130 bpm (max: 143)
+**Meteo**: 17°C, rugiada 15°C, umidità 88% (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 8 Allunghi a fine corsa lenta. Dopo allunghi leggera sensazione indolenzimento anca dx ma subito sparita.
 
 ---
@@ -55,6 +56,7 @@
 **Elevation**: 4 m
 **Calories**: 426 kcal
 **Heart Rate**: 149 bpm (max: 158)
+**Meteo**: 13°C, rugiada 13°C, umidità 100%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Corsa lunga 5.7km cercando di stare sotto 155 bpm. Ci sono riuscito per il 98/99 % del tempo. Sensazioni buone nessun problema particolare. A fine corsa adduttori e pianta del piede sx leggeri sensazioni di fatica. Ma parliamo di remote sensazioni. Ieri a letto stessa sensazione remotissima su fascite plantare sx sparita appena poggiato piede a terra.
 
 #### Lap Details
@@ -87,6 +89,7 @@
 **Elevation**: 4 m
 **Calories**: 346 kcal
 **Heart Rate**: 157 bpm (max: 173)
+**Meteo**: 18°C, rugiada 18°C, umidità 98%, quasi sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon allenamento. In target ma ho fatto più fatica dello scorso tempo run. Non credo avrei potuto fare di più, sarei arrivato al limite. Battito salito fino a 169-171 molto vicino alla soglia di 173. Nel recupero sono sceso di 10 battiti a 8 min/km. Riscaldamento a 7:30 e defaticamento a 7:50 (ho dovuto cominciare a 8:00). Ho sempre corso.
 
 #### Lap Details
@@ -120,6 +123,7 @@
 **Elevation**: 6 m
 **Calories**: 494 kcal
 **Heart Rate**: 153 bpm (max: 167)
+**Meteo**: 20°C, rugiada 15°C, umidità 75%, pioggia debole (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon allenamento. Nessun problema in particolare. Fatte tutte e 15 le ripetute. 3 recuperi in jogging il resto camminata. Molte ripetute più veloci del planned. Il problema è che in un range di soli 10" è difficile entrarci, sarebbe più facile un range di 20" ma non so se spostare il 5':20" -> 5':10" o 5':30" -> 5':40". Preferirei il primo ma vediamo cosa ne pensa il coach AI. Altra cosa è che il volume è superiore al lungo cosa davvero strana.
 
 #### Lap Details

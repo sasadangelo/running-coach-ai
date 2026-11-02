@@ -1,6 +1,6 @@
 ---
 name: garmin-sync
-description: Downloads and syncs training data from Garmin Connect using a local Python script (no MCP server required). Running it with no arguments (e.g. "/garmin-sync") auto-syncs every week missing from training-log/ since the last sync, using a continuous Monday-Sunday weekly cadence independent of the training plan's own week numbering. This is ONE option for importing training data - athletes can also use manual logs, other platforms, or provide data conversationally. Use this skill specifically when the athlete wants to sync from Garmin or when the running-coach indicates Garmin as the chosen data source. Stores activities in the training-log folder as markdown, with a section per activity including lap-by-lap detail and a run/walk time split.
+description: Downloads and syncs training data from Garmin Connect, and pushes the planned workouts of the current week to the Garmin calendar so the watch downloads them using a local Python script (no MCP server required). Running it with no arguments (e.g. "/garmin-sync") auto-syncs every week missing from training-log/ since the last sync, using a continuous Monday-Sunday weekly cadence independent of the training plan's own week numbering. This is ONE option for importing training data - athletes can also use manual logs, other platforms, or provide data conversationally. Use this skill specifically when the athlete wants to sync from Garmin or when the running-coach indicates Garmin as the chosen data source. Stores activities in the training-log folder as markdown, with a section per activity including lap-by-lap detail and a run/walk time split.
 ---
 
 # Garmin Training Log Sync
@@ -9,7 +9,7 @@ description: Downloads and syncs training data from Garmin Connect using a local
 
 This skill downloads training data from Garmin Connect and creates weekly markdown summaries in the `training-log` folder. It uses the `garminconnect` Python library directly (via `scripts/garmin_sync.py`) rather than an MCP server.
 
-Each activity gets its own section with distance, duration, pace, a run/walk time split, heart rate, the athlete's own RPE rating, any Garmin note, and (when the activity has more than one lap) a lap-by-lap table - useful for checking pace consistency across ripetute/tempo reps. The sync also maintains `health-log/daily-health.md` with daily resting heart rate, overnight HRV, and sleep summaries.
+Each activity gets its own section with distance, duration, pace, a run/walk time split, heart rate, the athlete's own RPE rating, any Garmin note, and (when the activity has more than one lap) a lap-by-lap table - useful for checking pace consistency across interval/tempo reps. The sync also maintains `health-log/daily-health.md` with daily resting heart rate, overnight HRV, and sleep summaries.
 
 There are two ways to run it:
 - **Auto-sync (default)**: the athlete just says "/garmin-sync" or "sync my training" with no week number. Syncs every missing/stale week since the last sync automatically - see "Auto-Sync Workflow" below.
@@ -135,6 +135,30 @@ After syncing, tell the athlete:
 - File location (`training-log/week-{n}.md`)
 - Any activities that got lap-by-lap detail
 
+## Push Workouts Workflow
+
+Use this when the athlete wants the planned sessions on the watch (e.g. asks to upload or send the week's workouts to Garmin or the watch). It goes the other way from the sync: the plan becomes structured workouts in the Garmin Connect calendar, and the watch downloads them on its next sync.
+
+### 1. Translate the current week of `training-plan.md`
+
+Take the sessions from today to the end of the current plan week (the next week too, if the athlete asks) and write a SPEC JSON file in the scratchpad (format in the docstring of `scripts/garmin_workouts.py`). Rules:
+- **Intervals and Tempo**: warmup, the reps or the continuous block with the plan's **pace range** (`"pace": ["fast", "slow"]`), recoveries by time or distance as written, cooldown. Where the plan names a slower half of the range as a condition (e.g. resting HR >60), keep the full range and put the condition in `description`.
+- **Easy, long run and shakeout**: **distance only**, no pace target - the athlete regulates by feel. Split into warmup/main/cooldown only when the plan does.
+- **Races**: not pushed unless the athlete asks.
+- Rest days, strength and mobility: nothing to push.
+- Name: `S<n> <session>` in English (e.g. `S10 Light intervals`), short enough for the watch screen; plan notes that matter during the run go in `description`.
+
+### 2. Preview, then push
+
+```bash
+python3 .claude/skills/garmin-sync/scripts/garmin_workouts.py push <spec.json> --dry-run
+python3 .claude/skills/garmin-sync/scripts/garmin_workouts.py push <spec.json>
+```
+
+Show the athlete the dry-run preview before the real push. The push first removes every managed workout dated before today (unscheduled from the calendar and deleted from the workout library - the recorded activity stays), then replaces any managed workout already on the same dates, so pushing a revised week never leaves duplicates. Only workouts carrying the `[running-coach-ai]` marker in their description are ever touched; workouts the athlete made by hand stay.
+
+Other commands: `cleanup [--before YYYY-MM-DD] [--dry-run]` removes past managed workouts without pushing, `list` shows the managed workouts in the calendar.
+
 ## Notes on the run/walk time split
 
 Garmin doesn't expose a simple "time spent running" / "time spent walking" field on the activity summary. `scripts/garmin_sync.py` estimates it from second-by-second speed samples (`get_activity_details`), classifying each sample against `WALK_SPEED_THRESHOLD_M_S` (1.85 m/s, ~9:00/km) - at or above that speed counts as running, below counts as walking. This is a heuristic: a slow jog recovery between reps will register as "walk time" too. Adjust the threshold constant if it's misclassifying for this athlete's paces.
@@ -148,5 +172,6 @@ Laps are fetched for every activity and shown whenever there's more than one (a 
 - **scripts/garmin_sync.py**: Standalone script - logs in to Garmin Connect, fetches a week of activities, drops stray blips, pulls lap splits and a run/walk split for each, and writes `training-log/week-{n}.md`. Run with `--help` for all options. No database or external services are used; it depends only on `garminconnect` and `python-dotenv`.
 - **scripts/garmin_sync_weeks.py**: Continues `training-log/`'s week numbering forward in fixed 7-day (Monday-Sunday by default) blocks from the last synced week, re-syncing the current in-progress week too, and calls `garmin_sync.py` for each one. Needs `--start-date` only on the very first run (empty training-log). Also documents the week-start convention in `training-plan.md` if missing. Stdlib only - no extra dependencies. Run with `--dry-run` to preview without hitting Garmin, or `--help` for all options.
 - **scripts/garmin_sync_health.py**: Fetches daily resting heart rate, overnight HRV, and daily sleep summaries, then writes rolling 7-day baselines to `health-log/daily-health.md`.
+- **scripts/garmin_workouts.py**: Uploads planned workouts from a SPEC JSON to the Garmin Connect calendar (`push`), removes managed workouts whose day has passed (`cleanup`), lists them (`list`). Run with `--help` for all options.
 - **requirements.txt**: Python dependencies for this skill.
 - **.env.sample**: Template for the `GARMIN_EMAIL` / `GARMIN_PASSWORD` / `GARMINTOKENS` environment variables.

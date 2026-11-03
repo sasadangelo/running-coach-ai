@@ -27,11 +27,11 @@
 **NGP medio**: 8:03/km
 **IF**: 0.78
 **TSS**: 34
-**Decoupling**: 1.3%
-**ES**: 6.3 (Primi km)
 **RPE**: 1/10
 **sRPE**: 34
 **Sensazione**: Forte (75/100)
+**Decoupling**: 1.3%
+**ES**: 6.3 (Primi km)
 **Run time**: 0:33:50
 **Walk time**: 0:00:06
 **Elevation**: 1 m

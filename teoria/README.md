@@ -23,6 +23,7 @@ Le osservazioni vengono prima annotate nel [registro degli esperimenti](esperime
 
 ## Capitoli
 
+0. [Il runner di successo](00-il-runner-di-successo.md) — cosa significa successo nella corsa (non solo vincere), gli obiettivi SMART, perché corro io (salute, testa sgombra dal lavoro), la salute prima di qualsiasi obiettivo
 1. [I principi dell'allenamento](01-principi-allenamento.md) — supercompensazione e recupero, specificità, sovraccarico, gradualità, individualizzazione, reversibilità, variazione, periodizzazione, continuità, rendimenti decrescenti
 2. [Da dove viene l'energia (e perché conviene partire piano)](02-energia-partire-piano.md) — ATP e i tre sistemi energetici, debito di ossigeno, perché partire forte si paga (accumulo nei 5-10K, glicogeno in maratona), pacing
 3. [La struttura di una seduta](03-struttura-seduta.md) — riscaldamento (mobilità, corsa progressiva, drills, allunghi), defaticamento, stretching, cosa serve per ogni tipo di seduta

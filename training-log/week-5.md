@@ -27,10 +27,10 @@
 **NGP medio**: 7:11/km
 **IF**: 0.87
 **TSS**: 32
-**Economia**: EF 0.916 m/battito · M 0.912 · RES 83.5
 **RPE**: 2/10
 **sRPE**: 51
 **Sensazione**: Normale (50/100)
+**Economia**: EF 0.916 m/battito · M 0.912 · RES 83.5
 **Run time**: 0:25:14
 **Walk time**: 0:00:06
 **Elevation**: 4 m

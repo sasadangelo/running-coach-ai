@@ -1,11 +1,11 @@
 # Heart-Rate Zones
 
-## 2026-11-01
+## 2026-11-03
 
 - **Metodo**: Karvonen
 - **FC max**: 185 bpm
-- **FC riposo media**: 60.1 bpm
-- **Riserva cardiaca**: 124.9 bpm
+- **FC riposo media**: 60.4 bpm
+- **Riserva cardiaca**: 124.6 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |

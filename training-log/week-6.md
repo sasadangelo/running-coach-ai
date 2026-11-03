@@ -48,12 +48,12 @@
 **NGP medio**: 7:10/km
 **IF**: 0.87
 **TSS**: 45
-**Decoupling**: 2.1%
-**ES**: 7.8 (Primi km)
-**Economia**: EF 0.911 m/battito · M 0.920 · RES 83.8
 **RPE**: 3/10
 **sRPE**: 108
 **Sensazione**: Forte (75/100)
+**Decoupling**: 2.1%
+**ES**: 7.8 (Primi km)
+**Economia**: EF 0.911 m/battito · M 0.920 · RES 83.8
 **Run time**: 0:35:34
 **Walk time**: 0:00:24
 **Elevation**: 5 m

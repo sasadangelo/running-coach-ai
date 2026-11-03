@@ -43,6 +43,12 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 **Lezione:** un salto di 15 bpm in pochi secondi non è fisiologico: o artefatto (il caso più frequente, anche con la fascia toracica) o aritmia. **Regola di sicurezza:** con sintomi (palpitazioni, battito irregolare, capogiri, fastidio al petto) ci si ferma e si va dal medico. Mai ricavare la FC max da un picco.
 **Capitolo futuro:** "Le metriche: cosa misurano davvero e con quale errore".
 
+## E7 — Quando corro mi ammalo di meno 🟡 [G]
+**Ipotesi:** correre con continuità riduce malanni (tosse, influenze) e reflusso e migliora l'umore; smettere li fa tornare.
+**Cosa è successo:** racconto dell'atleta, coerente con lo storico: dal 2019 al 2024 stop a fine ottobre-novembre sei anni su sei, con i malanni più lunghi in quei periodi o subito dopo; la primavera 2024 (malanno con 20 giorni di stop, turbinati, tre settimane di tosse) arriva dopo cinque mesi senza corsa.
+**Confondenti:** stagione dei virus (gli stop cadono in autunno-inverno), picchi di lavoro e stress nelle stesse settimane, causalità inversa (il malanno causa lo stop), punto debole ORL strutturale. Nessun registro sistematico dei malanni prima del 2026.
+**Lezione:** illustra la letteratura (esercizio moderato e meno infezioni delle vie aeree, corsa e umore), non la dimostra. **Da verificare:** annotare i malanni in `health-log` da ora in poi, per confrontare i periodi di corsa continua con eventuali stop. Capitolo: [Il runner di successo](00-il-runner-di-successo.md).
+
 ---
 
 ## Prossimi esperimenti già programmati

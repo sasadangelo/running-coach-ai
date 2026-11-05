@@ -92,9 +92,11 @@ Nella cartella [teoria/](teoria/README.md) raccolgo quello che imparo strada fac
 
 1. [I principi dell'allenamento](teoria/01-principi-allenamento.md)
 2. [Da dove viene l'energia (e perché conviene partire piano)](teoria/02-energia-partire-piano.md)
-3. [La struttura di una seduta](teoria/03-struttura-seduta.md)
+3. [Le scuole di pensiero](teoria/03-scuole-di-pensiero.md)
 4. [Ritmi, zone e sedute](teoria/04-ritmi-zone-sedute.md)
-5. [Le scuole di pensiero](teoria/05-scuole-di-pensiero.md)
+5. [La corsa lenta](teoria/05-corsa-lenta.md)
+6. [Gli allunghi](teoria/06-allunghi.md)
+7. [La struttura di una seduta](teoria/07-struttura-seduta.md)
 
 ## Avvertenza
 

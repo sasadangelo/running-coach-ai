@@ -1,6 +1,10 @@
 # Ritmi, zone e sedute
 
-Schema di riferimento per capire ritmi, zone e sedute. Nato dalle domande del 22 ottobre 2026, da approfondire man mano. **I valori "per te oggi" sono quelli di ottobre 2026 (VDOT stimato ~30, soglia ~6:15/km, FC max 185)**: si aggiornano dopo ogni gara obiettivo o test.
+Lento, medio, soglia, ripetute, zona 2, ritmo T: ogni libro, ogni allenatore e ogni orologio usa nomi diversi, e spesso gli stessi nomi per cose diverse. Eppure sotto i nomi ci sono pochi concetti, e sono gli stessi per tutti. Questo capitolo prova a metterli in ordine.
+
+Si parte dai **tre punti fissi** dell'intensità: la soglia aerobica, la soglia anaerobica e il VO2max. Sono definiti dalla fisiologia, non da una scuola, e tutto il resto si appoggia su di loro. Tra un punto e l'altro ci sono le **zone**, cioè i ritmi di allenamento, con i nomi che usano le diverse scuole. Poi si vede come una **seduta** nasce dalla combinazione di tre scelte (quale ritmo, per quanto, con quale recupero) e come si misura in pratica la soglia, il riferimento più utile per un amatore.
+
+Accanto alle definizioni, le colonne **"Per te oggi"** riportano i miei valori come esempio concreto: a che passo e a che frequenza cardiaca cadono questi punti per un runner amatore di 52 anni. Sono i valori di ottobre 2026 (VDOT stimato ~30, soglia ~6:15/km, FC max 185). Servono a dare un'idea dell'ordine di grandezza, non sono valori da copiare: ognuno ha i suoi, e cambiano con l'allenamento. Le sezioni 7 e 8 spiegano come trovare i propri.
 
 ## 1. I tre punti fissi: le definizioni
 
@@ -67,7 +71,7 @@ L'intensità della corsa è un asse continuo, ma tre punti hanno un significato 
 
 - **Le linee spesse sono fisiologia** e valgono per tutti. **Le fasce tra le linee sono le zone di allenamento.**
 - I nomi delle scuole sono etichette diverse per le stesse fasce.
-- \* Il **corto veloce** è il ritmo gara 10K: dove cade dipende dal livello (vedi sezione 3).
+- \* Il **corto veloce** è un ritmo gara tra il 10K e il 5K, comunque sopra la soglia: dove cade dipende dal livello (vedi sezione 3). Per me oggi coincide con il ritmo 5K.
 - **Per lento e recupero comanda la FC**, non il passo (caldo, sonno, fatica alzano la FC a parità di passo). Per soglia e medio il passo è l'obiettivo, la FC il tetto. Nelle ripetute brevi la FC non arriva a regime: contano passo e sensazione.
 
 ### Sotto la soglia aerobica
@@ -78,6 +82,14 @@ L'intensità della corsa è un asse continuo, ma tre punti hanno un significato 
 | **Lento** | fondo lento, lungo; Daniels: **E (Easy)** e **L (Long run)** allo stesso ritmo; Garmin Z2 | 7:20-7:40, FC 138-150 | base aerobica, capillari, mitocondri, tendini. È la gran parte del volume |
 
 Il recupero è **più lento ancora** del lento: non serve ad allenare, serve a muovere le gambe senza aggiungere fatica.
+
+**Le varianti del lungo nella scuola italiana.** La scuola italiana non tratta il lungo come un blocco unico: lo declina in piccole varianti, che cambiano un solo elemento alla volta.
+- **Lungo lento:** quello classico, tutto al ritmo del lento.
+- **Lungo svelto:** la stessa distanza, ma nella parte alta del lento, a ridosso della soglia aerobica. Abitua a tenere un ritmo sostenuto quando la fatica si accumula, senza diventare un medio.
+- **Lungo collinare:** al ritmo del lento, su un percorso con salite e discese. In salita il passo cala e conta lo sforzo (FC e respiro); il lavoro di forza arriva senza una seduta dedicata.
+- **Lungo progressivo:** si parte lento e si accelera a gradini, chiudendo gli ultimi km verso il medio.
+
+Le varianti sono un modo di dare varietà senza aggiungere sedute dure: il cuore della seduta resta il volume a bassa intensità.
 
 ### Tra le due soglie
 
@@ -96,10 +108,10 @@ Il ritmo T sta **appena sotto o sulla** linea della soglia anaerobica, non a met
 
 | Zona | Altri nomi | Per te oggi | A cosa serve |
 |---|---|---|---|
-| **Corto veloce** | scuola italiana (es. Pizzolato); in inglese "10K pace"; Daniels: nessuna lettera, sta tra T e I | 6:00-6:05, FC 168-175 | specifico per 5-10K: abituarsi al ritmo gara |
+| **Corto veloce** | scuola italiana (es. Pizzolato); in inglese "10K pace" o "5K pace"; Daniels: nessuna lettera, sta tra T e I | 6:00-6:05 (ritmo 5K), FC 168-175 | specifico per 5-10K: abituarsi al ritmo gara |
 | **Ripetute lunghe** | ripetute da 800-2000 m; Daniels: **I (Interval)**; Garmin Z4-Z5 | ~5:55, FC 175-180+ | il VO2max: più tempo possibile vicino al massimo consumo di ossigeno |
 
-**Corto veloce e I di Daniels non sono la stessa cosa.** L'I di Daniels è il ritmo di 10-12' di gara, cioè circa il ritmo dei 3000 m. Il corto veloce è il ritmo del 10K: più lento, con frazioni più lunghe o in continuo. Per i runner lenti il corto veloce quasi coincide con la soglia (sezione 3).
+**Corto veloce e I di Daniels non sono la stessa cosa.** L'I di Daniels è il ritmo di 10-12' di gara, cioè circa il ritmo dei 3000 m. Il corto veloce è un ritmo tra il 10K e il 5K: più lento, con frazioni più lunghe o in continuo. Per i runner lenti il ritmo 10K quasi coincide con la soglia, quindi il corto veloce, per stare sopra la soglia, si sposta verso il ritmo 5K (sezione 3).
 
 ### Sopra la vVO2max
 
@@ -124,7 +136,7 @@ Il ritmo T sta **appena sotto o sulla** linea della soglia anaerobica, non a met
 Regola pratica di Daniels: ogni gradino (T → I → R) è più veloce di ~6"/400 m, cioè ~15"/km; per i runner più lenti lo scarto è un po' più ampio (oggi: T → I −20"/km, I → R −15/20"/km).
 
 **Cosa spiega la regola:**
-- **Corto veloce vs Tempo:** il corto veloce è il ritmo del 10K. Se il tuo 10K dura ~60' coincide con la soglia (tu oggi, 10K ~63'); più sei veloce, più il 10K dura meno di un'ora e il suo ritmo sale sopra la soglia (runner da 40': +10-15"/km sopra T).
+- **Soglia, 10K e corto veloce:** la soglia è il ritmo che si regge per ~60'. **Coincide con il ritmo 10K solo per chi corre il 10K in circa un'ora** (io oggi: 10K previsto ~63' a 6:23/km, soglia ~6:15). Più si è veloci, più il 10K dura meno di un'ora e il suo ritmo sale sopra la soglia: per un runner da 40' il ritmo 10K è 10-15"/km più veloce di T, e la sua soglia è più vicina al ritmo dei 15K o della mezza. Per questo il corto veloce, che deve stare sopra la soglia, per un runner veloce può essere il ritmo 10K, mentre per un runner da un'ora diventa in pratica il ritmo 5K (io oggi: ~6:05/km).
 - **Caselle vuote nelle tabelle di Daniels:** una frazione R non deve superare ~2', una I ~5'. Con VDOT bassi certe distanze durerebbero troppo (es. 1600 a ritmo I ≈ 9'30" per te) e diventerebbero soglia: per quel livello non si fanno. Per questo il 1600 è stato tolto dal piano l'11 ottobre.
 - **La soglia del principiante:** esiste anche se non sa tenerla 60'. La definizione "a durata" vale solo per chi ha la resistenza strutturale; il principiante ha la soglia più in basso (50-65% del VO2max contro 80-90% di un allenato) e la regge 15-25'.
 
@@ -188,7 +200,7 @@ Definizioni e varianti sono nella sezione 1. Qui i metodi pratici.
 
 ## 8. VO2max e VDOT
 
-- **VO2max** = il motore (ossigeno massimo utilizzabile). **VDOT** = quanto del motore arriva in strada (include economia e resistenza). Oggi VO2max ~41 contro VDOT ~30: il motore c'è, economia e resistenza sono indietro. Tutto sul VDOT nel capitolo [06](06-vdot.md), tabelle nell'[appendice A](appendice-a-tabelle-vdot.md).
+- **VO2max** = il motore (ossigeno massimo utilizzabile). **VDOT** = quanto del motore arriva in strada (include economia e resistenza). Oggi VO2max ~41 contro VDOT ~30: il motore c'è, economia e resistenza sono indietro. Tutto sul VDOT nel capitolo [08](08-vdot.md), tabelle nell'[appendice A](appendice-a-tabelle-vdot.md).
 - Il VO2max si muove in mesi; soglia ed EF in 4-6 settimane; resistenza (ES, decoupling) in settimane.
 
 ## Da approfondire
@@ -197,3 +209,4 @@ Definizioni e varianti sono nella sezione 1. Qui i metodi pratici.
 - [ ] Allenamento in salita: perché funziona e come dosarlo
 - [ ] Caldo e prestazione: quanto pesa e come adattarsi
 - [ ] Corto veloce nella scuola italiana: distanze e ritmi esatti nei testi di Pizzolato e Arcelli (da verificare sui libri)
+- [ ] Varianti del lungo (svelto, collinare, progressivo): ritmi e distanze esatti nei testi di Pizzolato e Arcelli

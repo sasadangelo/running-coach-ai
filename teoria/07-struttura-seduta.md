@@ -37,9 +37,9 @@ La FC sale come **conseguenza**, fino a **avvicinarsi** a quella di lavoro senza
 | Fase | Cosa | Durata | Perché |
 |---|---|---|---|
 | **1. Mobilità** | oscillazioni delle gambe (avanti/indietro, laterali), rotazioni di anca e caviglia, affondi con rotazione del busto | 3-5' | articolazioni in movimento, senza carico |
-| **2. Corsa progressiva** | partendo **pianissimo** (più lento del lento) e salendo gradualmente fino al ritmo lento | 10-15' | temperatura, metabolismo aerobico, FC che sale in modo graduale |
 | **3. Drills** | skip A, skip C, calciata dietro, high knees, carioca | 5-8' | tecnica, coordinazione, attivazione nervosa |
 | **4. Allunghi** | 3-4 × 80-100 m in progressione fino al ritmo di lavoro, recupero camminando | 3-5' | assaggio del ritmo, ultimo passaggio prima del lavoro |
+| **2. Corsa progressiva** | partendo **pianissimo** (più lento del lento) e salendo gradualmente fino al ritmo lento | 10-15' | temperatura, metabolismo aerobico, FC che sale in modo graduale |
 
 **Mobilità dinamica, non stretching statico:** prima della seduta si fanno movimenti ampi e controllati, non allungamenti tenuti. Lo stretching statico prolungato (oltre ~60" per muscolo) subito prima di uno sforzo veloce riduce temporaneamente forza e reattività.
 
@@ -113,5 +113,5 @@ Gli studi dicono che il defaticamento incide poco sulla prestazione del giorno d
 ## Da approfondire
 - [ ] Riscaldamento con il freddo e con il caldo
 - [ ] Il riscaldamento di gara in pratica: tempi, griglia di partenza, cosa fare se si aspetta a lungo
-- [ ] Routine di mobilità per runner over 50 (anche come seduta a sé): esercizi nel capitolo [08](08-mobilita-propriocezione.md), drills nel [09](09-drills.md)
+- [ ] Routine di mobilità per runner over 50 (anche come seduta a sé): esercizi nel capitolo [10](10-mobilita-propriocezione.md), drills nel [11](11-drills.md)
 - [ ] Recupero attivo il giorno dopo: corsa, bici, camminata

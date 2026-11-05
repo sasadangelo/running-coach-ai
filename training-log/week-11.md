@@ -3,21 +3,50 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 1
-- **Total Distance**: 2.17 km
-- **Total Time**: 0:15:42
-- **Total Elevation**: 4 m
-- **Total Calories**: 168 kcal (1/1 activities with data)
-- **Total TSS**: 22 (1/1 activities with a valid NGP/IF)
-- **Average RPE**: 3.0/10 (1/1 activities rated)
-- **Total sRPE**: 47 (RPE x minutes, rated activities only)
+- **Total Activities**: 2
+- **Total Distance**: 3.78 km
+- **Total Time**: 0:27:49
+- **Total Elevation**: 5 m
+- **Total Calories**: 284 kcal (2/2 activities with data)
+- **Total TSS**: 36 (2/2 activities with a valid NGP/IF)
+- **Average RPE**: 2.0/10 (2/2 activities rated)
+- **Total sRPE**: 59 (RPE x minutes, rated activities only)
 
 ### Running Totals
-- **Total Run Time**: 0:12:40
-- **Total Walk Time**: 0:03:15
+- **Total Run Time**: 0:24:32
+- **Total Walk Time**: 0:03:30
 
 ## Activities
 
+### 2026-11-05 07:17:59 - Fiumicino - Shakeout 1.6Km
+
+**Type**: Run
+**Distance**: 1.61 km
+**Duration**: 0:12:06
+**Pace**: 7:32/km
+**NGP medio**: 7:29/km
+**IF**: 0.84
+**TSS**: 14
+**RPE**: 1/10
+**sRPE**: 12
+**Sensazione**: Forte (75/100)
+**Run time**: 0:11:52
+**Walk time**: 0:00:15
+**Elevation**: 1 m
+**Calories**: 116 kcal
+**Heart Rate**: 138 bpm (max: 147)
+**Meteo**: 11°C, rugiada 7°C, umidità 74%, poco nuvoloso (stazione Roma Fiumicino, aria all'ombra)
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 0.30 km  | 0:02:16 | 7:32/km | 127 | 0 m       |
+| 2   | 1.00 km  | 0:07:30 | 7:30/km | 140 | 1 m       |
+| 3   | 0.30 km  | 0:02:18 | 7:39/km | 144 | 0 m       |
+| 4   | 0.01 km  | 0:00:03 | 7:17/km | 142 | 0 m       |
+
+---
 ### 2026-11-03 08:45:48 - 4x200 con 1' Rec.
 
 **Type**: Run
@@ -55,3 +84,18 @@
 | 11  | 0.01 km  | 0:00:03 | 7:33/km  | 149 | 0 m       |
 
 ---
+
+## Heart-Rate Zones
+
+- **Metodo**: Karvonen
+- **FC max**: 185 bpm
+- **FC riposo media**: 58.7 bpm
+- **Riserva cardiaca**: 126.3 bpm
+
+| Zona | % HRR | FC |
+| --- | ---: | ---: |
+| Zone 1 | 50-60% | 122-134 bpm |
+| Zone 2 | 60-75% | 134-153 bpm |
+| Zone 3 | 75-85% | 153-166 bpm |
+| Zone 4 | 85-93% | 166-176 bpm |
+| Zone 5 | 93-100% | 176-185 bpm |

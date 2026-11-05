@@ -1,6 +1,6 @@
 # Mobilità e propriocezione
 
-> Bozza, iniziata il 24 ottobre 2026. Collegati: [03 La struttura di una seduta](03-struttura-seduta.md), [09 Drills](09-drills.md), [10 Forza](10-forza.md). Test mensili in [health-log/strength-mobility.md](../health-log/strength-mobility.md).
+> Bozza, iniziata il 24 ottobre 2026. Collegati: [07 La struttura di una seduta](07-struttura-seduta.md), [11 Drills](11-drills.md), [12 Forza](12-forza.md). Test mensili in [health-log/strength-mobility.md](../health-log/strength-mobility.md).
 
 ## 1. Il principio
 

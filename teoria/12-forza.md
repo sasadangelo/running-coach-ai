@@ -1,6 +1,6 @@
 # La forza per il runner
 
-> Bozza, iniziata il 24 ottobre 2026. Collegati: [08 Mobilità e propriocezione](08-mobilita-propriocezione.md), [09 Drills](09-drills.md), [07 Periodizzazione](07-periodizzazione.md). Test mensili in [health-log/strength-mobility.md](../health-log/strength-mobility.md).
+> Bozza, iniziata il 24 ottobre 2026. Collegati: [10 Mobilità e propriocezione](10-mobilita-propriocezione.md), [11 Drills](11-drills.md), [09 Periodizzazione](09-periodizzazione.md). Test mensili in [health-log/strength-mobility.md](../health-log/strength-mobility.md).
 
 ## 1. Il principio
 
@@ -29,7 +29,7 @@ Si allenano **una gamba alla volta** il più possibile: la corsa è un gesto su 
 | **Calf raise su una gamba, ginocchio teso** | sul pavimento o sul gradino, lento (2-3" su, 2-3" giù) | pavimento → gradino → con zaino o manubrio |
 | **Calf raise con dita sull'asciugamano** | dita del piede su un asciugamano arrotolato (tende la fascia plantare), 3" su, 2" fermo, 3" giù | Rathleff: 3 x 12 RM, poi più carico e meno ripetizioni |
 | **Calf raise a ginocchio piegato** (soleo) | seduti con un peso sulle ginocchia, o in piedi a ginocchio piegato | carico crescente: il soleo regge molto |
-| **Short foot** | arco del piede sollevato senza piegare le dita | capitolo [08](08-mobilita-propriocezione.md) |
+| **Short foot** | arco del piede sollevato senza piegare le dita | capitolo [10](10-mobilita-propriocezione.md) |
 
 ### Anca e gluteo (controllo del bacino)
 | Esercizio | Come | Progressione |
@@ -73,7 +73,7 @@ Saltelli a piedi pari, saltelli su una gamba, balzi, salti sul gradino. **Solo d
 - **Mai il giorno prima** delle ripetute o di una gara.
 - Con 3 corse a settimana, la forza dopo il lungo funziona: le ripetute arrivano dopo due giorni di recupero.
 
-**Nella stagione** (capitolo [07](07-periodizzazione.md)):
+**Nella stagione** (capitolo [09](09-periodizzazione.md)):
 | Fase | Forza |
 |---|---|
 | Base | 2 sedute, si costruisce: dal corpo libero ai carichi |

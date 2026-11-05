@@ -38,7 +38,7 @@ All'inizio di ogni corsa il sistema aerobico impiega **2-3 minuti** ad andare a 
 - l'acidità accumulata nei primi minuti rende più faticoso tutto il resto;
 - per smaltirla bisogna rallentare (o, in gara, si rallenta comunque, ma senza volerlo).
 
-**Il riscaldamento serve proprio a questo:** quando la parte centrale inizia, il sistema aerobico è già avviato e il debito è piccolo (vedi [La struttura di una seduta](03-struttura-seduta.md)). Dopo un buon riscaldamento il consumo di ossigeno sale più in fretta allo sforzo successivo.
+**Il riscaldamento serve proprio a questo:** quando la parte centrale inizia, il sistema aerobico è già avviato e il debito è piccolo (vedi [La struttura di una seduta](07-struttura-seduta.md)). Dopo un buon riscaldamento il consumo di ossigeno sale più in fretta allo sforzo successivo.
 
 ## 3. Perché partire troppo forte si paga: due meccanismi
 

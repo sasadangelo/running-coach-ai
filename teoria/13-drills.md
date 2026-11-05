@@ -1,6 +1,6 @@
 # Le andature (drills)
 
-> Bozza, iniziata il 24 ottobre 2026. Collegati: [09 La struttura di una seduta](09-struttura-seduta.md), [06 Mobilità e propriocezione](06-mobilita-propriocezione.md), [13 Forza](13-forza.md).
+> Bozza, iniziata il 24 ottobre 2026. Collegati: [05 La struttura di una seduta](05-struttura-seduta.md), [07 Mobilità e propriocezione](07-mobilita-propriocezione.md), [14 Forza](14-forza.md).
 
 ## 1. Il principio
 
@@ -16,7 +16,7 @@ I **drills**, o **andature** nella tradizione italiana, sono esercizi che **isol
 
 - **Consolidato:** come parte del **riscaldamento** dinamico, prima di sedute veloci e gare, migliorano la prestazione rispetto al solo jogging (riscaldamento di tipo FIFA 11+ e simili).
 - **Discusso:** che i drills **cambino la tecnica di corsa** in modo duraturo. Gli studi sono pochi: il gesto di corsa è molto automatizzato e cambia lentamente. Probabilmente aiutano più come allenamento della coordinazione e dei piedi che come "lezione di tecnica".
-- **Probabile:** le andature saltate (balzi, skip saltati) migliorano rigidità elastica di caviglia e tendini, e con questo l'economia di corsa, come la pliometria (capitolo [13](13-forza.md)).
+- **Probabile:** le andature saltate (balzi, skip saltati) migliorano rigidità elastica di caviglia e tendini, e con questo l'economia di corsa, come la pliometria (capitolo [14](14-forza.md)).
 - **Consolidato:** gli **allunghi** (strides) sono il modo più semplice di mantenere velocità ed economia nei periodi di solo lento.
 
 ## 3. Gli esercizi più utili
@@ -40,7 +40,7 @@ I **drills**, o **andature** nella tradizione italiana, sono esercizi che **isol
 | **Saltelli a piedi pari** | rapidi, contatti brevissimi | rigidità elastica della caviglia |
 
 ### Allunghi (strides)
-Capitolo dedicato: [08 Gli allunghi](08-allunghi.md).
+Capitolo dedicato: [09 Gli allunghi](09-allunghi.md).
 - **Cosa:** 80-100 m in progressione fino a circa il ritmo R, poi decelerazione; recupero camminando fino al respiro normale.
 - **Quando:** alla fine di una corsa facile o del lungo (4-8), e prima delle ripetute e delle gare (3-4) come ultimo passaggio del riscaldamento.
 - **Perché:** velocità, economia e tecnica senza fatica. Sono il modo più semplice per non perdere velocità.

@@ -1,8 +1,8 @@
 # Lo stretching
 
-Nel capitolo [06](06-mobilita-propriocezione.md) lo stretching statico è stato tolto dal riscaldamento: prima della corsa non serve. Questo non vuol dire che sia inutile in assoluto. Ha un posto preciso, **rigorosamente a fine corsa**, e uno scopo diverso da quello che gli si attribuiva una volta: non serve a recuperare né a prevenire gli infortuni, serve a **conservare la mobilità** nel tempo.
+Nel capitolo [07](07-mobilita-propriocezione.md) lo stretching statico è stato tolto dal riscaldamento: prima della corsa non serve. Questo non vuol dire che sia inutile in assoluto. Ha un posto preciso, **rigorosamente a fine corsa**, e uno scopo diverso da quello che gli si attribuiva una volta: non serve a recuperare né a prevenire gli infortuni, serve a **conservare la mobilità** nel tempo.
 
-Collegati: [06 Mobilità e propriocezione](06-mobilita-propriocezione.md), [09 La struttura di una seduta](09-struttura-seduta.md).
+Collegati: [07 Mobilità e propriocezione](07-mobilita-propriocezione.md), [05 La struttura di una seduta](05-struttura-seduta.md).
 
 ## 1. Il principio
 
@@ -11,7 +11,7 @@ Si porta un muscolo in allungamento fino a sentire una **tensione leggera**, mai
 
 ### Perché a fine corsa, e solo allora
 - **I muscoli sono caldi** e si allungano meglio, con meno rischio di forzare.
-- **Lo sforzo è finito:** il calo temporaneo di forza e reattività che segue uno stretching lungo (capitolo [06](06-mobilita-propriocezione.md)) non danneggia più nessuna seduta.
+- **Lo sforzo è finito:** il calo temporaneo di forza e reattività che segue uno stretching lungo (capitolo [07](07-mobilita-propriocezione.md)) non danneggia più nessuna seduta.
 - **È il momento in cui lo si fa davvero.** Legato alla fine di ogni corsa diventa un'abitudine; rimandato "a stasera" si salta.
 
 ### A cosa serve, e a cosa no
@@ -59,7 +59,7 @@ La routine non è uguale per tutti. Gli esercizi che servono a tutti (polpaccio,
 - **schiena bassa rigida a fine lungo:** ginocchia al petto;
 - **asimmetrie** (un lato più rigido dell'altro): una serie in più sul lato rigido.
 
-Se la rigidità torna sempre e non migliora in qualche settimana, lo stretching da solo non basta: spesso dietro c'è un **muscolo debole** che fa lavorare troppo un altro, ed è un lavoro per la forza (capitolo [13](13-forza.md)).
+Se la rigidità torna sempre e non migliora in qualche settimana, lo stretching da solo non basta: spesso dietro c'è un **muscolo debole** che fa lavorare troppo un altro, ed è un lavoro per la forza (capitolo [14](14-forza.md)).
 
 ## 4. Cosa è successo a me
 
@@ -71,7 +71,7 @@ Se la rigidità torna sempre e non migliora in qualche settimana, lo stretching 
 
 ## 5. Cosa vale per tutti
 
-- **Lo stretching statico si fa dopo la corsa, mai prima.** Prima si fa mobilità (capitolo [06](06-mobilita-propriocezione.md)).
+- **Lo stretching statico si fa dopo la corsa, mai prima.** Prima si fa mobilità (capitolo [07](07-mobilita-propriocezione.md)).
 - **Serve a conservare la mobilità**, non a recuperare né a evitare gli infortuni.
 - **20-30" per muscolo, tensione leggera, mai dolore, niente molleggi.** 5-10 minuti bastano.
 - **Insisti sui tuoi punti deboli**, scelti in base a quello che senti correndo.

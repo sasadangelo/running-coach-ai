@@ -20,7 +20,7 @@ Lo schema di Mussini (dalle note dell'autore; il testo è da verificare) usa tre
 ## 2. I livelli
 
 ### La seduta
-L'unità minima: uno stimolo preciso (capitolo [04](04-ritmi-zone-sedute.md): zona × frazione × recupero) dentro una struttura fissa (capitolo [09](09-struttura-seduta.md)). Recupero: 24-72 ore, secondo l'intensità.
+L'unità minima: uno stimolo preciso (capitolo [04](04-ritmi-zone-sedute.md): zona × frazione × recupero) dentro una struttura fissa (capitolo [05](05-struttura-seduta.md)). Recupero: 24-72 ore, secondo l'intensità.
 
 ### Il microciclo (di solito la settimana)
 L'insieme delle sedute che si ripete: quante corse, in che ordine, dove cadono le sedute dure e dove i recuperi.

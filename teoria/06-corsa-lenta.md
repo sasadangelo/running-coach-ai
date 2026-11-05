@@ -37,7 +37,7 @@ Due cose, e nessuna delle due è il passo:
 ### Come far crescere il volume
 - **Il volume si misura in tempo, non in km.** All'inizio il passo cambia molto da un'uscita all'altra e conta quanto tempo il corpo resta in movimento, non quanta strada fa. I km arrivano dopo.
 - **Al massimo +10% a settimana** di tempo totale, anche se i 30 minuti continui non sono ancora arrivati. È un tetto, non un obiettivo: se il corpo dice di no, si resta fermi.
-- **Ogni 3 settimane, una settimana di scarico** con il volume ridotto del **30%**. È il momento in cui il corpo assorbe il lavoro (vedi la [supercompensazione](01-principi-allenamento.md#1-supercompensazione-stimolo-recupero-adattamento)). Il 3+1 è il punto di partenza, non una regola fissa: a qualcuno servono scarichi più frequenti, con uno schema **2+1** (due settimane di carico e una di scarico) o anche **1+1**. Succede soprattutto dopo i 50 anni, a chi riparte dopo un infortunio o a chi già nella terza settimana arriva alle uscite con le gambe pesanti. Come sempre, è il corpo che guida (vedi i mesocicli nel capitolo [11](11-periodizzazione.md)).
+- **Ogni 3 settimane, una settimana di scarico** con il volume ridotto del **30%**. È il momento in cui il corpo assorbe il lavoro (vedi la [supercompensazione](01-principi-allenamento.md#1-supercompensazione-stimolo-recupero-adattamento)). Il 3+1 è il punto di partenza, non una regola fissa: a qualcuno servono scarichi più frequenti, con uno schema **2+1** (due settimane di carico e una di scarico) o anche **1+1**. Succede soprattutto dopo i 50 anni, a chi riparte dopo un infortunio o a chi già nella terza settimana arriva alle uscite con le gambe pesanti. Come sempre, è il corpo che guida (vedi i mesocicli nel capitolo [12](12-periodizzazione.md)).
 
 ### Tre uscite a settimana
 All'inizio le uscite migliori sono **3 a settimana**, a giorni alterni. Il recupero è parte dell'allenamento: con 4 giorni senza corsa il corpo ha il tempo di smaltire un carico del tutto nuovo, soprattutto per tendini, ossa e articolazioni, che si adattano più lentamente del cuore e dei muscoli.
@@ -99,9 +99,9 @@ Il decoupling dei lunghi è sceso nello stesso periodo da 4.8% a 0.7%: la tenuta
 
 ## Il passo successivo
 
-Già dalle prime uscite conviene prendere due abitudini che costano pochi minuti: qualche esercizio di **mobilità prima** di ogni corsa e lo **stretching dopo** (capitoli [06](06-mobilita-propriocezione.md) e [07](07-stretching.md)).
+Già dalle prime uscite conviene prendere due abitudini che costano pochi minuti: qualche esercizio di **mobilità prima** di ogni corsa e lo **stretching dopo** (capitoli [07](07-mobilita-propriocezione.md) e [08](08-stretching.md)).
 
-Arrivati a 30' di corsa continua, il primo assaggio di velocità sono gli **allunghi**, alla fine di una corsa lenta: costano quasi niente e preparano il corpo alla prima seduta di qualità, il Tempo. Sono l'argomento del capitolo [08](08-allunghi.md).
+Arrivati a 30' di corsa continua, il primo assaggio di velocità sono gli **allunghi**, alla fine di una corsa lenta: costano quasi niente e preparano il corpo alla prima seduta di qualità, il Tempo. Sono l'argomento del capitolo [09](09-allunghi.md).
 
 ## Da approfondire
 - [ ] Verificare le fonti: Reed e Pipe 2014 (talk test), Buist 2008, Nielsen 2014, la regola del lungo nella *Daniels' Running Formula*, l'origine del tetto dei 29 km

@@ -1,8 +1,8 @@
 # Mobilità e propriocezione
 
-Con la corsa lenta (capitolo [05](05-corsa-lenta.md)) il corpo comincia a correre con regolarità. Prima di aggiungere velocità, con gli allunghi del capitolo [08](08-allunghi.md), conviene occuparsi di due capacità che restano spesso in ombra: la **mobilità**, cioè quanto si muovono bene le articolazioni, e la **propriocezione**, cioè quanto il corpo sa dove si trova. Costano pochi minuti e si fanno **prima di ogni allenamento**: preparano il corpo allo sforzo e, a lungo andare, rendono la corsa più economica e più sicura.
+Con la corsa lenta (capitolo [06](06-corsa-lenta.md)) il corpo comincia a correre con regolarità. Prima di aggiungere velocità, con gli allunghi del capitolo [09](09-allunghi.md), conviene occuparsi di due capacità che restano spesso in ombra: la **mobilità**, cioè quanto si muovono bene le articolazioni, e la **propriocezione**, cioè quanto il corpo sa dove si trova. Costano pochi minuti e si fanno **prima di ogni allenamento**: preparano il corpo allo sforzo e, a lungo andare, rendono la corsa più economica e più sicura.
 
-Collegati: [07 Lo stretching](07-stretching.md), [09 La struttura di una seduta](09-struttura-seduta.md), [12 Drills](12-drills.md), [13 Forza](13-forza.md).
+Collegati: [08 Lo stretching](08-stretching.md), [05 La struttura di una seduta](05-struttura-seduta.md), [13 Drills](13-drills.md), [14 Forza](14-forza.md).
 
 ## 1. Il principio
 
@@ -22,7 +22,7 @@ Prima di ogni corsa si possono fare **3-5 minuti di esercizi di mobilità**: mov
 2. **Non previene gli infortuni.** Era l'idea con cui lo si faceva, ma gli studi non la confermano (sezione 2).
 3. **Se è lungo, peggiora la prestazione.** Oltre ~60" per muscolo riduce per circa un'ora forza e reattività: proprio quello che serve negli allunghi, nelle ripetute e in gara.
 
-Lo stretching statico ha un suo posto, ma **dopo la corsa**: è l'argomento del capitolo [07](07-stretching.md).
+Lo stretching statico ha un suo posto, ma **dopo la corsa**: è l'argomento del capitolo [08](08-stretching.md).
 
 **Il runner non ha bisogno di essere molto flessibile.** Serve una mobilità **sufficiente** e **simmetrica**. Oltre una certa soglia, più flessibilità non migliora nulla: un po' di rigidità di polpacci e tendini anzi restituisce energia elastica a ogni passo.
 
@@ -56,7 +56,7 @@ Lo stretching statico ha un suo posto, ma **dopo la corsa**: è l'argomento del 
 | **90/90 dell'anca** | seduti, entrambe le gambe piegate a 90°, ginocchia che ruotano da un lato all'altro, 10 volte | rotazione dell'anca limitata |
 
 ### Ascoltare il corpo: insistere dove serve
-Non tutti hanno gli stessi punti deboli. Durante la corsa conviene notare **quali parti del corpo danno più problemi** (rigidità, tensione, fastidio che torna sempre nello stesso punto) e insistere su quelle, prima della corsa con la mobilità e dopo con lo stretching (capitolo [07](07-stretching.md)).
+Non tutti hanno gli stessi punti deboli. Durante la corsa conviene notare **quali parti del corpo danno più problemi** (rigidità, tensione, fastidio che torna sempre nello stesso punto) e insistere su quelle, prima della corsa con la mobilità e dopo con lo stretching (capitolo [08](08-stretching.md)).
 
 | Se senti... | Prima della corsa (mobilità) | Dopo la corsa (stretching) |
 |---|---|---|
@@ -89,7 +89,7 @@ Progressione: si passa al livello successivo quando si tengono **30" per lato se
 | Quando | Cosa | Durata |
 |---|---|---|
 | Prima di ogni corsa | mobilità dinamica, con qualche esercizio in più sui propri punti deboli | 3-5' |
-| Dopo ogni corsa | stretching statico (capitolo [07](07-stretching.md)) | 5-8' |
+| Dopo ogni corsa | stretching statico (capitolo [08](08-stretching.md)) | 5-8' |
 | Ogni giorno | equilibrio su una gamba (es. lavando i denti) | 2' |
 | 1-2 volte a settimana | mobilità mirata sui punti deboli dei test | 10' |
 

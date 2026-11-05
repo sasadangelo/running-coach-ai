@@ -49,6 +49,12 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 **Confondenti:** stagione dei virus (gli stop cadono in autunno-inverno), picchi di lavoro e stress nelle stesse settimane, causalità inversa (il malanno causa lo stop), punto debole ORL strutturale. Nessun registro sistematico dei malanni prima del 2026.
 **Lezione:** illustra la letteratura (esercizio moderato e meno infezioni delle vie aeree, corsa e umore), non la dimostra. **Da verificare:** annotare i malanni in `health-log` da ora in poi, per confrontare i periodi di corsa continua con eventuali stop. Capitolo: [Il runner di successo](00-il-runner-di-successo.md).
 
+## E8 — Frequenza del respiro in soglia ⏳ [?]
+**Ipotesi:** la frequenza respiratoria stimata dall'orologio (con la fascia) può affiancare il talk test come segnale della soglia.
+**Cosa è successo:** Tempo continuo 2000 m del 29/10/2026 a 6:10-6:14, FC 164-167, RPE 3: 38 respiri/min di media, 45 di picco.
+**Confondenti:** stima dell'algoritmo, non misura diretta; una sola seduta; respiro influenzato da naso/tuba (punto debole ORL).
+**Da verificare:** confrontare i prossimi Tempo continui (2500-3500 m) e una seduta sopra soglia. Capitolo: [La corsa in soglia](10-corsa-soglia.md).
+
 ---
 
 ## Prossimi esperimenti già programmati

@@ -200,7 +200,7 @@ Definizioni e varianti sono nella sezione 1. Qui i metodi pratici.
 
 ## 8. VO2max e VDOT
 
-- **VO2max** = il motore (ossigeno massimo utilizzabile). **VDOT** = quanto del motore arriva in strada (include economia e resistenza). Oggi VO2max ~41 contro VDOT ~30: il motore c'è, economia e resistenza sono indietro. Tutto sul VDOT nel capitolo [08](08-vdot.md), tabelle nell'[appendice A](appendice-a-tabelle-vdot.md).
+- **VO2max** = il motore (ossigeno massimo utilizzabile). **VDOT** = quanto del motore arriva in strada (include economia e resistenza). Oggi VO2max ~41 contro VDOT ~30: il motore c'è, economia e resistenza sono indietro. Tutto sul VDOT nel capitolo [10](10-vdot.md), tabelle nell'[appendice A](appendice-a-tabelle-vdot.md).
 - Il VO2max si muove in mesi; soglia ed EF in 4-6 settimane; resistenza (ES, decoupling) in settimane.
 
 ## Da approfondire

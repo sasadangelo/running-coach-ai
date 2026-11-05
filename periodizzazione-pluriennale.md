@@ -1,6 +1,6 @@
 # Periodizzazione pluriennale 2026-2028
 
-**Definita:** 25 ottobre 2026 · **Collegati:** [obiettivi a lungo termine](obiettivi-lungo-termine.md), [piano in corso](training-plan.md), teoria: [09 Periodizzazione](teoria/09-periodizzazione.md)
+**Definita:** 25 ottobre 2026 · **Collegati:** [obiettivi a lungo termine](obiettivi-lungo-termine.md), [piano in corso](training-plan.md), teoria: [11 Periodizzazione](teoria/11-periodizzazione.md)
 
 Come si arriva agli obiettivi a lungo termine, piano per piano. **Le date delle gare sono ipotetiche** e vanno verificate sui calendari FIDAL Lazio; quando una data cambia si spostano i confini dei piani, non la struttura. Ogni piano si scrive in dettaglio solo durante la transizione che lo precede, con il VDOT dell'ultima gara.
 

@@ -95,8 +95,10 @@ Nella cartella [teoria/](teoria/README.md) raccolgo quello che imparo strada fac
 3. [Le scuole di pensiero](teoria/03-scuole-di-pensiero.md)
 4. [Ritmi, zone e sedute](teoria/04-ritmi-zone-sedute.md)
 5. [La corsa lenta](teoria/05-corsa-lenta.md)
-6. [Gli allunghi](teoria/06-allunghi.md)
-7. [La struttura di una seduta](teoria/07-struttura-seduta.md)
+6. [Mobilità e propriocezione](teoria/06-mobilita-propriocezione.md)
+7. [Lo stretching](teoria/07-stretching.md)
+8. [Gli allunghi](teoria/08-allunghi.md)
+9. [La struttura di una seduta](teoria/09-struttura-seduta.md)
 
 ## Avvertenza
 

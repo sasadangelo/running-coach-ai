@@ -1,6 +1,8 @@
 # Mobilità e propriocezione
 
-> Bozza, iniziata il 24 ottobre 2026. Collegati: [07 La struttura di una seduta](07-struttura-seduta.md), [11 Drills](11-drills.md), [12 Forza](12-forza.md). Test mensili in [health-log/strength-mobility.md](../health-log/strength-mobility.md).
+Con la corsa lenta (capitolo [05](05-corsa-lenta.md)) il corpo comincia a correre con regolarità. Prima di aggiungere velocità, con gli allunghi del capitolo [08](08-allunghi.md), conviene occuparsi di due capacità che restano spesso in ombra: la **mobilità**, cioè quanto si muovono bene le articolazioni, e la **propriocezione**, cioè quanto il corpo sa dove si trova. Costano pochi minuti e si fanno **prima di ogni allenamento**: preparano il corpo allo sforzo e, a lungo andare, rendono la corsa più economica e più sicura.
+
+Collegati: [07 Lo stretching](07-stretching.md), [09 La struttura di una seduta](09-struttura-seduta.md), [12 Drills](12-drills.md), [13 Forza](13-forza.md).
 
 ## 1. Il principio
 
@@ -11,6 +13,16 @@ Correre è una sequenza di **saltelli su una gamba sola**, 160-180 al minuto, og
 **Mobilità e flessibilità non sono la stessa cosa.**
 - **Flessibilità:** quanto si allunga un muscolo, in modo passivo (es. toccarsi le punte).
 - **Mobilità:** quanta escursione si usa **attivamente**, con controllo. Al runner serve questa: un'anca molto flessibile ma senza controllo non aiuta.
+
+### Prima di ogni allenamento: mobilità, non stretching
+Prima di ogni corsa si possono fare **3-5 minuti di esercizi di mobilità**: movimenti ampi e controllati che portano le articolazioni in tutta la loro escursione, a ritmo crescente. Scaldano muscoli e tendini, lubrificano le articolazioni, risvegliano il sistema nervoso e dicono al corpo che sta per lavorare.
+
+**Lo stretching statico prima della corsa, invece, è inutile**, per tre motivi:
+1. **Non scalda.** Tenere un muscolo allungato per 30" non alza la temperatura né la circolazione: il corpo resta freddo come prima.
+2. **Non previene gli infortuni.** Era l'idea con cui lo si faceva, ma gli studi non la confermano (sezione 2).
+3. **Se è lungo, peggiora la prestazione.** Oltre ~60" per muscolo riduce per circa un'ora forza e reattività: proprio quello che serve negli allunghi, nelle ripetute e in gara.
+
+Lo stretching statico ha un suo posto, ma **dopo la corsa**: è l'argomento del capitolo [07](07-stretching.md).
 
 **Il runner non ha bisogno di essere molto flessibile.** Serve una mobilità **sufficiente** e **simmetrica**. Oltre una certa soglia, più flessibilità non migliora nulla: un po' di rigidità di polpacci e tendini anzi restituisce energia elastica a ogni passo.
 
@@ -34,17 +46,29 @@ Correre è una sequenza di **saltelli su una gamba sola**, 160-180 al minuto, og
 | **Affondo con rotazione del busto** | affondo camminato, busto che ruota verso la gamba avanti, 8-10 passi | flessori dell'anca, toracica |
 | **Caviglie** | cerchi, punta-tallone, ginocchio avanti oltre la punta col tallone a terra, 20 per lato | dorsiflessione |
 
-### Mobilità mirata (dopo la corsa o in un altro momento, 5-10')
+### Mobilità mirata (sui propri punti deboli, 5-10')
 | Esercizio | Come | Per chi |
 |---|---|---|
 | **Ginocchio al muro** | la posizione del test, oscillando avanti e indietro per 10-15 ripetizioni, 2 serie | dorsiflessione sotto i 10 cm |
-| **Polpaccio e soleo** | al muro, gamba tesa (gastrocnemio) e piegata (soleo), 30" per lato | tutti, soprattutto con storia di fascite |
-| **Fascia plantare** | seduti, dita del piede tirate verso lo stinco, 30" per piede | storia di fascite (Digiovanni, 2003) |
-| **Flessori dell'anca** | affondo in ginocchio, bacino in retroversione ("coda sotto"), 30" per lato | test di Thomas positivo, chi sta molto seduto |
-| **Figura a 4** | supini, caviglia sul ginocchio opposto, 30" per lato | gluteo, piriforme |
+| **Affondo profondo dinamico** | affondo in avanti, bacino che scende e risale lentamente, 10 per lato | anca davanti rigida, chi sta molto seduto |
+| **Gatto-cammello** | a quattro zampe, schiena che si arrotonda e si inarca, 10 ripetizioni | schiena bassa e bacino rigidi |
 | **Rotazioni toraciche** | a quattro zampe, mano dietro la testa, gomito verso il soffitto, 8 per lato | busto rigido, braccia che incrociano |
+| **90/90 dell'anca** | seduti, entrambe le gambe piegate a 90°, ginocchia che ruotano da un lato all'altro, 10 volte | rotazione dell'anca limitata |
 
-Lo stretching statico dopo la corsa **non serve a recuperare**: serve a **mantenere la mobilità** nel tempo, che dopo i 50 anni si perde facilmente. Va fatto con dolcezza, senza dolore.
+### Ascoltare il corpo: insistere dove serve
+Non tutti hanno gli stessi punti deboli. Durante la corsa conviene notare **quali parti del corpo danno più problemi** (rigidità, tensione, fastidio che torna sempre nello stesso punto) e insistere su quelle, prima della corsa con la mobilità e dopo con lo stretching (capitolo [07](07-stretching.md)).
+
+| Se senti... | Prima della corsa (mobilità) | Dopo la corsa (stretching) |
+|---|---|---|
+| **Caviglie rigide**, primi passi "di legno" | cerchi della caviglia, ginocchio al muro | polpaccio e soleo |
+| **Polpacci duri**, fascia plantare che tira al mattino | punta-tallone, ginocchio al muro | soleo, fascia plantare |
+| **Anca davanti tirata**, passo corto (molte ore seduti) | oscillazioni avanti/indietro, affondo profondo | flessori dell'anca |
+| **Femorali tesi** | oscillazioni avanti/indietro, ad ampiezza crescente | femorali, dolce |
+| **Gluteo o esterno dell'anca** che tira | cerchi con le anche, 90/90 | figura a 4 |
+| **Schiena bassa rigida** a fine corsa | gatto-cammello | ginocchia al petto |
+| **Spalle chiuse, braccia che incrociano** | rotazioni toraciche, cerchi con le braccia | apertura del petto al muro |
+
+Un **dolore acuto o che peggiora** correndo non è rigidità: non si allunga e non si forza, si riduce il carico e, se non passa, si va da un medico o un fisioterapista.
 
 ### Propriocezione ed equilibrio (ogni giorno, 2-5')
 Progressione: si passa al livello successivo quando si tengono **30" per lato senza correzioni** grandi.
@@ -64,8 +88,8 @@ Progressione: si passa al livello successivo quando si tengono **30" per lato se
 
 | Quando | Cosa | Durata |
 |---|---|---|
-| Prima di ogni corsa | mobilità dinamica | 3-5' |
-| Dopo ogni corsa | stretching dolce (polpacci, fascia, anca) | 5-8' |
+| Prima di ogni corsa | mobilità dinamica, con qualche esercizio in più sui propri punti deboli | 3-5' |
+| Dopo ogni corsa | stretching statico (capitolo [07](07-stretching.md)) | 5-8' |
 | Ogni giorno | equilibrio su una gamba (es. lavando i denti) | 2' |
 | 1-2 volte a settimana | mobilità mirata sui punti deboli dei test | 10' |
 
@@ -82,14 +106,15 @@ Progressione: si passa al livello successivo quando si tengono **30" per lato se
 
 **Cosa si vede:** la mobilità è sufficiente; il punto debole è il **controllo del lato sinistro**. Equilibrio e squat dicono la stessa cosa da due lati: sul sinistro il sistema nervoso corregge meno e il gluteo medio tiene meno il bacino. La caviglia sinistra un po' più rigida può contribuire al ginocchio che entra.
 
-**Cosa si fa:** equilibrio ogni giorno (livelli 1-2, con una serie in più sul sinistro), ginocchio al muro sul sinistro dopo le corse, mezzo squat su una gamba davanti allo specchio nel blocco di forza della domenica. Si ricontrolla al test del 21 novembre.
+**Cosa si fa:** equilibrio ogni giorno (livelli 1-2, con una serie in più sul sinistro), ginocchio al muro sul sinistro prima delle corse, mezzo squat su una gamba davanti allo specchio nel blocco di forza della domenica. Si ricontrolla al test del 21 novembre.
 
 **Limiti:** un test solo, eseguito a casa, senza un osservatore esperto. L'equilibrio migliora molto in fretta all'inizio anche solo per apprendimento: un miglioramento a novembre andrà letto con prudenza.
 
 ## 6. Cosa vale per tutti
 
 - Al runner serve una mobilità **sufficiente e simmetrica**, non una flessibilità da ginnasta.
-- **Prima di correre** mobilità dinamica; **dopo** stretching dolce, per la mobilità a lungo termine, non per il recupero.
+- **Prima di ogni corsa** 3-5' di mobilità dinamica. **Niente stretching statico prima**: non scalda, non previene infortuni e, se lungo, toglie forza.
+- **Ascolta il corpo:** se una parte è sempre rigida, insisti lì, con la mobilità prima e lo stretching dopo.
 - La **caviglia** è l'articolazione da controllare per prima: ginocchio-muro sotto i 10 cm → lavoro mirato.
 - **L'equilibrio su una gamba costa 2 minuti al giorno** e migliora in poche settimane. Dopo i 50 anni è uno degli investimenti con il miglior rapporto costo/beneficio.
 - Le **asimmetrie** contano più dei valori assoluti: si misurano con un test ripetuto ogni mese.

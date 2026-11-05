@@ -29,13 +29,14 @@ Le osservazioni vengono prima annotate nel [registro degli esperimenti](esperime
 3. [Le scuole di pensiero](03-scuole-di-pensiero.md) — fartlek svedese, interval training tedesco, Lydiard, van Aaken, scuola italiana (Arcelli, Canova), Daniels, polarizzato (Seiler), doppia soglia norvegese, e cosa hanno in comune
 4. [Ritmi, zone e sedute](04-ritmi-zone-sedute.md) — soglia aerobica, soglia anaerobica e VO2max (definizioni e varianti), i ritmi per fasce con i nomi delle scuole (Daniels E/M/T/I/R, scuola italiana, Garmin, Seiler), la regola della durata di gara, seduta = zona × frazione × recupero, misurare la soglia
 5. [La corsa lenta](05-corsa-lenta.md) — dalle prime uscite con corsa e cammino ai 30 minuti continui, talk test invece della FC, progressione in minuti e scarichi, il primo lungo con 3 uscite a settimana e i suoi limiti
-6. [Gli allunghi](06-allunghi.md) — cosa sono (e cosa non sono: sprint, ripetute), perché non stancano, varianti (in salita, lanciati, su erba), dosaggio, velocità giusta e sicurezza, i miei allunghi troppo veloci
-7. [La struttura di una seduta](07-struttura-seduta.md) — riscaldamento (mobilità, corsa progressiva, drills, allunghi), defaticamento, stretching, cosa serve per ogni tipo di seduta
-8. [Il VDOT: un numero per gare e ritmi](08-vdot.md) — cos'è (VO2max "efficace", non VO2max), le due curve di Daniels e Gilbert, dai tempi di gara ai ritmi E/M/T/I/R, limiti e alternative (Riegel, McMillan), come e quando aggiornarlo, il mio VDOT dal 2017 a oggi
-9. [La periodizzazione: dalla seduta alla stagione](09-periodizzazione.md) — seduta, microciclo, mesociclo (3+1, 2+1, 1+1), macrociclo, anno e pluriennale; taper e transizione (come ci si riposa a fine ciclo); modelli lineare, a blocchi, ondulato, inverso; il piano autunnale 2026 come esempio
-10. [Mobilità e propriocezione](10-mobilita-propriocezione.md) — mobilità contro flessibilità, cosa fa davvero lo stretching, caviglia e anca, equilibrio su una gamba e piede, esercizi e progressioni
-11. [Le andature (drills)](11-drills.md) — skip A, B, C, carioca, andature saltate, allunghi; quando farli e cosa possono (e non possono) fare per la tecnica
-12. [La forza per il runner](12-forza.md) — prevenzione degli infortuni ed economia di corsa, polpaccio prima di tutto, esercizi su una gamba, programmazione nella settimana e nella stagione, il primo test di forza
+6. [Mobilità e propriocezione](06-mobilita-propriocezione.md) — mobilità contro flessibilità, cosa fa davvero lo stretching, caviglia e anca, equilibrio su una gamba e piede, esercizi e progressioni
+7. [Lo stretching](07-stretching.md) — stretching statico solo a fine corsa: a cosa serve (mobilità nel tempo) e a cosa no (infortuni, indolenzimento), come si fa, esercizi e punti deboli di ognuno
+8. [Gli allunghi](08-allunghi.md) — cosa sono (e cosa non sono: sprint, ripetute), perché non stancano, varianti (in salita, lanciati, su erba), dosaggio, velocità giusta e sicurezza, i miei allunghi troppo veloci
+9. [La struttura di una seduta](09-struttura-seduta.md) — riscaldamento (mobilità, corsa progressiva, drills, allunghi), defaticamento, stretching, cosa serve per ogni tipo di seduta
+10. [Il VDOT: un numero per gare e ritmi](10-vdot.md) — cos'è (VO2max "efficace", non VO2max), le due curve di Daniels e Gilbert, dai tempi di gara ai ritmi E/M/T/I/R, limiti e alternative (Riegel, McMillan), come e quando aggiornarlo, il mio VDOT dal 2017 a oggi
+11. [La periodizzazione: dalla seduta alla stagione](11-periodizzazione.md) — seduta, microciclo, mesociclo (3+1, 2+1, 1+1), macrociclo, anno e pluriennale; taper e transizione (come ci si riposa a fine ciclo); modelli lineare, a blocchi, ondulato, inverso; il piano autunnale 2026 come esempio
+12. [Le andature (drills)](12-drills.md) — skip A, B, C, carioca, andature saltate, allunghi; quando farli e cosa possono (e non possono) fare per la tecnica
+13. [La forza per il runner](13-forza.md) — prevenzione degli infortuni ed economia di corsa, polpaccio prima di tutto, esercizi su una gamba, programmazione nella settimana e nella stagione, il primo test di forza
 
 **Appendici:** [A. Tabelle VDOT](appendice-a-tabelle-vdot.md) — tempi equivalenti (1500 m-maratona) e ritmi di allenamento per VDOT 25-60
 

@@ -36,7 +36,7 @@ Una volta capito cosa significa il successo per sé, bisogna trasformarlo in **o
 C'è chi va a correre la prima volta e, senza allenamento, fa 10 km in 50 minuti. Sono persone molto rare, a cui la natura ha dato tutto per correre, e di solito migliorano anche in fretta. Poi ci sono persone che hanno bisogno di **anni** di allenamento per correre la stessa distanza nello stesso tempo. Non c'è niente di sbagliato in loro: il punto di partenza e la velocità di miglioramento dipendono in buona parte dalla genetica (vedi il principio di [individualizzazione](01-principi-allenamento.md)).
 
 Per questo l'obiettivo si confronta sempre con **dove si è oggi**, non con dove sono gli altri. Gli strumenti per farlo:
-- **l'ultima gara o l'ultimo test**: da lì il [VDOT](11-vdot.md) dice quali tempi sono equivalenti sulle altre distanze;
+- **l'ultima gara o l'ultimo test**: da lì il [VDOT](12-vdot.md) dice quali tempi sono equivalenti sulle altre distanze;
 - **i miglioramenti realistici**: per un amatore, qualche punto di VDOT in una stagione, non dieci;
 - **l'età**: l'*age grading* permette di confrontare il proprio tempo con quello dei migliori della stessa età.
 
@@ -44,7 +44,7 @@ Per questo l'obiettivo si confronta sempre con **dove si è oggi**, non con dove
 Un obiettivo può essere specifico, misurabile e perfino raggiungibile, ma **non avere senso** per chi lo insegue. Se corro per stare in salute, non ha senso preparare una maratona in pochi mesi quando non ho mai corso, non sono particolarmente dotato e faccio fatica a correre 2 km di fila: anche se ci arrivassi, il prezzo (infortuni, stanchezza, abbandono) andrebbe contro il motivo per cui ho cominciato.
 
 ### Definito nel tempo: dividere la strada
-Un obiettivo lontano ("la prima mezza maratona tra due anni") si raggiunge con una serie di obiettivi intermedi, ognuno con la sua data. È la logica della [periodizzazione](12-periodizzazione.md): gli obiettivi a lungo termine diventano piani di qualche mese, i piani diventano settimane, le settimane diventano sedute.
+Un obiettivo lontano ("la prima mezza maratona tra due anni") si raggiunge con una serie di obiettivi intermedi, ognuno con la sua data. È la logica della [periodizzazione](13-periodizzazione.md): gli obiettivi a lungo termine diventano piani di qualche mese, i piani diventano settimane, le settimane diventano sedute.
 
 ## 3. Cosa dice la scienza
 

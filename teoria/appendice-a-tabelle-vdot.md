@@ -1,6 +1,6 @@
 # Appendice A — Tabelle VDOT
 
-Valori **calcolati** con le formule di Daniels e Gilbert (capitolo [11](11-vdot.md), sezione 2), per VDOT da 25 a 60. Possono differire di qualche secondo dalle tabelle stampate di *Daniels' Running Formula*, che sono arrotondate a mano. Il ritmo E è un'approssimazione (62-70% del VDOT). Mezza = 21.0975 km, maratona = 42.195 km.
+Valori **calcolati** con le formule di Daniels e Gilbert (capitolo [12](12-vdot.md), sezione 2), per VDOT da 25 a 60. Possono differire di qualche secondo dalle tabelle stampate di *Daniels' Running Formula*, che sono arrotondate a mano. Il ritmo E è un'approssimazione (62-70% del VDOT). Mezza = 21.0975 km, maratona = 42.195 km.
 
 **Come si usa:** si cerca nella tabella A1 la riga con il tempo di una gara recente corsa al massimo; il VDOT di quella riga dà i ritmi della tabella A2. Le righe sono a passo di 1 punto: per un tempo intermedio si interpola.
 

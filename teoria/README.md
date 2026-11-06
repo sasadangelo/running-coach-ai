@@ -34,10 +34,11 @@ Le osservazioni vengono prima annotate nel [registro degli esperimenti](esperime
 8. [Lo stretching](08-stretching.md) — stretching statico solo a fine corsa: a cosa serve (mobilità nel tempo) e a cosa no (infortuni, indolenzimento), come si fa, esercizi e punti deboli di ognuno
 9. [Gli allunghi](09-allunghi.md) — cosa sono (e cosa non sono: sprint, ripetute), perché non stancano, varianti (in salita, lanciati, su erba), dosaggio, velocità giusta e sicurezza, i miei allunghi troppo veloci
 10. [La corsa in soglia](10-corsa-soglia.md) — quando introdurla, dai cruise intervals al Tempo continuo, trovare il ritmo le prime volte (% FC, talk test, respiro, regolarità), varianti (sotto soglia, corto veloce, progressivo), i 20' e il 10% di Daniels, le altre scuole, la mia progressione da 4x500 a 2000 m continui
-11. [Il VDOT: un numero per gare e ritmi](11-vdot.md) — cos'è (VO2max "efficace", non VO2max), le due curve di Daniels e Gilbert, dai tempi di gara ai ritmi E/M/T/I/R, limiti e alternative (Riegel, McMillan), come e quando aggiornarlo, il mio VDOT dal 2017 a oggi
-12. [La periodizzazione: dalla seduta alla stagione](12-periodizzazione.md) — seduta, microciclo, mesociclo (3+1, 2+1, 1+1), macrociclo, anno e pluriennale; taper e transizione (come ci si riposa a fine ciclo); modelli lineare, a blocchi, ondulato, inverso; il piano autunnale 2026 come esempio
-13. [Le andature (drills)](13-drills.md) — skip A, B, C, carioca, andature saltate, allunghi; quando farli e cosa possono (e non possono) fare per la tecnica
-14. [La forza per il runner](14-forza.md) — prevenzione degli infortuni ed economia di corsa, polpaccio prima di tutto, esercizi su una gamba, programmazione nella settimana e nella stagione, il primo test di forza
+11. [Le ripetute](11-ripetute.md) — brevi (R) e lunghe (I), più breve = più veloce, recuperi, ruolo della FC, regolarità, volume, progressione da 8x200 alle 800, le mie 200 e 400
+12. [Il VDOT: un numero per gare e ritmi](12-vdot.md) — cos'è (VO2max "efficace", non VO2max), le due curve di Daniels e Gilbert, dai tempi di gara ai ritmi E/M/T/I/R, limiti e alternative (Riegel, McMillan), come e quando aggiornarlo, il mio VDOT dal 2017 a oggi
+13. [La periodizzazione: dalla seduta alla stagione](13-periodizzazione.md) — seduta, microciclo, mesociclo (3+1, 2+1, 1+1), macrociclo, anno e pluriennale; taper e transizione (come ci si riposa a fine ciclo); modelli lineare, a blocchi, ondulato, inverso; il piano autunnale 2026 come esempio
+14. [Le andature (drills)](14-drills.md) — skip A, B, C, carioca, andature saltate, allunghi; quando farli e cosa possono (e non possono) fare per la tecnica
+15. [La forza per il runner](15-forza.md) — prevenzione degli infortuni ed economia di corsa, polpaccio prima di tutto, esercizi su una gamba, programmazione nella settimana e nella stagione, il primo test di forza
 
 **Appendici:** [A. Tabelle VDOT](appendice-a-tabelle-vdot.md) — tempi equivalenti (1500 m-maratona) e ritmi di allenamento per VDOT 25-60
 

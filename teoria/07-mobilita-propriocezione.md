@@ -2,7 +2,7 @@
 
 Con la corsa lenta (capitolo [06](06-corsa-lenta.md)) il corpo comincia a correre con regolarità. Prima di aggiungere velocità, con gli allunghi del capitolo [09](09-allunghi.md), conviene occuparsi di due capacità che restano spesso in ombra: la **mobilità**, cioè quanto si muovono bene le articolazioni, e la **propriocezione**, cioè quanto il corpo sa dove si trova. Costano pochi minuti e si fanno **prima di ogni allenamento**: preparano il corpo allo sforzo e, a lungo andare, rendono la corsa più economica e più sicura.
 
-Collegati: [08 Lo stretching](08-stretching.md), [05 La struttura di una seduta](05-struttura-seduta.md), [13 Drills](13-drills.md), [14 Forza](14-forza.md).
+Collegati: [08 Lo stretching](08-stretching.md), [05 La struttura di una seduta](05-struttura-seduta.md), [14 Drills](14-drills.md), [15 Forza](15-forza.md).
 
 ## 1. Il principio
 

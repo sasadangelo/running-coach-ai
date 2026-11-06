@@ -55,6 +55,13 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 **Confondenti:** stima dell'algoritmo, non misura diretta; una sola seduta; respiro influenzato da naso/tuba (punto debole ORL).
 **Da verificare:** confrontare i prossimi Tempo continui (2500-3500 m) e una seduta sopra soglia. Capitolo: [La corsa in soglia](10-corsa-soglia.md).
 
+## E9 — La terza settimana di carico è la più dura ⏳ [P]
+**Ipotesi:** con 3 uscite a settimana tutte "importanti" (ripetute, Tempo, lungo), la terza settimana del 3+1 accumula troppa fatica.
+**Cosa è successo finora:** nei due 3+1 di S1-S8 la terza settimana è stata quella al limite (10x200 di S3 "ero davvero stanco"; 8x400 di S7 "uno dei più duri"). HRV media per settimana: ~54 fino a S6, poi 51 (S7), 51 (scarico S8), 47 (S9 e S10). Dopo entrambi gli scarichi la prestazione è stata buona (S5 miglior Tempo; S9 test di soglia e decoupling 0.7%). Nel 2024, senza un piano, l'atleta aveva alleggerito più o meno ogni 3 settimane (fine agosto, metà settembre, inizio ottobre).
+**Confondenti:** trasloco (17/10), notti corte, estrazione del molare, muco, lavoro d'autunno; il sonno, invece, è migliorato da S8 (6h13 → ~7h). Due soli cicli.
+**Scelta (6/11/2026):** lo schema resta ripetute + Tempo + lungo in ogni settimana di carico. Nessuna settimana leggera programmata: se i segnali lo chiedono (regola 9), le ripetute diventano una corsa facile con allunghi.
+**Da verificare:** nei prossimi 3+1, quante volte la terza settimana richiede la corsa facile e se l'HRV risale nello scarico. Se succede in quasi tutti i mesocicli → valutare il 2+1. Regola: [periodizzazione-pluriennale.md, regola 3](../periodizzazione-pluriennale.md#regole-che-valgono-per-tutti-i-piani).
+
 ---
 
 ## Prossimi esperimenti già programmati

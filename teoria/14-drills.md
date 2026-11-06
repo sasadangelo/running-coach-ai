@@ -1,6 +1,6 @@
 # Le andature (drills)
 
-> Bozza, iniziata il 24 ottobre 2026. Collegati: [05 La struttura di una seduta](05-struttura-seduta.md), [07 Mobilità e propriocezione](07-mobilita-propriocezione.md), [14 Forza](14-forza.md).
+> Bozza, iniziata il 24 ottobre 2026. Collegati: [05 La struttura di una seduta](05-struttura-seduta.md), [07 Mobilità e propriocezione](07-mobilita-propriocezione.md), [15 Forza](15-forza.md).
 
 ## 1. Il principio
 
@@ -16,7 +16,7 @@ I **drills**, o **andature** nella tradizione italiana, sono esercizi che **isol
 
 - **Consolidato:** come parte del **riscaldamento** dinamico, prima di sedute veloci e gare, migliorano la prestazione rispetto al solo jogging (riscaldamento di tipo FIFA 11+ e simili).
 - **Discusso:** che i drills **cambino la tecnica di corsa** in modo duraturo. Gli studi sono pochi: il gesto di corsa è molto automatizzato e cambia lentamente. Probabilmente aiutano più come allenamento della coordinazione e dei piedi che come "lezione di tecnica".
-- **Probabile:** le andature saltate (balzi, skip saltati) migliorano rigidità elastica di caviglia e tendini, e con questo l'economia di corsa, come la pliometria (capitolo [14](14-forza.md)).
+- **Probabile:** le andature saltate (balzi, skip saltati) migliorano rigidità elastica di caviglia e tendini, e con questo l'economia di corsa, come la pliometria (capitolo [15](15-forza.md)).
 - **Consolidato:** gli **allunghi** (strides) sono il modo più semplice di mantenere velocità ed economia nei periodi di solo lento.
 
 ## 3. Gli esercizi più utili

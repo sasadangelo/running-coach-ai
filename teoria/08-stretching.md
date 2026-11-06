@@ -59,7 +59,7 @@ La routine non è uguale per tutti. Gli esercizi che servono a tutti (polpaccio,
 - **schiena bassa rigida a fine lungo:** ginocchia al petto;
 - **asimmetrie** (un lato più rigido dell'altro): una serie in più sul lato rigido.
 
-Se la rigidità torna sempre e non migliora in qualche settimana, lo stretching da solo non basta: spesso dietro c'è un **muscolo debole** che fa lavorare troppo un altro, ed è un lavoro per la forza (capitolo [14](14-forza.md)).
+Se la rigidità torna sempre e non migliora in qualche settimana, lo stretching da solo non basta: spesso dietro c'è un **muscolo debole** che fa lavorare troppo un altro, ed è un lavoro per la forza (capitolo [15](15-forza.md)).
 
 ## 4. Cosa è successo a me
 

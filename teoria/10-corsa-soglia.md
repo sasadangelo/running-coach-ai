@@ -2,7 +2,7 @@
 
 La base è costruita. La corsa lenta (capitolo [06](06-corsa-lenta.md)) ha portato a 30 minuti e oltre di corsa continua. Il riscaldamento si fa con la mobilità e partendo piano (capitoli [07](07-mobilita-propriocezione.md) e [02](02-energia-partire-piano.md)), il defaticamento va in decrescendo e gli allunghi (capitolo [09](09-allunghi.md)) hanno riportato un po' di velocità nelle gambe. Poi è arrivato il lungo, il primo lavoro "speciale". Adesso c'è spazio per il **secondo lavoro di qualità: la corsa in soglia anaerobica**. Si comincia **a frazioni con un recupero breve** (i *cruise intervals* di Daniels) e si arriva al **blocco continuo** (il *Tempo run*).
 
-Collegati: [04 Ritmi, zone e sedute](04-ritmi-zone-sedute.md) (definizioni e misura della soglia), [11 Il VDOT](11-vdot.md), [05 La struttura di una seduta](05-struttura-seduta.md), [12 La periodizzazione](12-periodizzazione.md).
+Collegati: [04 Ritmi, zone e sedute](04-ritmi-zone-sedute.md) (definizioni e misura della soglia), [12 Il VDOT](12-vdot.md), [05 La struttura di una seduta](05-struttura-seduta.md), [13 La periodizzazione](13-periodizzazione.md), [11 Le ripetute](11-ripetute.md).
 
 ## 1. Il principio
 
@@ -53,7 +53,7 @@ Altre varianti, meno comuni:
 ### Quando iniziare
 - **Dopo la base**, quando si corrono **30' e oltre di fila** senza fatica e da qualche settimana.
 - **Dopo gli allunghi**, che hanno già abituato tendini e piedi a un passo più veloce.
-- **Una volta a settimana**, nella fase di base avanzata e in quella specifica (capitolo [12](12-periodizzazione.md)).
+- **Una volta a settimana**, nella fase di base avanzata e in quella specifica (capitolo [13](13-periodizzazione.md)).
 
 ### La progressione
 Si parte da frazioni corte con un recupero breve, si allungano le frazioni, se ne riduce il numero e alla fine si arriva al blocco unico:
@@ -64,7 +64,7 @@ Si parte da frazioni corte con un recupero breve, si allungano le frazioni, se n
  rec. 200 m jog        rec. 200 m jog        (+500 m a settimana, al massimo)
 ```
 
-Cresce **una cosa alla volta**: prima la durata della frazione, poi il blocco continuo. Il ritmo resta lo stesso finché la soglia non si sposta davvero (test o gara, capitolo [11](11-vdot.md)).
+Cresce **una cosa alla volta**: prima la durata della frazione, poi il blocco continuo. Il ritmo resta lo stesso finché la soglia non si sposta davvero (test o gara, capitolo [12](12-vdot.md)).
 
 ## 2. Trovare il ritmo giusto le prime volte
 
@@ -94,7 +94,7 @@ Per me oggi: FC max 185, riposo 56 → 87-90% = **161-167**; 82-88% della riserv
 Il segnale più utile: in soglia il respiro è **impegnato ma regolare**. Quando comincia a "rincorrersi" e diventa irregolare si è passati sopra (è la seconda soglia ventilatoria, VT2: il respiro accelera per eliminare la CO2 in eccesso).
 
 ### Altri riferimenti
-- **Il passo da una gara recente:** con il VDOT (capitolo [11](11-vdot.md)) il ritmo T è ~88% del VDOT. Per chi corre il 10K in circa un'ora, **soglia e ritmo 10K quasi coincidono**; per chi è più veloce la soglia è più lenta del ritmo 10K (capitolo [04](04-ritmi-zone-sedute.md), sezione 3).
+- **Il passo da una gara recente:** con il VDOT (capitolo [12](12-vdot.md)) il ritmo T è ~88% del VDOT. Per chi corre il 10K in circa un'ora, **soglia e ritmo 10K quasi coincidono**; per chi è più veloce la soglia è più lenta del ritmo 10K (capitolo [04](04-ritmi-zone-sedute.md), sezione 3).
 - **Il ritmo che si regge per un'ora** in gara: è la definizione di Daniels. Per un principiante la durata scende a 15-25'.
 - **La regolarità:** a soglia le frazioni si ripetono **uguali**, entro 2-3" l'una dall'altra, e l'ultima è veloce come la prima. Se l'ultima cala, si era sopra.
 - **Il recupero:** nei cruise intervals, in 200 m di jog la FC dovrebbe scendere di 8-12 battiti. Se non scende quasi per niente, il ritmo era troppo alto.

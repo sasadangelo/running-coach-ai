@@ -2,7 +2,7 @@
 
 Nel capitolo [06](06-corsa-lenta.md) la corsa lenta ha costruito la base: 30 minuti di corsa continua, poi il lungo. Gli allunghi sono il **primo stimolo verso la velocità**, e il più dolce. Si possono introdurre **appena si arriva a 30' di corsa continua**, alla fine di una corsa lenta, perché costano pochissimo e non aggiungono fatica. Abituano gambe, tendini e piedi ai ritmi veloci e insegnano a correre sciolti anche quando il passo sale. Vengono **prima del Tempo e della soglia**, la prima vera seduta di qualità: quando arriverà, il corpo avrà già conosciuto la velocità senza averla pagata.
 
-Collegati: [06 La corsa lenta](06-corsa-lenta.md), [05 La struttura di una seduta](05-struttura-seduta.md), [13 Drills](13-drills.md), [04 Ritmi, zone e sedute](04-ritmi-zone-sedute.md).
+Collegati: [06 La corsa lenta](06-corsa-lenta.md), [05 La struttura di una seduta](05-struttura-seduta.md), [14 Drills](14-drills.md), [04 Ritmi, zone e sedute](04-ritmi-zone-sedute.md).
 
 ## 1. Il principio
 

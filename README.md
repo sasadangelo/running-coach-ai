@@ -100,10 +100,11 @@ Nella cartella [teoria/](teoria/README.md) raccolgo quello che imparo strada fac
 8. [Lo stretching](teoria/08-stretching.md)
 9. [Gli allunghi](teoria/09-allunghi.md)
 10. [La corsa in soglia](teoria/10-corsa-soglia.md)
-11. [Il VDOT: un numero per gare e ritmi](teoria/11-vdot.md)
-12. [La periodizzazione: dalla seduta alla stagione](teoria/12-periodizzazione.md)
-13. [Le andature (drills)](teoria/13-drills.md)
-14. [La forza per il runner](teoria/14-forza.md)
+11. [Le ripetute](teoria/11-ripetute.md)
+12. [Il VDOT: un numero per gare e ritmi](teoria/12-vdot.md)
+13. [La periodizzazione: dalla seduta alla stagione](teoria/13-periodizzazione.md)
+14. [Le andature (drills)](teoria/14-drills.md)
+15. [La forza per il runner](teoria/15-forza.md)
 
 ## Avvertenza
 

@@ -36,6 +36,21 @@ Conseguenza visibile nella Race for the Cure: il motore per partire a 6:25 c'era
 Oggi il volume è simile, ma la struttura è diversa (ripetute, soglia, lungo facile e lento): per questo FC a riposo, HRV ed EF sono migliorati, mentre il VO2max quasi non si è mosso.
 
 ## Aspettative e verifiche
-- **Roma 5K (8 nov):** con soglia ~6:15/km e VDOT ~30-31, stima **30:30-31:30**, contro i ~32:40 equivalenti di marzo. Va corsa davvero (FC media ~168-172), non a 160.
+- **Roma 5K (8 nov):** con soglia ~6:15/km e VDOT ~30-31, stima **30:30-31:30**, contro i ~32:40 equivalenti di marzo. Va corsa davvero (FC media ~168-172), non a 160. *Poi decisa progressiva il 1/11 (fascia plantare, estrazione dentale): esito sotto.*
 - **Best Woman 10K (6 dic):** il rischio da evitare è la partenza della Race for the Cure. Con i lunghi a 7-8.5 km e una partenza prudente il crollo si può evitare.
 - **Dopo ogni gara:** aggiornare questa tabella con VDOT, FC di soglia Friel e passo per km.
+
+## Verifica: Roma 5K (8 novembre)
+
+| Gara | Distanza | Tempo | Passo | FC media | VDOT | Note |
+|---|---|---|---|---|---|---|
+| Acea Water Fun Run (21 mar) | 4.87 km (~32:40 sui 5 km) | 31:51 | 6:33/km | 160 | 27.7 | Sotto ritmo, finale a 6:00 con FC 172 |
+| **Roma 5K (8 nov)** | 5.00 km (GPS 5.17) | **32:33** (orologio; ufficiale 32:58 dallo sparo) | **6:31/km** | 163 (polso) | **28.0** | Progressiva voluta, percorso con saliscendi |
+
+**Parziali (km del GPS):** 6:44 (FC 146) · 6:17 (161) · 6:16 (165) · 6:16 (170) · 6:05 (171) · volata 5:29 (175). Il passo di soglia è arrivato dal km 2, non dal km 4: 4 km a soglia invece dei 2 previsti, sempre in controllo (RPE 3). Tra il 12' e il 14'30" il passo è salito sopra 6:40 per la salita.
+
+**FC (al polso, fascia guasta):** Friel dal 10' alla fine 168, picco 178. Soglia 165 e FC max 185 confermate; da riverificare con la fascia alla 10K.
+
+**Lettura:** pari con marzo (VDOT 28.0 contro 27.7). Nessuna delle due gare era a tutta, quindi il risultato non misura la forma: il miglioramento di FC a riposo, HRV, EF, passo a FC 150 e test di soglia (VDOT ~30-31) **non è ancora stato dimostrato in gara**. Ritmi invariati, ancorati al test del 29/10. VO2max stimato dalla gara 40.5, uguale alla stima corrente.
+
+**Prossima verifica:** Best Woman 10K (6 dic), corsa davvero. Con il VDOT del test (30-31) il tempo atteso è 1h02-1h04; sopra ~1h06:30 (VDOT sotto 28.5, cioè il livello della primavera) è un segnale da prendere sul serio.

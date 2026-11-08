@@ -43,7 +43,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from calculate_capacity_score import BLOCK_PACE_LIMIT_SEC_KM, longest_block, smooth_speed  # noqa: E402
-from calculate_decoupling import find_activity, login, markdown_table  # noqa: E402
+from calculate_decoupling import find_activity, is_race, login, markdown_table  # noqa: E402
 from calculate_endurance_score import DEFAULT_LOGS_DIR, pace_str, parse_logged_runs  # noqa: E402
 from calculate_vo2max import ZONES_CONFIG, extract_samples, rolling_mean  # noqa: E402
 
@@ -65,7 +65,6 @@ HR_BAND = 6
 MIN_SAMPLES = 120
 CONTINUOUS_BLOCK_MINUTES = 12  # S9 test block 2000m ~12.5 min; 1500m reps (~9-10 min) stay "a ripetute"
 RACE_MIN_MINUTES = 20
-RACE_KEYWORDS = ("gara", "race")
 FRIEL_SKIP_SECONDS = 600
 
 
@@ -134,10 +133,6 @@ def race_estimate(samples: list[tuple[float, float, float]], distance_km: float)
         "vdot": race_vdot,
     }
 
-
-def is_race(activity: dict, name: str) -> bool:
-    event = (activity.get("eventType") or {}).get("typeKey", "")
-    return event == "race" or any(k in name.lower() for k in RACE_KEYWORDS)
 
 
 def write_log(path: Path, results: list[dict], hr_thr: float) -> None:

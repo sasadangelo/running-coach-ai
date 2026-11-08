@@ -3,22 +3,79 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 3.78 km
-- **Total Time**: 0:27:49
-- **Total Elevation**: 5 m
-- **Total Calories**: 284 kcal (2/2 activities with data)
-- **Total TSS**: 36 (2/2 activities with a valid NGP/IF)
-- **Average RPE**: 2.0/10 (2/2 activities rated)
-- **Total sRPE**: 59 (RPE x minutes, rated activities only)
+- **Total Activities**: 4
+- **Total Distance**: 10.66 km
+- **Total Time**: 1:14:07
+- **Total Elevation**: 35 m
+- **Total Calories**: 835 kcal (4/4 activities with data)
+- **Total TSS**: 103 (4/4 activities with a valid NGP/IF)
+- **Average RPE**: 2.3/10 (3/4 activities rated)
+- **Total sRPE**: 157 (RPE x minutes, rated activities only)
 
 ### Running Totals
-- **Total Run Time**: 0:24:32
-- **Total Walk Time**: 0:03:30
+- **Total Run Time**: 1:07:33
+- **Total Walk Time**: 0:11:19
 
 ## Activities
 
-### 2026-11-05 07:17:59 - Fiumicino - Shakeout 1.6Km
+### 2026-11-08 09:14:28 - Rome 5k
+
+**Type**: Run
+**Distance**: 5.17 km
+**Duration**: 0:32:31
+**Pace**: 6:18/km
+**NGP medio**: 6:15/km
+**IF**: 1.00
+**TSS**: 54
+**RPE**: 3/10
+**sRPE**: 98
+**Sensazione**: Forte (75/100)
+**Run time**: 0:32:28
+**Walk time**: 0:00:05
+**Elevation**: 30 m
+**Calories**: 396 kcal
+**Heart Rate**: 163 bpm (max: 178)
+**Meteo**: 10°C, rugiada 10°C, umidità 100%, sereno (stazione Roma / Urbe, aria all'ombra)
+**Note**: Fc con fascia non funzionava bene quindi ho usata quella al polso. Corsa sempre in controllo, mai andato in difficoltà. Correre per Roma è più difficile rispetto a Fiumicino per via dei saliscendi. Tempo ufficiale è 32:58 a 6:36 min/km. Questa volta rispetto a altre due gare il mio orologio ha anticipato.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:06:44 | 6:44/km | 146 | 9 m       |
+| 2   | 1.00 km  | 0:06:17 | 6:17/km | 161 | 9 m       |
+| 3   | 1.00 km  | 0:06:16 | 6:16/km | 165 | 7 m       |
+| 4   | 1.00 km  | 0:06:16 | 6:16/km | 170 | 4 m       |
+| 5   | 1.00 km  | 0:06:04 | 6:05/km | 171 | 2 m       |
+| 6   | 0.17 km  | 0:00:54 | 5:29/km | 175 | 0 m       |
+
+---
+### 2026-11-08 08:34:44 - Riscaldamento Rome 5k
+
+**Type**: Run
+**Distance**: 1.71 km
+**Duration**: 0:13:47
+**Pace**: 10:39/km
+**NGP medio**: 8:30/km
+**IF**: 0.74
+**TSS**: 12
+**Run time**: 0:10:33
+**Walk time**: 0:07:44
+**Elevation**: 0 m
+**Calories**: 155 kcal
+**Heart Rate**: 119 bpm (max: 169)
+**Meteo**: 8°C, rugiada 8°C, umidità 100%, foschia (stazione Roma / Urbe, aria all'ombra)
+**Note**: Frequenza cardiaca con fascia sballata. Corsa lentissima, mobilità e drills.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace     | HR  | Elevation |
+|-----|----------|---------|----------|-----|-----------|
+| 1   | 1.00 km  | 0:07:34 | 7:44/km  | 115 | 0 m       |
+| 2   | 0.71 km  | 0:06:13 | 14:46/km | 122 | 0 m       |
+
+---
+### 2026-11-05 07:17:59 - Shakeout Pre Gara 1.6Km
 
 **Type**: Run
 **Distance**: 1.61 km
@@ -84,18 +141,3 @@
 | 11  | 0.01 km  | 0:00:03 | 7:33/km  | 149 | 0 m       |
 
 ---
-
-## Heart-Rate Zones
-
-- **Metodo**: Karvonen
-- **FC max**: 185 bpm
-- **FC riposo media**: 58.7 bpm
-- **Riserva cardiaca**: 126.3 bpm
-
-| Zona | % HRR | FC |
-| --- | ---: | ---: |
-| Zone 1 | 50-60% | 122-134 bpm |
-| Zone 2 | 60-75% | 134-153 bpm |
-| Zone 3 | 75-85% | 153-166 bpm |
-| Zone 4 | 85-93% | 166-176 bpm |
-| Zone 5 | 93-100% | 176-185 bpm |

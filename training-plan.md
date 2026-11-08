@@ -32,17 +32,17 @@
 | **Recupero (jog tra le frazioni del Tempo)** | ~8:30/km | Jog leggero. Tra le ripetute vale la regola della riga corrispondente |
 | **Riscaldamento/Defaticamento** | ~8:00/km | |
 
-**FC di riferimento** (aggiornata il 15 ottobre: FC max 185, riposo 56, metodo Karvonen; FC di soglia ~165):
+**FC di riferimento** (aggiornata l'8 novembre: FC max 185, riposo 58 (media 7 giorni), metodo Karvonen; FC di soglia ~165):
 
 | Zona | FC (bpm) | Uso |
 |------|----------|-----|
-| Z1 (50-60% HRR) | 121-133 | Recupero, riscaldamento |
-| Z2 (60-75% HRR) | 133-153 | Lungo e corse facili (lungo: ~148-150, tetto 155) |
+| Z1 (50-60% HRR) | 122-134 | Recupero, riscaldamento |
+| Z2 (60-75% HRR) | 134-153 | Lungo e corse facili (lungo: ~148-150, tetto 155) |
 | Z3 (75-85% HRR) | 153-166 | Medio; il limite alto coincide con la soglia |
 | Z4 (85-93% HRR) | 166-176 | Sopra soglia: fine delle frazioni del Tempo, ripetute lunghe |
 | Z5 (93-100% HRR) | 176-185 | Ripetute brevi, volate |
 
-FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre ~165, picco 178 nella volata della 5K di marzo) e dai 10K di 10 anni fa (media 173, picco 188), corretti per l'età. Garmin indica ancora FC max 194 e soglia 173 (aprile): troppo alti. Verifica alla Roma 5K: FC media dal 10' alla fine (FC di soglia) e picco della volata (limite minimo della FC max).
+FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre ~165, picco 178 nella volata della 5K di marzo) e dai 10K di 10 anni fa (media 173, picco 188), corretti per l'età. Garmin indica ancora FC max 194 e soglia 173 (aprile): troppo alti. Verifica alla Roma 5K (8/11, FC al polso perché la fascia non funzionava): FC media dal 10' alla fine 168, picco 178. Soglia ~165 e FC max 185 confermate; da riverificare con la fascia alla 10K.
 
 **Nota**: se durante ripetute o tempo la FC schizza molto oltre queste zone a parità di ritmo, è un segnale di fatica/caldo accumulati — quel giorno rallenta un po', non è un fallimento.
 

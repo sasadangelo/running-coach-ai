@@ -11,6 +11,7 @@ Usage:
 
 import argparse
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -48,7 +49,9 @@ def find_activity(client: Garmin, day: str, name_contains: str | None) -> dict:
     activities = client.get_activities_by_date(day, day)
     running = [a for a in activities if "running" in (a.get("activityType", {}) or {}).get("typeKey", "").lower()]
     if name_contains:
-        named = [a for a in running if name_contains.lower() in (a.get("activityName") or "").lower()]
+        # An exact name match wins over substring matches ("Rome 5k" vs "Riscaldamento Rome 5k").
+        exact = [a for a in running if (a.get("activityName") or "").strip().lower() == name_contains.strip().lower()]
+        named = exact or [a for a in running if name_contains.lower() in (a.get("activityName") or "").lower()]
         # The activity may have been renamed on Garmin after the log was written:
         # with a single run that day, the name doesn't matter.
         running = named or (running if len(running) == 1 else [])
@@ -59,6 +62,25 @@ def find_activity(client: Garmin, day: str, name_contains: str | None) -> dict:
         names = ", ".join(f"{a.get('activityName')} (id {a.get('activityId')})" for a in running)
         raise ValueError(f"Multiple running activities on {day}: {names}. Use --activity-name or --activity-id to disambiguate.")
     return running[0]
+
+
+RACE_KEYWORDS = ("gara", "race")
+# Race names like "Rome 5k", "Best Woman 10K", "21k" (but not "Lungo 5 Km").
+RACE_DISTANCE_RE = re.compile(r"\b\d+(?:[.,]\d+)?\s?k\b", re.IGNORECASE)
+WARMUP_KEYWORDS = ("riscald", "warm", "defatic", "cool", "shakeout")
+
+
+def is_race(activity: dict | None, name: str) -> bool:
+    """Garmin event type race, or a race-like name ("gara", "race", "5k", "10K")."""
+    if is_warmup(name):
+        return False
+    event = ((activity or {}).get("eventType") or {}).get("typeKey", "")
+    lower = name.lower()
+    return event == "race" or any(k in lower for k in RACE_KEYWORDS) or bool(RACE_DISTANCE_RE.search(name))
+
+
+def is_warmup(name: str) -> bool:
+    return any(k in name.lower() for k in WARMUP_KEYWORDS)
 
 
 def extract_series(client: Garmin, activity_id: int) -> list[tuple[float, float, float]]:

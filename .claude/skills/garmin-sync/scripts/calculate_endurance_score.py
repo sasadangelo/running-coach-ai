@@ -17,7 +17,8 @@ ES = (speed_m_s / HR_avg) * distance_km * 100 * C * M_dec * H
 - H (recency) = days since the last long run covering >= 85% of this distance:
   <= 14 -> 1.0, 15-30 -> 0.90, > 30 or never -> 0.75.
 
-Long runs are the Sunday runs in training-log/ (excluding strides), or the
+Long runs are the Sunday runs in training-log/ (excluding strides, races and
+race warm-ups; the longest one if several remain on the same day), or the
 dates passed with --date. Besides the summary in health-log/endurance-score.md,
 each long run's section in training-log/week-N.md gets "**Decoupling**:" and
 "**ES**:" lines, and its decoupling is recorded in health-log/aerobic-decoupling.md
@@ -39,6 +40,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from calculate_decoupling import (  # noqa: E402
+    is_race,
+    is_warmup,
     WALK_SPEED_THRESHOLD_M_S,
     compute_decoupling,
     extract_series,
@@ -107,7 +110,19 @@ def parse_logged_runs(logs_dir: str) -> list[dict]:
 
 
 def is_long_run(run: dict) -> bool:
-    return run["date"].weekday() == 6 and "allungh" not in run["name"].lower()
+    """A Sunday run that is not strides, a race or a race warm-up/cool-down."""
+    name = run["name"]
+    return (run["date"].weekday() == 6 and "allungh" not in name.lower()
+            and not is_race(None, name) and not is_warmup(name))
+
+
+def longest_per_day(runs: list[dict]) -> list[dict]:
+    """Keep only the longest run of each day (sorted by date)."""
+    best: dict[date, dict] = {}
+    for r in runs:
+        if r["date"] not in best or r["distance_km"] > best[r["date"]]["distance_km"]:
+            best[r["date"]] = r
+    return sorted(best.values(), key=lambda r: r["date"])
 
 
 def extract_speed_series(client, activity_id: int) -> list[tuple[float, float]]:
@@ -304,7 +319,7 @@ def main() -> int:
         wanted = {date.fromisoformat(d) for d in args.date}
         longs = [r for r in runs if r["date"] in wanted and "allungh" not in r["name"].lower()]
     else:
-        longs = [r for r in runs if is_long_run(r)]
+        longs = longest_per_day([r for r in runs if is_long_run(r)])
     if not longs:
         print("No long runs found.", file=sys.stderr)
         return 1

@@ -47,7 +47,7 @@ Prima settimana quasi libera (camminate, 1-2 corse brevi se se ne ha voglia), se
 - **Gare:** Corsa di Miguel 10K (17/1) e CorriFregene 10K (14/2) 🏃 **facili, al posto del lungo**; **Acea Water Fun Run 5K (sabato 13/3)** 🎯 **sotto 30'** (6:00/km, VDOT ~30.8).
 - **Da decidere quando si scrive il piano:** con i mesocicli 3+1, Miguel e Fregene cadono alla fine della 4ª e dell'8ª settimana, cioè negli scarichi. Si può spostare uno scarico, oppure usare la 10K molto facile come unica seduta lunga della settimana di scarico.
 - **Acea:** è la corsa non competitiva del weekend della Maratona di Roma, con migliaia di persone. Bisogna partire davanti, vicino all'inizio della griglia, e accettare che il primo km costi qualche secondo. Il tempo è quello del Garmin, e il percorso 2026 era di 4.87 km: l'obiettivo si misura ai **5.00 km del Garmin** (su 4.87 km l'equivalente è ~29:13).
-- **Volume:** 20 → ~25 km su 3 giorni. **Forza in palestra 2 volte a settimana** da gennaio.
+- **Volume:** 20 → ~25 km su 3 giorni. **Forza in casa 2 volte a settimana** (dal 7 dicembre): calisthenics con progressioni e manubri, vedi [training-plan.md](training-plan.md).
 - **Condizione di prontezza:** Tempo continuo da 3000-3500 m a 6:00/km o meglio, chiuso con margine.
 
 ### Recupero · 14-20 marzo 2027

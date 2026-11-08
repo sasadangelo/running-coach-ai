@@ -77,7 +77,7 @@ Piani di allenamento, settimane e gare per ogni piano: [periodizzazione-plurienn
 
 1. **Volume**: da ~17 km/settimana oggi a **~30 km** (primavera 2027), poi **35-45 km** su 4-5 giorni. È il punto ottimale per la salute; si va oltre solo per una maratona scelta consapevolmente.
 2. **Più giorni = corse facili**: al raggiungimento di ~30 km/settimana passo a **4 giorni** (poi 5 se serve). I giorni aggiunti sono corse facili in Z2, non nuove sedute di qualità. La distribuzione passa da ~70/30 a ~80/20 facile/intenso.
-3. **Forza**: da gennaio 2027, **2 sedute a settimana in palestra** con carichi veri (squat, stacco rumeno, affondi, calf raise con carico). Dopo i 50 anni è la leva più importante per la salute insieme alla corsa facile.
+3. **Forza**: dal 7 dicembre 2026, **2 sedute a settimana in casa** (deciso l'8 novembre): calisthenics con progressioni, più i manubri di casa quando il corpo libero non basta. Prima il lavoro su una gamba (squat bulgaro, stacco su una gamba, calf raise su una gamba), poi anca, gluteo medio e core laterale; la parte alta è facoltativa. Regola: oltre 12-15 ripetizioni pulite si passa alla variante più difficile o si aggiunge peso, non si aggiungono ripetizioni. La palestra solo se un giorno il carico di casa non basta più. Dopo i 50 anni è la leva più importante per la salute insieme alla corsa facile.
 4. **Cross-training**: bici o ellittica per aggiungere volume aerobico senza impatto sul piede.
 5. **Scarichi**: 3 settimane di carico + 1 di scarico finché il volume cresce. Blocchi di 4-5 + 1 solo quando il volume si stabilizza. Lo scarico si anticipa se FC a riposo, HRV o sensazioni lo chiedono.
 6. **Peso**: verso ~70 kg (ogni kg vale ~2-3"/km).

@@ -7,6 +7,7 @@
 - **Gara 2**: Best Woman 10K — **6 dicembre 2026** (domenica)
   - Obiettivo (rivisto l'8 novembre): **gara a tempo, 1h02-1h04** (6:12-6:24/km, VDOT del test 30-31), tutta di corsa. Parziali da fissare dopo S13
 - **Giorni di allenamento**: 3 giorni/settimana, tutti e 3 sessioni di qualità (ripetute, tempo, lungo) — nessuna corsa lenta di riempimento
+- **Giorni (dall'8 novembre, S11)**: martedì Ripetute, **venerdì Tempo** (spostato dal giovedì: il giovedì è in ufficio e il Tempo più lungo rischia di far arrivare tardi), domenica Lungo. Tre giorni di recupero tra Ripetute e Tempo, il sabato libero prima del Lungo. Nella settimana di gara (S14) lo shakeout resta al giovedì perché è breve
 - **Durata piano**: 14 settimane (10 verso la 5K + 4 verso la 10K)
 - **Settimane di allenamento**: da lunedì a domenica
 - **Obiettivi oltre questo piano**: vedi [obiettivi-lungo-termine.md](obiettivi-lungo-termine.md) (prima la salute, poi la prestazione)
@@ -184,7 +185,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 **Volume totale**: 15.00 km
 
 - **Martedì — Corsa facile** (al posto delle ripetute, a 2 giorni dalla gara): 4.0km continui @ 7:35-8:13/km, FC ≤150 — 4.00km, ~30min
-- **Tempo**: 1km risc., 2500m continui @ 6:10-6:30/km, 1km def. — 4.50km, ~32min *(+500m rispetto al test di S9; se a 4 giorni dalla gara le gambe sono ancora pesanti, resta a 2000m)*
+- **Venerdì 13 — Tempo**: 1km risc., 2500m continui @ 6:10-6:30/km, 1km def. — 4.50km, ~32min *(+500m rispetto al test di S9; se a 4 giorni dalla gara le gambe sono ancora pesanti, resta a 2000m)*
 - **Lungo**: 6.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.50km, ~48min; nessuna fermata programmata
 
 ### Settimana 12 (16-22 novembre) — Fase H
@@ -298,6 +299,11 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - **Stato forza (11 ottobre)**: eseguiti due blocchi con calf raise 2x12, glute bridge 2x15 (dimenticato l'11), squat 2x12, step-up 1x10 per gamba, side plank 2x20". Dal 18 ottobre: calf raise 3x12 per gamba (il volume previsto, priorità fascia plantare) e side plank 2x30", resto invariato. Passo successivo: step-up 2x10 e/o squat 3x12, se l'indolenzimento del lunedì resta di un giorno.
 - **Dopo il test del 24 ottobre** ([health-log/strength-mobility.md](health-log/strength-mobility.md)): lato sinistro più debole in tutti i test (polpaccio, side plank, equilibrio; nello squat su gamba sx il bacino scende e il ginocchio entra). Da qui la serie in più sul sinistro e il mezzo squat su una gamba. **Equilibrio su una gamba ogni giorno**, fuori dal blocco (es. lavando i denti): 30" per lato, occhi aperti poi chiusi. Prossimo test: 21 novembre.
 - **Settimane di scarico e gara (S4, S8, S10, S11, S14)**: salta la forza o fai solo metà esercizi — il corpo deve arrivare fresco, non stanco. Mobilità e stretching restano sempre, costano poco e aiutano il recupero.
+- **Dopo la Best Woman 10K (dal 7 dicembre): forza 2 volte a settimana** (deciso l'8 novembre). Niente palestra: tutto in casa, con uno zaino caricato con bottiglie d'acqua o libri (eventualmente manubri regolabili più avanti).
+  - **Venerdì, in casa (~20-25 min), la seduta principale con carico**: subito dopo il Tempo del mattino se c'è tempo (muscoli già caldi), altrimenti la sera. Esercizi: squat bulgaro (piede dietro su sedia/divano) 3 x 8 per gamba, stacco su una gamba con zaino 3 x 8 per gamba, calf raise su una gamba sul gradino 3 x 10-12 (+1 serie sul sinistro), glute bridge su una gamba 2 x 12, plank 2 x 40". Il venerdì diventa il giorno duro (Tempo + forza), così giovedì e sabato restano liberi; il martedì delle Ripetute è lontano. Se il Tempo è andato male o le gambe sono pesanti, la forza si fa la sera in versione ridotta o si salta.
+  - **Domenica dopo il Lungo, al parco, la seduta leggera**: calf raise, equilibrio, side plank, glute bridge. Niente step-up e niente mezzo squat: il lavoro pesante sulle gambe è passato al venerdì.
+  - **Le prime 2-3 settimane** carico basso (zaino quasi vuoto o corpo libero). Regola: se la domenica ti senti le gambe pesanti nei primi km del Lungo, il venerdì successivo togli una serie. Il carico si aumenta solo quando il Lungo non ne risente.
+  - **Mai il mercoledì sera** (prima del Tempo) **e mai dopo le Ripetute**.
 
 ---
 

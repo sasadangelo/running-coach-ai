@@ -35,8 +35,22 @@ SPEC format (JSON):
     }
 
 Step types: warmup, interval, recovery, rest, cooldown. Each step ends after
-exactly one of distance_m, time_s, or "lap": true (lap button). "pace" is an
+exactly one of distance_m, time_s, reps, or "lap": true (lap button). "pace" is an
 optional [fast, slow] range in min:sec per km; without it the step has no target.
+
+Strength workouts: add "sport": "strength" to the workout (default "running").
+Exercise steps carry "exercise": "CATEGORY/NAME" from Garmin's catalog
+(https://connect.garmin.com/web-data/exercises/Exercises.json, e.g.
+"CALF_RAISE/SINGLE_LEG_STANDING_CALF_RAISE"), end on "reps" or "time_s", and may
+carry a "note" shown on the watch:
+    {"type": "interval", "exercise": "PLANK/SIDE_PLANK", "time_s": 30, "note": "left side"}
+
+A push replaces managed workouts already scheduled on the same date and of the
+same sport, so a strength session and a run can share a day.
+
+A workout without "date" goes to the workout library only, not the calendar
+(e.g. a mobility routine reused before every run). Pushing it again replaces the
+managed library workout with the same name; cleanup never touches it.
 
 Requires:
     pip install -r ../requirements.txt
@@ -92,6 +106,11 @@ NO_TARGET = {"workoutTargetTypeId": 1, "workoutTargetTypeKey": "no.target", "dis
 PACE_TARGET = {"workoutTargetTypeId": 6, "workoutTargetTypeKey": "pace.zone", "displayOrder": 6}
 
 RUNNING_SPORT = {"sportTypeId": 1, "sportTypeKey": "running", "displayOrder": 1}
+STRENGTH_SPORT = {"sportTypeId": 5, "sportTypeKey": "strength_training", "displayOrder": 3}
+SPORTS = {"running": RUNNING_SPORT, "strength": STRENGTH_SPORT}
+
+# Used only for the estimated duration of strength steps ending on reps
+SECONDS_PER_REP = 5
 
 
 def login(email: str, password: str, token_dir: str) -> Garmin:
@@ -163,17 +182,21 @@ class StepBuilder:
         type_id, type_order = STEP_TYPES[step_type]
 
         pace = step.get("pace")
+        target_values = {}
         if pace:
             fast, slow = sorted(parse_pace(p) for p in pace)
-            target = dict(PACE_TARGET, targetValueOne=1000.0 / slow, targetValueTwo=1000.0 / fast)
+            target = dict(PACE_TARGET)
+            # Step-level fields, in m/s: Garmin wants the fast end first
+            # (as in workouts made by hand in Garmin Connect).
+            target_values = {"targetValueOne": 1000.0 / fast, "targetValueTwo": 1000.0 / slow}
             est_pace = (fast + slow) / 2
         else:
             target = dict(NO_TARGET)
             est_pace = DEFAULT_PACE_SEC_PER_KM
 
-        ends = [key for key in ("distance_m", "time_s", "lap") if step.get(key)]
+        ends = [key for key in ("distance_m", "time_s", "reps", "lap") if step.get(key)]
         if len(ends) != 1:
-            raise ValueError(f"step {step} needs exactly one of distance_m, time_s, lap")
+            raise ValueError(f"step {step} needs exactly one of distance_m, time_s, reps, lap")
         if "distance_m" in ends:
             condition = {"conditionTypeId": 3, "conditionTypeKey": "distance", "displayOrder": 3, "displayable": True}
             value = float(step["distance_m"])
@@ -182,6 +205,10 @@ class StepBuilder:
             condition = {"conditionTypeId": 2, "conditionTypeKey": "time", "displayOrder": 2, "displayable": True}
             value = float(step["time_s"])
             self.estimated_s += multiplier * value
+        elif "reps" in ends:
+            condition = {"conditionTypeId": 10, "conditionTypeKey": "reps", "displayOrder": 10, "displayable": True}
+            value = float(step["reps"])
+            self.estimated_s += multiplier * value * SECONDS_PER_REP
         else:
             condition = {"conditionTypeId": 1, "conditionTypeKey": "lap.button", "displayOrder": 1, "displayable": True}
             value = None
@@ -192,11 +219,17 @@ class StepBuilder:
             "stepType": {"stepTypeId": type_id, "stepTypeKey": step_type, "displayOrder": type_order},
             "endCondition": condition,
             "targetType": target,
+            **target_values,
         }
         if value is not None:
             result["endConditionValue"] = value
         if "distance_m" in ends:
             result["preferredEndConditionUnit"] = {"unitKey": "kilometer"}
+        if step.get("exercise"):
+            category, _, name = step["exercise"].partition("/")
+            if not name:
+                raise ValueError(f"exercise {step['exercise']!r} must be CATEGORY/NAME")
+            result["category"], result["exerciseName"] = category, name
         if step.get("note"):
             result["description"] = step["note"]
         return result
@@ -206,12 +239,13 @@ def build_workout(spec: dict) -> dict:
     builder = StepBuilder()
     steps = builder.build(spec["steps"])
     description = " ".join(filter(None, [spec.get("description", "").strip(), MANAGED_MARKER]))
+    sport = SPORTS[spec.get("sport", "running")]
     return {
         "workoutName": spec["name"],
         "description": description,
-        "sportType": RUNNING_SPORT,
+        "sportType": sport,
         "estimatedDurationInSecs": int(builder.estimated_s),
-        "workoutSegments": [{"segmentOrder": 1, "sportType": RUNNING_SPORT, "workoutSteps": steps}],
+        "workoutSegments": [{"segmentOrder": 1, "sportType": sport, "workoutSteps": steps}],
     }
 
 
@@ -227,25 +261,32 @@ def describe_steps(steps: list[dict], indent: str = "    ") -> list[str]:
             amount = f"{step['distance_m'] / 1000:g} km"
         elif step.get("time_s"):
             amount = f"{int(step['time_s']) // 60}:{int(step['time_s']) % 60:02d} min"
+        elif step.get("reps"):
+            amount = f"{step['reps']} reps"
         else:
             amount = "until lap button"
         pace = step.get("pace")
         target = f" @ {pace[0]}-{pace[1]}/km" if pace else ""
-        lines.append(f"{indent}{step['type']}: {amount}{target}")
+        exercise = f" {step['exercise']}" if step.get("exercise") else ""
+        note = f" ({step['note']})" if step.get("note") else ""
+        lines.append(f"{indent}{step['type']}:{exercise} {amount}{target}{note}")
     return lines
 
 
-def managed_workout_ids(client: Garmin) -> set[int]:
-    ids = set()
+def managed_workouts(client: Garmin) -> list[dict]:
+    """Workout library entries carrying MANAGED_MARKER."""
+    found = []
     start = 0
     while True:
         page = client.get_workouts(start=start, limit=100) or []
-        for workout in page:
-            if MANAGED_MARKER in (workout.get("description") or ""):
-                ids.add(int(workout["workoutId"]))
+        found.extend(w for w in page if MANAGED_MARKER in (w.get("description") or ""))
         if len(page) < 100:
-            return ids
+            return found
         start += 100
+
+
+def managed_workout_ids(client: Garmin) -> set[int]:
+    return {int(w["workoutId"]) for w in managed_workouts(client)}
 
 
 def scheduled_items(client: Garmin, start: date, end: date) -> list[dict]:
@@ -308,7 +349,7 @@ def cmd_push(args: argparse.Namespace) -> None:
 
     for workout, payload in payloads:
         minutes = payload["estimatedDurationInSecs"] / 60
-        print(f"{workout['date']}  {workout['name']}  (~{minutes:.0f} min)")
+        print(f"{workout.get('date', 'library')}  {workout['name']}  (~{minutes:.0f} min)")
         print("\n".join(describe_steps(workout["steps"])))
     if args.dry_run:
         print("\nDry run: nothing sent to Garmin.")
@@ -317,15 +358,27 @@ def cmd_push(args: argparse.Namespace) -> None:
     client = connect()
     cleanup(client, date.today(), dry_run=False)
 
-    dates = {w["date"] for w in workouts}
-    replaced = [item for item in managed_schedule(client) if item["date"] in dates]
+    slots = {(w["date"], SPORTS[w.get("sport", "running")]["sportTypeKey"]) for w in workouts if w.get("date")}
+    replaced = [item for item in managed_schedule(client) if (item["date"], item.get("sportTypeKey")) in slots]
     if replaced:
         print(f"Replacing {len(replaced)} managed workout(s) already scheduled on those dates:")
         remove(client, replaced, dry_run=False)
 
+    library_names = {w["name"] for w in workouts if not w.get("date")}
+    if library_names:
+        scheduled_ids = {int(item.get("workoutId") or 0) for item in managed_schedule(client)}
+        for old in managed_workouts(client):
+            if old.get("workoutName") in library_names and int(old["workoutId"]) not in scheduled_ids:
+                client.delete_workout(old["workoutId"])
+                print(f"Replaced library workout {old['workoutName']} (workout {old['workoutId']})")
+
     for workout, payload in payloads:
         created = client.upload_workout(payload)
         workout_id = created["workoutId"]
+        if not workout.get("date"):
+            print(f"Added to the workout library: {workout['name']} (workout {workout_id}) - "
+                  "not in the calendar: send it to the watch once from Garmin Connect (Send to Device)")
+            continue
         client.schedule_workout(workout_id, workout["date"])
         print(f"Scheduled {workout['date']} {workout['name']} (workout {workout_id})")
     print("Done: the watch picks them up on its next sync.")

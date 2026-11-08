@@ -145,7 +145,9 @@ Take the sessions from today to the end of the current plan week (the next week 
 - **Intervals and Tempo**: warmup, the reps or the continuous block with the plan's **pace range** (`"pace": ["fast", "slow"]`), recoveries by time or distance as written, cooldown. Where the plan names a slower half of the range as a condition (e.g. resting HR >60), keep the full range and put the condition in `description`.
 - **Easy, long run and shakeout**: **distance only**, no pace target - the athlete regulates by feel. Split into warmup/main/cooldown only when the plan does.
 - **Races**: not pushed unless the athlete asks.
-- Rest days, strength and mobility: nothing to push.
+- **Strength** (only when the athlete asks): a separate workout with `"sport": "strength"` on the same day as the run. Exercises from Garmin's catalog as `"exercise": "CATEGORY/NAME"` (check names in https://connect.garmin.com/web-data/exercises/Exercises.json), reps or time per side as separate steps, rest steps between sets, stretching in `description`. The athlete trains in a park with shoes: no towel, no mirror. In recovery/race weeks push the half block the plan prescribes.
+- **Mobility**: the pre-run mobility routine is a single undated workout, `Pre-run mobility`, in the Garmin workout library (no `date` in the SPEC: library only, never scheduled; re-pushing replaces it by name). Push it again only when the plan's mobility checklist changes; the athlete sends it to the watch once with Send to Device.
+- Rest days: nothing to push.
 - Name: `S<n> <session>` in English (e.g. `S10 Light intervals`), short enough for the watch screen; plan notes that matter during the run go in `description`.
 
 ### 2. Preview, then push
@@ -155,7 +157,7 @@ python3 .claude/skills/garmin-sync/scripts/garmin_workouts.py push <spec.json> -
 python3 .claude/skills/garmin-sync/scripts/garmin_workouts.py push <spec.json>
 ```
 
-Show the athlete the dry-run preview before the real push. The push first removes every managed workout dated before today (unscheduled from the calendar and deleted from the workout library - the recorded activity stays), then replaces any managed workout already on the same dates, so pushing a revised week never leaves duplicates. Only workouts carrying the `[running-coach-ai]` marker in their description are ever touched; workouts the athlete made by hand stay.
+Show the athlete the dry-run preview before the real push. The push first removes every managed workout dated before today (unscheduled from the calendar and deleted from the workout library - the recorded activity stays), then replaces any managed workout already on the same date **and of the same sport**, so pushing a revised week never leaves duplicates and a strength session never removes the run of the same day. Only workouts carrying the `[running-coach-ai]` marker in their description are ever touched; workouts the athlete made by hand stay.
 
 Other commands: `cleanup [--before YYYY-MM-DD] [--dry-run]` removes past managed workouts without pushing, `list` shows the managed workouts in the calendar.
 

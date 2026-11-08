@@ -3,9 +3,9 @@
 ## Riepilogo Obiettivi
 
 - **Gara 1**: Roma 5K — **8 novembre 2026** (domenica)
-  - Obiettivo: correrla tutta di corsa continua, senza fermarsi
+  - Obiettivo: correrla tutta di corsa continua, senza fermarsi — ✅ **raggiunto**: 32:33 (orologio, 5.00 km reali; ufficiale 32:58 dallo sparo), 6:31/km, progressiva con 4 km a soglia, RPE 3
 - **Gara 2**: Best Woman 10K — **6 dicembre 2026** (domenica)
-  - Obiettivo: correre di corsa continua quanti più km possibile (non necessariamente tutta, si valuta in base a come arrivi)
+  - Obiettivo (rivisto l'8 novembre): **gara a tempo, 1h02-1h04** (6:12-6:24/km, VDOT del test 30-31), tutta di corsa. Parziali da fissare dopo S13
 - **Giorni di allenamento**: 3 giorni/settimana, tutti e 3 sessioni di qualità (ripetute, tempo, lungo) — nessuna corsa lenta di riempimento
 - **Durata piano**: 14 settimane (10 verso la 5K + 4 verso la 10K)
 - **Settimane di allenamento**: da lunedì a domenica
@@ -207,7 +207,8 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 - **Martedì — Ripetute leggere**: 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1') + 1 x 400m @ 5:20-5:40/km (rec. 2'), 0.5km def. — 2.20km
 - **Giovedì — Shakeout**: 0.3km risc., 1km @ ~7:45/km — 1.60km, corsa breve e leggera
 - **Venerdì/Sabato**: riposo completo
-- **Domenica 6 dicembre — GARA: Best Woman 10K**. Obiettivo: correre di corsa continua quanti più km possibile. In base alla progressione (lungo fino a 8.5km in S13), un tratto continuo di 8-9km è realistico prima di dover eventualmente camminare un po' — se ti senti bene, spingi oltre. Non c'è nessuna vergogna a camminare un tratto: l'obiettivo è i km corsi, non finire tutta senza fermarsi a tutti i costi.
+- **Domenica 6 dicembre — GARA: Best Woman 10K**. Obiettivo: **1h02-1h04** (6:12-6:24/km), tutta di corsa. Partenza prudente (km 1 ~6:30), poi ritmo 10K, appena più lento della soglia; FC con la fascia H9 per verificare la FC di soglia (Friel dal 10'). Il rischio da evitare è la Race for the Cure di maggio: partenza troppo veloce e crollo dal 5° km. **Parziali km per km da fissare dopo il lungo da 8.5km e il Tempo da 3500m di S13**, in base a come vanno.
+  - *Perché non più "quanti più km possibile" (revisione dell'8 novembre):* l'obiettivo originale era pensato con il lungo a 4-5km. Oggi il lungo è a 7km (8.5 in S13) e la Roma 5K è stata corsa tutta, con 4 km a soglia in controllo: camminare non è più in discussione. Sopra ~1h06:30 (VDOT sotto 28.5, livello della primavera) è un segnale da prendere sul serio.
 
 ---
 
@@ -279,9 +280,9 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Caviglie: cerchi + flessione/estensione dinamica — 20 per lato
 
 **Dopo (forza poi stretching, ~20-25 min totali)**
-- [ ] Calf raise con dita sull'asciugamano arrotolato — 3 x 8-12 per gamba, lento (3 sec su, 2 fermo, 3 giù), **+1 serie sul sinistro** *(priorità: protegge la fascia plantare)*
+- [ ] Calf raise su una gamba sul gradino (al parco, con le scarpe: avampiede sul bordo, tallone che scende sotto il gradino) — 3 x 8-12 per gamba, lento (3 sec su, 2 fermo, 3 giù), **+1 serie sul sinistro** *(priorità: protegge la fascia plantare; dall'8 novembre sostituisce la versione con l'asciugamano, che al parco non si può fare)*
 - [ ] Glute bridge — 2 x 15
-- [ ] Mezzo squat su una gamba davanti allo specchio — 2 x 6-8 per gamba, lento, **+1 serie sul sinistro**: bacino in bolla e ginocchio sopra il piede, ci si ferma quando uno dei due cede *(sostituisce lo squat a corpo libero dal 1° novembre)*
+- [ ] Mezzo squat su una gamba — 2 x 6-8 per gamba, lento, **+1 serie sul sinistro**: bacino in bolla e ginocchio sopra il secondo dito del piede (al parco, senza specchio: ogni tanto un video col telefono), ci si ferma quando uno dei due cede *(sostituisce lo squat a corpo libero dal 1° novembre)*
 - [ ] Step-up su gradino — 2 x 8-10 per gamba
 - [ ] Side plank — 2 x 30 sec per lato, **+1 serie sul sinistro**
 - [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede

@@ -169,7 +169,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 
 **Consuntivo S9**: 18.59 km (109% del piano), TSS 184, RPE medio 3.7. 10x400 tutte fra 2:07 e 2:17; test Tempo 2000 m a 6:10-6:14, soglia confermata a ~6:15/km.
 
-### Settimana 10 — Gara 1 (2-8 novembre) — Fase F
+### ✅ Settimana 10 — Gara 1 (2-8 novembre) — Fase F — CONCLUSA
 **Volume totale (esclusa gara)**: ~3.40 km (il lungo spostato da S9 è stato corso domenica 1 novembre)
 
 - **Lunedì 2**: riposo dalla corsa (mobilità e stretching sì).

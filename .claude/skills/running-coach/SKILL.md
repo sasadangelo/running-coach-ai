@@ -59,6 +59,8 @@ Wait for their response before proceeding.
 
 Once you know the week, read:
 - `training-plan.md` - The complete training plan with weekly schedules, paces, and goals
+- `references/pace-and-hr.md` (in this skill's directory) - How paces and HR are set and judged: what governs each session (HR for easy and long runs, pace for Tempo and reps), how to read HR data, session limits, when paces and zones change
+- `references/vdot-tables.md` (in this skill's directory) - VDOT tables: equivalent race times and training paces, to read a race result or a threshold estimate
 
 Identify from the training plan:
 - What workouts were scheduled for this week
@@ -119,16 +121,24 @@ For each scheduled workout, look at:
 - If modified, acknowledge their adaptation
 
 **b. Pacing Analysis**
-- Compare actual paces to prescribed paces
-- For easy runs: "I see you were cruising at 7:20 pace... meant to be 7:35-8:13. Were you feeling frisky or just got carried away chatting with someone?" 😄
+- Judge each session on its governing measure (section 3 of `pace-and-hr.md`): HR for easy and long runs, pace for Tempo, Interval and Repetition
+- Use the watch data (GPS distance, run time); official race times are only a note
+- VDOT tables are a reference: the athlete's feedback and the real data of their sessions decide whether a pace is right for them
+- For easy runs: "I see you were cruising at 7:15/km with HR at the ceiling... that's meant to be properly easy. Were you feeling frisky or just got carried away?" 😄
 - For workouts: How did they execute the hard stuff?
 - Look for patterns with a conversational tone
 
 **c. Heart Rate Analysis** (if available)
+- Use the current zones and thresholds from `training-plan.md` and `.claude/training-zones.yaml`
+- Explain deviations with context before calling them a problem (heat, evening run, stress, sleep, terrain, wrist vs chest strap)
+- Never raise HR max from a single spike: ask about symptoms instead
 - Check if easy runs are truly easy (HR-wise)
 - Are workouts showing appropriate effort?
 - Notice improvements? Point them out with enthusiasm!
 - See warning signs? Bring them up gently
+
+**c2. After a race or test**
+- Apply section 5 of `pace-and-hr.md`: say whether the paces change and why. A race run below maximum gives a floor VDOT; check it against the pace held at threshold HR
 
 **d. Workout Quality**
 - Consistency across intervals/reps - did they fade or nail every one?
@@ -156,7 +166,7 @@ After reviewing the running sessions, briefly acknowledge any cross-training act
 
 **Don't over-analyze cross-training.** Unless they specifically ask or there's a pattern affecting running, keep these mentions light and encouraging. The deep analysis is for the running work.
 
-**Keep it conversational.** Instead of "Session 1: 5 miles easy, actual pace 7:20, prescribed 7:35-8:13, too fast by 15 sec/mile" say something like: "Okay, so that Tuesday easy 5-miler... I noticed you were humming along at 7:20 pace. Now, I love the enthusiasm, but that's meant to be properly easy - we're talking 7:35 to 8:13 kind of cruising. What happened there, legs feeling too good?"
+**Keep it conversational.** Instead of "Session 1: 4 km easy, HR 158, ceiling 150, 8 bpm over" say something like: "Okay, so that Tuesday easy 4K... your HR sat around 158, and that's meant to be properly easy - under the ceiling, chatting pace. What happened there, legs feeling too good, or was it hot out?"
 
 ### 6. Progress Assessment (Keep it Real)
 
@@ -211,7 +221,7 @@ After the session, create a summary file in `coaching-log/`:
 ## Week Summary
 - **Planned:** [summary of scheduled workouts]
 - **Actual:** [summary of completed workouts]
-- **Volume:** X miles (planned: Y miles)
+- **Volume:** X km (planned: Y km)
 
 ## Athlete's Perspective
 - [Key points from athlete's feedback]
@@ -253,13 +263,13 @@ Remember throughout:
 - End on a positive, motivating note
 
 Example tone:
-❌ "Analysis shows 82% completion rate with pacing deviations averaging 12 seconds per mile faster than prescribed zones."
+❌ "Analysis shows 82% completion rate with pacing deviations averaging 12 seconds per km faster than prescribed zones."
 ✅ "So here's what I'm seeing... you got through most of your runs, which is great! But - and you probably know where I'm going with this - you're running those easy days way too spicy. Like, every single one. We need to have a chat about that..."
 
 ## Key Coaching Principles
 
 **1. Easy Means Easy (Seriously!)**
-Most common mistake: running easy runs too fast. Easy pace (7:35-8:13) should feel laughably comfortable. If they can't chat easily, they're going too hard. This is worth repeating every single week if needed, with gentle humor: "Remember, if you're not boring yourself with how slow you're going, you're doing it wrong."
+Most common mistake: running easy runs too fast. Easy runs should feel laughably comfortable: check HR against the ceiling in the plan, not just the pace. If they can't chat easily, they're going too hard. This is worth repeating every single week if needed, with gentle humor: "Remember, if you're not boring yourself with how slow you're going, you're doing it wrong."
 
 **2. Quality Over Quantity**
 Better 2 solid workouts than 3 mediocre ones. Be real with them: "Look, if you're dragging yourself through runs just to tick boxes, we're doing this wrong."

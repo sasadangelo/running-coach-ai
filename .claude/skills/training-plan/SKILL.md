@@ -33,52 +33,28 @@ Before creating a plan, collect these key details from the user:
 - If training days are unclear, suggest 4-5 days as a reasonable starting point
 - If race date creates a very short timeline (< 8 weeks for marathon), flag this concern
 
-### 2. Calculate Training Paces
+### 2. Set Training Paces and HR Targets
 
-**IMPORTANT**: Use the `calculate_paces.py` script to generate training paces based on the target race time and distance. This ensures consistent and accurate pace calculations.
+**IMPORTANT**: Follow `.claude/skills/running-coach/references/pace-and-hr.md` (from the project root). It defines the pace categories, where paces come from for each kind of athlete, the HR rules and the per-session limits. In short:
 
-**How to use the pace calculator:**
+- **Beginner, no reliable data**: time-based sessions (at least 30 minutes), run at conversational pace and walk when needed. No HR or pace targets yet. Schedule a first benchmark (3-5 km time trial or race) once the athlete runs 30 minutes continuously.
+- **Returning after a break of 3-4 weeks or more**: 2 weeks of easy running only (at least 30 minutes, conversational pace) before any quality work, then as below.
+- **Recent race run all-out**: VDOT from the race (watch data: GPS distance and run time), paces from table A2 of `.claude/skills/running-coach/references/vdot-tables.md`.
+- **Recorded sessions, no recent race**: sync them with the `garmin-sync` skill, estimate threshold pace (`calculate_threshold.py`), take the VDOT row with that T pace. Paces are provisional until a threshold test confirms them.
+- **The target time never sets paces.** Use it only as a realism check against the current VDOT (table A1).
+- **VDOT values are a reference, not a prescription.** The athlete's feedback (RPE, how sessions felt, symptoms) and the real data of their training always guide the paces: when they disagree with the table, adjust the paces and note why in the plan.
 
-The script is located at `scripts/calculate_paces.py` (relative to this skill's directory).
+Ask for the athlete's recent races and whether they have recorded sessions when gathering information (step 1).
+
+**Checking a target time** with `scripts/calculate_paces.py` (relative to this skill's directory):
 
 ```bash
-python3 scripts/calculate_paces.py --distance <km> --time <HH:MM:SS or MM:SS>
+python3 scripts/calculate_paces.py --distance <km> --time <HH:MM:SS or MM:SS> --per-km
 ```
 
-**Examples:**
-```bash
-# 5K in 20:00 (paces per mile by default)
-python3 scripts/calculate_paces.py -d 5 -t 20:00
+It derives paces from a race time with Riegel's formula. Use it as a cross-check of a target, or for a quick estimate when only a recent race is known; when the VDOT table and the script disagree, the VDOT table wins.
 
-# 10K in 45:30
-python3 scripts/calculate_paces.py -d 10 -t 45:30
-
-# Half Marathon in 1:35:00
-python3 scripts/calculate_paces.py -d 21.0975 -t 1:35:00
-
-# Marathon in 3:30:00
-python3 scripts/calculate_paces.py -d 42.195 -t 3:30:00
-
-# For per-km paces instead of per-mile
-python3 scripts/calculate_paces.py -d 10 -t 45:00 --per-km
-```
-
-**Output format:**
-The script calculates six pace zones based on percentage adjustments from race pace:
-- **Easy**: 120-130% of race pace (recovery and aerobic development)
-- **Steady**: 110-115% of race pace (aerobic endurance, used primarily for marathon/HM)
-- **Threshold**: 103-107% of race pace (comfortably hard, lactate threshold work)
-- **VO₂max**: 95-98% of race pace (interval training, hard but repeatable)
-- **Repetition**: 90-93% of race pace (short, fast reps for speed and economy)
-- **Race**: 100% of race pace (target race effort)
-
-**Workflow:**
-1. Run `calculate_paces.py` with the user's target race distance and time
-2. Copy the pace ranges from the script output into the training plan
-3. Include these paces in the "Training Paces" table of the plan
-4. Reference `coaches-guide.md` sections 3 and 6 for additional context on intensity definitions and how to apply these paces in workouts
-
-**Note**: The script provides pace ranges in minute/mile format by default (use `--per-km` for minute/km format). Pace ranges account for terrain, weather conditions, and day-to-day variation. Always remind athletes that these are guidelines and should be adjusted based on how they feel.
+**Where the numbers go**: the pace table and HR zones go only in the "Ritmi e FC di Riferimento" section of `training-plan.md`, and HR max, resting HR, threshold HR and threshold pace in `.claude/training-zones.yaml`. Run `python3 .claude/scripts/calculate_hr_zones.py` after changing the yaml.
 
 ### 3. Design the Phased Structure
 
@@ -123,6 +99,8 @@ Build each week using the principles from section 4 of the coaches guide:
 - Never use time-based intervals (e.g., "5 x 4 min")
 - Every interval workout follows: **warm-up → intervals → cool-down** structure
 - Specify distances in miles, meters, or km (e.g., 1.5 miles, 400m, 2km)
+
+**Session limits:** every session must respect the limits in section 4 of `.claude/skills/running-coach/references/pace-and-hr.md` (time, absolute distance, share of weekly volume scaled by runs per week, single-rep length). Check them for each week before finalizing.
 
 **Progressive overload:**
 - Increase volume gradually (typically 5-10% per week)
@@ -298,6 +276,10 @@ Use these paces for workouts throughout the plan:
 
 - **coaches-guide.md**: Comprehensive framework for training plan design covering principles, phases, intensities, weekly structure, progression models, distance-specific emphases, plan lengths, scaling across abilities, common errors, and a practical recipe for building plans. Reference this extensively when designing the plan structure and selecting workouts.
 
-- **scripts/calculate_paces.py**: Command-line tool for calculating training paces based on target race time and distance. Located in the skill's scripts directory. Use this at the beginning of every training plan creation to generate accurate, consistent pace zones (Easy, Steady, Threshold, VO₂max, Repetition, Race). Defaults to minute/mile paces (use `--per-km` for minute/km). Run with `--help` flag for usage details.
+- **.claude/skills/running-coach/references/pace-and-hr.md** (project root): the method for paces, HR and session limits. Read it before setting or revising any pace.
+
+- **.claude/skills/running-coach/references/vdot-tables.md** (project root): VDOT tables, equivalent race times (A1) and training paces (A2).
+
+- **scripts/calculate_paces.py**: Command-line tool that derives paces from a race time with Riegel's formula. Use it only as a cross-check of a target time (see step 2). Defaults to minute/mile paces (use `--per-km` for minute/km). Run with `--help` flag for usage details.
 
 - **scripts/interval_calculator.py**: Command-line tool for accurately computing workout distances. Located in the skill's scripts directory. Use this to calculate total distance for all interval workouts (warm-up + intervals + recovery + cool-down) to ensure accurate weekly mileage totals. Defaults to miles (use `--unit km` for kilometers). Run with `--help` flag for usage details.

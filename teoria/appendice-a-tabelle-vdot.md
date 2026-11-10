@@ -101,4 +101,4 @@ E = lento e lungo; M = ritmo maratona; T = soglia (Tempo, cruise intervals); I =
 | 21/03/2026 | Acea Water Fun Run, 4.87 km in 31:51 (sotto ritmo) | 27.7 |
 | 10/05/2026 | Race for the Cure, 10 km in 1:10:53 (caldo) | 26.6 grezzo, ~28 corretto |
 | 10/2026 | stima da soglia e ripetute | ~30-31 |
-| 08/11/2026 | Roma 5K | da inserire |
+| 08/11/2026 | Roma 5K, 5.17 km GPS in 32:28 (progressiva, RPE 3) | 29.2 (valore minimo: al km 3 6:16 a FC 165, la soglia) |

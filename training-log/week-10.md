@@ -30,9 +30,9 @@
 **RPE**: 3/10
 **sRPE**: 152
 **Sensazione**: Forte (75/100)
-**Economia**: EF 0.897 m/battito · M 0.928 · RES 83.2
 **Decoupling**: 0.7%
 **ES**: 10.6 (Base)
+**Economia**: EF 0.897 m/battito · M 0.928 · RES 83.2
 **Run time**: 0:50:37
 **Walk time**: 0:00:17
 **Elevation**: 8 m

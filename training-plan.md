@@ -29,17 +29,18 @@
 | **Ripetute 800m** | **5:35-5:55/km** | Tempo del giro 4:28-4:44 (ritmo VO₂max: per l'atleta la ripetuta dura 3-5', il massimo utile a questo ritmo). Recupero ~2'30". Niente 1600m: per l'atleta durerebbe ~9', quindi sarebbe un lavoro di soglia, già coperto dal Tempo |
 | **Tempo a ripetute** (1200-1500m) | **6:00-6:20/km** | Puntare a 6:08-6:15, non a 6:00. Se negli ultimi 500m la FC supera 168, rallentare di qualche secondo |
 | **Tempo continuo** (da S9) | **6:10-6:30/km** | FC intorno a 165 (soglia), tetto ~168 fino agli ultimi 500m. Su un blocco di 12-22' anche 6:05 sarebbe sopra soglia |
+| **Corsa facile / recupero** | **7:35-8:13/km** | FC ≤150: se sale si rallenta, decide la FC non il passo |
 | **Lungo** | **7:15-7:40/km**, riferimento 7:15-7:25 | Governato dalla FC: intorno a 148-150, tetto 155. Se per restarci serve scendere a 7:20-7:30, va bene |
 | **Recupero (jog tra le frazioni del Tempo)** | ~8:30/km | Jog leggero. Tra le ripetute vale la regola della riga corrispondente |
 | **Riscaldamento/Defaticamento** | ~8:00/km | |
 
-**FC di riferimento** (aggiornata l'8 novembre: FC max 185, riposo 58 (media 7 giorni), metodo Karvonen; FC di soglia ~165):
+**FC di riferimento** (aggiornata il 10 novembre: FC max 185, riposo 59 (media 7 giorni), metodo Karvonen; FC di soglia ~165):
 
 | Zona | FC (bpm) | Uso |
 |------|----------|-----|
-| Z1 (50-60% HRR) | 122-134 | Recupero, riscaldamento |
-| Z2 (60-75% HRR) | 134-153 | Lungo e corse facili (lungo: ~148-150, tetto 155) |
-| Z3 (75-85% HRR) | 153-166 | Medio; il limite alto coincide con la soglia |
+| Z1 (50-60% HRR) | 122-135 | Recupero, riscaldamento |
+| Z2 (60-75% HRR) | 135-154 | Lungo e corse facili (lungo: ~148-150, tetto 155) |
+| Z3 (75-85% HRR) | 154-166 | Medio; il limite alto coincide con la soglia |
 | Z4 (85-93% HRR) | 166-176 | Sopra soglia: fine delle frazioni del Tempo, ripetute lunghe |
 | Z5 (93-100% HRR) | 176-185 | Ripetute brevi, volate |
 

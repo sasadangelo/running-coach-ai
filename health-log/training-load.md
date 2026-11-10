@@ -11,7 +11,7 @@ Fasce TSB (convenzione TrainingPeaks/Coggan): >+25 molto fresco, +5/+25 fresco, 
 Fasce ACWR (Gabbett): <0.8 sotto-allenato, 0.8-1.3 basso rischio, 1.3-1.5 attenzione, >1.5 rischio infortunio elevato.
 Il rischio si valuta solo dopo 42 giorni di storico, quando il CTL si e assestato: prima l'ACWR e gonfiato da un CTL artificialmente basso. Con 3 sedute a settimana l'ACWR sale nei giorni di seduta e scende nei giorni di riposo: conta la tendenza, non il singolo picco.
 
-**Stato attuale (2026-11-01)**: CTL 17.5 | ATL 25.3 | TSB -2.6 (zona grigia (ne fresco ne in costruzione produttiva)) | ACWR 1.44 (fascia di attenzione)
+**Stato attuale (2026-11-10)**: CTL 17.1 | ATL 20.1 | TSB -1.0 (zona grigia (ne fresco ne in costruzione produttiva)) | ACWR 1.17 (fascia a basso rischio)
 
 | Data | TSS | CTL | ATL | TSB | ACWR | Rischio |
 | ---------- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -84,3 +84,12 @@ Il rischio si valuta solo dopo 42 giorni di storico, quando il CTL si e assestat
 | 2026-10-30 | 0 | 16.8 | 22.1 | -8.6 | 1.32 | fascia di attenzione |
 | 2026-10-31 | 0 | 16.4 | 19.0 | -5.3 | 1.16 | fascia a basso rischio |
 | 2026-11-01 | 63 | 17.5 | 25.3 | -2.6 | 1.44 | fascia di attenzione |
+| 2026-11-02 | 0 | 17.1 | 21.7 | -7.8 | 1.27 | fascia a basso rischio |
+| 2026-11-03 | 22 | 17.2 | 21.7 | -4.6 | 1.26 | fascia a basso rischio |
+| 2026-11-04 | 0 | 16.8 | 18.6 | -4.5 | 1.11 | fascia a basso rischio |
+| 2026-11-05 | 14 | 16.7 | 17.9 | -1.8 | 1.07 | fascia a basso rischio |
+| 2026-11-06 | 0 | 16.3 | 15.4 | -1.2 | 0.94 | fascia a basso rischio |
+| 2026-11-07 | 0 | 15.9 | 13.2 | +1.0 | 0.83 | fascia a basso rischio |
+| 2026-11-08 | 66 | 17.1 | 20.7 | +2.8 | 1.21 | fascia a basso rischio |
+| 2026-11-09 | 0 | 16.7 | 17.8 | -3.6 | 1.06 | fascia a basso rischio |
+| 2026-11-10 | 34 | 17.1 | 20.1 | -1.0 | 1.17 | fascia a basso rischio |

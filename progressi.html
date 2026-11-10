@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progressi Allenamento</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f4f3ef;
+  --surface-1: #fcfcfb;
+  --border: #e2e1dc;
+  --grid: #ebeae6;
+  --axis: #a3a29c;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #77766f;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  --neutral: #b9b8b1;
+  --ref: #77766f;
+  --good: #0ca30c; --warning: #fab219; --critical: #d03b3b;
+  --good-text: #006300;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #111110;
+    --surface-1: #1a1a19;
+    --border: #2e2e2b;
+    --grid: #2a2a28;
+    --axis: #5d5c56;
+    --text-primary: #f0efec;
+    --text-secondary: #c3c2b7;
+    --text-muted: #96958d;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+    --neutral: #55544f;
+    --ref: #96958d;
+    --good-text: #3fbf3f;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #111110;
+  --surface-1: #1a1a19;
+  --border: #2e2e2b;
+  --grid: #2a2a28;
+  --axis: #5d5c56;
+  --text-primary: #f0efec;
+  --text-secondary: #c3c2b7;
+  --text-muted: #96958d;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+  --neutral: #55544f;
+  --ref: #96958d;
+  --good-text: #3fbf3f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text-primary);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header { margin-bottom: 20px; }
+header a { color: var(--text-secondary); font-size: 13px; }
+h1 { font-size: 26px; margin: 6px 0 4px; letter-spacing: -0.01em; }
+.sub { color: var(--text-secondary); margin: 0; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 14px 0 0; font-size: 13px; }
+nav.toc a { color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0 28px; }
+.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .k { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.tile .v { font-size: 28px; font-weight: 650; margin-top: 2px; font-variant-numeric: tabular-nums; }
+.tile .d { font-size: 12.5px; color: var(--text-secondary); }
+.tile .tag { display: inline-block; font-size: 11px; color: var(--text-muted); margin-left: 4px; }
+section { margin-top: 36px; }
+h2 { font-size: 19px; margin: 0 0 4px; }
+.lead { color: var(--text-secondary); margin: 0 0 14px; max-width: 75ch; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 14px; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px 10px; min-width: 0; }
+.card h3 { font-size: 14px; margin: 0; }
+.card .hint { font-size: 12.5px; color: var(--text-secondary); margin: 2px 0 8px; }
+.card .read { font-size: 13px; color: var(--text-primary); border-top: 1px solid var(--grid); margin-top: 6px; padding-top: 8px; }
+.badge { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 99px; border: 1px solid var(--border); color: var(--text-secondary); margin-left: 6px; vertical-align: 1px; }
+.badge.decide { color: var(--good-text); border-color: currentColor; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--text-secondary); margin: 0 0 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.legend i.dot { border-radius: 50%; }
+.legend i.hollow { background: transparent !important; border: 2px solid var(--text-secondary); border-radius: 50%; }
+.legend i.line { height: 0; width: 16px; border-top: 2px dashed var(--ref); border-radius: 0; }
+.chart { width: 100%; position: relative; }
+.chart svg { display: block; overflow: visible; }
+.chart text { fill: var(--text-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.tw { overflow-x: auto; margin-top: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:first-child, td:first-child, th.l, td.l { text-align: left; }
+th { color: var(--text-secondary); font-weight: 600; font-size: 12px; }
+details { margin-top: 8px; }
+summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
+.foot { font-size: 12.5px; color: var(--text-muted); margin-top: 6px; }
+#tip {
+  position: fixed; pointer-events: none; z-index: 10; max-width: 260px;
+  background: var(--surface-1); color: var(--text-primary);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px;
+  font-size: 12.5px; line-height: 1.45; box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+#tip b { font-weight: 650; }
+#tip .m { color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="dashboard.html">← Dashboard del piano</a>
+    <h1>Progressi per tipo di seduta</h1>
+    <p class="sub" id="subtitle"></p>
+    <nav class="toc">
+      <a href="#lunghi">Corse lunghe</a>
+      <a href="#efficienza">Efficienza aerobica</a>
+      <a href="#tempo">Tempo run</a>
+      <a href="#ripetute">Ripetute</a>
+      <a href="#volume">Volume e carico</a>
+    </nav>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section id="lunghi">
+    <h2>Corse lunghe</h2>
+    <p class="lead">Le metriche su cui decidiamo sono la distanza e il decoupling: la lunga cresce senza che la FC scivoli verso l'alto nella seconda metà.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Distanza della lunga <span class="badge decide">decisione</span></h3>
+        <p class="hint">km per uscita</p>
+        <div class="chart" id="c-long-km"></div>
+        <p class="read" id="r-long-km"></p>
+      </div>
+      <div class="card">
+        <h3>Decoupling <span class="badge decide">decisione</span></h3>
+        <p class="hint">deriva passo/FC tra prima e seconda metà · sotto 5% = base aerobica solida per quella durata</p>
+        <div class="chart" id="c-long-dec"></div>
+        <p class="read" id="r-long-dec"></p>
+      </div>
+      <div class="card">
+        <h3>Passo medio <span class="badge">contesto</span></h3>
+        <p class="hint">passo medio (NGP) · più in alto = più veloce</p>
+        <div class="chart" id="c-long-pace"></div>
+      </div>
+      <div class="card">
+        <h3>FC media <span class="badge">contesto</span></h3>
+        <p class="hint">bpm, cardio da polso</p>
+        <div class="chart" id="c-long-hr"></div>
+      </div>
+    </div>
+    <div class="tw"><table id="t-long"></table></div>
+  </section>
+
+  <section id="efficienza">
+    <h2>Efficienza aerobica</h2>
+    <p class="lead">Metri percorsi per battito cardiaco (velocità NGP ÷ FC media) su lunghi e corse facili. Se il motore aerobico migliora, il valore sale: più strada con lo stesso cuore. Il caldo la abbassa, perciò le uscite sopra 22°C sono a cerchio vuoto.</p>
+    <div class="card">
+      <h3>Metri per battito <span class="badge decide">decisione</span></h3>
+      <div class="legend" id="l-ef"></div>
+      <div class="chart" id="c-ef"></div>
+      <p class="read" id="r-ef"></p>
+      <p class="foot" id="f-ef"></p>
+    </div>
+  </section>
+
+  <section id="tempo">
+    <h2>Tempo run</h2>
+    <p class="lead">I blocchi veloci sono ricavati dai lap (più veloci di 6:50/km). Conta la quantità di lavoro alla soglia che sai sostenere: è anche il tetto per le scelte in gara.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Km a soglia per seduta <span class="badge decide">decisione</span></h3>
+        <p class="hint">somma dei blocchi veloci</p>
+        <div class="chart" id="c-tempo-km"></div>
+        <p class="read" id="r-tempo-km"></p>
+      </div>
+      <div class="card">
+        <h3>Passo dei blocchi</h3>
+        <div class="legend" id="l-tempo-pace"></div>
+        <div class="chart" id="c-tempo-pace"></div>
+      </div>
+      <div class="card">
+        <h3>FC media dei blocchi <span class="badge">contesto</span></h3>
+        <div class="legend" id="l-tempo-hr"></div>
+        <div class="chart" id="c-tempo-hr"></div>
+      </div>
+    </div>
+    <div class="tw"><table id="t-tempo"></table></div>
+  </section>
+
+  <section id="ripetute">
+    <h2>Ripetute</h2>
+    <p class="lead">Per ogni seduta: passo medio delle ripetute (punto) e intervallo tra la più veloce e la più lenta (barra). Una barra corta vuol dire ritmo regolare. La FC qui viene dalla fascia H9: non va confrontata con le corse fatte col polso, e i picchi isolati sono artefatti.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>200 m</h3>
+        <p class="hint">passo · più in alto = più veloce</p>
+        <div class="chart" id="c-int-200"></div>
+      </div>
+      <div class="card">
+        <h3>400 m</h3>
+        <p class="hint">passo · più in alto = più veloce</p>
+        <div class="chart" id="c-int-400"></div>
+      </div>
+    </div>
+    <div class="tw"><table id="t-int"></table></div>
+  </section>
+
+  <section id="volume">
+    <h2>Volume e carico</h2>
+    <p class="lead">Settimane da lunedì a domenica. CTL/ATL/TSB e ACWR restano nella dashboard del piano.</p>
+    <div class="card">
+      <h3>Km settimanali per tipo di seduta</h3>
+      <div class="legend" id="l-vol"></div>
+      <div class="chart" id="c-vol"></div>
+      <p class="read" id="r-vol"></p>
+    </div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h3>Minuti di corsa e di cammino</h3>
+        <div class="legend" id="l-rw"></div>
+        <div class="chart" id="c-rw"></div>
+      </div>
+      <div class="card">
+        <h3>TSS settimanale</h3>
+        <p class="hint">carico misurato (passo NGP vs soglia)</p>
+        <div class="chart" id="c-tss"></div>
+      </div>
+      <div class="card">
+        <h3>sRPE settimanale</h3>
+        <p class="hint">carico percepito (RPE × minuti). Se cresce molto più del TSS, la fatica percepita sta salendo</p>
+        <div class="chart" id="c-srpe"></div>
+      </div>
+    </div>
+    <details>
+      <summary>Tabella settimanale</summary>
+      <div class="tw"><table id="t-week"></table></div>
+    </details>
+  </section>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const DATA = {"generated": "2026-11-10", "activities": [{"date": "2026-08-25", "time": "19:50", "name": "Fiumicino Corsa", "type": "easy", "km": 3.21, "sec": 1555, "pace": 489, "ngp": 446, "hr": 147, "tss": 31.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 847, "walkSec": 721, "temp": 28.0, "dew": 24.0, "note": "", "warm": true}, {"date": "2026-08-27", "time": "19:20", "name": "Fiumicino Corsa", "type": "easy", "km": 3.26, "sec": 1462, "pace": 449, "ngp": 409, "hr": 156, "tss": 34.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 898, "walkSec": 565, "temp": 31.0, "dew": 26.0, "note": "", "warm": true}, {"date": "2026-08-29", "time": "17:46", "name": "Fiumicino Corsa", "type": "easy", "km": 3.19, "sec": 1478, "pace": 464, "ngp": 415, "hr": 153, "tss": 34.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 839, "walkSec": 641, "temp": 32.0, "dew": 24.0, "note": "", "warm": true}, {"date": "2026-09-01", "time": "19:26", "name": "Fiumicino Corsa", "type": "easy", "km": 3.26, "sec": 1423, "pace": 437, "ngp": 407, "hr": 158, "tss": 34.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 982, "walkSec": 442, "temp": 29.0, "dew": 23.0, "note": "", "warm": true}, {"date": "2026-09-04", "time": "18:28", "name": "Tempo 2x1.5 Km", "type": "tempo", "km": 4.73, "sec": 2523, "pace": 533, "ngp": 461, "hr": 138, "tss": 46.0, "rpe": 4, "srpe": 168.0, "decoupling": null, "es": null, "runSec": 1036, "walkSec": 1488, "temp": 30.0, "dew": 24.0, "note": "2x1.5 km a 6:00-6:20 min/km. Buona prima ripetuta. Seconda ripetuta fermato a camminare 2 volte.", "blocks": [{"km": 1.5, "sec": 560, "pace": 373, "hr": 159}], "warm": true}, {"date": "2026-09-06", "time": "18:56", "name": "Corsa 4 Km", "type": "easy", "km": 4.01, "sec": 1768, "pace": 442, "ngp": 425, "hr": 151, "tss": 38.0, "rpe": 4, "srpe": 118.0, "decoupling": null, "es": null, "runSec": 1424, "walkSec": 348, "temp": 28.0, "dew": 24.0, "note": "Lungo 4Km. Fermato a camminare 3 volte oltre zona 2. Resistenza aerobica ancora scarsa.", "warm": true}, {"date": "2026-09-08", "time": "19:18", "name": "8x200 con 1' Rec.", "type": "intervals", "km": 3.62, "sec": 1928, "pace": 541, "ngp": 445, "hr": 135, "tss": 38.0, "rpe": 4, "srpe": 129.0, "decoupling": null, "es": null, "runSec": 815, "walkSec": 1141, "temp": 28.0, "dew": 24.0, "note": "Riscaldamento 500m camminata 500 jogging. 8x200 con 1' recupero in camminata (jogging non riuscivo). Corsa tra 5:10 -5:46 min/km. Ultime 2 ripetute un po' a fatica a 5:38 e 5:46. Defaticamento 500m camminata. Alla fine un po' di mobilità e stretching.", "blocks": [{"km": 0.2, "sec": 64, "pace": 320, "hr": 153}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 152}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 150}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 154}, {"km": 0.2, "sec": 65, "pace": 325, "hr": 155}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 154}, {"km": 0.2, "sec": 68, "pace": 340, "hr": 151}, {"km": 0.2, "sec": 69, "pace": 345, "hr": 150}], "warm": true}, {"date": "2026-09-11", "time": "19:09", "name": "Tempo 4x500 m 200m recupero", "type": "tempo", "km": 3.51, "sec": 1729, "pace": 495, "ngp": 441, "hr": 139, "tss": 35.0, "rpe": 3, "srpe": 86.0, "decoupling": null, "es": null, "runSec": 869, "walkSec": 869, "temp": 26.0, "dew": 18.0, "note": "4x500 200m recupero a 6:00-6:20 min/km. Mobilità prima e stretching dopo. Tutto bene completato come se avessi potuto fare di più. Vo2max in leggero aumento. Secondo garmin allenamento è stato buono al 74%. Pensavo di più visto che l'ho seguito alla lettera.", "blocks": [{"km": 0.5, "sec": 181, "pace": 362, "hr": 154}, {"km": 0.5, "sec": 181, "pace": 362, "hr": 150}, {"km": 0.5, "sec": 181, "pace": 362, "hr": 147}, {"km": 0.5, "sec": 185, "pace": 370, "hr": 148}], "warm": true}, {"date": "2026-09-13", "time": "19:13", "name": "Corsa 4.2 km", "type": "easy", "km": 4.21, "sec": 1871, "pace": 445, "ngp": 445, "hr": 154, "tss": 37.0, "rpe": 3, "srpe": 94.0, "decoupling": 3.0, "es": 6.2, "runSec": 1870, "walkSec": 3, "temp": 26.0, "dew": 18.0, "note": "Corsa 4.2 Km tutta di fila senza stop. 16 min in zona 3 e 17 in zona 1 e 2. Garmin aveva messo FC max a 194 poi abbassata a 192 poi a 191. Fc non ha mai superato 160 però risulta zona 3 già a 157. Io ho cercato di correre con respiro controllato in maniera confortevole il più possibile. A freddo gambe e bacino leggermente affaticati.", "warm": true}, {"date": "2026-09-15", "time": "19:10", "name": "Fiumicino Corsa", "type": "easy", "km": 1.02, "sec": 465, "pace": 460, "ngp": 453, "hr": 132, "tss": 9.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 453, "walkSec": 14, "temp": 26.0, "dew": 18.0, "note": "", "warm": true}, {"date": "2026-09-15", "time": "19:19", "name": "10x200 con 1' Rec.", "type": "intervals", "km": 3.42, "sec": 1596, "pace": 474, "ngp": 407, "hr": 154, "tss": 38.0, "rpe": 4, "srpe": 106.0, "decoupling": null, "es": null, "runSec": 894, "walkSec": 727, "temp": 26.0, "dew": 18.0, "note": "1 km riscaldamento corsa. 10x200 solo la prima ho recuperato in jogging resto camminando. Defaticamento cammino corsa meno di 1km ero davvero stanco.", "blocks": [{"km": 0.2, "sec": 65, "pace": 325, "hr": 158}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 154}, {"km": 0.2, "sec": 60, "pace": 300, "hr": 153}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 155}, {"km": 0.2, "sec": 66, "pace": 330, "hr": 156}, {"km": 0.2, "sec": 65, "pace": 325, "hr": 157}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 156}, {"km": 0.2, "sec": 66, "pace": 330, "hr": 156}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 160}], "warm": true}, {"date": "2026-09-18", "time": "08:27", "name": "Tempo 3x700 m Rec 200m", "type": "tempo", "km": 4.51, "sec": 1996, "pace": 444, "ngp": 423, "hr": 152, "tss": 44.0, "rpe": 4, "srpe": 133.0, "decoupling": null, "es": null, "runSec": 1692, "walkSec": 312, "temp": 23.0, "dew": 19.0, "note": "Buon Allenamento. Riscaldamento in jogging. 1 Recupero in jogging e 1 in camminata. Primi 200m defaticamento camminata il resto jogging. Nessun problema particolare a parte le orecchie che danno sempre un po' fastidio. Oggi ho cominciato ad allenarmi di mattina.", "blocks": [{"km": 0.7, "sec": 255, "pace": 364, "hr": 160}, {"km": 0.7, "sec": 259, "pace": 370, "hr": 166}, {"km": 0.7, "sec": 260, "pace": 371, "hr": 157}], "warm": true}, {"date": "2026-09-20", "time": "07:56", "name": "Lungo 4.5 Km", "type": "long", "km": 4.51, "sec": 1980, "pace": 440, "ngp": 439, "hr": 147, "tss": 40.0, "rpe": 3, "srpe": 99.0, "decoupling": 4.8, "es": 7.0, "runSec": 1977, "walkSec": 7, "temp": 20.0, "dew": 17.0, "note": "Primo lungo di mattina. Ottimo allenamento. Corsa continua 4.5 km. Zona 2 completa. Battito più basso del solito segno che il piano allenamento va bene. 5 secondi in meno al km scorsa volta.", "warm": false}, {"date": "2026-09-20", "time": "08:39", "name": "8xAllunghi", "type": "strides", "km": 0.92, "sec": 543, "pace": 596, "ngp": 512, "hr": 126, "tss": 8.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 130, "walkSec": 421, "temp": 22.0, "dew": 16.0, "note": "", "warm": true}, {"date": "2026-09-22", "time": "07:32", "name": "8x200 con 1' Rec. (scarico)", "type": "intervals", "km": 4.35, "sec": 1895, "pace": 441, "ngp": 408, "hr": 148, "tss": 44.0, "rpe": 4, "srpe": 126.0, "decoupling": null, "es": null, "runSec": 1583, "walkSec": 336, "temp": 19.0, "dew": 16.0, "note": "Primo allenamento scarico. Mobilità, drills, riscaldamento e defaticamento in jogging. Tre recuperi in jogging e 5 in camminata. Tutte le ripetute in target tranne la 5 troppo veloce. Buon allenamento secondo me. Temperature in calo. Garmin lo classifica al 35% perché allenamento era 10x200 ma io dovevo farne solo 8.", "blocks": [{"km": 0.2, "sec": 64, "pace": 320, "hr": 153}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 160}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 151}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 159}, {"km": 0.2, "sec": 58, "pace": 290, "hr": 153}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 150}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 157}, {"km": 0.2, "sec": 65, "pace": 325, "hr": 151}], "warm": false}, {"date": "2026-09-25", "time": "07:59", "name": "Corsa Lenta 3.5 Km (scarico)", "type": "easy", "km": 3.52, "sec": 1507, "pace": 429, "ngp": 426, "hr": 146, "tss": 32.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 1490, "walkSec": 19, "temp": 19.0, "dew": 18.0, "note": "2 allenamento scarico. Corsa lenta continua e rilassata, battito 146 di media che si è stabilizzato sui 153/154 verso la fine in piena zona aerobica. Ritmo più veloce delle precedenti corse lente di 10/15\" nonostante non l'ho percepito. Tutto bene.", "warm": false}, {"date": "2026-09-27", "time": "07:40", "name": "Corsa Lenta (scarico)", "type": "easy", "km": 3.52, "sec": 1518, "pace": 432, "ngp": 431, "hr": 146, "tss": 32.0, "rpe": 2, "srpe": 51.0, "decoupling": null, "es": null, "runSec": 1514, "walkSec": 6, "temp": 16.0, "dew": 8.0, "note": "3 allenamento di scarico. Corsa lenta. Nessun problema tranne che molto muco sceso in gola, per i primi 2 km ho sputato parecchio. Credo serva un po' di decongestionamento con aerosol e Respirin.", "warm": false}, {"date": "2026-09-29", "time": "07:43", "name": "12x200 con 1' Rec.", "type": "intervals", "km": 5.39, "sec": 2386, "pace": 446, "ngp": 415, "hr": 151, "tss": 54.0, "rpe": 4, "srpe": 159.0, "decoupling": null, "es": null, "runSec": 1808, "walkSec": 596, "temp": 15.0, "dew": 14.0, "note": "Primo allenamento carico dopo settimana scarico. 12 ripetute solo 2 perfettamente in target 10 leggermente più veloci di pochi secondi. Del resto non è facile essere precisi. Solo 1 recupero in jogging altri in camminata. Meno problemi di muco stavolta. Temperature finalmente ragionevoli. L'allenamento garmin includeva 15 ripetute le ultime 3 volutamente saltate perché non parte del programma.", "blocks": [{"km": 0.2, "sec": 63, "pace": 315, "hr": 154}, {"km": 0.2, "sec": 60, "pace": 300, "hr": 159}, {"km": 0.2, "sec": 60, "pace": 300, "hr": 155}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 152}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 153}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 152}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 152}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 153}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 153}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 156}, {"km": 0.2, "sec": 65, "pace": 325, "hr": 156}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 152}], "warm": false}, {"date": "2026-10-02", "time": "07:31", "name": "Tempo 3x800 m", "type": "tempo", "km": 4.81, "sec": 1962, "pace": 409, "ngp": 400, "hr": 156, "tss": 48.0, "rpe": 4, "srpe": 131.0, "decoupling": null, "es": null, "runSec": 1946, "walkSec": 17, "temp": 18.0, "dew": 15.0, "note": "Primo tempo run fatto tutto di corsa. Garmin dice eseguito bene al 90%. Ho fatto mobilità, corsa e stretching come al solito. Soddisfatto. Impercettibile sensazione alla fascite plantare, essendo un problema che ho sempre avuto mi chiedo se la sola mobilità delle Caviglie è sufficiente a prevenire eventuali problemi futuri.", "blocks": [{"km": 0.8, "sec": 291, "pace": 364, "hr": 160}, {"km": 0.8, "sec": 288, "pace": 360, "hr": 165}, {"km": 0.8, "sec": 292, "pace": 365, "hr": 166}], "warm": false}, {"date": "2026-10-04", "time": "07:57", "name": "Corsa Lenta Lunga 5 Km", "type": "long", "km": 5.01, "sec": 2153, "pace": 431, "ngp": 430, "hr": 149, "tss": 45.0, "rpe": 3, "srpe": 108.0, "decoupling": 2.1, "es": 7.8, "runSec": 2134, "walkSec": 24, "temp": 18.0, "dew": 17.0, "note": "Buon allenamento. Garmin ha dato 91%. Mobilita. Ritmo quasi sempre < 155. Inizio lento a 7:50 / 7:40. Nessun problema. Con aerosol di fluimucil anche il muco ha dato meno fastidio. Penso che avrei potuto fare tranquillamente altro Km a fatica forse 2. Ho fatto esercizi di forza: - 2x 12 squat - 2x 12 calf raise - 2x 10 step - 2x 10 ponte glutei - 1x 20\" sideplank ambo i lati Stretching", "warm": false}, {"date": "2026-10-04", "time": "08:37", "name": "7x Allunghi", "type": "strides", "km": 0.96, "sec": 507, "pace": 541, "ngp": 493, "hr": 134, "tss": 8.0, "rpe": 2, "srpe": 17.0, "decoupling": null, "es": null, "runSec": 114, "walkSec": 403, "temp": 21.0, "dew": 17.0, "note": "7 Allunghi da 80m con ritmo 3:40 a 4:10", "warm": false}, {"date": "2026-10-06", "time": "08:15", "name": "15x200 con 1' Rec.", "type": "intervals", "km": 6.3, "sec": 2733, "pace": 437, "ngp": 411, "hr": 153, "tss": 63.0, "rpe": 4, "srpe": 182.0, "decoupling": null, "es": null, "runSec": 2068, "walkSec": 681, "temp": 20.0, "dew": 15.0, "note": "Buon allenamento. Nessun problema in particolare. Fatte tutte e 15 le ripetute. 3 recuperi in jogging il resto camminata. Molte ripetute più veloci del planned. Il problema è che in un range di soli 10\" è difficile entrarci, sarebbe più facile un range di 20\" ma non so se spostare il 5':20\" -> 5':10\" o 5':30\" -> 5':40\". Preferirei il primo ma vediamo cosa ne pensa il coach AI. Altra cosa è che il volume è superiore al lungo cosa davvero strana.", "blocks": [{"km": 0.2, "sec": 64, "pace": 320, "hr": 155}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 161}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 154}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 160}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 154}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 160}, {"km": 0.2, "sec": 61, "pace": 305, "hr": 155}, {"km": 0.2, "sec": 65, "pace": 325, "hr": 154}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 151}, {"km": 0.2, "sec": 66, "pace": 330, "hr": 152}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 153}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 152}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 152}, {"km": 0.2, "sec": 64, "pace": 320, "hr": 151}, {"km": 0.2, "sec": 65, "pace": 325, "hr": 152}], "warm": false}, {"date": "2026-10-09", "time": "08:28", "name": "Tempo 2x1200 m", "type": "tempo", "km": 4.61, "sec": 1897, "pace": 412, "ngp": 402, "hr": 157, "tss": 46.0, "rpe": 4, "srpe": 126.0, "decoupling": null, "es": null, "runSec": 1869, "walkSec": 30, "temp": 18.0, "dew": 18.0, "note": "Buon allenamento. In target ma ho fatto più fatica dello scorso tempo run. Non credo avrei potuto fare di più, sarei arrivato al limite. Battito salito fino a 169-171 molto vicino alla soglia di 173. Nel recupero sono sceso di 10 battiti a 8 min/km. Riscaldamento a 7:30 e defaticamento a 7:50 (ho dovuto cominciare a 8:00). Ho sempre corso.", "blocks": [{"km": 1.2, "sec": 437, "pace": 364, "hr": 165}, {"km": 1.2, "sec": 444, "pace": 370, "hr": 169}], "warm": false}, {"date": "2026-10-11", "time": "08:08", "name": "Corsa (Lungo) 5.7 Km", "type": "long", "km": 5.71, "sec": 2442, "pace": 429, "ngp": 429, "hr": 149, "tss": 52.0, "rpe": 3, "srpe": 122.0, "decoupling": 4.3, "es": 8.9, "runSec": 2429, "walkSec": 16, "temp": 13.0, "dew": 13.0, "note": "Corsa lunga 5.7km cercando di stare sotto 155 bpm. Ci sono riuscito per il 98/99 % del tempo. Sensazioni buone nessun problema particolare. A fine corsa adduttori e pianta del piede sx leggeri sensazioni di fatica. Ma parliamo di remote sensazioni. Ieri a letto stessa sensazione remotissima su fascite plantare sx sparita appena poggiato piede a terra.", "warm": false}, {"date": "2026-10-11", "time": "09:10", "name": "8xAllunghi", "type": "strides", "km": 0.89, "sec": 499, "pace": 566, "ngp": 505, "hr": 130, "tss": 8.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 110, "walkSec": 393, "temp": 17.0, "dew": 15.0, "note": "8 Allunghi a fine corsa lenta. Dopo allunghi leggera sensazione indolenzimento anca dx ma subito sparita.", "warm": false}, {"date": "2026-10-13", "time": "18:06", "name": "8x400 con 2' Rec.", "type": "intervals", "km": 6.43, "sec": 2920, "pace": 456, "ngp": 410, "hr": 149, "tss": 68.0, "rpe": 5, "srpe": 243.0, "decoupling": null, "es": null, "runSec": 2066, "walkSec": 865, "temp": 22.0, "dew": 6.0, "note": "Terza settimana di carico. È stato uno degli allenamenti più duri fatti finora. Solo un recupero in jogging molto lento poi altri camminando. 1Km di riscaldamento e defaticamento. Credo di essere stato sempre nel target.", "blocks": [{"km": 0.4, "sec": 134, "pace": 335, "hr": 164}, {"km": 0.4, "sec": 132, "pace": 330, "hr": 162}, {"km": 0.4, "sec": 132, "pace": 330, "hr": 151}, {"km": 0.4, "sec": 133, "pace": 332, "hr": 152}, {"km": 0.4, "sec": 134, "pace": 335, "hr": 149}, {"km": 0.4, "sec": 128, "pace": 320, "hr": 154}, {"km": 0.4, "sec": 131, "pace": 328, "hr": 151}, {"km": 0.4, "sec": 134, "pace": 335, "hr": 150}], "warm": true}, {"date": "2026-10-16", "time": "07:49", "name": "Tempo 2x1500 m", "type": "tempo", "km": 5.21, "sec": 2092, "pace": 402, "ngp": 398, "hr": 158, "tss": 52.0, "rpe": 4, "srpe": 139.0, "decoupling": null, "es": null, "runSec": 2091, "walkSec": 2, "temp": 12.0, "dew": 12.0, "note": "Buon allenamento. 2x1500 sono risultati meno faticosi dei 2x1200 scorsa week. Secondo me l'allenamento 8x400 ha portato buoni benefici (ricordo che i 400 anche anni fa erano positivi per me). Nella prima ripetuta sentivo di poter arrivare con piccolo sforzo a 2km. Leggera sensazione a fine corsa su fascite plantare scomparsa dopo pochi min.", "blocks": [{"km": 1.5, "sec": 561, "pace": 374, "hr": 162}, {"km": 1.5, "sec": 564, "pace": 376, "hr": 165}], "warm": false}, {"date": "2026-10-18", "time": "07:38", "name": "Lungo 6.4 Km", "type": "long", "km": 6.41, "sec": 2811, "pace": 442, "ngp": 439, "hr": 146, "tss": 57.0, "rpe": 3, "srpe": 141.0, "decoupling": 1.3, "es": 10.0, "runSec": 2807, "walkSec": 24, "temp": 16.0, "dew": 14.0, "note": "Buon allenamento. Causa trasloco ieri ho cercato di tenerlo easy. Nessun problema fascite prima, durante e dopo. Un remoto sentore c'è ma è al limite della percettibilita'. Avrei potuto fare altro Km ma a fatica. Quasi sempre <=151 tranne qualche punta fino a 155.", "warm": false}, {"date": "2026-10-20", "time": "08:10", "name": "6x400 con 2' Rec.", "type": "intervals", "km": 5.37, "sec": 2357, "pace": 445, "ngp": 405, "hr": 148, "tss": 56.0, "rpe": 5, "srpe": 196.0, "decoupling": null, "es": null, "runSec": 1819, "walkSec": 566, "temp": 13.0, "dew": 12.0, "note": "Allenamento durissimo. Doveva essere il primo allenamento di scarico ma anche se solo 6 ripetizione è stato peggiore del 8x400 della scorsa settimana. Già stamane la voglia non era troppa. I dati del sonno sono sbagliati, sono andato a letto dopo mezzanotte. Bisogna capire se è corretto mettere allenamenti così duri nella settimana di scarico. La terza ripetizione è stata assurda, la fc è arrivata a 191 e avevo la fascia polar h9. Forse si è alzata così perché ho provato 2 volte un recupero di camminata e poi jogging. Ad ogni modo, alla sesta ero sfinito. Prima volta che arrivi esausto a fine allenamento. Nessun problema di fascite.", "blocks": [{"km": 0.4, "sec": 132, "pace": 330, "hr": 160}, {"km": 0.4, "sec": 131, "pace": 328, "hr": 161}, {"km": 0.4, "sec": 131, "pace": 328, "hr": 174}, {"km": 0.4, "sec": 131, "pace": 328, "hr": 147}, {"km": 0.4, "sec": 131, "pace": 328, "hr": 150}, {"km": 0.4, "sec": 136, "pace": 340, "hr": 148}], "warm": false}, {"date": "2026-10-23", "time": "07:57", "name": "Corsa Lenta 4km (Scarico)", "type": "easy", "km": 4.01, "sec": 1709, "pace": 427, "ngp": 426, "hr": 149, "tss": 37.0, "rpe": 2, "srpe": 57.0, "decoupling": null, "es": null, "runSec": 1698, "walkSec": 13, "temp": 10.0, "dew": 9.0, "note": "Buon allenamento. Nessun problema se non la difficoltà di andare piano. Ad ogni modo, il muco anche a ritmi così lenti e fastidioso e mi porta a sputare frequentemente a causa della sua discesa in gola.", "warm": false}, {"date": "2026-10-25", "time": "07:47", "name": "Corsa Recupero (Scarico)", "type": "easy", "km": 4.21, "sec": 2032, "pace": 484, "ngp": 483, "hr": 139, "tss": 34.0, "rpe": 1, "srpe": 34.0, "decoupling": 1.3, "es": 6.3, "runSec": 2030, "walkSec": 6, "temp": 11.0, "dew": 7.0, "note": "Prima volta che riesco a correre in modo continuo cosi lento e con fc così bassa.", "warm": false}, {"date": "2026-10-27", "time": "07:56", "name": "10x400 con 2' Rec.", "type": "intervals", "km": 7.57, "sec": 3386, "pace": 451, "ngp": 405, "hr": 152, "tss": 81.0, "rpe": 5, "srpe": 282.0, "decoupling": null, "es": null, "runSec": 2247, "walkSec": 1165, "temp": 13.0, "dew": 11.0, "note": "Buon Allenamento. Sicuramente tosto. Ho fatto mobilità,  drills, riscaldamento 1 km, 10x400 e poi defaticamento. Come sempre la terza ripetuta è tosta ma anche la nona lo è stata. Non ho provato nemmeno a recuperare corricchiando, tutto camminata. Per il resto tutto ok.", "blocks": [{"km": 0.4, "sec": 133, "pace": 332, "hr": 164}, {"km": 0.4, "sec": 129, "pace": 322, "hr": 155}, {"km": 0.4, "sec": 127, "pace": 318, "hr": 155}, {"km": 0.4, "sec": 130, "pace": 325, "hr": 152}, {"km": 0.4, "sec": 131, "pace": 328, "hr": 156}, {"km": 0.4, "sec": 132, "pace": 330, "hr": 155}, {"km": 0.4, "sec": 129, "pace": 322, "hr": 158}, {"km": 0.4, "sec": 133, "pace": 332, "hr": 154}, {"km": 0.4, "sec": 137, "pace": 342, "hr": 156}, {"km": 0.4, "sec": 134, "pace": 335, "hr": 154}], "warm": false}, {"date": "2026-10-29", "time": "07:33", "name": "Tempo 2Km", "type": "tempo", "km": 4.01, "sec": 1622, "pace": 405, "ngp": 398, "hr": 158, "tss": 40.0, "rpe": 3, "srpe": 81.0, "decoupling": null, "es": null, "runSec": 1599, "walkSec": 24, "temp": 12.0, "dew": 8.0, "note": "Buon test spostato ad oggi perché ho estrazione molare domani. Stamani HRV a 49 e FC rest 63 ma stavo bene e ho deciso di fare il test. All'inizio è stata dura stare nel range di ritmo perché mi veniva facile correre più forte e per 700 metri ho dovuto guardare orologio per rallentare. Sono contento il coach abbia stabilito solo un tempo 2K, 2.5K l'avrei fatto ma 3K sarebbe stata dura. A fine corsa si è fatta sentire sensazione alla fascite plantare sparita poco dopo. Ad ogni modo è un punto sensibile che sarebbe il caso di far vedere prima che arrivino carichi più importanti. Interessante ora Garmin calcola la frequenza di respirazione media 38 brpm max 45 non so se può essere utile e associarlo al talk test.", "blocks": [{"km": 2.0, "sec": 744, "pace": 372, "hr": 166}], "warm": false}, {"date": "2026-11-01", "time": "09:40", "name": "Lungo 7 Km", "type": "long", "km": 7.01, "sec": 3037, "pace": 436, "ngp": 433, "hr": 153, "tss": 63.0, "rpe": 3, "srpe": 152.0, "decoupling": 0.7, "es": 10.6, "runSec": 3037, "walkSec": 17, "temp": 13.0, "dew": 5.0, "note": "Corsa dopo intervento odontoiatrico. Non potendo sputare è stato un po' più difficile da gestire muco. Ad ogni modo, buon allenamento. Ritmo andava naturale verso il 6:40 e ho dovuto controllare la corsa per rimanere nel ritmo stabilito. Ho notato battito più alto del solito. Comunque potevo fare tranquillamente un altro Km e con un po' di sforzo forse anche 2.", "warm": false}, {"date": "2026-11-03", "time": "08:45", "name": "4x200 con 1' Rec.", "type": "intervals", "km": 2.17, "sec": 942, "pace": 440, "ngp": 406, "hr": 148, "tss": 22.0, "rpe": 3, "srpe": 47.0, "decoupling": null, "es": null, "runSec": 760, "walkSec": 195, "temp": 13.0, "dew": 7.0, "note": "Oggi ero stanco, per fortuna l'allenamento era leggero. Non so se oggi avrei portato a termine un normale allenamento di ripetute. Penso di non aver completamente recuperato il lungo di Domenica. Inoltre, HRV e FC a riposo non sono buonissime. Credo che sia il classico calo di Ottobre a cui vado incontro quasi ogni anno. Tipicamente dopo 2 mesi intensi di allenamenti inizia ad arrivare il conto. Per ora penso allo scarico prima della gara 5K di Domenica poi vedrò con il coach.", "blocks": [{"km": 0.2, "sec": 62, "pace": 310, "hr": 157}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 156}, {"km": 0.2, "sec": 63, "pace": 315, "hr": 151}, {"km": 0.2, "sec": 62, "pace": 310, "hr": 151}], "warm": false}, {"date": "2026-11-05", "time": "07:17", "name": "Shakeout Pre Gara 1.6Km", "type": "warmup", "km": 1.61, "sec": 726, "pace": 452, "ngp": 449, "hr": 138, "tss": 14.0, "rpe": 1, "srpe": 12.0, "decoupling": null, "es": null, "runSec": 712, "walkSec": 15, "temp": 11.0, "dew": 7.0, "note": "", "warm": false}, {"date": "2026-11-08", "time": "08:34", "name": "Riscaldamento Rome 5k", "type": "warmup", "km": 1.71, "sec": 827, "pace": 639, "ngp": 510, "hr": 119, "tss": 12.0, "rpe": null, "srpe": null, "decoupling": null, "es": null, "runSec": 633, "walkSec": 464, "temp": 8.0, "dew": 8.0, "note": "Frequenza cardiaca con fascia sballata. Corsa lentissima, mobilità e drills.", "warm": false}, {"date": "2026-11-08", "time": "09:14", "name": "Rome 5k", "type": "race", "km": 5.17, "sec": 1951, "pace": 378, "ngp": 375, "hr": 163, "tss": 54.0, "rpe": 3, "srpe": 98.0, "decoupling": null, "es": null, "runSec": 1948, "walkSec": 5, "temp": 10.0, "dew": 10.0, "note": "Fc con fascia non funzionava bene quindi ho usata quella al polso. Corsa sempre in controllo, mai andato in difficoltà. Correre per Roma è più difficile rispetto a Fiumicino per via dei saliscendi. Tempo ufficiale è 32:58 a 6:36 min/km. Questa volta rispetto a altre due gare il mio orologio ha anticipato.", "warm": false}, {"date": "2026-11-10", "time": "17:07", "name": "S11 Easy run", "type": "easy", "km": 4.01, "sec": 1882, "pace": 473, "ngp": 465, "hr": 148, "tss": 34.0, "rpe": 2, "srpe": 63.0, "decoupling": null, "es": null, "runSec": 1875, "walkSec": 21, "temp": 19.0, "dew": 17.0, "note": "Corsa facile di recupero dalla 5K di Domenica. Oggi ho passato la giornata in ospedale per intervento mio figlio ma ho preferito correre oggi perché domani mattina devo andare in ufficio e preferisco non correre prima. Ho cercato di correre più lento possibile ma oggi la Fc è stata un po' altina sicuramente causa stress.", "warm": false}], "weeks": [{"start": "2026-08-24", "km": {"easy": 9.66}, "min": {"easy": 74.9}, "tss": 99, "srpe": 0, "runMin": 43.1, "walkMin": 32.1}, {"start": "2026-08-31", "km": {"easy": 7.27, "tempo": 4.73}, "min": {"easy": 53.2, "tempo": 42.0}, "tss": 118, "srpe": 286, "runMin": 57.4, "walkMin": 38.0}, {"start": "2026-09-07", "km": {"intervals": 3.62, "tempo": 3.51, "easy": 4.21}, "min": {"intervals": 32.1, "tempo": 28.8, "easy": 31.2}, "tss": 110, "srpe": 309, "runMin": 59.2, "walkMin": 33.5}, {"start": "2026-09-14", "km": {"easy": 1.02, "intervals": 3.42, "tempo": 4.51, "long": 4.51, "strides": 0.92}, "min": {"easy": 7.8, "intervals": 26.6, "tempo": 33.3, "long": 33.0, "strides": 9.1}, "tss": 139, "srpe": 338, "runMin": 85.8, "walkMin": 24.7}, {"start": "2026-09-21", "km": {"intervals": 4.35, "easy": 7.04}, "min": {"intervals": 31.6, "easy": 50.4}, "tss": 108, "srpe": 177, "runMin": 76.5, "walkMin": 6.0}, {"start": "2026-09-28", "km": {"intervals": 5.39, "tempo": 4.81, "long": 5.01, "strides": 0.96}, "min": {"intervals": 39.8, "tempo": 32.7, "long": 35.9, "strides": 8.4}, "tss": 155, "srpe": 415, "runMin": 100.0, "walkMin": 17.3}, {"start": "2026-10-05", "km": {"intervals": 6.3, "tempo": 4.61, "long": 5.71, "strides": 0.89}, "min": {"intervals": 45.5, "tempo": 31.6, "long": 40.7, "strides": 8.3}, "tss": 169, "srpe": 430, "runMin": 107.9, "walkMin": 18.7}, {"start": "2026-10-12", "km": {"intervals": 6.43, "tempo": 5.21, "long": 6.41}, "min": {"intervals": 48.7, "tempo": 34.9, "long": 46.9}, "tss": 177, "srpe": 523, "runMin": 116.1, "walkMin": 14.8}, {"start": "2026-10-19", "km": {"intervals": 5.37, "easy": 8.22}, "min": {"intervals": 39.3, "easy": 62.4}, "tss": 127, "srpe": 287, "runMin": 92.5, "walkMin": 9.8}, {"start": "2026-10-26", "km": {"intervals": 7.57, "tempo": 4.01, "long": 7.01}, "min": {"intervals": 56.4, "tempo": 27.0, "long": 50.6}, "tss": 184, "srpe": 515, "runMin": 114.7, "walkMin": 20.1}, {"start": "2026-11-02", "km": {"intervals": 2.17, "warmup": 3.32, "race": 5.17}, "min": {"intervals": 15.7, "warmup": 25.9, "race": 32.5}, "tss": 102, "srpe": 157, "runMin": 67.5, "walkMin": 11.3}, {"start": "2026-11-09", "km": {"easy": 4.01}, "min": {"easy": 31.4}, "tss": 34, "srpe": 63, "runMin": 31.2, "walkMin": 0.3}]};
+
+/* ---------- helpers ---------- */
+const MONTHS = ["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"];
+const toDate = s => new Date(s + "T12:00:00");
+const fmtDay = s => { const d = toDate(s); return d.getDate() + " " + MONTHS[d.getMonth()]; };
+const fmtPace = s => s == null ? "–" : Math.floor(s / 60) + ":" + String(Math.round(s % 60)).padStart(2, "0");
+const fmtNum = (v, n = 1) => v == null ? "–" : v.toFixed(n).replace(".", ",");
+const sum = a => a.reduce((x, y) => x + y, 0);
+const mean = a => a.length ? sum(a) / a.length : null;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs = {}, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+const metersPerBeat = a => (a.ngp && a.hr) ? (60000 / a.ngp) / a.hr : null;
+
+const TYPES = {
+  long: { name: "Lungo", color: "--s1" },
+  easy: { name: "Facile", color: "--s2" },
+  tempo: { name: "Tempo", color: "--s3" },
+  intervals: { name: "Ripetute", color: "--s4" },
+  race: { name: "Gara", color: "--s5" },
+  other: { name: "Allunghi e riscaldamento", color: "--s6" },
+};
+const typeKey = t => (t === "strides" || t === "warmup") ? "other" : t;
+
+/* ---------- tooltip ---------- */
+const tip = document.getElementById("tip");
+function showTip(evt, html) {
+  tip.innerHTML = html;
+  tip.hidden = false;
+  const r = tip.getBoundingClientRect();
+  let x = evt.clientX + 14, y = evt.clientY + 14;
+  if (x + r.width > window.innerWidth - 8) x = evt.clientX - r.width - 14;
+  if (y + r.height > window.innerHeight - 8) y = evt.clientY - r.height - 14;
+  tip.style.left = Math.max(8, x) + "px";
+  tip.style.top = Math.max(8, y) + "px";
+}
+function bindTip(node, html) {
+  node.addEventListener("pointerenter", e => showTip(e, html));
+  node.addEventListener("pointermove", e => showTip(e, html));
+  node.addEventListener("pointerleave", () => { tip.hidden = true; });
+  node.style.cursor = "default";
+}
+
+function niceTicks(min, max, count = 5, int = false) {
+  if (min === max) { min -= 1; max += 1; }
+  const span = max - min;
+  const raw = span / count;
+  const pow = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = Math.max(int ? 1 : 0, [1, 2, 2.5, 5, 10].map(m => m * pow).filter(s => !int || Number.isInteger(s)).find(s => span / s <= count) || 10 * pow);
+  const t0 = Math.floor(min / step) * step, t1 = Math.ceil(max / step) * step;
+  const ticks = [];
+  for (let t = t0; t <= t1 + step / 2; t += step) ticks.push(+t.toFixed(10));
+  return ticks;
+}
+
+function frame(container, height) {
+  container.innerHTML = "";
+  const w = Math.max(260, container.clientWidth);
+  const svg = el("svg", { width: w, height, role: "img" }, container);
+  return { svg, w, h: height };
+}
+
+function yAxis(svg, m, w, ticks, y, fmt) {
+  for (const t of ticks) {
+    el("line", { x1: m.l, x2: w - m.r, y1: y(t), y2: y(t), stroke: css("--grid"), "stroke-width": 1 }, svg);
+    const tx = el("text", { x: m.l - 6, y: y(t) + 4, "text-anchor": "end" }, svg);
+    tx.textContent = fmt(t);
+  }
+}
+
+/* Time-scaled dot chart. series: [{name, color, points:[{d, y, lo, hi, hollow, tip}], line}] */
+function timeDots(container, opts) {
+  const { svg, w, h } = frame(container, opts.height || 220);
+  const m = { l: 44, r: 14, t: 12, b: 26 };
+  const pts = opts.series.flatMap(s => s.points);
+  if (!pts.length) return;
+  const days = (opts.domain || pts.map(p => p.d)).map(d => toDate(d).getTime());
+  let x0 = Math.min(...days), x1 = Math.max(...days);
+  const padX = Math.max(86400000 * 2, (x1 - x0) * 0.04);
+  x0 -= padX; x1 += padX;
+  const ys = pts.flatMap(p => [p.y, p.lo, p.hi]).filter(v => v != null).concat((opts.refs || []).map(r => r.y));
+  let ymin = opts.yMin != null ? opts.yMin : Math.min(...ys), ymax = opts.yMax != null ? opts.yMax : Math.max(...ys);
+  const pad = (ymax - ymin) * 0.08 || 1;
+  if (opts.yMin == null) ymin -= pad;
+  if (opts.yMax == null) ymax += pad;
+  const ticks = niceTicks(ymin, ymax, opts.ticks || 4, opts.int).filter(t => t >= ymin - 1e-9 && t <= ymax + 1e-9);
+  const x = t => m.l + (t - x0) / (x1 - x0) * (w - m.l - m.r);
+  const yRaw = v => m.t + (ymax - v) / (ymax - ymin) * (h - m.t - m.b);
+  const y = opts.invert ? v => (h - m.b) - (yRaw(v) - m.t) : yRaw;
+  yAxis(svg, m, w, ticks, y, opts.yFmt || (v => v));
+  el("line", { x1: m.l, x2: w - m.r, y1: h - m.b, y2: h - m.b, stroke: css("--axis") }, svg);
+  // monthly ticks
+  const start = new Date(x0); start.setDate(1); start.setMonth(start.getMonth() + 1);
+  for (let d = new Date(start); d.getTime() <= x1; d.setMonth(d.getMonth() + 1)) {
+    const xx = x(d.getTime());
+    el("line", { x1: xx, x2: xx, y1: h - m.b, y2: h - m.b + 4, stroke: css("--axis") }, svg);
+    const tx = el("text", { x: xx, y: h - m.b + 16, "text-anchor": "middle" }, svg);
+    tx.textContent = "1 " + MONTHS[d.getMonth()];
+  }
+  for (const r of opts.refs || []) {
+    el("line", { x1: m.l, x2: w - m.r, y1: y(r.y), y2: y(r.y), stroke: css("--ref"), "stroke-width": 1.5, "stroke-dasharray": "5 4" }, svg);
+    const tx = el("text", { x: w - m.r, y: y(r.y) - 5, "text-anchor": "end" }, svg);
+    tx.textContent = r.label;
+  }
+  const surface = css("--surface-1");
+  for (const s of opts.series) {
+    const color = css(s.color);
+    const sp = [...s.points].sort((a, b) => toDate(a.d) - toDate(b.d));
+    if (s.line && sp.length > 1) {
+      el("path", { d: sp.map((p, i) => (i ? "L" : "M") + x(toDate(p.d).getTime()) + " " + y(p.y)).join(" "), fill: "none", stroke: color, "stroke-width": 2, "stroke-linejoin": "round", opacity: 0.55 }, svg);
+    }
+    for (const p of sp) {
+      const g = el("g", {}, svg);
+      const cx = x(toDate(p.d).getTime());
+      if (p.lo != null && p.hi != null) {
+        el("line", { x1: cx, x2: cx, y1: y(p.lo), y2: y(p.hi), stroke: color, "stroke-width": 4, "stroke-linecap": "round", opacity: 0.45 }, g);
+      }
+      el("circle", { cx, cy: y(p.y), r: 5, fill: p.hollow ? surface : color, stroke: p.hollow ? color : surface, "stroke-width": 2 }, g);
+      const hit = el("circle", { cx, cy: y(p.y), r: 12, fill: "transparent" }, g);
+      if (p.tip) bindTip(hit, p.tip);
+    }
+  }
+}
+
+/* Category bar chart, optionally stacked. stacks: [{name, color, values[]}] */
+function bars(container, opts) {
+  const { svg, w, h } = frame(container, opts.height || 220);
+  const m = { l: 44, r: 10, t: 14, b: 26 };
+  const n = opts.cats.length;
+  const totals = opts.cats.map((_, i) => sum(opts.stacks.map(s => s.values[i] || 0)));
+  const refs = opts.refs || [];
+  const ymax = Math.max(...totals, ...refs.map(r => r.y)) * 1.1 || 1;
+  const ticks = niceTicks(0, ymax, 4).filter(t => t <= ymax * 1.15);
+  const top = ticks[ticks.length - 1];
+  const y = v => m.t + (top - v) / top * (h - m.t - m.b);
+  yAxis(svg, m, w, ticks, y, opts.yFmt || (v => v));
+  const band = (w - m.l - m.r) / n;
+  const bw = Math.min(42, band * 0.68);
+  const labelEvery = Math.ceil(n / Math.max(1, Math.floor((w - m.l - m.r) / 52)));
+  opts.cats.forEach((cat, i) => {
+    const cx = m.l + band * i + band / 2;
+    let base = 0;
+    const g = el("g", {}, svg);
+    const visible = opts.stacks.map((s, k) => ({ k, v: s.values[i] || 0 })).filter(o => o.v > 0);
+    visible.forEach((o, j) => {
+      const s = opts.stacks[o.k];
+      const y0 = y(base), y1 = y(base + o.v);
+      const gap = j > 0 ? 2 : 0;
+      const hh = Math.max(0, y0 - y1 - gap);
+      const isTop = j === visible.length - 1;
+      const r = isTop ? Math.min(4, hh, bw / 2) : 0;
+      const x0 = cx - bw / 2, yt = y1, yb = y1 + hh;
+      const d = `M${x0} ${yb} L${x0} ${yt + r} Q${x0} ${yt} ${x0 + r} ${yt} L${x0 + bw - r} ${yt} Q${x0 + bw} ${yt} ${x0 + bw} ${yt + r} L${x0 + bw} ${yb} Z`;
+      el("path", { d, fill: css(s.color) }, g);
+      base += o.v;
+    });
+    if (opts.labels && opts.labels[i] != null) {
+      const tx = el("text", { x: cx, y: y(totals[i]) - 5, "text-anchor": "middle", style: "fill:" + css("--text-secondary") }, g);
+      tx.textContent = opts.labels[i];
+    }
+    if (i % labelEvery === 0) {
+      const tx = el("text", { x: cx, y: h - m.b + 16, "text-anchor": "middle" }, svg);
+      tx.textContent = cat;
+    }
+    const hit = el("rect", { x: cx - band / 2, y: m.t, width: band, height: h - m.t - m.b, fill: "transparent" }, g);
+    if (opts.tip) bindTip(hit, opts.tip(i));
+  });
+  el("line", { x1: m.l, x2: w - m.r, y1: h - m.b, y2: h - m.b, stroke: css("--axis") }, svg);
+  for (const r of refs) {
+    el("line", { x1: m.l, x2: w - m.r, y1: y(r.y), y2: y(r.y), stroke: css("--ref"), "stroke-width": 1.5, "stroke-dasharray": "5 4" }, svg);
+    const tx = el("text", { x: w - m.r, y: y(r.y) - 5, "text-anchor": "end" }, svg);
+    tx.textContent = r.label;
+  }
+}
+
+function legend(id, items) {
+  document.getElementById(id).innerHTML = items.map(it =>
+    `<span><i class="${it.cls || ""}" style="${it.color ? "background:var(" + it.color + ")" : ""}"></i>${it.name}</span>`).join("");
+}
+function table(id, head, rows) {
+  const t = document.getElementById(id);
+  t.innerHTML = "<thead><tr>" + head.map(hd => `<th class="${hd.l ? "l" : ""}">${hd.t}</th>`).join("") + "</tr></thead><tbody>" +
+    rows.map(r => "<tr>" + r.map((c, i) => `<td class="${head[i].l ? "l" : ""}">${c}</td>`).join("") + "</tr>").join("") + "</tbody>";
+}
+const setText = (id, html) => { document.getElementById(id).innerHTML = html; };
+
+/* ---------- derived data ---------- */
+const acts = DATA.activities;
+const longs = acts.filter(a => a.type === "long");
+const tempos = acts.filter(a => a.type === "tempo");
+const races = acts.filter(a => a.type === "race");
+const intervals = acts.filter(a => a.type === "intervals");
+const walkShare = a => (a.walkSec || 0) / a.sec;
+const aerobic = acts.filter(a => (a.type === "long" || a.type === "easy") && a.km >= 2);
+const efOk = aerobic.filter(a => walkShare(a) <= 0.10 && metersPerBeat(a));
+const efExcluded = aerobic.filter(a => !efOk.includes(a));
+const tempoKm = a => sum((a.blocks || []).map(b => b.km));
+const repDist = a => { const m = a.name.match(/x\s*(\d+)/i); return m ? +m[1] : null; };
+const reps = a => (a.blocks || []).filter(b => Math.abs(b.km * 1000 - repDist(a)) <= 60);
+const tempLabel = a => a.temp == null ? "" : ` · ${a.temp}°C`;
+
+/* ---------- render ---------- */
+function render() {
+  const first = acts[0], last = acts[acts.length - 1];
+  setText("subtitle", `${acts.length} attività dal ${fmtDay(first.date)} al ${fmtDay(last.date)} · aggiornato il ${fmtDay(DATA.generated)}`);
+
+  /* tiles */
+  const tiles = [];
+  if (longs.length) {
+    const best = longs.reduce((a, b) => b.km > a.km ? b : a);
+    tiles.push({ k: "Lungo più lungo", v: fmtNum(best.km, 1) + " km", d: `${fmtDay(best.date)} · il primo era ${fmtNum(longs[0].km, 1)} km` });
+    const lastDec = [...longs].reverse().find(a => a.decoupling != null);
+    const firstDec = longs.find(a => a.decoupling != null);
+    if (lastDec) tiles.push({ k: "Decoupling ultimo lungo", v: fmtNum(lastDec.decoupling, 1) + "%", d: `il primo era ${fmtNum(firstDec.decoupling, 1)}% · soglia 5%` });
+  }
+  if (tempos.length) {
+    const best = tempos.reduce((a, b) => tempoKm(b) > tempoKm(a) ? b : a);
+    tiles.push({ k: "Km a soglia in una seduta", v: fmtNum(tempoKm(best), 1) + " km", d: `massimo, ${best.name} (${fmtDay(best.date)})` });
+  }
+  if (races.length) {
+    const r = races[races.length - 1];
+    tiles.push({ k: "Ultima gara", v: fmtPace(r.pace) + "/km", d: `${r.name} · ${fmtNum(r.km, 2)} km GPS · FC ${r.hr}` });
+  }
+  const full = DATA.weeks.slice(0, -1);
+  if (full.length >= 4) {
+    const kmOf = w => sum(Object.values(w.km));
+    const a4 = mean(full.slice(0, 4).map(kmOf)), b4 = mean(full.slice(-4).map(kmOf));
+    tiles.push({ k: "Volume medio settimanale", v: fmtNum(b4, 1) + " km", d: `ultime 4 settimane complete · le prime 4: ${fmtNum(a4, 1)} km` });
+  }
+  document.getElementById("tiles").innerHTML = tiles.map(t => `<div class="tile"><div class="k">${t.k}</div><div class="v">${t.v}</div><div class="d">${t.d}</div></div>`).join("");
+
+  /* long runs */
+  const longTip = a => `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${fmtNum(a.km, 2)} km · ${fmtPace(a.ngp)}/km · FC ${a.hr}<br>Decoupling ${a.decoupling != null ? fmtNum(a.decoupling, 1) + "%" : "–"} · ES ${a.es != null ? fmtNum(a.es, 1) : "–"}`;
+  bars(document.getElementById("c-long-km"), {
+    cats: longs.map(a => fmtDay(a.date)),
+    stacks: [{ name: "km", color: "--s1", values: longs.map(a => a.km) }],
+    labels: longs.map((a, i) => (i === 0 || i === longs.length - 1) ? fmtNum(a.km, 1) : null),
+    yFmt: v => v, tip: i => longTip(longs[i]),
+  });
+  if (longs.length > 1) {
+    const a = longs[0], b = longs[longs.length - 1];
+    setText("r-long-km", `Da ${fmtNum(a.km, 1)} a ${fmtNum(b.km, 1)} km in ${longs.length} lunghi: +${Math.round((b.km / a.km - 1) * 100)}%.`);
+  }
+  const decs = longs.filter(a => a.decoupling != null);
+  timeDots(document.getElementById("c-long-dec"), {
+    series: [{ color: "--s1", line: true, points: decs.map(a => ({ d: a.date, y: a.decoupling, hollow: a.warm, tip: longTip(a) })) }],
+    refs: [{ y: 5, label: "5%" }], yMin: 0, yFmt: v => v + "%",
+  });
+  if (decs.length > 1) {
+    const a = decs[0], b = decs[decs.length - 1];
+    setText("r-long-dec", `Da ${fmtNum(a.decoupling, 1)}% su ${fmtNum(a.km, 1)} km a ${fmtNum(b.decoupling, 1)}% su ${fmtNum(b.km, 1)} km: la FC regge meglio anche su distanze più lunghe.`);
+  }
+  timeDots(document.getElementById("c-long-pace"), {
+    series: [{ color: "--s1", line: true, points: longs.map(a => ({ d: a.date, y: a.ngp, hollow: a.warm, tip: longTip(a) })) }],
+    invert: true, yFmt: fmtPace, ticks: 4,
+  });
+  timeDots(document.getElementById("c-long-hr"), {
+    series: [{ color: "--s1", line: true, points: longs.map(a => ({ d: a.date, y: a.hr, hollow: a.warm, tip: longTip(a) })) }],
+    yFmt: v => v, ticks: 5, int: true,
+  });
+  table("t-long", [{ t: "Data", l: 1 }, { t: "Seduta", l: 1 }, { t: "km" }, { t: "Passo NGP" }, { t: "FC" }, { t: "m/battito" }, { t: "Decoupling" }, { t: "ES" }, { t: "°C" }],
+    longs.map(a => [fmtDay(a.date), a.name, fmtNum(a.km, 2), fmtPace(a.ngp), a.hr, fmtNum(metersPerBeat(a), 3), a.decoupling != null ? fmtNum(a.decoupling, 1) + "%" : "–", a.es != null ? fmtNum(a.es, 1) : "–", a.temp ?? "–"]));
+
+  /* aerobic efficiency */
+  legend("l-ef", [{ name: "Lungo", color: "--s1", cls: "dot" }, { name: "Facile", color: "--s2", cls: "dot" }, { name: "Sopra 22°C", cls: "hollow" }]);
+  const efTip = a => `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${fmtNum(metersPerBeat(a), 3)} m/battito<br>${fmtPace(a.ngp)}/km · FC ${a.hr} · ${fmtNum(a.km, 2)} km`;
+  timeDots(document.getElementById("c-ef"), {
+    series: ["long", "easy"].map(t => ({
+      color: TYPES[t].color, line: false,
+      points: efOk.filter(a => a.type === t).map(a => ({ d: a.date, y: metersPerBeat(a), hollow: a.warm, tip: efTip(a) })),
+    })),
+    yFmt: v => fmtNum(v, 2), height: 240,
+  });
+  const cool = efOk.filter(a => !a.warm);
+  if (cool.length >= 4) {
+    const h = Math.floor(cool.length / 2);
+    const a = mean(cool.slice(0, h).map(metersPerBeat)), b = mean(cool.slice(h).map(metersPerBeat));
+    const pct = (b / a - 1) * 100;
+    setText("r-ef", `Uscite sotto 22°C: prima metà ${fmtNum(a, 3)}, seconda metà ${fmtNum(b, 3)} m/battito (${pct >= 0 ? "+" : ""}${fmtNum(pct, 1)}%). ` +
+      (Math.abs(pct) < 5 ? "Stabile, entro il rumore: finora il guadagno sta nella distanza e nella tenuta, non nella velocità a parità di cuore. Nota: le uscite facili ora sono volutamente più lente, e correre molto piano a FC bassa abbassa un po' questo indice." : pct > 0 ? "In crescita oltre il rumore: il motore aerobico sta migliorando." : "In calo oltre il rumore: da guardare insieme a sonno e fatica."));
+  }
+  if (efExcluded.length) setText("f-ef", `Escluse ${efExcluded.length} uscite con più del 10% di cammino (il passo medio non è confrontabile): ${efExcluded.map(a => fmtDay(a.date)).join(", ")}.`);
+
+  /* tempo */
+  const tempoTip = a => `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${(a.blocks || []).map((b, i) => `Blocco ${i + 1}: ${fmtNum(b.km, 1)} km a ${fmtPace(b.pace)} · FC ${b.hr ?? "–"}`).join("<br>")}<br>RPE ${a.rpe ?? "–"}`;
+  bars(document.getElementById("c-tempo-km"), {
+    cats: tempos.map(a => fmtDay(a.date)),
+    stacks: [{ name: "km", color: "--s3", values: tempos.map(tempoKm) }],
+    labels: tempos.map(a => fmtNum(tempoKm(a), 1)),
+    tip: i => tempoTip(tempos[i]),
+  });
+  if (tempos.length > 1) {
+    const kms = tempos.map(tempoKm);
+    setText("r-tempo-km", `Da ${fmtNum(kms[0], 1)} km alla prima seduta a un massimo di ${fmtNum(Math.max(...kms), 1)} km. La gara 5K ha chiesto ${fmtNum(races.length ? races[races.length - 1].km : 0, 1)} km vicino alla soglia.`);
+  }
+  legend("l-tempo-pace", [{ name: "Blocco Tempo", color: "--s3", cls: "dot" }, { name: "Gara (media)", color: "--s5", cls: "dot" }, { name: "Soglia 6:15", cls: "line" }]);
+  const blockPts = key => tempos.flatMap(a => (a.blocks || []).map((b, i) => ({ d: a.date, y: b[key], tip: `<b>${a.name}</b> · blocco ${i + 1}<br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${fmtNum(b.km, 1)} km a ${fmtPace(b.pace)}/km · FC ${b.hr ?? "–"}` })));
+  const racePts = key => races.map(r => ({ d: r.date, y: key === "pace" ? r.pace : r.hr, tip: `<b>${r.name}</b><br>${fmtNum(r.km, 2)} km a ${fmtPace(r.pace)}/km · FC ${r.hr}` }));
+  timeDots(document.getElementById("c-tempo-pace"), {
+    series: [{ color: "--s3", points: blockPts("pace") }, { color: "--s5", points: racePts("pace") }],
+    invert: true, yFmt: fmtPace, refs: [{ y: 375, label: "6:15" }],
+  });
+  legend("l-tempo-hr", [{ name: "Blocco Tempo", color: "--s3", cls: "dot" }, { name: "Gara (media)", color: "--s5", cls: "dot" }, { name: "FC soglia 165", cls: "line" }]);
+  timeDots(document.getElementById("c-tempo-hr"), {
+    series: [{ color: "--s3", points: blockPts("hr").filter(p => p.y) }, { color: "--s5", points: racePts("hr") }],
+    yFmt: v => v, int: true, refs: [{ y: 165, label: "165" }],
+  });
+  table("t-tempo", [{ t: "Data", l: 1 }, { t: "Seduta", l: 1 }, { t: "Blocchi", l: 1 }, { t: "km soglia" }, { t: "Passo medio" }, { t: "FC media" }, { t: "Deriva FC" }, { t: "RPE" }, { t: "°C" }],
+    tempos.map(a => {
+      const bl = a.blocks || [], km = tempoKm(a), sec = sum(bl.map(b => b.sec));
+      const hrB = bl.filter(b => b.hr);
+      const hr = hrB.length ? Math.round(sum(hrB.map(b => b.hr * b.sec)) / sum(hrB.map(b => b.sec))) : null;
+      const drift = hrB.length > 1 ? hrB[hrB.length - 1].hr - hrB[0].hr : null;
+      return [fmtDay(a.date), a.name, bl.map(b => fmtNum(b.km, 1)).join(" + "), fmtNum(km, 1), km ? fmtPace(sec / km) : "–", hr ?? "–", drift != null ? (drift > 0 ? "+" : "") + drift : "–", a.rpe ?? "–", a.temp ?? "–"];
+    }));
+
+  /* intervals */
+  const domain = intervals.map(a => a.date);
+  for (const dist of [200, 400]) {
+    const sess = intervals.filter(a => repDist(a) === dist && reps(a).length);
+    const points = sess.map(a => {
+      const r = reps(a), p = r.map(b => b.pace);
+      return { d: a.date, y: mean(p), lo: Math.min(...p), hi: Math.max(...p),
+        tip: `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${r.length} ripetute · media ${fmtPace(mean(p))}/km<br>migliore ${fmtPace(Math.min(...p))} · peggiore ${fmtPace(Math.max(...p))}<br>RPE ${a.rpe ?? "–"}` };
+    });
+    timeDots(document.getElementById("c-int-" + dist), {
+      series: [{ color: "--s4", line: true, points }], invert: true, yFmt: fmtPace, domain,
+      yMin: 280, yMax: 360,
+    });
+  }
+  table("t-int", [{ t: "Data", l: 1 }, { t: "Seduta", l: 1 }, { t: "Rip." }, { t: "km veloci" }, { t: "Media" }, { t: "Migliore" }, { t: "Peggiore" }, { t: "Scarto" }, { t: "FC media rip. (fascia)" }, { t: "RPE" }],
+    intervals.map(a => {
+      const r = reps(a), p = r.map(b => b.pace), hrs = r.map(b => b.hr).filter(Boolean);
+      return [fmtDay(a.date), a.name, r.length, fmtNum(sum(r.map(b => b.km)), 1), fmtPace(mean(p)), fmtPace(Math.min(...p)), fmtPace(Math.max(...p)), (Math.max(...p) - Math.min(...p)) + "\"", hrs.length ? Math.round(mean(hrs)) : "–", a.rpe ?? "–"];
+    }));
+
+  /* volume */
+  const weeks = DATA.weeks;
+  const keys = ["long", "easy", "tempo", "intervals", "race", "other"];
+  const kmBy = (w, k) => sum(Object.entries(w.km).filter(([t]) => typeKey(t) === k).map(([, v]) => v));
+  legend("l-vol", keys.map(k => ({ name: TYPES[k].name, color: TYPES[k].color })));
+  const lastIdx = weeks.length - 1;
+  bars(document.getElementById("c-vol"), {
+    cats: weeks.map(w => fmtDay(w.start)),
+    stacks: keys.map(k => ({ name: TYPES[k].name, color: TYPES[k].color, values: weeks.map(w => kmBy(w, k)) })),
+    labels: weeks.map(w => fmtNum(sum(Object.values(w.km)), 1)),
+    height: 250,
+    tip: i => {
+      const w = weeks[i];
+      return `<b>Settimana dal ${fmtDay(w.start)}</b>${i === lastIdx ? ' <span class="m">(in corso)</span>' : ""}<br>` +
+        keys.filter(k => kmBy(w, k) > 0).map(k => `${TYPES[k].name}: ${fmtNum(kmBy(w, k), 1)} km`).join("<br>") +
+        `<br><b>Totale ${fmtNum(sum(Object.values(w.km)), 1)} km</b>`;
+    },
+  });
+  setText("r-vol", `L'ultima barra è la settimana in corso. Il volume cresce soprattutto attraverso il lungo (blu) e le ripetute più numerose (giallo).`);
+  legend("l-rw", [{ name: "Corsa", color: "--s1" }, { name: "Cammino", color: "--neutral" }]);
+  bars(document.getElementById("c-rw"), {
+    cats: weeks.map(w => fmtDay(w.start)),
+    stacks: [{ name: "Corsa", color: "--s1", values: weeks.map(w => w.runMin) }, { name: "Cammino", color: "--neutral", values: weeks.map(w => w.walkMin) }],
+    tip: i => `<b>Settimana dal ${fmtDay(weeks[i].start)}</b><br>Corsa ${Math.round(weeks[i].runMin)}' · Cammino ${Math.round(weeks[i].walkMin)}'<br><span class="m">cammino nelle ripetute = recupero</span>`,
+  });
+  bars(document.getElementById("c-tss"), {
+    cats: weeks.map(w => fmtDay(w.start)),
+    stacks: [{ name: "TSS", color: "--s1", values: weeks.map(w => w.tss) }],
+    tip: i => `<b>Settimana dal ${fmtDay(weeks[i].start)}</b><br>TSS ${weeks[i].tss}`,
+  });
+  bars(document.getElementById("c-srpe"), {
+    cats: weeks.map(w => fmtDay(w.start)),
+    stacks: [{ name: "sRPE", color: "--s1", values: weeks.map(w => w.srpe) }],
+    tip: i => `<b>Settimana dal ${fmtDay(weeks[i].start)}</b><br>sRPE ${weeks[i].srpe}` + (weeks[i].srpe === 0 ? '<br><span class="m">RPE non registrato</span>' : ""),
+  });
+  table("t-week", [{ t: "Settimana", l: 1 }, ...keys.map(k => ({ t: TYPES[k].name })), { t: "Totale km" }, { t: "Corsa'" }, { t: "Cammino'" }, { t: "TSS" }, { t: "sRPE" }],
+    weeks.map(w => [fmtDay(w.start), ...keys.map(k => kmBy(w, k) ? fmtNum(kmBy(w, k), 1) : "–"), fmtNum(sum(Object.values(w.km)), 1), Math.round(w.runMin), Math.round(w.walkMin), w.tss, w.srpe || "–"]));
+}
+
+render();
+let rt;
+window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 150); });
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+</script>
+</body>
+</html>

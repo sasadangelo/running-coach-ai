@@ -86,13 +86,12 @@ Read `references/coaches-guide.md` for comprehensive guidance on plan design pri
 
 ### 4. Structure the Weekly Microcycles
 
-Build each week using the principles from section 4 of the coaches guide:
+**IMPORTANT**: Follow `references/weekly-structure.md`. It overrides the generic weekly template of the coaches guide. In short:
 
-**Weekly template:**
-- 1-2 quality sessions (threshold, intervals, or race-pace work)
-- 1 long run
-- Remaining days easy (with strides 1-3x/week)
-- Optional: 1 strength training day
+- **Runs per week follow the volume**: 3 runs up to ~30-35 km/week, a 4th from ~30-35 km, a 5th from ~40-45 km, adapted to the runner.
+- **Every run is quality by default**: long run, threshold, reps. Only if the runner does not tolerate it, one becomes an easy run (long + threshold or reps + easy). A 4th or 5th day is easy when the runner already does 3 quality sessions; otherwise it depends on what they tolerate.
+- **Session types enter in order**: base easy running → strides → Tempo a ripetute → Tempo continuo → Repetition → Interval (shortest reps first).
+- Optional: strength training on the run days or separately.
 
 **Important workout structure rules:**
 - ALL interval workouts must be **distance-based** (e.g., "5 x 1 mile", "4 x 800m", "3 x 1km")
@@ -273,6 +272,8 @@ Use these paces for workouts throughout the plan:
 **Safety**: Include appropriate warnings about injury prevention, gradual progression, and listening to the body.
 
 ## References
+
+- **references/weekly-structure.md**: runs per week by volume, which runs are quality, the order in which session types enter the plan. Takes precedence over coaches-guide.md on weekly structure.
 
 - **coaches-guide.md**: Comprehensive framework for training plan design covering principles, phases, intensities, weekly structure, progression models, distance-specific emphases, plan lengths, scaling across abilities, common errors, and a practical recipe for building plans. Reference this extensively when designing the plan structure and selecting workouts.
 

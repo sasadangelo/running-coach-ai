@@ -2,7 +2,7 @@
 
 Dati Garmin dal 24 aprile 2016 (prima attività registrata) al 23 agosto 2026 (`2026/` copre gennaio-agosto; da fine agosto i dati sono in `training-log/`), una cartella per anno con settimane lunedì-domenica (`<anno>/week-N.md`). Non toccano `training-log/`, che parte dalla stagione 2026. Da ottobre 2014 ad aprile 2016 le corse erano registrate con Runtastic sul telefono (non importate).
 
-**Analisi per anno:** [2016](analisi-2016.md) · [2017](analisi-2017.md) · [2018](analisi-2018.md) · [2019](analisi-2019.md) · [2020](analisi-2020.md) · [2021](analisi-2021.md) · [2022](analisi-2022.md) · [2023](analisi-2023.md) · [2024](analisi-2024.md) · [2025](analisi-2025.md). **Il racconto: [la mia storia di runner](la-mia-storia.md)** · **I numeri: [record](record.md)** · **Sintesi: [pattern ricorrenti](pattern-ricorrenti.md)** (cosa ha ostacolato, errori, antidoti).
+**Analisi per anno:** [2016](analisi-2016.md) · [2017](analisi-2017.md) · [2018](analisi-2018.md) · [2019](analisi-2019.md) · [2020](analisi-2020.md) · [2021](analisi-2021.md) · [2022](analisi-2022.md) · [2023](analisi-2023.md) · [2024](analisi-2024.md) · [2025](analisi-2025.md). **Il racconto: [la mia storia di runner](la-mia-storia.md)** · **I numeri: [record](record.md)** · **Sintesi: [pattern ricorrenti](pattern-ricorrenti.md)** (cosa ha ostacolato, errori, antidoti) · **Confronto: [blocchi di 11 settimane 2016, 2017 e 2026](confronto-blocchi-2016-2017-2026.md)**.
 
 ## Il quadro
 

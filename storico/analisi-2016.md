@@ -32,5 +32,6 @@ Molte di queste non sono gare: sono uscite lunghe corse "al meglio".
 3. **Volume basso** (~12 km a settimana) e nessun lungo oltre gli 11 km.
 
 ## Cosa vale per oggi
-- **Il punto di partenza di allora è quello di oggi:** se nel 2016 sono bastati sei mesi per arrivare a VDOT 33, i piani del 2027 hanno margine.
+- **Il punto di partenza di allora è quello di oggi**, ma il VDOT 33 di novembre è arrivato dopo sette mesi, non subito. Nelle prime 11 settimane (24 aprile - 3 luglio: 14 km a settimana, 2 uscite) il VDOT passa solo da 27.5 a 28.0. Il blocco S1-S11 del 2026 ha lo stesso volume, ma con 3 uscite e la struttura è salito di 2.5-3 punti, partendo da fermo. Dettagli nel [confronto tra i blocchi 2016, 2017 e 2026](confronto-blocchi-2016-2017-2026.md).
+- **Nel 2016 non c'è mai un periodo con 3 uscite a settimana regolari:** quasi sempre 2, con settimane saltate. La regolarità vera comincia a marzo 2017.
 - **Il lento vero non c'era nemmeno allora.** Il lungo del 25 ottobre 2026 (8:04/km, FC 139) è una cosa che nel 2016 non si vede mai.

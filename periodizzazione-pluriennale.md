@@ -109,7 +109,7 @@ Due macrocicli più lunghi, perché la base c'è:
 ## Regole che valgono per tutti i piani
 
 1. **Ogni piano finisce con una gara obiettivo** e comincia con il VDOT dell'ultima gara.
-2. **Tra un piano e l'altro c'è sempre un recupero:** 1 settimana dopo una 5K, 2 dopo una 10K di fine stagione, 2-3 dopo una mezza, 3 a fine anno.
+2. **Tra un piano e l'altro c'è sempre un recupero:** 1 settimana dopo una 5K, 2 dopo una 10K di fine stagione, 2-3 dopo una mezza, 3 a fine anno. **Dentro un piano**, dopo una 5K a tutta niente soglia per 5 giorni (prima qualità a 7 giorni, leggera); dopo una gara allenante il Tempo della settimana ripete il volume già fatto, senza progressione (regola nata dal Tempo interrotto del 13/11/2026).
 3. **Mesocicli 3+1 di default**, 2+1 quando il volume cresce in fretta o i segnali lo chiedono. Ogni settimana di carico resta ripetute + Tempo + lungo. Quando una settimana lo chiede (regola 9), le ripetute diventano una corsa facile da 30-35' con FC sotto 150 più 6-8 allunghi; il Tempo e il lungo restano. Da tenere d'occhio la terza settimana di carico, che in S3 e S7 è stata la più dura (esperimento E9).
 4. **Le gare allenanti sostituiscono una seduta del piano**, non si aggiungono. Se una gara allenante si corre al massimo diventa una gara obiettivo e costa una settimana.
 5. **Il volume cresce solo con corse facili:** la qualità resta 2 sedute a settimana.

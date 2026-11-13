@@ -62,6 +62,21 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 **Scelta (6/11/2026):** lo schema resta ripetute + Tempo + lungo in ogni settimana di carico. Nessuna settimana leggera programmata: se i segnali lo chiedono (regola 9), le ripetute diventano una corsa facile con allunghi.
 **Da verificare:** nei prossimi 3+1, quante volte la terza settimana richiede la corsa facile e se l'HRV risale nello scarico. Se succede in quasi tutti i mesocicli → valutare il 2+1. Regola: [periodizzazione-pluriennale.md, regola 3](../periodizzazione-pluriennale.md#regole-che-valgono-per-tutti-i-piani).
 
+## E10 — Tempo fallito: fatica residua o vestiti? ⏳ [G]
+**Ipotesi dell'atleta:** troppi vestiti (tuta pesante e giubbino impermeabile con 20°C) hanno fatto fallire il Tempo, trasformando una giornata mite in una giornata calda.
+**Cosa è successo:** Tempo 2500 m del 13/11/2026 (S11), 20°C e rugiada 16°C (stazione di Fiumicino), 5 giorni dopo la Roma 5K. Stop a 1.7 km e seduta tagliata: primo allenamento interrotto da agosto. Confronto con il test 2000 m del 29/10 (12°C, rugiada 8°C, vestiti leggeri):
+
+| | 29/10 | 13/11 |
+|---|---|---|
+| Riscaldamento | 7:18, FC 144 | 7:30, FC 135 |
+| 1° km del blocco | 6:10, FC 164 | 6:13, FC 162 |
+| Sensazione Garmin | Forte, RPE 3 | Debole |
+
+**Lettura:** se il problema fosse stato il calore, la FC sarebbe stata più alta a parità di passo (deriva cardiovascolare); invece era uguale o più bassa. A cambiare è lo sforzo percepito. È il quadro più tipico della fatica residua: FC che sale meno del solito, anche nel riscaldamento, e sensazioni peggiori.
+**Confondenti:** 5 giorni dalla gara (ultimi km a soglia), blocco più lungo di sempre (+500 m), settimana stressante (ospedale martedì), FC al polso (meno precisa della fascia), un solo km di confronto, perché la seduta si è fermata nel 2° km.
+**Lezione provvisoria:** la FC da sola non basta a dire se una seduta fallisce per il caldo o per la fatica, serve la sensazione accanto. Una FC più bassa del solito con sforzo percepito più alto è un segnale di fatica, non di forma. I vestiti restano un consiglio valido (vestirsi come con 10°C in più, impermeabile solo sotto i ~10°C), ma qui non sono la causa principale. Vedi [E3](#e3--partire-forte-col-caldo--g) per il caso del caldo vero, con la FC che sale. Capitolo: [Energia e partire piano](02-energia-partire-piano.md).
+**Da verificare:** il 2500 m di S12, vestiti leggeri e a 12 giorni dalla gara. Se va in controllo con FC simile, la causa era la fatica residua. Se la FC al 1° km è molto più bassa di 162 a parità di passo, anche i vestiti contavano.
+
 ---
 
 ## Prossimi esperimenti già programmati

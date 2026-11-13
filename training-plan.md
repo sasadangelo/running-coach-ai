@@ -187,20 +187,26 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 
 - **Martedì — Corsa facile** (al posto delle ripetute, a 2 giorni dalla gara): 4.0km continui @ 7:35-8:13/km, FC ≤150 — 4.00km, ~30min
 - **Venerdì 13 — Tempo**: 1km risc., 2500m continui @ 6:10-6:30/km, 1km def. — 4.50km, ~32min *(+500m rispetto al test di S9; se a 4 giorni dalla gara le gambe sono ancora pesanti, resta a 2000m)*
+  - **Esito: non completato**, primo allenamento interrotto da agosto. Primo km del blocco a 6:13 (FC 162), cioè dentro la fascia ma sul lato veloce. Fermata a 1.7 km, poi camminata e seduta tagliata (3.40 km in tutto, sensazione Garmin "Debole"). Causa principale probabile: **fatica residua**, cioè seconda seduta di soglia a 5 giorni dalla gara (la Roma 5K aveva gli ultimi km a soglia, FC 168), con un blocco più lungo di sempre e la giornata in ospedale martedì. Rispetto al test del 29/10 (1° km 6:10 a FC 164, sensazione "Forte") la FC del 1° km era uguale o più bassa (6:13 a FC 162), ma la sensazione era "Debole": è lo sforzo percepito a essere cambiato, non il cuore. Fattore secondario: abbigliamento troppo pesante (tuta e giubbino impermeabile con 20°C e rugiada 16°C), che però non ha alzato la FC. Gambe e fascia plantare stavano bene. Fermarsi è stata la scelta giusta.
+
+**Modifica del 13 novembre (dopo il Tempo interrotto):**
+- **Regola post-gara.** Dopo una 5K corsa a tutta, niente soglia nei 5 giorni successivi: solo corsa facile e allunghi; il primo lavoro di qualità arriva dopo 7 giorni ed è leggero. Dopo una 5K progressiva come Roma, il Tempo a 5 giorni si può fare, ma senza progressione: si ripete il volume già fatto (o si fa a ripetute) nella fascia lenta. Mai un blocco "più lungo di sempre" nella settimana dopo una gara.
+- **La progressione del Tempo slitta di una settimana:** 2500 m in S12 (ripetizione di S11), 3000 m in S13. Il 3500 m esce dal piano prima della 10K.
+- **Fasce di passo sull'orologio sempre larghe 20"**: l'atleta segue l'avviso di fuori fascia, non una fascia da 10". Per una partenza più prudente si sposta tutta la fascia, non la si stringe.
 - **Lungo**: 6.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 6.50km, ~48min; nessuna fermata programmata
 
 ### Settimana 12 (16-22 novembre) — Fase H
-**Volume totale**: 17.70 km
+**Volume totale**: 17.20 km
 
 - **Ripetute**: 1km risc., 4 x 400m @ 5:20-5:40/km (rec. 2') + 2 x 800m @ 5:35-5:55/km (rec. 2'30"), 1km def. — 5.20km, ~46min
-- **Tempo**: 1km risc., 3000m continui @ 6:10-6:30/km, 1km def. — 5.00km, ~35min
+- **Tempo**: 1km risc., 2500m continui @ 6:15-6:35/km, 1km def. — 4.50km, ~33min *(ripete il Tempo interrotto di S11, invece dei 3000m previsti; fascia spostata di 5" verso il lento, centro 6:25. I primi 500m del blocco volutamente lenti, anche a 6:35; FC oltre 165 nel primo km: rallentare)*
 - **Lungo**: 7.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 7.50km, ~55min; nessuna fermata programmata
 
 ### Settimana 13 (23-29 novembre) — Fase H
-**Volume totale**: 19.60 km
+**Volume totale**: 19.10 km
 
 - **Ripetute**: 1km risc., 3 x 400m @ 5:20-5:40/km (rec. 2') + 3 x 800m @ 5:35-5:55/km (rec. 2'30"), 1km def. — 5.60km, ~50min
-- **Tempo**: 1km risc., 3500m continui @ 6:10-6:30/km, 1km def. — 5.50km, ~39min *(blocco continuo più lungo del piano)*
+- **Tempo**: 1km risc., 3000m continui @ 6:10-6:30/km, 1km def. — 5.00km, ~36min *(blocco continuo più lungo del piano; era 3500m prima del 13/11. Se il 2500m di S12 è stato faticoso, resta a 2500m; la fascia, 6:10-6:30 o 6:15-6:35, si decide dopo S12)*
 - **Lungo**: 8.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 8.50km, ~62min *(più lunga uscita del piano — ottimo indicatore di quanto potrai correre in gara)*
 
 ### Settimana 14 — Gara 2 (30 novembre - 6 dicembre) — Fase I
@@ -209,7 +215,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 - **Martedì — Ripetute leggere**: 0.5km risc., 4 x 200m @ 5:10-5:30/km (rec. 1') + 1 x 400m @ 5:20-5:40/km (rec. 2'), 0.5km def. — 2.20km
 - **Giovedì — Shakeout**: 0.3km risc., 1km @ ~7:45/km — 1.60km, corsa breve e leggera
 - **Venerdì/Sabato**: riposo completo
-- **Domenica 6 dicembre — GARA: Best Woman 10K**. Obiettivo: **1h02-1h04** (6:12-6:24/km), tutta di corsa. Partenza prudente (km 1 ~6:30), poi ritmo 10K, appena più lento della soglia; FC con la fascia H9 per verificare la FC di soglia (Friel dal 10'). Il rischio da evitare è la Race for the Cure di maggio: partenza troppo veloce e crollo dal 5° km. **Parziali km per km da fissare dopo il lungo da 8.5km e il Tempo da 3500m di S13**, in base a come vanno.
+- **Domenica 6 dicembre — GARA: Best Woman 10K**. Obiettivo: **1h02-1h04** (6:12-6:24/km), tutta di corsa. Partenza prudente (km 1 ~6:30), poi ritmo 10K, appena più lento della soglia; FC con la fascia H9 per verificare la FC di soglia (Friel dal 10'). Il rischio da evitare è la Race for the Cure di maggio: partenza troppo veloce e crollo dal 5° km. **Parziali km per km da fissare dopo il lungo da 8.5km e il Tempo da 3000m di S13**, in base a come vanno.
   - *Perché non più "quanti più km possibile" (revisione dell'8 novembre):* l'obiettivo originale era pensato con il lungo a 4-5km. Oggi il lungo è a 7km (8.5 in S13) e la Roma 5K è stata corsa tutta, con 4 km a soglia in controllo: camminare non è più in discussione. Sopra ~1h06:30 (VDOT sotto 28.5, livello della primavera) è un segnale da prendere sul serio.
 
 ---
@@ -223,6 +229,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - **Niente forza dopo le Ripetute**: è la sessione più impegnativa dal punto di vista neuromuscolare, meglio lasciarle il recupero pieno piuttosto che aggiungere altro carico sulle gambe.
 - **Forza solo dopo il Lungo della domenica**: è l'unico momento disponibile in settimana, i muscoli sono già caldi e le Ripetute del martedì arrivano dopo due giorni pieni di recupero.
 - **Priorità alla fascia plantare**: il blocco parte dal calf raise sull'asciugamano (storico di fascite plantare) e ogni stretching include l'allungamento della fascia.
+  - **Stato al 13 novembre**: la fascia è tranquilla. Secondo l'atleta funzionano tre esercizi da non saltare mai: stretching delle dita (seduto), calf raise sull'asciugamano, stretching delle dita in ginocchio (dita piegate sotto, peso sopra). I balzi restano sospesi fino alla 10K del 6 dicembre: si valuta se reintrodurli dopo la gara.
 - **Stretching statico sempre dopo, mai prima**: statico a freddo prima di correre riduce la potenza muscolare; dinamico prima, statico dopo.
 
 ### Checklist — Giorno Ripetute

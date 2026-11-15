@@ -3,21 +3,58 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 7.41 km
-- **Total Time**: 0:55:17
-- **Total Elevation**: 25 m
-- **Total Calories**: 554 kcal (2/2 activities with data)
-- **Total TSS**: 68 (2/2 activities with a valid NGP/IF)
-- **Average RPE**: 3.5/10 (2/2 activities rated)
-- **Total sRPE**: 182 (RPE x minutes, rated activities only)
+- **Total Activities**: 3
+- **Total Distance**: 13.92 km
+- **Total Time**: 1:42:00
+- **Total Elevation**: 28 m
+- **Total Calories**: 1035 kcal (3/3 activities with data)
+- **Total TSS**: 127 (3/3 activities with a valid NGP/IF)
+- **Average RPE**: 3.3/10 (3/3 activities rated)
+- **Total sRPE**: 322 (RPE x minutes, rated activities only)
 
 ### Running Totals
-- **Total Run Time**: 0:52:18
-- **Total Walk Time**: 0:03:25
+- **Total Run Time**: 1:38:49
+- **Total Walk Time**: 0:03:39
 
 ## Activities
 
+### 2026-11-15 07:44:05 - S11 Long run 6.5km
+
+**Type**: Run
+**Distance**: 6.51 km
+**Duration**: 0:46:43
+**Pace**: 7:11/km
+**NGP medio**: 7:11/km
+**IF**: 0.87
+**TSS**: 59
+**RPE**: 3/10
+**sRPE**: 140
+**Sensazione**: Forte (75/100)
+**Decoupling**: 2.3%
+**ES**: 10.2 (Base)
+**Economia**: EF 0.923 m/battito · M 0.926 · RES 85.4
+**Run time**: 0:46:31
+**Walk time**: 0:00:14
+**Elevation**: 3 m
+**Calories**: 481 kcal
+**Heart Rate**: 148 bpm (max: 156)
+**Meteo**: 14°C, rugiada 14°C, umidità 99% (stazione Roma Fiumicino, aria all'ombra)
+**Note**: Buona corsa segno che ho recuperato la gara 5k. Sarei potuto arrivare tranquillamente a 8k. Ho cercato di rimanere nel range di ritmo lento anche se il corpo avrebbe voluto fare di più. Ho guardato cercando di stare sotto 153 con tetto a 155.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Elevation |
+|-----|----------|---------|---------|-----|-----------|
+| 1   | 1.00 km  | 0:07:13 | 7:13/km | 133 | 0 m       |
+| 2   | 1.00 km  | 0:07:06 | 7:06/km | 150 | 1 m       |
+| 3   | 1.00 km  | 0:07:06 | 7:06/km | 150 | 0 m       |
+| 4   | 1.00 km  | 0:07:06 | 7:06/km | 152 | 1 m       |
+| 5   | 1.00 km  | 0:07:19 | 7:19/km | 151 | 0 m       |
+| 6   | 1.00 km  | 0:07:13 | 7:13/km | 151 | 1 m       |
+| 7   | 0.50 km  | 0:03:38 | 7:16/km | 152 | 0 m       |
+| 8   | 0.01 km  | 0:00:02 | 6:11/km | 152 | 0 m       |
+
+---
 ### 2026-11-13 08:22:35 - Fiumicino - S11 Tempo 2500m
 
 **Type**: Run
@@ -84,8 +121,8 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 185 bpm
-- **FC riposo media**: 59.9 bpm
-- **Riserva cardiaca**: 125.1 bpm
+- **FC riposo media**: 59.0 bpm
+- **Riserva cardiaca**: 126.0 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |

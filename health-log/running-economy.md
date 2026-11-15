@@ -15,3 +15,4 @@ Economia di corsa a passo fisso: solo i tratti a 7:00-7:20/km (passo medio su 30
 | 2026-10-11 | Corsa (Lungo) 5.7 Km   | 18               | 7:08/km | 154 bpm | 0.912          | 1096       | 169 spm | 280 ms            | 9.58%              | 0.934 | 85.2 |
 | 2026-10-18 | Lungo 6.4 Km           | 19               | 7:11/km | 149 bpm | 0.932          | 1073       | 167 spm | 284 ms            | 9.66%              | 0.924 | 86.1 |
 | 2026-11-01 | Lungo 7 Km             | 26               | 7:11/km | 155 bpm | 0.897          | 1115       | 168 spm | 282 ms            | 9.64%              | 0.928 | 83.2 |
+| 2026-11-15 | S11 Long run 6.5km     | 26               | 7:11/km | 151 bpm | 0.923          | 1084       | 167 spm | 283 ms            | 9.66%              | 0.926 | 85.4 |

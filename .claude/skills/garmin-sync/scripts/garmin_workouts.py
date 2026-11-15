@@ -77,6 +77,7 @@ except ImportError:
 
 try:
     from garminconnect import Garmin
+    from garminconnect.exceptions import GarminConnectNotFoundError
 except ImportError:
     print(
         "Missing dependency 'garminconnect'. Install with:\n"
@@ -321,16 +322,31 @@ def managed_schedule(client: Garmin) -> list[dict]:
 
 
 def remove(client: Garmin, items: list[dict], dry_run: bool) -> None:
-    """Unschedule items and delete their workout templates."""
+    """Unschedule items, then delete each workout template once.
+
+    One template can be scheduled on several dates (e.g. re-scheduled by hand in
+    Garmin Connect), and deleting it drops all of its schedules. So every item is
+    unscheduled first, and a template is deleted only if no managed schedule
+    outside `items` still uses it.
+    """
     for item in items:
         print(f"  - {item['date']} {item.get('title', '')}")
-        if dry_run:
-            continue
-        client.unschedule_workout(item["id"])
+    if dry_run:
+        return
+    removed_ids = {item["id"] for item in items}
+    for item in items:
         try:
-            client.delete_workout(item["workoutId"])
-        except Exception as exc:  # noqa: BLE001 - template may already be gone or shared by another date
-            print(f"    (template {item['workoutId']} not deleted: {exc})")
+            client.unschedule_workout(item["id"])
+        except GarminConnectNotFoundError:
+            pass  # already gone with its template
+    still_used = {
+        int(item.get("workoutId") or 0) for item in managed_schedule(client) if item["id"] not in removed_ids
+    }
+    for workout_id in {int(item["workoutId"]) for item in items} - still_used:
+        try:
+            client.delete_workout(workout_id)
+        except Exception as exc:  # noqa: BLE001 - template may already be gone
+            print(f"    (template {workout_id} not deleted: {exc})")
 
 
 def cleanup(client: Garmin, before: date, dry_run: bool) -> None:

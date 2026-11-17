@@ -16,7 +16,7 @@ Passo di soglia: il passo sostenibile alla FC di soglia, oggi 165 bpm (`.claude/
 | 2026-09-18 | Tempo 3x700 m Rec 200m      | Tempo a ripetute | 6            | 6:23/km         | -                    | -    |
 | 2026-10-02 | Tempo 3x800 m               | Tempo a ripetute | 8            | 6:11/km         | -                    | -    |
 | 2026-10-09 | Tempo 2x1200 m              | Tempo a ripetute | 9            | 6:21/km         | -                    | -    |
-| 2026-10-16 | Tempo 2x1500 m              | Tempo a ripetute | 15           | 6:14/km         | -                    | -    |
+| 2026-10-16 | Tempo 2x1500 m              | Tempo a ripetute | 15           | 6:15/km         | -                    | -    |
 | 2026-10-29 | Tempo 2Km                   | Tempo continuo   | 11           | 6:16/km         | -                    | -    |
 | 2026-11-08 | Rome 5k                     | Gara             | 33           | 6:33/km         | 168 bpm              | 29.1 |
 | 2026-11-13 | Fiumicino - S11 Tempo 2500m | Tempo a ripetute | 9            | 6:19/km         | -                    | -    |

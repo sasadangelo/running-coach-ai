@@ -81,8 +81,8 @@ def collect() -> dict[str, dict[tuple[int, int], list[float]]]:
     for key, _label, _quality, filename, column, parse, *_ in METRICS:
         for row in read_table(HEALTH_LOG / filename):
             value = parse(row.get(column, "")) if row.get(column) else None
-            if value is None:
-                continue
+            if value is None or "limite inferiore" in row.get("Fonte", ""):
+                continue  # a non-maximal race is only a minimum (calculate_threshold.py)
             d = date.fromisoformat(row["Data"])
             data[key][(d.year, d.month)].append(value)
     return data

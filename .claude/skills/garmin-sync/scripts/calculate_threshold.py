@@ -25,13 +25,16 @@ Races (Garmin event type "race", or a name containing "gara" / "race"), at
 least RACE_MIN_MINUTES long:
   - Friel threshold HR = average HR from minute 10 to the end (race adrenaline
     adds a couple of beats);
-  - Daniels VDOT from distance and time, and threshold pace at 88% of VDOT.
-  - Daniels assumes an all-out race. A race that was not (progressive, run under
-    control) gives a VDOT that is only a minimum, so its threshold comes out too
-    slow. Rule: a race can raise the threshold, never lower it. A race estimate
-    slower than the median of the Tempo estimates of the previous
-    RACE_REFERENCE_DAYS days is labelled "Gara (limite inferiore)": it stays in
-    the log but monthly_profile.py leaves it out.
+  - threshold pace = the race's average pace on Garmin data (GPS distance /
+    watch time), the same Friel reading that gives the threshold HR: in a
+    continuous effort of ~30-60 minutes average HR is the threshold HR and
+    average pace is the threshold pace. Official times are never used.
+  - Daniels VDOT is logged for information only. It is not used for the
+    threshold: it assumes an all-out race and, for a race run under control,
+    turns 6:18/km into a 6:33/km threshold. Scaling race samples to the
+    threshold HR (the Tempo method) is not used either: race HR drifts up at
+    a steady pace (161 -> 171 bpm at 6:16), and the scaling reads that drift
+    as a slower threshold.
 
 Nothing is changed automatically: plan paces and zones are updated by decision.
 
@@ -41,7 +44,6 @@ Usage:
 
 import argparse
 import math
-from datetime import timedelta
 import os
 import statistics
 import sys
@@ -126,21 +128,6 @@ def tempo_estimate(samples: list[tuple[float, float, float]], hr_thr: float, hr_
     }
 
 
-RACE_REFERENCE_DAYS = 42
-RACE_LOWER_BOUND = "Gara (limite inferiore)"
-
-
-def flag_non_maximal_races(results: list[dict]) -> None:
-    """Relabel races slower than the recent Tempo estimates: they are a minimum, not a measure."""
-    for r in results:
-        if r["source"] != "Gara":
-            continue
-        recent = [t["speed"] for t in results if t["source"].startswith("Tempo")
-                  and r["date"] - timedelta(days=RACE_REFERENCE_DAYS) <= t["date"] < r["date"]]
-        if recent and r["speed"] < statistics.median(recent):
-            r["source"] = RACE_LOWER_BOUND
-
-
 def race_estimate(samples: list[tuple[float, float, float]], distance_km: float) -> dict | None:
     minutes = samples[-1][0] / 60
     if minutes < RACE_MIN_MINUTES:
@@ -150,7 +137,7 @@ def race_estimate(samples: list[tuple[float, float, float]], distance_km: float)
     return {
         "source": "Gara",
         "minutes": minutes,
-        "speed": speed_at_vo2(0.88 * race_vdot),
+        "speed": distance_km * 1000 / samples[-1][0],
         "hr": statistics.mean(late),
         "vdot": race_vdot,
     }
@@ -174,8 +161,7 @@ def write_log(path: Path, results: list[dict], hr_thr: float) -> None:
         return found[-1] if found else None
 
     summary = []
-    for source, note in (("Gara", "la misura piu affidabile, se la gara era a tutta"),
-                         (RACE_LOWER_BOUND, "gara non a tutta: il VDOT e un minimo, quindi questa soglia non abbassa la stima e il profilo mensile la esclude"),
+    for source, note in (("Gara", "passo medio Garmin di uno sforzo continuo di 30-60 minuti: la misura piu diretta"),
                          ("Tempo continuo", "misura quasi diretta"),
                          ("Tempo a ripetute", "ottimista: la FC non si stabilizza in frazioni brevi")):
         r = latest(source)
@@ -192,8 +178,8 @@ def write_log(path: Path, results: list[dict], hr_thr: float) -> None:
         f"- **Tempo:** solo i tratti di lavoro (sotto {pace_str(1000 / BLOCK_PACE_LIMIT_SEC_KM)}) a passo stabile e con la FC entro +/-{HR_BAND} bpm dalla soglia; ogni campione e riportato alla FC di soglia "
         f"con la relazione lineare velocita-%FCR. Con un blocco continuo di almeno {CONTINUOUS_BLOCK_MINUTES}' la seduta conta come \"Tempo continuo\".",
         f"- **Gare** (almeno {RACE_MIN_MINUTES}'): FC media dal 10' alla fine (Friel; in gara 2-3 battiti piu alta che in un test) e passo di soglia "
-        "all'88% del VDOT (Daniels). Daniels presuppone una gara a tutta: una gara piu lenta dei Tempo delle "
-        f"{RACE_REFERENCE_DAYS} giorni precedenti e marcata \"{RACE_LOWER_BOUND}\" (puo alzare la soglia, mai abbassarla).",
+        "= passo medio sui dati Garmin (distanza GPS / tempo dell'orologio), la stessa lettura di Friel che da la FC di soglia. "
+        "Il VDOT (Daniels) e riportato solo come informazione: presuppone una gara a tutta. I tempi ufficiali non si usano.",
         "- **Nessuna modifica automatica:** le fasce del piano si aggiornano dopo una gara o quando la stima si sposta di 5-10\" in modo stabile su 2-3 sedute.",
         "",
         *(markdown_table(headers, rows) if rows else ["Nessuna seduta utilizzabile finora."]),
@@ -247,7 +233,6 @@ def main() -> int:
         extra = f", FC Friel {r['hr']:.0f}, VDOT {r['vdot']:.1f}" if r["hr"] is not None else ""
         print(f"{r['date']} {name}: {r['source']} -> soglia {pace_str(r['speed'])} ({r['minutes']:.0f} min{extra})")
 
-    flag_non_maximal_races(results)
     write_log(Path(args.output), results, hr_thr)
     print(f"Logged to {args.output}")
     return 0

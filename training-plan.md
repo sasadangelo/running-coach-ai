@@ -3,7 +3,7 @@
 ## Riepilogo Obiettivi
 
 - **Gara 1**: Roma 5K — **8 novembre 2026** (domenica)
-  - Obiettivo: correrla tutta di corsa continua, senza fermarsi — ✅ **raggiunto**: 32:28 sull'orologio su 5.17 km GPS, **6:18/km**, VDOT 29.2 (ufficiale 32:58 dallo sparo sui 5.00 km, solo come nota), progressiva con 4 km a soglia, RPE 3. Per passo e VDOT valgono distanza GPS e tempo dell'orologio; la soglia ricavata dal VDOT (6:33) è un minimo, perché la gara non era a tutta
+  - Obiettivo: correrla tutta di corsa continua, senza fermarsi — ✅ **raggiunto**: 32:28 sull'orologio su 5.17 km GPS, **6:18/km**, VDOT 29.2 (ufficiale 32:58 dallo sparo sui 5.00 km, solo come nota), progressiva con 4 km a soglia, RPE 3. Per passo, soglia e VDOT valgono distanza GPS e tempo dell'orologio: la soglia di gara è il passo medio Garmin (6:18/km), come la FC di soglia è la FC media (Friel)
 - **Gara 2**: Best Woman 10K — **6 dicembre 2026** (domenica)
   - Obiettivo (rivisto l'8 novembre): **gara a tempo, 1h02-1h04** (6:12-6:24/km, VDOT del test 30-31), tutta di corsa. Parziali da fissare dopo S13
 - **Giorni di allenamento**: 3 giorni/settimana, tutti e 3 sessioni di qualità (ripetute, tempo, lungo) — nessuna corsa lenta di riempimento

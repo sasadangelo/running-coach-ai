@@ -49,6 +49,7 @@ Pick the case that fits the athlete. When several sources exist, the priority is
 - Take a race run **all-out** in the last ~6-8 weeks, on the athlete's own watch (GPS distance and run time; the official time is only a note).
 - Find the VDOT in table A1 (interpolate between rows) and read the paces from table A2. The VDOT formula is also `vdot()` in `.claude/skills/garmin-sync/scripts/calculate_threshold.py`.
 - An old race (months ago, or after a break) gives a ceiling, not the current level: start a VDOT point or two lower and confirm with a threshold test.
+- **Threshold pace from a race** (athlete's decision, 2026-11-18): a continuous race of ~30-60 minutes gives the threshold directly, as the Garmin average pace (GPS distance / watch time), the same Friel reading that gives the threshold HR as the average HR. Don't derive it from the VDOT (it assumes an all-out race: the Rome 5K at 6:18/km would become a 6:33 threshold), don't scale race samples to the threshold HR (race HR drift makes it look slower), and never use the official time in any pace calculation.
 
 ### c. Runs regularly, recorded sessions but no recent race
 - Sync the sessions with the `garmin-sync` skill.

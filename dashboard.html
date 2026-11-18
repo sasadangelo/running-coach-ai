@@ -3,671 +3,678 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Allenamento — Roma 5K + Best Woman 10K</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>Dashboard del piano</title>
 <style>
-    body {
-        background: #0a0a0a;
-        color: #33ff33;
-        font-family: 'Courier New', monospace;
-    }
-    .card {
-        background: #0f0f0f;
-        border: 2px solid #33ff33;
-        box-shadow: 0 0 10px rgba(51, 255, 51, 0.3);
-    }
-    .accent { color: #66ff66; }
-    .warning { color: #ffff33; }
-    .success { color: #33ff33; }
-    .muted { color: #5aaa5a; }
-    pre { font-family: 'Courier New', monospace; white-space: pre-wrap; }
-    h1, h2 { text-shadow: 0 0 6px rgba(51,255,51,0.4); }
-    svg g:hover path, svg g:hover rect[stroke] { filter: brightness(1.25); }
+:root {
+  color-scheme: light;
+  --page: #f4f3ef;
+  --surface-1: #fcfcfb;
+  --border: #e2e1dc;
+  --grid: #ebeae6;
+  --axis: #a3a29c;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #77766f;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  --neutral: #b9b8b1;
+  --ref: #77766f;
+  --good: #0ca30c; --warning: #fab219; --critical: #d03b3b;
+  --good-text: #006300;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #111110;
+    --surface-1: #1a1a19;
+    --border: #2e2e2b;
+    --grid: #2a2a28;
+    --axis: #5d5c56;
+    --text-primary: #f0efec;
+    --text-secondary: #c3c2b7;
+    --text-muted: #96958d;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+    --neutral: #55544f;
+    --ref: #96958d;
+    --good-text: #3fbf3f;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #111110;
+  --surface-1: #1a1a19;
+  --border: #2e2e2b;
+  --grid: #2a2a28;
+  --axis: #5d5c56;
+  --text-primary: #f0efec;
+  --text-secondary: #c3c2b7;
+  --text-muted: #96958d;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+  --neutral: #55544f;
+  --ref: #96958d;
+  --good-text: #3fbf3f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text-primary);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header { margin-bottom: 20px; }
+header a { color: var(--text-secondary); font-size: 13px; }
+h1 { font-size: 26px; margin: 6px 0 4px; letter-spacing: -0.01em; }
+.sub { color: var(--text-secondary); margin: 0; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 14px 0 0; font-size: 13px; }
+nav.toc a { color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0 28px; }
+.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .k { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.tile .v { font-size: 28px; font-weight: 650; margin-top: 2px; font-variant-numeric: tabular-nums; }
+.tile .d { font-size: 12.5px; color: var(--text-secondary); }
+.tile .tag { display: inline-block; font-size: 11px; color: var(--text-muted); margin-left: 4px; }
+section { margin-top: 36px; }
+h2 { font-size: 19px; margin: 0 0 4px; }
+.lead { color: var(--text-secondary); margin: 0 0 14px; max-width: 75ch; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 14px; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px 10px; min-width: 0; }
+.card h3 { font-size: 14px; margin: 0; }
+.card .hint { font-size: 12.5px; color: var(--text-secondary); margin: 2px 0 8px; }
+.card .read { font-size: 13px; color: var(--text-primary); border-top: 1px solid var(--grid); margin-top: 6px; padding-top: 8px; }
+.badge { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 99px; border: 1px solid var(--border); color: var(--text-secondary); margin-left: 6px; vertical-align: 1px; }
+.badge.decide { color: var(--good-text); border-color: currentColor; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--text-secondary); margin: 0 0 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.legend i.dot { border-radius: 50%; }
+.legend i.hollow { background: transparent !important; border: 2px solid var(--text-secondary); border-radius: 50%; }
+.legend i.line { height: 0; width: 16px; border-top: 2px dashed var(--ref); border-radius: 0; }
+.chart { width: 100%; position: relative; }
+.chart svg { display: block; overflow: visible; }
+.chart text { fill: var(--text-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.tw { overflow-x: auto; margin-top: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:first-child, td:first-child, th.l, td.l { text-align: left; }
+th { color: var(--text-secondary); font-weight: 600; font-size: 12px; }
+details { margin-top: 8px; }
+summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
+.foot { font-size: 12.5px; color: var(--text-muted); margin-top: 6px; }
+#tip {
+  position: fixed; pointer-events: none; z-index: 10; max-width: 260px;
+  background: var(--surface-1); color: var(--text-primary);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px;
+  font-size: 12.5px; line-height: 1.45; box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+#tip b { font-weight: 650; }
+#tip .m { color: var(--text-secondary); }
+
+a { color: var(--s1); }
+.hl { font-weight: 650; color: var(--text-primary); }
+.ok, .ok-h { color: var(--good-text); } .ok-h, .warn-h { font-weight: 650; }
+.warn, .warn-h, .part { color: var(--s2); }
+.ko { color: var(--critical); font-weight: 700; }
+.todo, .mut { color: var(--text-muted); }
+.alert { border-left: 3px solid var(--warning); background: var(--surface-1); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 13px; }
+.bar { display: inline-block; width: 90px; height: 7px; background: var(--grid); border-radius: 4px; vertical-align: 1px; margin-left: 6px; overflow: hidden; }
+.bar i { display: block; height: 100%; border-radius: 4px; background: var(--s1); }
+.bar i.dim { opacity: .45; } .bar i.b2 { background: var(--s5); } .bar i.b3 { background: var(--s3); }
+.coach p { margin: 0 0 12px; max-width: 80ch; } .coach .hl, .coach .warn-h, .coach .ok-h { display: inline-block; margin-bottom: 2px; }
+.next ul { margin: 6px 0 0; padding-left: 20px; } .next li { margin: 4px 0; color: var(--text-secondary); }
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 6px 18px; font-size: 13.5px; }
+.kv div span:first-child { color: var(--text-secondary); }
+td.l:not(:first-child) { white-space: normal; min-width: 160px; }
+.radar { max-width: 480px; margin: 0 auto; }
+header .nav-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
 </style>
 </head>
-<body class="p-4 md:p-8 min-h-screen">
-<div class="max-w-6xl mx-auto">
+<body>
+<div class="wrap">
+  <header>
+    <div class="nav-links"><a href="progressi.html">Progressi per tipo di seduta →</a></div>
+    <h1>Dashboard del piano</h1>
+    <p class="sub">Roma 5K (8 nov) + Best Woman 10K (6 dic) · Settimana 11 di 14 completata, S12 in corso · aggiornato al 18 novembre 2026</p>
+    <nav class="toc">
+      <a href="#piano">Piano</a><a href="#volume">Volume</a><a href="#sedute">Sedute</a><a href="#ritmi">Ritmi</a><a href="#resistenza">Resistenza</a>
+      <a href="#potenza">Potenza</a><a href="#rpe">RPE</a><a href="#profilo">Profilo mensile</a><a href="#carico">Carico</a><a href="#acwr">Rischio</a>
+      <a href="#coach">Commento</a><a href="#prossime">Prossime sedute</a>
+    </nav>
+  </header>
 
-    <!-- Header -->
-    <header class="card p-6 rounded-lg mb-6">
-        <h1 class="text-3xl md:text-4xl font-bold mb-2">DASHBOARD ALLENAMENTO</h1>
-        <p class="text-lg md:text-xl success">✓ Gara 1: Roma 5K — 8 novembre 2026 — corsa tutta, 32:28 sull'orologio (5.17 km GPS, 6:18/km), ufficiale 32:58</p>
-        <p class="text-lg md:text-xl accent">🎯 Gara 2: Best Woman 10K — 6 dicembre 2026 — gara a tempo, 1h02-1h04 (6:12-6:24/km)</p>
-        <p class="text-base md:text-lg muted mt-3">Settimana 10 di 14 completata &middot; S11 in corso (recupero breve, 9-15 novembre) &middot; aggiornato al 10 novembre</p>
-    </header>
+  <div class="tiles"><div class="tile"><div class="k">Roma 5K</div><div class="v">32:28<span class='tag'>✓</span></div><div class="d">8/11 · 6:18/km GPS · tutta di corsa</div></div><div class="tile"><div class="k">Best Woman 10K</div><div class="v">18 gg</div><div class="d">6/12 · obiettivo 1h02-1h04</div></div><div class="tile"><div class="k">Settimana</div><div class="v">12 / 14</div><div class="d">S11 completata · S12 in corso</div></div><div class="tile"><div class="k">Sedute S1-S11</div><div class="v">97%</div><div class="d">31/32 + 1 interrotta</div></div><div class="tile"><div class="k">Volume S1-S11</div><div class="v">109%</div><div class="d">157.6 / 144.3 km</div></div><div class="tile"><div class="k">Carico oggi</div><div class="v">1.22</div><div class="d">ACWR basso rischio · CTL 17.7 · TSB -7.1</div></div><div class="tile"><div class="k">Soglia</div><div class="v">285 W</div><div class="d">6:15/km · FC 165 · 3.7 W/kg</div></div></div>
 
-    <div class="space-y-6">
-
-        <!-- Plan Overview -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">PANORAMICA PIANO</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg">
-                <div><span class="muted">Durata piano:</span> <span class="accent">14 settimane</span> (10 verso 5K + 4 verso 10K)</div>
-                <div><span class="muted">Settimane completate:</span> <span class="accent">10 / 14</span> (S11 dal 9 novembre)</div>
-                <div><span class="muted">Roma 5K:</span> <span class="success">✓ corsa l'8/11</span> <span class="muted text-sm">(VDOT 29.2 su GPS)</span></div>
-                <div><span class="muted">Giorni a Best Woman 10K:</span> <span class="accent">26 giorni</span></div>
-                <div><span class="muted">FC max / riposo:</span> <span class="accent">185 / 59 bpm</span> (Karvonen, riposo aggiornato il 10/11; FC di soglia ~165, passo di soglia ~6:15/km, confermati dal test del 29/10 e dalla gara)</div>
-                <div><span class="muted">Volume totale pianificato:</span> <span class="accent">195.40 km</span> (S1-S14, gare incluse)</div>
-            </div>
-            <p class="muted text-sm mt-4">Revisione dell'11 ottobre: da S9 il lungo riprende a crescere fino a 8.5 km (S13) e il Tempo diventa un blocco continuo crescente (2000 → 3500 m). Condizione: se la fascia plantare sx torna a farsi sentire al mattino, si torna ai volumi originali. Revisione dell'8 novembre: la 10K diventa una gara a tempo (1h02-1h04), e da S11 il Tempo si sposta al venerdì.</p>
+  <section id="piano">
+    <h2>Piano <span class="badge decide">in linea con gli obiettivi</span></h2>
+    <p class="lead">14 settimane: 10 verso la 5K (corsa tutta, obiettivo raggiunto), 4 verso la 10K a tempo, 1h02-1h04 (6:12-6:24/km).</p>
+    <div class="grid2" style="grid-template-columns:1fr">
+      <div class="card">
+        <h3>Situazione</h3>
+        <div class="kv" style="margin-top:8px">
+          <div><span>FC max / riposo:</span> <b>185 / 57.7 bpm</b> (Karvonen, riposo al 17/11)</div>
+          <div><span>Soglia:</span> <b>~6:15/km · FC ~165</b> (test 29/10 e gara)</div>
+          <div><span>Potenza di soglia:</span> <b>285 W</b> (dal polso, stimata dai Tempo)</div>
+          <div><span>Volume totale pianificato:</span> <b>194.40 km</b> (S1-S14, gare incluse)</div>
+          <div><span>Media settimanale:</span> <b>14.33 km</b> (S1-S11)</div>
+          <div><span>Settimana più intensa:</span> <b>S9 — 18.59 km</b></div>
         </div>
+        <p class="read">Revisione dell'11 ottobre: da S9 il lungo riprende a crescere fino a 8.5 km (S13) e il Tempo diventa un blocco continuo crescente (2000 → 3500 m). Condizione: se la fascia plantare sx torna a farsi sentire al mattino, si torna ai volumi originali. Revisione dell'8 novembre: la 10K diventa una gara a tempo (1h02-1h04), e da S11 il Tempo si sposta al venerdì. Revisione del 13 novembre, dopo il Tempo interrotto: la progressione del Tempo slitta di una settimana (2500 m in S12, 3000 m in S13, il 3500 m esce dal piano) e nella settimana dopo una gara niente blocchi "più lunghi di sempre".</p>
+      </div>
+      <div class="card">
+        <h3>Fasi</h3>
+        <div class="tw"><table><thead><tr><th class="l">Fase</th><th class="l">Settimane</th><th class="l">Stato</th><th class="l">Note</th></tr></thead><tbody><tr><td class="l">A — Ripresa</td><td class="l">S1-S3</td><td class="l"><span class="ok">✓</span> completata</td><td class="l"></td></tr><tr><td class="l">B — Scarico</td><td class="l">S4</td><td class="l"><span class="ok">✓</span> completata</td><td class="l"></td></tr><tr><td class="l">C — Sviluppo</td><td class="l">S5-S7</td><td class="l"><span class="ok">✓</span> completata</td><td class="l"></td></tr><tr><td class="l">D — Scarico</td><td class="l">S8</td><td class="l"><span class="ok">✓</span> completata</td><td class="l">+ test di forza e mobilità</td></tr><tr><td class="l">E — Test/Carico</td><td class="l">S9</td><td class="l"><span class="ok">✓</span> completata</td><td class="l">test Tempo 2000 m superato</td></tr><tr><td class="l">F — Scarico gara 1</td><td class="l">S10</td><td class="l"><span class="ok">✓</span> completata</td><td class="l">Roma 5K corsa tutta, 32:28 (GPS)</td></tr><tr><td class="l">G — Recupero</td><td class="l">S11</td><td class="l"><span class="ok">✓</span> completata</td><td class="l">Tempo interrotto a 1.7 km, lungo 6.5 km ✓</td></tr><tr><td class="l">H — Sviluppo 10K</td><td class="l">S12-S13</td><td class="l"><span class="part">◐</span> in corso</td><td class="l">ripetute ✓, poi Tempo 2500 m e lungo 7.5 km</td></tr><tr><td class="l">I — Scarico gara 2</td><td class="l">S14</td><td class="l"><span class="todo">○</span> da fare</td><td class="l">Best Woman 10K, 6 dicembre</td></tr></tbody></table></div>
+      </div>
+    </div>
+    <p class="alert">⚠ Punto da monitorare: fascia plantare sx. Da far vedere (medico sportivo o fisioterapista) prima dei carichi della 10K: S12-S13 sono le settimane più voluminose del piano. Il 13/11 gambe e fascia stavano bene.</p><p class="alert">⚠ Sonno: dal 12 al 16/11 cinque notti di fila sotto le 7 ore (5h41 il 14), e il 16/11 HRV a 39, sotto la fascia. Il 17/11 è tornato tutto nella norma (HRV 46, notte da 7h27). Prima del Tempo di venerdì: a letto entro le 22:30 giovedì, e controllo dei segnali di prontezza al mattino.</p>
+  </section>
 
-        <!-- Phase Progress -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">PROGRESSO FASI</h2>
-            <pre class="text-sm md:text-base">
-Fase A — Ripresa       (S1-S3)   <span class="success">✓✓✓ COMPLETATA</span>
-Fase B — Scarico       (S4)      <span class="success">✓   COMPLETATA</span>
-Fase C — Sviluppo      (S5-S7)   <span class="success">✓✓✓ COMPLETATA</span>
-Fase D — Scarico       (S8)      <span class="success">✓   COMPLETATA</span> + test di forza e mobilità
-Fase E — Test/Carico   (S9)      <span class="success">✓   COMPLETATA</span> test Tempo 2000 m superato
-Fase F — Scarico Gara1 (S10)     <span class="success">✓   COMPLETATA</span> Roma 5K corsa tutta, 32:28 (GPS)
-Fase G — Recupero      (S11)     <span class="accent">◐</span>   in corso: facile ✓, poi Tempo 2500 m e lungo 6.5 km
-Fase H — Sviluppo 10K  (S12-S13) ○○
-Fase I — Scarico Gara2 (S14)     ○   → <span class="warning">Best Woman 10K, 6 dic</span>
-            </pre>
-        </div>
-
-        <!-- On Track Status -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">STATO: <span class="success">→ IN ANTICIPO SUGLI OBIETTIVI ✓</span></h2>
-            <div class="space-y-3">
-                <div>
-                    <div class="flex justify-between mb-1"><span>Completamento sedute (S1-S10)</span><span class="accent">100%</span></div>
-                    <pre class="text-sm">[████████████████████] 29/29 sedute pianificate (+ S11: 1/3 finora)</pre>
-                </div>
-                <div>
-                    <div class="flex justify-between mb-1"><span>Volume vs piano (S1-S10)</span><span class="accent">111%</span></div>
-                    <pre class="text-sm">[████████████████████] 143.66 / 129.30 km</pre>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg mt-3">
-                    <div><span class="muted">Media settimanale:</span> <span class="accent">14.37 km/sett</span> <span class="muted text-sm">(S1-S10, settimana di gara inclusa)</span></div>
-                    <div><span class="muted">Settimana più intensa:</span> <span class="accent">S9 — 18.59 km</span></div>
-                </div>
-            </div>
-            <p class="mt-4 warning text-sm">⚠ Punto da monitorare: fascia plantare sx. Da far vedere (medico sportivo o fisioterapista) prima dei carichi della 10K: S12-S13 sono le settimane più voluminose del piano.</p>
-            <p class="mt-2 warning text-sm">⚠ 9-10 novembre: FC a riposo 63 e 61, HRV 37 e 43 (sotto la fascia), notte del 9 da 5h44. È la giornata in ospedale per l'intervento di tuo figlio: stress, non allenamento. Prima del Tempo di venerdì si ricontrollano i segnali di prontezza.</p>
-        </div>
-
-        <!-- Weekly Mileage -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">CHILOMETRAGGIO SETTIMANALE</h2>
-            <p class="muted text-sm mb-3">Progressione del volume: barre piene = km reali, contorno tratteggiato = km pianificati (gare incluse). Passa sopra una settimana per i dettagli.</p>
-            <svg viewBox="0 0 900 330" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Volume settimanale reale e pianificato, da fine agosto alla Best Woman 10K">
-<line x1="45" y1="270.0" x2="885" y2="270.0" stroke="#1a7a1a" stroke-width="1"/>
-<text x="38" y="274.0" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">0</text>
-<line x1="45" y1="207.5" x2="885" y2="207.5" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="211.5" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">5</text>
-<line x1="45" y1="145.0" x2="885" y2="145.0" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="149.0" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">10</text>
-<line x1="45" y1="82.5" x2="885" y2="82.5" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="86.5" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">15</text>
-<line x1="45" y1="20.0" x2="885" y2="20.0" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="24.0" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">20</text>
-<line x1="661.0" y1="14" x2="661.0" y2="270" stroke="#5aaa5a" stroke-width="1" stroke-dasharray="2,4"/>
-<text x="666.0" y="24" fill="#5aaa5a" font-family="Courier New" font-size="11">oggi → piano</text>
+  <section id="volume">
+    <h2>Volume settimanale</h2>
+    <p class="lead">Barre piene = km reali, contorno tratteggiato = km pianificati (gare incluse). Passa sopra una settimana per i dettagli.</p>
+    <div class="card">
+      <div class="legend"><span><i style="background:var(--s1)"></i>reale</span><span><i style="background:transparent;border:1.5px dashed var(--axis)"></i>pianificato</span></div>
+      <div class="chart"><svg viewBox="0 0 900 330" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Volume settimanale reale e pianificato, da fine agosto alla Best Woman 10K">
+<line x1="45" y1="270.0" x2="885" y2="270.0" stroke-width="1" style="stroke:var(--grid)"/>
+<text x="38" y="274.0" text-anchor="end" font-size="11" style="fill:var(--text-muted)">0</text>
+<line x1="45" y1="207.5" x2="885" y2="207.5" stroke-width="0.5" stroke-dasharray="3,3" style="stroke:var(--grid)"/>
+<text x="38" y="211.5" text-anchor="end" font-size="11" style="fill:var(--text-muted)">5</text>
+<line x1="45" y1="145.0" x2="885" y2="145.0" stroke-width="0.5" stroke-dasharray="3,3" style="stroke:var(--grid)"/>
+<text x="38" y="149.0" text-anchor="end" font-size="11" style="fill:var(--text-muted)">10</text>
+<line x1="45" y1="82.5" x2="885" y2="82.5" stroke-width="0.5" stroke-dasharray="3,3" style="stroke:var(--grid)"/>
+<text x="38" y="86.5" text-anchor="end" font-size="11" style="fill:var(--text-muted)">15</text>
+<line x1="45" y1="20.0" x2="885" y2="20.0" stroke-width="0.5" stroke-dasharray="3,3" style="stroke:var(--grid)"/>
+<text x="38" y="24.0" text-anchor="end" font-size="11" style="fill:var(--text-muted)">20</text>
+<line x1="717.0" y1="14" x2="717.0" y2="270" stroke-width="1" stroke-dasharray="2,4" style="stroke:var(--axis)"/>
+<text x="722.0" y="24" font-size="11" style="fill:var(--text-muted)">oggi</text>
 <g>
 <title>Pre (24-30 ago) · reale 9.65 km · ripresa</title>
 <rect x="45.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M55.6,270 L55.6,153.4 Q55.6,149.4 59.6,149.4 L86.4,149.4 Q90.4,149.4 90.4,153.4 L90.4,270 Z" fill="#33ff33"/>
-<text x="73.0" y="143.4" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">9.7</text>
-<text x="73.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">Pre</text>
-<text x="73.0" y="300" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="9">ripresa</text>
+<path d="M55.6,270 L55.6,153.4 Q55.6,149.4 59.6,149.4 L86.4,149.4 Q90.4,149.4 90.4,153.4 L90.4,270 Z" style="fill:var(--s1)"/>
+<text x="73.0" y="143.4" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">9.7</text>
+<text x="73.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">Pre</text>
+<text x="73.0" y="300" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">ripresa</text>
 </g>
 <g>
 <title>S1 (31 ago-6 set) · reale 12.00 km · piano 9.00 km · 133% del piano</title>
 <rect x="101.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M111.6,270 L111.6,124.0 Q111.6,120.0 115.6,120.0 L142.4,120.0 Q146.4,120.0 146.4,124.0 L146.4,270 Z" fill="#33ff33"/>
-<text x="129.0" y="114.0" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">12.0</text>
-<rect x="111.6" y="157.5" width="34.7" height="112.5" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="129.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S1</text>
+<path d="M111.6,270 L111.6,124.0 Q111.6,120.0 115.6,120.0 L142.4,120.0 Q146.4,120.0 146.4,124.0 L146.4,270 Z" style="fill:var(--s1)"/>
+<text x="129.0" y="114.0" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">12.0</text>
+<rect x="111.6" y="157.5" width="34.7" height="112.5" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="129.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S1</text>
 </g>
 <g>
 <title>S2 (7-13 set) · reale 11.34 km · piano 12.40 km · 91% del piano</title>
 <rect x="157.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M167.6,270 L167.6,132.2 Q167.6,128.2 171.6,128.2 L198.4,128.2 Q202.4,128.2 202.4,132.2 L202.4,270 Z" fill="#33ff33"/>
-<text x="185.0" y="109.0" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">11.3</text>
-<rect x="167.6" y="115.0" width="34.7" height="155.0" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="185.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S2</text>
+<path d="M167.6,270 L167.6,132.2 Q167.6,128.2 171.6,128.2 L198.4,128.2 Q202.4,128.2 202.4,132.2 L202.4,270 Z" style="fill:var(--s1)"/>
+<text x="185.0" y="109.0" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">11.3</text>
+<rect x="167.6" y="115.0" width="34.7" height="155.0" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="185.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S2</text>
 </g>
 <g>
 <title>S3 (14-20 set) · reale 14.38 km · piano 13.00 km · 111% del piano</title>
 <rect x="213.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M223.6,270 L223.6,94.2 Q223.6,90.2 227.6,90.2 L254.4,90.2 Q258.4,90.2 258.4,94.2 L258.4,270 Z" fill="#33ff33"/>
-<text x="241.0" y="84.2" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">14.4</text>
-<rect x="223.6" y="107.5" width="34.7" height="162.5" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="241.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S3</text>
+<path d="M223.6,270 L223.6,94.2 Q223.6,90.2 227.6,90.2 L254.4,90.2 Q258.4,90.2 258.4,94.2 L258.4,270 Z" style="fill:var(--s1)"/>
+<text x="241.0" y="84.2" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">14.4</text>
+<rect x="223.6" y="107.5" width="34.7" height="162.5" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="241.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S3</text>
 </g>
 <g>
 <title>S4 (21-27 set) · reale 11.40 km · piano 10.60 km · 108% del piano · scarico</title>
 <rect x="269.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M279.6,270 L279.6,131.5 Q279.6,127.5 283.6,127.5 L310.4,127.5 Q314.4,127.5 314.4,131.5 L314.4,270 Z" fill="#33ff33"/>
-<text x="297.0" y="121.5" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">11.4</text>
-<rect x="279.6" y="137.5" width="34.7" height="132.5" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="297.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S4</text>
-<text x="297.0" y="300" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="9">scarico</text>
+<path d="M279.6,270 L279.6,131.5 Q279.6,127.5 283.6,127.5 L310.4,127.5 Q314.4,127.5 314.4,131.5 L314.4,270 Z" style="fill:var(--s1)"/>
+<text x="297.0" y="121.5" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">11.4</text>
+<rect x="279.6" y="137.5" width="34.7" height="132.5" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="297.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S4</text>
+<text x="297.0" y="300" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">scarico</text>
 </g>
 <g>
 <title>S5 (28 set-4 ott) · reale 16.16 km · piano 14.20 km · 114% del piano</title>
 <rect x="325.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M335.6,270 L335.6,72.0 Q335.6,68.0 339.6,68.0 L366.4,68.0 Q370.4,68.0 370.4,72.0 L370.4,270 Z" fill="#33ff33"/>
-<text x="353.0" y="62.0" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">16.2</text>
-<rect x="335.6" y="92.5" width="34.7" height="177.5" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="353.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S5</text>
+<path d="M335.6,270 L335.6,72.0 Q335.6,68.0 339.6,68.0 L366.4,68.0 Q370.4,68.0 370.4,72.0 L370.4,270 Z" style="fill:var(--s1)"/>
+<text x="353.0" y="62.0" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">16.2</text>
+<rect x="335.6" y="92.5" width="34.7" height="177.5" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="353.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S5</text>
 </g>
 <g>
 <title>S6 (5-11 ott) · reale 17.50 km · piano 15.30 km · 114% del piano</title>
 <rect x="381.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M391.6,270 L391.6,55.2 Q391.6,51.2 395.6,51.2 L422.4,51.2 Q426.4,51.2 426.4,55.2 L426.4,270 Z" fill="#33ff33"/>
-<text x="409.0" y="45.2" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">17.5</text>
-<rect x="391.6" y="78.8" width="34.7" height="191.2" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="409.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S6</text>
+<path d="M391.6,270 L391.6,55.2 Q391.6,51.2 395.6,51.2 L422.4,51.2 Q426.4,51.2 426.4,55.2 L426.4,270 Z" style="fill:var(--s1)"/>
+<text x="409.0" y="45.2" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">17.5</text>
+<rect x="391.6" y="78.8" width="34.7" height="191.2" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="409.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S6</text>
 </g>
 <g>
 <title>S7 (12-18 ott) · reale 18.05 km · piano 16.80 km · 107% del piano</title>
 <rect x="437.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M447.6,270 L447.6,48.4 Q447.6,44.4 451.6,44.4 L478.4,44.4 Q482.4,44.4 482.4,48.4 L482.4,270 Z" fill="#33ff33"/>
-<text x="465.0" y="38.4" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">18.1</text>
-<rect x="447.6" y="60.0" width="34.7" height="210.0" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="465.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S7</text>
+<path d="M447.6,270 L447.6,48.4 Q447.6,44.4 451.6,44.4 L478.4,44.4 Q482.4,44.4 482.4,48.4 L482.4,270 Z" style="fill:var(--s1)"/>
+<text x="465.0" y="38.4" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">18.1</text>
+<rect x="447.6" y="60.0" width="34.7" height="210.0" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="465.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S7</text>
 </g>
 <g>
 <title>S8 (19-25 ott) · reale 13.58 km · piano 12.60 km · 108% del piano · scarico</title>
 <rect x="493.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M503.6,270 L503.6,104.2 Q503.6,100.2 507.6,100.2 L534.4,100.2 Q538.4,100.2 538.4,104.2 L538.4,270 Z" fill="#33ff33"/>
-<text x="521.0" y="94.2" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">13.6</text>
-<rect x="503.6" y="112.5" width="34.7" height="157.5" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="521.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S8</text>
-<text x="521.0" y="300" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="9">scarico</text>
+<path d="M503.6,270 L503.6,104.2 Q503.6,100.2 507.6,100.2 L534.4,100.2 Q538.4,100.2 538.4,104.2 L538.4,270 Z" style="fill:var(--s1)"/>
+<text x="521.0" y="94.2" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">13.6</text>
+<rect x="503.6" y="112.5" width="34.7" height="157.5" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="521.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S8</text>
+<text x="521.0" y="300" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">scarico</text>
 </g>
 <g>
 <title>S9 (26 ott-1 nov) · reale 18.59 km · piano 17.00 km · 109% del piano</title>
 <rect x="549.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M559.6,270 L559.6,41.6 Q559.6,37.6 563.6,37.6 L590.4,37.6 Q594.4,37.6 594.4,41.6 L594.4,270 Z" fill="#33ff33"/>
-<text x="577.0" y="31.6" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">18.6</text>
-<rect x="559.6" y="57.5" width="34.7" height="212.5" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="577.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S9</text>
+<path d="M559.6,270 L559.6,41.6 Q559.6,37.6 563.6,37.6 L590.4,37.6 Q594.4,37.6 594.4,41.6 L594.4,270 Z" style="fill:var(--s1)"/>
+<text x="577.0" y="31.6" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">18.6</text>
+<rect x="559.6" y="57.5" width="34.7" height="212.5" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="577.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S9</text>
 </g>
 <g>
 <title>S10 (2-8 nov) · reale 10.66 km · piano 8.40 km · 127% del piano · Roma 5K</title>
 <rect x="605.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M615.6,270 L615.6,140.8 Q615.6,136.8 619.6,136.8 L646.4,136.8 Q650.4,136.8 650.4,140.8 L650.4,270 Z" fill="#33ff33"/>
-<text x="633.0" y="130.8" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">10.7</text>
-<rect x="615.6" y="165.0" width="34.7" height="105.0" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="633.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S10</text>
-<text x="633.0" y="300" text-anchor="middle" fill="#ffff33" font-family="Courier New" font-size="11">🏁5K</text>
+<path d="M615.6,270 L615.6,140.8 Q615.6,136.8 619.6,136.8 L646.4,136.8 Q650.4,136.8 650.4,140.8 L650.4,270 Z" style="fill:var(--s1)"/>
+<text x="633.0" y="130.8" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">10.7</text>
+<rect x="615.6" y="165.0" width="34.7" height="105.0" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="633.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S10</text>
+<text x="633.0" y="300" text-anchor="middle" font-size="11" style="fill:var(--s2)">🏁5K</text>
 </g>
 <g>
-<title>S11 (9-15 nov) · in corso · reale 4.01 km al 10/11 · piano 15.00 km · recupero</title>
+<title>S11 (9-15 nov) · reale 13.92 km · piano 15.00 km · 93% del piano · recupero</title>
 <rect x="661.0" y="20" width="56.0" height="250" fill="transparent"/>
-<path d="M671.6,270 L671.6,223.9 Q671.6,219.9 675.6,219.9 L702.4,219.9 Q706.4,219.9 706.4,223.9 L706.4,270 Z" fill="#33ff33" opacity="0.6"/>
-<text x="689.0" y="213.9" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="11">4.0</text>
-<rect x="671.6" y="82.5" width="34.7" height="187.5" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="689.0" y="76.5" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">15.0</text>
-<text x="689.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S11</text>
-<text x="689.0" y="300" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="9">in corso</text>
+<path d="M671.6,270 L671.6,100.0 Q671.6,96.0 675.6,96.0 L702.4,96.0 Q706.4,96.0 706.4,100.0 L706.4,270 Z" style="fill:var(--s1)"/>
+<text x="689.0" y="76.5" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">13.9</text>
+<rect x="671.6" y="82.5" width="34.7" height="187.5" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="689.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S11</text>
+<text x="689.0" y="300" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">recupero</text>
 </g>
 <g>
-<title>S12 (16-22 nov) · piano 17.70 km</title>
+<title>S12 (16-22 nov) · in corso · reale 6.40 km al 18/11 · piano 17.20 km</title>
 <rect x="717.0" y="20" width="56.0" height="250" fill="transparent"/>
-<rect x="727.6" y="48.8" width="34.7" height="221.2" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="745.0" y="42.8" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">17.7</text>
-<text x="745.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S12</text>
+<path d="M727.6,270 L727.6,194.0 Q727.6,190.0 731.6,190.0 L758.4,190.0 Q762.4,190.0 762.4,194.0 L762.4,270 Z" opacity="0.6" style="fill:var(--s1)"/>
+<text x="745.0" y="184.0" text-anchor="middle" font-size="11" style="fill:var(--text-secondary)">6.4</text>
+<rect x="727.6" y="55.0" width="34.7" height="215.0" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="745.0" y="49.0" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">17.2</text>
+<text x="745.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S12</text>
+<text x="745.0" y="300" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">in corso</text>
 </g>
 <g>
-<title>S13 (23-29 nov) · piano 19.60 km · picco</title>
+<title>S13 (23-29 nov) · piano 19.10 km · picco</title>
 <rect x="773.0" y="20" width="56.0" height="250" fill="transparent"/>
-<rect x="783.6" y="25.0" width="34.7" height="245.0" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="801.0" y="19.0" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">19.6</text>
-<text x="801.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S13</text>
-<text x="801.0" y="300" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="9">picco</text>
+<rect x="783.6" y="31.2" width="34.7" height="238.8" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="801.0" y="25.2" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">19.1</text>
+<text x="801.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S13</text>
+<text x="801.0" y="300" text-anchor="middle" font-size="9" style="fill:var(--text-muted)">picco</text>
 </g>
 <g>
 <title>S14 (30 nov-6 dic) · piano 13.80 km · 10K</title>
 <rect x="829.0" y="20" width="56.0" height="250" fill="transparent"/>
-<rect x="839.6" y="97.5" width="34.7" height="172.5" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
-<text x="857.0" y="91.5" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">13.8</text>
-<text x="857.0" y="286" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">S14</text>
-<text x="857.0" y="300" text-anchor="middle" fill="#ffff33" font-family="Courier New" font-size="11">🏁10K</text>
+<rect x="839.6" y="97.5" width="34.7" height="172.5" fill="none" stroke-width="1.5" stroke-dasharray="4,3" rx="3" style="stroke:var(--axis)"/>
+<text x="857.0" y="91.5" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">13.8</text>
+<text x="857.0" y="286" text-anchor="middle" font-size="11" style="fill:var(--text-muted)">S14</text>
+<text x="857.0" y="300" text-anchor="middle" font-size="11" style="fill:var(--s2)">🏁10K</text>
 </g>
-<rect x="560" y="312" width="14" height="10" fill="#33ff33" rx="2"/>
-<text x="579" y="321" fill="#66ff66" font-family="Courier New" font-size="12">reale</text>
-<rect x="640" y="312" width="14" height="10" fill="none" stroke="#5aaa5a" stroke-width="1.5" stroke-dasharray="4,3" rx="2"/>
-<text x="659" y="321" fill="#5aaa5a" font-family="Courier New" font-size="12">pianificato (gare incluse)</text>
-</svg>
-            <pre class="text-sm md:text-base mt-4">
-S1  31 ago-6 set  [████████████████████] 12.00 /  9.00 km (133%)       <span class="success">✓</span>
-S2  7-13 set      [██████████████████░░] 11.34 / 12.40 km ( 91%)   -6% <span class="success">✓</span>
-S3  14-20 set     [████████████████████] 14.38 / 13.00 km (111%)  +27% <span class="success">✓</span>
-S4  21-27 set     [████████████████████] 11.40 / 10.60 km (108%)  -21% <span class="success">✓</span> scarico
-S5  28 set-4 ott  [████████████████████] 16.16 / 14.20 km (114%)  +42% <span class="success">✓</span>
-S6  5-11 ott      [████████████████████] 17.50 / 15.30 km (114%)   +8% <span class="success">✓</span>
-S7  12-18 ott     [████████████████████] 18.05 / 16.80 km (107%)   +3% <span class="success">✓</span>
-S8  19-25 ott     [████████████████████] 13.58 / 12.60 km (108%)  -25% <span class="success">✓</span> scarico
-S9  26 ott-1 nov  [████████████████████] 18.59 / 17.00 km (109%)  +37% <span class="success">✓</span>
-S10 2-8 nov       [████████████████████] 10.66 /  8.40 km (127%)  -43% <span class="success">✓</span> gara
-S11 9-15 nov      [█████░░░░░░░░░░░░░░░]  4.01 / 15.00 km  in corso      <span class="accent">→</span>
-            </pre>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg mt-4">
-                <div><span class="muted">Totale corso (S1-S10):</span> <span class="accent">143.66 km</span></div>
-                <div><span class="muted">Picco pianificato:</span> <span class="accent">S13 — 19.60 km</span></div>
-                <div><span class="muted">Da S9 a S13:</span> <span class="accent">+5%</span> <span class="muted text-sm">(18.59 → 19.60 km)</span></div>
-            </div>
-            <p class="muted text-sm mt-3">Il reale sta stabilmente sopra il piano (~110%) perché il piano conta il lavoro previsto, mentre Garmin registra anche riscaldamenti, defaticamenti, recuperi e allunghi. Il 127% di S10 viene da qui: il piano contava 3.4 km + 5 km di gara, Garmin ha registrato anche gli 1.7 km di riscaldamento e i 5.17 km GPS della gara. Il -43% è voluto, è la settimana della gara. S11 riparte a 15 km, S12-S13 salgono a 17.7 e 19.6 km: il picco di S13 supera di appena il 5% quello di S9.</p>
-        </div>
-
-        <!-- Session Completion -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">COMPLETAMENTO SEDUTE</h2>
-            <pre class="text-sm md:text-base">
-S1: [<span class="success">✓</span>] Tempo 2x1.5km     [<span class="success">✓</span>] Lungo 4km (3 stop)
-S2: [<span class="success">✓</span>] Ripetute 8x200    [<span class="success">✓</span>] Tempo 4x500m      [<span class="success">✓</span>] Lungo 4.2km continuo
-S3: [<span class="success">✓</span>] Ripetute 10x200   [<span class="success">✓</span>] Tempo 3x700m      [<span class="success">✓</span>] Lungo 4.5km continuo
-S4: [<span class="success">✓</span>] Ripetute 8x200    [<span class="success">✓</span>] Corsa facile 3.5  [<span class="success">✓</span>] Lungo 3.5km (scarico)
-S5: [<span class="success">✓</span>] Ripetute 12x200   [<span class="success">✓</span>] Tempo 3x800m      [<span class="success">✓</span>] Lungo 5.0km continuo
-S6: [<span class="success">✓</span>] Ripetute 15x200   [<span class="success">✓</span>] Tempo 2x1200m     [<span class="success">✓</span>] Lungo 5.7km continuo
-S7: [<span class="success">✓</span>] Ripetute 8x400    [<span class="success">✓</span>] Tempo 2x1500m     [<span class="success">✓</span>] Lungo 6.4km continuo
-S8: [<span class="success">✓</span>] Ripetute 6x400    [<span class="success">✓</span>] Corsa facile 4.0  [<span class="success">✓</span>] Lungo 4.2km (scarico)
-S9: [<span class="success">✓</span>] Ripetute 10x400   [<span class="success">✓</span>] Tempo 2000m cont. [<span class="success">✓</span>] Lungo 7.0km continuo
-S10:[<span class="success">✓</span>] Ripetute 4x200    [<span class="success">✓</span>] Shakeout 1.6km    [<span class="success">✓</span>] <span class="warning">Roma 5K</span> 32:28, tutta di corsa
-S11:[<span class="success">✓</span>] Corsa facile 4km  [○] Tempo 2500m (ven)  [○] Lungo 6.5km (dom)
-            </pre>
-        </div>
-
-        <!-- Pace Adherence -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">ADERENZA AI RITMI (ULTIME SETTIMANE)</h2>
-            <div class="space-y-2 text-lg">
-                <div><span class="muted">Roma 5K (progressiva, piano 6:50 → 6:10):</span> <span class="success">6:44 · 6:17 · 6:16 · 6:16 · 6:05 ✓</span> <span class="muted text-sm">(S10; FC 146 → 171 al polso, volata 5:29; soglia arrivata dal km 2: 4 km a soglia invece di 2, sempre in controllo, RPE 3)</span></div>
-                <div><span class="muted">Ripetute 200m (5:10-5:30/km):</span> <span class="success">4/4 fra 5:08 e 5:17 ✓</span> <span class="muted text-sm">(S10, 3/11; giornata "Debole", ma il ritmo c'era)</span></div>
-                <div><span class="muted">Corsa facile (7:35-8:13/km, FC ≤150):</span> <span class="success">7:53/km, FC 148 ✓</span> <span class="muted text-sm">(S11, 10/11; ai km 2-4 FC 150-152 per lo stress della giornata in ospedale)</span></div>
-                <div><span class="muted">Tempo continuo (6:10-6:30/km):</span> <span class="success">6:10 e 6:14/km ✓</span> <span class="muted text-sm">(S9, test 2000 m; FC 164-167 con fascia. Prossimo: 2500 m venerdì 13)</span></div>
-                <div><span class="muted">Lungo (7:15-7:40/km, FC ~148-150, tetto 155):</span> <span class="warning">7:16/km, FC 153 (max 159) ~</span> <span class="muted text-sm">(S9; passo giusto ma FC al tetto, gonfiata dall'estrazione. Prossimo: 6.5 km domenica 15)</span></div>
-            </div>
-            <p class="mt-4 muted text-sm">La gara conferma il test del 29/10: soglia ~6:15/km e FC di soglia ~165 (Friel dal 10' alla fine 168, al polso). Il VDOT della gara (29.2 GPS, progressiva e non a tutta) è un valore minimo e non supera quello del test (~30-31): ritmi e zone restano invariati.</p>
-        </div>
-
-        <!-- Aerobic Efficiency -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">RESISTENZA AEROBICA (DECOUPLING + ENDURANCE SCORE)</h2>
-            <pre class="text-sm md:text-base">
-            DECOUPLING                       ES
-13/09  4.2km  [██████░░░░░░░░]  3.0% <span class="success">✓</span>   [████████████░░░░░░░░]  6.2  Primi km
-20/09  4.5km  [██████████░░░░]  4.8% <span class="success">✓</span>   [██████████████░░░░░░]  7.0  Primi km
-04/10  5.0km  [████░░░░░░░░░░]  2.1% <span class="success">✓</span>   [████████████████░░░░]  7.8  Primi km
-11/10  5.7km  [█████████░░░░░]  4.3% <span class="success">✓</span>   [██████████████████░░]  8.9  <span class="accent">Base</span>
-18/10  6.4km  [███░░░░░░░░░░░]  1.3% <span class="success">✓</span>   [████████████████████] 10.0  <span class="accent">Base</span>
-25/10  4.2km  [███░░░░░░░░░░░]  1.3% <span class="success">✓</span>   [█████████████░░░░░░░]  6.3  Primi km (scarico)
-01/11  7.0km  [█░░░░░░░░░░░░░]  0.7% <span class="success">✓</span>   [████████████████████] 10.6  <span class="accent">Base</span>
-            </pre>
-            <p class="muted text-sm mt-2">Nessun lungo nuovo dal 1/11 (la settimana della gara non lo prevedeva): il prossimo punto è il 6.5 km di domenica 15. Decoupling sotto il 5% = buona tenuta aerobica. Barre ES su scala 0-10 (soglia di "Base solida" a 12). Il lungo del 1/11 è il più lungo e ha il decoupling più basso di sempre (0.7%): ES record a 10.6. Un decoupling così basso non chiede di correre più forte ma dice che si può allungare: il passo del lungo resta governato dalla FC (~148-150, tetto 155). Capacity Score (Tempo continuo ≥20'): il test da 2000 m è durato 12.6', il primo candidato resta il 3500 m di S13.</p>
-        </div>
-
-        <!-- RPE -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">COME TI SEI SENTITO (RPE)</h2>
-            <p class="muted text-sm mb-3">Il voto che dai su Garmin a fine corsa (RPE 1-10) accanto al carico misurato. sRPE = RPE × minuti (Foster): il carico "percepito", da leggere accanto al TSS. Le settimane in cui sRPE cresce più del TSS sono quelle in cui l'allenamento è sembrato più duro di quanto fosse.</p>
-            <pre class="text-sm md:text-base overflow-x-auto" style="white-space: pre;">
-         RPE medio                     sRPE    TSS
-S1  [████████░░░░░░░░░░░░] 4.0 (2/3)    286    118
-S2  [███████░░░░░░░░░░░░░] 3.3         309    110
-S3  [███████░░░░░░░░░░░░░] 3.7 (3/5)    338    139
-S4  [██████░░░░░░░░░░░░░░] 3.0 (2/3)    177    109  scarico
-S5  [██████░░░░░░░░░░░░░░] 3.2         415    155
-S6  [███████░░░░░░░░░░░░░] 3.7 (3/4)    430    169
-S7  [████████░░░░░░░░░░░░] 4.0         523    177
-S8  [█████░░░░░░░░░░░░░░░] 2.7         287    127  scarico
-S9  [███████░░░░░░░░░░░░░] 3.7         515    184
-S10 [█████░░░░░░░░░░░░░░░] 2.3 (3/4)    157    103  gara
-S11 [████░░░░░░░░░░░░░░░░] 2.0 (1/1)     63     34  in corso
-            </pre>
-            <div class="space-y-1 text-base mt-3">
-                <div><span class="muted">Per tipo di seduta:</span> <span class="accent">ripetute 4-5 · Tempo 3-4 · lungo 3 · facile/recupero 1-2</span></div>
-                <div><span class="muted">S10:</span> <span class="accent">4x200 RPE 3 (Debole) · shakeout RPE 1 (Forte) · Roma 5K RPE 3 (Forte)</span></div>
-                <div><span class="muted">S11:</span> <span class="accent">corsa facile RPE 2 (Debole)</span></div>
-            </div>
-            <p class="muted text-sm mt-3">La gara votata RPE 3, come un lungo, con 4 km a soglia: è il dato soggettivo più forte del blocco. Le due sedute "Debole" (3/11 e 10/11) hanno entrambe una causa nota: il 3/11 la stanchezza dopo il lungo e i giorni dell'estrazione, il 10/11 la giornata in ospedale.</p>
-            <p class="muted text-sm mt-3">Tra parentesi le sedute votate quando non lo sono tutte (allunghi e alcune corse di agosto-settembre senza voto); ottobre è votato al 93%. Due letture utili: il 6x400 di S8 è l'unica seduta segnata "Debole" (25/100), proprio nella settimana di HRV bassa e sonno corto; e il Tempo continuo del test, che sulla carta è la seduta più dura, è stato votato 3, come un lungo. Le scale dei voti (1-10) sono grossolane: l'RPE serve per i trend e per gli scostamenti dal solito, non per il singolo numero.</p>
-        </div>
-
-        <!-- Monthly Profile -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">PROFILO MENSILE DEL RUNNER</h2>
-            <p class="muted text-sm mb-3">Ogni metrica come indice: 100 = primo mese con dati (per la soglia, più alto = più veloce). Il radar confronta gli ultimi due mesi chiusi (settembre e ottobre): il poligono che si allarga è la qualità che migliora. Passa sopra un punto per il valore reale.</p>
-            <div class="flex justify-center">
-            <svg viewBox="0 0 480 440" class="w-full h-auto" style="max-width:520px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profilo del runner, indice 100 = primo mese">
-<polygon points="240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0" fill="none" stroke="#1a7a1a" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="243.0" y="203.0" fill="#5aaa5a" font-family="Courier New" font-size="10">80</text>
-<polygon points="240.0,155.0 275.4,169.6 290.0,205.0 275.4,240.4 240.0,255.0 204.6,240.4 190.0,205.0 204.6,169.6" fill="none" stroke="#1a7a1a" stroke-width="1.5"/>
-<text x="262.1" y="156.8" fill="#5aaa5a" font-family="Courier New" font-size="10">100</text>
-<polygon points="240.0,105.0 310.7,134.3 340.0,205.0 310.7,275.7 240.0,305.0 169.3,275.7 140.0,205.0 169.3,134.3" fill="none" stroke="#1a7a1a" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="281.3" y="110.6" fill="#5aaa5a" font-family="Courier New" font-size="10">120</text>
-<polygon points="240.0,55.0 346.1,98.9 390.0,205.0 346.1,311.1 240.0,355.0 133.9,311.1 90.0,205.0 133.9,98.9" fill="none" stroke="#1a7a1a" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="300.4" y="64.4" fill="#5aaa5a" font-family="Courier New" font-size="10">140</text>
-<line x1="240" y1="205" x2="240.0" y2="55.0" stroke="#1a7a1a" stroke-width="0.7"/>
-<text x="240.0" y="59.0" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="12">ES</text>
-<line x1="240" y1="205" x2="346.1" y2="98.9" stroke="#1a7a1a" stroke-width="0.7"/>
-<text x="346.1" y="102.9" text-anchor="start" fill="#5aaa5a" font-family="Courier New" font-size="12">CS (n/d)</text>
-<line x1="240" y1="205" x2="390.0" y2="205.0" stroke="#1a7a1a" stroke-width="0.7"/>
-<text x="390.0" y="209.0" text-anchor="start" fill="#66ff66" font-family="Courier New" font-size="12">Soglia</text>
-<line x1="240" y1="205" x2="346.1" y2="311.1" stroke="#1a7a1a" stroke-width="0.7"/>
-<text x="346.1" y="315.1" text-anchor="start" fill="#66ff66" font-family="Courier New" font-size="12">VO2max</text>
-<line x1="240" y1="205" x2="240.0" y2="355.0" stroke="#1a7a1a" stroke-width="0.7"/>
-<text x="240.0" y="359.0" text-anchor="middle" fill="#66ff66" font-family="Courier New" font-size="12">EF</text>
-<line x1="240" y1="205" x2="133.9" y2="311.1" stroke="#1a7a1a" stroke-width="0.7"/>
-<text x="133.9" y="315.1" text-anchor="end" fill="#66ff66" font-family="Courier New" font-size="12">M</text>
-<line x1="240" y1="205" x2="90.0" y2="205.0" stroke="#1a7a1a" stroke-width="0.7"/>
-<text x="90.0" y="209.0" text-anchor="end" fill="#66ff66" font-family="Courier New" font-size="12">FS</text>
-<line x1="240" y1="205" x2="133.9" y2="98.9" stroke="#1a7a1a" stroke-width="0.7"/>
-<text x="133.9" y="102.9" text-anchor="end" fill="#66ff66" font-family="Courier New" font-size="12">MCS</text>
-<polygon points="240.0,155.0 290.0,205.0 275.4,240.4 240.0,255.0 204.6,240.4" fill="#5aaa5a" fill-opacity="0.12" stroke="#5aaa5a" stroke-width="2"/>
-<circle cx="240.0" cy="155.0" r="4" fill="#5aaa5a" stroke="#0f0f0f" stroke-width="2"><title>Settembre 2026 · ES: 7.0 (indice 100)</title></circle>
-<circle cx="290.0" cy="205.0" r="4" fill="#5aaa5a" stroke="#0f0f0f" stroke-width="2"><title>Settembre 2026 · Soglia: 6:22/km (indice 100)</title></circle>
-<circle cx="275.4" cy="240.4" r="4" fill="#5aaa5a" stroke="#0f0f0f" stroke-width="2"><title>Settembre 2026 · VO2max: 39.3 (indice 100)</title></circle>
-<circle cx="240.0" cy="255.0" r="4" fill="#5aaa5a" stroke="#0f0f0f" stroke-width="2"><title>Settembre 2026 · EF: 0.915 (indice 100)</title></circle>
-<circle cx="204.6" cy="240.4" r="4" fill="#5aaa5a" stroke="#0f0f0f" stroke-width="2"><title>Settembre 2026 · M: 0.918 (indice 100)</title></circle>
-<polygon points="240.0,55.0 295.0,205.0 280.3,245.3 240.0,254.0 203.5,241.5 190.0,205.0 204.6,169.6" fill="#33ff33" fill-opacity="0.12" stroke="#33ff33" stroke-width="2"/>
-<circle cx="240.0" cy="55.0" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 · ES: 10.0 (indice 143)</title></circle>
-<circle cx="295.0" cy="205.0" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 · Soglia: 6:15/km (indice 102)</title></circle>
-<circle cx="280.3" cy="245.3" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 · VO2max: 40.4 (indice 103)</title></circle>
-<circle cx="240.0" cy="254.0" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 · EF: 0.912 (indice 100)</title></circle>
-<circle cx="203.5" cy="241.5" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 · M: 0.924 (indice 101)</title></circle>
-<circle cx="190.0" cy="205.0" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 · FS: 67 (indice 100)</title></circle>
-<circle cx="204.6" cy="169.6" r="4" fill="#33ff33" stroke="#0f0f0f" stroke-width="2"><title>Ottobre 2026 · MCS: 76 (indice 100)</title></circle>
-<rect x="20" y="424" width="14" height="10" fill="#5aaa5a" rx="2"/>
-<text x="39" y="433" fill="#66ff66" font-family="Courier New" font-size="12">Settembre 2026</text>
-<rect x="250" y="424" width="14" height="10" fill="#33ff33" rx="2"/>
-<text x="269" y="433" fill="#66ff66" font-family="Courier New" font-size="12">Ottobre 2026</text>
-</svg>
-            </div>
-            <pre class="text-sm md:text-base mt-4 overflow-x-auto" style="white-space: pre;">
-| Qualita              | Metrica | Settembre 2026 | Ottobre 2026  |
-| -------------------- | ------- | -------------- | ------------- |
-| Resistenza aerobica  | ES      | 7.0 (100)      | 10.0 (143)    |
-| Capacita aerobica    | CS      | n/d            | n/d           |
-| Potenza aerobica     | Soglia  | 6:22/km (100)  | 6:15/km (102) |
-| VO2max               | VO2max  | 39.3 (100)     | 40.4 (103)    |
-| Economia (cuore)     | EF      | 0.915 (100)    | 0.912 (100)   |
-| Economia (meccanica) | M       | 0.918 (100)    | 0.924 (101)   |
-| Economia (totale)    | RES     | 84.0 (100)     | 85.2 (101)    |
-| Forza                | FS      | n/d            | 67 (100)      |
-| Mobilita e controllo | MCS     | n/d            | 76 (100)      |
-
-CHIUSURA DEL MESE        Settembre   Ottobre    Δ
-Corse                       15          15
-Km                        54.5        71.5      +31%
-Ore di corsa              6.98        8.64      +24%
-TSS                        529         695      +31%
-Lungo più lungo         5.4 km      7.6 km*
-RPE medio                  3.5         3.4      =
-sRPE totale               1269        1859      +46%
-FC a riposo (media)       57.4        57.5      =
-HRV (media)               52.4        51.1      -1.3 ms
-Sonno (media)            6h09        6h43      +34'
-Notti ≥ 7h               4/29       11/29
-            </pre>
-            <p class="muted text-sm mt-1">*7.6 km è il 10x400 con riscaldamento e defaticamento; il lungo continuo più lungo di ottobre è il 6.4 km del 18/10 (il 7 km è del 1° novembre).</p>
-            <p class="muted text-sm mt-3"><span class="accent">Ottobre chiuso.</span> Il mese della resistenza: ES +43%, VO2max +3%, soglia di 7" più veloce (confermata dal test continuo), meccanica +1%. L'EF resta fermo, come previsto: si muove in mesi. Il volume sale del 31% con lo stesso RPE medio, quindi lo stesso lavoro sembra più facile. FC a riposo e HRV restano stabili e il sonno migliora di mezz'ora a notte. Il CS arriverà con il primo Tempo continuo di almeno 20' (S13). Forza (FS 67) e mobilità e controllo (MCS 76) vengono dal test mensile del 24/10: ogni test vale lato più debole ÷ riferimento × 100 (tetto 100), e l'indice è la media dei test. A sinistra mancano soprattutto calf raise (52), side plank (48), equilibrio (60) e mezzo squat (50). Si aggiornano al test del 21 novembre.</p>
-            <p class="muted text-sm mt-3"><span class="accent">Novembre (in corso, al 10/11):</span> ES 10.6 (indice 151), VO2max 40.2-40.5 (103), EF 0.897 e RES 83.2 (dal lungo del 1/11, alterati dall'estrazione), meccanica 0.928 (101). La soglia di novembre in <span class="accent">health-log/monthly-profile.md</span> (6:33/km) è calcolata sui 5.00 km ufficiali con il tempo dallo sparo. Sul GPS e con il tempo dell'orologio la gara è a 6:18/km, e la soglia resta quella del test, ~6:15/km. Il radar si aggiorna quando il mese è chiuso. Primi 10 giorni: 5 corse, 15.0 km, FC a riposo media 59.2, HRV 46.4 ms, sonno medio 7h01 con 5 notti su 9 sopra le 7h. Il piano del sonno sta funzionando.</p>
-        </div>
-
-        <!-- Training Load (CTL/ATL/TSB) -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">CARICO DI ALLENAMENTO (CTL / ATL / TSB)</h2>
-            <p class="muted text-sm mb-3">Stile TrainingPeaks, dal TSS giornaliero (NGP/IF di ogni seduta). 77 giorni di storico: il CTL ha superato i 42 giorni necessari a convergere. La linea tratteggiata gialla è la Roma 5K. Passa sopra una barra per i valori del giorno.</p>
-            <svg viewBox="0 0 900 320" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CTL, ATL e TSB giornalieri">
-<line x1="45" y1="205.0" x2="875" y2="205.0" stroke="#1a7a1a" stroke-width="1"/>
-<text x="38" y="209.0" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">0</text>
-<line x1="45" y1="141.7" x2="875" y2="141.7" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="145.7" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">10</text>
-<line x1="45" y1="78.3" x2="875" y2="78.3" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="82.3" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">20</text>
-<line x1="45" y1="15.0" x2="875" y2="15.0" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="19.0" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">30</text>
-<line x1="853.2" y1="15" x2="853.2" y2="270" stroke="#ffff33" stroke-width="1" stroke-dasharray="2,4"/><text x="849.2" y="28" text-anchor="end" fill="#ffff33" font-family="Courier New" font-size="11">🏁5K</text>
-<polyline fill="none" stroke="#ffff33" stroke-width="2" points="45.0,180.9 55.9,153.7 66.8,160.7 77.8,136.6 88.7,146.1 99.6,155.0 110.5,130.9 121.4,141.7 132.4,150.5 143.3,117.0 154.2,129.6 165.1,105.6 176.1,120.1 187.0,98.0 197.9,113.2 208.8,126.5 219.7,105.6 230.7,120.1 241.6,98.6 252.5,113.8 263.4,84.0 274.3,101.8 285.3,116.3 296.2,89.1 307.1,105.6 318.0,76.4 328.9,94.8 339.9,70.7 350.8,89.7 361.7,106.2 372.6,91.6 383.6,107.5 394.5,92.9 405.4,108.7 416.3,73.9 427.2,92.3 438.2,108.7 449.1,79.0 460.0,96.7 470.9,64.4 481.8,84.7 492.8,44.8 503.7,67.6 514.6,87.2 525.5,62.5 536.4,82.8 547.4,46.0 558.3,68.8 569.2,26.4 580.1,52.4 591.1,73.9 602.0,45.4 612.9,68.2 623.8,36.5 634.7,60.6 645.7,30.2 656.6,55.5 667.5,76.4 678.4,61.9 689.3,82.1 700.3,68.8 711.2,88.5 722.1,31.5 733.0,56.2 743.9,41.6 754.9,65.0 765.8,84.7 776.7,44.8 787.6,67.6 798.6,67.6 809.5,87.2 820.4,91.6 831.3,107.5 842.2,121.4 853.2,73.9 864.1,92.3 875.0,77.7"/>
-<polyline fill="none" stroke="#33ff33" stroke-width="3" points="45.0,200.6 55.9,195.5 66.8,195.5 77.8,190.4 88.7,191.1 99.6,191.7 110.5,186.6 121.4,187.3 132.4,187.3 143.3,180.9 154.2,181.6 165.1,176.5 176.1,177.1 187.0,172.1 197.9,172.7 208.8,173.3 219.7,168.9 230.7,170.2 241.6,165.1 252.5,166.4 263.4,160.0 274.3,160.7 285.3,161.9 296.2,156.2 307.1,157.5 318.0,151.2 328.9,152.4 339.9,147.4 350.8,148.6 361.7,149.9 372.6,146.7 383.6,148.0 394.5,144.2 405.4,146.1 416.3,139.1 427.2,141.0 438.2,142.3 449.1,136.6 460.0,137.9 470.9,131.5 481.8,133.4 492.8,125.8 503.7,127.7 514.6,129.6 525.5,124.6 536.4,126.5 547.4,118.9 558.3,121.4 569.2,112.5 580.1,115.1 591.1,117.0 602.0,111.3 612.9,113.8 623.8,107.5 634.7,109.4 645.7,103.7 656.6,105.6 667.5,108.1 678.4,104.9 689.3,107.5 700.3,104.3 711.2,106.8 722.1,96.7 733.0,99.9 743.9,96.1 754.9,98.6 765.8,101.1 776.7,94.2 787.6,96.7 798.6,96.1 809.5,98.6 820.4,99.2 831.3,101.8 842.2,104.3 853.2,96.7 864.1,99.2 875.0,96.7"/>
-<line x1="45" y1="260" x2="875" y2="260" stroke="#5aaa5a" stroke-width="1"/>
-<text x="38" y="264" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">0</text>
-<rect x="41.2" y="260.0" width="7.6" height="5.6" fill="#ffff33" opacity="0.75"><title>26/08 · CTL 0.7 · ATL 3.8 · TSB -3.7</title></rect>
-<rect x="52.1" y="260.0" width="7.6" height="4.7" fill="#ffff33" opacity="0.75"><title>27/08 · CTL 1.5 · ATL 8.1 · TSB -3.1</title></rect>
-<rect x="63.0" y="260.0" width="7.6" height="9.9" fill="#ffff33" opacity="0.75"><title>28/08 · CTL 1.5 · ATL 7.0 · TSB -6.6</title></rect>
-<rect x="73.9" y="260.0" width="7.6" height="8.2" fill="#ffff33" opacity="0.75"><title>29/08 · CTL 2.3 · ATL 10.8 · TSB -5.5</title></rect>
-<rect x="84.9" y="260.0" width="7.6" height="12.9" fill="#ffff33" opacity="0.75"><title>30/08 · CTL 2.2 · ATL 9.3 · TSB -8.6</title></rect>
-<rect x="95.8" y="260.0" width="7.6" height="10.6" fill="#ffff33" opacity="0.75"><title>31/08 · CTL 2.1 · ATL 7.9 · TSB -7.1</title></rect>
-<rect x="106.7" y="260.0" width="7.6" height="8.7" fill="#ffff33" opacity="0.75"><title>01/09 · CTL 2.9 · ATL 11.7 · TSB -5.8</title></rect>
-<rect x="117.6" y="260.0" width="7.6" height="13.2" fill="#ffff33" opacity="0.75"><title>02/09 · CTL 2.8 · ATL 10.0 · TSB -8.8</title></rect>
-<rect x="128.5" y="260.0" width="7.6" height="10.8" fill="#ffff33" opacity="0.75"><title>03/09 · CTL 2.8 · ATL 8.6 · TSB -7.2</title></rect>
-<rect x="139.5" y="260.0" width="7.6" height="8.7" fill="#ffff33" opacity="0.75"><title>04/09 · CTL 3.8 · ATL 13.9 · TSB -5.8</title></rect>
-<rect x="150.4" y="260.0" width="7.6" height="15.1" fill="#ffff33" opacity="0.75"><title>05/09 · CTL 3.7 · ATL 11.9 · TSB -10.1</title></rect>
-<rect x="161.3" y="260.0" width="7.6" height="12.3" fill="#ffff33" opacity="0.75"><title>06/09 · CTL 4.5 · ATL 15.7 · TSB -8.2</title></rect>
-<rect x="172.2" y="260.0" width="7.6" height="16.6" fill="#ffff33" opacity="0.75"><title>07/09 · CTL 4.4 · ATL 13.4 · TSB -11.1</title></rect>
-<rect x="183.2" y="260.0" width="7.6" height="13.5" fill="#ffff33" opacity="0.75"><title>08/09 · CTL 5.2 · ATL 16.9 · TSB -9.0</title></rect>
-<rect x="194.1" y="260.0" width="7.6" height="17.5" fill="#ffff33" opacity="0.75"><title>09/09 · CTL 5.1 · ATL 14.5 · TSB -11.7</title></rect>
-<rect x="205.0" y="260.0" width="7.6" height="14.1" fill="#ffff33" opacity="0.75"><title>10/09 · CTL 5.0 · ATL 12.4 · TSB -9.4</title></rect>
-<rect x="215.9" y="260.0" width="7.6" height="11.2" fill="#ffff33" opacity="0.75"><title>11/09 · CTL 5.7 · ATL 15.7 · TSB -7.5</title></rect>
-<rect x="226.8" y="260.0" width="7.6" height="15.0" fill="#ffff33" opacity="0.75"><title>12/09 · CTL 5.5 · ATL 13.4 · TSB -10.0</title></rect>
-<rect x="237.8" y="260.0" width="7.6" height="11.9" fill="#ffff33" opacity="0.75"><title>13/09 · CTL 6.3 · ATL 16.8 · TSB -7.9</title></rect>
-<rect x="248.7" y="260.0" width="7.6" height="15.8" fill="#ffff33" opacity="0.75"><title>14/09 · CTL 6.1 · ATL 14.4 · TSB -10.5</title></rect>
-<rect x="259.6" y="260.0" width="7.6" height="12.3" fill="#ffff33" opacity="0.75"><title>15/09 · CTL 7.1 · ATL 19.1 · TSB -8.2</title></rect>
-<rect x="270.5" y="260.0" width="7.6" height="17.9" fill="#ffff33" opacity="0.75"><title>16/09 · CTL 7.0 · ATL 16.3 · TSB -11.9</title></rect>
-<rect x="281.4" y="260.0" width="7.6" height="14.1" fill="#ffff33" opacity="0.75"><title>17/09 · CTL 6.8 · ATL 14.0 · TSB -9.4</title></rect>
-<rect x="292.4" y="260.0" width="7.6" height="10.8" fill="#ffff33" opacity="0.75"><title>18/09 · CTL 7.7 · ATL 18.3 · TSB -7.2</title></rect>
-<rect x="303.3" y="260.0" width="7.6" height="15.9" fill="#ffff33" opacity="0.75"><title>19/09 · CTL 7.5 · ATL 15.7 · TSB -10.6</title></rect>
-<rect x="314.2" y="260.0" width="7.6" height="12.3" fill="#ffff33" opacity="0.75"><title>20/09 · CTL 8.5 · ATL 20.3 · TSB -8.2</title></rect>
-<rect x="325.1" y="260.0" width="7.6" height="17.7" fill="#ffff33" opacity="0.75"><title>21/09 · CTL 8.3 · ATL 17.4 · TSB -11.8</title></rect>
-<rect x="336.0" y="260.0" width="7.6" height="13.6" fill="#ffff33" opacity="0.75"><title>22/09 · CTL 9.1 · ATL 21.2 · TSB -9.1</title></rect>
-<rect x="347.0" y="260.0" width="7.6" height="18.1" fill="#ffff33" opacity="0.75"><title>23/09 · CTL 8.9 · ATL 18.2 · TSB -12.1</title></rect>
-<rect x="357.9" y="260.0" width="7.6" height="14.0" fill="#ffff33" opacity="0.75"><title>24/09 · CTL 8.7 · ATL 15.6 · TSB -9.3</title></rect>
-<rect x="368.8" y="260.0" width="7.6" height="10.4" fill="#ffff33" opacity="0.75"><title>25/09 · CTL 9.2 · ATL 17.9 · TSB -6.9</title></rect>
-<rect x="379.7" y="260.0" width="7.6" height="13.0" fill="#ffff33" opacity="0.75"><title>26/09 · CTL 9.0 · ATL 15.4 · TSB -8.7</title></rect>
-<rect x="390.7" y="260.0" width="7.6" height="9.4" fill="#ffff33" opacity="0.75"><title>27/09 · CTL 9.6 · ATL 17.7 · TSB -6.3</title></rect>
-<rect x="401.6" y="260.0" width="7.6" height="12.3" fill="#ffff33" opacity="0.75"><title>28/09 · CTL 9.3 · ATL 15.2 · TSB -8.2</title></rect>
-<rect x="412.5" y="260.0" width="7.6" height="8.9" fill="#ffff33" opacity="0.75"><title>29/09 · CTL 10.4 · ATL 20.7 · TSB -5.9</title></rect>
-<rect x="423.4" y="260.0" width="7.6" height="15.6" fill="#ffff33" opacity="0.75"><title>30/09 · CTL 10.1 · ATL 17.8 · TSB -10.4</title></rect>
-<rect x="434.3" y="260.0" width="7.6" height="11.4" fill="#ffff33" opacity="0.75"><title>01/10 · CTL 9.9 · ATL 15.2 · TSB -7.6</title></rect>
-<rect x="445.3" y="260.0" width="7.6" height="7.9" fill="#ffff33" opacity="0.75"><title>02/10 · CTL 10.8 · ATL 19.9 · TSB -5.3</title></rect>
-<rect x="456.2" y="260.0" width="7.6" height="13.6" fill="#ffff33" opacity="0.75"><title>03/10 · CTL 10.6 · ATL 17.1 · TSB -9.1</title></rect>
-<rect x="467.1" y="260.0" width="7.6" height="9.8" fill="#ffff33" opacity="0.75"><title>04/10 · CTL 11.6 · ATL 22.2 · TSB -6.5</title></rect>
-<rect x="478.0" y="260.0" width="7.6" height="15.9" fill="#ffff33" opacity="0.75"><title>05/10 · CTL 11.3 · ATL 19.0 · TSB -10.6</title></rect>
-<rect x="488.9" y="260.0" width="7.6" height="11.6" fill="#ffff33" opacity="0.75"><title>06/10 · CTL 12.5 · ATL 25.3 · TSB -7.7</title></rect>
-<rect x="499.9" y="260.0" width="7.6" height="19.2" fill="#ffff33" opacity="0.75"><title>07/10 · CTL 12.2 · ATL 21.7 · TSB -12.8</title></rect>
-<rect x="510.8" y="260.0" width="7.6" height="14.2" fill="#ffff33" opacity="0.75"><title>08/10 · CTL 11.9 · ATL 18.6 · TSB -9.5</title></rect>
-<rect x="521.7" y="260.0" width="7.6" height="10.1" fill="#ffff33" opacity="0.75"><title>09/10 · CTL 12.7 · ATL 22.5 · TSB -6.7</title></rect>
-<rect x="532.6" y="260.0" width="7.6" height="14.7" fill="#ffff33" opacity="0.75"><title>10/10 · CTL 12.4 · ATL 19.3 · TSB -9.8</title></rect>
-<rect x="543.5" y="260.0" width="7.6" height="10.4" fill="#ffff33" opacity="0.75"><title>11/10 · CTL 13.6 · ATL 25.1 · TSB -6.9</title></rect>
-<rect x="554.5" y="260.0" width="7.6" height="17.2" fill="#ffff33" opacity="0.75"><title>12/10 · CTL 13.2 · ATL 21.5 · TSB -11.5</title></rect>
-<rect x="565.4" y="260.0" width="7.6" height="12.5" fill="#ffff33" opacity="0.75"><title>13/10 · CTL 14.6 · ATL 28.2 · TSB -8.3</title></rect>
-<rect x="576.3" y="260.0" width="7.6" height="20.4" fill="#ffff33" opacity="0.75"><title>14/10 · CTL 14.2 · ATL 24.1 · TSB -13.6</title></rect>
-<rect x="587.2" y="260.0" width="7.6" height="14.9" fill="#ffff33" opacity="0.75"><title>15/10 · CTL 13.9 · ATL 20.7 · TSB -9.9</title></rect>
-<rect x="598.2" y="260.0" width="7.6" height="10.2" fill="#ffff33" opacity="0.75"><title>16/10 · CTL 14.8 · ATL 25.2 · TSB -6.8</title></rect>
-<rect x="609.1" y="260.0" width="7.6" height="15.6" fill="#ffff33" opacity="0.75"><title>17/10 · CTL 14.4 · ATL 21.6 · TSB -10.4</title></rect>
-<rect x="620.0" y="260.0" width="7.6" height="10.6" fill="#ffff33" opacity="0.75"><title>18/10 · CTL 15.4 · ATL 26.6 · TSB -7.1</title></rect>
-<rect x="630.9" y="260.0" width="7.6" height="16.8" fill="#ffff33" opacity="0.75"><title>19/10 · CTL 15.1 · ATL 22.8 · TSB -11.2</title></rect>
-<rect x="641.8" y="260.0" width="7.6" height="11.7" fill="#ffff33" opacity="0.75"><title>20/10 · CTL 16.0 · ATL 27.6 · TSB -7.8</title></rect>
-<rect x="652.8" y="260.0" width="7.6" height="17.2" fill="#ffff33" opacity="0.75"><title>21/10 · CTL 15.7 · ATL 23.6 · TSB -11.5</title></rect>
-<rect x="663.7" y="260.0" width="7.6" height="12.0" fill="#ffff33" opacity="0.75"><title>22/10 · CTL 15.3 · ATL 20.3 · TSB -8.0</title></rect>
-<rect x="674.6" y="260.0" width="7.6" height="7.5" fill="#ffff33" opacity="0.75"><title>23/10 · CTL 15.8 · ATL 22.6 · TSB -5.0</title></rect>
-<rect x="685.5" y="260.0" width="7.6" height="10.2" fill="#ffff33" opacity="0.75"><title>24/10 · CTL 15.4 · ATL 19.4 · TSB -6.8</title></rect>
-<rect x="696.4" y="260.0" width="7.6" height="6.0" fill="#ffff33" opacity="0.75"><title>25/10 · CTL 15.9 · ATL 21.5 · TSB -4.0</title></rect>
-<rect x="707.4" y="260.0" width="7.6" height="8.4" fill="#ffff33" opacity="0.75"><title>26/10 · CTL 15.5 · ATL 18.4 · TSB -5.6</title></rect>
-<rect x="718.3" y="260.0" width="7.6" height="4.3" fill="#ffff33" opacity="0.75"><title>27/10 · CTL 17.1 · ATL 27.4 · TSB -2.9</title></rect>
-<rect x="729.2" y="260.0" width="7.6" height="15.5" fill="#ffff33" opacity="0.75"><title>28/10 · CTL 16.6 · ATL 23.5 · TSB -10.3</title></rect>
-<rect x="740.1" y="260.0" width="7.6" height="10.2" fill="#ffff33" opacity="0.75"><title>29/10 · CTL 17.2 · ATL 25.8 · TSB -6.8</title></rect>
-<rect x="751.0" y="260.0" width="7.6" height="12.9" fill="#ffff33" opacity="0.75"><title>30/10 · CTL 16.8 · ATL 22.1 · TSB -8.6</title></rect>
-<rect x="762.0" y="260.0" width="7.6" height="7.9" fill="#ffff33" opacity="0.75"><title>31/10 · CTL 16.4 · ATL 19.0 · TSB -5.3</title></rect>
-<rect x="772.9" y="260.0" width="7.6" height="3.9" fill="#ffff33" opacity="0.75"><title>01/11 · CTL 17.5 · ATL 25.3 · TSB -2.6</title></rect>
-<rect x="783.8" y="260.0" width="7.6" height="11.7" fill="#ffff33" opacity="0.75"><title>02/11 · CTL 17.1 · ATL 21.7 · TSB -7.8</title></rect>
-<rect x="794.7" y="260.0" width="7.6" height="6.9" fill="#ffff33" opacity="0.75"><title>03/11 · CTL 17.2 · ATL 21.7 · TSB -4.6</title></rect>
-<rect x="805.7" y="260.0" width="7.6" height="6.8" fill="#ffff33" opacity="0.75"><title>04/11 · CTL 16.8 · ATL 18.6 · TSB -4.5</title></rect>
-<rect x="816.6" y="260.0" width="7.6" height="2.7" fill="#ffff33" opacity="0.75"><title>05/11 · CTL 16.7 · ATL 17.9 · TSB -1.8</title></rect>
-<rect x="827.5" y="260.0" width="7.6" height="1.8" fill="#ffff33" opacity="0.75"><title>06/11 · CTL 16.3 · ATL 15.4 · TSB -1.2</title></rect>
-<rect x="838.4" y="258.5" width="7.6" height="1.5" fill="#33ff33" opacity="0.75"><title>07/11 · CTL 15.9 · ATL 13.2 · TSB +1.0</title></rect>
-<rect x="849.3" y="255.8" width="7.6" height="4.2" fill="#33ff33" opacity="0.75"><title>08/11 · CTL 17.1 · ATL 20.7 · TSB +2.8</title></rect>
-<rect x="860.3" y="260.0" width="7.6" height="5.4" fill="#ffff33" opacity="0.75"><title>09/11 · CTL 16.7 · ATL 17.8 · TSB -3.6</title></rect>
-<rect x="871.2" y="260.0" width="7.6" height="1.5" fill="#ffff33" opacity="0.75"><title>10/11 · CTL 17.1 · ATL 20.1 · TSB -1.0</title></rect>
-<text x="45.0" y="312" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">26/08</text>
-<text x="110.5" y="312" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/09</text>
-<text x="263.4" y="312" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">15/09</text>
-<text x="438.2" y="312" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/10</text>
-<text x="591.1" y="312" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">15/10</text>
-<text x="776.7" y="312" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/11</text>
-<text x="875.0" y="312" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">10/11</text>
-<line x1="520" y1="8" x2="540" y2="8" stroke="#33ff33" stroke-width="3"/><text x="544" y="12" fill="#66ff66" font-family="Courier New" font-size="12">CTL</text>
-<line x1="590" y1="8" x2="610" y2="8" stroke="#ffff33" stroke-width="2"/><text x="614" y="12" fill="#ffff33" font-family="Courier New" font-size="12">ATL</text>
-<rect x="660" y="4" width="12" height="8" fill="#ffff33" opacity="0.75"/><text x="676" y="12" fill="#ffff33" font-family="Courier New" font-size="12">TSB&lt;0</text>
-<rect x="745" y="4" width="12" height="8" fill="#33ff33" opacity="0.75"/><text x="761" y="12" fill="#66ff66" font-family="Courier New" font-size="12">TSB&gt;0</text>
-</svg>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-lg mt-4">
-                <div><span class="muted">CTL oggi:</span> <span class="accent">17.1</span></div>
-                <div><span class="muted">ATL oggi:</span> <span class="accent">20.1</span></div>
-                <div><span class="muted">TSB oggi:</span> <span class="warning">-1.0</span> <span class="muted text-sm">(zona grigia)</span></div>
-                <div><span class="muted">ACWR oggi:</span> <span class="success">1.17</span> <span class="muted text-sm">(basso rischio)</span></div>
-            </div>
-            <p class="muted text-sm mt-3">Il CTL (forma di fondo) è salito da ~8 a fine settembre a 17.5 il 1/11. Nella settimana della gara è rimasto fermo intorno a 16-17 (17.1 oggi), mentre l'ATL è sceso da 25.3 a 13.2: è lo scarico che ha funzionato. Il giorno della gara il TSB era <span class="success">+2.8</span>, il primo valore positivo di tutto il piano: si è arrivati alla Roma 5K freschi senza perdere forma. Fasce TSB standard: &gt;+25 molto fresco, +5/+25 fresco, -10/+5 zona grigia, -30/-10 zona ottimale di allenamento, &lt;-30 alto rischio. Con le 3 sedute piene di S11 il CTL riprende a salire.</p>
-        </div>
-
-        <!-- Injury risk (ACWR) -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">RISCHIO INFORTUNIO (ACWR)</h2>
-            <p class="muted text-sm mb-3">ACWR = ATL/CTL (Gabbett): quanto il carico dell'ultima settimana supera la base delle ultime sei. Fasce: &lt;0.8 sotto-allenato, 0.8-1.3 basso rischio, 1.3-1.5 attenzione, &gt;1.5 rischio elevato. Si valuta solo dopo 42 giorni di storico, quando il CTL si è assestato: prima il rapporto è gonfiato da una base artificialmente bassa (fino a 6.0 a fine agosto). Passa sopra un punto per il valore del giorno.</p>
-            <svg viewBox="0 0 900 250" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ACWR giornaliero e rischio infortunio">
-<rect x="45" y="177.5" width="745" height="22.5" fill="#5aaa5a" opacity="0.06"/>
-<text x="797" y="192.8" text-anchor="start" fill="#5aaa5a" font-family="Courier New" font-size="10" opacity="0.9">sotto-allenato</text>
-<rect x="45" y="121.2" width="745" height="56.2" fill="#33ff33" opacity="0.14"/>
-<text x="797" y="153.4" text-anchor="start" fill="#33ff33" font-family="Courier New" font-size="10" opacity="0.9">basso rischio</text>
-<rect x="45" y="98.8" width="745" height="22.5" fill="#ffff33" opacity="0.14"/>
-<text x="797" y="114.0" text-anchor="start" fill="#ffff33" font-family="Courier New" font-size="10" opacity="0.9">attenzione</text>
-<rect x="45" y="20.0" width="745" height="78.8" fill="#ff5555" opacity="0.14"/>
-<text x="797" y="63.4" text-anchor="start" fill="#ff5555" font-family="Courier New" font-size="10" opacity="0.9">rischio elevato</text>
-<line x1="45" y1="177.5" x2="790" y2="177.5" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="181.5" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">0.8</text>
-<line x1="45" y1="121.2" x2="790" y2="121.2" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="125.2" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">1.3</text>
-<line x1="45" y1="98.8" x2="790" y2="98.8" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="102.8" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">1.5</text>
-<line x1="45" y1="42.5" x2="790" y2="42.5" stroke="#1a7a1a" stroke-width="0.5" stroke-dasharray="3,3"/>
-<text x="38" y="46.5" text-anchor="end" fill="#5aaa5a" font-family="Courier New" font-size="11">2.0</text>
-<rect x="45" y="20" width="392.1" height="180" fill="#0f0f0f" opacity="0.85"/>
-<text x="241.1" y="105" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="12">non valutabile</text>
-<text x="241.1" y="121" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="10">storico &lt; 42 giorni (CTL non assestato)</text>
-<line x1="770.4" y1="20" x2="770.4" y2="200" stroke="#ffff33" stroke-width="1" stroke-dasharray="2,4"/><text x="766.4" y="34" text-anchor="end" fill="#ffff33" font-family="Courier New" font-size="11">🏁5K</text>
-<polyline fill="none" stroke="#1a7a1a" stroke-width="1.5" points="45.0,20.0 54.8,20.0 64.6,20.0 74.4,20.0 84.2,20.0 94.0,20.0 103.8,20.0 113.6,20.0 123.4,20.0 133.2,20.0 143.0,20.0 152.8,20.0 162.6,20.0 172.4,20.0 182.2,20.0 192.0,20.0 201.8,20.0 211.6,20.0 221.4,20.0 231.2,20.0 241.1,20.0 250.9,20.0 260.7,35.8 270.5,20.0 280.3,32.4 290.1,20.0 299.9,30.1 309.7,20.0 319.5,38.0 329.3,66.1 339.1,49.2 348.9,76.3 358.7,58.2 368.5,84.1 378.3,42.5 388.1,70.6 397.9,94.2 407.7,60.5 417.5,85.2 427.3,51.5 437.1,77.4"/>
-<polyline fill="none" stroke="#66ff66" stroke-width="2" points="437.1,77.4 446.9,40.2 456.7,67.2 466.5,92.0 476.3,68.4 486.1,93.1 495.9,59.4 505.7,85.2 515.5,49.2 525.3,76.3 535.1,99.9 544.9,76.3 554.7,98.8 564.5,72.9 574.3,97.6 584.1,74.0 593.9,97.6 603.8,119.0 613.6,106.6 623.4,125.8 633.2,115.6 643.0,133.6 652.8,87.5 662.6,108.9 672.4,98.8 682.2,119.0 692.0,137.0 701.8,105.5 711.6,124.6 721.4,125.8 731.2,142.6 741.0,147.1 750.8,161.8 760.6,174.1 770.4,131.4 780.2,148.2 790.0,135.9"/>
-<circle cx="437.1" cy="77.4" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>05/10 · ACWR 1.69 · rischio infortunio elevato</title></circle>
-<circle cx="446.9" cy="40.2" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>06/10 · ACWR 2.02 · rischio infortunio elevato</title></circle>
-<circle cx="456.7" cy="67.2" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>07/10 · ACWR 1.78 · rischio infortunio elevato</title></circle>
-<circle cx="466.5" cy="92.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>08/10 · ACWR 1.56 · rischio infortunio elevato</title></circle>
-<circle cx="476.3" cy="68.4" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>09/10 · ACWR 1.77 · rischio infortunio elevato</title></circle>
-<circle cx="486.1" cy="93.1" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>10/10 · ACWR 1.55 · rischio infortunio elevato</title></circle>
-<circle cx="495.9" cy="59.4" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>11/10 · ACWR 1.85 · rischio infortunio elevato</title></circle>
-<circle cx="505.7" cy="85.2" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>12/10 · ACWR 1.62 · rischio infortunio elevato</title></circle>
-<circle cx="515.5" cy="49.2" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>13/10 · ACWR 1.94 · rischio infortunio elevato</title></circle>
-<circle cx="525.3" cy="76.3" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>14/10 · ACWR 1.70 · rischio infortunio elevato</title></circle>
-<circle cx="535.1" cy="99.9" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>15/10 · ACWR 1.49 · fascia di attenzione</title></circle>
-<circle cx="544.9" cy="76.3" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>16/10 · ACWR 1.70 · rischio infortunio elevato</title></circle>
-<circle cx="554.7" cy="98.8" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>17/10 · ACWR 1.50 · fascia di attenzione</title></circle>
-<circle cx="564.5" cy="72.9" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>18/10 · ACWR 1.73 · rischio infortunio elevato</title></circle>
-<circle cx="574.3" cy="97.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>19/10 · ACWR 1.51 · rischio infortunio elevato</title></circle>
-<circle cx="584.1" cy="74.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>20/10 · ACWR 1.72 · rischio infortunio elevato</title></circle>
-<circle cx="593.9" cy="97.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>21/10 · ACWR 1.51 · rischio infortunio elevato</title></circle>
-<circle cx="603.8" cy="119.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>22/10 · ACWR 1.32 · fascia di attenzione</title></circle>
-<circle cx="613.6" cy="106.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>23/10 · ACWR 1.43 · fascia di attenzione</title></circle>
-<circle cx="623.4" cy="125.8" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>24/10 · ACWR 1.26 · fascia a basso rischio</title></circle>
-<circle cx="633.2" cy="115.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>25/10 · ACWR 1.35 · fascia di attenzione</title></circle>
-<circle cx="643.0" cy="133.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>26/10 · ACWR 1.19 · fascia a basso rischio</title></circle>
-<circle cx="652.8" cy="87.5" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>27/10 · ACWR 1.60 · rischio infortunio elevato</title></circle>
-<circle cx="662.6" cy="108.9" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>28/10 · ACWR 1.41 · fascia di attenzione</title></circle>
-<circle cx="672.4" cy="98.8" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>29/10 · ACWR 1.50 · fascia di attenzione</title></circle>
-<circle cx="682.2" cy="119.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>30/10 · ACWR 1.32 · fascia di attenzione</title></circle>
-<circle cx="692.0" cy="137.0" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>31/10 · ACWR 1.16 · fascia a basso rischio</title></circle>
-<circle cx="701.8" cy="105.5" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>01/11 · ACWR 1.44 · fascia di attenzione</title></circle>
-<circle cx="711.6" cy="124.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>02/11 · ACWR 1.27 · fascia a basso rischio</title></circle>
-<circle cx="721.4" cy="125.8" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>03/11 · ACWR 1.26 · fascia a basso rischio</title></circle>
-<circle cx="731.2" cy="142.6" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>04/11 · ACWR 1.11 · fascia a basso rischio</title></circle>
-<circle cx="741.0" cy="147.1" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>05/11 · ACWR 1.07 · fascia a basso rischio</title></circle>
-<circle cx="750.8" cy="161.8" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>06/11 · ACWR 0.94 · fascia a basso rischio</title></circle>
-<circle cx="760.6" cy="174.1" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>07/11 · ACWR 0.83 · fascia a basso rischio</title></circle>
-<circle cx="770.4" cy="131.4" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>08/11 · ACWR 1.21 · fascia a basso rischio</title></circle>
-<circle cx="780.2" cy="148.2" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>09/11 · ACWR 1.06 · fascia a basso rischio</title></circle>
-<circle cx="790.0" cy="135.9" r="3" fill="#66ff66" stroke="#0f0f0f" stroke-width="1"><title>10/11 · ACWR 1.17 · fascia a basso rischio</title></circle>
-<line x1="437.1" y1="71.1" x2="495.9" y2="71.1" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S6 · ACWR medio 1.75</title></line>
-<text x="466.5" y="63.1" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S6 1.75</text>
-<line x1="505.7" y1="79.8" x2="564.5" y2="79.8" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S7 · ACWR medio 1.67</title></line>
-<text x="535.1" y="71.8" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S7 1.67</text>
-<line x1="574.3" y1="105.2" x2="633.2" y2="105.2" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S8 · ACWR medio 1.44</title></line>
-<text x="603.8" y="97.2" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S8 1.44</text>
-<line x1="643.0" y1="112.9" x2="701.8" y2="112.9" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S9 · ACWR medio 1.37</title></line>
-<text x="672.4" y="104.9" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S9 1.37</text>
-<line x1="711.6" y1="143.9" x2="770.4" y2="143.9" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S10 · ACWR medio 1.10</title></line>
-<text x="741.0" y="135.9" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S10 1.10</text>
-<line x1="780.2" y1="142.1" x2="790.0" y2="142.1" stroke="#ffffff" stroke-width="2.5" opacity="0.8"><title>S11 · ACWR medio 1.11</title></line>
-<text x="785.1" y="134.1" text-anchor="middle" fill="#ffffff" stroke="#0f0f0f" stroke-width="3" paint-order="stroke" font-family="Courier New" font-size="11">S11 1.11</text>
-<text x="45.0" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">26/08</text>
-<text x="103.8" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/09</text>
-<text x="241.1" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">15/09</text>
-<text x="397.9" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/10</text>
-<text x="535.1" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">15/10</text>
-<text x="701.8" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">01/11</text>
-<text x="790.0" y="218" text-anchor="middle" fill="#5aaa5a" font-family="Courier New" font-size="11">10/11</text>
-<line x1="560" y1="240" x2="580" y2="240" stroke="#66ff66" stroke-width="2"/><text x="584" y="244" fill="#66ff66" font-family="Courier New" font-size="12">ACWR giornaliero</text>
-<line x1="730" y1="240" x2="750" y2="240" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/><text x="754" y="244" fill="#ffffff" font-family="Courier New" font-size="12">media settimana</text>
-</svg>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg mt-4">
-                <div><span class="muted">Oggi:</span> <span class="success">1.17 · basso rischio</span></div>
-                <div><span class="muted">Media S10:</span> <span class="success">1.10 · basso rischio</span></div>
-                <div><span class="muted">Tendenza:</span> <span class="success">↓ in calo da S6</span></div>
-            </div>
-            <p class="muted text-sm mt-3">Con 3 sedute a settimana l'ACWR giornaliero sale nei giorni di corsa e scende in quelli di riposo: conta la media della settimana, non il singolo picco. Le medie raccontano la storia: <span class="accent">S6 1.75 → S7 1.67 → S8 1.44 → S9 1.37 → S10 1.10</span>, S11 1.11 nei primi due giorni. A inizio ottobre il carico è cresciuto molto più in fretta della base, ed è anche il periodo in cui la fascia plantare ha cominciato a farsi sentire (13, 16 e 17 ottobre): una coincidenza da tenere a mente, non una prova di causa. Con S10 il rapporto è entrato per la prima volta nella fascia a basso rischio. Il blocco verso la 10K (S11-S13) riporta il carico verso l'alto: l'obiettivo è tenere la media settimanale sotto 1.5, idealmente 1.3. Le soglie di Gabbett vengono da atleti di squadra che si allenano quasi ogni giorno: per chi corre 3 volte a settimana sono un'indicazione, non un limite rigido.</p>
-        </div>
-
-        <!-- Coach's Commentary -->
-        <div class="card p-6 rounded-lg border-4">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">💬 COMMENTO DEL COACH</h2>
-            <div class="space-y-4 text-base leading-relaxed">
-                <p>Allora Salvatore, <span class="accent font-bold">Roma 5K corsa tutta, obiettivo 1 raggiunto</span>. Dieci settimane, 29 sedute pianificate su 29, e la gara chiusa in 32:28 sull'orologio con una volata a 5:29.</p>
-
-                <p><span class="accent font-bold">La gara:</span><br>
-                il piano chiedeva 2 km a soglia alla fine, tu sei arrivato a soglia dal km 2 e l'hai tenuta per 4 km (6:17, 6:16, 6:16, 6:05), sempre in controllo, RPE 3. Confrontata con l'Acea di marzo sulla stessa misura (GPS contro GPS): 6:33/km a FC 160 allora, 6:18/km a FC 163 oggi, su un percorso più mosso. Sono -15"/km, VDOT da 27.7 a 29.2. Il numero va letto con prudenza: l'orologio è lo stesso, ma l'errore del GPS cambia da percorso a percorso (a Roma +3.4% sul percorso ufficiale, all'Acea non noto), e nessuna delle due gare era a tutta. Detto questo, va nella stessa direzione di FC a riposo, HRV ed EF. E stavolta niente arrivo stremato.</p>
-
-                <p><span class="accent font-bold">Il carico:</span><br>
-                lo scarico ha fatto il suo lavoro: TSB a +2.8 il giorno della gara, il primo valore positivo del piano, e ACWR medio a 1.10, finalmente nella fascia a basso rischio. Il CTL non è sceso.</p>
-
-                <p><span class="warning font-bold">I punti da tenere d'occhio:</span><br>
-                FC a riposo 63 e HRV 37 il 9/11, dopo una notte da 5h44 e la giornata in ospedale per tuo figlio. È stress, non allenamento, ma il corpo lo conta lo stesso: venerdì mattina si guardano i segnali prima del Tempo. Poi la fascia plantare: va vista prima di S12-S13, le settimane più pesanti del piano. Bene invece il sonno: 7h01 di media a novembre, 5 notti su 9 sopra le 7 ore.</p>
-
-                <p><span class="success font-bold">Il punto:</span><br>
-                la 5K era una tappa, non un traguardo. Ora si costruisce la 10K a tempo (1h02-1h04): Tempo continuo a 2500 → 3000 → 3500 m e lungo a 6.5 → 7.5 → 8.5 km. Il test vero sarà S13. Fino ad allora, il lungo lo decide la FC e non il passo.</p>
-            </div>
-        </div>
-
-        <!-- Next Sessions -->
-        <div class="card p-6 rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 border-b border-current pb-2">PROSSIME SEDUTE (S11 — RECUPERO BREVE, 9-15 novembre)</h2>
-            <p class="text-lg mb-4"><span class="muted">Volume target S11:</span> <span class="accent">15.00 km</span> <span class="muted text-sm">(4.01 già fatti con la corsa facile di martedì 10)</span></p>
-            <div class="space-y-2">
-                <ul class="list-disc list-inside muted space-y-1 ml-4">
-                    <li><span class="success">✓ Martedì 10 — Corsa facile</span> 4.01 km a 7:53/km, FC 148.</li>
-                    <li>Mercoledì 11 e giovedì 12 — Riposo dalla corsa (giovedì in ufficio). Mobilità ed equilibrio sì.</li>
-                    <li><span class="accent">Venerdì 13 — Tempo:</span> 1 km risc., 2500 m continui @ 6:10-6:30/km (FC ~165, tetto ~168 fino agli ultimi 500 m), 1 km def. — 4.5 km, ~32'. Con la fascia H9. Se le gambe sono ancora pesanti resta a 2000 m. Prima controlla i segnali di prontezza (FC a riposo, HRV, sonno, fascia plantare): con 1 segnale la seduta si alleggerisce, con 2 o più diventa una corsa facile. Controlla anche che l'orologio mostri la fascia di passo del workout.</li>
-                    <li>Sabato 14 — Riposo, a letto entro le 22:30.</li>
-                    <li><span class="accent">Domenica 15 — Lungo:</span> 6.5 km continui @ 7:15-7:40/km, FC ~148-150, tetto 155, partendo piano — ~48'.</li>
-                </ul>
-                <p class="accent font-bold mt-4">Poi S12 (16-22 novembre, 17.7 km):</p>
-                <ul class="list-disc list-inside muted space-y-1 ml-4">
-                    <li>Martedì — Ripetute 4 x 400 m @ 5:20-5:40/km + 2 x 800 m @ 5:35-5:55/km — 5.2 km</li>
-                    <li>Venerdì — Tempo 3000 m continui @ 6:10-6:30/km — 5.0 km</li>
-                    <li>Domenica — Lungo 7.5 km continui @ 7:15-7:40/km — il più lungo finora</li>
-                </ul>
-            </div>
-        </div>
-
+</svg></div>
+      <div class="tw"><table><thead><tr><th class="l">Sett.</th><th class="l">Date</th><th>Reale km</th><th>Piano km</th><th class="l">% del piano</th><th>Δ sett. prec.</th><th></th><th class="l">Note</th></tr></thead><tbody><tr><td class="l">S1</td><td class="l">31 ago-6 set</td><td>12.00</td><td>9.00</td><td class="l">133% <span class="bar"><i class="b" style="width:100%"></i></span></td><td></td><td><span class="ok">✓</span></td><td class="l"></td></tr><tr><td class="l">S2</td><td class="l">7-13 set</td><td>11.34</td><td>12.40</td><td class="l">91% <span class="bar"><i class="b" style="width:91%"></i></span></td><td>-6%</td><td><span class="ok">✓</span></td><td class="l"></td></tr><tr><td class="l">S3</td><td class="l">14-20 set</td><td>14.38</td><td>13.00</td><td class="l">111% <span class="bar"><i class="b" style="width:100%"></i></span></td><td>+27%</td><td><span class="ok">✓</span></td><td class="l"></td></tr><tr><td class="l">S4</td><td class="l">21-27 set</td><td>11.40</td><td>10.60</td><td class="l">108% <span class="bar"><i class="b" style="width:100%"></i></span></td><td>-21%</td><td><span class="ok">✓</span></td><td class="l">scarico</td></tr><tr><td class="l">S5</td><td class="l">28 set-4 ott</td><td>16.16</td><td>14.20</td><td class="l">114% <span class="bar"><i class="b" style="width:100%"></i></span></td><td>+42%</td><td><span class="ok">✓</span></td><td class="l"></td></tr><tr><td class="l">S6</td><td class="l">5-11 ott</td><td>17.50</td><td>15.30</td><td class="l">114% <span class="bar"><i class="b" style="width:100%"></i></span></td><td>+8%</td><td><span class="ok">✓</span></td><td class="l"></td></tr><tr><td class="l">S7</td><td class="l">12-18 ott</td><td>18.05</td><td>16.80</td><td class="l">107% <span class="bar"><i class="b" style="width:100%"></i></span></td><td>+3%</td><td><span class="ok">✓</span></td><td class="l"></td></tr><tr><td class="l">S8</td><td class="l">19-25 ott</td><td>13.58</td><td>12.60</td><td class="l">108% <span class="bar"><i class="b" style="width:100%"></i></span></td><td>-25%</td><td><span class="ok">✓</span></td><td class="l">scarico</td></tr><tr><td class="l">S9</td><td class="l">26 ott-1 nov</td><td>18.59</td><td>17.00</td><td class="l">109% <span class="bar"><i class="b" style="width:100%"></i></span></td><td>+37%</td><td><span class="ok">✓</span></td><td class="l"></td></tr><tr><td class="l">S10</td><td class="l">2-8 nov</td><td>10.66</td><td>8.40</td><td class="l">127% <span class="bar"><i class="b" style="width:100%"></i></span></td><td>-43%</td><td><span class="ok">✓</span></td><td class="l">Roma 5K</td></tr><tr><td class="l">S11</td><td class="l">9-15 nov</td><td>13.92</td><td>15.00</td><td class="l">93% <span class="bar"><i class="b" style="width:93%"></i></span></td><td>+31%</td><td><span class="ok">✓</span></td><td class="l">recupero</td></tr><tr><td class="l">S12</td><td class="l">16-22 nov</td><td>6.40</td><td>17.20</td><td class="l"> <span class="bar"><i class="b dim" style="width:37%"></i></span></td><td></td><td><span class="part">→</span></td><td class="l">in corso</td></tr><tr><td class="l">S13</td><td class="l">23-29 nov</td><td>—</td><td>19.10</td><td class="l"></td><td></td><td><span class="todo">○</span></td><td class="l">picco</td></tr><tr><td class="l">S14</td><td class="l">30 nov-6 dic</td><td>—</td><td>13.80</td><td class="l"></td><td></td><td><span class="todo">○</span></td><td class="l">Best Woman 10K</td></tr></tbody></table></div>
+      <p class="read">Il reale sta stabilmente sopra il piano (~110%) perché il piano conta il lavoro previsto, mentre Garmin registra anche riscaldamenti, defaticamenti, recuperi e allunghi. Il 127% di S10 viene da qui: il piano contava 3.4 km + 5 km di gara, Garmin ha registrato anche gli 1.7 km di riscaldamento e i 5.17 km GPS della gara. Il -43% è voluto, è la settimana della gara. S11 si ferma al 93% perché il Tempo è stato interrotto (3.40 km invece di 4.50). S12-S13 salgono a 17.2 e 19.1 km: il picco di S13 supera di appena il 3% quello di S9.</p>
     </div>
+  </section>
 
-    <footer class="mt-8 text-center muted text-sm py-4">
-        <p>Generato: 2026-11-10 &middot; dashboard.html &middot; Dati da training-plan.md, training-log/week-*.md e health-log/</p>
-        <p>Aggiorna la pagina dopo il prossimo sync per vedere i dati più recenti.</p>
-    </footer>
+  <section id="sedute">
+    <h2>Sedute</h2>
+    <p class="lead">31 sedute su 32 completate da S1 a S11; l'unica interrotta è il Tempo del 13/11.</p>
+    <div class="card"><div class="tw"><table><thead><tr><th class="l">Sett.</th><th class="l">Seduta 1</th><th class="l">Seduta 2</th><th class="l">Seduta 3</th></tr></thead><tbody><tr><td class="l">S1</td><td class="l"><span class="ok">✓</span> Tempo 2x1.5km</td><td class="l"><span class="ok">✓</span> Lungo 4km (3 stop)</td><td class="l"></td></tr><tr><td class="l">S2</td><td class="l"><span class="ok">✓</span> Ripetute 8x200</td><td class="l"><span class="ok">✓</span> Tempo 4x500m</td><td class="l"><span class="ok">✓</span> Lungo 4.2km continuo</td></tr><tr><td class="l">S3</td><td class="l"><span class="ok">✓</span> Ripetute 10x200</td><td class="l"><span class="ok">✓</span> Tempo 3x700m</td><td class="l"><span class="ok">✓</span> Lungo 4.5km continuo</td></tr><tr><td class="l">S4</td><td class="l"><span class="ok">✓</span> Ripetute 8x200</td><td class="l"><span class="ok">✓</span> Corsa facile 3.5km</td><td class="l"><span class="ok">✓</span> Lungo 3.5km (scarico)</td></tr><tr><td class="l">S5</td><td class="l"><span class="ok">✓</span> Ripetute 12x200</td><td class="l"><span class="ok">✓</span> Tempo 3x800m</td><td class="l"><span class="ok">✓</span> Lungo 5.0km continuo</td></tr><tr><td class="l">S6</td><td class="l"><span class="ok">✓</span> Ripetute 15x200</td><td class="l"><span class="ok">✓</span> Tempo 2x1200m</td><td class="l"><span class="ok">✓</span> Lungo 5.7km continuo</td></tr><tr><td class="l">S7</td><td class="l"><span class="ok">✓</span> Ripetute 8x400</td><td class="l"><span class="ok">✓</span> Tempo 2x1500m</td><td class="l"><span class="ok">✓</span> Lungo 6.4km continuo</td></tr><tr><td class="l">S8</td><td class="l"><span class="ok">✓</span> Ripetute 6x400</td><td class="l"><span class="ok">✓</span> Corsa facile 4.0km</td><td class="l"><span class="ok">✓</span> Lungo 4.2km (scarico)</td></tr><tr><td class="l">S9</td><td class="l"><span class="ok">✓</span> Ripetute 10x400</td><td class="l"><span class="ok">✓</span> Tempo 2000m continuo</td><td class="l"><span class="ok">✓</span> Lungo 7.0km continuo</td></tr><tr><td class="l">S10</td><td class="l"><span class="ok">✓</span> Ripetute 4x200</td><td class="l"><span class="ok">✓</span> Shakeout 1.6km</td><td class="l"><span class="ok">✓</span> <b>Roma 5K</b> 32:28, tutta di corsa</td></tr><tr><td class="l">S11</td><td class="l"><span class="ok">✓</span> Corsa facile 4km</td><td class="l"><span class="ko">✗</span> Tempo 2500m, stop a 1.7km</td><td class="l"><span class="ok">✓</span> Lungo 6.5km continuo</td></tr><tr><td class="l">S12</td><td class="l"><span class="ok">✓</span> Ripetute 4x400+2x800</td><td class="l"><span class="todo">○</span> Tempo 2500m (ven 20)</td><td class="l"><span class="todo">○</span> Lungo 7.5km (dom 22)</td></tr></tbody></table></div></div>
+  </section>
+
+  <section id="ritmi">
+    <h2>Ritmi <span class="badge decide">decisione</span></h2>
+    <p class="lead">Le ultime sedute per tipo, rispetto alla fascia del piano.</p>
+    <div class="card"><div class="tw"><table><thead><tr><th class="l">Seduta (fascia)</th><th class="l">Risultato</th><th class="l">Note</th></tr></thead><tbody><tr><td class="l">Ripetute 400m (5:20-5:40/km)</td><td class="l"><span class="ok">5:27 · 5:20 · 5:15 · 5:33 ✓</span></td><td class="l">S12, 17/11; 3 su 4 in fascia, la terza 5" veloce</td></tr><tr><td class="l">Ripetute 800m (5:35-5:55/km)</td><td class="l"><span class="ok">5:52 · 5:49 ✓</span></td><td class="l">S12; FC 162 e 161, RPE 5. La seconda "tostissima", ma era la più veloce e con più potenza, 315 W contro 306: non era lenta, era più dura</td></tr><tr><td class="l">Lungo (7:15-7:40/km, FC ~148-150, tetto 155)</td><td class="l"><span class="ok">7:11/km, FC 148 (max 156) ✓</span></td><td class="l">S11, 15/11; km 2-4 a 7:06, appena sotto la fascia ma con la FC giusta: comanda la FC. RPE 3, "Forte"</td></tr><tr><td class="l">Tempo continuo (6:10-6:30/km)</td><td class="l"><span class="warn">1° km 6:13 (FC 162), stop a 1.7 km ✗</span></td><td class="l">S11, 13/11; fatica residua a 5 giorni dalla gara. Si ripete il 2500 m venerdì 20, nella fascia 6:15-6:35</td></tr><tr><td class="l">Roma 5K (progressiva, piano 6:50 → 6:10)</td><td class="l"><span class="ok">6:44 · 6:17 · 6:16 · 6:16 · 6:05 ✓</span></td><td class="l">S10; FC 146 → 171 al polso, volata 5:29; soglia arrivata dal km 2: 4 km a soglia invece di 2, sempre in controllo, RPE 3</td></tr><tr><td class="l">Corsa facile (7:35-8:13/km, FC ≤150)</td><td class="l"><span class="ok">7:53/km, FC 148 ✓</span></td><td class="l">S11, 10/11; ai km 2-4 FC 150-152 per lo stress della giornata in ospedale</td></tr></tbody></table></div><p class="read">La gara conferma il test del 29/10: soglia ~6:15/km e FC di soglia ~165 (Friel dal 10' alla fine 168, al polso). Il VDOT della gara (29.2 GPS, progressiva e non a tutta) è un valore minimo e non supera quello del test (~30-31): ritmi e zone restano invariati. Il Tempo interrotto non cambia la soglia: il cuore era al solito posto (6:13 a FC 162), è cambiata la fatica.</p></div>
+  </section>
+
+  <section id="resistenza">
+    <h2>Resistenza aerobica</h2>
+    <p class="lead">Decoupling ed Endurance Score dei lunghi. Il decoupling sotto il 5% dice che la tenuta c'è ed è il via libera ad allungare, non ad accelerare.</p>
+    <div class="card"><div class="tw"><table><thead><tr><th class="l">Data</th><th>Lungo</th><th class="l">Decoupling (sotto 5% = tenuta)</th><th class="l">ES (scala 0-12)</th><th class="l">Livello</th></tr></thead><tbody><tr><td class="l">13/09</td><td>4.2 km</td><td class="l">3.0% <span class="bar"><i class="b3" style="width:60%"></i></span> <span class="ok">✓</span></td><td class="l">6.2 <span class="bar"><i class="b" style="width:52%"></i></span></td><td class="l">Primi km</td></tr><tr><td class="l">20/09</td><td>4.5 km</td><td class="l">4.8% <span class="bar"><i class="b3" style="width:96%"></i></span> <span class="ok">✓</span></td><td class="l">7.0 <span class="bar"><i class="b" style="width:58%"></i></span></td><td class="l">Primi km</td></tr><tr><td class="l">04/10</td><td>5.0 km</td><td class="l">2.1% <span class="bar"><i class="b3" style="width:42%"></i></span> <span class="ok">✓</span></td><td class="l">7.8 <span class="bar"><i class="b" style="width:65%"></i></span></td><td class="l">Primi km</td></tr><tr><td class="l">11/10</td><td>5.7 km</td><td class="l">4.3% <span class="bar"><i class="b3" style="width:86%"></i></span> <span class="ok">✓</span></td><td class="l">8.9 <span class="bar"><i class="b" style="width:74%"></i></span></td><td class="l">Base</td></tr><tr><td class="l">18/10</td><td>6.4 km</td><td class="l">1.3% <span class="bar"><i class="b3" style="width:26%"></i></span> <span class="ok">✓</span></td><td class="l">10.0 <span class="bar"><i class="b" style="width:83%"></i></span></td><td class="l">Base</td></tr><tr><td class="l">25/10</td><td>4.2 km</td><td class="l">1.3% <span class="bar"><i class="b3" style="width:26%"></i></span> <span class="ok">✓</span></td><td class="l">6.3 <span class="bar"><i class="b" style="width:52%"></i></span></td><td class="l">Primi km (scarico)</td></tr><tr><td class="l">01/11</td><td>7.0 km</td><td class="l">0.7% <span class="bar"><i class="b3" style="width:14%"></i></span> <span class="ok">✓</span></td><td class="l">10.6 <span class="bar"><i class="b" style="width:88%"></i></span></td><td class="l">Base</td></tr><tr><td class="l">15/11</td><td>6.5 km</td><td class="l">2.3% <span class="bar"><i class="b3" style="width:46%"></i></span> <span class="ok">✓</span></td><td class="l">10.2 <span class="bar"><i class="b" style="width:85%"></i></span></td><td class="l">Base</td></tr></tbody></table></div><p class="read">Il 6.5 km del 15/11, primo lungo dopo la gara, conferma la base: decoupling 2.3% ed ES 10.2, con una FC più bassa del lungo del 1/11 (148 contro 153). Il prossimo punto è il 7.5 km di domenica 22, il più lungo finora. Decoupling sotto il 5% = buona tenuta aerobica. Barre ES su scala 0-10 (soglia di "Base solida" a 12). Il lungo del 1/11 è il più lungo e ha il decoupling più basso di sempre (0.7%): ES record a 10.6. Un decoupling così basso non chiede di correre più forte ma dice che si può allungare: il passo del lungo resta governato dalla FC (~148-150, tetto 155). Capacity Score (Tempo continuo ≥20'): il blocco più lungo finora è il 2000 m (12.6'). Il 3500 m è uscito dal piano e il 3000 m di S13 dura ~19': il CS potrebbe arrivare solo dopo la 10K.</p></div>
+  </section>
+
+  <section id="potenza">
+    <h2>Potenza <span class="badge">contesto</span></h2>
+    <p class="lead">Potenza Garmin dal polso (Forerunner 255), tracciata dal 18/11 su tutto lo storico. Soglia 285 W, stimata dai Tempo alla FC di soglia (164-167) e confermata dalla 5K; la 10K può alzarla, non abbassarla. Le fasce sono tarate sui tuoi dati: dal polso la potenza resta alta alle andature lente, quindi le tabelle generiche non valgono. La FC resta la metrica di decisione per facili e lunghi; la potenza serve in salita, nelle ripetute brevi (la FC arriva in ritardo) e in gara.</p>
+    <div class="grid2">
+      <div class="card"><h3>Fasce (soglia 285 W)</h3><div class="tw"><table><thead><tr><th class="l">Fascia</th><th>% soglia</th><th>Watt</th><th class="l">Dove ti trovi oggi</th></tr></thead><tbody><tr><td class="l">P1 Recupero</td><td>< 82%</td><td>< 234 W</td><td class="l">riscaldamenti, camminate</td></tr><tr><td class="l">P2 Facile</td><td>82-90%</td><td>234-256 W</td><td class="l">corse facili 238-247 W, lunghi 249-256 W</td></tr><tr><td class="l">P3 Medio</td><td>90-96%</td><td>256-274 W</td><td class="l">lunghi al limite alto (257-260 W)</td></tr><tr><td class="l">P4 Soglia</td><td>96-105%</td><td>274-299 W</td><td class="l">Tempo 284-294 W, gara 5K 287-298 W</td></tr><tr><td class="l">P5 Intervalli</td><td>105-118%</td><td>299-336 W</td><td class="l">800 m 306-315 W, 400 m 313-335 W</td></tr><tr><td class="l">P6 Ripetute brevi</td><td>> 118%</td><td>> 336 W</td><td class="l">allunghi fino a ~520 W</td></tr></tbody></table></div></div>
+      <div class="card"><h3>Economia con la potenza (RE) <span class="badge">contesto</span></h3><p class="hint">velocità ÷ (watt/kg) nei lunghi · non dipende dalla FC · conta solo il trend</p><div class="tw"><table><thead><tr><th class="l">Data</th><th>Lungo</th><th>Potenza nel tratto 7:00-7:20</th><th>RE</th></tr></thead><tbody><tr><td class="l">20/09</td><td>4.5 km</td><td>261 W</td><td>0.689</td></tr><tr><td class="l">27/09</td><td>3.5 km</td><td>261 W</td><td>0.689</td></tr><tr><td class="l">04/10</td><td>5.0 km</td><td>260 W</td><td>0.695</td></tr><tr><td class="l">11/10</td><td>5.7 km</td><td>256 W</td><td>0.706</td></tr><tr><td class="l">18/10</td><td>6.4 km</td><td>259 W</td><td>0.693</td></tr><tr><td class="l">01/11</td><td>7.0 km</td><td>260 W</td><td>0.691</td></tr><tr><td class="l">15/11</td><td>6.5 km</td><td>254 W</td><td>0.707</td></tr></tbody></table></div>
+        <p class="read">Ferma fra 0.689 e 0.707 da settembre: troppo poco per parlare di miglioramento. Se l'EF scende e la RE no, è la FC (caldo, fatica), non la meccanica.</p></div>
+    </div>
+    <div class="card" style="margin-top:14px"><h3>Sedute recenti</h3><div class="tw"><table><thead><tr><th class="l">Data</th><th class="l">Seduta</th><th class="l">Potenza</th><th>Fascia</th><th class="l">Lettura</th></tr></thead><tbody><tr><td class="l">17/11</td><td class="l">S12 Ripetute</td><td class="l">400 m 313-335 W · 800 m 306 e 315 W</td><td>P5</td><td class="l">FC 158-162; la 2ª 800 più veloce e con più watt</td></tr><tr><td class="l">15/11</td><td class="l">S11 Lungo 6.5 km</td><td class="l">254 W medi (248-260 a km)</td><td>P2</td><td class="l">FC 148 · RE 0.707</td></tr><tr><td class="l">13/11</td><td class="l">S11 Tempo (interrotto)</td><td class="l">1° km a 6:13: <b>308 W</b></td><td>P5</td><td class="l">FC 162; il 29/10 lo stesso passo era a 286-294 W</td></tr><tr><td class="l">10/11</td><td class="l">S11 Facile</td><td class="l">240 W</td><td>P2</td><td class="l">FC 148</td></tr><tr><td class="l">08/11</td><td class="l">Roma 5K</td><td class="l">294 W medi · km 287-298 W</td><td>P4</td><td class="l">km 1 a 6:44 già a 287 W; km 5 a 6:05 a 292 W (discesa)</td></tr><tr><td class="l">29/10</td><td class="l">S9 Tempo 2000 m</td><td class="l">294 e 286 W a 6:10 e 6:13</td><td>P4</td><td class="l">FC 164-167, con fascia</td></tr></tbody></table></div>
+      <p class="read">Il dato nuovo è il Tempo del 13/11: allo stesso passo del test (6:13) la potenza era 308 W, contro 286-294. Più lavoro meccanico per la stessa velocità: vento, o una corsa meno economica per la fatica. Da un dato solo non si distingue, ma va nella direzione della sensazione "Debole". Nella 10K la potenza serve da tetto per il km 1 (~275-280 W).</p></div>
+  </section>
+
+  <section id="rpe">
+    <h2>Come ti sei sentito (RPE)</h2>
+    <p class="lead">Il voto che dai su Garmin a fine corsa (RPE 1-10) accanto al carico misurato. sRPE = RPE × minuti (Foster): il carico "percepito", da leggere accanto al TSS. Le settimane in cui sRPE cresce più del TSS sono quelle in cui l'allenamento è sembrato più duro di quanto fosse.</p>
+    <div class="card"><div class="tw"><table><thead><tr><th class="l">Sett.</th><th class="l">RPE medio</th><th>Votate</th><th>sRPE</th><th>TSS</th><th class="l">Note</th></tr></thead><tbody><tr><td class="l">S1</td><td class="l">4.0 <span class="bar"><i class="b2" style="width:40%"></i></span></td><td>2/3</td><td>286</td><td>118</td><td class="l"></td></tr><tr><td class="l">S2</td><td class="l">3.3 <span class="bar"><i class="b2" style="width:33%"></i></span></td><td></td><td>309</td><td>110</td><td class="l"></td></tr><tr><td class="l">S3</td><td class="l">3.7 <span class="bar"><i class="b2" style="width:37%"></i></span></td><td>3/5</td><td>338</td><td>139</td><td class="l"></td></tr><tr><td class="l">S4</td><td class="l">3.0 <span class="bar"><i class="b2" style="width:30%"></i></span></td><td>2/3</td><td>177</td><td>109</td><td class="l">scarico</td></tr><tr><td class="l">S5</td><td class="l">3.2 <span class="bar"><i class="b2" style="width:32%"></i></span></td><td></td><td>415</td><td>155</td><td class="l"></td></tr><tr><td class="l">S6</td><td class="l">3.7 <span class="bar"><i class="b2" style="width:37%"></i></span></td><td>3/4</td><td>430</td><td>169</td><td class="l"></td></tr><tr><td class="l">S7</td><td class="l">4.0 <span class="bar"><i class="b2" style="width:40%"></i></span></td><td></td><td>523</td><td>177</td><td class="l"></td></tr><tr><td class="l">S8</td><td class="l">2.7 <span class="bar"><i class="b2" style="width:27%"></i></span></td><td></td><td>287</td><td>127</td><td class="l">scarico</td></tr><tr><td class="l">S9</td><td class="l">3.7 <span class="bar"><i class="b2" style="width:37%"></i></span></td><td></td><td>515</td><td>184</td><td class="l"></td></tr><tr><td class="l">S10</td><td class="l">2.3 <span class="bar"><i class="b2" style="width:23%"></i></span></td><td>3/4</td><td>157</td><td>103</td><td class="l">gara</td></tr><tr><td class="l">S11</td><td class="l">3.3 <span class="bar"><i class="b2" style="width:33%"></i></span></td><td></td><td>322</td><td>127</td><td class="l">recupero</td></tr><tr><td class="l">S12</td><td class="l">5.0 <span class="bar"><i class="b2" style="width:50%"></i></span></td><td>1/1</td><td>227</td><td>67</td><td class="l">in corso</td></tr></tbody></table></div>
+      <div class="kv" style="margin-top:10px"><div><span class="mut">Per tipo di seduta:</span> <span class="hl">ripetute 4-5 · Tempo 3-4 · lungo 3 · facile/recupero 1-2</span></div><div><span class="mut">S10:</span> <span class="hl">4x200 RPE 3 (Debole) · shakeout RPE 1 (Forte) · Roma 5K RPE 3 (Forte)</span></div><div><span class="mut">S11:</span> <span class="hl">corsa facile RPE 2 (Debole) · Tempo RPE 5 (Debole, interrotto) · lungo RPE 3 (Forte)</span></div><div><span class="mut">S12:</span> <span class="hl">ripetute 4x400+2x800 RPE 5 (Normale)</span></div></div>
+      <p class="read">La gara votata RPE 3, come un lungo, con 4 km a soglia: è il dato soggettivo più forte del blocco. Il Tempo del 13/11 votato 5 e "Debole" è lo scostamento più grande dal solito (i Tempo stanno a 3-4): lo sforzo percepito era cambiato prima del cuore. Due giorni dopo, il lungo è tornato "Forte". Le sedute "Debole" di novembre (3/11, 10/11, 13/11) hanno tutte una causa nota: stanchezza dopo l'estrazione, giornata in ospedale, fatica residua della gara.</p><p class="read">Tra parentesi le sedute votate quando non lo sono tutte (allunghi e alcune corse di agosto-settembre senza voto); ottobre è votato al 93%. Due letture utili: il 6x400 di S8 è l'unica seduta segnata "Debole" (25/100), proprio nella settimana di HRV bassa e sonno corto; e il Tempo continuo del test, che sulla carta è la seduta più dura, è stato votato 3, come un lungo. Le scale dei voti (1-10) sono grossolane: l'RPE serve per i trend e per gli scostamenti dal solito, non per il singolo numero.</p>
+    </div>
+  </section>
+
+  <section id="profilo">
+    <h2>Profilo mensile del runner</h2>
+    <p class="lead">Ogni metrica come indice: 100 = primo mese con dati (per la soglia, più alto = più veloce). Il radar mette insieme i due mesi chiusi e quello in corso (tratteggiato): il poligono che si allarga è la qualità che migliora. Il mese in corso è parziale, quindi va letto come tendenza e non come chiusura. Passa sopra un punto per il valore reale.</p>
+    <div class="grid2" style="grid-template-columns:1fr">
+      <div class="card"><h3>Settembre, ottobre e novembre (in corso, tratteggiato)</h3><div class="chart radar"><svg viewBox="0 0 480 440" style="max-width:520px;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profilo del runner, indice 100 = primo mese">
+<polygon points="240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="243.0" y="203.0" style="fill:var(--text-muted, #77766f)" font-size="10">80</text>
+<polygon points="240.0,155.0 275.4,169.6 290.0,205.0 275.4,240.4 240.0,255.0 204.6,240.4 190.0,205.0 204.6,169.6" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="1.5"/>
+<text x="262.1" y="156.8" style="fill:var(--text-muted, #77766f)" font-size="10">100</text>
+<polygon points="240.0,105.0 310.7,134.3 340.0,205.0 310.7,275.7 240.0,305.0 169.3,275.7 140.0,205.0 169.3,134.3" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="281.3" y="110.6" style="fill:var(--text-muted, #77766f)" font-size="10">120</text>
+<polygon points="240.0,55.0 346.1,98.9 390.0,205.0 346.1,311.1 240.0,355.0 133.9,311.1 90.0,205.0 133.9,98.9" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="300.4" y="64.4" style="fill:var(--text-muted, #77766f)" font-size="10">140</text>
+<line x1="240" y1="205" x2="240.0" y2="55.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="240.0" y="59.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">ES</text>
+<line x1="240" y1="205" x2="346.1" y2="98.9" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="346.1" y="102.9" text-anchor="start" style="fill:var(--text-muted, #77766f)" font-size="12">CS (n/d)</text>
+<line x1="240" y1="205" x2="390.0" y2="205.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="390.0" y="209.0" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">Soglia</text>
+<line x1="240" y1="205" x2="346.1" y2="311.1" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="346.1" y="315.1" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">VO2max</text>
+<line x1="240" y1="205" x2="240.0" y2="355.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="240.0" y="359.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">EF</text>
+<line x1="240" y1="205" x2="133.9" y2="311.1" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="133.9" y="315.1" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">M</text>
+<line x1="240" y1="205" x2="90.0" y2="205.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="90.0" y="209.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">FS</text>
+<line x1="240" y1="205" x2="133.9" y2="98.9" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="133.9" y="102.9" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">MCS</text>
+<polygon points="240.0,155.0 290.0,205.0 275.4,240.4 240.0,255.0 204.6,240.4" style="fill:var(--s3, #1baf7a);stroke:var(--s3, #1baf7a)" fill-opacity="0.12" stroke-width="2"/>
+<circle cx="240.0" cy="155.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · ES: 7.0 (indice 100)</title></circle>
+<circle cx="290.0" cy="205.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · Soglia: 6:22/km (indice 100)</title></circle>
+<circle cx="275.4" cy="240.4" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · VO2max: 39.3 (indice 100)</title></circle>
+<circle cx="240.0" cy="255.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · EF: 0.915 (indice 100)</title></circle>
+<circle cx="204.6" cy="240.4" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · M: 0.918 (indice 100)</title></circle>
+<polygon points="240.0,55.0 294.7,205.0 280.3,245.3 240.0,254.0 203.5,241.5 190.0,205.0 204.6,169.6" style="fill:var(--s2, #eb6834);stroke:var(--s2, #eb6834)" fill-opacity="0.12" stroke-width="2"/>
+<circle cx="240.0" cy="55.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · ES: 10.0 (indice 143)</title></circle>
+<circle cx="294.7" cy="205.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · Soglia: 6:16/km (indice 102)</title></circle>
+<circle cx="280.3" cy="245.3" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · VO2max: 40.4 (indice 103)</title></circle>
+<circle cx="240.0" cy="254.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · EF: 0.912 (indice 100)</title></circle>
+<circle cx="203.5" cy="241.5" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · M: 0.924 (indice 101)</title></circle>
+<circle cx="190.0" cy="205.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · FS: 67 (indice 100)</title></circle>
+<circle cx="204.6" cy="169.6" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · MCS: 76 (indice 100)</title></circle>
+<polygon points="240.0,55.0 287.7,205.0 280.8,245.8 240.0,253.5 202.9,242.1" style="fill:var(--s1, #2a78d6);stroke:var(--s1, #2a78d6)" fill-opacity="0.05" stroke-width="2" stroke-dasharray="6,4"/>
+<circle cx="240.0" cy="55.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · ES: 10.6 (indice 151)</title></circle>
+<circle cx="287.7" cy="205.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · Soglia: 6:26/km (indice 99)</title></circle>
+<circle cx="280.8" cy="245.8" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · VO2max: 40.5 (indice 103)</title></circle>
+<circle cx="240.0" cy="253.5" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · EF: 0.910 (indice 99)</title></circle>
+<circle cx="202.9" cy="242.1" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · M: 0.927 (indice 101)</title></circle>
+<rect x="20" y="424" width="14" height="10" style="fill:var(--s3, #1baf7a)" rx="2"/>
+<text x="39" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Settembre 2026</text>
+<rect x="170" y="424" width="14" height="10" style="fill:var(--s2, #eb6834)" rx="2"/>
+<text x="189" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Ottobre 2026</text>
+<rect x="320" y="424" width="14" height="10" style="fill:var(--s1, #2a78d6)" rx="2"/>
+<text x="339" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Novembre 2026 (in corso)</text>
+</svg></div></div>
+      <div class="card"><h3>Indici (100 = primo mese)</h3><div class="tw"><table><thead><tr><th class="l">Qualita</th><th class="l">Metrica</th><th>Settembre 2026</th><th>Ottobre 2026</th><th>Novembre 2026 (in corso)</th></tr></thead><tbody><tr><td class="l">Resistenza aerobica</td><td class="l">ES</td><td>7.0 (100)</td><td>10.0 (143)</td><td>10.6 (151)</td></tr><tr><td class="l">Capacita aerobica</td><td class="l">CS</td><td>n/d</td><td>n/d</td><td>n/d</td></tr><tr><td class="l">Potenza aerobica</td><td class="l">Soglia</td><td>6:22/km (100)</td><td>6:16/km (102)</td><td>6:26/km (99)</td></tr><tr><td class="l">VO2max</td><td class="l">VO2max</td><td>39.3 (100)</td><td>40.4 (103)</td><td>40.5 (103)</td></tr><tr><td class="l">Economia (cuore)</td><td class="l">EF</td><td>0.915 (100)</td><td>0.912 (100)</td><td>0.910 (99)</td></tr><tr><td class="l">Economia (meccanica)</td><td class="l">M</td><td>0.918 (100)</td><td>0.924 (101)</td><td>0.927 (101)</td></tr><tr><td class="l">Economia (totale)</td><td class="l">RES</td><td>84.0 (100)</td><td>85.2 (101)</td><td>84.3 (100)</td></tr><tr><td class="l">Forza</td><td class="l">FS</td><td>n/d</td><td>67 (100)</td><td>n/d</td></tr><tr><td class="l">Mobilita e controllo</td><td class="l">MCS</td><td>n/d</td><td>76 (100)</td><td>n/d</td></tr></tbody></table></div><div class="tw"><table><thead><tr><th class="l">Chiusura del mese</th><th>Settembre</th><th>Ottobre</th><th>Δ</th></tr></thead><tbody><tr><td class="l">Corse</td><td>15</td><td>15</td><td></td></tr><tr><td class="l">Km</td><td>54.5</td><td>71.5</td><td>+31%</td></tr><tr><td class="l">Ore di corsa</td><td>6.98</td><td>8.64</td><td>+24%</td></tr><tr><td class="l">TSS</td><td>529</td><td>695</td><td>+31%</td></tr><tr><td class="l">Lungo più lungo</td><td>5.4 km</td><td>7.6 km*</td><td></td></tr><tr><td class="l">RPE medio</td><td>3.5</td><td>3.4</td><td>=</td></tr><tr><td class="l">sRPE totale</td><td>1269</td><td>1859</td><td>+46%</td></tr><tr><td class="l">FC a riposo (media)</td><td>57.4</td><td>57.5</td><td>=</td></tr><tr><td class="l">HRV (media)</td><td>52.4</td><td>51.1</td><td>-1.3 ms</td></tr><tr><td class="l">Sonno (media)</td><td>6h09</td><td>6h43</td><td>+34'</td></tr><tr><td class="l">Notti ≥ 7h</td><td>4/29</td><td>11/29</td><td></td></tr></tbody></table></div></div>
+    </div>
+    <div class="card" style="margin-top:14px"><p class="read">*7.6 km è il 10x400 con riscaldamento e defaticamento; il lungo continuo più lungo di ottobre è il 6.4 km del 18/10 (il 7 km è del 1° novembre).</p><p class="read"><span class="hl">Ottobre chiuso.</span> Il mese della resistenza: ES +43%, VO2max +3%, soglia di 7" più veloce (confermata dal test continuo), meccanica +1%. L'EF resta fermo, come previsto: si muove in mesi. Il volume sale del 31% con lo stesso RPE medio, quindi lo stesso lavoro sembra più facile. FC a riposo e HRV restano stabili e il sonno migliora di mezz'ora a notte. Il CS arriverà con il primo Tempo continuo di almeno 20' (S13). Forza (FS 67) e mobilità e controllo (MCS 76) vengono dal test mensile del 24/10: ogni test vale lato più debole ÷ riferimento × 100 (tetto 100), e l'indice è la media dei test. A sinistra mancano soprattutto calf raise (52), side plank (48), equilibrio (60) e mezzo squat (50). Si aggiornano al test del 21 novembre.</p><p class="read"><span class="hl">Novembre (in corso, al 18/11):</span> ES 10.6 (indice 151, dal lungo del 1/11; il 15/11 10.2), VO2max 40.5 (103), EF 0.910 (99), meccanica 0.927 (101), RES 84.3 (100). La soglia di novembre in <span class="hl">health-log/monthly-profile.md</span> (6:26/km) mescola la gara sui 5.00 km ufficiali con il tempo dallo sparo e il Tempo interrotto. Sul GPS e con il tempo dell'orologio la gara è a 6:18/km, e la soglia resta quella del test, ~6:15/km. Il radar si aggiorna quando il mese è chiuso. Primi 18 giorni: 9 corse, 38.0 km, FC a riposo media 58.8, HRV 46.4 ms, sonno medio 6h46 con 6 notti su 17 sopra le 7h. Il sonno è sceso rispetto ai primi 10 giorni (7h01): la settimana dal 12 al 16 è stata la più corta del mese. Nuovo indicatore: <span class="hl">RE</span> (velocità diviso watt/kg), l'economia misurata con la potenza invece che con la FC. Da settembre è ferma fra 0.689 e 0.707 (0.707 il 15/11): troppo poco per parlare di miglioramento, ma è una base da cui partire.</p></div>
+  </section>
+
+  <section id="carico">
+    <h2>Carico di allenamento (CTL / ATL / TSB)</h2>
+    <p class="lead">Stile TrainingPeaks, dal TSS giornaliero (NGP/IF di ogni seduta). 85 giorni di storico: il CTL ha superato i 42 giorni necessari a convergere. La linea tratteggiata arancione è la Roma 5K. Passa sopra una barra per i valori del giorno.</p>
+    <div class="card">
+      <div class="legend"><span><i style="background:var(--s1)"></i>CTL (forma)</span><span><i style="background:var(--s2)"></i>ATL (fatica)</span><span><i style="background:var(--s2);opacity:.6"></i>TSB &lt; 0</span><span><i style="background:var(--s3)"></i>TSB &gt; 0</span></div>
+      <div class="chart"><svg viewBox="0 0 900 320" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CTL, ATL e TSB giornalieri">
+<line x1="45" y1="205.0" x2="875" y2="205.0" style="stroke:var(--grid)" stroke-width="1"/>
+<text x="38" y="209.0" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">0</text>
+<line x1="45" y1="141.7" x2="875" y2="141.7" style="stroke:var(--grid)" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="145.7" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">10</text>
+<line x1="45" y1="78.3" x2="875" y2="78.3" style="stroke:var(--grid)" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="82.3" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">20</text>
+<line x1="45" y1="15.0" x2="875" y2="15.0" style="stroke:var(--grid)" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="19.0" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">30</text>
+<line x1="776.2" y1="15" x2="776.2" y2="270" style="stroke:var(--s2)" stroke-width="1" stroke-dasharray="2,4"/><text x="772.2" y="28" text-anchor="end" style="fill:var(--s2)"  font-size="11">🏁5K</text>
+<polyline fill="none" style="stroke:var(--s2)" stroke-width="2" points="45.0,180.9 54.9,153.7 64.8,160.7 74.6,136.6 84.5,146.1 94.4,155.0 104.3,130.9 114.2,141.7 124.0,150.5 133.9,117.0 143.8,129.6 153.7,105.6 163.6,120.1 173.5,98.0 183.3,113.2 193.2,126.5 203.1,105.6 213.0,120.1 222.9,98.6 232.7,113.8 242.6,84.0 252.5,101.8 262.4,116.3 272.3,89.1 282.1,105.6 292.0,76.4 301.9,94.8 311.8,70.7 321.7,89.7 331.5,106.2 341.4,91.6 351.3,107.5 361.2,92.9 371.1,108.7 381.0,73.9 390.8,92.3 400.7,108.7 410.6,79.0 420.5,96.7 430.4,64.4 440.2,84.7 450.1,44.8 460.0,67.6 469.9,87.2 479.8,62.5 489.6,82.8 499.5,46.0 509.4,68.8 519.3,26.4 529.2,52.4 539.0,73.9 548.9,45.4 558.8,68.2 568.7,36.5 578.6,60.6 588.5,30.2 598.3,55.5 608.2,76.4 618.1,61.9 628.0,82.1 637.9,68.8 647.7,88.5 657.6,31.5 667.5,56.2 677.4,41.6 687.3,65.0 697.1,84.7 707.0,44.8 716.9,67.6 726.8,67.6 736.7,87.2 746.5,91.6 756.4,107.5 766.3,121.4 776.2,73.9 786.1,92.3 796.0,77.7 805.8,96.1 815.7,111.3 825.6,94.2 835.5,110.0 845.4,70.1 855.2,89.7 865.1,45.4 875.0,68.2"/>
+<polyline fill="none" style="stroke:var(--s1)" stroke-width="3" points="45.0,200.6 54.9,195.5 64.8,195.5 74.6,190.4 84.5,191.1 94.4,191.7 104.3,186.6 114.2,187.3 124.0,187.3 133.9,180.9 143.8,181.6 153.7,176.5 163.6,177.1 173.5,172.1 183.3,172.7 193.2,173.3 203.1,168.9 213.0,170.2 222.9,165.1 232.7,166.4 242.6,160.0 252.5,160.7 262.4,161.9 272.3,156.2 282.1,157.5 292.0,151.2 301.9,152.4 311.8,147.4 321.7,148.6 331.5,149.9 341.4,146.7 351.3,148.0 361.2,144.2 371.1,146.1 381.0,139.1 390.8,141.0 400.7,142.3 410.6,136.6 420.5,137.9 430.4,131.5 440.2,133.4 450.1,125.8 460.0,127.7 469.9,129.6 479.8,124.6 489.6,126.5 499.5,118.9 509.4,121.4 519.3,112.5 529.2,115.1 539.0,117.0 548.9,111.3 558.8,113.8 568.7,107.5 578.6,109.4 588.5,103.7 598.3,105.6 608.2,108.1 618.1,104.9 628.0,107.5 637.9,104.3 647.7,106.8 657.6,96.7 667.5,99.9 677.4,96.1 687.3,98.6 697.1,101.1 707.0,94.2 716.9,96.7 726.8,96.1 736.7,98.6 746.5,99.2 756.4,101.8 766.3,104.3 776.2,96.7 786.1,99.2 796.0,96.7 805.8,99.2 815.7,101.8 825.6,98.6 835.5,101.1 845.4,94.8 855.2,97.3 865.1,90.4 875.0,92.9"/>
+<line x1="45" y1="260" x2="875" y2="260" style="stroke:var(--axis)" stroke-width="1"/>
+<text x="38" y="264" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">0</text>
+<rect x="41.5" y="260.0" width="6.9" height="5.6" style="fill:var(--s2)" opacity="0.6"><title>26/08 · CTL 0.7 · ATL 3.8 · TSB -3.7</title></rect>
+<rect x="51.4" y="260.0" width="6.9" height="4.7" style="fill:var(--s2)" opacity="0.6"><title>27/08 · CTL 1.5 · ATL 8.1 · TSB -3.1</title></rect>
+<rect x="61.3" y="260.0" width="6.9" height="9.9" style="fill:var(--s2)" opacity="0.6"><title>28/08 · CTL 1.5 · ATL 7.0 · TSB -6.6</title></rect>
+<rect x="71.2" y="260.0" width="6.9" height="8.2" style="fill:var(--s2)" opacity="0.6"><title>29/08 · CTL 2.3 · ATL 10.8 · TSB -5.5</title></rect>
+<rect x="81.1" y="260.0" width="6.9" height="12.9" style="fill:var(--s2)" opacity="0.6"><title>30/08 · CTL 2.2 · ATL 9.3 · TSB -8.6</title></rect>
+<rect x="90.9" y="260.0" width="6.9" height="10.6" style="fill:var(--s2)" opacity="0.6"><title>31/08 · CTL 2.1 · ATL 7.9 · TSB -7.1</title></rect>
+<rect x="100.8" y="260.0" width="6.9" height="8.7" style="fill:var(--s2)" opacity="0.6"><title>01/09 · CTL 2.9 · ATL 11.7 · TSB -5.8</title></rect>
+<rect x="110.7" y="260.0" width="6.9" height="13.2" style="fill:var(--s2)" opacity="0.6"><title>02/09 · CTL 2.8 · ATL 10.0 · TSB -8.8</title></rect>
+<rect x="120.6" y="260.0" width="6.9" height="10.8" style="fill:var(--s2)" opacity="0.6"><title>03/09 · CTL 2.8 · ATL 8.6 · TSB -7.2</title></rect>
+<rect x="130.5" y="260.0" width="6.9" height="8.7" style="fill:var(--s2)" opacity="0.6"><title>04/09 · CTL 3.8 · ATL 13.9 · TSB -5.8</title></rect>
+<rect x="140.4" y="260.0" width="6.9" height="15.1" style="fill:var(--s2)" opacity="0.6"><title>05/09 · CTL 3.7 · ATL 11.9 · TSB -10.1</title></rect>
+<rect x="150.2" y="260.0" width="6.9" height="12.3" style="fill:var(--s2)" opacity="0.6"><title>06/09 · CTL 4.5 · ATL 15.7 · TSB -8.2</title></rect>
+<rect x="160.1" y="260.0" width="6.9" height="16.6" style="fill:var(--s2)" opacity="0.6"><title>07/09 · CTL 4.4 · ATL 13.4 · TSB -11.1</title></rect>
+<rect x="170.0" y="260.0" width="6.9" height="13.5" style="fill:var(--s2)" opacity="0.6"><title>08/09 · CTL 5.2 · ATL 16.9 · TSB -9.0</title></rect>
+<rect x="179.9" y="260.0" width="6.9" height="17.5" style="fill:var(--s2)" opacity="0.6"><title>09/09 · CTL 5.1 · ATL 14.5 · TSB -11.7</title></rect>
+<rect x="189.8" y="260.0" width="6.9" height="14.1" style="fill:var(--s2)" opacity="0.6"><title>10/09 · CTL 5.0 · ATL 12.4 · TSB -9.4</title></rect>
+<rect x="199.6" y="260.0" width="6.9" height="11.2" style="fill:var(--s2)" opacity="0.6"><title>11/09 · CTL 5.7 · ATL 15.7 · TSB -7.5</title></rect>
+<rect x="209.5" y="260.0" width="6.9" height="15.0" style="fill:var(--s2)" opacity="0.6"><title>12/09 · CTL 5.5 · ATL 13.4 · TSB -10.0</title></rect>
+<rect x="219.4" y="260.0" width="6.9" height="11.9" style="fill:var(--s2)" opacity="0.6"><title>13/09 · CTL 6.3 · ATL 16.8 · TSB -7.9</title></rect>
+<rect x="229.3" y="260.0" width="6.9" height="15.8" style="fill:var(--s2)" opacity="0.6"><title>14/09 · CTL 6.1 · ATL 14.4 · TSB -10.5</title></rect>
+<rect x="239.2" y="260.0" width="6.9" height="12.3" style="fill:var(--s2)" opacity="0.6"><title>15/09 · CTL 7.1 · ATL 19.1 · TSB -8.2</title></rect>
+<rect x="249.0" y="260.0" width="6.9" height="17.9" style="fill:var(--s2)" opacity="0.6"><title>16/09 · CTL 7.0 · ATL 16.3 · TSB -11.9</title></rect>
+<rect x="258.9" y="260.0" width="6.9" height="14.1" style="fill:var(--s2)" opacity="0.6"><title>17/09 · CTL 6.8 · ATL 14.0 · TSB -9.4</title></rect>
+<rect x="268.8" y="260.0" width="6.9" height="10.8" style="fill:var(--s2)" opacity="0.6"><title>18/09 · CTL 7.7 · ATL 18.3 · TSB -7.2</title></rect>
+<rect x="278.7" y="260.0" width="6.9" height="15.9" style="fill:var(--s2)" opacity="0.6"><title>19/09 · CTL 7.5 · ATL 15.7 · TSB -10.6</title></rect>
+<rect x="288.6" y="260.0" width="6.9" height="12.3" style="fill:var(--s2)" opacity="0.6"><title>20/09 · CTL 8.5 · ATL 20.3 · TSB -8.2</title></rect>
+<rect x="298.4" y="260.0" width="6.9" height="17.7" style="fill:var(--s2)" opacity="0.6"><title>21/09 · CTL 8.3 · ATL 17.4 · TSB -11.8</title></rect>
+<rect x="308.3" y="260.0" width="6.9" height="13.6" style="fill:var(--s2)" opacity="0.6"><title>22/09 · CTL 9.1 · ATL 21.2 · TSB -9.1</title></rect>
+<rect x="318.2" y="260.0" width="6.9" height="18.1" style="fill:var(--s2)" opacity="0.6"><title>23/09 · CTL 8.9 · ATL 18.2 · TSB -12.1</title></rect>
+<rect x="328.1" y="260.0" width="6.9" height="14.0" style="fill:var(--s2)" opacity="0.6"><title>24/09 · CTL 8.7 · ATL 15.6 · TSB -9.3</title></rect>
+<rect x="338.0" y="260.0" width="6.9" height="10.4" style="fill:var(--s2)" opacity="0.6"><title>25/09 · CTL 9.2 · ATL 17.9 · TSB -6.9</title></rect>
+<rect x="347.9" y="260.0" width="6.9" height="13.0" style="fill:var(--s2)" opacity="0.6"><title>26/09 · CTL 9.0 · ATL 15.4 · TSB -8.7</title></rect>
+<rect x="357.7" y="260.0" width="6.9" height="9.4" style="fill:var(--s2)" opacity="0.6"><title>27/09 · CTL 9.6 · ATL 17.7 · TSB -6.3</title></rect>
+<rect x="367.6" y="260.0" width="6.9" height="12.3" style="fill:var(--s2)" opacity="0.6"><title>28/09 · CTL 9.3 · ATL 15.2 · TSB -8.2</title></rect>
+<rect x="377.5" y="260.0" width="6.9" height="8.9" style="fill:var(--s2)" opacity="0.6"><title>29/09 · CTL 10.4 · ATL 20.7 · TSB -5.9</title></rect>
+<rect x="387.4" y="260.0" width="6.9" height="15.6" style="fill:var(--s2)" opacity="0.6"><title>30/09 · CTL 10.1 · ATL 17.8 · TSB -10.4</title></rect>
+<rect x="397.3" y="260.0" width="6.9" height="11.4" style="fill:var(--s2)" opacity="0.6"><title>01/10 · CTL 9.9 · ATL 15.2 · TSB -7.6</title></rect>
+<rect x="407.1" y="260.0" width="6.9" height="7.9" style="fill:var(--s2)" opacity="0.6"><title>02/10 · CTL 10.8 · ATL 19.9 · TSB -5.3</title></rect>
+<rect x="417.0" y="260.0" width="6.9" height="13.6" style="fill:var(--s2)" opacity="0.6"><title>03/10 · CTL 10.6 · ATL 17.1 · TSB -9.1</title></rect>
+<rect x="426.9" y="260.0" width="6.9" height="9.8" style="fill:var(--s2)" opacity="0.6"><title>04/10 · CTL 11.6 · ATL 22.2 · TSB -6.5</title></rect>
+<rect x="436.8" y="260.0" width="6.9" height="15.9" style="fill:var(--s2)" opacity="0.6"><title>05/10 · CTL 11.3 · ATL 19.0 · TSB -10.6</title></rect>
+<rect x="446.7" y="260.0" width="6.9" height="11.6" style="fill:var(--s2)" opacity="0.6"><title>06/10 · CTL 12.5 · ATL 25.3 · TSB -7.7</title></rect>
+<rect x="456.5" y="260.0" width="6.9" height="19.2" style="fill:var(--s2)" opacity="0.6"><title>07/10 · CTL 12.2 · ATL 21.7 · TSB -12.8</title></rect>
+<rect x="466.4" y="260.0" width="6.9" height="14.2" style="fill:var(--s2)" opacity="0.6"><title>08/10 · CTL 11.9 · ATL 18.6 · TSB -9.5</title></rect>
+<rect x="476.3" y="260.0" width="6.9" height="10.1" style="fill:var(--s2)" opacity="0.6"><title>09/10 · CTL 12.7 · ATL 22.5 · TSB -6.7</title></rect>
+<rect x="486.2" y="260.0" width="6.9" height="14.7" style="fill:var(--s2)" opacity="0.6"><title>10/10 · CTL 12.4 · ATL 19.3 · TSB -9.8</title></rect>
+<rect x="496.1" y="260.0" width="6.9" height="10.4" style="fill:var(--s2)" opacity="0.6"><title>11/10 · CTL 13.6 · ATL 25.1 · TSB -6.9</title></rect>
+<rect x="505.9" y="260.0" width="6.9" height="17.2" style="fill:var(--s2)" opacity="0.6"><title>12/10 · CTL 13.2 · ATL 21.5 · TSB -11.5</title></rect>
+<rect x="515.8" y="260.0" width="6.9" height="12.5" style="fill:var(--s2)" opacity="0.6"><title>13/10 · CTL 14.6 · ATL 28.2 · TSB -8.3</title></rect>
+<rect x="525.7" y="260.0" width="6.9" height="20.4" style="fill:var(--s2)" opacity="0.6"><title>14/10 · CTL 14.2 · ATL 24.1 · TSB -13.6</title></rect>
+<rect x="535.6" y="260.0" width="6.9" height="14.9" style="fill:var(--s2)" opacity="0.6"><title>15/10 · CTL 13.9 · ATL 20.7 · TSB -9.9</title></rect>
+<rect x="545.5" y="260.0" width="6.9" height="10.2" style="fill:var(--s2)" opacity="0.6"><title>16/10 · CTL 14.8 · ATL 25.2 · TSB -6.8</title></rect>
+<rect x="555.4" y="260.0" width="6.9" height="15.6" style="fill:var(--s2)" opacity="0.6"><title>17/10 · CTL 14.4 · ATL 21.6 · TSB -10.4</title></rect>
+<rect x="565.2" y="260.0" width="6.9" height="10.6" style="fill:var(--s2)" opacity="0.6"><title>18/10 · CTL 15.4 · ATL 26.6 · TSB -7.1</title></rect>
+<rect x="575.1" y="260.0" width="6.9" height="16.8" style="fill:var(--s2)" opacity="0.6"><title>19/10 · CTL 15.1 · ATL 22.8 · TSB -11.2</title></rect>
+<rect x="585.0" y="260.0" width="6.9" height="11.7" style="fill:var(--s2)" opacity="0.6"><title>20/10 · CTL 16.0 · ATL 27.6 · TSB -7.8</title></rect>
+<rect x="594.9" y="260.0" width="6.9" height="17.2" style="fill:var(--s2)" opacity="0.6"><title>21/10 · CTL 15.7 · ATL 23.6 · TSB -11.5</title></rect>
+<rect x="604.8" y="260.0" width="6.9" height="12.0" style="fill:var(--s2)" opacity="0.6"><title>22/10 · CTL 15.3 · ATL 20.3 · TSB -8.0</title></rect>
+<rect x="614.6" y="260.0" width="6.9" height="7.5" style="fill:var(--s2)" opacity="0.6"><title>23/10 · CTL 15.8 · ATL 22.6 · TSB -5.0</title></rect>
+<rect x="624.5" y="260.0" width="6.9" height="10.2" style="fill:var(--s2)" opacity="0.6"><title>24/10 · CTL 15.4 · ATL 19.4 · TSB -6.8</title></rect>
+<rect x="634.4" y="260.0" width="6.9" height="6.0" style="fill:var(--s2)" opacity="0.6"><title>25/10 · CTL 15.9 · ATL 21.5 · TSB -4.0</title></rect>
+<rect x="644.3" y="260.0" width="6.9" height="8.4" style="fill:var(--s2)" opacity="0.6"><title>26/10 · CTL 15.5 · ATL 18.4 · TSB -5.6</title></rect>
+<rect x="654.2" y="260.0" width="6.9" height="4.3" style="fill:var(--s2)" opacity="0.6"><title>27/10 · CTL 17.1 · ATL 27.4 · TSB -2.9</title></rect>
+<rect x="664.0" y="260.0" width="6.9" height="15.5" style="fill:var(--s2)" opacity="0.6"><title>28/10 · CTL 16.6 · ATL 23.5 · TSB -10.3</title></rect>
+<rect x="673.9" y="260.0" width="6.9" height="10.2" style="fill:var(--s2)" opacity="0.6"><title>29/10 · CTL 17.2 · ATL 25.8 · TSB -6.8</title></rect>
+<rect x="683.8" y="260.0" width="6.9" height="12.9" style="fill:var(--s2)" opacity="0.6"><title>30/10 · CTL 16.8 · ATL 22.1 · TSB -8.6</title></rect>
+<rect x="693.7" y="260.0" width="6.9" height="7.9" style="fill:var(--s2)" opacity="0.6"><title>31/10 · CTL 16.4 · ATL 19.0 · TSB -5.3</title></rect>
+<rect x="703.6" y="260.0" width="6.9" height="3.9" style="fill:var(--s2)" opacity="0.6"><title>01/11 · CTL 17.5 · ATL 25.3 · TSB -2.6</title></rect>
+<rect x="713.4" y="260.0" width="6.9" height="11.7" style="fill:var(--s2)" opacity="0.6"><title>02/11 · CTL 17.1 · ATL 21.7 · TSB -7.8</title></rect>
+<rect x="723.3" y="260.0" width="6.9" height="6.9" style="fill:var(--s2)" opacity="0.6"><title>03/11 · CTL 17.2 · ATL 21.7 · TSB -4.6</title></rect>
+<rect x="733.2" y="260.0" width="6.9" height="6.8" style="fill:var(--s2)" opacity="0.6"><title>04/11 · CTL 16.8 · ATL 18.6 · TSB -4.5</title></rect>
+<rect x="743.1" y="260.0" width="6.9" height="2.7" style="fill:var(--s2)" opacity="0.6"><title>05/11 · CTL 16.7 · ATL 17.9 · TSB -1.8</title></rect>
+<rect x="753.0" y="260.0" width="6.9" height="1.8" style="fill:var(--s2)" opacity="0.6"><title>06/11 · CTL 16.3 · ATL 15.4 · TSB -1.2</title></rect>
+<rect x="762.9" y="258.5" width="6.9" height="1.5" style="fill:var(--s3)" opacity="0.8"><title>07/11 · CTL 15.9 · ATL 13.2 · TSB +1.0</title></rect>
+<rect x="772.7" y="255.8" width="6.9" height="4.2" style="fill:var(--s3)" opacity="0.8"><title>08/11 · CTL 17.1 · ATL 20.7 · TSB +2.8</title></rect>
+<rect x="782.6" y="260.0" width="6.9" height="5.4" style="fill:var(--s2)" opacity="0.6"><title>09/11 · CTL 16.7 · ATL 17.8 · TSB -3.6</title></rect>
+<rect x="792.5" y="260.0" width="6.9" height="1.5" style="fill:var(--s2)" opacity="0.6"><title>10/11 · CTL 17.1 · ATL 20.1 · TSB -1.0</title></rect>
+<rect x="802.4" y="260.0" width="6.9" height="4.3" style="fill:var(--s2)" opacity="0.6"><title>11/11 · CTL 16.7 · ATL 17.2 · TSB -2.9</title></rect>
+<rect x="812.3" y="260.0" width="6.9" height="0.8" style="fill:var(--s2)" opacity="0.6"><title>12/11 · CTL 16.3 · ATL 14.8 · TSB -0.5</title></rect>
+<rect x="822.1" y="257.6" width="6.9" height="2.4" style="fill:var(--s3)" opacity="0.8"><title>13/11 · CTL 16.8 · ATL 17.5 · TSB +1.6</title></rect>
+<rect x="832.0" y="260.0" width="6.9" height="1.2" style="fill:var(--s2)" opacity="0.6"><title>14/11 · CTL 16.4 · ATL 15.0 · TSB -0.8</title></rect>
+<rect x="841.9" y="258.1" width="6.9" height="2.0" style="fill:var(--s3)" opacity="0.8"><title>15/11 · CTL 17.4 · ATL 21.3 · TSB +1.3</title></rect>
+<rect x="851.8" y="260.0" width="6.9" height="5.8" style="fill:var(--s2)" opacity="0.6"><title>16/11 · CTL 17.0 · ATL 18.2 · TSB -3.9</title></rect>
+<rect x="861.7" y="260.0" width="6.9" height="2.0" style="fill:var(--s2)" opacity="0.6"><title>17/11 · CTL 18.1 · ATL 25.2 · TSB -1.3</title></rect>
+<rect x="871.5" y="260.0" width="6.9" height="10.6" style="fill:var(--s2)" opacity="0.6"><title>18/11 · CTL 17.7 · ATL 21.6 · TSB -7.1</title></rect>
+<text x="45.0" y="312" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">26/08</text>
+<text x="104.3" y="312" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">01/09</text>
+<text x="242.6" y="312" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">15/09</text>
+<text x="400.7" y="312" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">01/10</text>
+<text x="539.0" y="312" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">15/10</text>
+<text x="707.0" y="312" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">01/11</text>
+<text x="875.0" y="312" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">18/11</text>
+</svg></div>
+      <div class="kv" style="margin-top:8px"><div><span>CTL oggi:</span> <b>17.7</b></div><div><span>ATL oggi:</span> <b>21.6</b></div><div><span>TSB oggi:</span> <b class="warn">-7.1</b> (zona grigia)</div><div><span>ACWR oggi:</span> <b class="ok">1.22</b> (basso rischio)</div></div>
+      <p class="read">Il CTL (forma di fondo) è salito da ~8 a fine settembre a 17.5 il 1/11. Nella settimana della gara è rimasto fermo intorno a 16-17 (17.1 oggi), mentre l'ATL è sceso da 25.3 a 13.2: è lo scarico che ha funzionato. Il giorno della gara il TSB era <span class="ok">+2.8</span>, il primo valore positivo di tutto il piano: si è arrivati alla Roma 5K freschi senza perdere forma. Dopo la gara il CTL ha ripreso a salire: <span class="hl">18.1 il 17/11, il massimo del piano</span>, con le ripetute di S12. Il TSB a -7.1 di oggi è la fatica normale di una settimana di carico. Fasce TSB standard: &gt;+25 molto fresco, +5/+25 fresco, -10/+5 zona grigia, -30/-10 zona ottimale di allenamento, &lt;-30 alto rischio. Con S12-S13 il TSB dovrebbe scendere verso -10/-15, la zona di allenamento produttivo, poi risalire con lo scarico di S14.</p>
+    </div>
+  </section>
+
+  <section id="acwr">
+    <h2>Rischio infortunio (ACWR)</h2>
+    <p class="lead">ACWR = ATL/CTL (Gabbett): quanto il carico dell'ultima settimana supera la base delle ultime sei. Fasce: &lt;0.8 sotto-allenato, 0.8-1.3 basso rischio, 1.3-1.5 attenzione, &gt;1.5 rischio elevato. Si valuta solo dopo 42 giorni di storico, quando il CTL si è assestato: prima il rapporto è gonfiato da una base artificialmente bassa (fino a 6.0 a fine agosto). Passa sopra un punto per il valore del giorno.</p>
+    <div class="card">
+      <div class="legend"><span><i style="background:var(--s1)"></i>ACWR giornaliero</span><span><i style="background:var(--text-primary)"></i>media della settimana</span></div>
+      <div class="chart"><svg viewBox="0 0 900 250" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ACWR giornaliero e rischio infortunio">
+<rect x="45" y="177.5" width="745" height="22.5" style="fill:var(--neutral)" opacity="0.15"/>
+<text x="797" y="192.8" text-anchor="start" style="fill:var(--text-secondary)"  font-size="10">sotto-allenato</text>
+<rect x="45" y="121.2" width="745" height="56.2" style="fill:var(--good)" opacity="0.13"/>
+<text x="797" y="153.3" text-anchor="start" style="fill:var(--text-secondary)"  font-size="10">basso rischio</text>
+<rect x="45" y="98.8" width="745" height="22.5" style="fill:var(--warning)" opacity="0.18"/>
+<text x="797" y="114.0" text-anchor="start" style="fill:var(--text-secondary)"  font-size="10">attenzione</text>
+<rect x="45" y="20.0" width="745" height="78.8" style="fill:var(--critical)" opacity="0.12"/>
+<text x="797" y="63.4" text-anchor="start" style="fill:var(--text-secondary)"  font-size="10">rischio elevato</text>
+<line x1="45" y1="177.5" x2="790" y2="177.5" style="stroke:var(--grid)" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="181.5" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">0.8</text>
+<line x1="45" y1="121.2" x2="790" y2="121.2" style="stroke:var(--grid)" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="125.2" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">1.3</text>
+<line x1="45" y1="98.8" x2="790" y2="98.8" style="stroke:var(--grid)" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="102.8" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">1.5</text>
+<line x1="45" y1="42.5" x2="790" y2="42.5" style="stroke:var(--grid)" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="38" y="46.5" text-anchor="end" style="fill:var(--text-muted)"  font-size="11">2.0</text>
+<rect x="45" y="20" width="354.8" height="180" style="fill:var(--surface-1)" opacity="0.85"/>
+<text x="222.4" y="105" text-anchor="middle" style="fill:var(--text-muted)"  font-size="12">non valutabile</text>
+<text x="222.4" y="121" text-anchor="middle" style="fill:var(--text-muted)"  font-size="10">storico &lt; 42 giorni (CTL non assestato)</text>
+<line x1="701.3" y1="20" x2="701.3" y2="200" style="stroke:var(--s2)" stroke-width="1" stroke-dasharray="2,4"/><text x="697.3" y="34" text-anchor="end" style="fill:var(--s2)"  font-size="11">🏁5K</text>
+<polyline fill="none" style="stroke:var(--neutral)" stroke-width="1.5" points="45.0,20.0 53.9,20.0 62.7,20.0 71.6,20.0 80.5,20.0 89.3,20.0 98.2,20.0 107.1,20.0 116.0,20.0 124.8,20.0 133.7,20.0 142.6,20.0 151.4,20.0 160.3,20.0 169.2,20.0 178.0,20.0 186.9,20.0 195.8,20.0 204.6,20.0 213.5,20.0 222.4,20.0 231.2,20.0 240.1,35.8 249.0,20.0 257.9,32.4 266.7,20.0 275.6,30.1 284.5,20.0 293.3,38.0 302.2,66.1 311.1,49.2 319.9,76.3 328.8,58.2 337.7,84.1 346.5,42.5 355.4,70.6 364.3,94.2 373.2,60.5 382.0,85.2 390.9,51.5 399.8,77.4"/>
+<polyline fill="none" style="stroke:var(--s1)" stroke-width="2" points="399.8,77.4 408.6,40.2 417.5,67.2 426.4,92.0 435.2,68.4 444.1,93.1 453.0,59.4 461.8,85.2 470.7,49.2 479.6,76.3 488.5,99.9 497.3,76.3 506.2,98.8 515.1,72.9 523.9,97.6 532.8,74.0 541.7,97.6 550.5,119.0 559.4,106.6 568.3,125.8 577.1,115.6 586.0,133.6 594.9,87.5 603.8,108.9 612.6,98.8 621.5,119.0 630.4,137.0 639.2,105.5 648.1,124.6 657.0,125.8 665.8,142.6 674.7,147.1 683.6,161.8 692.4,174.1 701.3,131.4 710.2,148.2 719.0,135.9 727.9,151.6 736.8,166.2 745.7,149.4 754.5,164.0 763.4,129.1 772.3,146.0 781.1,111.1 790.0,130.2"/>
+<circle cx="399.8" cy="77.4" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>05/10 · ACWR 1.69 · rischio infortunio elevato</title></circle>
+<circle cx="408.6" cy="40.2" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>06/10 · ACWR 2.02 · rischio infortunio elevato</title></circle>
+<circle cx="417.5" cy="67.2" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>07/10 · ACWR 1.78 · rischio infortunio elevato</title></circle>
+<circle cx="426.4" cy="92.0" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>08/10 · ACWR 1.56 · rischio infortunio elevato</title></circle>
+<circle cx="435.2" cy="68.4" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>09/10 · ACWR 1.77 · rischio infortunio elevato</title></circle>
+<circle cx="444.1" cy="93.1" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>10/10 · ACWR 1.55 · rischio infortunio elevato</title></circle>
+<circle cx="453.0" cy="59.4" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>11/10 · ACWR 1.85 · rischio infortunio elevato</title></circle>
+<circle cx="461.8" cy="85.2" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>12/10 · ACWR 1.62 · rischio infortunio elevato</title></circle>
+<circle cx="470.7" cy="49.2" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>13/10 · ACWR 1.94 · rischio infortunio elevato</title></circle>
+<circle cx="479.6" cy="76.3" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>14/10 · ACWR 1.70 · rischio infortunio elevato</title></circle>
+<circle cx="488.5" cy="99.9" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>15/10 · ACWR 1.49 · fascia di attenzione</title></circle>
+<circle cx="497.3" cy="76.3" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>16/10 · ACWR 1.70 · rischio infortunio elevato</title></circle>
+<circle cx="506.2" cy="98.8" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>17/10 · ACWR 1.50 · fascia di attenzione</title></circle>
+<circle cx="515.1" cy="72.9" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>18/10 · ACWR 1.73 · rischio infortunio elevato</title></circle>
+<circle cx="523.9" cy="97.6" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>19/10 · ACWR 1.51 · rischio infortunio elevato</title></circle>
+<circle cx="532.8" cy="74.0" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>20/10 · ACWR 1.72 · rischio infortunio elevato</title></circle>
+<circle cx="541.7" cy="97.6" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>21/10 · ACWR 1.51 · rischio infortunio elevato</title></circle>
+<circle cx="550.5" cy="119.0" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>22/10 · ACWR 1.32 · fascia di attenzione</title></circle>
+<circle cx="559.4" cy="106.6" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>23/10 · ACWR 1.43 · fascia di attenzione</title></circle>
+<circle cx="568.3" cy="125.8" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>24/10 · ACWR 1.26 · fascia a basso rischio</title></circle>
+<circle cx="577.1" cy="115.6" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>25/10 · ACWR 1.35 · fascia di attenzione</title></circle>
+<circle cx="586.0" cy="133.6" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>26/10 · ACWR 1.19 · fascia a basso rischio</title></circle>
+<circle cx="594.9" cy="87.5" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>27/10 · ACWR 1.60 · rischio infortunio elevato</title></circle>
+<circle cx="603.8" cy="108.9" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>28/10 · ACWR 1.41 · fascia di attenzione</title></circle>
+<circle cx="612.6" cy="98.8" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>29/10 · ACWR 1.50 · rischio infortunio elevato</title></circle>
+<circle cx="621.5" cy="119.0" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>30/10 · ACWR 1.32 · fascia di attenzione</title></circle>
+<circle cx="630.4" cy="137.0" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>31/10 · ACWR 1.16 · fascia a basso rischio</title></circle>
+<circle cx="639.2" cy="105.5" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>01/11 · ACWR 1.44 · fascia di attenzione</title></circle>
+<circle cx="648.1" cy="124.6" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>02/11 · ACWR 1.27 · fascia a basso rischio</title></circle>
+<circle cx="657.0" cy="125.8" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>03/11 · ACWR 1.26 · fascia a basso rischio</title></circle>
+<circle cx="665.8" cy="142.6" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>04/11 · ACWR 1.11 · fascia a basso rischio</title></circle>
+<circle cx="674.7" cy="147.1" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>05/11 · ACWR 1.07 · fascia a basso rischio</title></circle>
+<circle cx="683.6" cy="161.8" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>06/11 · ACWR 0.94 · fascia a basso rischio</title></circle>
+<circle cx="692.4" cy="174.1" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>07/11 · ACWR 0.83 · fascia a basso rischio</title></circle>
+<circle cx="701.3" cy="131.4" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>08/11 · ACWR 1.21 · fascia a basso rischio</title></circle>
+<circle cx="710.2" cy="148.2" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>09/11 · ACWR 1.06 · fascia a basso rischio</title></circle>
+<circle cx="719.0" cy="135.9" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>10/11 · ACWR 1.17 · fascia a basso rischio</title></circle>
+<circle cx="727.9" cy="151.6" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>11/11 · ACWR 1.03 · fascia a basso rischio</title></circle>
+<circle cx="736.8" cy="166.2" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>12/11 · ACWR 0.90 · fascia a basso rischio</title></circle>
+<circle cx="745.7" cy="149.4" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>13/11 · ACWR 1.05 · fascia a basso rischio</title></circle>
+<circle cx="754.5" cy="164.0" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>14/11 · ACWR 0.92 · fascia a basso rischio</title></circle>
+<circle cx="763.4" cy="129.1" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>15/11 · ACWR 1.23 · fascia a basso rischio</title></circle>
+<circle cx="772.3" cy="146.0" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>16/11 · ACWR 1.08 · fascia a basso rischio</title></circle>
+<circle cx="781.1" cy="111.1" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>17/11 · ACWR 1.39 · fascia di attenzione</title></circle>
+<circle cx="790.0" cy="130.2" r="3" style="fill:var(--s1);stroke:var(--surface-1)" stroke-width="1"><title>18/11 · ACWR 1.22 · fascia a basso rischio</title></circle>
+<line x1="399.8" y1="71.1" x2="453.0" y2="71.1" style="stroke:var(--text-primary)" stroke-width="2.5" opacity="0.7"><title>S6 · ACWR medio 1.75</title></line>
+<text x="426.4" y="63.1" text-anchor="middle" style="fill:var(--text-primary);stroke:var(--surface-1)" stroke-width="3" paint-order="stroke"  font-size="11">S6 1.75</text>
+<line x1="461.8" y1="79.8" x2="515.1" y2="79.8" style="stroke:var(--text-primary)" stroke-width="2.5" opacity="0.7"><title>S7 · ACWR medio 1.67</title></line>
+<text x="488.5" y="71.8" text-anchor="middle" style="fill:var(--text-primary);stroke:var(--surface-1)" stroke-width="3" paint-order="stroke"  font-size="11">S7 1.67</text>
+<line x1="523.9" y1="105.2" x2="577.1" y2="105.2" style="stroke:var(--text-primary)" stroke-width="2.5" opacity="0.7"><title>S8 · ACWR medio 1.44</title></line>
+<text x="550.5" y="97.2" text-anchor="middle" style="fill:var(--text-primary);stroke:var(--surface-1)" stroke-width="3" paint-order="stroke"  font-size="11">S8 1.44</text>
+<line x1="586.0" y1="112.9" x2="639.2" y2="112.9" style="stroke:var(--text-primary)" stroke-width="2.5" opacity="0.7"><title>S9 · ACWR medio 1.37</title></line>
+<text x="612.6" y="104.9" text-anchor="middle" style="fill:var(--text-primary);stroke:var(--surface-1)" stroke-width="3" paint-order="stroke"  font-size="11">S9 1.37</text>
+<line x1="648.1" y1="143.9" x2="701.3" y2="143.9" style="stroke:var(--text-primary)" stroke-width="2.5" opacity="0.7"><title>S10 · ACWR medio 1.10</title></line>
+<text x="674.7" y="135.9" text-anchor="middle" style="fill:var(--text-primary);stroke:var(--surface-1)" stroke-width="3" paint-order="stroke"  font-size="11">S10 1.10</text>
+<line x1="710.2" y1="149.2" x2="763.4" y2="149.2" style="stroke:var(--text-primary)" stroke-width="2.5" opacity="0.7"><title>S11 · ACWR medio 1.05</title></line>
+<text x="736.8" y="141.2" text-anchor="middle" style="fill:var(--text-primary);stroke:var(--surface-1)" stroke-width="3" paint-order="stroke"  font-size="11">S11 1.05</text>
+<line x1="772.3" y1="129.1" x2="790.0" y2="129.1" style="stroke:var(--text-primary)" stroke-width="2.5" opacity="0.7"><title>S12 · ACWR medio 1.23</title></line>
+<text x="781.1" y="121.1" text-anchor="middle" style="fill:var(--text-primary);stroke:var(--surface-1)" stroke-width="3" paint-order="stroke"  font-size="11">S12 1.23</text>
+<text x="45.0" y="218" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">26/08</text>
+<text x="98.2" y="218" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">01/09</text>
+<text x="222.4" y="218" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">15/09</text>
+<text x="364.3" y="218" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">01/10</text>
+<text x="488.5" y="218" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">15/10</text>
+<text x="639.2" y="218" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">01/11</text>
+<text x="790.0" y="218" text-anchor="middle" style="fill:var(--text-muted)"  font-size="11">18/11</text>
+</svg></div>
+      <div class="kv" style="margin-top:8px"><div><span>Oggi:</span> <b class="ok">1.22 · basso rischio</b></div><div><span>Media S12 (3 giorni):</span> <b class="ok">1.23 · basso rischio</b></div><div><span>Tendenza:</span> <b>↗ in risalita, come previsto</b></div></div>
+      <p class="read">Con 3 sedute a settimana l'ACWR giornaliero sale nei giorni di corsa e scende in quelli di riposo: conta la media della settimana, non il singolo picco. Le medie raccontano la storia: <span class="hl">S6 1.75 → S7 1.67 → S8 1.44 → S9 1.37 → S10 1.10 → S11 1.05</span>, S12 1.23 nei primi tre giorni, con un picco di 1.39 il 17/11 (giorno delle ripetute). A inizio ottobre il carico è cresciuto molto più in fretta della base, ed è anche il periodo in cui la fascia plantare ha cominciato a farsi sentire (13, 16 e 17 ottobre): una coincidenza da tenere a mente, non una prova di causa. Con S10 il rapporto è entrato per la prima volta nella fascia a basso rischio. Il blocco verso la 10K (S11-S13) riporta il carico verso l'alto: l'obiettivo è tenere la media settimanale sotto 1.5, idealmente 1.3. Le soglie di Gabbett vengono da atleti di squadra che si allenano quasi ogni giorno: per chi corre 3 volte a settimana sono un'indicazione, non un limite rigido.</p>
+    </div>
+  </section>
+
+  <section id="coach">
+    <h2>Commento del coach</h2>
+    <div class="card coach" style="padding-top:16px">
+                <p>Allora Salvatore, settimana strana la S11, e va raccontata tutta. <span class="hl">Il primo allenamento interrotto da agosto</span>, e due giorni dopo il lungo migliore per FC. Non sono in contraddizione.</p>
+
+                <p><span class="warn-h">Il Tempo del 13/11:</span><br>
+                fermarsi a 1.7 km è stata la scelta giusta. Il cuore era al suo posto (6:13 a FC 162, come nel test del 29/10), ma la sensazione era "Debole" e l'RPE 5: era fatica residua, seconda seduta di soglia a 5 giorni da una gara con 4 km a soglia, e un blocco più lungo di sempre. La potenza aggiunge un dettaglio: quel km è costato 308 W contro i 286-294 W del test allo stesso passo. Più lavoro per la stessa velocità: vento, o una corsa meno economica per la fatica. Da un dato solo non si distingue, ma va nella stessa direzione della sensazione. La lezione è già nel piano: niente blocchi più lunghi di sempre nella settimana dopo una gara.</p>
+
+                <p><span class="hl">La risposta:</span><br>
+                il lungo di domenica, 6.5 km a 7:11 con FC 148, decoupling 2.3%, "Forte". Martedì le ripetute: 400 fra 5:15 e 5:33, 800 a 5:52 e 5:49, RPE 5. La seconda 800 ti è sembrata lenta e tostissima: era la più veloce, e la potenza lo conferma (315 W contro 306). Era più dura, non più lenta. Il CTL è al massimo del piano (18.1) e l'ACWR resta a basso rischio.</p>
+
+                <p><span class="warn-h">Da tenere d'occhio:</span><br>
+                il sonno. Dal 12 al 16 cinque notti sotto le 7 ore e un'HRV a 39 il 16: il recupero è il punto debole di questa settimana, più delle gambe. Venerdì c'è il Tempo da 2500 m: giovedì a letto entro le 22:30. E vestiti come se ci fossero 10 gradi in più: il 13/11 avevi tuta e giubbino con 20°C.</p>
+
+                <p><span class="ok-h">Il punto:</span><br>
+                venerdì il 2500 m nella fascia 6:15-6:35, primi 500 m volutamente lenti; se nel primo km la FC passa 165, si rallenta. Domenica il 7.5 km, il più lungo di sempre, con la FC che comanda. Da oggi vedi anche la potenza: è una metrica in più, utile in salita e nelle ripetute, ma il lungo lo decide ancora la FC.</p>
+            </div>
+  </section>
+
+  <section id="prossime">
+    <h2>Prossime sedute — S12, sviluppo 10K (16-22 novembre)</h2>
+    <div class="card next">
+            <p><span class="mut">Volume target S12:</span> <span class="hl">17.20 km</span> <span class="mut">(6.40 già fatti con le ripetute di martedì 17)</span></p>
+            <div>
+                <ul>
+                    <li><span class="ok">✓ Martedì 17 — Ripetute</span> 4 x 400 m (5:15-5:33) + 2 x 800 m (5:52, 5:49), 6.40 km, RPE 5.</li>
+                    <li>Mercoledì 18 e giovedì 19 — Riposo dalla corsa (giovedì in ufficio). Mobilità ed equilibrio sì. Giovedì a letto entro le 22:30.</li>
+                    <li><span class="hl">Venerdì 20 — Tempo:</span> 1 km risc., 2500 m continui @ 6:15-6:35/km, 1 km def. — 4.5 km, ~33'. Ripete il Tempo interrotto di S11. I primi 500 m volutamente lenti, anche a 6:35; se nel primo km la FC passa 165, rallenta. Con la fascia H9. Prima controlla i segnali di prontezza (FC a riposo, HRV, sonno, fascia plantare): con 1 segnale la seduta si alleggerisce, con 2 o più diventa una corsa facile. Vestiti come se ci fossero 10°C in più.</li>
+                    <li>Sabato 21 — Riposo dalla corsa. Test mensile di forza e mobilità.</li>
+                    <li><span class="hl">Domenica 22 — Lungo:</span> 7.5 km continui @ 7:15-7:40/km, FC ~148-150, tetto 155, partendo piano — ~55', il più lungo finora.</li>
+                </ul>
+                <p class="hl" style="margin-top:12px">Poi S13 (23-29 novembre, 19.1 km, picco del piano):</p>
+                <ul>
+                    <li>Martedì — Ripetute 3 x 400 m @ 5:20-5:40/km + 3 x 800 m @ 5:35-5:55/km — 5.6 km</li>
+                    <li>Venerdì — Tempo 3000 m continui (fascia 6:10-6:30 o 6:15-6:35, si decide dopo venerdì 20) — 5.0 km</li>
+                    <li>Domenica — Lungo 8.5 km continui @ 7:15-7:40/km — la prova generale della 10K</li>
+                </ul>
+            </div>
+  </section>
+
+  <p class="foot" style="margin-top:28px">Generato il 2026-11-18 · dati da training-plan.md, training-log/week-*.md e health-log/ · <a href="progressi.html">Progressi per tipo di seduta →</a></p>
 </div>
 </body>
 </html>

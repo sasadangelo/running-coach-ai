@@ -7,6 +7,10 @@ description: Generate a comprehensive HTML training dashboard showing progress t
 
 Generate an HTML dashboard with retro styling showing comprehensive training progress toward the half marathon goal. Outputs a single HTML file saved to `dashboard.html` that can be opened in any browser.
 
+## Project override (athlete preference, 2026-11-18)
+
+In this project the dashboard does NOT use the retro themes below. It uses the same style as `progressi.html` (CSS copied from `.claude/scripts/progress_template.html`: light/dark tokens, system font, summary tiles, cards, HTML tables instead of ASCII blocks, charts coloured with the CSS variables `--s1`/`--s2`/`--grid`/`--axis`, no Tailwind). Keep the two pages linked: the dashboard header links to `progressi.html` ("Progressi per tipo di seduta →") and `progressi.html` links back ("← Dashboard del piano"). Don't ask for layout/theme/commentary preferences: update the existing `dashboard.html` in place, keeping its sections (plan, volume, sessions, paces, aerobic endurance, power, RPE, monthly profile, CTL/ATL/TSB, ACWR, coach commentary, next sessions), with the text in Italian.
+
 ## Dashboard Configuration
 
 When generating the dashboard, you will prompt the user for their preferences. If the user has previously provided preferences in the conversation, use those. Otherwise, ask for the following:

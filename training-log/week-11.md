@@ -35,19 +35,20 @@
 **Elevation**: 30 m
 **Calories**: 396 kcal
 **Heart Rate**: 163 bpm (max: 178)
+**Power**: 294 W (NP: 297 W, 104% of threshold 285 W, P4 Threshold) · 3.79 W/kg
 **Meteo**: 10°C, rugiada 10°C, umidità 100%, sereno (stazione Roma / Urbe, aria all'ombra)
 **Note**: Fc con fascia non funzionava bene quindi ho usata quella al polso. Corsa sempre in controllo, mai andato in difficoltà. Correre per Roma è più difficile rispetto a Fiumicino per via dei saliscendi. Tempo ufficiale è 32:58 a 6:36 min/km. Questa volta rispetto a altre due gare il mio orologio ha anticipato.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace    | HR  | Elevation |
-|-----|----------|---------|---------|-----|-----------|
-| 1   | 1.00 km  | 0:06:44 | 6:44/km | 146 | 9 m       |
-| 2   | 1.00 km  | 0:06:17 | 6:17/km | 161 | 9 m       |
-| 3   | 1.00 km  | 0:06:16 | 6:16/km | 165 | 7 m       |
-| 4   | 1.00 km  | 0:06:16 | 6:16/km | 170 | 4 m       |
-| 5   | 1.00 km  | 0:06:04 | 6:05/km | 171 | 2 m       |
-| 6   | 0.17 km  | 0:00:54 | 5:29/km | 175 | 0 m       |
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:06:44 | 6:44/km | 146 | 287 W | 9 m       |
+| 2   | 1.00 km  | 0:06:17 | 6:17/km | 161 | 294 W | 9 m       |
+| 3   | 1.00 km  | 0:06:16 | 6:16/km | 165 | 298 W | 7 m       |
+| 4   | 1.00 km  | 0:06:16 | 6:16/km | 170 | 296 W | 4 m       |
+| 5   | 1.00 km  | 0:06:04 | 6:05/km | 171 | 292 W | 2 m       |
+| 6   | 0.17 km  | 0:00:54 | 5:29/km | 175 | 329 W | 0 m       |
 
 ---
 ### 2026-11-08 08:34:44 - Riscaldamento Rome 5k
@@ -64,18 +65,19 @@
 **Elevation**: 0 m
 **Calories**: 155 kcal
 **Heart Rate**: 119 bpm (max: 169)
+**Power**: 161 W (NP: 217 W, 76% of threshold 285 W, P1 Recovery) · 2.08 W/kg
 **Meteo**: 8°C, rugiada 8°C, umidità 100%, foschia (stazione Roma / Urbe, aria all'ombra)
 **Note**: Frequenza cardiaca con fascia sballata. Corsa lentissima, mobilità e drills.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace     | HR  | Elevation |
-|-----|----------|---------|----------|-----|-----------|
-| 1   | 1.00 km  | 0:07:34 | 7:44/km  | 115 | 0 m       |
-| 2   | 0.71 km  | 0:06:13 | 14:46/km | 122 | 0 m       |
+| Lap | Distance | Time    | Pace     | HR  | Power | Elevation |
+|-----|----------|---------|----------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:07:34 | 7:44/km  | 115 | 235 W | 0 m       |
+| 2   | 0.71 km  | 0:06:13 | 14:46/km | 122 | 108 W | 0 m       |
 
 ---
-### 2026-11-05 07:17:59 - Shakeout Pre Gara 1.6Km
+### 2026-11-05 07:17:59 - S10 Shakeout 1.6km
 
 **Type**: Run
 **Distance**: 1.61 km
@@ -92,19 +94,20 @@
 **Elevation**: 1 m
 **Calories**: 116 kcal
 **Heart Rate**: 138 bpm (max: 147)
+**Power**: 245 W (NP: 249 W, 87% of threshold 285 W, P2 Easy) · 3.16 W/kg
 **Meteo**: 11°C, rugiada 7°C, umidità 74%, poco nuvoloso (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace    | HR  | Elevation |
-|-----|----------|---------|---------|-----|-----------|
-| 1   | 0.30 km  | 0:02:16 | 7:32/km | 127 | 0 m       |
-| 2   | 1.00 km  | 0:07:30 | 7:30/km | 140 | 1 m       |
-| 3   | 0.30 km  | 0:02:18 | 7:39/km | 144 | 0 m       |
-| 4   | 0.01 km  | 0:00:03 | 7:17/km | 142 | 0 m       |
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 0.30 km  | 0:02:16 | 7:32/km | 127 | 234 W | 0 m       |
+| 2   | 1.00 km  | 0:07:30 | 7:30/km | 140 | 249 W | 1 m       |
+| 3   | 0.30 km  | 0:02:18 | 7:39/km | 144 | 242 W | 0 m       |
+| 4   | 0.01 km  | 0:00:03 | 7:17/km | 142 | 232 W | 0 m       |
 
 ---
-### 2026-11-03 08:45:48 - 4x200 con 1' Rec.
+### 2026-11-03 08:45:48 - S10 Intervals 4x200m
 
 **Type**: Run
 **Distance**: 2.17 km
@@ -121,23 +124,24 @@
 **Elevation**: 4 m
 **Calories**: 168 kcal
 **Heart Rate**: 148 bpm (max: 164)
+**Power**: 241 W (NP: 267 W, 94% of threshold 285 W, P3 Steady) · 3.11 W/kg
 **Meteo**: 13°C, rugiada 7°C, umidità 66% (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Oggi ero stanco, per fortuna l'allenamento era leggero. Non so se oggi avrei portato a termine un normale allenamento di ripetute. Penso di non aver completamente recuperato il lungo di Domenica. Inoltre, HRV e FC a riposo non sono buonissime. Credo che sia il classico calo di Ottobre a cui vado incontro quasi ogni anno. Tipicamente dopo 2 mesi intensi di allenamenti inizia ad arrivare il conto. Per ora penso allo scarico prima della gara 5K di Domenica poi vedrò con il coach.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace     | HR  | Elevation |
-|-----|----------|---------|----------|-----|-----------|
-| 1   | 0.50 km  | 0:03:46 | 7:46/km  | 137 | 0 m       |
-| 2   | 0.20 km  | 0:01:02 | 5:11/km  | 157 | 1 m       |
-| 3   | 0.10 km  | 0:00:59 | 10:01/km | 159 | 0 m       |
-| 4   | 0.20 km  | 0:01:03 | 5:17/km  | 156 | 0 m       |
-| 5   | 0.09 km  | 0:00:59 | 10:38/km | 157 | 0 m       |
-| 6   | 0.20 km  | 0:01:03 | 5:16/km  | 151 | 0 m       |
-| 7   | 0.09 km  | 0:00:59 | 11:15/km | 154 | 0 m       |
-| 8   | 0.20 km  | 0:01:02 | 5:08/km  | 151 | 0 m       |
-| 9   | 0.08 km  | 0:00:59 | 13:00/km | 153 | 0 m       |
-| 10  | 0.50 km  | 0:03:47 | 7:34/km  | 146 | 2 m       |
-| 11  | 0.01 km  | 0:00:03 | 7:33/km  | 149 | 0 m       |
+| Lap | Distance | Time    | Pace     | HR  | Power | Elevation |
+|-----|----------|---------|----------|-----|-------|-----------|
+| 1   | 0.50 km  | 0:03:46 | 7:46/km  | 137 | 231 W | 0 m       |
+| 2   | 0.20 km  | 0:01:02 | 5:11/km  | 157 | 335 W | 1 m       |
+| 3   | 0.10 km  | 0:00:59 | 10:01/km | 159 | 206 W | 0 m       |
+| 4   | 0.20 km  | 0:01:03 | 5:17/km  | 156 | 328 W | 0 m       |
+| 5   | 0.09 km  | 0:00:59 | 10:38/km | 157 | 189 W | 0 m       |
+| 6   | 0.20 km  | 0:01:03 | 5:16/km  | 151 | 292 W | 0 m       |
+| 7   | 0.09 km  | 0:00:59 | 11:15/km | 154 | 160 W | 0 m       |
+| 8   | 0.20 km  | 0:01:02 | 5:08/km  | 151 | 308 W | 0 m       |
+| 9   | 0.08 km  | 0:00:59 | 13:00/km | 153 | 103 W | 0 m       |
+| 10  | 0.50 km  | 0:03:47 | 7:34/km  | 146 | 246 W | 2 m       |
+| 11  | 0.01 km  | 0:00:03 | 7:33/km  | 149 | 230 W | 0 m       |
 
 ---

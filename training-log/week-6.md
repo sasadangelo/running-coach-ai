@@ -18,7 +18,7 @@
 
 ## Activities
 
-### 2026-10-04 08:37:43 - 7x Allunghi
+### 2026-10-04 08:37:43 - S5 Strides 7x
 
 **Type**: Run
 **Distance**: 0.96 km
@@ -35,11 +35,12 @@
 **Elevation**: 0 m
 **Calories**: 79 kcal
 **Heart Rate**: 134 bpm (max: 143)
+**Power**: 165 W (NP: 200 W, 70% of threshold 285 W, P1 Recovery) · 2.13 W/kg
 **Meteo**: 21°C, rugiada 17°C, umidità 78% (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 7 Allunghi da 80m con ritmo 3:40 a 4:10
 
 ---
-### 2026-10-04 07:57:29 - Corsa Lenta Lunga 5 Km
+### 2026-10-04 07:57:29 - S5 Long run 5km
 
 **Type**: Run
 **Distance**: 5.01 km
@@ -53,28 +54,29 @@
 **Sensazione**: Forte (75/100)
 **Decoupling**: 2.1%
 **ES**: 7.8 (Primi km)
-**Economia**: EF 0.911 m/battito · M 0.920 · RES 83.8
+**Economia**: EF 0.911 m/battito · M 0.920 · RES 83.8 · RE 0.695 (260 W)
 **Run time**: 0:35:34
 **Walk time**: 0:00:24
 **Elevation**: 5 m
 **Calories**: 376 kcal
 **Heart Rate**: 149 bpm (max: 157)
+**Power**: 258 W (NP: 259 W, 91% of threshold 285 W, P3 Steady) · 3.33 W/kg
 **Meteo**: 18°C, rugiada 17°C, umidità 93%, quasi sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon allenamento. Garmin ha dato 91%. Mobilita. Ritmo quasi sempre < 155. Inizio lento a 7:50 / 7:40. Nessun problema. Con aerosol di fluimucil anche il muco ha dato meno fastidio. Penso che avrei potuto fare tranquillamente altro Km a fatica forse 2. Ho fatto esercizi di forza: - 2x 12 squat - 2x 12 calf raise - 2x 10 step - 2x 10 ponte glutei - 1x 20" sideplank ambo i lati Stretching
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace    | HR  | Elevation |
-|-----|----------|---------|---------|-----|-----------|
-| 1   | 1.00 km  | 0:07:18 | 7:23/km | 131 | 1 m       |
-| 2   | 1.00 km  | 0:07:01 | 7:01/km | 152 | 1 m       |
-| 3   | 1.00 km  | 0:07:08 | 7:08/km | 153 | 1 m       |
-| 4   | 1.00 km  | 0:07:09 | 7:09/km | 154 | 2 m       |
-| 5   | 1.00 km  | 0:07:15 | 7:15/km | 154 | 0 m       |
-| 6   | 0.01 km  | 0:00:02 | 8:05/km | 152 | 0 m       |
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:07:18 | 7:23/km | 131 | 251 W | 1 m       |
+| 2   | 1.00 km  | 0:07:01 | 7:01/km | 152 | 264 W | 1 m       |
+| 3   | 1.00 km  | 0:07:08 | 7:08/km | 153 | 259 W | 1 m       |
+| 4   | 1.00 km  | 0:07:09 | 7:09/km | 154 | 261 W | 2 m       |
+| 5   | 1.00 km  | 0:07:15 | 7:15/km | 154 | 255 W | 0 m       |
+| 6   | 0.01 km  | 0:00:02 | 8:05/km | 152 | 244 W | 0 m       |
 
 ---
-### 2026-10-02 07:31:47 - Tempo 3x800 m
+### 2026-10-02 07:31:47 - S5 Tempo 3x800m
 
 **Type**: Run
 **Distance**: 4.81 km
@@ -91,24 +93,25 @@
 **Elevation**: 5 m
 **Calories**: 361 kcal
 **Heart Rate**: 156 bpm (max: 171)
+**Power**: 269 W (NP: 274 W, 96% of threshold 285 W, P4 Threshold) · 3.47 W/kg
 **Meteo**: 18°C, rugiada 15°C, umidità 85%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Primo tempo run fatto tutto di corsa. Garmin dice eseguito bene al 90%. Ho fatto mobilità, corsa e stretching come al solito. Soddisfatto. Impercettibile sensazione alla fascite plantare, essendo un problema che ho sempre avuto mi chiedo se la sola mobilità delle Caviglie è sufficiente a prevenire eventuali problemi futuri.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace    | HR  | Elevation |
-|-----|----------|---------|---------|-----|-----------|
-| 1   | 1.00 km  | 0:07:13 | 7:13/km | 134 | 1 m       |
-| 2   | 0.80 km  | 0:04:51 | 6:04/km | 160 | 0 m       |
-| 3   | 0.20 km  | 0:01:34 | 7:53/km | 160 | 1 m       |
-| 4   | 0.80 km  | 0:04:48 | 6:00/km | 165 | 0 m       |
-| 5   | 0.20 km  | 0:01:38 | 8:09/km | 164 | 0 m       |
-| 6   | 0.80 km  | 0:04:52 | 6:05/km | 166 | 2 m       |
-| 7   | 1.00 km  | 0:07:45 | 7:45/km | 158 | 0 m       |
-| 8   | 0.01 km  | 0:00:01 | 6:27/km | 156 | 0 m       |
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:07:13 | 7:13/km | 134 | 256 W | 1 m       |
+| 2   | 0.80 km  | 0:04:51 | 6:04/km | 160 | 298 W | 0 m       |
+| 3   | 0.20 km  | 0:01:34 | 7:53/km | 160 | 251 W | 1 m       |
+| 4   | 0.80 km  | 0:04:48 | 6:00/km | 165 | 294 W | 0 m       |
+| 5   | 0.20 km  | 0:01:38 | 8:09/km | 164 | 236 W | 0 m       |
+| 6   | 0.80 km  | 0:04:52 | 6:05/km | 166 | 297 W | 2 m       |
+| 7   | 1.00 km  | 0:07:45 | 7:45/km | 158 | 241 W | 0 m       |
+| 8   | 0.01 km  | 0:00:01 | 6:27/km | 156 | 242 W | 0 m       |
 
 ---
-### 2026-09-29 07:43:22 - 12x200 con 1' Rec.
+### 2026-09-29 07:43:22 - S5 Intervals 12x200m
 
 **Type**: Run
 **Distance**: 5.39 km
@@ -125,46 +128,47 @@
 **Elevation**: 3 m
 **Calories**: 426 kcal
 **Heart Rate**: 151 bpm (max: 168)
+**Power**: 240 W (NP: 269 W, 94% of threshold 285 W, P3 Steady) · 3.10 W/kg
 **Meteo**: 15°C, rugiada 14°C, umidità 97%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Primo allenamento carico dopo settimana scarico. 12 ripetute solo 2 perfettamente in target 10 leggermente più veloci di pochi secondi. Del resto non è facile essere precisi. Solo 1 recupero in jogging altri in camminata. Meno problemi di muco stavolta. Temperature finalmente ragionevoli. L'allenamento garmin includeva 15 ripetute le ultime 3 volutamente saltate perché non parte del programma.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace     | HR  | Elevation |
-|-----|----------|---------|----------|-----|-----------|
-| 1   | 1.00 km  | 0:07:26 | 7:31/km  | 135 | 1 m       |
-| 2   | 0.20 km  | 0:01:03 | 5:17/km  | 154 | 0 m       |
-| 3   | 0.12 km  | 0:00:59 | 8:18/km  | 158 | 0 m       |
-| 4   | 0.20 km  | 0:01:00 | 5:00/km  | 159 | 0 m       |
-| 5   | 0.08 km  | 0:00:59 | 12:01/km | 162 | 0 m       |
-| 6   | 0.20 km  | 0:01:00 | 5:02/km  | 155 | 0 m       |
-| 7   | 0.08 km  | 0:00:59 | 11:53/km | 157 | 0 m       |
-| 8   | 0.20 km  | 0:01:03 | 5:14/km  | 152 | 0 m       |
-| 9   | 0.08 km  | 0:00:59 | 12:20/km | 156 | 0 m       |
-| 10  | 0.20 km  | 0:01:04 | 5:18/km  | 153 | 0 m       |
-| 11  | 0.08 km  | 0:00:59 | 13:01/km | 157 | 0 m       |
-| 12  | 0.20 km  | 0:01:02 | 5:10/km  | 152 | 0 m       |
-| 13  | 0.08 km  | 0:00:59 | 12:05/km | 157 | 0 m       |
-| 14  | 0.20 km  | 0:01:04 | 5:18/km  | 152 | 0 m       |
-| 15  | 0.08 km  | 0:00:59 | 12:58/km | 159 | 0 m       |
-| 16  | 0.20 km  | 0:01:04 | 5:18/km  | 153 | 0 m       |
-| 17  | 0.08 km  | 0:00:59 | 12:34/km | 158 | 0 m       |
-| 18  | 0.20 km  | 0:01:04 | 5:22/km  | 153 | 0 m       |
-| 19  | 0.08 km  | 0:00:59 | 12:46/km | 157 | 0 m       |
-| 20  | 0.20 km  | 0:01:02 | 5:09/km  | 156 | 0 m       |
-| 21  | 0.08 km  | 0:00:59 | 13:10/km | 161 | 0 m       |
-| 22  | 0.20 km  | 0:01:05 | 5:23/km  | 156 | 0 m       |
-| 23  | 0.07 km  | 0:00:59 | 14:17/km | 157 | 0 m       |
-| 24  | 0.20 km  | 0:01:04 | 5:20/km  | 152 | 0 m       |
-| 25  | 0.08 km  | 0:00:59 | 13:04/km | 159 | 0 m       |
-| 26  | 0.00 km  | 0:00:04 | 16:15/km | 153 | 0 m       |
-| 27  | 0.00 km  | 0:00:01 | 17:58/km | 152 | 0 m       |
-| 28  | 0.00 km  | 0:00:01 | 28:44/km | 152 | 0 m       |
-| 29  | 0.00 km  | 0:00:01 | 22:17/km | 152 | 0 m       |
-| 30  | 0.00 km  | 0:00:01 | 9:59/km  | 152 | 0 m       |
-| 31  | 0.00 km  | 0:00:01 | 17:43/km | 152 | 0 m       |
-| 32  | 0.00 km  | 0:00:01 | 21:09/km | 151 | 0 m       |
-| 33  | 1.00 km  | 0:07:48 | 7:50/km  | 151 | 1 m       |
+| Lap | Distance | Time    | Pace     | HR  | Power | Elevation |
+|-----|----------|---------|----------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:07:26 | 7:31/km  | 135 | 248 W | 1 m       |
+| 2   | 0.20 km  | 0:01:03 | 5:17/km  | 154 | 322 W | 0 m       |
+| 3   | 0.12 km  | 0:00:59 | 8:18/km  | 158 | 258 W | 0 m       |
+| 4   | 0.20 km  | 0:01:00 | 5:00/km  | 159 | 330 W | 0 m       |
+| 5   | 0.08 km  | 0:00:59 | 12:01/km | 162 | 151 W | 0 m       |
+| 6   | 0.20 km  | 0:01:00 | 5:02/km  | 155 | 321 W | 0 m       |
+| 7   | 0.08 km  | 0:00:59 | 11:53/km | 157 | 169 W | 0 m       |
+| 8   | 0.20 km  | 0:01:03 | 5:14/km  | 152 | 334 W | 0 m       |
+| 9   | 0.08 km  | 0:00:59 | 12:20/km | 156 | 156 W | 0 m       |
+| 10  | 0.20 km  | 0:01:04 | 5:18/km  | 153 | 317 W | 0 m       |
+| 11  | 0.08 km  | 0:00:59 | 13:01/km | 157 | 147 W | 0 m       |
+| 12  | 0.20 km  | 0:01:02 | 5:10/km  | 152 | 283 W | 0 m       |
+| 13  | 0.08 km  | 0:00:59 | 12:05/km | 157 | 139 W | 0 m       |
+| 14  | 0.20 km  | 0:01:04 | 5:18/km  | 152 | 319 W | 0 m       |
+| 15  | 0.08 km  | 0:00:59 | 12:58/km | 159 | 145 W | 0 m       |
+| 16  | 0.20 km  | 0:01:04 | 5:18/km  | 153 | 320 W | 0 m       |
+| 17  | 0.08 km  | 0:00:59 | 12:34/km | 158 | 130 W | 0 m       |
+| 18  | 0.20 km  | 0:01:04 | 5:22/km  | 153 | 304 W | 0 m       |
+| 19  | 0.08 km  | 0:00:59 | 12:46/km | 157 | 130 W | 0 m       |
+| 20  | 0.20 km  | 0:01:02 | 5:09/km  | 156 | 335 W | 0 m       |
+| 21  | 0.08 km  | 0:00:59 | 13:10/km | 161 | 130 W | 0 m       |
+| 22  | 0.20 km  | 0:01:05 | 5:23/km  | 156 | 321 W | 0 m       |
+| 23  | 0.07 km  | 0:00:59 | 14:17/km | 157 | 126 W | 0 m       |
+| 24  | 0.20 km  | 0:01:04 | 5:20/km  | 152 | 321 W | 0 m       |
+| 25  | 0.08 km  | 0:00:59 | 13:04/km | 159 | 159 W | 0 m       |
+| 26  | 0.00 km  | 0:00:04 | 16:15/km | 153 | 100 W | 0 m       |
+| 27  | 0.00 km  | 0:00:01 | 17:58/km | 152 | 109 W | 0 m       |
+| 28  | 0.00 km  | 0:00:01 | 28:44/km | 152 | 107 W | 0 m       |
+| 29  | 0.00 km  | 0:00:01 | 22:17/km | 152 | N/A   | 0 m       |
+| 30  | 0.00 km  | 0:00:01 | 9:59/km  | 152 | N/A   | 0 m       |
+| 31  | 0.00 km  | 0:00:01 | 17:43/km | 152 | N/A   | 0 m       |
+| 32  | 0.00 km  | 0:00:01 | 21:09/km | 151 | N/A   | 0 m       |
+| 33  | 1.00 km  | 0:07:48 | 7:50/km  | 151 | 237 W | 1 m       |
 
 ---
 

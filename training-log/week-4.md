@@ -18,7 +18,7 @@
 
 ## Activities
 
-### 2026-09-20 08:39:05 - 8xAllunghi
+### 2026-09-20 08:39:05 - S3 Strides 8x
 
 **Type**: Run
 **Distance**: 0.92 km
@@ -32,10 +32,11 @@
 **Elevation**: 0 m
 **Calories**: 73 kcal
 **Heart Rate**: 126 bpm (max: 136)
+**Power**: 162 W (NP: 199 W, 70% of threshold 285 W, P1 Recovery) · 2.09 W/kg
 **Meteo**: 22°C, rugiada 16°C, umidità 69%, sereno (stazione Roma Fiumicino, aria all'ombra)
 
 ---
-### 2026-09-20 07:56:34 - Lungo 4.5 Km
+### 2026-09-20 07:56:34 - S3 Long run 4.5km
 
 **Type**: Run
 **Distance**: 4.51 km
@@ -49,28 +50,29 @@
 **Sensazione**: Normale (50/100)
 **Decoupling**: 4.8%
 **ES**: 7.0 (Primi km)
-**Economia**: EF 0.915 m/battito · M 0.924 · RES 84.5
+**Economia**: EF 0.915 m/battito · M 0.924 · RES 84.5 · RE 0.689 (261 W)
 **Run time**: 0:32:57
 **Walk time**: 0:00:07
 **Elevation**: 9 m
 **Calories**: 339 kcal
 **Heart Rate**: 147 bpm (max: 160)
+**Power**: 256 W (NP: 257 W, 90% of threshold 285 W, P3 Steady) · 3.30 W/kg
 **Meteo**: 20°C, rugiada 17°C, umidità 80%, sereno (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Primo lungo di mattina. Ottimo allenamento. Corsa continua 4.5 km. Zona 2 completa. Battito più basso del solito segno che il piano allenamento va bene. 5 secondi in meno al km scorsa volta.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace    | HR  | Elevation |
-|-----|----------|---------|---------|-----|-----------|
-| 1   | 1.00 km  | 0:07:28 | 7:30/km | 128 | 1 m       |
-| 2   | 1.00 km  | 0:07:08 | 7:08/km | 149 | 4 m       |
-| 3   | 1.00 km  | 0:07:14 | 7:15/km | 152 | 2 m       |
-| 4   | 1.00 km  | 0:07:24 | 7:24/km | 154 | 1 m       |
-| 5   | 0.50 km  | 0:03:44 | 7:29/km | 153 | 0 m       |
-| 6   | 0.01 km  | 0:00:02 | 7:36/km | 154 | 0 m       |
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:07:28 | 7:30/km | 128 | 251 W | 1 m       |
+| 2   | 1.00 km  | 0:07:08 | 7:08/km | 149 | 264 W | 4 m       |
+| 3   | 1.00 km  | 0:07:14 | 7:15/km | 152 | 257 W | 2 m       |
+| 4   | 1.00 km  | 0:07:24 | 7:24/km | 154 | 255 W | 1 m       |
+| 5   | 0.50 km  | 0:03:44 | 7:29/km | 153 | 249 W | 0 m       |
+| 6   | 0.01 km  | 0:00:02 | 7:36/km | 154 | 276 W | 0 m       |
 
 ---
-### 2026-09-18 08:27:23 - Tempo 3x700 m Rec 200m
+### 2026-09-18 08:27:23 - S3 Tempo 3x700m
 
 **Type**: Run
 **Distance**: 4.51 km
@@ -87,24 +89,25 @@
 **Elevation**: 3 m
 **Calories**: 351 kcal
 **Heart Rate**: 152 bpm (max: 170)
+**Power**: 244 W (NP: 261 W, 92% of threshold 285 W, P3 Steady) · 3.15 W/kg
 **Meteo**: 23°C, rugiada 19°C, umidità 79%, quasi sereno · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Buon Allenamento. Riscaldamento in jogging. 1 Recupero in jogging e 1 in camminata. Primi 200m defaticamento camminata il resto jogging. Nessun problema particolare a parte le orecchie che danno sempre un po' fastidio. Oggi ho cominciato ad allenarmi di mattina.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace     | HR  | Elevation |
-|-----|----------|---------|----------|-----|-----------|
-| 1   | 1.00 km  | 0:07:34 | 7:40/km  | 131 | 1 m       |
-| 2   | 0.70 km  | 0:04:15 | 6:05/km  | 160 | 0 m       |
-| 3   | 0.20 km  | 0:01:38 | 8:12/km  | 160 | 0 m       |
-| 4   | 0.70 km  | 0:04:19 | 6:11/km  | 166 | 1 m       |
-| 5   | 0.20 km  | 0:02:30 | 12:31/km | 152 | 0 m       |
-| 6   | 0.70 km  | 0:04:20 | 6:11/km  | 157 | 0 m       |
-| 7   | 1.00 km  | 0:08:33 | 8:33/km  | 154 | 1 m       |
-| 8   | 0.01 km  | 0:00:07 | 9:51/km  | 156 | 0 m       |
+| Lap | Distance | Time    | Pace     | HR  | Power | Elevation |
+|-----|----------|---------|----------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:07:34 | 7:40/km  | 131 | 243 W | 1 m       |
+| 2   | 0.70 km  | 0:04:15 | 6:05/km  | 160 | 298 W | 0 m       |
+| 3   | 0.20 km  | 0:01:38 | 8:12/km  | 160 | 238 W | 0 m       |
+| 4   | 0.70 km  | 0:04:19 | 6:11/km  | 166 | 290 W | 1 m       |
+| 5   | 0.20 km  | 0:02:30 | 12:31/km | 152 | 105 W | 0 m       |
+| 6   | 0.70 km  | 0:04:20 | 6:11/km  | 157 | 292 W | 0 m       |
+| 7   | 1.00 km  | 0:08:33 | 8:33/km  | 154 | 214 W | 1 m       |
+| 8   | 0.01 km  | 0:00:07 | 9:51/km  | 156 | 221 W | 0 m       |
 
 ---
-### 2026-09-15 19:19:20 - 10x200 con 1' Rec.
+### 2026-09-15 19:19:20 - S3 Intervals 10x200m
 
 **Type**: Run
 **Distance**: 3.42 km
@@ -121,38 +124,39 @@
 **Elevation**: 6 m
 **Calories**: 289 kcal
 **Heart Rate**: 154 bpm (max: 169)
+**Power**: 219 W (NP: 269 W, 94% of threshold 285 W, P3 Steady) · 2.83 W/kg
 **Meteo**: 26°C, rugiada 18°C, umidità 61%, sereno · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 1 km riscaldamento corsa. 10x200 solo la prima ho recuperato in jogging resto camminando. Defaticamento cammino corsa meno di 1km ero davvero stanco.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace     | HR  | Elevation |
-|-----|----------|---------|----------|-----|-----------|
-| 1   | 0.00 km  | 0:00:01 | 14:21/km | 129 | 0 m       |
-| 2   | 0.20 km  | 0:01:06 | 5:28/km  | 140 | 0 m       |
-| 3   | 0.13 km  | 0:00:59 | 7:50/km  | 152 | 0 m       |
-| 4   | 0.20 km  | 0:01:05 | 5:23/km  | 158 | 0 m       |
-| 5   | 0.08 km  | 0:00:59 | 12:15/km | 160 | 0 m       |
-| 6   | 0.20 km  | 0:01:02 | 5:09/km  | 154 | 0 m       |
-| 7   | 0.08 km  | 0:00:59 | 12:20/km | 158 | 0 m       |
-| 8   | 0.20 km  | 0:01:00 | 5:00/km  | 153 | 2 m       |
-| 9   | 0.08 km  | 0:00:59 | 11:57/km | 160 | 0 m       |
-| 10  | 0.20 km  | 0:01:03 | 5:16/km  | 155 | 0 m       |
-| 11  | 0.08 km  | 0:00:59 | 12:25/km | 162 | 0 m       |
-| 12  | 0.20 km  | 0:01:06 | 5:30/km  | 156 | 0 m       |
-| 13  | 0.10 km  | 0:00:59 | 10:28/km | 162 | 0 m       |
-| 14  | 0.20 km  | 0:01:05 | 5:27/km  | 157 | 1 m       |
-| 15  | 0.07 km  | 0:00:59 | 13:36/km | 159 | 0 m       |
-| 16  | 0.20 km  | 0:01:03 | 5:17/km  | 156 | 0 m       |
-| 17  | 0.07 km  | 0:00:59 | 13:23/km | 162 | 0 m       |
-| 18  | 0.20 km  | 0:01:06 | 5:30/km  | 156 | 3 m       |
-| 19  | 0.07 km  | 0:00:59 | 13:32/km | 162 | 0 m       |
-| 20  | 0.20 km  | 0:01:02 | 5:12/km  | 160 | 0 m       |
-| 21  | 0.07 km  | 0:00:59 | 14:08/km | 164 | 0 m       |
-| 22  | 0.57 km  | 0:06:07 | 11:04/km | 145 | 0 m       |
+| Lap | Distance | Time    | Pace     | HR  | Power | Elevation |
+|-----|----------|---------|----------|-----|-------|-----------|
+| 1   | 0.00 km  | 0:00:01 | 14:21/km | 129 | N/A   | 0 m       |
+| 2   | 0.20 km  | 0:01:06 | 5:28/km  | 140 | 341 W | 0 m       |
+| 3   | 0.13 km  | 0:00:59 | 7:50/km  | 152 | 267 W | 0 m       |
+| 4   | 0.20 km  | 0:01:05 | 5:23/km  | 158 | 318 W | 0 m       |
+| 5   | 0.08 km  | 0:00:59 | 12:15/km | 160 | 162 W | 0 m       |
+| 6   | 0.20 km  | 0:01:02 | 5:09/km  | 154 | 321 W | 0 m       |
+| 7   | 0.08 km  | 0:00:59 | 12:20/km | 158 | 165 W | 0 m       |
+| 8   | 0.20 km  | 0:01:00 | 5:00/km  | 153 | 335 W | 2 m       |
+| 9   | 0.08 km  | 0:00:59 | 11:57/km | 160 | 129 W | 0 m       |
+| 10  | 0.20 km  | 0:01:03 | 5:16/km  | 155 | 324 W | 0 m       |
+| 11  | 0.08 km  | 0:00:59 | 12:25/km | 162 | 169 W | 0 m       |
+| 12  | 0.20 km  | 0:01:06 | 5:30/km  | 156 | 309 W | 0 m       |
+| 13  | 0.10 km  | 0:00:59 | 10:28/km | 162 | 181 W | 0 m       |
+| 14  | 0.20 km  | 0:01:05 | 5:27/km  | 157 | 311 W | 1 m       |
+| 15  | 0.07 km  | 0:00:59 | 13:36/km | 159 | 139 W | 0 m       |
+| 16  | 0.20 km  | 0:01:03 | 5:17/km  | 156 | 311 W | 0 m       |
+| 17  | 0.07 km  | 0:00:59 | 13:23/km | 162 | 134 W | 0 m       |
+| 18  | 0.20 km  | 0:01:06 | 5:30/km  | 156 | 328 W | 3 m       |
+| 19  | 0.07 km  | 0:00:59 | 13:32/km | 162 | 139 W | 0 m       |
+| 20  | 0.20 km  | 0:01:02 | 5:12/km  | 160 | 307 W | 0 m       |
+| 21  | 0.07 km  | 0:00:59 | 14:08/km | 164 | 141 W | 0 m       |
+| 22  | 0.57 km  | 0:06:07 | 11:04/km | 145 | 139 W | 0 m       |
 
 ---
-### 2026-09-15 19:10:48 - Fiumicino Corsa
+### 2026-09-15 19:10:48 - S3 Warm-up
 
 **Type**: Run
 **Distance**: 1.02 km
@@ -166,14 +170,15 @@
 **Elevation**: 2 m
 **Calories**: 73 kcal
 **Heart Rate**: 132 bpm (max: 149)
+**Power**: 246 W (NP: 250 W, 88% of threshold 285 W, P2 Easy) · 3.17 W/kg
 **Meteo**: 26°C, rugiada 18°C, umidità 65% · **caldo** (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace    | HR  | Elevation |
-|-----|----------|---------|---------|-----|-----------|
-| 1   | 1.00 km  | 0:07:40 | 7:40/km | 132 | 2 m       |
-| 2   | 0.02 km  | 0:00:05 | 7:02/km | 149 | 0 m       |
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:07:40 | 7:40/km | 132 | 245 W | 2 m       |
+| 2   | 0.02 km  | 0:00:05 | 7:02/km | 149 | 260 W | 0 m       |
 
 ---
 

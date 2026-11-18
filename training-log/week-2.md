@@ -18,7 +18,7 @@
 
 ## Activities
 
-### 2026-09-06 18:56:14 - Corsa 4 Km
+### 2026-09-06 18:56:14 - S1 Long run 4km
 
 **Type**: Run
 **Distance**: 4.01 km
@@ -35,21 +35,22 @@
 **Elevation**: 3 m
 **Calories**: 317 kcal
 **Heart Rate**: 151 bpm (max: 168)
+**Power**: 246 W (NP: 264 W, 93% of threshold 285 W, P3 Steady) · 3.17 W/kg
 **Meteo**: 28°C (percepiti 32°C), rugiada 24°C, umidità 78% · **molto caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: Lungo 4Km. Fermato a camminare 3 volte oltre zona 2. Resistenza aerobica ancora scarsa.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace     | HR  | Elevation |
-|-----|----------|---------|----------|-----|-----------|
-| 1   | 1.00 km  | 0:06:40 | 6:44/km  | 141 | 0 m       |
-| 2   | 1.00 km  | 0:07:28 | 7:28/km  | 154 | 1 m       |
-| 3   | 1.00 km  | 0:07:41 | 7:41/km  | 151 | 0 m       |
-| 4   | 1.00 km  | 0:07:34 | 7:34/km  | 156 | 2 m       |
-| 5   | 0.01 km  | 0:00:05 | 10:55/km | 164 | 0 m       |
+| Lap | Distance | Time    | Pace     | HR  | Power | Elevation |
+|-----|----------|---------|----------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:06:40 | 6:44/km  | 141 | 276 W | 0 m       |
+| 2   | 1.00 km  | 0:07:28 | 7:28/km  | 154 | 246 W | 1 m       |
+| 3   | 1.00 km  | 0:07:41 | 7:41/km  | 151 | 227 W | 0 m       |
+| 4   | 1.00 km  | 0:07:34 | 7:34/km  | 156 | 238 W | 2 m       |
+| 5   | 0.01 km  | 0:00:05 | 10:55/km | 164 | 280 W | 0 m       |
 
 ---
-### 2026-09-04 18:28:30 - Tempo 2x1.5 Km
+### 2026-09-04 18:28:30 - S1 Tempo 2x1500m
 
 **Type**: Run
 **Distance**: 4.73 km
@@ -66,23 +67,24 @@
 **Elevation**: 5 m
 **Calories**: 369 kcal
 **Heart Rate**: 138 bpm (max: 176)
+**Power**: 188 W (NP: 241 W, 85% of threshold 285 W, P2 Easy) · 2.43 W/kg
 **Meteo**: 30°C (percepiti 35°C), rugiada 24°C, umidità 70%, sereno · **molto caldo** (stazione Roma Fiumicino, aria all'ombra)
 **Note**: 2x1.5 km a 6:00-6:20 min/km. Buona prima ripetuta. Seconda ripetuta fermato a camminare 2 volte.
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace     | HR  | Elevation |
-|-----|----------|---------|----------|-----|-----------|
-| 1   | 1.00 km  | 0:11:00 | 11:00/km | 101 | 0 m       |
-| 2   | 1.00 km  | 0:06:08 | 6:08/km  | 152 | 1 m       |
-| 3   | 0.50 km  | 0:03:12 | 6:24/km  | 171 | 0 m       |
-| 4   | 0.22 km  | 0:02:59 | 13:44/km | 147 | 0 m       |
-| 5   | 1.00 km  | 0:07:20 | 7:20/km  | 154 | 1 m       |
-| 6   | 0.50 km  | 0:03:57 | 7:53/km  | 161 | 0 m       |
-| 7   | 0.52 km  | 0:07:27 | 14:29/km | 133 | 2 m       |
+| Lap | Distance | Time    | Pace     | HR  | Power | Elevation |
+|-----|----------|---------|----------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:11:00 | 11:00/km | 101 | 127 W | 0 m       |
+| 2   | 1.00 km  | 0:06:08 | 6:08/km  | 152 | 302 W | 1 m       |
+| 3   | 0.50 km  | 0:03:12 | 6:24/km  | 171 | 299 W | 0 m       |
+| 4   | 0.22 km  | 0:02:59 | 13:44/km | 147 | 98 W  | 0 m       |
+| 5   | 1.00 km  | 0:07:20 | 7:20/km  | 154 | 239 W | 1 m       |
+| 6   | 0.50 km  | 0:03:57 | 7:53/km  | 161 | 232 W | 0 m       |
+| 7   | 0.52 km  | 0:07:27 | 14:29/km | 133 | 97 W  | 2 m       |
 
 ---
-### 2026-09-01 19:26:00 - Fiumicino Corsa
+### 2026-09-01 19:26:00 - S1 Easy run
 
 **Type**: Run
 **Distance**: 3.26 km
@@ -96,15 +98,16 @@
 **Elevation**: 5 m
 **Calories**: 271 kcal
 **Heart Rate**: 158 bpm (max: 176)
+**Power**: 245 W (NP: 275 W, 96% of threshold 285 W, P4 Threshold) · 3.16 W/kg
 **Meteo**: 29°C (percepiti 32°C), rugiada 23°C, umidità 69% · **molto caldo** (stazione Roma Fiumicino, aria all'ombra)
 
 #### Lap Details
 
-| Lap | Distance | Time    | Pace    | HR  | Elevation |
-|-----|----------|---------|---------|-----|-----------|
-| 1   | 1.00 km  | 0:06:18 | 6:18/km | 153 | 0 m       |
-| 2   | 1.00 km  | 0:07:46 | 7:46/km | 159 | 2 m       |
-| 3   | 1.00 km  | 0:07:37 | 7:37/km | 160 | 3 m       |
-| 4   | 0.26 km  | 0:02:02 | 7:56/km | 168 | 0 m       |
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:06:18 | 6:18/km | 153 | 293 W | 0 m       |
+| 2   | 1.00 km  | 0:07:46 | 7:46/km | 159 | 223 W | 2 m       |
+| 3   | 1.00 km  | 0:07:37 | 7:37/km | 160 | 235 W | 3 m       |
+| 4   | 0.26 km  | 0:02:02 | 7:56/km | 168 | 213 W | 0 m       |
 
 ---

@@ -10,13 +10,13 @@ Passo di soglia: il passo sostenibile alla FC di soglia, oggi 165 bpm (`.claude/
 - **Gare** (almeno 20'): FC media dal 10' alla fine (Friel; in gara 2-3 battiti piu alta che in un test) e passo di soglia all'88% del VDOT (Daniels).
 - **Nessuna modifica automatica:** le fasce del piano si aggiornano dopo una gara o quando la stima si sposta di 5-10" in modo stabile su 2-3 sedute.
 
-| Data       | Attivita                    | Fonte            | Minuti usati | Passo di soglia | FC di soglia (Friel) | VDOT |
-| ---------- | --------------------------- | ---------------- | ------------ | --------------- | -------------------- | ---- |
-| 2026-09-04 | Tempo 2x1.5 Km              | Tempo a ripetute | 6            | 6:22/km         | -                    | -    |
-| 2026-09-18 | Tempo 3x700 m Rec 200m      | Tempo a ripetute | 6            | 6:23/km         | -                    | -    |
-| 2026-10-02 | Tempo 3x800 m               | Tempo a ripetute | 8            | 6:11/km         | -                    | -    |
-| 2026-10-09 | Tempo 2x1200 m              | Tempo a ripetute | 9            | 6:21/km         | -                    | -    |
-| 2026-10-16 | Tempo 2x1500 m              | Tempo a ripetute | 15           | 6:15/km         | -                    | -    |
-| 2026-10-29 | Tempo 2Km                   | Tempo continuo   | 11           | 6:16/km         | -                    | -    |
-| 2026-11-08 | Rome 5k                     | Gara             | 33           | 6:33/km         | 168 bpm              | 29.1 |
-| 2026-11-13 | Fiumicino - S11 Tempo 2500m | Tempo a ripetute | 9            | 6:19/km         | -                    | -    |
+| Data       | Attivita         | Fonte            | Minuti usati | Passo di soglia | FC di soglia (Friel) | VDOT |
+| ---------- | ---------------- | ---------------- | ------------ | --------------- | -------------------- | ---- |
+| 2026-09-04 | S1 Tempo 2x1500m | Tempo a ripetute | 6            | 6:22/km         | -                    | -    |
+| 2026-09-18 | S3 Tempo 3x700m  | Tempo a ripetute | 6            | 6:23/km         | -                    | -    |
+| 2026-10-02 | S5 Tempo 3x800m  | Tempo a ripetute | 8            | 6:11/km         | -                    | -    |
+| 2026-10-09 | S6 Tempo 2x1200m | Tempo a ripetute | 9            | 6:21/km         | -                    | -    |
+| 2026-10-16 | S7 Tempo 2x1500m | Tempo a ripetute | 15           | 6:15/km         | -                    | -    |
+| 2026-10-29 | S9 Tempo 2000m   | Tempo continuo   | 11           | 6:16/km         | -                    | -    |
+| 2026-11-08 | Rome 5k          | Gara             | 33           | 6:33/km         | 168 bpm              | 29.1 |
+| 2026-11-13 | S11 Tempo 2500m  | Tempo a ripetute | 9            | 6:19/km         | -                    | -    |

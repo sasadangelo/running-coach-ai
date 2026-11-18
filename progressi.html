@@ -195,7 +195,7 @@ summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
 
   <section id="ripetute">
     <h2>Ripetute</h2>
-    <p class="lead">Per ogni seduta: passo medio delle ripetute (punto), intervallo tra la più veloce e la più lenta (barra) e, dietro, la fascia di passo del piano per quella settimana (riquadro verde). Una barra corta vuol dire ritmo regolare; una barra dentro il riquadro vuol dire ripetute nella fascia. La FC qui viene dalla fascia H9: non va confrontata con le corse fatte col polso, e i picchi isolati sono artefatti.</p>
+    <p class="lead">Per ogni seduta: passo medio delle ripetute (punto), intervallo tra la più veloce e la più lenta (barra) e, dietro, la fascia di passo del piano per quella settimana: verde dentro la fascia, rosso fuori (sopra = troppo veloce, sotto = troppo lento). Una barra corta vuol dire ritmo regolare; una barra tutta nel verde vuol dire ripetute nella fascia. La FC qui viene dalla fascia H9: non va confrontata con le corse fatte col polso, e i picchi isolati sono artefatti.</p>
     <div class="grid2">
       <div class="card">
         <h3>200 m</h3>
@@ -367,8 +367,12 @@ function timeDots(container, opts) {
       const g = el("g", {}, svg);
       const cx = x(toDate(p.d).getTime());
       if (p.band) {
-        const ya = y(p.band[0]), yb = y(p.band[1]);
-        el("rect", { x: cx - 10, width: 20, y: Math.min(ya, yb), height: Math.abs(yb - ya), rx: 3, fill: css("--good"), opacity: 0.22 }, g);
+        // red outside the planned band (too fast above, too slow below), green inside it
+        const ya = y(p.band[0]), yb = y(p.band[1]), top = Math.min(ya, yb), bottom = Math.max(ya, yb);
+        const col = { x: cx - 10, width: 20 };
+        el("rect", { ...col, y: m.t, height: Math.max(0, top - m.t), fill: css("--critical"), opacity: 0.16 }, g);
+        el("rect", { ...col, y: top, height: bottom - top, fill: css("--good"), opacity: 0.32 }, g);
+        el("rect", { ...col, y: bottom, height: Math.max(0, h - m.b - bottom), fill: css("--critical"), opacity: 0.16 }, g);
       }
       if (p.lo != null && p.hi != null) {
         el("line", { x1: cx, x2: cx, y1: y(p.lo), y2: y(p.hi), stroke: color, "stroke-width": 4, "stroke-linecap": "round", opacity: 0.45 }, g);

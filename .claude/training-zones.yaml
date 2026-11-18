@@ -15,6 +15,40 @@ pace:
   # update when a real threshold test/race gives a better number.
   threshold_sec_per_km: 375  # 6:15/km
 
+power:
+  # Garmin wrist running power (Forerunner 255): not comparable with Stryd or other brands.
+  # Provisional threshold (2026-11-18): Rome 5K 294 W over 32' (~104% of threshold -> ~283 W)
+  # and Tempo laps at HR 164-167 (286-294 W). Main method: power of Tempo blocks at
+  # threshold HR (independent of endurance); ~30' races/tests confirm it. A ~1h race
+  # (e.g. Best Woman 10K, 2026-12-06) is NOT a threshold test while the long run is
+  # under 10-12 km: it is endurance-limited, so it may raise this value, never lower it.
+  threshold_watts: 285
+  # Same weight as the Garmin profile; power depends on it, change both only for a real change.
+  weight_kg: 77.5
+  # Zones calibrated on the athlete's own power/HR pairs, not generic tables: wrist power stays
+  # high at slow paces (true easy run at HR 139 = 239 W = 84%), so Stryd-style
+  # "easy = 65-80%" would label every easy run as moderate. Easy/long runs are still
+  # decided on HR; power is a secondary metric for hills, short reps and race pacing.
+  zones:
+    - name: P1 Recovery
+      min_percent: 0
+      max_percent: 82
+    - name: P2 Easy
+      min_percent: 82
+      max_percent: 90
+    - name: P3 Steady
+      min_percent: 90
+      max_percent: 96
+    - name: P4 Threshold
+      min_percent: 96
+      max_percent: 105
+    - name: P5 Interval
+      min_percent: 105
+      max_percent: 118
+    - name: P6 Repetition
+      min_percent: 118
+      max_percent: 1000
+
 zones:
   - name: Zone 1
     min_percent: 50

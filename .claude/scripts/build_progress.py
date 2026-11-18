@@ -47,17 +47,17 @@ def pace_seconds(text: str) -> int | None:
 def classify(name: str) -> str:
     """Map an activity name to a session type."""
     low = name.lower()
-    if "riscaldamento" in low or "shakeout" in low:
+    if any(k in low for k in ("riscaldamento", "shakeout", "warm-up", "cool-down")):
         return "warmup"
     if re.search(r"\b5k\b|\b10k\b|gara", low):
         return "race"
-    if "allungh" in low:
+    if "allungh" in low or "strides" in low:
         return "strides"
     if "tempo" in low:
         return "tempo"
-    if re.search(r"\d+\s*x\s*\d+", low):
+    if "interval" in low or re.search(r"\d+\s*x\s*\d+", low):
         return "intervals"
-    if "lung" in low:
+    if "lung" in low or "long run" in low:
         return "long"
     return "easy"
 

@@ -112,8 +112,14 @@ def parse_logged_runs(logs_dir: str) -> list[dict]:
 def is_long_run(run: dict) -> bool:
     """A Sunday run that is not strides, a race or a race warm-up/cool-down."""
     name = run["name"]
-    return (run["date"].weekday() == 6 and "allungh" not in name.lower()
+    return (run["date"].weekday() == 6 and not is_strides(name)
             and not is_race(None, name) and not is_warmup(name))
+
+
+def is_strides(name: str) -> bool:
+    """Strides, named "Strides" (current naming) or "Allunghi" (older logs)."""
+    lower = name.lower()
+    return "strides" in lower or "allungh" in lower
 
 
 def longest_per_day(runs: list[dict]) -> list[dict]:
@@ -317,7 +323,7 @@ def main() -> int:
     runs = parse_logged_runs(args.logs_dir)
     if args.date:
         wanted = {date.fromisoformat(d) for d in args.date}
-        longs = [r for r in runs if r["date"] in wanted and "allungh" not in r["name"].lower()]
+        longs = [r for r in runs if r["date"] in wanted and not is_strides(r["name"])]
     else:
         longs = longest_per_day([r for r in runs if is_long_run(r)])
     if not longs:

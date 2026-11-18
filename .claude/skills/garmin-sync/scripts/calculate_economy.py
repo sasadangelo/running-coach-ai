@@ -11,6 +11,10 @@ pace), past the first WARMUP_SECONDS of the run:
   contact time)), against the upper limits of Garmin's green band. M = 1 means
   "green" mechanics, below 1 orange, above 1 blue.
 - RES (Running Economy Score) = EF * 100 * M.
+- RE (Running Effectiveness) = speed / (power / weight) = metres per second per W/kg,
+  from Garmin wrist power and power.weight_kg in training-zones.yaml. It doesn't
+  depend on HR, so heat and fatigue move it much less than EF; read only its trend
+  (Garmin watts are not comparable with Stryd's).
 
 Runs need at least MIN_SAMPLES seconds in the band. Each long run gets an
 "**Economia**:" line in its training-log/week-N.md section, and the full table
@@ -27,6 +31,11 @@ import os
 import statistics
 import sys
 from pathlib import Path
+
+try:
+    import yaml
+except ImportError:
+    yaml = None
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -52,6 +61,19 @@ WARMUP_SECONDS = 600
 MIN_SAMPLES = 180
 VR_GREEN = 8.6  # Garmin green band upper limit, vertical ratio %
 GCT_GREEN = 272  # Garmin green band upper limit, ground contact time ms
+TRAINING_ZONES_CONFIG = ".claude/training-zones.yaml"
+
+
+def load_weight_kg(config_path: str = TRAINING_ZONES_CONFIG) -> float | None:
+    """power.weight_kg from training-zones.yaml (the weight Garmin uses to compute power)."""
+    path = Path(config_path)
+    if yaml is None or not path.exists():
+        return None
+    try:
+        config = yaml.safe_load(path.read_text()) or {}
+    except Exception:  # noqa: BLE001 - a malformed config just disables RE
+        return None
+    return (config.get("power") or {}).get("weight_kg")
 
 
 def extract_samples(client, activity_id: int) -> list[dict]:
@@ -69,11 +91,12 @@ def extract_samples(client, activity_id: int) -> list[dict]:
             continue
         cadence = get(values, "directDoubleCadence") or (get(values, "directRunCadence") or 0) * 2 or None
         samples.append({"t": t, "hr": hr, "speed": speed, "cadence": cadence,
-                        "gct": get(values, "directGroundContactTime"), "vr": get(values, "directVerticalRatio")})
+                        "gct": get(values, "directGroundContactTime"), "vr": get(values, "directVerticalRatio"),
+                        "power": get(values, "directPower")})
     return samples
 
 
-def economy(samples: list[dict]) -> dict | None:
+def economy(samples: list[dict], weight_kg: float | None = None) -> dict | None:
     smoothed = rolling_mean([(s["t"], s["hr"], s["speed"]) for s in samples], 15)
     fast, slow = (1000 / sec for sec in REFERENCE_BAND_SEC_KM)
     band = [(s, v) for s, v in zip(samples, smoothed) if s["t"] >= WARMUP_SECONDS and slow <= v <= fast]
@@ -89,8 +112,10 @@ def economy(samples: list[dict]) -> dict | None:
     ef = speed * 60 / hr
     gct, vr = mean_of("gct"), mean_of("vr")
     m = math.sqrt((VR_GREEN / vr) * (GCT_GREEN / gct)) if gct and vr else None
+    power = mean_of("power")
     return {
         "minutes": len(band) / 60, "speed": speed, "hr": hr, "ef": ef,
+        "power": power, "re": speed / (power / weight_kg) if power and weight_kg else None,
         "cadence": mean_of("cadence"), "gct": gct, "vr": vr, "m": m,
         "res": None if m is None else ef * 100 * m,
     }
@@ -98,13 +123,17 @@ def economy(samples: list[dict]) -> dict | None:
 
 def summary_line(r: dict) -> str:
     if r["m"] is None:
-        return f"EF {r['ef']:.3f} m/battito (meccanica n/d)"
-    return f"EF {r['ef']:.3f} m/battito · M {r['m']:.3f} · RES {r['res']:.1f}"
+        line = f"EF {r['ef']:.3f} m/battito (meccanica n/d)"
+    else:
+        line = f"EF {r['ef']:.3f} m/battito · M {r['m']:.3f} · RES {r['res']:.1f}"
+    if r.get("re") is not None:
+        line += f" · RE {r['re']:.3f} ({r['power']:.0f} W)"
+    return line
 
 
 def write_log(path: Path, results: list[dict]) -> None:
     headers = ["Data", "Attivita", "Minuti in fascia", "Passo", "FC", "EF (m/battito)", "Battiti/km",
-               "Cadenza", "Contatto al suolo", "Rapporto verticale", "M", "RES"]
+               "Cadenza", "Contatto al suolo", "Rapporto verticale", "M", "RES", "Potenza", "RE"]
     rows = [[
         r["date"].isoformat(),
         r["name"],
@@ -118,6 +147,8 @@ def write_log(path: Path, results: list[dict]) -> None:
         "n/d" if r["vr"] is None else f"{r['vr']:.2f}%",
         "n/d" if r["m"] is None else f"{r['m']:.3f}",
         "n/d" if r["res"] is None else f"{r['res']:.1f}",
+        "n/d" if r.get("power") is None else f"{r['power']:.0f} W",
+        "n/d" if r.get("re") is None else f"{r['re']:.3f}",
     ] for r in results]
     band = "-".join(pace_str(1000 / sec).removesuffix("/km") for sec in REFERENCE_BAND_SEC_KM)
     lines = [
@@ -129,6 +160,8 @@ def write_log(path: Path, results: list[dict]) -> None:
         f"- **M (indice meccanico)** = radice di (({VR_GREEN} / rapporto verticale) x ({GCT_GREEN} / contatto al suolo)), rispetto ai limiti della fascia verde Garmin. "
         "1 = meccanica verde, sotto 1 arancione, sopra 1 blu. Se EF e M salgono insieme, migliora anche l'economia.",
         "- **RES (Running Economy Score)** = EF x 100 x M.",
+        "- **RE (Running Effectiveness)** = velocita (m/s) / (potenza / peso in W/kg). Non dipende dalla FC, quindi caldo e stanchezza la spostano poco: "
+        "EF in calo con RE stabile = effetto della FC (caldo, fatica), non della meccanica. Potenza Garmin dal polso: conta solo il trend, non il confronto con Stryd.",
         "- **Lettura:** caldo, poco sonno e stanchezza alzano la FC e abbassano l'EF senza che l'economia sia peggiorata. Contano i trend di 4-6 settimane. "
         "La fascia di passo va aggiornata se il passo del lungo cambia molto, altrimenti i confronti si fanno su pochi minuti.",
         "",
@@ -160,6 +193,7 @@ def main() -> int:
     token_dir = os.path.expanduser(os.getenv("GARMINTOKENS") or "~/.garmin-running-coach-tokens")
     client = login(email, password, token_dir)
 
+    weight_kg = load_weight_kg()
     longs = [r for r in parse_logged_runs(args.logs_dir) if is_long_run(r)]
     results = []
     for run in longs:
@@ -167,7 +201,7 @@ def main() -> int:
             activity = find_activity(client, run["date"].isoformat(), run["name"])
         except ValueError:
             continue
-        e = economy(extract_samples(client, activity["activityId"]))
+        e = economy(extract_samples(client, activity["activityId"]), weight_kg)
         if e is None:
             print(f"{run['date']} {run['name']}: troppo pochi minuti nella fascia di riferimento")
             results.append({**run, "line": None})

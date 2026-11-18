@@ -83,18 +83,39 @@ NGP_WINDOW_SECONDS = 30  # rolling-average window before the quartic mean, same 
 TRAINING_ZONES_CONFIG = ".claude/training-zones.yaml"
 
 
-def load_threshold_speed_m_s(config_path: str = TRAINING_ZONES_CONFIG) -> float | None:
-    """Load threshold pace (pace.threshold_sec_per_km) from training-zones.yaml, as m/s."""
+def load_zones_config(config_path: str = TRAINING_ZONES_CONFIG) -> dict:
+    """Load training-zones.yaml, or {} if it's missing, malformed, or PyYAML isn't installed."""
     if yaml is None:
-        return None
+        return {}
     path = Path(config_path)
     if not path.exists():
-        return None
+        return {}
     try:
-        config = yaml.safe_load(path.read_text()) or {}
+        return yaml.safe_load(path.read_text()) or {}
     except Exception:  # noqa: BLE001 - malformed config shouldn't crash the sync
+        return {}
+
+
+def load_power_config(config_path: str = TRAINING_ZONES_CONFIG) -> dict:
+    """Load the power section (threshold_watts, zones) from training-zones.yaml."""
+    return load_zones_config(config_path).get("power") or {}
+
+
+def power_zone_name(watts: float | None, power_config: dict) -> str | None:
+    """Name of the power zone (training-zones.yaml power.zones, as % of threshold) that contains watts."""
+    threshold = power_config.get("threshold_watts")
+    if not watts or not threshold:
         return None
-    threshold_sec_per_km = ((config.get("pace") or {}).get("threshold_sec_per_km"))
+    percent = watts / threshold * 100
+    for zone in power_config.get("zones") or []:
+        if zone.get("min_percent", 0) <= percent < zone.get("max_percent", float("inf")):
+            return zone.get("name")
+    return None
+
+
+def load_threshold_speed_m_s(config_path: str = TRAINING_ZONES_CONFIG) -> float | None:
+    """Load threshold pace (pace.threshold_sec_per_km) from training-zones.yaml, as m/s."""
+    threshold_sec_per_km = ((load_zones_config(config_path).get("pace") or {}).get("threshold_sec_per_km"))
     if not threshold_sec_per_km:
         return None
     return 1000.0 / threshold_sec_per_km
@@ -393,7 +414,7 @@ def format_pace(speed_m_s: float, unit: str) -> str:
 def fetch_laps(client: Garmin, activity_id: int) -> list:
     """
     Fetch lap/split data for an activity. Returns a list of dicts with
-    distance_m, duration_s, avg_speed_m_s, avg_hr, elevation_gain_m -
+    distance_m, duration_s, avg_speed_m_s, avg_hr, avg_power, elevation_gain_m -
     or an empty list if splits aren't available.
 
     Note: the exact shape of Garmin's splits response can vary by activity
@@ -414,6 +435,7 @@ def fetch_laps(client: Garmin, activity_id: int) -> list:
                 "duration_s": entry.get("movingDuration") or entry.get("duration", 0.0) or 0.0,
                 "avg_speed_m_s": entry.get("averageSpeed", 0.0) or 0.0,
                 "avg_hr": entry.get("averageHR"),
+                "avg_power": entry.get("averagePower"),
                 "elevation_gain_m": entry.get("elevationGain", 0.0) or 0.0,
             }
         )
@@ -440,9 +462,38 @@ def format_markdown_table(headers: list[str], rows: list[list[str]]) -> list[str
     return lines
 
 
+def format_power_line(activity: dict, power_config: dict) -> str | None:
+    """Average and normalized power, with the share of threshold and the zone of the normalized power."""
+    avg_power = activity.get("avgPower")
+    if not avg_power:
+        return None
+    norm_power = activity.get("normPower")
+    line = f"**Power**: {avg_power:.0f} W"
+    if norm_power:
+        line += f" (NP: {norm_power:.0f} W"
+        threshold = power_config.get("threshold_watts")
+        if threshold:
+            line += f", {norm_power / threshold * 100:.0f}% of threshold {threshold:.0f} W"
+            zone = power_zone_name(norm_power, power_config)
+            if zone:
+                line += f", {zone}"
+        line += ")"
+    weight_kg = power_config.get("weight_kg")
+    if weight_kg:
+        line += f" · {avg_power / weight_kg:.2f} W/kg"
+    return line
+
+
 def build_activity_section(
-    activity: dict, laps: list, run_walk_split: tuple, ngp_speed: float | None, threshold_speed_m_s: float | None, unit: str
+    activity: dict,
+    laps: list,
+    run_walk_split: tuple,
+    ngp_speed: float | None,
+    threshold_speed_m_s: float | None,
+    unit: str,
+    power_config: dict | None = None,
 ) -> str:
+    power_config = power_config or {}
     name = activity.get("activityName", "Untitled Activity")
     start_time = (activity.get("startTimeLocal") or "").replace("T", " ")
     label = activity_label(activity)
@@ -493,6 +544,9 @@ def build_activity_section(
         if max_hr:
             hr_line += f" (max: {max_hr:.0f})"
         lines.append(hr_line)
+    power_line = format_power_line(activity, power_config)
+    if power_line:
+        lines.append(power_line)
     weather = activity.get("weather")
     if weather:
         lines.append(f"**Meteo**: {format_weather(weather)}")
@@ -504,22 +558,25 @@ def build_activity_section(
         lines.append("#### Lap Details")
         lines.append("")
         rows = []
+        has_power = any(lap.get("avg_power") for lap in laps)
         for i, lap in enumerate(laps, 1):
             lap_distance = meters_to_distance(lap["distance_m"], unit)
             lap_pace = format_pace(lap["avg_speed_m_s"], unit)
             lap_hr = f"{lap['avg_hr']:.0f}" if lap["avg_hr"] else "N/A"
             lap_elevation = meters_to_elevation(lap["elevation_gain_m"], unit)
-            rows.append(
-                [
-                    str(i),
-                    f"{lap_distance:.2f} {distance_unit_label(unit)}",
-                    format_duration(lap["duration_s"]),
-                    f"{lap_pace}/{distance_unit_label(unit)}",
-                    lap_hr,
-                    f"{lap_elevation:.0f} {elevation_unit_label(unit)}",
-                ]
-            )
-        lines.extend(format_markdown_table(["Lap", "Distance", "Time", "Pace", "HR", "Elevation"], rows))
+            row = [
+                str(i),
+                f"{lap_distance:.2f} {distance_unit_label(unit)}",
+                format_duration(lap["duration_s"]),
+                f"{lap_pace}/{distance_unit_label(unit)}",
+                lap_hr,
+            ]
+            if has_power:
+                row.append(f"{lap['avg_power']:.0f} W" if lap.get("avg_power") else "N/A")
+            row.append(f"{lap_elevation:.0f} {elevation_unit_label(unit)}")
+            rows.append(row)
+        headers = ["Lap", "Distance", "Time", "Pace", "HR"] + (["Power"] if has_power else []) + ["Elevation"]
+        lines.extend(format_markdown_table(headers, rows))
         lines.append("")
 
     lines.append("---")
@@ -527,7 +584,9 @@ def build_activity_section(
     return "\n".join(lines)
 
 
-def build_markdown(activities: list, start: date, end: date, unit: str, threshold_speed_m_s: float | None) -> str:
+def build_markdown(
+    activities: list, start: date, end: date, unit: str, threshold_speed_m_s: float | None, power_config: dict | None = None
+) -> str:
     total_distance_m = 0.0
     total_duration_s = 0.0
     total_elevation_m = 0.0
@@ -588,7 +647,7 @@ def build_markdown(activities: list, start: date, end: date, unit: str, threshol
     ]
 
     for activity, laps, run_walk_split, ngp_speed in activities:
-        lines.extend(build_activity_section(activity, laps, run_walk_split, ngp_speed, threshold_speed_m_s, unit).splitlines())
+        lines.extend(build_activity_section(activity, laps, run_walk_split, ngp_speed, threshold_speed_m_s, unit, power_config).splitlines())
 
     return "\n".join(lines)
 
@@ -665,7 +724,7 @@ def main():
     if threshold_speed_m_s is None:
         print("  note: no pace.threshold_sec_per_km in .claude/training-zones.yaml - skipping IF/TSS", file=sys.stderr)
 
-    markdown = build_markdown(enriched_activities, start, end, args.unit, threshold_speed_m_s)
+    markdown = build_markdown(enriched_activities, start, end, args.unit, threshold_speed_m_s, load_power_config())
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

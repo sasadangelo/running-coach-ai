@@ -10,7 +10,7 @@ scripts and summarises each metric per calendar month:
 Every metric is also turned into an index where 100 is its first month with
 data, so metrics in different units can be compared; for threshold pace,
 where lower is better, the index is inverted. Writes
-health-log/monthly-profile.md and an SVG radar of the last two months to
+health-log/monthly-profile.md and an SVG radar of the last three months (the month in progress dashed) to
 health-log/monthly-profile.svg (embedded by the dashboard).
 
 Usage:
@@ -121,10 +121,11 @@ def month_label(m: tuple[int, int], today: date) -> str:
 def radar_svg(months, table, today: date) -> str:
     size, cx, cy, r_max = 420, 240, 205, 150
     lo, hi = 80, 140  # index range on the radial axis
-    shown = months[-2:]
-    colors = {shown[-1]: "#33ff33"}
-    if len(shown) == 2:
-        colors[shown[0]] = "#5aaa5a"
+    shown = months[-3:]
+    palette = ["var(--s3, #1baf7a)", "var(--s2, #eb6834)", "var(--s1, #2a78d6)"]
+    colors = {m: c for m, c in zip(shown, palette[-len(shown):])}
+    current = (today.year, today.month)
+    grid, muted, text_col, surface = "var(--grid, #ebeae6)", "var(--text-muted, #77766f)", "var(--text-secondary, #52514e)", "var(--surface-1, #fcfcfb)"
     n = len(RADAR_KEYS)
     labels = {m[0]: m[1] for m in METRICS}
 
@@ -133,23 +134,23 @@ def radar_svg(months, table, today: date) -> str:
         r = r_max * (min(max(idx, lo), hi) - lo) / (hi - lo)
         return cx + r * math.cos(a), cy + r * math.sin(a)
 
-    out = [f'<svg viewBox="0 0 {size + 60} {size + 20}" class="w-full h-auto" style="max-width:520px" xmlns="http://www.w3.org/2000/svg" '
+    out = [f'<svg viewBox="0 0 {size + 60} {size + 20}" style="max-width:520px;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" '
            f'role="img" aria-label="Profilo del runner, indice 100 = primo mese">']
     for ring in (80, 100, 120, 140):
         pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in (point(i, ring) for i in range(n)))
         dash = "" if ring == 100 else ' stroke-dasharray="3,3"'
-        out.append(f'<polygon points="{pts}" fill="none" stroke="#1a7a1a" stroke-width="{1.5 if ring == 100 else 0.7}"{dash}/>')
+        out.append(f'<polygon points="{pts}" fill="none" style="stroke:{grid}" stroke-width="{1.5 if ring == 100 else 0.7}"{dash}/>')
         x, y = point(0.5, ring)
-        out.append(f'<text x="{x + 3:.1f}" y="{y - 2:.1f}" fill="#5aaa5a" font-family="Courier New" font-size="10">{ring}</text>')
+        out.append(f'<text x="{x + 3:.1f}" y="{y - 2:.1f}" style="fill:{muted}" font-size="10">{ring}</text>')
     for i, key in enumerate(RADAR_KEYS):
         x, y = point(i, hi)
-        out.append(f'<line x1="{cx}" y1="{cy}" x2="{x:.1f}" y2="{y:.1f}" stroke="#1a7a1a" stroke-width="0.7"/>')
+        out.append(f'<line x1="{cx}" y1="{cy}" x2="{x:.1f}" y2="{y:.1f}" style="stroke:{grid}" stroke-width="0.7"/>')
         lx, ly = point(i, hi + 13)
         anchor = "middle" if abs(lx - cx) < 10 else ("start" if lx > cx else "end")
         has_data = any(table[(key, m)][1] is not None for m in shown)
         text = labels[key] if has_data else f"{labels[key]} (n/d)"
-        color = "#66ff66" if has_data else "#5aaa5a"
-        out.append(f'<text x="{lx:.1f}" y="{ly + 4:.1f}" text-anchor="{anchor}" fill="{color}" font-family="Courier New" font-size="12">{text}</text>')
+        color = text_col if has_data else muted
+        out.append(f'<text x="{lx:.1f}" y="{ly + 4:.1f}" text-anchor="{anchor}" style="fill:{color}" font-size="12">{text}</text>')
     for m in shown:
         pts = []
         for i, key in enumerate(RADAR_KEYS):
@@ -158,18 +159,20 @@ def radar_svg(months, table, today: date) -> str:
         valid = [(i, idx) for i, idx in pts if idx is not None]
         if len(valid) >= 3:
             poly = " ".join(f"{x:.1f},{y:.1f}" for x, y in (point(i, idx) for i, idx in valid))
-            out.append(f'<polygon points="{poly}" fill="{colors[m]}" fill-opacity="0.12" stroke="{colors[m]}" stroke-width="2"/>')
+            dash = ' stroke-dasharray="6,4"' if m == current else ""
+            fill_op = 0.05 if m == current else 0.12
+            out.append(f'<polygon points="{poly}" style="fill:{colors[m]};stroke:{colors[m]}" fill-opacity="{fill_op}" stroke-width="2"{dash}/>')
         for i, idx in valid:
             x, y = point(i, idx)
             key = RADAR_KEYS[i]
             metric = next(mt for mt in METRICS if mt[0] == key)
-            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="{colors[m]}" stroke="#0f0f0f" stroke-width="2">'
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" style="fill:{colors[m]};stroke:{surface}" stroke-width="2">'
                        f'<title>{month_label(m, today)} · {labels[key]}: {fmt_value(metric, table[(key, m)][0])} (indice {idx:.0f})</title></circle>')
     lx = 20
     for m in shown:
-        out.append(f'<rect x="{lx}" y="{size + 4}" width="14" height="10" fill="{colors[m]}" rx="2"/>')
-        out.append(f'<text x="{lx + 19}" y="{size + 13}" fill="#66ff66" font-family="Courier New" font-size="12">{month_label(m, today)}</text>')
-        lx += 230
+        out.append(f'<rect x="{lx}" y="{size + 4}" width="14" height="10" style="fill:{colors[m]}" rx="2"/>')
+        out.append(f'<text x="{lx + 19}" y="{size + 13}" style="fill:{text_col}" font-size="12">{month_label(m, today)}</text>')
+        lx += 150
     out.append("</svg>")
     return "\n".join(out)
 

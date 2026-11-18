@@ -219,6 +219,10 @@ def weekly(activities: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
+# Bands that override the plan text for every week (athlete's choice, 2026-11-18):
+# the 200 m are judged against 5:10-5:30 even where the early plan said 5:20-5:30.
+FIXED_REP_TARGETS = {"200": [5 * 60 + 10, 5 * 60 + 30]}
+
 WEEK_RE = re.compile(r"^###.*Settimana (\d+)")
 REP_TARGET_RE = re.compile(r"\d+\s*x\s*(\d+)m\s*@\s*(\d+):(\d{2})-(\d+):(\d{2})/km")
 
@@ -247,7 +251,9 @@ def attach_rep_targets(activities: list[dict[str, Any]]) -> None:
     for a in activities:
         m = re.match(r"S(\d+)\b", a["name"])
         if a["type"] == "intervals" and m and int(m.group(1)) in targets:
-            a["target"] = targets[int(m.group(1))]
+            a["target"] = {**targets[int(m.group(1))]}
+        if a["type"] == "intervals" and a.get("target"):
+            a["target"].update({d: band for d, band in FIXED_REP_TARGETS.items() if d in a["target"]})
 
 
 def main() -> None:

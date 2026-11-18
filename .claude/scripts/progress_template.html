@@ -195,7 +195,7 @@ summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
 
   <section id="ripetute">
     <h2>Ripetute</h2>
-    <p class="lead">Per ogni seduta: passo medio delle ripetute (punto) e intervallo tra la più veloce e la più lenta (barra). Una barra corta vuol dire ritmo regolare. La FC qui viene dalla fascia H9: non va confrontata con le corse fatte col polso, e i picchi isolati sono artefatti.</p>
+    <p class="lead">Per ogni seduta: passo medio delle ripetute (punto), intervallo tra la più veloce e la più lenta (barra) e, dietro, la fascia di passo del piano per quella settimana (riquadro verde). Una barra corta vuol dire ritmo regolare; una barra dentro il riquadro vuol dire ripetute nella fascia. La FC qui viene dalla fascia H9: non va confrontata con le corse fatte col polso, e i picchi isolati sono artefatti.</p>
     <div class="grid2">
       <div class="card">
         <h3>200 m</h3>
@@ -366,6 +366,10 @@ function timeDots(container, opts) {
     for (const p of sp) {
       const g = el("g", {}, svg);
       const cx = x(toDate(p.d).getTime());
+      if (p.band) {
+        const ya = y(p.band[0]), yb = y(p.band[1]);
+        el("rect", { x: cx - 10, width: 20, y: Math.min(ya, yb), height: Math.abs(yb - ya), rx: 3, fill: css("--good"), opacity: 0.22 }, g);
+      }
       if (p.lo != null && p.hi != null) {
         el("line", { x1: cx, x2: cx, y1: y(p.lo), y2: y(p.hi), stroke: color, "stroke-width": 4, "stroke-linecap": "round", opacity: 0.45 }, g);
       }
@@ -451,6 +455,7 @@ const efExcluded = aerobic.filter(a => !efOk.includes(a));
 const tempoKm = a => sum((a.blocks || []).map(b => b.km));
 const repDist = a => { const m = a.name.match(/x\s*(\d+)/i); return m ? +m[1] : null; };
 const reps = a => (a.blocks || []).filter(b => Math.abs(b.km * 1000 - repDist(a)) <= 60);
+const bandOf = a => (a.target || {})[String(repDist(a))] || null;
 const tempLabel = a => a.temp == null ? "" : ` · ${a.temp}°C`;
 
 /* ---------- render ---------- */
@@ -573,19 +578,20 @@ function render() {
   for (const dist of [200, 400]) {
     const sess = intervals.filter(a => repDist(a) === dist && reps(a).length);
     const points = sess.map(a => {
-      const r = reps(a), p = r.map(b => b.pace);
-      return { d: a.date, y: mean(p), lo: Math.min(...p), hi: Math.max(...p),
-        tip: `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${r.length} ripetute · media ${fmtPace(mean(p))}/km<br>migliore ${fmtPace(Math.min(...p))} · peggiore ${fmtPace(Math.max(...p))}<br>RPE ${a.rpe ?? "–"}` };
+      const r = reps(a), p = r.map(b => b.pace), band = bandOf(a);
+      const inBand = band ? `<br>fascia del piano ${fmtPace(band[0])}-${fmtPace(band[1])} · in fascia ${p.filter(v => v >= band[0] && v <= band[1]).length}/${p.length}` : "";
+      return { d: a.date, y: mean(p), lo: Math.min(...p), hi: Math.max(...p), band,
+        tip: `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${r.length} ripetute · media ${fmtPace(mean(p))}/km<br>migliore ${fmtPace(Math.min(...p))} · peggiore ${fmtPace(Math.max(...p))}${inBand}<br>RPE ${a.rpe ?? "–"}` };
     });
     timeDots(document.getElementById("c-int-" + dist), {
       series: [{ color: "--s4", line: true, points }], invert: true, yFmt: fmtPace, domain,
       yMin: 280, yMax: 360,
     });
   }
-  table("t-int", [{ t: "Data", l: 1 }, { t: "Seduta", l: 1 }, { t: "Rip." }, { t: "km veloci" }, { t: "Media" }, { t: "Migliore" }, { t: "Peggiore" }, { t: "Scarto" }, { t: "FC media rip. (fascia)" }, { t: "RPE" }],
+  table("t-int", [{ t: "Data", l: 1 }, { t: "Seduta", l: 1 }, { t: "Rip." }, { t: "km veloci" }, { t: "Media" }, { t: "Migliore" }, { t: "Peggiore" }, { t: "Scarto" }, { t: "Fascia piano" }, { t: "In fascia" }, { t: "FC media rip. (fascia)" }, { t: "RPE" }],
     intervals.map(a => {
       const r = reps(a), p = r.map(b => b.pace), hrs = r.map(b => b.hr).filter(Boolean);
-      return [fmtDay(a.date), a.name, r.length, fmtNum(sum(r.map(b => b.km)), 1), fmtPace(mean(p)), fmtPace(Math.min(...p)), fmtPace(Math.max(...p)), (Math.max(...p) - Math.min(...p)) + "\"", hrs.length ? Math.round(mean(hrs)) : "–", a.rpe ?? "–"];
+      return [fmtDay(a.date), a.name, r.length, fmtNum(sum(r.map(b => b.km)), 1), fmtPace(mean(p)), fmtPace(Math.min(...p)), fmtPace(Math.max(...p)), (Math.max(...p) - Math.min(...p)) + "\"", bandOf(a) ? fmtPace(bandOf(a)[0]) + "-" + fmtPace(bandOf(a)[1]) : "–", bandOf(a) ? p.filter(v => v >= bandOf(a)[0] && v <= bandOf(a)[1]).length + "/" + p.length : "–", hrs.length ? Math.round(mean(hrs)) : "–", a.rpe ?? "–"];
     }));
 
   /* volume */

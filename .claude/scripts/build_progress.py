@@ -18,6 +18,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 LOG_DIR = ROOT / "training-log"
+PLAN = ROOT / "training-plan.md"
 TEMPLATE = Path(__file__).with_name("progress_template.html")
 OUTPUT = ROOT / "progressi.html"
 
@@ -218,8 +219,40 @@ def weekly(activities: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
+WEEK_RE = re.compile(r"^###.*Settimana (\d+)")
+REP_TARGET_RE = re.compile(r"\d+\s*x\s*(\d+)m\s*@\s*(\d+):(\d{2})-(\d+):(\d{2})/km")
+
+
+def plan_rep_targets() -> dict[int, dict[str, list[int]]]:
+    """Planned pace band (sec/km) per rep distance, per plan week, from training-plan.md."""
+    targets: dict[int, dict[str, list[int]]] = {}
+    week = None
+    if not PLAN.exists():
+        return targets
+    for line in PLAN.read_text(encoding="utf-8").splitlines():
+        m = WEEK_RE.match(line)
+        if m:
+            week = int(m.group(1))
+            continue
+        if week is None or "ipetute" not in line:
+            continue
+        for dist, m1, s1, m2, s2 in REP_TARGET_RE.findall(line):
+            targets.setdefault(week, {})[dist] = [int(m1) * 60 + int(s1), int(m2) * 60 + int(s2)]
+    return targets
+
+
+def attach_rep_targets(activities: list[dict[str, Any]]) -> None:
+    """Give each interval session (named "SXX ...") the planned band of its week."""
+    targets = plan_rep_targets()
+    for a in activities:
+        m = re.match(r"S(\d+)\b", a["name"])
+        if a["type"] == "intervals" and m and int(m.group(1)) in targets:
+            a["target"] = targets[int(m.group(1))]
+
+
 def main() -> None:
     activities = collect()
+    attach_rep_targets(activities)
     data = {
         "generated": date.today().isoformat(),
         "activities": activities,

@@ -1,243 +1,299 @@
 #!/usr/bin/env python3
-"""Draw the figures of teoria/10-stretching-al-parco.md.
+"""Draw the figures of teoria/10-esercizi-stretching.md in a flat-illustration style.
 
 One SVG per exercise, two panels side by side:
-- left: a cartoon of the pose (side or front view), with the props found in a
-  park (wall, low wall, tree) and the stretched muscle drawn in red on the body;
-- right: a simple anatomical figure (front or back view) with the same muscle
-  highlighted and labelled.
+- left: a male runner (t-shirt, shorts, running shoes) in the pose, with a support
+  (wall, low wall, tree) where needed; the stretched muscle is tinted red;
+- right: the same runner standing, in neutral colours, front or back view, with
+  the stretched muscle in red and its name.
 
-The figures are deliberately schematic: they show the position of the body
-and where the stretch should be felt, not anatomical detail.
+Bodies are built from tapered capsules (limbs), so a pose is just a set of joints.
 
 Usage:
     python3 .claude/scripts/draw_stretching_figures.py
 """
 
+import math
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parents[2] / "teoria" / "img" / "10-stretching"
 
-BODY = "#3b4a5c"      # cartoon body
-BODY_BACK = "#7d8b9c"  # limbs on the far side of the body
-MUSCLE = "#d64545"     # stretched muscle
-PROP = "#c9b79c"       # wall, low wall, tree
-GROUND = "#9a9a92"
-SKIN = "#e8e4dc"       # anatomy silhouette
-SKIN_EDGE = "#b9b3a6"
-TEXT = "#3a3a36"
-BG = "#fbfaf7"
+W, H = 560, 310
+GROUND_Y = 266
 FONT = 'font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif"'
+BG, TEXT, MUTED = "#ffffff", "#2f2f2c", "#8a897f"
+MUSCLE = "#e0453a"
 
-W, H = 540, 300
-GROUND_Y = 262
-
-
-def line(p, q, color, width, opacity=1.0):
-    return (f'<line x1="{p[0]}" y1="{p[1]}" x2="{q[0]}" y2="{q[1]}" stroke="{color}" '
-            f'stroke-width="{width}" stroke-linecap="round" opacity="{opacity}"/>')
-
-
-def limb(points, color, width):
-    return "".join(line(a, b, color, width) for a, b in zip(points, points[1:]))
+ACTIVE = {"skin": "#f1c6a0", "skin_far": "#dcaa82", "shirt": "#2f78d0", "shirt_far": "#245fa8",
+          "shorts": "#24272d", "shorts_far": "#15171b", "shoe": "#2f78d0", "shoe_far": "#245fa8",
+          "sole": "#ffffff", "hair": "#3b2a1f"}
+NEUTRAL = {"skin": "#e9e6e0", "skin_far": "#dedad2", "shirt": "#d3d0c8", "shirt_far": "#c7c3ba",
+           "shorts": "#bdb9af", "shorts_far": "#b1ada3", "shoe": "#c7c3ba", "shoe_far": "#bdb9af",
+           "sole": "#f4f2ee", "hair": "#b5b0a5"}
+PROP, PROP_DARK, LEAF = "#d9c7a7", "#c4ae88", "#9fc58e"
 
 
-def part(p, q, t0, t1):
-    """The piece of segment p-q between fractions t0 and t1."""
-    return ((p[0] + (q[0] - p[0]) * t0, p[1] + (q[1] - p[1]) * t0),
-            (p[0] + (q[0] - p[0]) * t1, p[1] + (q[1] - p[1]) * t1))
+# ---------- primitives ----------
+
+def capsule(p, q, r1, r2, color, opacity=1.0):
+    """Tapered limb from p (radius r1) to q (radius r2)."""
+    dx, dy = q[0] - p[0], q[1] - p[1]
+    d = math.hypot(dx, dy) or 1e-6
+    nx, ny = -dy / d, dx / d
+    pts = [(p[0] + nx * r1, p[1] + ny * r1), (q[0] + nx * r2, q[1] + ny * r2),
+           (q[0] - nx * r2, q[1] - ny * r2), (p[0] - nx * r1, p[1] - ny * r1)]
+    poly = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+    op = f' opacity="{opacity}"' if opacity < 1 else ""
+    return (f'<g{op}><polygon points="{poly}" fill="{color}"/>'
+            f'<circle cx="{p[0]:.1f}" cy="{p[1]:.1f}" r="{r1}" fill="{color}"/>'
+            f'<circle cx="{q[0]:.1f}" cy="{q[1]:.1f}" r="{r2}" fill="{color}"/></g>')
 
 
-def head(c, r=15):
-    return f'<circle cx="{c[0]}" cy="{c[1]}" r="{r}" fill="{BODY}"/>'
+def lerp(p, q, t):
+    return (p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t)
 
 
-def shoe(ankle, forward=1):
-    x, y = ankle
-    return f'<ellipse cx="{x + 7 * forward}" cy="{y + 4}" rx="11" ry="5" fill="{BODY}"/>'
+def circle(c, r, color):
+    return f'<circle cx="{c[0]:.1f}" cy="{c[1]:.1f}" r="{r}" fill="{color}"/>'
 
+
+def text(x, y, s, size=13, anchor="start", weight="400", color=TEXT):
+    return f'<text x="{x}" y="{y}" {FONT} font-size="{size}" font-weight="{weight}" fill="{color}" text-anchor="{anchor}">{s}</text>'
+
+
+# ---------- body parts ----------
+
+def arm(sh, el, wr, pal, far=False):
+    skin = pal["skin_far" if far else "skin"]
+    shirt = pal["shirt_far" if far else "shirt"]
+    out = capsule(sh, el, 7.5, 6, skin) + capsule(el, wr, 6, 4.8, skin)
+    out += capsule(sh, lerp(sh, el, 0.42), 9, 8, shirt)          # sleeve
+    hand = lerp(el, wr, 1.12)
+    out += circle(hand, 5.6, skin)
+    return out
+
+
+def leg(hip, knee, ankle, toe, pal, far=False):
+    skin = pal["skin_far" if far else "skin"]
+    shorts = pal["shorts_far" if far else "shorts"]
+    shoe = pal["shoe_far" if far else "shoe"]
+    out = capsule(hip, knee, 12, 8.5, skin) + capsule(knee, ankle, 8.5, 5.5, skin)
+    out += capsule(hip, lerp(hip, knee, 0.5), 13.5, 11.5, shorts)  # shorts leg
+    out += capsule(ankle, toe, 6.5, 5, shoe)
+    out += capsule(lerp(ankle, toe, 0.05), lerp(ankle, toe, 1.0), 3.2, 3, pal["sole"], 0.9).replace(
+        "<g", f'<g transform="translate(0,4)"', 1)
+    return out
+
+
+def head_side(c, facing, pal):
+    hx, hy = c
+    hair = (f'<path d="M{hx - 15 * facing:.1f},{hy + 2} Q{hx - 16 * facing:.1f},{hy - 17} {hx + 2 * facing:.1f},{hy - 16} '
+            f'Q{hx + 13 * facing:.1f},{hy - 15} {hx + 14 * facing:.1f},{hy - 6} L{hx - 2 * facing:.1f},{hy - 7} '
+            f'Q{hx - 6 * facing:.1f},{hy + 1} {hx - 15 * facing:.1f},{hy + 2} Z" fill="{pal["hair"]}"/>')
+    ear = circle((hx - 3 * facing, hy + 1), 3.2, pal["skin_far"])
+    nose = circle((hx + 14 * facing, hy + 2), 3, pal["skin"])
+    return circle(c, 15, pal["skin"]) + nose + hair + ear
+
+
+def head_front(c, pal, back=False):
+    hx, hy = c
+    out = circle((hx - 15, hy + 2), 3.4, pal["skin_far"]) + circle((hx + 15, hy + 2), 3.4, pal["skin_far"])  # ears
+    out += circle(c, 15, pal["skin"])
+    if back:
+        out += (f'<path d="M{hx - 15},{hy + 4} Q{hx - 16},{hy - 17} {hx},{hy - 17} Q{hx + 16},{hy - 17} {hx + 15},{hy + 4} '
+                f'Q{hx},{hy + 10} {hx - 15},{hy + 4} Z" fill="{pal["hair"]}"/>')
+    else:
+        out += (f'<path d="M{hx - 15},{hy - 1} Q{hx - 15},{hy - 17} {hx},{hy - 17} Q{hx + 15},{hy - 17} {hx + 15},{hy - 1} '
+                f'Q{hx + 6},{hy - 10} {hx - 15},{hy - 1} Z" fill="{pal["hair"]}"/>')
+    return out
+
+
+def torso_side(hip, sh, pal):
+    neck = lerp(hip, sh, 1.13)
+    return (capsule(sh, neck, 6, 5.5, pal["skin"]) + capsule(hip, sh, 15, 16, pal["shirt"])
+            + circle(hip, 15.5, pal["shorts"]))
+
+
+def torso_front(cx, sh_y, hip_y, pal):
+    return (capsule((cx, sh_y - 8), (cx, sh_y - 16), 6, 6, pal["skin"])
+            + f'<path d="M{cx - 25},{sh_y - 4} Q{cx},{sh_y - 12} {cx + 25},{sh_y - 4} L{cx + 19},{hip_y - 6} '
+              f'L{cx - 19},{hip_y - 6} Z" fill="{pal["shirt"]}"/>'
+            + f'<path d="M{cx - 20},{hip_y - 10} L{cx + 20},{hip_y - 10} L{cx + 21},{hip_y + 6} L{cx - 21},{hip_y + 6} Z" fill="{pal["shorts"]}"/>')
+
+
+# ---------- scenery ----------
 
 def ground():
-    return line((10, GROUND_Y + 8), (300, GROUND_Y + 8), GROUND, 2)
+    return f'<rect x="14" y="{GROUND_Y + 6}" width="290" height="3" rx="1.5" fill="#e6e3dc"/>'
 
 
-def wall(x, top, width=26):
-    return f'<rect x="{x}" y="{top}" width="{width}" height="{GROUND_Y + 8 - top}" rx="3" fill="{PROP}"/>'
+def wall(x, top, width):
+    return (f'<rect x="{x}" y="{top}" width="{width}" height="{GROUND_Y + 6 - top}" rx="3" fill="{PROP}"/>'
+            f'<rect x="{x}" y="{top}" width="{width}" height="6" rx="3" fill="{PROP_DARK}"/>')
 
 
 def tree(x):
-    return (f'<rect x="{x}" y="70" width="18" height="{GROUND_Y + 8 - 70}" rx="6" fill="{PROP}"/>'
-            f'<circle cx="{x + 9}" cy="58" r="34" fill="#a9c49a" opacity="0.8"/>')
+    return (f'<rect x="{x}" y="96" width="16" height="{GROUND_Y + 6 - 96}" rx="5" fill="{PROP_DARK}"/>'
+            f'<circle cx="{x + 8}" cy="70" r="36" fill="{LEAF}"/><circle cx="{x - 14}" cy="88" r="22" fill="{LEAF}"/>')
 
 
-def label(x, y, text, size=13, anchor="start", weight="400", color=TEXT):
-    return f'<text x="{x}" y="{y}" {FONT} font-size="{size}" font-weight="{weight}" fill="{color}" text-anchor="{anchor}">{text}</text>'
+def red(p, q, r1, r2):
+    return capsule(p, q, r1, r2, MUSCLE, 0.75)
 
 
-# ---------- anatomy panel ----------
+# ---------- anatomy panel: the same runner, neutral, standing ----------
 
-def anatomy(view, highlights, name):
-    """Silhouette centred at x=430; highlights are (kind, data) drawn in red; name is the label."""
-    cx = 430
-    out = [label(cx, 290, "vista " + ("frontale" if view == "front" else "posteriore"), 11, "middle", color="#77766f")]
-    sk = lambda p, q, w: line(p, q, SKIN_EDGE, w + 3) + line(p, q, SKIN, w)  # noqa: E731
-    # legs
+def standing(view, highlight, name):
+    pal = NEUTRAL
+    cx, sh_y, hip_y = 440, 92, 160
+    out = []
     for s in (-1, 1):
-        hip, knee, ankle = (cx + 12 * s, 158), (cx + 14 * s, 212), (cx + 13 * s, 262)
-        out.append(sk(hip, knee, 20) + sk(knee, ankle, 15))
-    # arms
+        hip, knee, ankle = (cx + 10 * s, hip_y), (cx + 11 * s, 212), (cx + 11 * s, 258)
+        out.append(leg(hip, knee, ankle, (cx + 15 * s, 262), pal))
+    out.append(torso_front(cx, sh_y, hip_y, pal))
     for s in (-1, 1):
-        sh, el, wr = (cx + 34 * s, 72), (cx + 42 * s, 120), (cx + 46 * s, 160)
-        out.append(sk(sh, el, 13) + sk(el, wr, 11))
-    # torso and head
-    out.append(f'<path d="M{cx - 36},64 Q{cx},56 {cx + 36},64 L{cx + 26},135 Q{cx + 30},160 {cx + 24},165 '
-               f'L{cx - 24},165 Q{cx - 30},160 {cx - 26},135 Z" fill="{SKIN}" stroke="{SKIN_EDGE}" stroke-width="1.5"/>')
-    out.append(f'<rect x="{cx - 7}" y="44" width="14" height="16" fill="{SKIN}" stroke="{SKIN_EDGE}" stroke-width="1.5"/>')
-    out.append(f'<circle cx="{cx}" cy="36" r="16" fill="{SKIN}" stroke="{SKIN_EDGE}" stroke-width="1.5"/>')
-    if view == "back":
-        out.append(line((cx, 70), (cx, 155), SKIN_EDGE, 1))
-    for kind, data in highlights:
-        if kind == "seg":
-            p, q, w = data
-            out.append(line(p, q, MUSCLE, w, 0.85))
-        elif kind == "ell":
-            x, y, rx, ry = data
-            out.append(f'<ellipse cx="{x}" cy="{y}" rx="{rx}" ry="{ry}" fill="{MUSCLE}" opacity="0.85"/>')
+        out.append(arm((cx + 24 * s, sh_y), (cx + 30 * s, 132), (cx + 32 * s, 166), pal))
+    out.append(head_front((cx, 62), pal, back=(view == "back")))
+    out.append(highlight)
     lx, ly, tx, ty = name["leader"]
-    out.append(line((lx, ly), (tx, ty), TEXT, 1))
+    out.append(f'<line x1="{lx}" y1="{ly}" x2="{tx}" y2="{ty}" stroke="{TEXT}" stroke-width="1"/>')
+    anchor = "end" if tx < cx else "start"
+    dx = -5 if tx < cx else 5
     for i, row in enumerate(name["text"]):
-        out.append(label(tx + (4 if tx > cx else -4), ty + 4 + 15 * i, row, 13, "start" if tx > cx else "end", "600" if i == 0 else "400"))
+        out.append(text(tx + dx, ty + 4 + 15 * i, row, 13, anchor, "650" if i == 0 else "400", TEXT if i == 0 else MUTED))
+    out.append(text(cx, 296, "vista " + ("frontale" if view == "front" else "posteriore"), 11, "middle", color=MUTED))
     return "".join(out)
 
 
-def svg(title, cartoon, anat):
+def svg(title, scene, anat):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{title}">'
-            f'<rect width="{W}" height="{H}" rx="12" fill="{BG}"/>'
-            f'<line x1="318" y1="20" x2="318" y2="{H - 20}" stroke="#e2e1dc" stroke-width="1"/>'
-            f"{cartoon}{anat}</svg>\n")
+            f'<rect width="{W}" height="{H}" rx="14" fill="{BG}"/>'
+            f'<line x1="320" y1="24" x2="320" y2="{H - 24}" stroke="#eeece6" stroke-width="1"/>'
+            f"{scene}{anat}</svg>\n")
 
 
 # ---------- exercises ----------
-# Cartoon convention: side view facing right unless stated; far-side limbs drawn first in BODY_BACK.
 
 def quadriceps():
-    hip, sh = (140, 150), (142, 88)
-    stand = [hip, (142, 205), (142, GROUND_Y)]
-    bent_knee, bent_ankle = (138, 208), (112, 158)
-    c = [ground(), tree(214)]
-    c.append(limb([sh, (168, 108), (212, 104)], BODY_BACK, 11))           # far arm on the tree
-    c.append(limb(stand, BODY, 15) + shoe(stand[-1]))
-    c.append(limb([hip, bent_knee, bent_ankle], BODY, 15))
-    c.append(line(*part(hip, bent_knee, 0.12, 0.88), MUSCLE, 9))          # front of the thigh
-    c.append(f'<ellipse cx="{bent_ankle[0] - 4}" cy="{bent_ankle[1] - 6}" rx="6" ry="10" fill="{BODY}"/>')
-    c.append(line(hip, sh, BODY, 26) + head((146, 64)))
-    c.append(limb([sh, (122, 122), (114, 156)], BODY, 11))                # hand on the ankle
-    a = anatomy("front", [("seg", ((418, 162), (416, 204), 14))],
-                {"leader": (412, 182, 360, 182), "text": ["Quadricipite", "(davanti alla coscia)"]})
+    """Front view, like a classic standing quad stretch: right foot held behind."""
+    p, cx, sh_y, hip_y = ACTIVE, 150, 96, 164
+    c = [ground()]
+    # bent leg (viewer's right): thigh down, shin folded behind it, foot up by the hip
+    bh, bk = (cx + 11, hip_y), (cx + 13, 214)
+    foot = (cx + 31, 176)
+    c.append(capsule(bk, foot, 8, 6, p["skin_far"]))                           # shin folded up behind the thigh
+    c.append(capsule(foot, (cx + 33, 150), 6.5, 5.5, p["shoe"]))               # foot held by the hand
+    c.append(capsule(bh, bk, 12, 8.5, p["skin"]) + capsule(bh, lerp(bh, bk, 0.5), 13.5, 11.5, p["shorts"]))
+    c.append(red(lerp(bh, bk, 0.5), lerp(bh, bk, 0.92), 8, 6.5))
+    # standing leg
+    c.append(leg((cx - 10, hip_y), (cx - 11, 216), (cx - 11, 258), (cx - 13, 263), p))
+    c.append(torso_front(cx, sh_y, hip_y, p))
+    c.append(arm((cx - 24, sh_y), (cx - 34, 134), (cx - 36, 166), p))          # free arm, slightly out
+    c.append(arm((cx + 24, sh_y), (cx + 40, 126), (cx + 34, 156), p))          # hand on the foot
+    c.append(head_front((cx, 64), p))
+    a = standing("front", red((430, 176), (429, 206), 10, 8),
+                 {"leader": (418, 190, 376, 190), "text": ["Quadricipite", "davanti alla coscia"]})
     return svg("Stretching del quadricipite in piedi", "".join(c), a)
 
 
 def hamstrings():
-    hip, sh = (110, 160), (150, 104)
-    stand = [hip, (108, 212), (108, GROUND_Y)]
-    knee, heel = (160, 172), (214, 180)
-    c = [ground(), wall(206, 184, 90)]
-    c.append(limb(stand, BODY_BACK, 15) + shoe(stand[-1]))
-    c.append(limb([hip, knee, heel], BODY, 15) + f'<ellipse cx="{heel[0] + 6}" cy="{heel[1] - 4}" rx="6" ry="10" fill="{BODY}"/>')
-    c.append(line(*part(hip, knee, 0.1, 0.9), MUSCLE, 7).replace(f'y1="{hip[1]}', f'y1="{hip[1]}'))
-    c[-1] = line((hip[0] + 6, hip[1] + 7), (knee[0] - 3, knee[1] + 7), MUSCLE, 6)  # back of the thigh, underside
-    c.append(line(hip, sh, BODY, 26) + head((166, 86)))
-    c.append(limb([sh, (170, 134), (180, 166)], BODY, 11))                # hands toward the shin
-    a = anatomy("back", [("seg", ((418, 162), (416, 204), 14))],
-                {"leader": (412, 184, 360, 184), "text": ["Femorali", "(dietro alla coscia)"]})
+    p = ACTIVE
+    hip, sh, hd = (108, 160), (150, 108), (166, 86)
+    c = [ground(), wall(196, 190, 100)]
+    c.append(arm(sh, (162, 140), (176, 166), p, far=True))
+    c.append(leg(hip, (106, 212), (106, 256), (122, 262), p, far=True))       # standing leg
+    knee, ankle = (160, 174), (214, 182)
+    c.append(leg(hip, knee, ankle, (218, 166), p))                             # heel on the wall, toes up
+    c.append(red(lerp(hip, knee, 0.45), lerp(hip, knee, 0.95), 7, 6).replace("<g", '<g transform="translate(1,6)"', 1))
+    c.append(torso_side(hip, sh, p))
+    c.append(head_side(hd, 1, p))
+    c.append(arm(sh, (168, 138), (184, 164), p))
+    a = standing("back", red((430, 178), (429, 208), 10, 8),
+                 {"leader": (418, 192, 376, 192), "text": ["Femorali", "dietro alla coscia"]})
     return svg("Stretching dei femorali con il tallone sul muretto", "".join(c), a)
 
 
+def calf_pose(back_knee, back_ankle, hip, sh, hd, highlight_t):
+    p = ACTIVE
+    c = [ground(), wall(226, 50, 26)]
+    c.append(arm(sh, (206, sh[1] + 14), (222, sh[1] + 6), p, far=True))
+    c.append(leg(hip, (hip[0] + 30, hip[1] + 50), (hip[0] + 30, 256), (hip[0] + 46, 262), p, far=True))  # front leg
+    c.append(leg(hip, back_knee, back_ankle, (back_ankle[0] + 17, 262), p))                              # back leg
+    c.append(red(lerp(back_knee, back_ankle, highlight_t[0]), lerp(back_knee, back_ankle, highlight_t[1]), 7.5, 6))
+    c.append(torso_side(hip, sh, p))
+    c.append(head_side(hd, 1, p))
+    c.append(arm(sh, (202, sh[1] + 18), (220, sh[1] + 10), p))
+    return "".join(c)
+
+
 def calf():
-    hip, sh = (140, 150), (186, 96)
-    front = [hip, (172, 200), (172, GROUND_Y)]
-    back = [hip, (112, 206), (88, GROUND_Y)]
-    c = [ground(), wall(222, 40)]
-    c.append(limb(front, BODY_BACK, 15) + shoe(front[-1]))
-    c.append(limb(back, BODY, 15) + shoe(back[-1]))
-    c.append(line(*part(back[1], back[2], 0.1, 0.65), MUSCLE, 9))        # upper calf of the straight leg
-    c.append(line(hip, sh, BODY, 26) + head((196, 72)))
-    c.append(limb([sh, (206, 112), (220, 104)], BODY, 11))
-    a = anatomy("back", [("seg", ((416, 214), (416, 236), 13))],
-                {"leader": (410, 224, 360, 224), "text": ["Gastrocnemio", "(polpaccio, gamba tesa)"]})
-    return svg("Stretching del polpaccio al muro, gamba dietro tesa", "".join(c), a)
+    scene = calf_pose((112, 206), (88, 256), (140, 154), (184, 100), (198, 78), (0.08, 0.6))
+    a = standing("back", red((429, 216), (429, 236), 8.5, 7),
+                 {"leader": (418, 226, 376, 226), "text": ["Gastrocnemio", "polpaccio, gamba tesa"]})
+    return svg("Stretching del polpaccio al muro, gamba dietro tesa", scene, a)
 
 
 def soleus():
-    hip, sh = (146, 160), (188, 104)
-    front = [hip, (176, 206), (176, GROUND_Y)]
-    back = [hip, (122, 214), (108, GROUND_Y)]
-    c = [ground(), wall(222, 40)]
-    c.append(limb(front, BODY_BACK, 15) + shoe(front[-1]))
-    c.append(limb(back, BODY, 15) + shoe(back[-1]))
-    c.append(line(*part(back[1], back[2], 0.45, 0.92), MUSCLE, 9))       # low calf, bent knee
-    c.append(line(hip, sh, BODY, 26) + head((197, 80)))
-    c.append(limb([sh, (207, 118), (220, 110)], BODY, 11))
-    a = anatomy("back", [("seg", ((417, 232), (418, 254), 10))],
-                {"leader": (412, 244, 360, 244), "text": ["Soleo", "(polpaccio basso)"]})
-    return svg("Stretching del soleo al muro, ginocchio dietro piegato", "".join(c), a)
+    scene = calf_pose((124, 214), (108, 256), (148, 164), (190, 110), (204, 88), (0.45, 0.95))
+    a = standing("back", red((429, 236), (429, 252), 7, 6),
+                 {"leader": (418, 244, 376, 244), "text": ["Soleo", "polpaccio basso"]})
+    return svg("Stretching del soleo al muro, ginocchio dietro piegato", scene, a)
 
 
 def hip():
-    hip_j, sh = (106, 150), (150, 98)
-    stand = [hip_j, (104, 206), (104, GROUND_Y)]
-    knee, ankle = (204, 160), (150, 166)
-    c = [ground(), wall(128, 172, 150)]
-    c.append(limb(stand, BODY, 15) + shoe(stand[-1]))
-    c.append(line(knee, ankle, BODY_BACK, 13))                            # shin lying across the low wall
-    c.append(line(hip_j, knee, BODY, 16))
-    c.append(f'<ellipse cx="{hip_j[0] - 4}" cy="{hip_j[1] + 2}" rx="13" ry="12" fill="{MUSCLE}" opacity="0.9"/>')  # glute
-    c.append(line(hip_j, sh, BODY, 26) + head((164, 78)))
-    c.append(limb([sh, (176, 126), (196, 150)], BODY, 11))                # hands on the knee
-    a = anatomy("back", [("ell", (418, 152, 13, 11))],
-                {"leader": (406, 150, 360, 140), "text": ["Gluteo e piriforme", "(esterno dell'anca)"]})
+    p = ACTIVE
+    hip_j, sh, hd = (104, 156), (146, 104), (162, 82)
+    c = [ground(), wall(132, 182, 150)]
+    knee, ankle = (204, 168), (150, 172)
+    c.append(arm(sh, (166, 134), (186, 156), p, far=True))
+    c.append(capsule(knee, ankle, 8, 6, p["skin_far"]) + capsule(ankle, (138, 168), 6.5, 5, p["shoe_far"]))  # shin across the wall
+    c.append(leg(hip_j, (102, 210), (102, 256), (118, 262), p))                # standing leg
+    c.append(capsule(hip_j, knee, 12, 8.5, p["skin"]) + capsule(hip_j, lerp(hip_j, knee, 0.45), 13.5, 11.5, p["shorts"]))
+    c.append(torso_side(hip_j, sh, p))
+    c.append(red((97, 160), (90, 150), 11, 9))                                 # glute
+    c.append(head_side(hd, 1, p))
+    c.append(arm(sh, (172, 132), (196, 158), p))
+    a = standing("back", red((431, 160), (431, 164), 12, 12),
+                 {"leader": (418, 162, 376, 150), "text": ["Gluteo e piriforme", "esterno dell'anca"]})
     return svg("Stretching dell'anca con la gamba piegata sul muretto", "".join(c), a)
 
 
-def front_figure(arms, highlight, behind=()):
-    """Front-view cartoon: legs, torso and head, then the given arm polylines."""
-    cx = 150
+def upper_body_front(behind, front, highlight):
+    """Front-view runner standing still; behind = arms drawn before the head, front = after it."""
+    p, cx, sh_y, hip_y = ACTIVE, 150, 96, 164
     c = [ground()]
     for s in (-1, 1):
-        c.append(limb([(cx + 13 * s, 160), (cx + 14 * s, 212), (cx + 14 * s, GROUND_Y)], BODY, 15))
-        c.append(f'<ellipse cx="{cx + 16 * s}" cy="{GROUND_Y + 4}" rx="10" ry="5" fill="{BODY}"/>')
-    c.append(f'<path d="M{cx - 30},82 Q{cx},74 {cx + 30},82 L{cx + 22},160 L{cx - 22},160 Z" fill="{BODY}"/>')
-    for pts, color in behind:       # limbs passing behind the head
-        c.append(limb(pts, color, 12))
-    c.append(head((cx, 56), 17))
-    for pts, color in arms:
-        c.append(limb(pts, color, 12))
+        c.append(leg((cx + 10 * s, hip_y), (cx + 11 * s, 216), (cx + 11 * s, 258), (cx + 14 * s, 263), p))
+    c.append(torso_front(cx, sh_y, hip_y, p))
+    for a in behind:
+        c.append(arm(*a, p, far=True))
+    c.append(head_front((cx, 64), p))
+    for a in front:
+        c.append(arm(*a, p))
     c.append(highlight)
     return "".join(c)
 
 
 def cross_body():
-    l_sh, r_sh = (124, 88), (176, 88)
-    stretched = [r_sh, (152, 98), (102, 98)]           # right arm straight across the chest
-    helper = [l_sh, (120, 128), (150, 104)]            # left forearm presses above the elbow
-    hl = f'<ellipse cx="{r_sh[0] + 4}" cy="{r_sh[1] - 2}" rx="11" ry="9" fill="{MUSCLE}" opacity="0.9"/>'
-    c = front_figure([(stretched, BODY_BACK), (helper, BODY)], hl)
-    a = anatomy("back", [("ell", (397, 70, 10, 9))],
-                {"leader": (388, 72, 360, 96), "text": ["Deltoide posteriore", "(dietro alla spalla)"]})
-    return svg("Cross body stretch: braccio teso davanti al petto", c, a)
+    scene = upper_body_front(
+        behind=[],
+        front=[((174, 96), (142, 104), (106, 104)),           # stretched arm across the chest
+               ((126, 96), (122, 132), (150, 108))],          # other forearm presses above the elbow
+        highlight=red((176, 94), (170, 92), 10, 9))
+    a = standing("back", red((416, 94), (414, 98), 9, 8),
+                 {"leader": (406, 96, 376, 110), "text": ["Deltoide posteriore", "dietro alla spalla"]})
+    return svg("Cross body stretch: braccio teso davanti al petto", scene, a)
 
 
 def triceps():
-    l_sh, r_sh = (124, 88), (176, 88)
-    elbow = (178, 28)
-    upper = [r_sh, elbow]                               # right upper arm straight up
-    forearm = [elbow, (150, 62)]                        # forearm drops behind the head
-    helper = [l_sh, (120, 50), (172, 30)]               # left hand over the head, on the right elbow
-    hl = line(*part(r_sh, elbow, 0.15, 0.85), MUSCLE, 9)
-    c = front_figure([(upper, BODY), (helper, BODY)], hl, behind=[(forearm, BODY_BACK)])
-    a = anatomy("back", [("seg", ((395, 80), (389, 112), 9))],
-                {"leader": (386, 96, 360, 120), "text": ["Tricipite", "(dietro al braccio)"]})
-    return svg("Stretching del tricipite dietro la testa", c, a)
+    elbow = (172, 40)
+    scene = upper_body_front(
+        behind=[((174, 96), elbow, (150, 66))],                # forearm drops behind the head
+        front=[((126, 96), (116, 58), (166, 38))],             # other hand on the raised elbow
+        highlight=capsule((174, 96), elbow, 7.5, 6, ACTIVE["skin"]) + red(lerp((174, 96), elbow, 0.2), lerp((174, 96), elbow, 0.85), 7, 6))
+    a = standing("back", red((413, 104), (411, 126), 7, 6),
+                 {"leader": (404, 116, 376, 130), "text": ["Tricipite", "dietro al braccio"]})
+    return svg("Stretching del tricipite dietro la testa", scene, a)
 
 
 FIGURES = {

@@ -99,7 +99,7 @@ Nella cartella [teoria/](teoria/README.md) raccolgo quello che imparo strada fac
 7. [La corsa lenta](teoria/07-corsa-lenta.md)
 8. [Mobilità e propriocezione](teoria/08-mobilita-propriocezione.md)
 9. [Lo stretching](teoria/09-stretching.md)
-10. [Lo stretching al parco](teoria/10-stretching-al-parco.md)
+10. [Gli esercizi di stretching](teoria/10-esercizi-stretching.md)
 11. [Gli allunghi](teoria/11-allunghi.md)
 12. [La corsa in soglia](teoria/12-corsa-soglia.md)
 13. [Le ripetute](teoria/13-ripetute.md)

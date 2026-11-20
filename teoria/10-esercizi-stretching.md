@@ -14,25 +14,17 @@ In ogni figura, a sinistra c'è la posizione; a destra il muscolo che si allunga
 ## Le gambe: la coscia
 
 ### Quadricipite (in piedi)
-![Stretching del quadricipite in piedi](img/10-stretching/quadricipite.svg)
+![Stretching del quadricipite in piedi](img/10-stretching/quadricipite.png)
 
 - **Dove:** a casa e al parco. Per l'equilibrio basta un appoggio leggero: un muro, una sedia, un albero, oppure niente.
 - **Come si fa:** in piedi su una gamba. Si piega l'altro ginocchio e si prende il piede con la mano dello stesso lato, portando il tallone verso il gluteo.
 - **Cosa si sente:** tensione davanti alla coscia.
 - **Gli errori da evitare:** il ginocchio che si allontana in avanti o di lato (le ginocchia restano vicine), la schiena che si inarca. Per allungare davvero si spinge leggermente il bacino in avanti, come per mettere la "coda sotto".
 
-### Femorali (tallone su un appoggio basso)
-![Stretching dei femorali con il tallone sul muretto](img/10-stretching/femorali.svg)
-
-- **Dove:** a casa e al parco. Al parco un muretto o una panchina; a casa una sedia o un gradino. L'appoggio va all'altezza del ginocchio o poco sotto.
-- **Come si fa:** il tallone sull'appoggio, gamba tesa, punta del piede verso l'alto. Con la schiena dritta ci si piega in avanti **dalle anche**, le mani verso lo stinco.
-- **Cosa si sente:** tensione dietro la coscia, tra il gluteo e il ginocchio.
-- **Gli errori da evitare:** curvare la schiena per arrivare più giù (si allunga la schiena, non i femorali), un appoggio troppo alto. Se tira dietro al ginocchio invece che sulla coscia, si piega leggermente il ginocchio.
-
 ## Le gambe: il polpaccio
 
 ### Polpaccio, gastrocnemio (gamba dietro tesa)
-![Stretching del polpaccio al muro](img/10-stretching/polpaccio.svg)
+![Stretching del polpaccio al muro](img/10-stretching/polpaccio.png)
 
 - **Dove:** a casa e al parco: serve solo un muro (o un albero, un palo).
 - **Come si fa:** mani al muro, un piede avanti con il ginocchio piegato, l'altro dietro con la **gamba tesa** e il **tallone a terra**. Si porta il peso in avanti verso il muro.
@@ -40,7 +32,8 @@ In ogni figura, a sinistra c'è la posizione; a destra il muscolo che si allunga
 - **Gli errori da evitare:** il tallone che si alza, il piede dietro ruotato verso l'esterno (la punta guarda il muro).
 
 ### Soleo (ginocchio dietro piegato)
-![Stretching del soleo al muro](img/10-stretching/soleo.svg)
+![Stretching del soleo al muro](img/10-stretching/soleo.png)
+*Rispetto al polpaccio: piede dietro più vicino al muro e ginocchio dietro piegato, tallone sempre a terra.*
 
 - **Dove:** a casa e al parco, come il polpaccio.
 - **Come si fa:** stessa posizione del polpaccio, ma con il piede dietro più vicino e il **ginocchio dietro piegato**, sempre con il tallone a terra. Si scende con il bacino, come per sedersi.
@@ -49,20 +42,28 @@ In ogni figura, a sinistra c'è la posizione; a destra il muscolo che si allunga
 
 **Nota: il sollevamento dei polpacci (calf raise) non è stretching.** È un esercizio di forza, e fa parte del blocco di [forza](17-forza.md). Le due cose si completano: la forza rende il polpaccio più resistente, lo stretching gli restituisce l'escursione dopo la corsa.
 
+### Femorali (ischiocrurali), tallone su un appoggio
+![Stretching dei femorali con il tallone su un appoggio](img/10-stretching/femorali.png)
+
+- **Dove:** a casa e al parco. L'appoggio va **dal ginocchio all'anca, secondo la flessibilità**: si sceglie l'altezza a cui la schiena resta dritta. Chi è più rigido parte basso (muretto, gradino, sedia); chi è più flessibile può usare un tavolo o lo schienale della panchina.
+- **Come si fa:** il tallone sull'appoggio, gamba tesa, punta del piede verso l'alto, gamba d'appoggio dritta. Con la schiena dritta ci si piega in avanti **dalle anche**, le mani verso lo stinco o il piede, fin dove la schiena non si curva.
+- **Cosa si sente:** tensione dietro la coscia, tra il gluteo e il ginocchio.
+- **Gli errori da evitare:** curvare la schiena per arrivare alle punte dei piedi (si allunga la schiena, non i femorali); un appoggio così alto che il bacino si inclina o la schiena si curva. Se tira dietro al ginocchio invece che sulla coscia, si piega leggermente il ginocchio.
+
 ## Le anche
 
-### Gamba piegata su un appoggio (gluteo e piriforme)
-![Stretching dell'anca con la gamba piegata sul muretto](img/10-stretching/anca.svg)
+### Affondo con il piede su un appoggio (flessori dell'anca e gluteo)
+![Affondo con il piede anteriore su un appoggio](img/10-stretching/anca.png)
 
-- **Dove:** al parco su un muretto o una panchina; a casa sul bordo del letto o su un tavolo basso. L'appoggio deve essere stabile e all'altezza dell'anca o poco sotto.
-- **Come si fa:** si appoggia la gamba piegata sull'appoggio, con lo stinco di traverso (il piede verso l'altra gamba, il ginocchio verso l'esterno). L'altra gamba resta a terra. Con la schiena dritta si porta il busto in avanti, le mani sul ginocchio.
-- **Cosa si sente:** tensione nel gluteo e sul lato esterno dell'anca della gamba appoggiata.
-- **Gli errori da evitare:** un appoggio troppo alto (il ginocchio deve stare comodo, senza dolore), la schiena curva. È la versione in piedi della "figura a 4" del capitolo 9.
+- **Dove:** al parco su un muretto, un gradino alto o una panchina; a casa su un gradino o una sedia contro il muro. L'appoggio deve essere stabile e all'altezza del ginocchio o poco sotto.
+- **Come si fa:** il piede davanti tutto appoggiato sopra, con il ginocchio sopra la caviglia; la gamba dietro tesa, con il tallone sollevato. Le mani sul ginocchio davanti. Si porta il bacino in avanti e in basso.
+- **Cosa si sente:** dipende da dove va il busto. **Busto dritto, bacino in avanti**: tensione davanti all'anca e all'inguine della gamba dietro (flessori dell'anca, il muscolo che si accorcia stando seduti). **Busto inclinato sulla coscia davanti**, come nella figura: tensione anche nel gluteo della gamba davanti.
+- **Gli errori da evitare:** il ginocchio davanti che supera molto la punta del piede o cade verso l'interno, la schiena che si inarca per scendere di più. Si scende con il bacino, non con la schiena. Per allungare a fondo gluteo e piriforme c'è la "figura a 4" del capitolo 9.
 
 ## Le spalle
 
 ### Cross body stretch (braccio davanti al petto)
-![Cross body stretch](img/10-stretching/cross-body.svg)
+![Cross body stretch](img/10-stretching/cross-body.png)
 
 - **Dove:** ovunque, senza appoggi.
 - **Come si fa:** un braccio teso orizzontale davanti al petto, verso la spalla opposta. L'altro braccio lo avvicina al petto spingendo **sopra il gomito**, non sul gomito.
@@ -70,7 +71,7 @@ In ogni figura, a sinistra c'è la posizione; a destra il muscolo che si allunga
 - **Gli errori da evitare:** alzare la spalla verso l'orecchio, ruotare il busto per seguire il braccio.
 
 ### Tricipite (braccio dietro la testa)
-![Stretching del tricipite dietro la testa](img/10-stretching/tricipite.svg)
+![Stretching del tricipite dietro la testa](img/10-stretching/tricipite.png)
 
 - **Dove:** ovunque, senza appoggi.
 - **Come si fa:** un braccio in alto, il gomito piegato, la mano che scende dietro la nuca verso le scapole. L'altra mano spinge piano il gomito verso il basso e verso la testa.
@@ -85,8 +86,8 @@ Dal basso verso l'alto, così si cambia posizione il meno possibile. Circa **8-1
 |---|---|---|---|---|
 | 1 | Polpaccio (gamba tesa) | muro | muro, albero, palo | 30" per lato |
 | 2 | Soleo (ginocchio piegato) | muro | muro, albero, palo | 30" per lato |
-| 3 | Femorali | sedia, gradino | muretto, panchina | 30" per lato |
-| 4 | Gamba piegata (anca) | letto, tavolo basso | muretto, panchina | 30" per lato |
+| 3 | Femorali (ischiocrurali) | sedia, gradino, tavolo | muretto, panchina | 30" per lato |
+| 4 | Affondo con il piede su un appoggio (anca) | gradino, sedia contro il muro | muretto, gradino, panchina | 30" per lato |
 | 5 | Quadricipite | muro, sedia o niente | albero o niente | 30" per lato |
 | 6 | Cross body | senza appoggi | senza appoggi | 20-30" per lato |
 | 7 | Tricipite | senza appoggi | senza appoggi | 20-30" per lato |

@@ -254,7 +254,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 **Dopo (solo stretching statico, ~8-10 min, 20-30 sec per lato)**
 - [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
 - [ ] Polpaccio — gastrocnemio a ginocchio teso + soleo a ginocchio leggermente piegato (tallone che scende dal gradino)
-- [ ] Ischiocrurali (gamba tesa, piede sul muretto)
+- [ ] Femorali (ischiocrurali) (gamba tesa, piede sul muretto)
 - [ ] Quadricipite (in piedi, tallone al gluteo)
 - [ ] Flessori dell'anca (affondo statico, bacino in avanti)
 - [ ] Piriforme/gluteo (figura a 4) — *se lo stretching dell'anca col piede sul muretto non allunga già il gluteo*
@@ -274,7 +274,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 **Dopo (solo stretching statico, ~8-10 min)**
 - [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
 - [ ] Polpaccio — gastrocnemio a ginocchio teso + soleo a ginocchio piegato (tallone dal gradino) — 20-30 sec per lato
-- [ ] Ischiocrurali (piede sul muretto) — 20-30 sec per lato
+- [ ] Femorali (ischiocrurali) (piede sul muretto) — 20-30 sec per lato
 - [ ] Quadricipite — 20-30 sec per lato
 - [ ] Flessori dell'anca — 20-30 sec per lato
 - [ ] Piriforme/gluteo (figura a 4) — 20-30 sec per lato — *se lo stretching dell'anca col piede sul muretto non allunga già il gluteo*
@@ -297,7 +297,7 @@ Corri solo 3 giorni a settimana con 3 sessioni tutte di qualità (niente giorni 
 - [ ] Side plank — 2 x 30 sec per lato, **+1 serie sul sinistro**
 - [ ] Fascia plantare (seduto, dita del piede tirate verso lo stinco) — 30 sec per piede
 - [ ] Polpaccio — gastrocnemio a ginocchio teso + soleo a ginocchio piegato (tallone dal gradino) — 20-30 sec per lato
-- [ ] Ischiocrurali (piede sul muretto) — 20-30 sec per lato
+- [ ] Femorali (ischiocrurali) (piede sul muretto) — 20-30 sec per lato
 - [ ] Quadricipite — 20-30 sec per lato
 - [ ] Flessori dell'anca — 20-30 sec per lato
 - [ ] Piriforme/gluteo (figura a 4) — 20-30 sec per lato — *se lo stretching dell'anca col piede sul muretto non allunga già il gluteo*

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Draw the figures of teoria/10-esercizi-stretching.md in a flat-illustration style.
+"""Draw the figures of teoria/10-esercizi-stretching-post-corsa.md in a flat-illustration style.
 
 One SVG per exercise, two panels side by side:
 - left: a male runner (t-shirt, shorts, running shoes) in the pose, with a support

@@ -1,8 +1,8 @@
 # Gli allunghi
 
-Nel capitolo [06](06-corsa-lenta.md) la corsa lenta ha costruito la base: 30 minuti di corsa continua, poi il lungo. Gli allunghi sono il **primo stimolo verso la velocità**, e il più dolce. Si possono introdurre **appena si arriva a 30' di corsa continua**, alla fine di una corsa lenta, perché costano pochissimo e non aggiungono fatica. Abituano gambe, tendini e piedi ai ritmi veloci e insegnano a correre sciolti anche quando il passo sale. Vengono **prima del Tempo e della soglia**, la prima vera seduta di qualità: quando arriverà, il corpo avrà già conosciuto la velocità senza averla pagata.
+Nel capitolo [06](07-corsa-lenta.md) la corsa lenta ha costruito la base: 30 minuti di corsa continua, poi il lungo. Gli allunghi sono il **primo stimolo verso la velocità**, e il più dolce. Si possono introdurre **appena si arriva a 30' di corsa continua**, alla fine di una corsa lenta, perché costano pochissimo e non aggiungono fatica. Abituano gambe, tendini e piedi ai ritmi veloci e insegnano a correre sciolti anche quando il passo sale. Vengono **prima del Tempo e della soglia**, la prima vera seduta di qualità: quando arriverà, il corpo avrà già conosciuto la velocità senza averla pagata.
 
-Collegati: [06 La corsa lenta](06-corsa-lenta.md), [05 La struttura di una seduta](05-struttura-seduta.md), [14 Drills](14-drills.md), [04 Ritmi, zone e sedute](04-ritmi-zone-sedute.md).
+Collegati: [06 La corsa lenta](07-corsa-lenta.md), [05 La struttura di una seduta](06-struttura-seduta.md), [14 Drills](15-drills.md), [04 Ritmi, zone e sedute](05-ritmi-zone-sedute.md).
 
 ## 1. Il principio
 
@@ -30,7 +30,7 @@ Un **allungo** (in inglese *stride*) è un tratto breve di corsa veloce, **80-12
 | Fatica | quasi nessuna | media-alta | alta, per il sistema nervoso |
 | Scopo | tecnica, economia, velocità senza fatica | velocità ed economia sotto fatica | velocità massima |
 
-**Perché funzionano senza stancare:** sotto i 20-25" lo sforzo è coperto quasi tutto dalla **fosfocreatina** (capitolo [02](02-energia-partire-piano.md)): il lattato non fa in tempo ad accumularsi e la FC sale poco. Lo stimolo è soprattutto **nervoso**: si reclutano le fibre veloci, si allena un gesto ampio, rilassato e rapido.
+**Perché funzionano senza stancare:** sotto i 20-25" lo sforzo è coperto quasi tutto dalla **fosfocreatina** (capitolo [02](03-energia-partire-piano.md)): il lattato non fa in tempo ad accumularsi e la FC sale poco. Lo stimolo è soprattutto **nervoso**: si reclutano le fibre veloci, si allena un gesto ampio, rilassato e rapido.
 
 ## 2. Cosa dice la scienza
 
@@ -65,7 +65,7 @@ Un **allungo** (in inglese *stride*) è un tratto breve di corsa veloce, **80-12
 | Momento | Quanti | Scopo |
 |---|---|---|
 | **Fine di un lento o del lungo** | 4-8 | velocità ed economia senza una seduta in più; "risvegliano" le gambe dopo tanti km lenti |
-| **Fine del riscaldamento** (ripetute, Tempo, gare) | 3-4 | assaggio del ritmo, ultimo passaggio prima del lavoro (capitolo [05](05-struttura-seduta.md)) |
+| **Fine del riscaldamento** (ripetute, Tempo, gare) | 3-4 | assaggio del ritmo, ultimo passaggio prima del lavoro (capitolo [05](06-struttura-seduta.md)) |
 | **Fase di base** | 2 volte a settimana | l'unico lavoro veloce: mantengono la velocità mentre si costruisce il volume |
 | **Settimana di scarico o di gara** | 4-5, morbidi | tengono le gambe reattive senza fatica |
 

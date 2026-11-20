@@ -33,10 +33,10 @@ Una volta capito cosa significa il successo per sé, bisogna trasformarlo in **o
 ### Raggiungibile: la lettera più difficile
 È la lettera su cui si sbaglia di più: la maggior parte delle persone si pone obiettivi **non realistici per il proprio livello di forma**.
 
-C'è chi va a correre la prima volta e, senza allenamento, fa 10 km in 50 minuti. Sono persone molto rare, a cui la natura ha dato tutto per correre, e di solito migliorano anche in fretta. Poi ci sono persone che hanno bisogno di **anni** di allenamento per correre la stessa distanza nello stesso tempo. Non c'è niente di sbagliato in loro: il punto di partenza e la velocità di miglioramento dipendono in buona parte dalla genetica (vedi il principio di [individualizzazione](01-principi-allenamento.md)).
+C'è chi va a correre la prima volta e, senza allenamento, fa 10 km in 50 minuti. Sono persone molto rare, a cui la natura ha dato tutto per correre, e di solito migliorano anche in fretta. Poi ci sono persone che hanno bisogno di **anni** di allenamento per correre la stessa distanza nello stesso tempo. Non c'è niente di sbagliato in loro: il punto di partenza e la velocità di miglioramento dipendono in buona parte dalla genetica (vedi il principio di [individualizzazione](02-principi-allenamento.md)).
 
 Per questo l'obiettivo si confronta sempre con **dove si è oggi**, non con dove sono gli altri. Gli strumenti per farlo:
-- **l'ultima gara o l'ultimo test**: da lì il [VDOT](12-vdot.md) dice quali tempi sono equivalenti sulle altre distanze;
+- **l'ultima gara o l'ultimo test**: da lì il [VDOT](13-vdot.md) dice quali tempi sono equivalenti sulle altre distanze;
 - **i miglioramenti realistici**: per un amatore, qualche punto di VDOT in una stagione, non dieci;
 - **l'età**: l'*age grading* permette di confrontare il proprio tempo con quello dei migliori della stessa età.
 
@@ -44,7 +44,7 @@ Per questo l'obiettivo si confronta sempre con **dove si è oggi**, non con dove
 Un obiettivo può essere specifico, misurabile e perfino raggiungibile, ma **non avere senso** per chi lo insegue. Se corro per stare in salute, non ha senso preparare una maratona in pochi mesi quando non ho mai corso, non sono particolarmente dotato e faccio fatica a correre 2 km di fila: anche se ci arrivassi, il prezzo (infortuni, stanchezza, abbandono) andrebbe contro il motivo per cui ho cominciato.
 
 ### Definito nel tempo: dividere la strada
-Un obiettivo lontano ("la prima mezza maratona tra due anni") si raggiunge con una serie di obiettivi intermedi, ognuno con la sua data. È la logica della [periodizzazione](13-periodizzazione.md): gli obiettivi a lungo termine diventano piani di qualche mese, i piani diventano settimane, le settimane diventano sedute.
+Un obiettivo lontano ("la prima mezza maratona tra due anni") si raggiunge con una serie di obiettivi intermedi, ognuno con la sua data. È la logica della [periodizzazione](14-periodizzazione.md): gli obiettivi a lungo termine diventano piani di qualche mese, i piani diventano settimane, le settimane diventano sedute.
 
 ## 3. Cosa dice la scienza
 
@@ -52,7 +52,7 @@ Un obiettivo lontano ("la prima mezza maratona tra due anni") si raggiunge con u
 - **La corsa e l'umore** (*consolidato*): l'attività aerobica riduce i sintomi di ansia e depressione; nelle meta-analisi recenti camminata e corsa sono tra le forme di esercizio più efficaci (es. Noetel et al., *BMJ* 2024).
 - **L'esercizio moderato e le infezioni respiratorie** (*probabile*): chi fa attività aerobica regolare riporta meno giorni con raffreddori e infezioni delle vie aeree superiori (es. Nieman et al., *Br J Sports Med* 2011). Sono studi osservazionali. L'idea che sforzi molto lunghi e intensi (maratone) aprano una "finestra" di maggiore rischio è invece *discussa* (Campbell e Turner, 2018).
 - **Il lavoro seduto** (*probabile*): molte ore seduti al giorno sono associate a un rischio più alto di malattie e mortalità; 60-75 minuti al giorno di attività moderata sembrano annullare gran parte di questo rischio (Ekelund et al., *Lancet* 2016, meta-analisi di studi osservazionali).
-- **La dose per la salute non è quella per la prestazione** (*probabile*): i benefici per la salute crescono molto passando da zero a poco, poi sempre meno; i volumi da prestazione servono alla prestazione, non alla salute (vedi [rendimenti decrescenti](01-principi-allenamento.md)).
+- **La dose per la salute non è quella per la prestazione** (*probabile*): i benefici per la salute crescono molto passando da zero a poco, poi sempre meno; i volumi da prestazione servono alla prestazione, non alla salute (vedi [rendimenti decrescenti](02-principi-allenamento.md)).
 
 ## 4. Cosa è successo a me
 

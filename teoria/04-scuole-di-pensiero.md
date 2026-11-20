@@ -2,7 +2,7 @@
 
 > Bozza, iniziata il 22 ottobre 2026. **Titoli, date e attribuzioni segnati "da verificare" vanno controllati sulle fonti prima della pubblicazione.**
 
-I principi dell'allenamento (capitolo 1) sono condivisi da tutti. Le scuole si distinguono per **come li mettono in pratica**: quanto volume, quanta intensità, a quali ritmi, in che ordine. Conoscerle aiuta a capire che non esiste "il" metodo giusto: ognuna ha messo l'accento su una verità diversa.
+I principi dell'allenamento (capitolo 2) sono condivisi da tutti. Le scuole si distinguono per **come li mettono in pratica**: quanto volume, quanta intensità, a quali ritmi, in che ordine. Conoscerle aiuta a capire che non esiste "il" metodo giusto: ognuna ha messo l'accento su una verità diversa.
 
 ## Una linea del tempo
 
@@ -54,12 +54,12 @@ I principi dell'allenamento (capitolo 1) sono condivisi da tutti. Le scuole si d
   - le sedute si definiscono in **percentuale del ritmo gara** (es. lungo al 90% del ritmo maratona);
   - il **medio**, il **corto veloce**, i **progressivi**, il **lungo** come mattoni della settimana;
   - con Canova, l'**allenamento specifico**: avvicinandosi alla gara, il lavoro converge sul ritmo gara da due lati, "da sotto" (più lungo e un po' più lento) e "da sopra" (più corto e un po' più veloce). La periodizzazione va dal generale allo **specifico**, e il lavoro specifico è il più importante.
-- **Cosa lascia oggi:** il legame con il ritmo gara e la specificità (capitolo 1, § Specificità).
+- **Cosa lascia oggi:** il legame con il ritmo gara e la specificità (capitolo 2, § Specificità).
 
 ## 6. Stati Uniti: Jack Daniels e il VDOT (anni '70-oggi)
 
 - **L'idea:** un unico numero, il **VDOT**, ricavato da una gara recente, da cui discendono tutti i ritmi di allenamento: **E, M, T, I, R**. Ogni ritmo ha uno scopo fisiologico preciso e un volume massimo per seduta.
-- **Cosa lascia oggi:** il linguaggio comune dei ritmi e le tabelle più usate al mondo (capitolo 4).
+- **Cosa lascia oggi:** il linguaggio comune dei ritmi e le tabelle più usate al mondo (capitolo 5).
 - **Libro:** *Daniels' Running Formula* (più edizioni).
 
 ## 7. L'allenamento polarizzato e l'80/20 (Stephen Seiler, anni 2000)

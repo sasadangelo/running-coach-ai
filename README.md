@@ -90,21 +90,22 @@ cp .claude/skills/garmin-sync/.env.sample .claude/skills/garmin-sync/.env
 
 Nella cartella [teoria/](teoria/README.md) raccolgo quello che imparo strada facendo, con un metodo preciso: **il principio, cosa dice la scienza, cosa è successo a me, cosa vale per tutti**. Le osservazioni nascono nel [registro degli esperimenti](teoria/esperimenti.md) e diventano capitoli quando sono solide:
 
-1. [I principi dell'allenamento](teoria/01-principi-allenamento.md)
-2. [Da dove viene l'energia (e perché conviene partire piano)](teoria/02-energia-partire-piano.md)
-3. [Le scuole di pensiero](teoria/03-scuole-di-pensiero.md)
-4. [Ritmi, zone e sedute](teoria/04-ritmi-zone-sedute.md)
-5. [La struttura di una seduta](teoria/05-struttura-seduta.md)
-6. [La corsa lenta](teoria/06-corsa-lenta.md)
-7. [Mobilità e propriocezione](teoria/07-mobilita-propriocezione.md)
-8. [Lo stretching](teoria/08-stretching.md)
-9. [Gli allunghi](teoria/09-allunghi.md)
-10. [La corsa in soglia](teoria/10-corsa-soglia.md)
-11. [Le ripetute](teoria/11-ripetute.md)
-12. [Il VDOT: un numero per gare e ritmi](teoria/12-vdot.md)
-13. [La periodizzazione: dalla seduta alla stagione](teoria/13-periodizzazione.md)
-14. [Le andature (drills)](teoria/14-drills.md)
-15. [La forza per il runner](teoria/15-forza.md)
+1. [Gli ingredienti del successo](teoria/01-ingredienti-del-successo.md)
+2. [I principi dell'allenamento](teoria/02-principi-allenamento.md)
+3. [Da dove viene l'energia (e perché conviene partire piano)](teoria/03-energia-partire-piano.md)
+4. [Le scuole di pensiero](teoria/04-scuole-di-pensiero.md)
+5. [Ritmi, zone e sedute](teoria/05-ritmi-zone-sedute.md)
+6. [La struttura di una seduta](teoria/06-struttura-seduta.md)
+7. [La corsa lenta](teoria/07-corsa-lenta.md)
+8. [Mobilità e propriocezione](teoria/08-mobilita-propriocezione.md)
+9. [Lo stretching](teoria/09-stretching.md)
+10. [Gli allunghi](teoria/10-allunghi.md)
+11. [La corsa in soglia](teoria/11-corsa-soglia.md)
+12. [Le ripetute](teoria/12-ripetute.md)
+13. [Il VDOT: un numero per gare e ritmi](teoria/13-vdot.md)
+14. [La periodizzazione: dalla seduta alla stagione](teoria/14-periodizzazione.md)
+15. [Le andature (drills)](teoria/15-drills.md)
+16. [La forza per il runner](teoria/16-forza.md)
 
 ## Avvertenza
 

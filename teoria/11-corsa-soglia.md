@@ -1,13 +1,13 @@
 # La corsa in soglia
 
-La base è costruita. La corsa lenta (capitolo [06](06-corsa-lenta.md)) ha portato a 30 minuti e oltre di corsa continua. Il riscaldamento si fa con la mobilità e partendo piano (capitoli [07](07-mobilita-propriocezione.md) e [02](02-energia-partire-piano.md)), il defaticamento va in decrescendo e gli allunghi (capitolo [09](09-allunghi.md)) hanno riportato un po' di velocità nelle gambe. Poi è arrivato il lungo, il primo lavoro "speciale". Adesso c'è spazio per il **secondo lavoro di qualità: la corsa in soglia anaerobica**. Si comincia **a frazioni con un recupero breve** (i *cruise intervals* di Daniels) e si arriva al **blocco continuo** (il *Tempo run*).
+La base è costruita. La corsa lenta (capitolo [06](07-corsa-lenta.md)) ha portato a 30 minuti e oltre di corsa continua. Il riscaldamento si fa con la mobilità e partendo piano (capitoli [07](08-mobilita-propriocezione.md) e [02](03-energia-partire-piano.md)), il defaticamento va in decrescendo e gli allunghi (capitolo [09](10-allunghi.md)) hanno riportato un po' di velocità nelle gambe. Poi è arrivato il lungo, il primo lavoro "speciale". Adesso c'è spazio per il **secondo lavoro di qualità: la corsa in soglia anaerobica**. Si comincia **a frazioni con un recupero breve** (i *cruise intervals* di Daniels) e si arriva al **blocco continuo** (il *Tempo run*).
 
-Collegati: [04 Ritmi, zone e sedute](04-ritmi-zone-sedute.md) (definizioni e misura della soglia), [12 Il VDOT](12-vdot.md), [05 La struttura di una seduta](05-struttura-seduta.md), [13 La periodizzazione](13-periodizzazione.md), [11 Le ripetute](11-ripetute.md).
+Collegati: [04 Ritmi, zone e sedute](05-ritmi-zone-sedute.md) (definizioni e misura della soglia), [12 Il VDOT](13-vdot.md), [05 La struttura di una seduta](06-struttura-seduta.md), [13 La periodizzazione](14-periodizzazione.md), [11 Le ripetute](12-ripetute.md).
 
 ## 1. Il principio
 
 ### Cos'è e perché si allena
-La soglia anaerobica è la velocità più alta alla quale il lattato resta in equilibrio: tanto se ne produce, tanto se ne smaltisce (definizioni e varianti nel capitolo [04](04-ritmi-zone-sedute.md), sezione 1). Correre **lì, o appena sotto**, insegna al corpo a smaltire più lattato e a produrne meno a parità di passo. Il risultato è che **la soglia si sposta in avanti**: lo stesso ritmo costa meno, e il ritmo che si regge a lungo diventa più veloce. È l'allenamento più direttamente legato alla prestazione dai 10K alla maratona.
+La soglia anaerobica è la velocità più alta alla quale il lattato resta in equilibrio: tanto se ne produce, tanto se ne smaltisce (definizioni e varianti nel capitolo [04](05-ritmi-zone-sedute.md), sezione 1). Correre **lì, o appena sotto**, insegna al corpo a smaltire più lattato e a produrne meno a parità di passo. Il risultato è che **la soglia si sposta in avanti**: lo stesso ritmo costa meno, e il ritmo che si regge a lungo diventa più veloce. È l'allenamento più direttamente legato alla prestazione dai 10K alla maratona.
 
 Daniels lo chiama ritmo **"comodamente duro"** (*comfortably hard*): impegnativo, ma controllato. Non è una gara e non è una ripetuta: alla fine si dovrebbe pensare "ne avrei ancora per 10-15 minuti".
 
@@ -42,9 +42,9 @@ Intorno alla soglia ci sono tre ritmi vicini, che cambiano di pochi secondi al k
 | **Tempo in soglia** (T) | il ritmo T | la soglia, nel modo più diretto | Daniels | la seduta base, in tutte le fasi dopo la base |
 | **Corto veloce** | ritmo tra il 10K e il 5K, appena **sopra** la soglia | il ritmo gara di 5-10K, la tolleranza all'acidità | scuola italiana (Pizzolato, Arcelli) | fase specifica, 4-8 settimane prima di una 5-10K |
 
-**Il corto veloce non è più soglia in senso stretto:** sta sopra, il lattato si accumula e per questo si fa a frazioni (es. 3 x 1500-2000 m con recupero di 2-3'), o in continuo solo su distanze brevi. È il ponte tra la soglia e la gara. Per chi corre il 10K in un'ora il ritmo 10K quasi coincide con la soglia: il corto veloce si sposta allora verso il ritmo 5K (capitolo [04](04-ritmi-zone-sedute.md), sezione 3).
+**Il corto veloce non è più soglia in senso stretto:** sta sopra, il lattato si accumula e per questo si fa a frazioni (es. 3 x 1500-2000 m con recupero di 2-3'), o in continuo solo su distanze brevi. È il ponte tra la soglia e la gara. Per chi corre il 10K in un'ora il ritmo 10K quasi coincide con la soglia: il corto veloce si sposta allora verso il ritmo 5K (capitolo [04](05-ritmi-zone-sedute.md), sezione 3).
 
-**Il Tempo sotto soglia non è il medio.** Il medio sta più in basso, più vicino alla soglia aerobica, e dura 30-60' (capitolo [04](04-ritmi-zone-sedute.md)). Il Tempo sotto soglia sta subito sotto la soglia anaerobica: impegnato, con un respiro profondo, ma si riesce ancora a dire qualche parola in più delle 3-5 della soglia vera.
+**Il Tempo sotto soglia non è il medio.** Il medio sta più in basso, più vicino alla soglia aerobica, e dura 30-60' (capitolo [04](05-ritmi-zone-sedute.md)). Il Tempo sotto soglia sta subito sotto la soglia anaerobica: impegnato, con un respiro profondo, ma si riesce ancora a dire qualche parola in più delle 3-5 della soglia vera.
 
 Altre varianti, meno comuni:
 - **Tempo progressivo:** si parte sotto soglia e si chiude in soglia o appena sopra (es. 3 km: 6:35, 6:20, 6:10). Insegna a gestire il ritmo e ricorda una gara corsa bene.
@@ -53,7 +53,7 @@ Altre varianti, meno comuni:
 ### Quando iniziare
 - **Dopo la base**, quando si corrono **30' e oltre di fila** senza fatica e da qualche settimana.
 - **Dopo gli allunghi**, che hanno già abituato tendini e piedi a un passo più veloce.
-- **Una volta a settimana**, nella fase di base avanzata e in quella specifica (capitolo [13](13-periodizzazione.md)).
+- **Una volta a settimana**, nella fase di base avanzata e in quella specifica (capitolo [13](14-periodizzazione.md)).
 
 ### La progressione
 Si parte da frazioni corte con un recupero breve, si allungano le frazioni, se ne riduce il numero e alla fine si arriva al blocco unico:
@@ -64,11 +64,11 @@ Si parte da frazioni corte con un recupero breve, si allungano le frazioni, se n
  rec. 200 m jog        rec. 200 m jog        (+500 m a settimana, al massimo)
 ```
 
-Cresce **una cosa alla volta**: prima la durata della frazione, poi il blocco continuo. Il ritmo resta lo stesso finché la soglia non si sposta davvero (test o gara, capitolo [12](12-vdot.md)).
+Cresce **una cosa alla volta**: prima la durata della frazione, poi il blocco continuo. Il ritmo resta lo stesso finché la soglia non si sposta davvero (test o gara, capitolo [12](13-vdot.md)).
 
 ## 2. Trovare il ritmo giusto le prime volte
 
-Il problema pratico è questo: le prime volte non si hanno riferimenti. Non c'è una gara recente, il VDOT è una stima e l'orologio propone una soglia che spesso è ottimista. Quando la base comincia a essere decente, cioè si corrono 30' di fila, ha senso **cominciare a guardare la FC con più attenzione**. Prima non serviva: nel lento comandavano le sensazioni (capitolo [06](06-corsa-lenta.md)). Si incrociano più segnali; nessuno da solo basta.
+Il problema pratico è questo: le prime volte non si hanno riferimenti. Non c'è una gara recente, il VDOT è una stima e l'orologio propone una soglia che spesso è ottimista. Quando la base comincia a essere decente, cioè si corrono 30' di fila, ha senso **cominciare a guardare la FC con più attenzione**. Prima non serviva: nel lento comandavano le sensazioni (capitolo [06](07-corsa-lenta.md)). Si incrociano più segnali; nessuno da solo basta.
 
 ### La FC
 | Riferimento | Soglia | Note |
@@ -94,7 +94,7 @@ Per me oggi: FC max 185, riposo 56 → 87-90% = **161-167**; 82-88% della riserv
 Il segnale più utile: in soglia il respiro è **impegnato ma regolare**. Quando comincia a "rincorrersi" e diventa irregolare si è passati sopra (è la seconda soglia ventilatoria, VT2: il respiro accelera per eliminare la CO2 in eccesso).
 
 ### Altri riferimenti
-- **Il passo da una gara recente:** con il VDOT (capitolo [12](12-vdot.md)) il ritmo T è ~88% del VDOT. Per chi corre il 10K in circa un'ora, **soglia e ritmo 10K quasi coincidono**; per chi è più veloce la soglia è più lenta del ritmo 10K (capitolo [04](04-ritmi-zone-sedute.md), sezione 3).
+- **Il passo da una gara recente:** con il VDOT (capitolo [12](13-vdot.md)) il ritmo T è ~88% del VDOT. Per chi corre il 10K in circa un'ora, **soglia e ritmo 10K quasi coincidono**; per chi è più veloce la soglia è più lenta del ritmo 10K (capitolo [04](05-ritmi-zone-sedute.md), sezione 3).
 - **Il ritmo che si regge per un'ora** in gara: è la definizione di Daniels. Per un principiante la durata scende a 15-25'.
 - **La regolarità:** a soglia le frazioni si ripetono **uguali**, entro 2-3" l'una dall'altra, e l'ultima è veloce come la prima. Se l'ultima cala, si era sopra.
 - **Il recupero:** nei cruise intervals, in 200 m di jog la FC dovrebbe scendere di 8-12 battiti. Se non scende quasi per niente, il ritmo era troppo alto.
@@ -107,7 +107,7 @@ Il segnale più utile: in soglia il respiro è **impegnato ma regolare**. Quando
 
 ### Cosa dice Daniels
 - Un **Tempo continuo** a ritmo T dura **~20'**. Daniels lo indica come la durata standard del blocco unico.
-- In una seduta il **volume totale a ritmo T** non dovrebbe superare **~10% del volume settimanale** (capitolo [04](04-ritmi-zone-sedute.md), sezione 4). Con i cruise intervals si arriva a 30-40' complessivi, ma solo per chi corre molti km.
+- In una seduta il **volume totale a ritmo T** non dovrebbe superare **~10% del volume settimanale** (capitolo [04](05-ritmi-zone-sedute.md), sezione 4). Con i cruise intervals si arriva a 30-40' complessivi, ma solo per chi corre molti km.
 - Se il blocco continuo si allunga oltre i 20', **il ritmo va rallentato** di qualche secondo per ogni 5' in più (le correzioni esatte sono nel libro, da verificare sulla propria edizione).
 
 ### Perché 20 minuti sembrano pochi

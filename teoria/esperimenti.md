@@ -12,19 +12,19 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 **Ipotesi:** a parità di volume, alternare lento, soglia e ripetute rende più di correre sempre a ritmo medio.
 **Cosa è successo:** primavera 2026, 13-15 km/settimana quasi tutti a 6:50-7:00 con FC ~155 (zona 3). Agosto-ottobre 2026, 14-18 km/settimana con ripetute, Tempo e lungo lento. Confronto (mar-mag → ottobre): FC a riposo 60-61 → 55-57; HRV 42-44 → 49-55 ms; EF a 7:00-7:20 0.85-0.89 → 0.91-0.93; VO2max stimato 38.5-40 → 40.8.
 **Confondenti:** stagione (caldo da maggio), sonno simile, peso -1 kg, mesi di corsa in più nelle gambe.
-**Lezione:** conferma la letteratura sulla distribuzione dell'intensità. Capitolo: [Principi § Variazione](01-principi-allenamento.md), [Ritmi e zone](04-ritmi-zone-sedute.md).
+**Lezione:** conferma la letteratura sulla distribuzione dell'intensità. Capitolo: [Principi § Variazione](02-principi-allenamento.md), [Ritmi e zone](05-ritmi-zone-sedute.md).
 
 ## E2 — Lo scarico produce il salto, ma non subito 🟡 [G]
 **Ipotesi:** dopo una settimana di scarico la prestazione migliora (supercompensazione).
 **Cosa è successo:** dopo lo scarico S4 (21-27 settembre) la settimana S5 ha prodotto il miglior Tempo fino a quel momento. Nello scarico S8, invece, la prima seduta (6x400, 20 ottobre) è stata la più dura dell'intero piano, mentre HRV (49 → 53 ms) e FC a riposo (57 → 55) stavano già migliorando.
 **Confondenti:** il 20/10 sonno corto (a letto dopo mezzanotte), poca motivazione al mattino.
-**Lezione:** la fatica di un blocco di carico si smaltisce in 4-7 giorni; la supercompensazione arriva **dopo** lo scarico, non durante. Capitolo: [Principi § Supercompensazione](01-principi-allenamento.md).
+**Lezione:** la fatica di un blocco di carico si smaltisce in 4-7 giorni; la supercompensazione arriva **dopo** lo scarico, non durante. Capitolo: [Principi § Supercompensazione](02-principi-allenamento.md).
 
 ## E3 — Partire forte col caldo 🟡 [G]
 **Ipotesi:** una partenza sopra soglia si paga nella seconda metà, tanto più col caldo.
 **Cosa è successo:** Race for the Cure (10/5/2026, 10K, >24°C): 2°-3° km a 6:31-6:24 con FC 159-165, poi crollo dal 5° km (7:03-7:45, FC 166-169) e 6' di cammino. VDOT 26.6 grezzo, ~28 corretto per il caldo.
 **Confondenti:** resistenza limitata (lungo massimo in allenamento 6.5 km): impossibile separare del tutto i tre fattori.
-**Lezione:** caldo e partenza forte si sommano. Capitolo: [Energia e partire piano](02-energia-partire-piano.md).
+**Lezione:** caldo e partenza forte si sommano. Capitolo: [Energia e partire piano](03-energia-partire-piano.md).
 
 ## E4 — Partenza lenta e decoupling ⏳ [G]
 **Ipotesi:** un primo km molto lento migliora la tenuta aerobica del lungo.
@@ -53,7 +53,7 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 **Ipotesi:** la frequenza respiratoria stimata dall'orologio (con la fascia) può affiancare il talk test come segnale della soglia.
 **Cosa è successo:** Tempo continuo 2000 m del 29/10/2026 a 6:10-6:14, FC 164-167, RPE 3: 38 respiri/min di media, 45 di picco.
 **Confondenti:** stima dell'algoritmo, non misura diretta; una sola seduta; respiro influenzato da naso/tuba (punto debole ORL).
-**Da verificare:** confrontare i prossimi Tempo continui (2500-3500 m) e una seduta sopra soglia. Capitolo: [La corsa in soglia](10-corsa-soglia.md).
+**Da verificare:** confrontare i prossimi Tempo continui (2500-3500 m) e una seduta sopra soglia. Capitolo: [La corsa in soglia](11-corsa-soglia.md).
 
 ## E9 — La terza settimana di carico è la più dura ⏳ [P]
 **Ipotesi:** con 3 uscite a settimana tutte "importanti" (ripetute, Tempo, lungo), la terza settimana del 3+1 accumula troppa fatica.
@@ -74,7 +74,7 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 
 **Lettura:** se il problema fosse stato il calore, la FC sarebbe stata più alta a parità di passo (deriva cardiovascolare); invece era uguale o più bassa. A cambiare è lo sforzo percepito. È il quadro più tipico della fatica residua: FC che sale meno del solito, anche nel riscaldamento, e sensazioni peggiori.
 **Confondenti:** 5 giorni dalla gara (ultimi km a soglia), blocco più lungo di sempre (+500 m), settimana stressante (ospedale martedì), FC al polso (meno precisa della fascia), un solo km di confronto, perché la seduta si è fermata nel 2° km.
-**Lezione provvisoria:** la FC da sola non basta a dire se una seduta fallisce per il caldo o per la fatica, serve la sensazione accanto. Una FC più bassa del solito con sforzo percepito più alto è un segnale di fatica, non di forma. I vestiti restano un consiglio valido (vestirsi come con 10°C in più, impermeabile solo sotto i ~10°C), ma qui non sono la causa principale. Vedi [E3](#e3--partire-forte-col-caldo--g) per il caso del caldo vero, con la FC che sale. Capitolo: [Energia e partire piano](02-energia-partire-piano.md).
+**Lezione provvisoria:** la FC da sola non basta a dire se una seduta fallisce per il caldo o per la fatica, serve la sensazione accanto. Una FC più bassa del solito con sforzo percepito più alto è un segnale di fatica, non di forma. I vestiti restano un consiglio valido (vestirsi come con 10°C in più, impermeabile solo sotto i ~10°C), ma qui non sono la causa principale. Vedi [E3](#e3--partire-forte-col-caldo--g) per il caso del caldo vero, con la FC che sale. Capitolo: [Energia e partire piano](03-energia-partire-piano.md).
 **Da verificare:** il 2500 m di S12, vestiti leggeri e a 12 giorni dalla gara. Se va in controllo con FC simile, la causa era la fatica residua. Se la FC al 1° km è molto più bassa di 162 a parità di passo, anche i vestiti contavano.
 
 ---

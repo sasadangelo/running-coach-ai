@@ -1,8 +1,8 @@
 # Le ripetute
 
-Con il Tempo (capitolo [10](10-corsa-soglia.md)) il runner ha imparato a reggere un ritmo "comodamente duro". Il passo successivo è andare **più forte della soglia**, per tratti brevi, con un recupero in mezzo: le **ripetute**. Si comincia da frazioni **brevi** (200 e 400 m), che allenano velocità ed economia, e si passa a frazioni **lunghe** (800 m e oltre), che allenano il VO2max. Più la ripetuta è breve, più può essere veloce. Il capitolo definisce le regole per ritmo, recupero, FC e progressione.
+Con il Tempo (capitolo [10](11-corsa-soglia.md)) il runner ha imparato a reggere un ritmo "comodamente duro". Il passo successivo è andare **più forte della soglia**, per tratti brevi, con un recupero in mezzo: le **ripetute**. Si comincia da frazioni **brevi** (200 e 400 m), che allenano velocità ed economia, e si passa a frazioni **lunghe** (800 m e oltre), che allenano il VO2max. Più la ripetuta è breve, più può essere veloce. Il capitolo definisce le regole per ritmo, recupero, FC e progressione.
 
-Collegati: [04 Ritmi, zone e sedute](04-ritmi-zone-sedute.md) (zone R e I, recuperi), [05 La struttura di una seduta](05-struttura-seduta.md), [09 Gli allunghi](09-allunghi.md), [12 Il VDOT](12-vdot.md), [14 Drills](14-drills.md).
+Collegati: [04 Ritmi, zone e sedute](05-ritmi-zone-sedute.md) (zone R e I, recuperi), [05 La struttura di una seduta](06-struttura-seduta.md), [09 Gli allunghi](10-allunghi.md), [12 Il VDOT](13-vdot.md), [14 Drills](15-drills.md).
 
 ## 1. Il principio
 
@@ -16,9 +16,9 @@ Collegati: [04 Ritmi, zone e sedute](04-ritmi-zone-sedute.md) (zone R e I, recup
 | Allena | velocità, economia, tecnica, fibre veloci | VO2max, il "motore" |
 | Costo | medio, soprattutto per muscoli e tendini | alto, per il sistema cardiovascolare |
 
-Daniels chiama le prime **R (Repetition)** e le seconde **I (Interval)**; in italiano sono tutte "ripetute" (capitolo [04](04-ritmi-zone-sedute.md), sezione 6). La distinzione conta perché cambia **tutto il resto**: ritmo, recupero, ruolo della FC.
+Daniels chiama le prime **R (Repetition)** e le seconde **I (Interval)**; in italiano sono tutte "ripetute" (capitolo [04](05-ritmi-zone-sedute.md), sezione 6). La distinzione conta perché cambia **tutto il resto**: ritmo, recupero, ruolo della FC.
 
-**Perché le lunghe devono durare 3-5':** al VO2max il consumo di ossigeno ci mette 1.5-2' ad arrivare al massimo. Una frazione più corta finisce prima di arrivarci; una più lunga di ~5' allo stesso ritmo non si regge, e se la si regge vuol dire che il ritmo era più lento, cioè soglia o corto veloce. Per questo **la distanza dipende dal livello**: per un runner da 40' sui 10K un 1600 dura ~6' ed è un'ottima ripetuta I; per un runner da 60' dura ~9'30" e diventa soglia. Nelle tabelle di Daniels le caselle vuote sono proprio queste (capitolo [04](04-ritmi-zone-sedute.md), sezione 3).
+**Perché le lunghe devono durare 3-5':** al VO2max il consumo di ossigeno ci mette 1.5-2' ad arrivare al massimo. Una frazione più corta finisce prima di arrivarci; una più lunga di ~5' allo stesso ritmo non si regge, e se la si regge vuol dire che il ritmo era più lento, cioè soglia o corto veloce. Per questo **la distanza dipende dal livello**: per un runner da 40' sui 10K un 1600 dura ~6' ed è un'ottima ripetuta I; per un runner da 60' dura ~9'30" e diventa soglia. Nelle tabelle di Daniels le caselle vuote sono proprio queste (capitolo [04](05-ritmi-zone-sedute.md), sezione 3).
 
 ### Quando iniziare
 - **Dopo il Tempo**: chi ha già fatto qualche settimana di soglia conosce il ritmo sostenuto e ha tendini e piedi abituati, grazie anche agli allunghi.
@@ -41,7 +41,7 @@ La regola di Daniels: **ogni gradino è più veloce di ~6"/400 m, cioè ~15"/km*
 | 1000-1200 m | I | ritmo I, se dura ≤5' | per me 6'-7': troppo lunga, sarebbe soglia |
 | 1600-2000 m | I (per i veloci) / corto veloce (per i lenti) | I solo se dura ≤5-6'; altrimenti ritmo 5-10K | per me corto veloce, a ~6:00-6:05 |
 
-I ritmi si prendono dalle **tabelle del VDOT** (capitolo [12](12-vdot.md), [appendice A](appendice-a-tabelle-vdot.md)) e dalla prova sul campo. Si aggiornano solo dopo una gara o un test, non perché "oggi andavo bene".
+I ritmi si prendono dalle **tabelle del VDOT** (capitolo [12](13-vdot.md), [appendice A](appendice-a-tabelle-vdot.md)) e dalla prova sul campo. Si aggiornano solo dopo una gara o un test, non perché "oggi andavo bene".
 
 **Fasce strette, tempi al giro.** Su 200 m una differenza di 10"/km sono 2" al giro: il GPS non la misura bene. Meglio la pista o un tratto misurato, e il **tempo al giro** (es. 1:02-1:06) invece del passo al km. Una fascia di 20"/km sulle brevi è più realistica di una da 10".
 
@@ -54,7 +54,7 @@ I ritmi si prendono dalle **tabelle del VDOT** (capitolo [12](12-vdot.md), [appe
 | 1000-1200 m | 3' circa | jog |
 
 Due regole per adattare il recupero al giorno:
-- **La FC di ripartenza:** se all'inizio della ripetuta la FC è ancora alta (per me oltre 150, cioè ~80% della FC max), si aggiungono 30". È l'idea della scuola tedesca: si riparte quando il cuore è sceso (capitolo [03](03-scuole-di-pensiero.md)).
+- **La FC di ripartenza:** se all'inizio della ripetuta la FC è ancora alta (per me oltre 150, cioè ~80% della FC max), si aggiungono 30". È l'idea della scuola tedesca: si riparte quando il cuore è sceso (capitolo [03](04-scuole-di-pensiero.md)).
 - **Il respiro:** nelle brevi si riparte quando il respiro è tornato quasi normale; ogni frazione deve partire **fresca**.
 
 ### La FC: un ruolo diverso
@@ -69,7 +69,7 @@ Due regole per adattare il recupero al giorno:
 - Alla fine si dovrebbe pensare "**ne avrei fatta un'altra**".
 
 ### Quanto volume
-Daniels: in una seduta, ritmo R al massimo **~5% dei km settimanali** (e non oltre 8 km), ritmo I al massimo **~8%** (e non oltre 10 km). Come per la soglia (capitolo [10](10-corsa-soglia.md), sezione 3), con volumi bassi la percentuale dà numeri troppo piccoli: con 18 km a settimana sarebbero 900 m di R. In pratica, per un amatore con pochi km:
+Daniels: in una seduta, ritmo R al massimo **~5% dei km settimanali** (e non oltre 8 km), ritmo I al massimo **~8%** (e non oltre 10 km). Come per la soglia (capitolo [10](11-corsa-soglia.md), sezione 3), con volumi bassi la percentuale dà numeri troppo piccoli: con 18 km a settimana sarebbero 900 m di R. In pratica, per un amatore con pochi km:
 - **brevi:** 1.6-3 km di frazioni (8-15 x 200, 6-10 x 400);
 - **lunghe:** 2.4-4 km di frazioni (3-5 x 800);
 - **mai** più di una seduta di ripetute a settimana con 3-4 uscite.
@@ -96,12 +96,12 @@ Cresce **una cosa alla volta**, nell'ordine: prima il **numero** di ripetute, po
 - **Le ripetute lunghe migliorano il VO2max** più della corsa continua (*consolidato*): Helgerud e colleghi (2007), 4 x 4' al 90-95% della FC max con 3' di recupero jog, +7% di VO2max in 8 settimane, contro aumenti minimi con lento o soglia allo stesso carico.
 - **Conta il tempo passato vicino al VO2max** (*probabile*, Billat): frazioni di 3-5' con recupero jog lo massimizzano; frazioni troppo brevi o recuperi troppo lunghi lo riducono.
 - **Le ripetute brevi migliorano economia e velocità** (*probabile*): il beneficio passa dal sistema nervoso e dalla rigidità dei tendini più che dal cuore (Paavolainen e colleghi, 1999, con lavori brevi ed esplosivi).
-- **Il recupero da fermi o camminando** ricarica meglio la fosfocreatina (*consolidato*); nelle brevi con 1-2' di recupero il jog non dà vantaggi (capitolo [04](04-ritmi-zone-sedute.md), sezione 5).
-- **Il rischio** (*probabile*): le ripetute sono il lavoro con più infortuni muscolari (femorali, polpaccio) e tendinei (Achille, fascia plantare), soprattutto se fatte troppo forte, a freddo o stanchi. Il riscaldamento completo (capitolo [05](05-struttura-seduta.md)) è parte della seduta, non un optional.
+- **Il recupero da fermi o camminando** ricarica meglio la fosfocreatina (*consolidato*); nelle brevi con 1-2' di recupero il jog non dà vantaggi (capitolo [04](05-ritmi-zone-sedute.md), sezione 5).
+- **Il rischio** (*probabile*): le ripetute sono il lavoro con più infortuni muscolari (femorali, polpaccio) e tendinei (Achille, fascia plantare), soprattutto se fatte troppo forte, a freddo o stanchi. Il riscaldamento completo (capitolo [05](06-struttura-seduta.md)) è parte della seduta, non un optional.
 
 ## 5. Cosa è successo a me
 
-Nel piano le ripetute sono partite **insieme** al Tempo, dalla seconda settimana, non dopo: il profilo di partenza aveva già una buona velocità su sforzi brevi (capitolo [10](10-corsa-soglia.md)). Le 800 arrivano in S12-S13, mescolate alle 400.
+Nel piano le ripetute sono partite **insieme** al Tempo, dalla seconda settimana, non dopo: il profilo di partenza aveva già una buona velocità su sforzi brevi (capitolo [10](11-corsa-soglia.md)). Le 800 arrivano in S12-S13, mescolate alle 400.
 
 | Data | Seduta | Ritmo frazioni | FC fine frazioni | Note |
 |---|---|---|---|---|

@@ -2,7 +2,7 @@
 
 > Bozza, iniziata il 22 ottobre 2026.
 
-Una seduta non è solo la parte centrale (le ripetute, il Tempo, il lungo). Ha un **prima** e un **dopo**, spesso trascurati, che decidono quanto rende la parte centrale e quanto costa al corpo. Il riscaldamento porta il corpo a poter fare il lavoro **senza farsi male e al meglio**; il defaticamento è l'inizio del **recupero**, la fase in cui l'allenamento produce i suoi effetti (vedi [Supercompensazione](01-principi-allenamento.md#1-supercompensazione-stimolo-recupero-adattamento)).
+Una seduta non è solo la parte centrale (le ripetute, il Tempo, il lungo). Ha un **prima** e un **dopo**, spesso trascurati, che decidono quanto rende la parte centrale e quanto costa al corpo. Il riscaldamento porta il corpo a poter fare il lavoro **senza farsi male e al meglio**; il defaticamento è l'inizio del **recupero**, la fase in cui l'allenamento produce i suoi effetti (vedi [Supercompensazione](02-principi-allenamento.md#1-supercompensazione-stimolo-recupero-adattamento)).
 
 ```
  FC
@@ -77,7 +77,7 @@ Gli studi dicono che il defaticamento incide poco sulla prestazione del giorno d
 | **2. Cammino** | finché il respiro torna normale | 2-5' |
 | **3. Stretching e mobilità** | allungamenti **dolci**, 20-30" per muscolo: polpacci, fascia plantare, quadricipiti, flessori dell'anca, glutei, femorali | 5-10' |
 
-**Sullo stretching:** quello statico non riduce l'indolenzimento né gli infortuni come si pensava. Serve a mantenere la **mobilità** nel lungo periodo, e dopo i 50 anni la mobilità si perde facilmente. Dopo una seduta dura va fatto con dolcezza, senza tirare; il lavoro di mobilità vero si può fare anche in un altro momento della giornata. Approfondimento nel capitolo [08](08-stretching.md).
+**Sullo stretching:** quello statico non riduce l'indolenzimento né gli infortuni come si pensava. Serve a mantenere la **mobilità** nel lungo periodo, e dopo i 50 anni la mobilità si perde facilmente. Dopo una seduta dura va fatto con dolcezza, senza tirare; il lavoro di mobilità vero si può fare anche in un altro momento della giornata. Approfondimento nel capitolo [08](09-stretching.md).
 
 ---
 
@@ -113,5 +113,5 @@ Gli studi dicono che il defaticamento incide poco sulla prestazione del giorno d
 ## Da approfondire
 - [ ] Riscaldamento con il freddo e con il caldo
 - [ ] Il riscaldamento di gara in pratica: tempi, griglia di partenza, cosa fare se si aspetta a lungo
-- [ ] Routine di mobilità per runner over 50 (anche come seduta a sé): esercizi nel capitolo [07](07-mobilita-propriocezione.md), drills nel [14](14-drills.md)
+- [ ] Routine di mobilità per runner over 50 (anche come seduta a sé): esercizi nel capitolo [07](08-mobilita-propriocezione.md), drills nel [14](15-drills.md)
 - [ ] Recupero attivo il giorno dopo: corsa, bici, camminata

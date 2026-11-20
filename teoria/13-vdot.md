@@ -6,7 +6,7 @@
 
 Il **VDOT** è un numero, ricavato da una gara recente, che riassume il livello di un runner. Da quel numero discendono due cose:
 - **i tempi equivalenti** sulle altre distanze (chi corre i 5 km in 30:41 "vale" 1:03:49 sui 10 km);
-- **i ritmi di allenamento** E, M, T, I, R (capitolo [04](04-ritmi-zone-sedute.md)).
+- **i ritmi di allenamento** E, M, T, I, R (capitolo [04](05-ritmi-zone-sedute.md)).
 
 L'idea è di **Jack Daniels** e del matematico **Jimmy Gilbert** (*Oxygen Power*, 1979). Il nome viene da "V̇O2max", con il punto sulla V che indica una portata: ossigeno al minuto.
 

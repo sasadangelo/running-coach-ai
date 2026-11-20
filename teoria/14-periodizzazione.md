@@ -1,6 +1,6 @@
 # La periodizzazione: dalla seduta alla stagione
 
-> Bozza, iniziata il 24 ottobre 2026. Il principio è introdotto nel capitolo [01](01-principi-allenamento.md), sezioni 1 e 8.
+> Bozza, iniziata il 24 ottobre 2026. Il principio è introdotto nel capitolo [01](02-principi-allenamento.md), sezioni 1 e 8.
 
 ## 1. Il principio
 
@@ -20,7 +20,7 @@ Lo schema di Mussini (dalle note dell'autore; il testo è da verificare) usa tre
 ## 2. I livelli
 
 ### La seduta
-L'unità minima: uno stimolo preciso (capitolo [04](04-ritmi-zone-sedute.md): zona × frazione × recupero) dentro una struttura fissa (capitolo [05](05-struttura-seduta.md)). Recupero: 24-72 ore, secondo l'intensità.
+L'unità minima: uno stimolo preciso (capitolo [04](05-ritmi-zone-sedute.md): zona × frazione × recupero) dentro una struttura fissa (capitolo [05](06-struttura-seduta.md)). Recupero: 24-72 ore, secondo l'intensità.
 
 ### Il microciclo (di solito la settimana)
 L'insieme delle sedute che si ripete: quante corse, in che ordine, dove cadono le sedute dure e dove i recuperi.
@@ -133,7 +133,7 @@ Nella pratica i modelli si mescolano. Le regole comuni: **un focus per blocco**,
 ## 6. Cosa vale per tutti
 
 - **Ogni livello ha il suo recupero:** il giorno facile, la settimana di scarico, il taper, la transizione. Saltarne uno si paga più avanti.
-- Lo scarico funziona perché **la fatica scende più in fretta della forma** (modello di Banister, capitolo [01](01-principi-allenamento.md)).
+- Lo scarico funziona perché **la fatica scende più in fretta della forma** (modello di Banister, capitolo [01](02-principi-allenamento.md)).
 - Per un amatore basta il modello lineare: base, sviluppo, specifico, taper, gara, transizione.
 - **3+1 di default; 2+1** dopo i 50 anni, per i principianti o quando il volume cresce in fretta.
 - La transizione non è tempo perso: è la base del ciclo successivo.

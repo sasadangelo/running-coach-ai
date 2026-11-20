@@ -137,7 +137,7 @@ Ripetere sempre lo stesso stimolo porta a due problemi: il corpo smette di adatt
 
 > **Esempio dal diario.** In primavera tutte le corse erano a 6:50-7:00 con FC ~155, la "zona grigia": stimolo sempre uguale, progressi fermi. Da agosto il piano alterna ripetute, soglia e lento.
 
-**Ma con equilibrio:** cambiare troppo spesso impedisce di consolidare. Le varianti si fanno ruotare nelle stesse "caselle" della settimana (vedi [Ritmi, zone e sedute](04-ritmi-zone-sedute.md)).
+**Ma con equilibrio:** cambiare troppo spesso impedisce di consolidare. Le varianti si fanno ruotare nelle stesse "caselle" della settimana (vedi [Ritmi, zone e sedute](05-ritmi-zone-sedute.md)).
 
 ---
 
@@ -148,7 +148,7 @@ L'allenamento si organizza in **cicli** con obiettivi diversi, invece di fare se
 - **Mesociclo**: blocchi di 3-6 settimane con un focus (base, sviluppo, specifico, scarico, gara).
 - **Microciclo**: la settimana.
 
-È l'applicazione dei principi precedenti nel tempo: sovraccarico e recupero (cicli di carico e scarico), specificità (dal generale allo specifico avvicinandosi alla gara), variazione (fasi diverse). Tutti i livelli, il taper e la transizione nel capitolo [13](13-periodizzazione.md).
+È l'applicazione dei principi precedenti nel tempo: sovraccarico e recupero (cicli di carico e scarico), specificità (dal generale allo specifico avvicinandosi alla gara), variazione (fasi diverse). Tutti i livelli, il taper e la transizione nel capitolo [13](14-periodizzazione.md).
 
 ---
 

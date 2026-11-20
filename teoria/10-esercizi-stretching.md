@@ -60,6 +60,14 @@ In ogni figura, a sinistra c'è la posizione; a destra il muscolo che si allunga
 - **Cosa si sente:** dipende da dove va il busto. **Busto dritto, bacino in avanti**: tensione davanti all'anca e all'inguine della gamba dietro (flessori dell'anca, il muscolo che si accorcia stando seduti). **Busto inclinato sulla coscia davanti**, come nella figura: tensione anche nel gluteo della gamba davanti.
 - **Gli errori da evitare:** il ginocchio davanti che supera molto la punta del piede o cade verso l'interno, la schiena che si inarca per scendere di più. Si scende con il bacino, non con la schiena. Per allungare a fondo gluteo e piriforme c'è la "figura a 4" del capitolo 9.
 
+### Adduttori (affondo laterale)
+![Affondo laterale per gli adduttori](img/10-stretching/adduttori.png)
+
+- **Dove:** ovunque, senza appoggi.
+- **Come si fa:** gambe molto larghe, punte in avanti o appena aperte. Si piega **un ginocchio** e si sposta il bacino verso quel lato; l'altra gamba resta tesa, con il piede tutto a terra. Busto dritto, mani sui fianchi o sulle cosce. Poi si cambia lato.
+- **Cosa si sente:** tensione all'interno della coscia della gamba tesa, fino all'inguine.
+- **Gli errori da evitare:** il ginocchio piegato che cade verso l'interno o supera la punta del piede, il piede della gamba tesa che si solleva sul bordo, il busto che si piega di lato. Piegare il busto a destra e sinistra a gambe tese allunga i fianchi, non gli adduttori.
+
 ## Le spalle
 
 ### Cross body stretch (braccio davanti al petto)
@@ -80,7 +88,7 @@ In ogni figura, a sinistra c'è la posizione; a destra il muscolo che si allunga
 
 ## La sequenza a fine corsa
 
-Dal basso verso l'alto, così si cambia posizione il meno possibile. Circa **8-10 minuti**:
+Dal basso verso l'alto, così si cambia posizione il meno possibile. Circa **9-11 minuti**:
 
 | # | Esercizio | A casa | Al parco | Tempo |
 |---|---|---|---|---|
@@ -88,9 +96,10 @@ Dal basso verso l'alto, così si cambia posizione il meno possibile. Circa **8-1
 | 2 | Soleo (ginocchio piegato) | muro | muro, albero, palo | 30" per lato |
 | 3 | Femorali (ischiocrurali) | sedia, gradino, tavolo | muretto, panchina | 30" per lato |
 | 4 | Affondo con il piede su un appoggio (anca) | gradino, sedia contro il muro | muretto, gradino, panchina | 30" per lato |
-| 5 | Quadricipite | muro, sedia o niente | albero o niente | 30" per lato |
-| 6 | Cross body | senza appoggi | senza appoggi | 20-30" per lato |
-| 7 | Tricipite | senza appoggi | senza appoggi | 20-30" per lato |
+| 5 | Adduttori (affondo laterale) | senza appoggi | senza appoggi | 30" per lato |
+| 6 | Quadricipite | muro, sedia o niente | albero o niente | 30" per lato |
+| 7 | Cross body | senza appoggi | senza appoggi | 20-30" per lato |
+| 8 | Tricipite | senza appoggi | senza appoggi | 20-30" per lato |
 
 Dopo un lungo o una gara si può arrivare a 45" sui punti più rigidi. Dopo le ripetute brevi basta la sequenza leggera, anche una volta sola per lato.
 

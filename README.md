@@ -99,13 +99,14 @@ Nella cartella [teoria/](teoria/README.md) raccolgo quello che imparo strada fac
 7. [La corsa lenta](teoria/07-corsa-lenta.md)
 8. [Mobilità e propriocezione](teoria/08-mobilita-propriocezione.md)
 9. [Lo stretching](teoria/09-stretching.md)
-10. [Gli allunghi](teoria/10-allunghi.md)
-11. [La corsa in soglia](teoria/11-corsa-soglia.md)
-12. [Le ripetute](teoria/12-ripetute.md)
-13. [Il VDOT: un numero per gare e ritmi](teoria/13-vdot.md)
-14. [La periodizzazione: dalla seduta alla stagione](teoria/14-periodizzazione.md)
-15. [Le andature (drills)](teoria/15-drills.md)
-16. [La forza per il runner](teoria/16-forza.md)
+10. [Lo stretching al parco](teoria/10-stretching-al-parco.md)
+11. [Gli allunghi](teoria/11-allunghi.md)
+12. [La corsa in soglia](teoria/12-corsa-soglia.md)
+13. [Le ripetute](teoria/13-ripetute.md)
+14. [Il VDOT: un numero per gare e ritmi](teoria/14-vdot.md)
+15. [La periodizzazione: dalla seduta alla stagione](teoria/15-periodizzazione.md)
+16. [Le andature (drills)](teoria/16-drills.md)
+17. [La forza per il runner](teoria/17-forza.md)
 
 ## Avvertenza
 

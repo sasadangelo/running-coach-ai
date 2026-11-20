@@ -41,10 +41,11 @@ Si porta un muscolo in allungamento fino a sentire una **tensione leggera**, mai
 
 | Esercizio | Come | Per chi |
 |---|---|---|
+| **Quadricipite** | in piedi, tallone verso il gluteo, ginocchia vicine, 
 | **Polpaccio (gastrocnemio)** | mani al muro, gamba dietro tesa, tallone a terra, 30" per lato | tutti |
 | **Soleo** | stessa posizione, ginocchio dietro piegato, 30" per lato | caviglie rigide, storia di fascite o tendine d'Achille |
 | **Fascia plantare** | seduti, dita del piede tirate verso lo stinco con la mano, 30" per piede | storia di fascite |
-| **Quadricipite** | in piedi, tallone verso il gluteo, ginocchia vicine, bacino in avanti, 30" per lato | tutti |
+bacino in avanti, 30" per lato | tutti |
 | **Flessori dell'anca** | affondo in ginocchio, bacino in retroversione ("coda sotto"), 30" per lato | chi sta molto seduto, passo corto |
 | **Femorali** | supini, gamba tesa sollevata con un asciugamano dietro al piede, 30" per lato | femorali tesi |
 | **Figura a 4** | supini, caviglia sul ginocchio opposto, coscia tirata verso il petto, 30" per lato | gluteo, piriforme, esterno dell'anca |
@@ -59,7 +60,7 @@ La routine non è uguale per tutti. Gli esercizi che servono a tutti (polpaccio,
 - **schiena bassa rigida a fine lungo:** ginocchia al petto;
 - **asimmetrie** (un lato più rigido dell'altro): una serie in più sul lato rigido.
 
-Se la rigidità torna sempre e non migliora in qualche settimana, lo stretching da solo non basta: spesso dietro c'è un **muscolo debole** che fa lavorare troppo un altro, ed è un lavoro per la forza (capitolo [15](16-forza.md)).
+Se la rigidità torna sempre e non migliora in qualche settimana, lo stretching da solo non basta: spesso dietro c'è un **muscolo debole** che fa lavorare troppo un altro, ed è un lavoro per la forza (capitolo [15](17-forza.md)).
 
 ## 4. Cosa è successo a me
 

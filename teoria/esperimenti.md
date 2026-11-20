@@ -53,7 +53,7 @@ Osservazioni dal diario di allenamento, annotate come esperimenti N=1: **ipotesi
 **Ipotesi:** la frequenza respiratoria stimata dall'orologio (con la fascia) può affiancare il talk test come segnale della soglia.
 **Cosa è successo:** Tempo continuo 2000 m del 29/10/2026 a 6:10-6:14, FC 164-167, RPE 3: 38 respiri/min di media, 45 di picco.
 **Confondenti:** stima dell'algoritmo, non misura diretta; una sola seduta; respiro influenzato da naso/tuba (punto debole ORL).
-**Da verificare:** confrontare i prossimi Tempo continui (2500-3500 m) e una seduta sopra soglia. Capitolo: [La corsa in soglia](11-corsa-soglia.md).
+**Da verificare:** confrontare i prossimi Tempo continui (2500-3500 m) e una seduta sopra soglia. Capitolo: [La corsa in soglia](12-corsa-soglia.md).
 
 ## E9 — La terza settimana di carico è la più dura ⏳ [P]
 **Ipotesi:** con 3 uscite a settimana tutte "importanti" (ripetute, Tempo, lungo), la terza settimana del 3+1 accumula troppa fatica.

@@ -1,6 +1,6 @@
 # La forza per il runner
 
-> Bozza, iniziata il 24 ottobre 2026. Collegati: [07 Mobilità e propriocezione](08-mobilita-propriocezione.md), [14 Drills](15-drills.md), [13 Periodizzazione](14-periodizzazione.md). Test mensili in [health-log/strength-mobility.md](../health-log/strength-mobility.md).
+> Bozza, iniziata il 24 ottobre 2026. Collegati: [07 Mobilità e propriocezione](08-mobilita-propriocezione.md), [14 Drills](16-drills.md), [13 Periodizzazione](15-periodizzazione.md). Test mensili in [health-log/strength-mobility.md](../health-log/strength-mobility.md).
 
 ## 1. Il principio
 
@@ -73,7 +73,7 @@ Saltelli a piedi pari, saltelli su una gamba, balzi, salti sul gradino. **Solo d
 - **Mai il giorno prima** delle ripetute o di una gara.
 - Con 3 corse a settimana, la forza dopo il lungo funziona: le ripetute arrivano dopo due giorni di recupero.
 
-**Nella stagione** (capitolo [13](14-periodizzazione.md)):
+**Nella stagione** (capitolo [13](15-periodizzazione.md)):
 | Fase | Forza |
 |---|---|
 | Base | 2 sedute, si costruisce: dal corpo libero ai carichi |

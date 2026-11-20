@@ -1,8 +1,8 @@
 # Le ripetute
 
-Con il Tempo (capitolo [10](11-corsa-soglia.md)) il runner ha imparato a reggere un ritmo "comodamente duro". Il passo successivo è andare **più forte della soglia**, per tratti brevi, con un recupero in mezzo: le **ripetute**. Si comincia da frazioni **brevi** (200 e 400 m), che allenano velocità ed economia, e si passa a frazioni **lunghe** (800 m e oltre), che allenano il VO2max. Più la ripetuta è breve, più può essere veloce. Il capitolo definisce le regole per ritmo, recupero, FC e progressione.
+Con il Tempo (capitolo [10](12-corsa-soglia.md)) il runner ha imparato a reggere un ritmo "comodamente duro". Il passo successivo è andare **più forte della soglia**, per tratti brevi, con un recupero in mezzo: le **ripetute**. Si comincia da frazioni **brevi** (200 e 400 m), che allenano velocità ed economia, e si passa a frazioni **lunghe** (800 m e oltre), che allenano il VO2max. Più la ripetuta è breve, più può essere veloce. Il capitolo definisce le regole per ritmo, recupero, FC e progressione.
 
-Collegati: [04 Ritmi, zone e sedute](05-ritmi-zone-sedute.md) (zone R e I, recuperi), [05 La struttura di una seduta](06-struttura-seduta.md), [09 Gli allunghi](10-allunghi.md), [12 Il VDOT](13-vdot.md), [14 Drills](15-drills.md).
+Collegati: [04 Ritmi, zone e sedute](05-ritmi-zone-sedute.md) (zone R e I, recuperi), [05 La struttura di una seduta](06-struttura-seduta.md), [09 Gli allunghi](11-allunghi.md), [12 Il VDOT](14-vdot.md), [14 Drills](16-drills.md).
 
 ## 1. Il principio
 
@@ -41,7 +41,7 @@ La regola di Daniels: **ogni gradino è più veloce di ~6"/400 m, cioè ~15"/km*
 | 1000-1200 m | I | ritmo I, se dura ≤5' | per me 6'-7': troppo lunga, sarebbe soglia |
 | 1600-2000 m | I (per i veloci) / corto veloce (per i lenti) | I solo se dura ≤5-6'; altrimenti ritmo 5-10K | per me corto veloce, a ~6:00-6:05 |
 
-I ritmi si prendono dalle **tabelle del VDOT** (capitolo [12](13-vdot.md), [appendice A](appendice-a-tabelle-vdot.md)) e dalla prova sul campo. Si aggiornano solo dopo una gara o un test, non perché "oggi andavo bene".
+I ritmi si prendono dalle **tabelle del VDOT** (capitolo [12](14-vdot.md), [appendice A](appendice-a-tabelle-vdot.md)) e dalla prova sul campo. Si aggiornano solo dopo una gara o un test, non perché "oggi andavo bene".
 
 **Fasce strette, tempi al giro.** Su 200 m una differenza di 10"/km sono 2" al giro: il GPS non la misura bene. Meglio la pista o un tratto misurato, e il **tempo al giro** (es. 1:02-1:06) invece del passo al km. Una fascia di 20"/km sulle brevi è più realistica di una da 10".
 
@@ -69,7 +69,7 @@ Due regole per adattare il recupero al giorno:
 - Alla fine si dovrebbe pensare "**ne avrei fatta un'altra**".
 
 ### Quanto volume
-Daniels: in una seduta, ritmo R al massimo **~5% dei km settimanali** (e non oltre 8 km), ritmo I al massimo **~8%** (e non oltre 10 km). Come per la soglia (capitolo [10](11-corsa-soglia.md), sezione 3), con volumi bassi la percentuale dà numeri troppo piccoli: con 18 km a settimana sarebbero 900 m di R. In pratica, per un amatore con pochi km:
+Daniels: in una seduta, ritmo R al massimo **~5% dei km settimanali** (e non oltre 8 km), ritmo I al massimo **~8%** (e non oltre 10 km). Come per la soglia (capitolo [10](12-corsa-soglia.md), sezione 3), con volumi bassi la percentuale dà numeri troppo piccoli: con 18 km a settimana sarebbero 900 m di R. In pratica, per un amatore con pochi km:
 - **brevi:** 1.6-3 km di frazioni (8-15 x 200, 6-10 x 400);
 - **lunghe:** 2.4-4 km di frazioni (3-5 x 800);
 - **mai** più di una seduta di ripetute a settimana con 3-4 uscite.
@@ -101,7 +101,7 @@ Cresce **una cosa alla volta**, nell'ordine: prima il **numero** di ripetute, po
 
 ## 5. Cosa è successo a me
 
-Nel piano le ripetute sono partite **insieme** al Tempo, dalla seconda settimana, non dopo: il profilo di partenza aveva già una buona velocità su sforzi brevi (capitolo [10](11-corsa-soglia.md)). Le 800 arrivano in S12-S13, mescolate alle 400.
+Nel piano le ripetute sono partite **insieme** al Tempo, dalla seconda settimana, non dopo: il profilo di partenza aveva già una buona velocità su sforzi brevi (capitolo [10](12-corsa-soglia.md)). Le 800 arrivano in S12-S13, mescolate alle 400.
 
 | Data | Seduta | Ritmo frazioni | FC fine frazioni | Note |
 |---|---|---|---|---|

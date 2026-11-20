@@ -6,7 +6,7 @@
 Salvatore, 52 anni, informatico con un lavoro spesso stressante, una famiglia, la sveglia alle 6:20 per accompagnare il figlio allo scuolabus. Corro per la salute prima che per i tempi. Mi piacciono i numeri, leggo molto di teoria dell'allenamento e scrivo note dopo quasi ogni corsa.
 
 ## 1. Gli inizi (2014-2016)
-Comincio a correre a ottobre 2014, registrando le uscite con Runtastic sul telefono. Il 24 aprile 2016 arriva la prima corsa su Garmin. In quel momento corro 10 km in **1:10:39** (VDOT 27.5), più o meno il livello da cui sono ripartito nella primavera 2026.
+Comincio a correre a ottobre 2014, registrando le uscite con Runtastic sul telefono. Ad aprile 2015 corro la mia prima 5 km, in circa 32 minuti (~6:25-6:30/km), e a novembre 2015 la prima 10 km, in 1:07 (date e tempi dal racconto dell'atleta: i dati del telefono non sono nell'archivio). Il 24 aprile 2016 arriva la prima corsa su Garmin. In quel momento corro 10 km in **1:10:39** (VDOT 27.5), più o meno il livello da cui sono ripartito nella primavera 2026.
 
 Nel 2016 corro poco, ~12 km a settimana, e quasi ogni uscita lunga è un 10 km "al meglio". Ma i progressi sono rapidi: a novembre il 10 km scende a **58:59** (VDOT 33). L'estate però si perde: 27 km in tutto luglio.
 

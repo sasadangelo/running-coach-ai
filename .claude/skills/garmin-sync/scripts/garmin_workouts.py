@@ -291,8 +291,12 @@ def managed_workout_ids(client: Garmin) -> set[int]:
 
 
 def scheduled_items(client: Garmin, start: date, end: date) -> list[dict]:
-    """Calendar items of type workout between start and end (inclusive)."""
-    items = []
+    """Calendar items of type workout between start and end (inclusive).
+
+    A month view also returns the days of adjacent months that fill its first
+    and last week, so the same schedule can come back twice: keep one per id.
+    """
+    items: dict[int, dict] = {}
     year, month = start.year, start.month
     while (year, month) <= (end.year, end.month):
         calendar = client.get_scheduled_workouts(year, month) or {}
@@ -301,9 +305,9 @@ def scheduled_items(client: Garmin, start: date, end: date) -> list[dict]:
                 continue
             item_date = date.fromisoformat(item["date"])
             if start <= item_date <= end:
-                items.append(item)
+                items.setdefault(item["id"], item)
         year, month = (year + 1, 1) if month == 12 else (year, month + 1)
-    return items
+    return list(items.values())
 
 
 def managed_schedule(client: Garmin) -> list[dict]:

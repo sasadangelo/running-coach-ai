@@ -25,8 +25,8 @@
 | Sessione | Ritmo | Note |
 |----------|-------|------|
 | **Ripetute 200m** | **5:10-5:30/km** | Tempo del giro 1:02-1:06; 5:10 è un pavimento. Recupero 1', camminato va bene (lavoro di velocità) |
-| **Ripetute 400m** | **5:20-5:40/km** | Tempo del giro 2:08-2:16, non allo stesso ritmo dei 200. Recupero 2': prima metà camminata, poi jog se riesce; se all'inizio della ripetuta successiva la FC è sopra 150, recupero a 2'30" |
-| **Ripetute 800m** | **5:35-5:55/km** | Tempo del giro 4:28-4:44 (ritmo VO₂max: per l'atleta la ripetuta dura 3-5', il massimo utile a questo ritmo). Recupero 3' (dal 22/11; prima ~2'30"): prima metà camminata, poi jog. Niente 1600m: per l'atleta durerebbe ~9', quindi sarebbe un lavoro di soglia, già coperto dal Tempo |
+| **Ripetute 400m** | **5:20-5:40/km** | Tempo del giro 2:08-2:16, non allo stesso ritmo dei 200. Recupero 3' (dal 22/11; prima 2'): camminato, anche per intero, jog solo se viene naturale. È il recupero completo delle repetition di Daniels (~400 m di cammino o jog) |
+| **Ripetute 800m** | **5:35-5:55/km** | Tempo del giro 4:28-4:44 (ritmo VO₂max: per l'atleta la ripetuta dura 3-5', il massimo utile a questo ritmo). Recupero 3' (dal 22/11; prima ~2'30"): camminato, anche per intero, jog se viene naturale. Niente 1600m: per l'atleta durerebbe ~9', quindi sarebbe un lavoro di soglia, già coperto dal Tempo |
 | **Tempo a ripetute** (1200-1500m) | **6:00-6:20/km** | Puntare a 6:08-6:15, non a 6:00. Se negli ultimi 500m la FC supera 168, rallentare di qualche secondo |
 | **Tempo continuo** (da S9) | **6:10-6:30/km** | FC intorno a 165 (soglia), tetto ~168 fino agli ultimi 500m. Su un blocco di 12-22' anche 6:05 sarebbe sopra soglia |
 | **Corsa facile / recupero** | **7:35-8:13/km** | FC ≤150: se sale si rallenta, decide la FC non il passo |
@@ -205,7 +205,7 @@ FC max e FC di soglia stimate dalle gare 2026 (FC media degli ultimi 20' sempre 
 ### Settimana 13 (23-29 novembre) — Fase H
 **Volume totale**: 19.10 km
 
-- **Ripetute**: 1km risc., 3 x 400m @ 5:20-5:40/km (rec. 2') + 3 x 800m @ 5:35-5:55/km (rec. 3', prima metà camminata e poi jog, come nel 6x800 del 27/10/2017), 1km def. — 5.60km, ~51min *(confermato dall'atleta il 22/11, anche se il 2° 800 di S12 è stato "tostissimo". Il 3° 800 si salta se a fine recupero la FC è ancora sopra 150 o se la fascia plantare si fa sentire; si interrompe se il passo scende sotto 5:55 o la tecnica si scompone. Se martedì è stato molto duro (RPE 7+), venerdì il Tempo resta a 2500m)*
+- **Ripetute**: 1km risc., 3 x 400m @ 5:20-5:40/km (rec. 3') + 3 x 800m @ 5:35-5:55/km (rec. 3', come nel 6x800 del 27/10/2017), 1km def. — 5.60km, ~54min; recuperi camminati, anche per intero *(confermato dall'atleta il 22/11, anche se il 2° 800 di S12 è stato "tostissimo". Il 3° 800 si salta se a fine recupero la FC è ancora sopra 150 o se la fascia plantare si fa sentire; si interrompe se il passo scende sotto 5:55 o la tecnica si scompone. Se martedì è stato molto duro (RPE 7+), venerdì il Tempo resta a 2500m)*
 - **Tempo**: 1km risc., 3000m continui @ 6:10-6:30/km, 1km def. — 5.00km, ~36min *(blocco continuo più lungo del piano; era 3500m prima del 13/11. Se il 2500m di S12 è stato faticoso, resta a 2500m; la fascia, 6:10-6:30 o 6:15-6:35, si decide dopo S12)*
 - **Lungo**: 8.5km continui @ 7:15-7:40/km, partendo piano e chiudendo naturalmente — 8.50km, ~62min *(più lunga uscita del piano — ottimo indicatore di quanto potrai correre in gara)*
 

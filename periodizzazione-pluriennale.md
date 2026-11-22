@@ -49,6 +49,11 @@ Prima settimana quasi libera (camminate, 1-2 corse brevi se se ne ha voglia), se
 - **Acea:** è la corsa non competitiva del weekend della Maratona di Roma, con migliaia di persone. Bisogna partire davanti, vicino all'inizio della griglia, e accettare che il primo km costi qualche secondo. Il tempo è quello del Garmin, e il percorso 2026 era di 4.87 km: l'obiettivo si misura ai **5.00 km del Garmin** (su 4.87 km l'equivalente è ~29:13).
 - **Volume:** 20 → ~25 km su 3 giorni. **Forza in casa 2 volte a settimana** (dal 7 dicembre): calisthenics con progressioni e manubri, vedi [training-plan.md](training-plan.md).
 - **Condizione di prontezza:** Tempo continuo da 3000-3500 m a 6:00/km o meglio, chiuso con margine.
+- **Progressione del Tempo (traccia del 22/11/2026, verso la 10K sotto 1h di P3):** prima cresce la durata, il passo resta 6:10-6:30 finché una gara non alza il VDOT.
+  - Sett. 1-3 (base): continuo 3000 → 3500 → 4000 m (19' → 26'; dal 4000 m compare il CS). Sett. 4 (scarico): 2500 m.
+  - Sett. 5-7 (soglia): 2x2000 (rec. 2') → 2x2500 → 3x2000, cioè 26' → 38' in soglia. Sett. 8 (scarico): 3000 m.
+  - Sett. 9-10 (specifiche 5K): 5000 m continui; Tempo più corto perché contano le ripetute. Sett. 11-12: 2x1500, poi richiami.
+  - Il passo si abbassa solo dopo la Best Woman (dicembre) o l'Acea (marzo), mai a sensazione.
 
 ### Recupero · 14-20 marzo 2027
 Dopo una 5K bastano 4-5 giorni: una settimana di sola corsa facile, poi si riparte senza una transizione vera.
@@ -59,6 +64,9 @@ Dopo una 5K bastano 4-5 giorni: una settimana di sola corsa facile, poi si ripar
 - **Da rivedere dopo l'Acea:** da VDOT ~30.8 a ~32.3 in 7 settimane è un salto ambizioso. Se la 5K esce sopra i 30', Tor Vergata si corre per migliorarsi e il sotto 1h si sposta all'autunno.
 - **Volume:** 25 → ~30 km. **Al raggiungimento dei ~30 km si passa a 4 giorni**: il giorno in più è una corsa facile, non una nuova seduta di qualità.
 - **Lungo:** fino a 11-12 km.
+- **Progressione del Tempo (traccia del 22/11/2026):** per l'atleta una 10K da ~1h si corre di fatto al ritmo di soglia, quindi conta tenere a lungo la soglia. Passo alla nuova soglia (es. 6:00-6:10 se l'Acea lo conferma).
+  - Sett. 1-3: 2x3000 → 2x3500 → 3x3000 (36' → 54' in soglia). Sett. 4 (specifica): **3x3 km a 6:00** (rec. 2'), il ritmo gara. Sett. 5-6: 2x2000 a 6:00, poi richiamo.
+  - **Test di prontezza** a 3 settimane dalla gara: 3x3 km a 6:00 con 2' di recupero, chiusi in controllo (RPE 6-7, FC sotto 168 nell'ultimo). Se non riesce, Tor Vergata si corre per migliorarsi e il sotto 1h passa all'autunno.
 
 ### Transizione · 3-16 maggio 2027
 Due settimane leggere dopo la 10K. Domenica 9/5 la **Race for the Cure Roma** (10 km) 🏃, la gara di tradizione: si corre facile, anche con tratti camminati se le gambe sono stanche, per esserci, perché una settimana dopo una 10K al massimo il recupero non è finito (e nel 2026 c'erano oltre 24°C).

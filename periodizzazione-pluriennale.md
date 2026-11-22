@@ -144,3 +144,10 @@ Due macrocicli più lunghi, perché la base c'è:
 
    **Quando si cambia il programma:** se i segnali restano fuori norma per **3 giorni o più**, o se **2 sedute di fila** sono state adattate, si anticipa la settimana di scarico e il resto del piano slitta di una settimana. Un segnale da solo è rumore; più segnali per più giorni sono un messaggio.
 
+10. **La gradualità prima della velocità dei progressi.** È quello che ha permesso di arrivare da agosto a dicembre 2026 senza fermarsi (scelta dell'atleta, 22/11/2026). In pratica:
+   - **una variabile alla volta per seduta** (numero di frazioni, distanza, recupero, passo) e **al massimo un "più lungo di sempre" a settimana**; se una seduta della settimana è stata molto dura (RPE 7+), la successiva non cresce;
+   - **lungo +1 km al massimo** per volta, volume settimanale **+10% al massimo**, scarico ogni 3 settimane (2+1 se i segnali lo chiedono);
+   - **il passo si alza solo dopo una gara o un test**, di 5"/km per volta;
+   - **nella settimana dopo una gara non cresce niente**;
+   - quando un passo avanti è stato faticoso, **lo si ripete** finché diventa comodo, prima di fare il successivo.
+

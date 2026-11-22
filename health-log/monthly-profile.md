@@ -1,13 +1,13 @@
 # Profilo mensile del runner
 
-Valore del mese e, tra parentesi, indice con **100 = primo mese con dati** (per il passo di soglia l'indice e invertito: piu alto = piu veloce). ES e CS: migliore del mese; le altre metriche: mediana del mese. n/d = nessuna misura valida nel mese.
+Valore del mese e, tra parentesi, indice con **100 = primo mese con dati** (per il passo di soglia l'indice e invertito: piu alto = piu veloce). ES e CS: migliore del mese; VO2max: ultimo valore del mese (la stima e gia una media mobile); le altre metriche: mediana del mese. n/d = nessuna misura valida nel mese.
 
 | Qualita              | Metrica | Settembre 2026 | Ottobre 2026  | Novembre 2026 (in corso) |
 | -------------------- | ------- | -------------- | ------------- | ------------------------ |
 | Resistenza aerobica  | ES      | 7.0 (100)      | 10.0 (143)    | 11.7 (167)               |
 | Capacita aerobica    | CS      | n/d            | n/d           | n/d                      |
 | Potenza aerobica     | Soglia  | 6:22/km (100)  | 6:16/km (102) | 6:18/km (101)            |
-| VO2max               | VO2max  | 39.3 (100)     | 40.4 (103)    | 40.5 (103)               |
+| VO2max               | VO2max  | 40.1 (100)     | 40.8 (102)    | 40.8 (102)               |
 | Economia (cuore)     | EF      | 0.915 (100)    | 0.912 (100)   | 0.923 (101)              |
 | Economia (meccanica) | M       | 0.918 (100)    | 0.924 (101)   | 0.928 (101)              |
 | Economia (totale)    | RES     | 84.0 (100)     | 85.2 (101)    | 85.4 (102)               |

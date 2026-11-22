@@ -124,7 +124,7 @@ a { color: var(--s1); }
 .kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 6px 18px; font-size: 13.5px; }
 .kv div span:first-child { color: var(--text-secondary); }
 td.l:not(:first-child) { white-space: normal; min-width: 160px; }
-.radar { max-width: 480px; margin: 0 auto; }
+.radar { max-width: 760px; margin: 0 auto; }
 header .nav-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
 </style>
 </head>
@@ -356,63 +356,67 @@ header .nav-links { display: flex; justify-content: space-between; flex-wrap: wr
 
   <section id="profilo">
     <h2>Profilo mensile del runner</h2>
-    <p class="lead">Ogni metrica come indice: 100 = primo mese con dati (per la soglia, più alto = più veloce). Il radar mette insieme i due mesi chiusi e quello in corso (tratteggiato): il poligono che si allarga è la qualità che migliora. Il mese in corso è parziale, quindi va letto come tendenza e non come chiusura. Passa sopra un punto per il valore reale.</p>
+    <p class="lead">Ogni metrica come indice: 100 = primo mese con dati (per la soglia, più alto = più veloce). ES e CS: migliore del mese; VO2max: valore a fine mese (la stima è già una media mobile); le altre: mediana del mese. Il radar mette insieme i due mesi chiusi e quello in corso (tratteggiato): il poligono che si allarga è la qualità che migliora. Il mese in corso è parziale, quindi va letto come tendenza e non come chiusura. Passa sopra un punto per il valore reale.</p>
     <div class="grid2" style="grid-template-columns:1fr">
-      <div class="card"><h3>Settembre, ottobre e novembre (in corso, tratteggiato)</h3><div class="chart radar"><svg viewBox="0 0 480 440" style="max-width:520px;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profilo del runner, indice 100 = primo mese">
-<polygon points="240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="243.0" y="203.0" style="fill:var(--text-muted, #77766f)" font-size="10">80</text>
-<polygon points="240.0,155.0 275.4,169.6 290.0,205.0 275.4,240.4 240.0,255.0 204.6,240.4 190.0,205.0 204.6,169.6" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="1.5"/>
-<text x="262.1" y="156.8" style="fill:var(--text-muted, #77766f)" font-size="10">100</text>
-<polygon points="240.0,105.0 310.7,134.3 340.0,205.0 310.7,275.7 240.0,305.0 169.3,275.7 140.0,205.0 169.3,134.3" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="281.3" y="110.6" style="fill:var(--text-muted, #77766f)" font-size="10">120</text>
-<polygon points="240.0,55.0 346.1,98.9 390.0,205.0 346.1,311.1 240.0,355.0 133.9,311.1 90.0,205.0 133.9,98.9" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="300.4" y="64.4" style="fill:var(--text-muted, #77766f)" font-size="10">140</text>
-<line x1="240" y1="205" x2="240.0" y2="55.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="240.0" y="59.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">ES</text>
-<line x1="240" y1="205" x2="346.1" y2="98.9" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="346.1" y="102.9" text-anchor="start" style="fill:var(--text-muted, #77766f)" font-size="12">CS (n/d)</text>
-<line x1="240" y1="205" x2="390.0" y2="205.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="390.0" y="209.0" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">Soglia</text>
-<line x1="240" y1="205" x2="346.1" y2="311.1" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="346.1" y="315.1" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">VO2max</text>
-<line x1="240" y1="205" x2="240.0" y2="355.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="240.0" y="359.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">EF</text>
-<line x1="240" y1="205" x2="133.9" y2="311.1" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="133.9" y="315.1" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">M</text>
-<line x1="240" y1="205" x2="90.0" y2="205.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="90.0" y="209.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">FS</text>
-<line x1="240" y1="205" x2="133.9" y2="98.9" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="133.9" y="102.9" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">MCS</text>
-<polygon points="240.0,155.0 290.0,205.0 275.4,240.4 240.0,255.0 204.6,240.4" style="fill:var(--s3, #1baf7a);stroke:var(--s3, #1baf7a)" fill-opacity="0.12" stroke-width="2"/>
-<circle cx="240.0" cy="155.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · ES: 7.0 (indice 100)</title></circle>
-<circle cx="290.0" cy="205.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · Soglia: 6:22/km (indice 100)</title></circle>
-<circle cx="275.4" cy="240.4" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · VO2max: 39.3 (indice 100)</title></circle>
-<circle cx="240.0" cy="255.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · EF: 0.915 (indice 100)</title></circle>
-<circle cx="204.6" cy="240.4" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · M: 0.918 (indice 100)</title></circle>
-<polygon points="240.0,55.0 294.7,205.0 280.3,245.3 240.0,254.0 203.5,241.5 190.0,205.0 204.6,169.6" style="fill:var(--s2, #eb6834);stroke:var(--s2, #eb6834)" fill-opacity="0.12" stroke-width="2"/>
-<circle cx="240.0" cy="55.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · ES: 10.0 (indice 143)</title></circle>
-<circle cx="294.7" cy="205.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · Soglia: 6:16/km (indice 102)</title></circle>
-<circle cx="280.3" cy="245.3" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · VO2max: 40.4 (indice 103)</title></circle>
-<circle cx="240.0" cy="254.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · EF: 0.912 (indice 100)</title></circle>
-<circle cx="203.5" cy="241.5" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · M: 0.924 (indice 101)</title></circle>
-<circle cx="190.0" cy="205.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · FS: 67 (indice 100)</title></circle>
-<circle cx="204.6" cy="169.6" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · MCS: 76 (indice 100)</title></circle>
-<polygon points="240.0,55.0 292.6,205.0 280.8,245.8 240.0,257.0 202.7,242.3" style="fill:var(--s1, #2a78d6);stroke:var(--s1, #2a78d6)" fill-opacity="0.05" stroke-width="2" stroke-dasharray="6,4"/>
-<circle cx="240.0" cy="55.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · ES: 11.7 (indice 167)</title></circle>
-<circle cx="292.6" cy="205.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · Soglia: 6:18/km (indice 101)</title></circle>
-<circle cx="280.8" cy="245.8" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · VO2max: 40.5 (indice 103)</title></circle>
-<circle cx="240.0" cy="257.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · EF: 0.923 (indice 101)</title></circle>
-<circle cx="202.7" cy="242.3" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · M: 0.928 (indice 101)</title></circle>
-<rect x="20" y="424" width="14" height="10" style="fill:var(--s3, #1baf7a)" rx="2"/>
-<text x="39" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Settembre 2026</text>
-<rect x="170" y="424" width="14" height="10" style="fill:var(--s2, #eb6834)" rx="2"/>
-<text x="189" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Ottobre 2026</text>
-<rect x="320" y="424" width="14" height="10" style="fill:var(--s1, #2a78d6)" rx="2"/>
-<text x="339" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Novembre 2026 (in corso)</text>
+      <div class="card"><h3>Settembre, ottobre e novembre (in corso, tratteggiato)</h3><div class="chart radar"><svg viewBox="0 0 600 560" style="max-width:760px;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profilo del runner, indice 100 = primo mese">
+<polygon points="300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="303.0" y="260.0" style="fill:var(--text-muted, #77766f)" font-size="10">80</text>
+<polygon points="300.0,221.0 329.0,233.0 341.0,262.0 329.0,291.0 300.0,303.0 271.0,291.0 259.0,262.0 271.0,233.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="1.5"/>
+<text x="318.7" y="222.1" style="fill:var(--text-muted, #77766f)" font-size="10">100</text>
+<polygon points="300.0,180.0 358.0,204.0 382.0,262.0 358.0,320.0 300.0,344.0 242.0,320.0 218.0,262.0 242.0,204.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="334.4" y="184.2" style="fill:var(--text-muted, #77766f)" font-size="10">120</text>
+<polygon points="300.0,139.0 387.0,175.0 423.0,262.0 387.0,349.0 300.0,385.0 213.0,349.0 177.0,262.0 213.0,175.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="350.1" y="146.4" style="fill:var(--text-muted, #77766f)" font-size="10">140</text>
+<polygon points="300.0,98.0 416.0,146.0 464.0,262.0 416.0,378.0 300.0,426.0 184.0,378.0 136.0,262.0 184.0,146.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="365.8" y="108.5" style="fill:var(--text-muted, #77766f)" font-size="10">160</text>
+<polygon points="300.0,57.0 445.0,117.0 505.0,262.0 445.0,407.0 300.0,467.0 155.0,407.0 95.0,262.0 155.0,117.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="381.5" y="70.6" style="fill:var(--text-muted, #77766f)" font-size="10">180</text>
+<line x1="300" y1="262" x2="300.0" y2="57.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="300.0" y="61.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">ES</text>
+<line x1="300" y1="262" x2="445.0" y2="117.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="445.0" y="121.0" text-anchor="start" style="fill:var(--text-muted, #77766f)" font-size="12">CS (n/d)</text>
+<line x1="300" y1="262" x2="505.0" y2="262.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="505.0" y="266.0" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">Soglia</text>
+<line x1="300" y1="262" x2="445.0" y2="407.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="445.0" y="411.0" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">VO2max</text>
+<line x1="300" y1="262" x2="300.0" y2="467.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="300.0" y="471.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">EF</text>
+<line x1="300" y1="262" x2="155.0" y2="407.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="155.0" y="411.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">M</text>
+<line x1="300" y1="262" x2="95.0" y2="262.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="95.0" y="266.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">FS</text>
+<line x1="300" y1="262" x2="155.0" y2="117.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="155.0" y="121.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">MCS</text>
+<polygon points="300.0,221.0 341.0,262.0 329.0,291.0 300.0,303.0 271.0,291.0" style="fill:var(--s3, #1baf7a);stroke:var(--s3, #1baf7a)" fill-opacity="0.12" stroke-width="2"/>
+<circle cx="300.0" cy="221.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · ES: 7.0 (indice 100)</title></circle>
+<circle cx="341.0" cy="262.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · Soglia: 6:22/km (indice 100)</title></circle>
+<circle cx="329.0" cy="291.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · VO2max: 40.1 (indice 100)</title></circle>
+<circle cx="300.0" cy="303.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · EF: 0.915 (indice 100)</title></circle>
+<circle cx="271.0" cy="291.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · M: 0.918 (indice 100)</title></circle>
+<polygon points="300.0,133.1 344.8,262.0 331.5,293.5 300.0,302.2 270.1,291.9 259.0,262.0 271.0,233.0" style="fill:var(--s2, #eb6834);stroke:var(--s2, #eb6834)" fill-opacity="0.12" stroke-width="2"/>
+<circle cx="300.0" cy="133.1" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · ES: 10.0 (indice 143)</title></circle>
+<circle cx="344.8" cy="262.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · Soglia: 6:16/km (indice 102)</title></circle>
+<circle cx="331.5" cy="293.5" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · VO2max: 40.8 (indice 102)</title></circle>
+<circle cx="300.0" cy="302.2" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · EF: 0.912 (indice 100)</title></circle>
+<circle cx="270.1" cy="291.9" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · M: 0.924 (indice 101)</title></circle>
+<circle cx="259.0" cy="262.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · FS: 67 (indice 100)</title></circle>
+<circle cx="271.0" cy="233.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · MCS: 76 (indice 100)</title></circle>
+<polygon points="300.0,83.4 343.2,262.0 331.5,293.5 300.0,304.7 269.4,292.6" style="fill:var(--s1, #2a78d6);stroke:var(--s1, #2a78d6)" fill-opacity="0.05" stroke-width="2" stroke-dasharray="6,4"/>
+<circle cx="300.0" cy="83.4" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · ES: 11.7 (indice 167)</title></circle>
+<circle cx="343.2" cy="262.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · Soglia: 6:18/km (indice 101)</title></circle>
+<circle cx="331.5" cy="293.5" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · VO2max: 40.8 (indice 102)</title></circle>
+<circle cx="300.0" cy="304.7" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · EF: 0.923 (indice 101)</title></circle>
+<circle cx="269.4" cy="292.6" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · M: 0.928 (indice 101)</title></circle>
+<rect x="20" y="544" width="14" height="10" style="fill:var(--s3, #1baf7a)" rx="2"/>
+<text x="39" y="553" style="fill:var(--text-secondary, #52514e)" font-size="12">Settembre 2026</text>
+<rect x="210" y="544" width="14" height="10" style="fill:var(--s2, #eb6834)" rx="2"/>
+<text x="229" y="553" style="fill:var(--text-secondary, #52514e)" font-size="12">Ottobre 2026</text>
+<rect x="400" y="544" width="14" height="10" style="fill:var(--s1, #2a78d6)" rx="2"/>
+<text x="419" y="553" style="fill:var(--text-secondary, #52514e)" font-size="12">Novembre 2026 (in corso)</text>
 </svg></div></div>
-      <div class="card"><h3>Indici (100 = primo mese)</h3><div class="tw"><table><thead><tr><th class="l">Qualita</th><th class="l">Metrica</th><th>Settembre 2026</th><th>Ottobre 2026</th><th>Novembre 2026 (in corso)</th></tr></thead><tbody><tr><td class="l">Resistenza aerobica</td><td class="l">ES</td><td>7.0 (100)</td><td>10.0 (143)</td><td>11.7 (167)</td></tr><tr><td class="l">Capacita aerobica</td><td class="l">CS</td><td>n/d</td><td>n/d</td><td>n/d</td></tr><tr><td class="l">Potenza aerobica</td><td class="l">Soglia</td><td>6:22/km (100)</td><td>6:16/km (102)</td><td>6:18/km (101)</td></tr><tr><td class="l">VO2max</td><td class="l">VO2max</td><td>39.3 (100)</td><td>40.4 (103)</td><td>40.5 (103)</td></tr><tr><td class="l">Economia (cuore)</td><td class="l">EF</td><td>0.915 (100)</td><td>0.912 (100)</td><td>0.923 (101)</td></tr><tr><td class="l">Economia (meccanica)</td><td class="l">M</td><td>0.918 (100)</td><td>0.924 (101)</td><td>0.928 (101)</td></tr><tr><td class="l">Economia (totale)</td><td class="l">RES</td><td>84.0 (100)</td><td>85.2 (101)</td><td>85.4 (102)</td></tr><tr><td class="l">Forza</td><td class="l">FS</td><td>n/d</td><td>67 (100)</td><td>n/d</td></tr><tr><td class="l">Mobilita e controllo</td><td class="l">MCS</td><td>n/d</td><td>76 (100)</td><td>n/d</td></tr></tbody></table></div><div class="tw"><table><thead><tr><th class="l">Chiusura del mese</th><th>Settembre</th><th>Ottobre</th><th>Δ</th></tr></thead><tbody><tr><td class="l">Corse</td><td>15</td><td>15</td><td></td></tr><tr><td class="l">Km</td><td>54.5</td><td>71.5</td><td>+31%</td></tr><tr><td class="l">Ore di corsa</td><td>6.98</td><td>8.64</td><td>+24%</td></tr><tr><td class="l">TSS</td><td>529</td><td>695</td><td>+31%</td></tr><tr><td class="l">Lungo più lungo</td><td>5.4 km</td><td>7.6 km*</td><td></td></tr><tr><td class="l">RPE medio</td><td>3.5</td><td>3.4</td><td>=</td></tr><tr><td class="l">sRPE totale</td><td>1269</td><td>1859</td><td>+46%</td></tr><tr><td class="l">FC a riposo (media)</td><td>57.4</td><td>57.5</td><td>=</td></tr><tr><td class="l">HRV (media)</td><td>52.4</td><td>51.1</td><td>-1.3 ms</td></tr><tr><td class="l">Sonno (media)</td><td>6h09</td><td>6h43</td><td>+34'</td></tr><tr><td class="l">Notti ≥ 7h</td><td>4/29</td><td>11/29</td><td></td></tr></tbody></table></div></div>
+      <div class="card"><h3>Indici (100 = primo mese)</h3><div class="tw"><table><thead><tr><th class="l">Qualita</th><th class="l">Metrica</th><th>Settembre 2026</th><th>Ottobre 2026</th><th>Novembre 2026 (in corso)</th></tr></thead><tbody><tr><td class="l">Resistenza aerobica</td><td class="l">ES</td><td>7.0 (100)</td><td>10.0 (143)</td><td>11.7 (167)</td></tr><tr><td class="l">Capacita aerobica</td><td class="l">CS</td><td>n/d</td><td>n/d</td><td>n/d</td></tr><tr><td class="l">Potenza aerobica</td><td class="l">Soglia</td><td>6:22/km (100)</td><td>6:16/km (102)</td><td>6:18/km (101)</td></tr><tr><td class="l">VO2max</td><td class="l">VO2max</td><td>40.1 (100)</td><td>40.8 (102)</td><td>40.8 (102)</td></tr><tr><td class="l">Economia (cuore)</td><td class="l">EF</td><td>0.915 (100)</td><td>0.912 (100)</td><td>0.923 (101)</td></tr><tr><td class="l">Economia (meccanica)</td><td class="l">M</td><td>0.918 (100)</td><td>0.924 (101)</td><td>0.928 (101)</td></tr><tr><td class="l">Economia (totale)</td><td class="l">RES</td><td>84.0 (100)</td><td>85.2 (101)</td><td>85.4 (102)</td></tr><tr><td class="l">Forza</td><td class="l">FS</td><td>n/d</td><td>67 (100)</td><td>n/d</td></tr><tr><td class="l">Mobilita e controllo</td><td class="l">MCS</td><td>n/d</td><td>76 (100)</td><td>n/d</td></tr></tbody></table></div><div class="tw"><table><thead><tr><th class="l">Chiusura del mese</th><th>Settembre</th><th>Ottobre</th><th>Δ</th></tr></thead><tbody><tr><td class="l">Corse</td><td>15</td><td>15</td><td></td></tr><tr><td class="l">Km</td><td>54.5</td><td>71.5</td><td>+31%</td></tr><tr><td class="l">Ore di corsa</td><td>6.98</td><td>8.64</td><td>+24%</td></tr><tr><td class="l">TSS</td><td>529</td><td>695</td><td>+31%</td></tr><tr><td class="l">Lungo più lungo</td><td>5.4 km</td><td>7.6 km*</td><td></td></tr><tr><td class="l">RPE medio</td><td>3.5</td><td>3.4</td><td>=</td></tr><tr><td class="l">sRPE totale</td><td>1269</td><td>1859</td><td>+46%</td></tr><tr><td class="l">FC a riposo (media)</td><td>57.4</td><td>57.5</td><td>=</td></tr><tr><td class="l">HRV (media)</td><td>52.4</td><td>51.1</td><td>-1.3 ms</td></tr><tr><td class="l">Sonno (media)</td><td>6h09</td><td>6h43</td><td>+34'</td></tr><tr><td class="l">Notti ≥ 7h</td><td>4/29</td><td>11/29</td><td></td></tr></tbody></table></div></div>
     </div>
-    <div class="card" style="margin-top:14px"><p class="read">*7.6 km è il 10x400 con riscaldamento e defaticamento; il lungo continuo più lungo di ottobre è il 6.4 km del 18/10 (il 7 km è del 1° novembre).</p><p class="read"><span class="hl">Ottobre chiuso.</span> Il mese della resistenza: ES +43%, VO2max +3%, soglia di 6" più veloce (confermata dal test continuo), meccanica +1%. L'EF resta fermo, come previsto: si muove in mesi. Il volume sale del 31% con lo stesso RPE medio, quindi lo stesso lavoro sembra più facile. FC a riposo e HRV restano stabili e il sonno migliora di mezz'ora a notte. Il CS arriverà con il primo Tempo continuo di almeno 20' (S13). Forza (FS 67) e mobilità e controllo (MCS 76) vengono dal test mensile del 24/10: ogni test vale lato più debole ÷ riferimento × 100 (tetto 100), e l'indice è la media dei test. A sinistra mancano soprattutto calf raise (52), side plank (48), equilibrio (60) e mezzo squat (50). Si aggiornano al test del 21 novembre.</p><p class="read"><span class="hl">Novembre (in corso, al 22/11):</span> ES 11.7 (indice 167, dal lungo da 7.5 km del 22/11), soglia 6:18/km (101), VO2max 40.5 (103; la stima giornaliera è salita a 40.8), EF 0.923 (101), meccanica 0.928 (101), RES 85.4 (102). La soglia di novembre viene dalla Roma 5K (passo medio Garmin) e dai Tempo; per le gare la soglia è il passo medio sui dati Garmin (Friel), il VDOT resta come informazione. Il test di forza e mobilità di novembre (previsto il 21/11) non è ancora registrato: FS e MCS restano a ottobre. Il radar si aggiorna quando il mese è chiuso. <span class="hl">RE</span> (velocità diviso watt/kg) resta fra 0.684 e 0.707 da settembre: nessun trend.</p></div>
+    <div class="card" style="margin-top:14px"><p class="read">*7.6 km è il 10x400 con riscaldamento e defaticamento; il lungo continuo più lungo di ottobre è il 6.4 km del 18/10 (il 7 km è del 1° novembre).</p><p class="read"><span class="hl">Ottobre chiuso.</span> Il mese della resistenza: ES +43%, VO2max +2% (40.1 → 40.8 a fine mese), soglia di 6" più veloce (confermata dal test continuo), meccanica +1%. L'EF resta fermo, come previsto: si muove in mesi. Il volume sale del 31% con lo stesso RPE medio, quindi lo stesso lavoro sembra più facile. FC a riposo e HRV restano stabili e il sonno migliora di mezz'ora a notte. Il CS arriverà con il primo Tempo continuo di almeno 20' (S13). Forza (FS 67) e mobilità e controllo (MCS 76) vengono dal test mensile del 24/10: ogni test vale lato più debole ÷ riferimento × 100 (tetto 100), e l'indice è la media dei test. A sinistra mancano soprattutto calf raise (52), side plank (48), equilibrio (60) e mezzo squat (50). Si aggiornano al test del 21 novembre.</p><p class="read"><span class="hl">Novembre (in corso, al 22/11):</span> ES 11.7 (indice 167, dal lungo da 7.5 km del 22/11), soglia 6:18/km (101), VO2max 40.8 (102, la stima attuale: è lo stesso livello di fine ottobre, quindi a novembre è stabile), EF 0.923 (101), meccanica 0.928 (101), RES 85.4 (102). La soglia di novembre viene dalla Roma 5K (passo medio Garmin) e dai Tempo; per le gare la soglia è il passo medio sui dati Garmin (Friel), il VDOT resta come informazione. Il test di forza e mobilità di novembre (previsto il 21/11) non è ancora registrato: FS e MCS restano a ottobre. Il radar si aggiorna quando il mese è chiuso. <span class="hl">RE</span> (velocità diviso watt/kg) resta fra 0.684 e 0.707 da settembre: nessun trend.</p></div>
   </section>
 
   <section id="carico">

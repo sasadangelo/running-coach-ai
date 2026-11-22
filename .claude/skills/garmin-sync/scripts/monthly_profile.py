@@ -5,7 +5,8 @@ No Garmin calls: it reads the tables written by the other calculate_*.py
 scripts and summarises each metric per calendar month:
 
 - ES, CS (best of the month): resistenza aerobica, capacita aerobica
-- threshold pace, VO2max, EF, M, RES (median of the month)
+- threshold pace, EF, M, RES (median of the month)
+- VO2max (last value of the month: the logged estimate is already a smoothed mean)
 
 Every metric is also turned into an index where 100 is its first month with
 data, so metrics in different units can be compared; for threshold pace,
@@ -40,6 +41,11 @@ def pace_to_sec(text: str) -> float | None:
     return int(m.group(1)) * 60 + int(m.group(2)) if m else None
 
 
+def last(values: list[float]) -> float:
+    """Last value of the month (values are in date order)."""
+    return values[-1]
+
+
 def number(text: str) -> float | None:
     m = re.match(r"-?[\d.]+", text.strip())
     return float(m.group(0)) if m else None
@@ -50,7 +56,8 @@ METRICS = [
     ("es", "ES", "Resistenza aerobica", "endurance-score.md", "ES", number, max, True, "{:.1f}"),
     ("cs", "CS", "Capacita aerobica", "capacity-score.md", "CS", number, max, True, "{:.1f}"),
     ("thr", "Soglia", "Potenza aerobica", "threshold.md", "Passo di soglia", pace_to_sec, statistics.median, False, None),
-    ("vo2", "VO2max", "VO2max", "vo2max.md", "VO2max stimato", number, statistics.median, True, "{:.1f}"),
+    # VO2max stimato is already a time-decayed mean: a median of it only adds lag, so take the month-end value.
+    ("vo2", "VO2max", "VO2max", "vo2max.md", "VO2max stimato", number, last, True, "{:.1f}"),
     ("ef", "EF", "Economia (cuore)", "running-economy.md", "EF (m/battito)", number, statistics.median, True, "{:.3f}"),
     ("m", "M", "Economia (meccanica)", "running-economy.md", "M", number, statistics.median, True, "{:.3f}"),
     ("res", "RES", "Economia (totale)", "running-economy.md", "RES", number, statistics.median, True, "{:.1f}"),
@@ -79,7 +86,7 @@ def read_table(path: Path) -> list[dict]:
 def collect() -> dict[str, dict[tuple[int, int], list[float]]]:
     data = {key: defaultdict(list) for key, *_ in METRICS}
     for key, _label, _quality, filename, column, parse, *_ in METRICS:
-        for row in read_table(HEALTH_LOG / filename):
+        for row in sorted(read_table(HEALTH_LOG / filename), key=lambda r: r["Data"]):
             value = parse(row.get(column, "")) if row.get(column) else None
             if value is None:
                 continue
@@ -119,9 +126,12 @@ def month_label(m: tuple[int, int], today: date) -> str:
 
 
 def radar_svg(months, table, today: date) -> str:
-    size, cx, cy, r_max = 420, 240, 205, 150
-    lo, hi = 80, 140  # index range on the radial axis
+    size, cx, cy, r_max = 540, 300, 262, 205
     shown = months[-3:]
+    # Index range on the radial axis: 80 at the centre, outer ring at least 140 and raised
+    # in steps of 20 to the highest index shown, so a metric that grows a lot (ES) isn't clipped.
+    top = max((table[(k, m)][1] or 0) for k in RADAR_KEYS for m in shown)
+    lo, hi = 80, max(140, math.ceil(top / 20) * 20)
     palette = ["var(--s3, #1baf7a)", "var(--s2, #eb6834)", "var(--s1, #2a78d6)"]
     colors = {m: c for m, c in zip(shown, palette[-len(shown):])}
     current = (today.year, today.month)
@@ -134,9 +144,9 @@ def radar_svg(months, table, today: date) -> str:
         r = r_max * (min(max(idx, lo), hi) - lo) / (hi - lo)
         return cx + r * math.cos(a), cy + r * math.sin(a)
 
-    out = [f'<svg viewBox="0 0 {size + 60} {size + 20}" style="max-width:520px;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" '
+    out = [f'<svg viewBox="0 0 {size + 60} {size + 20}" style="max-width:760px;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" '
            f'role="img" aria-label="Profilo del runner, indice 100 = primo mese">']
-    for ring in (80, 100, 120, 140):
+    for ring in range(lo, hi + 1, 20):
         pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in (point(i, ring) for i in range(n)))
         dash = "" if ring == 100 else ' stroke-dasharray="3,3"'
         out.append(f'<polygon points="{pts}" fill="none" style="stroke:{grid}" stroke-width="{1.5 if ring == 100 else 0.7}"{dash}/>')
@@ -172,7 +182,7 @@ def radar_svg(months, table, today: date) -> str:
     for m in shown:
         out.append(f'<rect x="{lx}" y="{size + 4}" width="14" height="10" style="fill:{colors[m]}" rx="2"/>')
         out.append(f'<text x="{lx + 19}" y="{size + 13}" style="fill:{text_col}" font-size="12">{month_label(m, today)}</text>')
-        lx += 150
+        lx += 190
     out.append("</svg>")
     return "\n".join(out)
 
@@ -183,7 +193,7 @@ def write_markdown(path: Path, months, table, today: date) -> None:
         "# Profilo mensile del runner",
         "",
         "Valore del mese e, tra parentesi, indice con **100 = primo mese con dati** (per il passo di soglia l'indice e invertito: piu alto = piu veloce). "
-        "ES e CS: migliore del mese; le altre metriche: mediana del mese. n/d = nessuna misura valida nel mese.",
+        "ES e CS: migliore del mese; VO2max: ultimo valore del mese (la stima e gia una media mobile); le altre metriche: mediana del mese. n/d = nessuna misura valida nel mese.",
         "",
     ]
     rows = []

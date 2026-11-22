@@ -1,52 +1,56 @@
-<svg viewBox="0 0 480 440" style="max-width:520px;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profilo del runner, indice 100 = primo mese">
-<polygon points="240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0 240.0,205.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="243.0" y="203.0" style="fill:var(--text-muted, #77766f)" font-size="10">80</text>
-<polygon points="240.0,155.0 275.4,169.6 290.0,205.0 275.4,240.4 240.0,255.0 204.6,240.4 190.0,205.0 204.6,169.6" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="1.5"/>
-<text x="262.1" y="156.8" style="fill:var(--text-muted, #77766f)" font-size="10">100</text>
-<polygon points="240.0,105.0 310.7,134.3 340.0,205.0 310.7,275.7 240.0,305.0 169.3,275.7 140.0,205.0 169.3,134.3" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="281.3" y="110.6" style="fill:var(--text-muted, #77766f)" font-size="10">120</text>
-<polygon points="240.0,55.0 346.1,98.9 390.0,205.0 346.1,311.1 240.0,355.0 133.9,311.1 90.0,205.0 133.9,98.9" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
-<text x="300.4" y="64.4" style="fill:var(--text-muted, #77766f)" font-size="10">140</text>
-<line x1="240" y1="205" x2="240.0" y2="55.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="240.0" y="59.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">ES</text>
-<line x1="240" y1="205" x2="346.1" y2="98.9" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="346.1" y="102.9" text-anchor="start" style="fill:var(--text-muted, #77766f)" font-size="12">CS (n/d)</text>
-<line x1="240" y1="205" x2="390.0" y2="205.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="390.0" y="209.0" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">Soglia</text>
-<line x1="240" y1="205" x2="346.1" y2="311.1" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="346.1" y="315.1" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">VO2max</text>
-<line x1="240" y1="205" x2="240.0" y2="355.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="240.0" y="359.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">EF</text>
-<line x1="240" y1="205" x2="133.9" y2="311.1" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="133.9" y="315.1" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">M</text>
-<line x1="240" y1="205" x2="90.0" y2="205.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="90.0" y="209.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">FS</text>
-<line x1="240" y1="205" x2="133.9" y2="98.9" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
-<text x="133.9" y="102.9" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">MCS</text>
-<polygon points="240.0,155.0 290.0,205.0 275.4,240.4 240.0,255.0 204.6,240.4" style="fill:var(--s3, #1baf7a);stroke:var(--s3, #1baf7a)" fill-opacity="0.12" stroke-width="2"/>
-<circle cx="240.0" cy="155.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · ES: 7.0 (indice 100)</title></circle>
-<circle cx="290.0" cy="205.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · Soglia: 6:22/km (indice 100)</title></circle>
-<circle cx="275.4" cy="240.4" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · VO2max: 39.3 (indice 100)</title></circle>
-<circle cx="240.0" cy="255.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · EF: 0.915 (indice 100)</title></circle>
-<circle cx="204.6" cy="240.4" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · M: 0.918 (indice 100)</title></circle>
-<polygon points="240.0,55.0 294.7,205.0 280.3,245.3 240.0,254.0 203.5,241.5 190.0,205.0 204.6,169.6" style="fill:var(--s2, #eb6834);stroke:var(--s2, #eb6834)" fill-opacity="0.12" stroke-width="2"/>
-<circle cx="240.0" cy="55.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · ES: 10.0 (indice 143)</title></circle>
-<circle cx="294.7" cy="205.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · Soglia: 6:16/km (indice 102)</title></circle>
-<circle cx="280.3" cy="245.3" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · VO2max: 40.4 (indice 103)</title></circle>
-<circle cx="240.0" cy="254.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · EF: 0.912 (indice 100)</title></circle>
-<circle cx="203.5" cy="241.5" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · M: 0.924 (indice 101)</title></circle>
-<circle cx="190.0" cy="205.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · FS: 67 (indice 100)</title></circle>
-<circle cx="204.6" cy="169.6" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · MCS: 76 (indice 100)</title></circle>
-<polygon points="240.0,55.0 292.6,205.0 280.8,245.8 240.0,257.0 202.7,242.3" style="fill:var(--s1, #2a78d6);stroke:var(--s1, #2a78d6)" fill-opacity="0.05" stroke-width="2" stroke-dasharray="6,4"/>
-<circle cx="240.0" cy="55.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · ES: 11.7 (indice 167)</title></circle>
-<circle cx="292.6" cy="205.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · Soglia: 6:18/km (indice 101)</title></circle>
-<circle cx="280.8" cy="245.8" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · VO2max: 40.5 (indice 103)</title></circle>
-<circle cx="240.0" cy="257.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · EF: 0.923 (indice 101)</title></circle>
-<circle cx="202.7" cy="242.3" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · M: 0.928 (indice 101)</title></circle>
-<rect x="20" y="424" width="14" height="10" style="fill:var(--s3, #1baf7a)" rx="2"/>
-<text x="39" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Settembre 2026</text>
-<rect x="170" y="424" width="14" height="10" style="fill:var(--s2, #eb6834)" rx="2"/>
-<text x="189" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Ottobre 2026</text>
-<rect x="320" y="424" width="14" height="10" style="fill:var(--s1, #2a78d6)" rx="2"/>
-<text x="339" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Novembre 2026 (in corso)</text>
+<svg viewBox="0 0 600 560" style="max-width:760px;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profilo del runner, indice 100 = primo mese">
+<polygon points="300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0 300.0,262.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="303.0" y="260.0" style="fill:var(--text-muted, #77766f)" font-size="10">80</text>
+<polygon points="300.0,221.0 329.0,233.0 341.0,262.0 329.0,291.0 300.0,303.0 271.0,291.0 259.0,262.0 271.0,233.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="1.5"/>
+<text x="318.7" y="222.1" style="fill:var(--text-muted, #77766f)" font-size="10">100</text>
+<polygon points="300.0,180.0 358.0,204.0 382.0,262.0 358.0,320.0 300.0,344.0 242.0,320.0 218.0,262.0 242.0,204.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="334.4" y="184.2" style="fill:var(--text-muted, #77766f)" font-size="10">120</text>
+<polygon points="300.0,139.0 387.0,175.0 423.0,262.0 387.0,349.0 300.0,385.0 213.0,349.0 177.0,262.0 213.0,175.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="350.1" y="146.4" style="fill:var(--text-muted, #77766f)" font-size="10">140</text>
+<polygon points="300.0,98.0 416.0,146.0 464.0,262.0 416.0,378.0 300.0,426.0 184.0,378.0 136.0,262.0 184.0,146.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="365.8" y="108.5" style="fill:var(--text-muted, #77766f)" font-size="10">160</text>
+<polygon points="300.0,57.0 445.0,117.0 505.0,262.0 445.0,407.0 300.0,467.0 155.0,407.0 95.0,262.0 155.0,117.0" fill="none" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7" stroke-dasharray="3,3"/>
+<text x="381.5" y="70.6" style="fill:var(--text-muted, #77766f)" font-size="10">180</text>
+<line x1="300" y1="262" x2="300.0" y2="57.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="300.0" y="61.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">ES</text>
+<line x1="300" y1="262" x2="445.0" y2="117.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="445.0" y="121.0" text-anchor="start" style="fill:var(--text-muted, #77766f)" font-size="12">CS (n/d)</text>
+<line x1="300" y1="262" x2="505.0" y2="262.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="505.0" y="266.0" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">Soglia</text>
+<line x1="300" y1="262" x2="445.0" y2="407.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="445.0" y="411.0" text-anchor="start" style="fill:var(--text-secondary, #52514e)" font-size="12">VO2max</text>
+<line x1="300" y1="262" x2="300.0" y2="467.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="300.0" y="471.0" text-anchor="middle" style="fill:var(--text-secondary, #52514e)" font-size="12">EF</text>
+<line x1="300" y1="262" x2="155.0" y2="407.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="155.0" y="411.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">M</text>
+<line x1="300" y1="262" x2="95.0" y2="262.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="95.0" y="266.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">FS</text>
+<line x1="300" y1="262" x2="155.0" y2="117.0" style="stroke:var(--grid, #ebeae6)" stroke-width="0.7"/>
+<text x="155.0" y="121.0" text-anchor="end" style="fill:var(--text-secondary, #52514e)" font-size="12">MCS</text>
+<polygon points="300.0,221.0 341.0,262.0 329.0,291.0 300.0,303.0 271.0,291.0" style="fill:var(--s3, #1baf7a);stroke:var(--s3, #1baf7a)" fill-opacity="0.12" stroke-width="2"/>
+<circle cx="300.0" cy="221.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · ES: 7.0 (indice 100)</title></circle>
+<circle cx="341.0" cy="262.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · Soglia: 6:22/km (indice 100)</title></circle>
+<circle cx="329.0" cy="291.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · VO2max: 40.1 (indice 100)</title></circle>
+<circle cx="300.0" cy="303.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · EF: 0.915 (indice 100)</title></circle>
+<circle cx="271.0" cy="291.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · M: 0.918 (indice 100)</title></circle>
+<polygon points="300.0,133.1 344.8,262.0 331.5,293.5 300.0,302.2 270.1,291.9 259.0,262.0 271.0,233.0" style="fill:var(--s2, #eb6834);stroke:var(--s2, #eb6834)" fill-opacity="0.12" stroke-width="2"/>
+<circle cx="300.0" cy="133.1" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · ES: 10.0 (indice 143)</title></circle>
+<circle cx="344.8" cy="262.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · Soglia: 6:16/km (indice 102)</title></circle>
+<circle cx="331.5" cy="293.5" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · VO2max: 40.8 (indice 102)</title></circle>
+<circle cx="300.0" cy="302.2" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · EF: 0.912 (indice 100)</title></circle>
+<circle cx="270.1" cy="291.9" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · M: 0.924 (indice 101)</title></circle>
+<circle cx="259.0" cy="262.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · FS: 67 (indice 100)</title></circle>
+<circle cx="271.0" cy="233.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · MCS: 76 (indice 100)</title></circle>
+<polygon points="300.0,83.4 343.2,262.0 331.5,293.5 300.0,304.7 269.4,292.6" style="fill:var(--s1, #2a78d6);stroke:var(--s1, #2a78d6)" fill-opacity="0.05" stroke-width="2" stroke-dasharray="6,4"/>
+<circle cx="300.0" cy="83.4" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · ES: 11.7 (indice 167)</title></circle>
+<circle cx="343.2" cy="262.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · Soglia: 6:18/km (indice 101)</title></circle>
+<circle cx="331.5" cy="293.5" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · VO2max: 40.8 (indice 102)</title></circle>
+<circle cx="300.0" cy="304.7" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · EF: 0.923 (indice 101)</title></circle>
+<circle cx="269.4" cy="292.6" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · M: 0.928 (indice 101)</title></circle>
+<rect x="20" y="544" width="14" height="10" style="fill:var(--s3, #1baf7a)" rx="2"/>
+<text x="39" y="553" style="fill:var(--text-secondary, #52514e)" font-size="12">Settembre 2026</text>
+<rect x="210" y="544" width="14" height="10" style="fill:var(--s2, #eb6834)" rx="2"/>
+<text x="229" y="553" style="fill:var(--text-secondary, #52514e)" font-size="12">Ottobre 2026</text>
+<rect x="400" y="544" width="14" height="10" style="fill:var(--s1, #2a78d6)" rx="2"/>
+<text x="419" y="553" style="fill:var(--text-secondary, #52514e)" font-size="12">Novembre 2026 (in corso)</text>
 </svg>

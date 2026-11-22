@@ -102,12 +102,13 @@ Nella cartella [teoria/](teoria/README.md) raccolgo quello che imparo strada fac
 10. [Gli esercizi di stretching post corsa](teoria/10-esercizi-stretching-post-corsa.md)
     - 10b. [Gli esercizi di stretching sul tappetino](teoria/10b-esercizi-stretching-tappetino.md)
 11. [Gli allunghi](teoria/11-allunghi.md)
-12. [La corsa in soglia](teoria/12-corsa-soglia.md)
-13. [Le ripetute](teoria/13-ripetute.md)
-14. [Il VDOT: un numero per gare e ritmi](teoria/14-vdot.md)
-15. [La periodizzazione: dalla seduta alla stagione](teoria/15-periodizzazione.md)
-16. [Le andature (drills)](teoria/16-drills.md)
-17. [La forza per il runner](teoria/17-forza.md)
+12. [Le ripetute brevi (R)](teoria/12-ripetute-brevi.md)
+13. [Le ripetute lunghe (I)](teoria/13-ripetute-lunghe.md)
+14. [La corsa in soglia](teoria/14-corsa-soglia.md)
+15. [Il VDOT: un numero per gare e ritmi](teoria/15-vdot.md)
+16. [La periodizzazione: dalla seduta alla stagione](teoria/16-periodizzazione.md)
+17. [Le andature (drills)](teoria/17-drills.md)
+18. [La forza per il runner](teoria/18-forza.md)
 
 ## Avvertenza
 

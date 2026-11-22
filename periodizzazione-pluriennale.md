@@ -1,6 +1,6 @@
 # Periodizzazione pluriennale 2026-2028
 
-**Definita:** 25 ottobre 2026 · **Collegati:** [obiettivi a lungo termine](obiettivi-lungo-termine.md), [piano in corso](training-plan.md), teoria: [13 Periodizzazione](teoria/15-periodizzazione.md)
+**Definita:** 25 ottobre 2026 · **Collegati:** [obiettivi a lungo termine](obiettivi-lungo-termine.md), [piano in corso](training-plan.md), teoria: [16 Periodizzazione](teoria/16-periodizzazione.md)
 
 Come si arriva agli obiettivi a lungo termine, piano per piano. **Le date delle gare sono ipotetiche** e vanno verificate sui calendari FIDAL Lazio; quando una data cambia si spostano i confini dei piani, non la struttura. Ogni piano si scrive in dettaglio solo durante la transizione che lo precede, con il VDOT dell'ultima gara.
 
@@ -43,6 +43,12 @@ Come si arriva agli obiettivi a lungo termine, piano per piano. **Le date delle 
 Prima settimana quasi libera (camminate, 1-2 corse brevi se se ne ha voglia), seconda solo lento. Si scrive P2 con il VDOT della 10K.
 
 ### P2 · Inverno: 5K sotto 30'
+- **Le quattro leve di P2** (decise il 22/11/2026, in ordine di priorità; la condizione di base è non fermarsi):
+  1. **Sonno:** a letto alle 22:30 tutte le sere, weekend compresi, allarme alle 22:00 per staccare dagli schermi. È il limite più grande, e aiuta anche il peso. Misura: notti sopra le 7h su 30 (ottobre 11).
+  2. **Peso:** da 77.5 verso ~75 kg entro marzo, al ritmo attuale (~0.2 kg a settimana), una sola abitudine alla volta; mai a dieta nelle settimane di gara o di picco. Vale ~2-3"/km per kg.
+  3. **Più corsa facile su 3 giorni:** riscaldamento e defaticamento di ripetute e Tempo da 1 a 1.5-2 km ciascuno, lungo fino a 10-11 km: da ~18 a ~22-25 km a settimana senza un quarto giorno (il quarto resta per P3).
+  4. **Forza 2 volte a settimana** (dal 7/12): calf raise pesante e lento al centro, serie in più sul lato sinistro, pliometria leggera (saltelli, skip, 2x20 contatti) solo dopo qualche settimana senza fastidi alla fascia al mattino. Misura: test mensile (FS, MCS).
+  - **Allunghi:** 4-6 da 80 m, rilassati, alla fine del lungo o del defaticamento, da reintrodurre se la fascia plantare è tranquilla al mattino (assenti da S7, ottobre 2026).
 - **12 settimane:** 3+1 (base e forza), 3+1 (soglia e ripetute), 2 specifiche + 1 di avvicinamento + 1 di taper.
 - **Gare:** Corsa di Miguel 10K (17/1) e CorriFregene 10K (14/2) 🏃 **facili, al posto del lungo**; **Acea Water Fun Run 5K (sabato 13/3)** 🎯 **sotto 30'** (6:00/km, VDOT ~30.8).
 - **Da decidere quando si scrive il piano:** con i mesocicli 3+1, Miguel e Fregene cadono alla fine della 4ª e dell'8ª settimana, cioè negli scarichi. Si può spostare uno scarico, oppure usare la 10K molto facile come unica seduta lunga della settimana di scarico.

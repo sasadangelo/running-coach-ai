@@ -47,7 +47,7 @@ In ogni figura la zona colorata è il muscolo che si allunga, dove va sentita la
 - **Cosa si sente:** tensione più in basso, nel polpaccio vicino al tendine d'Achille.
 - **Perché farlo:** il soleo lavora a ogni passo e con il ginocchio teso non si allunga. È l'esercizio più utile per chi ha la caviglia rigida o una storia di fascite plantare o di tendine d'Achille.
 
-**Nota: il sollevamento dei polpacci (calf raise) non è stretching.** È un esercizio di forza, e fa parte del blocco di [forza](17-forza.md). Le due cose si completano: la forza rende il polpaccio più resistente, lo stretching gli restituisce l'escursione dopo la corsa.
+**Nota: il sollevamento dei polpacci (calf raise) non è stretching.** È un esercizio di forza, e fa parte del blocco di [forza](18-forza.md). Le due cose si completano: la forza rende il polpaccio più resistente, lo stretching gli restituisce l'escursione dopo la corsa.
 
 ### Femorali (ischiocrurali), tallone su un appoggio
 ![Stretching dei femorali con il tallone su un appoggio](img/10-stretching/femorali.png)
@@ -119,9 +119,10 @@ Uno o due per volta, cambiandoli di seduta in seduta. Ognuno può anche **prende
 
 | Esercizio | Zona | Al posto di | Al parco |
 |---|---|---|---|
-| Figura a 4 in piedi | gluteo, piriforme | affondo sull'appoggio | albero o palo per l'equilibrio |
+| Figura a 4 in piedi | gluteo, piriforme, equilibrio | affondo sull'appoggio | senza appoggi |
 | Piccione sul muretto | gluteo, piriforme | affondo sull'appoggio | muretto, panchina |
 | Quadricipite con il piede dietro sul muretto | quadricipite, flessori dell'anca | quadricipite (o affondo sull'appoggio) | muretto, panchina |
+| Affondo alto sul muretto, busto dritto | flessori dell'anca | affondo sull'appoggio | muretto, gradino alto |
 | Gambe larghe, busto verso una gamba | femorali, adduttori | femorali o adduttori | senza appoggi |
 | Gambe larghe, busto in avanti | femorali, adduttori | femorali o adduttori | senza appoggi |
 | Pattinatore | adduttori, femorali | adduttori | senza appoggi |
@@ -132,15 +133,16 @@ Uno o due per volta, cambiandoli di seduta in seduta. Ognuno può anche **prende
 ## Gluteo e piriforme
 
 ### Figura a 4 in piedi — *Eka Pada Utkatasana*
-<!-- figura da aggiungere: in piedi su una gamba, caviglia dell'altra sopra il ginocchio, seduti indietro, mano su un albero, zona evidenziata sul gluteo della gamba sopra -->
+![Figura a 4 in piedi, in equilibrio](img/10-stretching/figura-4-in-piedi.png)
 
-- **Dove:** ovunque; al parco una mano su un albero o un palo per l'equilibrio.
-- **Come si fa:** in piedi su una gamba, si appoggia la caviglia dell'altra sopra il ginocchio, con il ginocchio sopra aperto verso l'esterno. Si piega la gamba d'appoggio e ci si siede indietro, come su una sedia invisibile, con la schiena dritta.
+- **Dove:** ovunque, senza appoggi.
+- **Come si fa:** in piedi su una gamba, in equilibrio, mani sui fianchi. Si appoggia la caviglia dell'altra sopra il ginocchio, con il ginocchio sopra aperto verso l'esterno. Si piega la gamba d'appoggio e ci si siede indietro, come su una sedia invisibile, con la schiena dritta. Più si scende, più tira.
+- **Perché farlo senza appoggi:** allunga il gluteo e insieme allena l'equilibrio su una gamba, il punto debole del lato sinistro al test di forza e mobilità.
 - **Cosa si sente:** tensione nel gluteo e sul lato esterno dell'anca della gamba sopra.
-- **Gli errori da evitare:** la schiena che si curva in avanti invece di sedersi indietro, il ginocchio d'appoggio che cade verso l'interno. È la versione in piedi della "figura a 4" del capitolo 9.
+- **Gli errori da evitare:** la schiena che si curva in avanti invece di sedersi indietro, il ginocchio d'appoggio che cade verso l'interno, il bacino che scende dal lato della gamba sollevata. Se l'equilibrio non regge, si scende meno, non ci si appoggia. È la versione in piedi della "figura a 4" del capitolo 9.
 
 ### Piccione sul muretto
-<!-- figura da aggiungere: stinco della gamba davanti di traverso sul muretto, gamba dietro tesa a terra, busto inclinato in avanti a schiena dritta, zona evidenziata sul gluteo della gamba appoggiata -->
+![Piccione sul muretto](img/10-stretching/piccione-muretto.png)
 
 - **Dove:** al parco su un muretto o una panchina; a casa sul bordo del letto o su un tavolo basso. L'appoggio va all'altezza dell'anca o poco sotto.
 - **Come si fa:** si appoggia la gamba piegata sul muretto con lo **stinco di traverso** (il piede verso l'altra gamba, il ginocchio verso l'esterno); l'altra gamba resta a terra, dietro. Con la schiena dritta si porta il busto in avanti, sopra lo stinco.
@@ -158,6 +160,15 @@ Uno o due per volta, cambiandoli di seduta in seduta. Ognuno può anche **prende
 - **Cosa si sente:** tensione davanti alla coscia della gamba dietro, e scendendo anche davanti all'anca.
 - **Perché farlo:** è l'alternativa al quadricipite in piedi, più intensa e senza bisogno di equilibrio.
 - **Gli errori da evitare:** la schiena che si inarca, il ginocchio davanti che cade verso l'interno. Se tira troppo, un appoggio più basso.
+
+### Affondo alto sul muretto, busto dritto
+![Affondo alto con il piede davanti sul muretto e il busto dritto](img/10-stretching/affondo-alto-muretto.png)
+
+- **Dove:** al parco su un muretto o un gradino alto; a casa su un gradino o una sedia contro il muro. L'appoggio all'altezza del ginocchio o poco sopra.
+- **Come si fa:** di fronte al muretto, il piede davanti tutto appoggiato sopra, con il ginocchio sopra la caviglia; la gamba dietro tesa a terra, il tallone che può sollevarsi. **Busto dritto**, mani sui fianchi, "coda sotto": si porta il bacino in avanti e in basso, senza piegarsi sulla coscia.
+- **Cosa si sente:** tensione davanti all'anca e all'inguine della gamba dietro (flessori dell'anca), che scende lungo la coscia davanti.
+- **Perché farlo:** è la variante a busto dritto dell'affondo del blocco base. Senza l'inclinazione in avanti, l'allungamento va tutto sui flessori dell'anca, i muscoli che si accorciano stando seduti.
+- **Gli errori da evitare:** la schiena che si inarca per scendere di più, il ginocchio davanti che cade verso l'interno, il busto che si piega sulla coscia (diventa l'affondo base).
 
 ## Femorali e adduttori
 

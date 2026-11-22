@@ -15,3 +15,4 @@ Pace:HR decoupling puro (split a meta tempo, efficiency factor passo/FC in ciasc
 | 2026-10-25 | Resistenza aerobica | S8 Long run 4.2km  | 4.21 km  | 33.9 min | 8:04/km       | 143 bpm    | 8:12/km       | 142 bpm    | 1.3%       |
 | 2026-11-01 | Resistenza aerobica | S9 Long run 7km    | 7.01 km  | 50.9 min | 7:14/km       | 155 bpm    | 7:14/km       | 156 bpm    | 0.7%       |
 | 2026-11-15 | Resistenza aerobica | S11 Long run 6.5km | 6.51 km  | 46.8 min | 7:09/km       | 150 bpm    | 7:16/km       | 151 bpm    | 2.3%       |
+| 2026-11-22 | Resistenza aerobica | S12 Long run 7.5km | 7.50 km  | 54.0 min | 7:08/km       | 151 bpm    | 7:18/km       | 150 bpm    | 1.5%       |

@@ -3,21 +3,60 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 2
-- **Total Distance**: 10.91 km
-- **Total Time**: 1:15:45
-- **Total Elevation**: 12 m
-- **Total Calories**: 749 kcal (2/2 activities with data)
-- **Total TSS**: 110 (2/2 activities with a valid NGP/IF)
-- **Average RPE**: 4.5/10 (2/2 activities rated)
-- **Total sRPE**: 348 (RPE x minutes, rated activities only)
+- **Total Activities**: 3
+- **Total Distance**: 18.41 km
+- **Total Time**: 2:09:43
+- **Total Elevation**: 25 m
+- **Total Calories**: 1306 kcal (3/3 activities with data)
+- **Total TSS**: 178 (3/3 activities with a valid NGP/IF)
+- **Average RPE**: 4.0/10 (3/3 activities rated)
+- **Total sRPE**: 510 (RPE x minutes, rated activities only)
 
 ### Running Totals
-- **Total Run Time**: 1:03:47
-- **Total Walk Time**: 0:12:44
+- **Total Run Time**: 1:57:40
+- **Total Walk Time**: 0:12:51
 
 ## Activities
 
+### 2026-11-22 08:04:52 - S12 Long run 7.5km
+
+**Type**: Run
+**Distance**: 7.50 km
+**Duration**: 0:53:58
+**Pace**: 7:12/km
+**NGP medio**: 7:11/km
+**IF**: 0.87
+**TSS**: 68
+**RPE**: 3/10
+**sRPE**: 162
+**Sensazione**: Forte (75/100)
+**Decoupling**: 1.5%
+**ES**: 11.7 (Base)
+**Economia**: EF 0.923 m/battito · M 0.928 · RES 85.7 · RE 0.684 (263 W)
+**Run time**: 0:53:53
+**Walk time**: 0:00:07
+**Elevation**: 13 m
+**Calories**: 557 kcal
+**Heart Rate**: 148 bpm (max: 155)
+**Power**: 260 W (NP: 262 W, 92% of threshold 285 W, P3 Steady) · 3.35 W/kg
+**Meteo**: 16°C, rugiada 13°C, umidità 85% (stazione Roma Fiumicino, aria all'ombra)
+**Note**: Buon Allenamento. Correre a questo ritmo è un po' noioso ma alla fine l'abbiamo portato a casa. Verso la fine si è presentato qualche leggero fastidio ala fascite, sparito subito dopo la corsa.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:07:15 | 7:15/km | 135 | 259 W | 2 m       |
+| 2   | 1.00 km  | 0:06:59 | 6:59/km | 149 | 268 W | 2 m       |
+| 3   | 1.00 km  | 0:07:09 | 7:09/km | 151 | 272 W | 2 m       |
+| 4   | 1.00 km  | 0:07:07 | 7:07/km | 152 | 262 W | 2 m       |
+| 5   | 1.00 km  | 0:07:17 | 7:17/km | 150 | 244 W | 0 m       |
+| 6   | 1.00 km  | 0:07:10 | 7:11/km | 150 | 253 W | 1 m       |
+| 7   | 1.00 km  | 0:07:20 | 7:20/km | 149 | 262 W | 2 m       |
+| 8   | 0.50 km  | 0:03:41 | 7:23/km | 150 | 267 W | 1 m       |
+| 9   | 0.00 km  | 0:00:01 | 9:28/km | 149 | 262 W | 0 m       |
+
+---
 ### 2026-11-20 16:54:13 - S12 Tempo 2500m
 
 **Type**: Run
@@ -99,8 +138,8 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 185 bpm
-- **FC riposo media**: 57.8 bpm
-- **Riserva cardiaca**: 127.2 bpm
+- **FC riposo media**: 57.6 bpm
+- **Riserva cardiaca**: 127.4 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |

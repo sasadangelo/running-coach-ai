@@ -1,6 +1,6 @@
 # VO2max Log
 
-**Stima attuale: 40.5 ml/kg/min** (al 2026-11-15; controllo: mediana delle singole corse degli ultimi 28 giorni 40.5).
+**Stima attuale: 40.8 ml/kg/min** (al 2026-11-22; controllo: mediana delle singole corse degli ultimi 28 giorni 40.8).
 
 Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, corsa in piano, velocita corretta per la pendenza), `%FCR = (FC - FC riposo) / (185 - FC riposo)`, `VO2max = 3.5 + (VO2 - 3.5) / %FCR` (Swain).
 
@@ -31,3 +31,4 @@ Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, cors
 | 2026-11-08 | Rome 5k            | 14             | 6:13/km           | 168 bpm  | 58.1      | 40.5           | 42.8          |
 | 2026-11-10 | S11 Easy run       | 20             | 7:49/km           | 151 bpm  | 59.1      | 40.2           | 42.5          |
 | 2026-11-15 | S11 Long run 6.5km | 37             | 7:13/km           | 151 bpm  | 59.3      | 40.5           | 42.4          |
+| 2026-11-22 | S12 Long run 7.5km | 43             | 7:13/km           | 150 bpm  | 57.6      | 40.8           | 42.5          |

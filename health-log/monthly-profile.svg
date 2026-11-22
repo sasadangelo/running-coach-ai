@@ -37,12 +37,12 @@
 <circle cx="203.5" cy="241.5" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · M: 0.924 (indice 101)</title></circle>
 <circle cx="190.0" cy="205.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · FS: 67 (indice 100)</title></circle>
 <circle cx="204.6" cy="169.6" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · MCS: 76 (indice 100)</title></circle>
-<polygon points="240.0,55.0 292.6,205.0 280.8,245.8 240.0,253.5 202.9,242.1" style="fill:var(--s1, #2a78d6);stroke:var(--s1, #2a78d6)" fill-opacity="0.05" stroke-width="2" stroke-dasharray="6,4"/>
-<circle cx="240.0" cy="55.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · ES: 10.6 (indice 151)</title></circle>
+<polygon points="240.0,55.0 292.6,205.0 280.8,245.8 240.0,257.0 202.7,242.3" style="fill:var(--s1, #2a78d6);stroke:var(--s1, #2a78d6)" fill-opacity="0.05" stroke-width="2" stroke-dasharray="6,4"/>
+<circle cx="240.0" cy="55.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · ES: 11.7 (indice 167)</title></circle>
 <circle cx="292.6" cy="205.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · Soglia: 6:18/km (indice 101)</title></circle>
 <circle cx="280.8" cy="245.8" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · VO2max: 40.5 (indice 103)</title></circle>
-<circle cx="240.0" cy="253.5" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · EF: 0.910 (indice 99)</title></circle>
-<circle cx="202.9" cy="242.1" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · M: 0.927 (indice 101)</title></circle>
+<circle cx="240.0" cy="257.0" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · EF: 0.923 (indice 101)</title></circle>
+<circle cx="202.7" cy="242.3" r="4" style="fill:var(--s1, #2a78d6);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Novembre 2026 (in corso) · M: 0.928 (indice 101)</title></circle>
 <rect x="20" y="424" width="14" height="10" style="fill:var(--s3, #1baf7a)" rx="2"/>
 <text x="39" y="433" style="fill:var(--text-secondary, #52514e)" font-size="12">Settembre 2026</text>
 <rect x="170" y="424" width="14" height="10" style="fill:var(--s2, #eb6834)" rx="2"/>

@@ -36,3 +36,4 @@ Le distanze indicative valgono a ritmo facile (circa 1.5-2 punti di ES per km): 
 | 2026-10-25 | S8 Long run 4.2km  | 4.21 km  | 8:03/km | 139 bpm  | 100%    | 0    | 1.00 | 1.3%       | 1.00  | 7                      | 1.00 | 6.3  | 6.3  | Primi km |
 | 2026-11-01 | S9 Long run 7km    | 7.01 km  | 7:13/km | 153 bpm  | 100%    | 0    | 1.00 | 0.7%       | 1.00  | 14                     | 1.00 | 10.6 | 10.6 | Base     |
 | 2026-11-15 | S11 Long run 6.5km | 6.51 km  | 7:11/km | 148 bpm  | 100%    | 0    | 0.99 | 2.3%       | 1.00  | 14                     | 1.00 | 10.2 | 10.2 | Base     |
+| 2026-11-22 | S12 Long run 7.5km | 7.50 km  | 7:12/km | 148 bpm  | 100%    | 0    | 1.00 | 1.5%       | 1.00  | 7                      | 1.00 | 11.7 | 11.7 | Base     |

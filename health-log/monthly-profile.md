@@ -4,13 +4,13 @@ Valore del mese e, tra parentesi, indice con **100 = primo mese con dati** (per 
 
 | Qualita              | Metrica | Settembre 2026 | Ottobre 2026  | Novembre 2026 (in corso) |
 | -------------------- | ------- | -------------- | ------------- | ------------------------ |
-| Resistenza aerobica  | ES      | 7.0 (100)      | 10.0 (143)    | 10.6 (151)               |
+| Resistenza aerobica  | ES      | 7.0 (100)      | 10.0 (143)    | 11.7 (167)               |
 | Capacita aerobica    | CS      | n/d            | n/d           | n/d                      |
 | Potenza aerobica     | Soglia  | 6:22/km (100)  | 6:16/km (102) | 6:18/km (101)            |
 | VO2max               | VO2max  | 39.3 (100)     | 40.4 (103)    | 40.5 (103)               |
-| Economia (cuore)     | EF      | 0.915 (100)    | 0.912 (100)   | 0.910 (99)               |
-| Economia (meccanica) | M       | 0.918 (100)    | 0.924 (101)   | 0.927 (101)              |
-| Economia (totale)    | RES     | 84.0 (100)     | 85.2 (101)    | 84.3 (100)               |
+| Economia (cuore)     | EF      | 0.915 (100)    | 0.912 (100)   | 0.923 (101)              |
+| Economia (meccanica) | M       | 0.918 (100)    | 0.924 (101)   | 0.928 (101)              |
+| Economia (totale)    | RES     | 84.0 (100)     | 85.2 (101)    | 85.4 (102)               |
 | Forza                | FS      | n/d            | 67 (100)      | n/d                      |
 | Mobilita e controllo | MCS     | n/d            | 76 (100)      | n/d                      |
 

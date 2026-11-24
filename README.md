@@ -1,10 +1,33 @@
-# Running Coach AI
+# Fidippide 🏃 — Il coach di corsa AI, dentro Claude Code
 
-Una squadra di coach AI (corsa, salute, sonno, nutrizione, ORL) che mi accompagna negli allenamenti di corsa con un obiettivo preciso: **migliorare la mia salute**. Le gare vengono dopo, come soddisfazioni in più.
+<p align="center">
+  <img src="docs/icon.png" alt="Fidippide, AI running coach: un giovane corridore greco con la corona d'alloro, i sandali alati e una cuffia con microfono" width="280">
+</p>
+
+Fidippide è una squadra di coach AI (corsa, salute, sonno, nutrizione, ORL) che mi accompagna negli allenamenti di corsa con un obiettivo preciso: **migliorare la mia salute**. Le gare vengono dopo, come soddisfazioni in più.
 
 Il progetto gira su [Claude Code](https://claude.com/claude-code). Ogni coach è un agente con il suo ruolo e i suoi dati; i dati arrivano da Garmin Connect, da diari in markdown e dalle mie note dopo ogni seduta.
 
+<p align="center">
+  <a href="https://code.claude.com"><img src="https://img.shields.io/badge/Claude%20Code-agenti%20e%20skill-D97757?style=flat-square" alt="Claude Code"></a>
+  <a href="https://connect.garmin.com"><img src="https://img.shields.io/badge/Garmin-Connect-007CC3?style=flat-square&logo=garmin&logoColor=white" alt="Garmin Connect"></a>
+  <a href=".claude/skills/garmin-sync/requirements.txt"><img src="https://img.shields.io/badge/python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+"></a>
+  <a href="teoria/README.md"><img src="https://img.shields.io/badge/teoria-18%20capitoli-b8932a?style=flat-square" alt="Teoria: 18 capitoli"></a>
+</p>
+
+<p align="center">
+  <a href="#da-dove-partire">Da dove partire</a> ·
+  <a href="#i-coach">I coach</a> ·
+  <a href="#gli-strumenti">Gli strumenti</a> ·
+  <a href="#come-si-usa">Come si usa</a> ·
+  <a href="#la-teoria">La teoria</a> ·
+  <a href="https://sasadangelo.github.io/running-coach-ai/">Sito</a>
+</p>
+
 > **Prima la salute, poi la prestazione.** Quando salute e prestazione sono in conflitto (fascia plantare, sonno, FC a riposo, HRV) vince sempre la salute.
+
+### Perché Fidippide
+Nel 490 a.C. Fidippide corse da Maratona ad Atene per annunciare la vittoria, e secondo la leggenda morì appena arrivato. È il mito da cui nasce la maratona, e anche un promemoria: questo coach fa l'opposto. Costruisce la base con calma, cresce **una cosa alla volta** e si ferma prima che il corpo lo chieda, perché l'obiettivo è correre a lungo, per anni.
 
 ## Da dove partire
 
@@ -55,10 +78,11 @@ Le metriche si dividono in **decisionali** (FC, decoupling, fascia plantare, son
 ## Struttura del progetto
 
 ```
-running-coach-ai/
+running-coach-ai/               # Fidippide
 ├── training-plan.md            # il piano attuale
 ├── obiettivi-lungo-termine.md  # la direzione per i piani successivi
 ├── dashboard.html              # la dashboard
+├── docs/                       # il sito (GitHub Pages) e il logo
 ├── training-log/               # una pagina per settimana (da Garmin)
 ├── coaching-log/               # le note del coach, settimana per settimana
 ├── health-log/                 # salute giornaliera, metriche, test di forza e mobilità, ORL

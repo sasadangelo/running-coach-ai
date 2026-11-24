@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fidippide – AI running coach inside Claude Code</title>
+  <meta name="description" content="Fidippide is a team of AI running coaches (training, health, sleep, nutrition) inside Claude Code: data from Garmin Connect, gradual plans, health first and performance second.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="Fidippide, AI running coach logo: a young Greek runner with a laurel wreath and winged sandals">
+    <div>
+      <h1>Fidippide</h1>
+      <p>The AI running coach inside Claude Code.</p>
+    </div>
+  </header>
+
+  <p>Fidippide is a team of AI coaches that follows your running with one clear goal: <strong>better health</strong>. Races come after, as a bonus. It runs in <a href="https://code.claude.com">Claude Code</a>, reads your data from Garmin Connect and from your notes after every session, writes your training plans and sends them to your watch.</p>
+
+  <blockquote><strong>Health first, performance second.</strong> When health and performance clash (plantar fascia, sleep, resting heart rate, HRV), health always wins.</blockquote>
+
+  <h2>Why Fidippide</h2>
+  <p>In 490 BC Pheidippides (Fidippide in Italian) ran from Marathon to Athens to announce the victory, and according to legend he died as soon as he arrived. It is the myth behind the marathon, and also a reminder: his coach does the opposite. It builds the base patiently, increases <em>one thing at a time</em> and stops before the body has to ask, because the goal is to keep running for years.</p>
+
+  <h2>The coaches</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Coach</th><th>What it looks after</th></tr>
+    <tr><td>🏃 Running coach</td><td>feedback after every session and a weekly review: plan versus reality, paces, heart rate, intervals, volume, decisions on the plan</td></tr>
+    <tr><td>❤️ Health coach</td><td>recovery and well-being: resting heart rate, HRV, symptoms, when to ease off</td></tr>
+    <tr><td>😴 Sleep coach</td><td>sleep length and quality, and how it affects training</td></tr>
+    <tr><td>🥗 Nutrition coach</td><td>calorie and macronutrient plan, weight, food diary</td></tr>
+    <tr><td>👂 ENT coach</td><td>tracking a chronic ear, nose and throat condition, and the criteria for running with it</td></tr>
+  </table>
+  </div>
+
+  <h2>What it does</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Feature</th><th>In practice</th></tr>
+    <tr><td>Garmin sync</td><td>every run with laps, pace, heart rate, power, RPE and weather; resting heart rate, HRV and sleep every day</td></tr>
+    <tr><td>Metrics</td><td>heart rate zones kept up to date, aerobic decoupling, Endurance and Capacity Score, estimated VO2max, threshold, running economy, CTL/ATL/TSB, ACWR, a monthly runner profile</td></tr>
+    <tr><td>Plans</td><td>plans for 5K, 10K, half marathon and marathon, with gradual progression and recovery weeks; multi-year periodization</td></tr>
+    <tr><td>Workouts on the watch</td><td>the week's sessions sent to the Garmin calendar, with pace ranges and recoveries</td></tr>
+    <tr><td>Dashboard</td><td>volume, sessions, paces, endurance, power, training load and injury risk on one page</td></tr>
+    <tr><td>Theory</td><td>a book of notes written with myself as the test subject: the principle, what science says, what happened to me, what applies to everyone (in Italian)</td></tr>
+  </table>
+  </div>
+
+  <h2>How to use it</h2>
+  <p>In Claude Code, from the project folder, with your Garmin credentials in the <code>.env</code> file:</p>
+  <pre>/garmin-sync          # after every run
+/running-coach        # the weekly review
+/training-dashboard   # the big picture</pre>
+  <p>The other coaches start when you talk to them: "how did I sleep?", "how am I recovering?".</p>
+
+  <h2>Disclaimer</h2>
+  <p>This is a personal project. The coaches are AI tools, not doctors: estimates and metrics have margins of error, and symptoms such as persistent pain, palpitations, dizziness or chest discomfort should always be checked by a professional.</p>
+
+  <footer>
+    Fidippide is an open source project. ·
+    <a href="https://github.com/sasadangelo/running-coach-ai">Source code</a>
+  </footer>
+</main>
+</body>
+</html>

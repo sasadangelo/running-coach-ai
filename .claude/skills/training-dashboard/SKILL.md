@@ -5,11 +5,11 @@ description: Generate a comprehensive HTML training dashboard showing progress t
 
 # Training Dashboard
 
-Generate an HTML dashboard with retro styling showing comprehensive training progress toward the half marathon goal. Outputs a single HTML file saved to `dashboard.html` that can be opened in any browser.
+Generate an HTML dashboard with retro styling showing comprehensive training progress toward the half marathon goal. Outputs a single HTML file saved to `docs/dashboard.html` (published on the GitHub Pages site) that can be opened in any browser.
 
 ## Project override (athlete preference, 2026-11-18)
 
-In this project the dashboard does NOT use the retro themes below. It uses the same style as `progressi.html` (CSS copied from `.claude/scripts/progress_template.html`: light/dark tokens, system font, summary tiles, cards, HTML tables instead of ASCII blocks, charts coloured with the CSS variables `--s1`/`--s2`/`--grid`/`--axis`, no Tailwind). Keep the two pages linked: the dashboard header links to `progressi.html` ("Progressi per tipo di seduta →") and `progressi.html` links back ("← Dashboard del piano"). Don't ask for layout/theme/commentary preferences: update the existing `dashboard.html` in place, keeping its sections (plan, volume, sessions, paces, aerobic endurance, power, RPE, monthly profile, CTL/ATL/TSB, ACWR, coach commentary, next sessions), with the text in Italian.
+In this project the dashboard does NOT use the retro themes below. It uses the same style as `progressi.html` (CSS copied from `.claude/scripts/progress_template.html`: light/dark tokens, system font, summary tiles, cards, HTML tables instead of ASCII blocks, charts coloured with the CSS variables `--s1`/`--s2`/`--grid`/`--axis`, no Tailwind). Keep the two pages linked: the dashboard header links to `progressi.html` ("Progressi per tipo di seduta →") and `progressi.html` links back ("← Dashboard del piano"). Don't ask for layout/theme/commentary preferences: update the existing `docs/dashboard.html` in place, keeping its sections (plan, volume, sessions, paces, aerobic endurance, power, RPE, monthly profile, CTL/ATL/TSB, ACWR, coach commentary, next sessions), with the text in Italian.
 
 ## Dashboard Configuration
 
@@ -346,7 +346,7 @@ Combine all sections based on user configuration from step 1 using Tailwind clas
 
 ### 8. Save HTML File
 
-Write the complete HTML to `dashboard.html` in the project root directory. After saving, inform the user:
+Write the complete HTML to `docs/dashboard.html` (published with the GitHub Pages site, next to `docs/progressi.html`). After saving, inform the user:
 - File location
 - How to open it (double-click or open in browser)
 - Remind them they can refresh the page after updating training logs
@@ -564,6 +564,6 @@ Just ask! "Can you regenerate with a different theme?" or "Show me the compact v
 - No JavaScript required - pure HTML and CSS
 - "On Track" status is subjective and based on completion rate, mileage, and pace adherence
 - Coaching commentary references actual data and provides actionable feedback
-- Save location: `dashboard.html` in project root
+- Save location: `docs/dashboard.html` (published on the site)
 - To view: Double-click the file or open in any web browser
 - Refresh the browser after regenerating to see updates

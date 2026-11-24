@@ -1,4 +1,4 @@
-"""Build progressi.html: per-session-type progress dashboard from training-log/*.md.
+"""Build docs/progressi.html: per-session-type progress dashboard from training-log/*.md.
 
 Parses every activity in training-log/, classifies it (long, easy, tempo,
 intervals, race, strides, warmup), extracts the work blocks from the lap
@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 LOG_DIR = ROOT / "training-log"
 PLAN = ROOT / "training-plan.md"
 TEMPLATE = Path(__file__).with_name("progress_template.html")
-OUTPUT = ROOT / "progressi.html"
+OUTPUT = ROOT / "docs" / "progressi.html"  # published with the site (GitHub Pages)
 
 # Laps faster than this (sec/km) count as work in Tempo sessions.
 TEMPO_WORK_MAX_PACE = 6 * 60 + 50

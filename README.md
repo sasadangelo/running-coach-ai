@@ -24,7 +24,7 @@ Il progetto gira su [Claude Code](https://claude.com/claude-code). Ogni coach è
   <a href="https://sasadangelo.github.io/running-coach-ai/">Sito</a>
 </p>
 
-> **Prima la salute, poi la prestazione.** Quando salute e prestazione sono in conflitto (fascia plantare, sonno, FC a riposo, HRV) vince sempre la salute.
+> **Prima la salute, poi la prestazione.** Quando salute e prestazione sono in conflitto, vince sempre la salute.
 
 ### Perché Fidippide
 Nel 490 a.C. Fidippide corse da Maratona ad Atene per annunciare la vittoria, e secondo la leggenda morì appena arrivato. È il mito da cui nasce la maratona, e anche un promemoria: questo coach fa l'opposto. Costruisce la base con calma, cresce **una cosa alla volta** e si ferma prima che il corpo lo chieda, perché l'obiettivo è correre a lungo, per anni.
@@ -35,7 +35,7 @@ Nel 490 a.C. Fidippide corse da Maratona ad Atene per annunciare la vittoria, e 
 |---|---|
 | 🏃 **Il piano attuale** | [training-plan.md](training-plan.md): Roma 5K (8 novembre 2026) + Best Woman 10K (6 dicembre 2026), 14 settimane |
 | 🎯 **Gli obiettivi a lungo termine** | [obiettivi-lungo-termine.md](obiettivi-lungo-termine.md): dal 5K sotto 30' alla mezza maratona, con probabilità stimate e tetti realistici |
-| 📊 **La dashboard** | [dashboard.html](dashboard.html): volume, sedute, ritmi, resistenza aerobica, profilo mensile, carico di allenamento |
+| 📊 **La dashboard** | [dashboard](https://sasadangelo.github.io/running-coach-ai/dashboard.html) e [progressi per tipo di seduta](https://sasadangelo.github.io/running-coach-ai/progressi.html), pubblicati sul sito ([sorgenti in docs/](docs/)): volume, sedute, ritmi, resistenza aerobica, profilo mensile, carico di allenamento |
 | 📚 **Teoria e appunti** | [teoria/](teoria/README.md): quello che imparo, usando me stesso come cavia (esperimento N=1) |
 
 ## I coach
@@ -81,8 +81,7 @@ Le metriche si dividono in **decisionali** (FC, decoupling, fascia plantare, son
 running-coach-ai/               # Fidippide
 ├── training-plan.md            # il piano attuale
 ├── obiettivi-lungo-termine.md  # la direzione per i piani successivi
-├── dashboard.html              # la dashboard
-├── docs/                       # il sito (GitHub Pages) e il logo
+├── docs/                       # il sito (GitHub Pages): logo, dashboard e progressi
 ├── training-log/               # una pagina per settimana (da Garmin)
 ├── coaching-log/               # le note del coach, settimana per settimana
 ├── health-log/                 # salute giornaliera, metriche, test di forza e mobilità, ORL

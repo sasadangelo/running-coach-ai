@@ -55,6 +55,8 @@ Lo scopo delle R è correre ogni frazione **fresca**, con la stessa meccanica de
 | 200 m | ~1' | 1'-1'30" | camminato o da fermi, va bene |
 | 400 m | ~2'10" | 3' (la stessa distanza camminando sarebbe ~4') | camminando, poi jog lentissimo se il respiro è tornato |
 
+**Come capire se il recupero è bastato.** Sulle R si cammina e/o si fa jog finché si è recuperati davvero, perché sono un lavoro di **economia e meccanica**, non di cuore. Il segnale più semplice è la FC: se durante il recupero scende in **zona 1 o nella parte bassa della zona 2** (per me sotto ~140), il recupero è stato completo, ed è proprio quello che serve. In questo caso un recupero "abbondante" non è un difetto da correggere. Accorciarlo non rende la seduta più efficace, la sposta solo verso il VO2max, cioè il lavoro delle ripetute lunghe (capitolo [13](13-ripetute-lunghe.md)). Su questo punto la regola delle I è opposta.
+
 Due regole per adattare il recupero al giorno:
 - **La FC di ripartenza:** se all'inizio della ripetuta la FC è ancora alta (per me oltre 150, cioè ~80% della FC max), si aggiungono 30". È l'idea della scuola tedesca: si riparte quando il cuore è sceso (capitolo [04](04-scuole-di-pensiero.md)).
 - **Il respiro:** si riparte quando il respiro è tornato quasi normale.
@@ -111,6 +113,7 @@ Nel piano le ripetute brevi sono partite **insieme** al Tempo, dalla seconda set
 | 27 ottobre | 10 x 400 | 5:19-5:42 (2:07-2:17) | 152-158 | recuperi tutti camminati; "la terza è tosta, come sempre" |
 | 3 novembre (pre-gara) | 4 x 200 | 5:08-5:17 | 151-157 | stanco, HRV e FC a riposo non buone |
 | 17 novembre | 4 x 400 (+ 2 x 800) | 2:11 · 2:08 · 2:06 · 2:13 | 148-158 | la terza 2" sotto la fascia |
+| 24 novembre | 3 x 400 (+ 3 x 800), rec. 3' | 2:11 · 2:12 · 2:11 | 153-158 | primo recupero da 3': camminato, poi jog quando la FC era in zona 1 (FC media dei recuperi 143-146); "andava proprio alla grande" |
 
 **Le medie** (settembre-novembre): **200 m in 63"** (5:17/km, 57 frazioni), **400 m in 2:11** (5:28/km, 28 frazioni). La media dei 200 è scesa da 65" a 63" mentre il numero raddoppiava, e lo scarto tra la più veloce e la più lenta è passato da 7-8" a 1".
 
@@ -122,6 +125,7 @@ Nel piano le ripetute brevi sono partite **insieme** al Tempo, dalla seconda set
 - **Lo scarico che non scarica.** Il 6x400 dello scarico del 20 ottobre, alla stessa fascia piena, è stato più duro dell'8x400 della settimana prima. La lezione è che nello scarico vanno tolti numero **e** intensità (esperimento [E2](esperimenti.md)).
 - **"La terza è sempre la più dura."** Una sensazione che torna in quasi tutte le sedute di 400: il riscaldamento non basta ancora a portare il corpo a regime. Un'ipotesi da verificare con un riscaldamento più lungo o con 2 allunghi in più.
 - **Il recupero era più corto di quello di Daniels.** 1' sulle 200 e 2' sulle 400, sempre camminati: circa la metà del recupero completo. Le frazioni sono rimaste regolari, ma le 400 diventavano in parte un lavoro da VO2max. Dal 22 novembre il recupero delle 400 è di 3', camminando e poi corricchiando se il respiro è tornato.
+- **Con 3' le 400 sono tornate R.** Il 24 novembre le tre 400 sono state identiche (2:11 · 2:12 · 2:11) e alla fine del recupero corricchiavo: era un recupero completo. Ho valutato di scendere a 2'30" (più o meno la durata della frazione) e ho deciso di no. Con 2'30" la seduta non migliora e diventa in parte VO2max. Si scende a 2'30" solo per risparmiare tempo nei giorni feriali. Per far crescere le 400 si aggiunge una ripetuta, il recupero resta com'è.
 
 **Le fasce da 20".** In corsa non riesco a stare in una fascia di 10"/km: guardo l'orologio solo quando avvisa che sono fuori. Con fasce di 20" (5:10-5:30 sulle 200, 5:20-5:40 sulle 400, 5:35-5:55 sulle 800, 6:15-6:35 nel Tempo) l'avviso arriva solo quando conta.
 
@@ -133,7 +137,7 @@ Nel piano le ripetute brevi sono partite **insieme** al Tempo, dalla seconda set
 
 - **Le R vengono dopo corsa lenta e allunghi**, e prima di ripetute lunghe e soglia: prima la qualità del movimento, poi il motore, poi la specificità.
 - **Più breve = più veloce**, di ~15"/km a gradino.
-- **Recupero completo**: 2-3 volte la frazione, o la stessa distanza. Camminare va bene.
+- **Recupero completo**: 2-3 volte la frazione, o la stessa distanza. Camminare va bene. Se nel recupero la FC scende in zona 1 o nella parte bassa della zona 2, si è recuperati bene: non serve accorciare.
 - **La FC non guida le brevi**: si corre a passo e a sensazione.
 - **Regolarità prima della velocità:** entro 2-3", l'ultima come la prima. Le ultime "a fatica" non servono.
 - **Una cosa alla volta:** più ripetute, poi frazione più lunga con meno ripetute.
@@ -141,7 +145,7 @@ Nel piano le ripetute brevi sono partite **insieme** al Tempo, dalla seconda set
 
 ## Da approfondire
 - [ ] La "terza ripetuta": riscaldamento più lungo o allunghi in più cambiano la sensazione?
-- [ ] Recupero da 3' sulle 400: la FC di ripartenza e la regolarità cambiano rispetto ai 2'?
+- [x] Recupero da 3' sulle 400: la FC di ripartenza e la regolarità cambiano rispetto ai 2'? (24/11: frazioni identiche e FC in zona 1 a fine recupero, sezione 5)
 - [ ] Ripetute in salita come alternativa alle R in piano per chi ha problemi al piede
 - [ ] Daniels: limiti di volume R per volumi settimanali bassi (verificare sul libro)
 - [ ] Le ripetute nella scuola italiana: Arcelli e Pizzolato su distanze, ritmi e recuperi

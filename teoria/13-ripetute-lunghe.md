@@ -52,6 +52,7 @@ Nelle I il recupero è **volutamente incompleto**: si riparte con il consumo di 
 - **Il recupero è una variabile di progressione.** Si parte lunghi (per me 4' sulle 800) e si accorcia (3'30", poi 3') quando la seduta è comoda. Non scende sotto ~2'30": per frazioni di quasi 5' sarebbe troppo poco anche per Daniels.
 - **Distanze lunghe non vogliono recuperi enormi.** Oltre i 5-6' la ripetuta diventa soglia, e lì il recupero è corto: circa 1' ogni 5' di corsa (capitolo [14](14-corsa-soglia.md)).
 - **La FC di ripartenza:** se a fine recupero è ancora sopra ~80% della FC max (per me 150), si aggiungono 30"; se resta alta dopo un recupero lungo, l'ultima frazione si salta.
+- **Se nel recupero si scende in zona 1, il recupero va accorciato** (per me sotto ~133). Le ripetute lunghe, cioè 800-1000 m (e 1200 m per chi li corre in 5-6' o meno), sono un lavoro di VO2max: si arriva alla frazione successiva **un po' più stanchi**, con la FC ancora in zona 2. Se il cuore torna in zona 1, il recupero è diventato completo, come quello delle R, e il tempo passato vicino al VO2max si riduce. È la regola opposta a quella delle brevi (capitolo [12](12-ripetute-brevi.md), sezione 2). Prima di accorciare, però, le frazioni devono essere regolari: se l'ultima cala, il problema va risolto prima con la distribuzione dello sforzo.
 
 ### La FC: dice se si è al VO2max
 - Alla fine di un 800-1000 dovrebbe arrivare al **90-95% della FC max** (per me 167-176), di più nelle ultime frazioni. Se resta molto più bassa il ritmo è troppo lento; se ci arriva già a metà frazione è troppo veloce.
@@ -92,7 +93,7 @@ Le ripetute lunghe sono arrivate tardi, in S12, mescolate alle 400: prima c'eran
 | Data | Seduta | Frazioni | FC media del giro | Note |
 |---|---|---|---|---|
 | 17 novembre | 4 x 400 + 2 x 800, rec. 2'30" | 800: 4:41 · 4:39 | 162 · 161 | RPE 5; la seconda "tostissima", ma la più veloce (315 W contro 306) |
-| 24 novembre | 3 x 400 + 3 x 800, rec. 3' e 4' | — | — | il primo 3 x 800 |
+| 24 novembre | 3 x 400 + 3 x 800, rec. 3' e 4' | 800: 4:42 · 4:37 · 4:45 | 157 · 157 · 157 | il primo 3 x 800, RPE 4; prime due bene, la terza "ho sofferto un po'" e 1" fuori fascia. Recuperi camminati, poi jog quando la FC era in zona 1 (FC media 139-142) |
 
 **Il confronto con il 2017.** Il 27/10/2017 ho fatto **6 x 800** con 3' di jog a ~7:15/km: 4:20, 4:33, 4:40, 4:44, 4:47, 4:39 (media 4:44, 5:55/km). Il primo troppo veloce, poi il passo calato. Oggi i due 800 sono già più veloci di quella media: la differenza è che allora erano 6, e il recupero era corricchiato.
 
@@ -100,18 +101,21 @@ Le ripetute lunghe sono arrivate tardi, in S12, mescolate alle 400: prima c'eran
 - **Il ritmo c'è già; manca il numero.** È la parte da costruire in P2, con il recupero che si accorcia.
 - **"Tostissima" non vuol dire lenta.** La seconda 800 di S12 è sembrata più lenta ed era la più veloce: la fatica percepita cresce prima del passo, ed è proprio lo stimolo che si cerca.
 - **Il recupero conta.** Per il primo 3 x 800 il recupero è passato da 2'30" a 4': con la terza frazione nuova, conviene arrivarci freschi e accorciare dopo.
+- **Due segnali opposti il 24 novembre.** Nei recuperi da 4' la FC scendeva in zona 1, quindi secondo la regola della sezione 2 il recupero è già lungo. La terza 800, però, è costata ed è uscita dalla fascia. Credo che la causa sia la seconda, corsa in 4:37: la più veloce delle tre, e quei secondi li ho pagati sulla terza. Ordine scelto: prima il 3 x 800 regolare a ~4:40 con 4', poi 3'30". Una cosa alla volta.
+- **La FC arriva appena al 90%.** Nelle 800 la media del giro è 157 e il massimo della seduta è 167, cioè il 90% della FC max (185). È il limite basso della zona I, coerente con un recupero che riporta il cuore in zona 1: la frazione riparte "da zero". È un'ipotesi da verificare con recuperi più corti.
 
 ## 6. Cosa vale per tutti
 
 - **Le I vengono dopo le R**: prima il gesto economico, poi il motore.
 - **3-5' per frazione**: se dura di più, è soglia.
-- **Recupero corricchiato, pari o poco meno della frazione**; si accorcia con l'allenamento, non scende sotto ~2'30".
+- **Recupero corricchiato, pari o poco meno della frazione**; si accorcia con l'allenamento, non scende sotto ~2'30". Se nel recupero la FC torna in zona 1, va accorciato: alla frazione successiva si arriva un po' stanchi.
 - **La FC deve arrivare al 90-95% della FC max** a fine frazione.
 - **Il primo non si corre forte**; l'ultima come la prima.
 - **Una cosa alla volta:** numero, distanza o recupero.
 
 ## Da approfondire
 - [ ] Recupero jog contro camminato sulle 800: differenza di FC e di tempo al VO2max
-- [ ] Il 3 x 800 del 24/11: la terza frazione regge con 4' di recupero?
+- [x] Il 3 x 800 del 24/11: la terza frazione regge con 4' di recupero? (sì, ma a fatica e 1" fuori fascia, dopo una seconda troppo veloce: sezione 5)
+- [ ] Con il 3 x 800 regolare a ~4:40, il recupero da 3'30" tiene la FC in zona 2 senza far calare l'ultima?
 - [ ] Daniels: limiti di volume I per volumi settimanali bassi (verificare sul libro)
 - [ ] Le ripetute lunghe nella scuola italiana: Arcelli e il "lungo veloce" frazionato

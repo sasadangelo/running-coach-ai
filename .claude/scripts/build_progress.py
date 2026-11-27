@@ -84,12 +84,20 @@ def parse_laps(block: str) -> list[dict[str, Any]]:
     return laps
 
 
-def work_blocks(laps: list[dict[str, Any]], max_pace: int) -> list[dict[str, Any]]:
-    """Group consecutive fast laps into work blocks (warm-up lap excluded)."""
+def work_blocks(laps: list[dict[str, Any]], max_pace: int, merge: bool = True) -> list[dict[str, Any]]:
+    """Group consecutive fast laps into work blocks (warm-up lap excluded).
+
+    Tempo blocks span several auto-laps, so consecutive fast laps are merged. Each interval rep
+    is its own lap (watch workout step), so with merge=False a stray short fast lap next to a
+    rep stays separate instead of stretching it (S12: a 0.09 km lap glued to the first 800 m).
+    """
     blocks: list[list[dict[str, Any]]] = []
     current: list[dict[str, Any]] = []
     for i, lap in enumerate(laps):
         fast = lap["pace"] <= max_pace and i > 0
+        if fast and not merge and current:
+            blocks.append(current)
+            current = []
         if fast:
             current.append(lap)
         elif current:
@@ -164,8 +172,14 @@ def parse_activity(header: str, block: str) -> dict[str, Any] | None:
     }
     if kind == "tempo":
         activity["blocks"] = work_blocks(laps, TEMPO_WORK_MAX_PACE)
+        # single fast laps (auto-lap km and the final part), to see how each km sits in the band
+        activity["workLaps"] = [
+            {"km": l["km"], "pace": l["pace"], "hr": l["hr"]}
+            for i, l in enumerate(laps)
+            if i > 0 and l["pace"] <= TEMPO_WORK_MAX_PACE and l["km"] >= 0.2
+        ]
     elif kind == "intervals":
-        activity["blocks"] = work_blocks(laps, INTERVAL_WORK_MAX_PACE)
+        activity["blocks"] = work_blocks(laps, INTERVAL_WORK_MAX_PACE, merge=False)
     activity["warm"] = activity["temp"] is not None and activity["temp"] >= WARM_TEMP_C
     return activity
 
@@ -219,9 +233,18 @@ def weekly(activities: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
-# Bands that override the plan text for every week (athlete's choice, 2026-11-18):
-# the 200 m are judged against 5:10-5:30 even where the early plan said 5:20-5:30.
-FIXED_REP_TARGETS = {"200": [5 * 60 + 10, 5 * 60 + 30]}
+# Current bands, applied to every session so all reps are judged against the same midpoint
+# (athlete's choice, 2026-11-25): 200 m 5:10-5:30 (mid 5:20), 400 m 5:20-5:40 (mid 5:30),
+# 800 m 5:35-5:55 (mid 5:45).
+# They override the band written in the plan for each week (e.g. 400 m at 5:10-5:30 in S7-S8).
+FIXED_REP_TARGETS = {
+    "200": [5 * 60 + 10, 5 * 60 + 30],
+    "400": [5 * 60 + 20, 5 * 60 + 40],
+    "800": [5 * 60 + 35, 5 * 60 + 55],
+}
+
+# Current continuous Tempo band (decided 2026-11-22), applied to every Tempo session like the rep bands.
+TEMPO_BAND = [6 * 60 + 15, 6 * 60 + 35]
 
 WEEK_RE = re.compile(r"^###.*Settimana (\d+)")
 REP_TARGET_RE = re.compile(r"\d+\s*x\s*(\d+)m\s*@\s*(\d+):(\d{2})-(\d+):(\d{2})/km")
@@ -246,14 +269,13 @@ def plan_rep_targets() -> dict[int, dict[str, list[int]]]:
 
 
 def attach_rep_targets(activities: list[dict[str, Any]]) -> None:
-    """Give each interval session (named "SXX ...") the planned band of its week."""
+    """Give each interval session the current band per rep distance (plan band for other distances)."""
     targets = plan_rep_targets()
     for a in activities:
         m = re.match(r"S(\d+)\b", a["name"])
-        if a["type"] == "intervals" and m and int(m.group(1)) in targets:
-            a["target"] = {**targets[int(m.group(1))]}
-        if a["type"] == "intervals" and a.get("target"):
-            a["target"].update({d: band for d, band in FIXED_REP_TARGETS.items() if d in a["target"]})
+        if a["type"] == "intervals":
+            week = targets.get(int(m.group(1)), {}) if m else {}
+            a["target"] = {**week, **FIXED_REP_TARGETS}
 
 
 def main() -> None:
@@ -263,6 +285,7 @@ def main() -> None:
         "generated": date.today().isoformat(),
         "activities": activities,
         "weeks": weekly(activities),
+        "tempoBand": TEMPO_BAND,
     }
     template = TEMPLATE.read_text(encoding="utf-8")
     html = template.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False))

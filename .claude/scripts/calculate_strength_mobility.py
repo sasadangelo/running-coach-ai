@@ -29,8 +29,8 @@ INDEX_HEADING = "## Indici"
 # label, results-table columns (dx, sx), reference value
 STRENGTH_TESTS = [
     ("Calf raise", ("Calf raise dx", "Calf raise sx"), 25),
-    ("Side plank", ("Side plank dx", "Side plank sx"), 60),
-    ("Bridge 1 gamba", ("Bridge 1 gamba dx", "Bridge 1 gamba sx"), 20),
+    ("Side plank", ("Side plank dx", "Side plank sx"), 90),
+    ("Bridge 1 gamba", ("Bridge 1 gamba dx", "Bridge 1 gamba sx"), 30),
 ]
 MOBILITY_TESTS = [
     ("Ginocchio-muro", ("Ginocchio-muro dx", "Ginocchio-muro sx"), 10),

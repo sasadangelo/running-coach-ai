@@ -41,4 +41,7 @@ table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
 th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
 th { color: var(--muted); font-weight: 600; }
 .legend { color: var(--muted); font-size: .95rem; }
+.cta { display: flex; flex-wrap: wrap; gap: .75rem; margin: -.5rem 0 2rem; }
+.cta a { padding: .55rem 1rem; border: 2px solid var(--terracotta); border-radius: 10px; background: var(--card); text-decoration: none; font-weight: 600; }
+.cta a:hover { background: var(--terracotta); color: var(--bg); }
 footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }

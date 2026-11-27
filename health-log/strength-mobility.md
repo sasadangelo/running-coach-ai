@@ -9,8 +9,8 @@ La metrica chiave è la **differenza destra/sinistra**: `asimmetria % = (lato mi
 ### Forza
 1. **Calf raise su una gamba** (polpaccio, Achille, fascia plantare). In piedi su un gradino con l'avampiede, tallone libero, un dito al muro solo per l'equilibrio. Su e giù per tutta l'escursione, ritmo regolare (1" su, 1" giù). Si conta finché la salita resta completa. Riferimento: 25 o più per lato.
    **Variante sul pavimento** (senza gradino, e più prudente per la fascia plantare): scalzi su pavimento duro, si sale il più in alto possibile e si scende fino a toccare terra col tallone. Per controllare l'altezza si fissa un punto sul muro all'altezza degli occhi alla prima ripetizione: quando la testa non ci arriva più, ci si ferma. **Il segno resta fisso** (matita o nastro sulla porta, con l'altezza in cm da terra annotata nella scheda): ogni test successivo usa lo stesso segno. Primo segno fisso: test del 21/11/2026. Riferimento: 20-25 per lato. Annotare sempre la variante usata ed eseguire il test ogni mese nello stesso modo. Massimo 40 ripetizioni.
-2. **Side plank** (gluteo medio, core laterale). Sull'avambraccio, corpo in linea, piedi sovrapposti. Tempo massimo finché il bacino non scende. Riferimento: 60" o più per lato.
-3. **Glute bridge su una gamba** (gluteo). Supino, un piede a terra con ginocchio piegato, l'altra gamba tesa in alto. Si sale fino ad allineare spalla, anca e ginocchio. Ripetizioni finché il bacino resta in linea, senza ruotare. Riferimento: 20 o più per lato.
+2. **Side plank** (gluteo medio, core laterale). Sull'avambraccio, corpo in linea, piedi sovrapposti. Tempo massimo finché il bacino non scende. Riferimento: 90" o più per lato (60" fino al 25/11/2026).
+3. **Glute bridge su una gamba** (gluteo). Supino, un piede a terra con ginocchio piegato, l'altra gamba tesa in alto. Si sale fino ad allineare spalla, anca e ginocchio. Ripetizioni finché il bacino resta in linea, senza ruotare. Riferimento: 30 o più per lato (20 fino al 25/11/2026).
 
 ### Controllo
 4. **Mezzo squat su una gamba** davanti allo specchio, 5 per lato, lento. Si annota per ciascun lato: *il bacino scende dal lato della gamba sollevata?* e *il ginocchio cade verso l'interno?* (sì/no).
@@ -35,8 +35,29 @@ Versione stampabile del protocollo con scheda dei risultati: [test-forza-mobilit
 | Data | Calf raise dx | Calf raise sx | Side plank dx | Side plank sx | Bridge 1 gamba dx | Bridge 1 gamba sx | Bacino scende (dx/sx) | Ginocchio dentro (dx/sx) | Equilibrio dx | Equilibrio sx | Ginocchio-muro dx | Ginocchio-muro sx | Thomas dx/sx | Inclinazione in corsa |
 | ---- | ------------- | ------------- | ------------- | ------------- | ----------------- | ----------------- | --------------------- | ------------------------ | ------------- | ------------- | ----------------- | ----------------- | ------------ | --------------------- |
 | 24/10/2026 | 16 | 13 | 36" | 29" | 32 | 27 | dx no / sx sì | dx no / sx sì | 30" (37") | 18" | 10.5 cm | 9.5 cm | ok / ok | video domenica 25/10 |
+| 25/11/2026 | 20 | 20 | 62" | 71" | 30 | 30 | dx no / sx no | dx no / sx lieve | 19" | 30" (42") | 11 cm | 10 cm | ok / ok | video lungo domenica 29/11 |
 
 Calf raise: variante sul pavimento (ripeterla così ai prossimi test). Riferimento all'altezza degli occhi usato, ma non lasciato segnato: al 21/11 l'altezza potrebbe differire di poco, quindi il confronto con il 24/10 ha un piccolo margine (3-4 ripetizioni di differenza sono comunque un segnale vero). In allenamento il 1/11: 1x20 su una gamba sx, senza riferimento e dopo 3x20: non confrontabile con il test. Equilibrio dx oltre il massimo di 30" (tenuto 37"); per l'asimmetria si usa 30".
+
+Test del 25/11/2026: calf raise nella variante sul pavimento, come il 24/10. Bridge: prima in tenuta isometrica (2' per lato, interrotto con margine), poi rifatto a ripetizioni come da protocollo: 30 per lato, il valore in tabella. Mezzo squat sx: bacino in bolla, ginocchio con una leggera inclinazione verso l'interno (registrata come "lieve", conta come non superato). Equilibrio sx oltre il massimo di 30" (tenuto 42"); per l'asimmetria si usa 30".
+
+### Lettura del 25/11/2026 (secondo test, dopo un mese di serie in più sul sinistro)
+| Test | dx | sx | 24/10 (dx / sx) | Asimmetria | Riferimento | Giudizio |
+| ---- | -- | -- | --------------- | ---------- | ----------- | -------- |
+| Calf raise (pavimento) | 20 | 20 | 16 / 13 | 0% | 20-25 | entrambi al riferimento minimo, sx +7 |
+| Side plank | 62" | 71" | 36" / 29" | 13% (dx) | 60"+ | raddoppiato, entrambi sopra; ora il dx è il più debole |
+| Bridge 1 gamba | 30 | 30 | 32 / 27 | 0% | 20+ | entrambi sopra, sx +3: asimmetria sparita |
+| Equilibrio occhi chiusi | 19" | 30" (42") | 30" (37") / 18" | 37% (dx) | 30" | sx risolto, dx sceso: da ricontrollare |
+| Squat 1 gamba | ok | bacino ok, ginocchio leggermente dentro | ok / bacino + ginocchio | — | — | sx migliorato: il bacino ora resta in bolla |
+| Ginocchio-muro | 11 cm | 10 cm | 10.5 / 9.5 | 9% (sx) | 10 cm+ | entrambi nella norma |
+| Thomas | ok | ok | ok / ok | — | — | invariato |
+
+- **Il lavoro mirato sul sinistro ha funzionato.** Calf raise sx da 13 a 20 (+54%), side plank sx da 29" a 71", equilibrio sx da 18" a oltre 30", squat sx con il bacino in bolla (resta una leggera inclinazione del ginocchio). Le asimmetrie di forza del 24/10 (16-19%) sono sparite, bridge compreso (da 27 a 30 a sinistra).
+- **Il side plank è il miglioramento più grande** (circa il doppio su entrambi i lati): in un mese è un guadagno soprattutto di controllo e di abitudine all'esercizio, non solo di forza. Ora il dx è al limite del riferimento (62").
+- **L'equilibrio dx sceso da oltre 30" a 19" è il dato strano.** Un calo così in un mese, senza fastidi, è più probabilmente variabilità del test (stanchezza, momento della giornata, primo tentativo) che una perdita reale. Va ricontrollato con 2 tentativi per lato nei prossimi giorni prima di cambiare il lavoro.
+- **Polpacci: sono il punto da far crescere.** 20 per lato è il minimo del riferimento: per i volumi di P2 (25 km e oltre) e per la fascia plantare l'obiettivo è 25 e più.
+- **Riferimenti alzati dal 25/11/2026:** side plank da 60" a 90" (circa la media degli uomini adulti nei dati di McGill) e bridge su una gamba da 20 a 30. Con 60" e 20 i due test erano già al tetto di 100 e l'indice di forza non poteva più salire. Lo script ricalcola tutto lo storico con i nuovi riferimenti, quindi i due test restano confrontabili. Ora il side plank dx (62") è il punto più lontano dal riferimento, insieme ai polpacci.
+- **Lavoro da qui:** la serie in più sul sinistro resta solo nel mezzo squat su una gamba, con attenzione al ginocchio sopra il piede (la caviglia sx, un po' più rigida, può contribuire). Calf raise e side plank tornano pari sui due lati, con una serie in più sul side plank dx; equilibrio pari, da rivedere dopo il ricontrollo del dx. Prossimo test: fine dicembre, stesse condizioni.
 
 ### Lettura del 24/10/2026 (prima misurazione)
 | Test | dx | sx | Asimmetria | Riferimento | Giudizio |
@@ -58,9 +79,10 @@ Calf raise: variante sul pavimento (ripeterla così ai prossimi test). Riferimen
 
 Generato da `.claude/scripts/calculate_strength_mobility.py` dalla tabella dei risultati: rilanciarlo dopo ogni test. Ogni test vale (lato piu debole / riferimento) x 100, con tetto a 100: 100 = adeguato per un runner. Conta solo il lato piu debole, quindi l'indice sale solo se migliora quello. Nel profilo mensile e nel radar entrano come indice 100 = primo test.
 
-- **FS (Forza)**: media di calf raise, side plank e bridge su una gamba. Riferimenti: Calf raise 25, Side plank 60, Bridge 1 gamba 20.
+- **FS (Forza)**: media di calf raise, side plank e bridge su una gamba. Riferimenti: Calf raise 25, Side plank 90, Bridge 1 gamba 30.
 - **MCS (Mobilita e controllo)**: media di ginocchio-muro, equilibrio a occhi chiusi, mezzo squat su una gamba (bacino in bolla + ginocchio sopra il piede, per lato) e test di Thomas. Riferimenti: Ginocchio-muro 10, Equilibrio 30.
 
 | Data | FS | MCS | Calf raise | Side plank | Bridge | Ginocchio-muro | Equilibrio | Squat 1 gamba | Thomas |
 | ---------- | --: | --: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2026-10-24 | 67 | 76 | 13 -> 52 | 29 -> 48 | 27 -> 100 | 9.5 -> 95 | 18 -> 60 | 50 | 100 |
+| 2026-10-24 | 58 | 76 | 13 -> 52 | 29 -> 32 | 27 -> 90 | 9.5 -> 95 | 18 -> 60 | 50 | 100 |
+| 2026-11-25 | 83 | 85 | 20 -> 80 | 62 -> 69 | 30 -> 100 | 10 -> 100 | 19 -> 63 | 75 | 100 |

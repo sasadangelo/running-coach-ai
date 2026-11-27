@@ -11,7 +11,7 @@ Valore del mese e, tra parentesi, indice con **100 = primo mese con dati** (per 
 | Economia (cuore)     | EF      | 0.915 (100)    | 0.912 (100)   | 0.923 (101)              |
 | Economia (meccanica) | M       | 0.918 (100)    | 0.924 (101)   | 0.928 (101)              |
 | Economia (totale)    | RES     | 84.0 (100)     | 85.2 (101)    | 85.4 (102)               |
-| Forza                | FS      | n/d            | 67 (100)      | n/d                      |
-| Mobilita e controllo | MCS     | n/d            | 76 (100)      | n/d                      |
+| Forza                | FS      | n/d            | 58 (100)      | 83 (143)                 |
+| Mobilita e controllo | MCS     | n/d            | 76 (100)      | 85 (112)                 |
 
 Le metriche si muovono a velocita diverse: ES, EF e meccanica in settimane, soglia in 4-6 settimane, VO2max in mesi. Il mese in corso e parziale. Il CS compare dal primo Tempo continuo di almeno 20' (S13). Forza (FS) e Mobilita e controllo (MCS) vengono dal test mensile di health-log/strength-mobility.md (primo test 24/10/2026).

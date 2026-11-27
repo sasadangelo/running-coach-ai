@@ -113,7 +113,7 @@ summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
 <body>
 <div class="wrap">
   <header>
-    <a href="dashboard.html">← Dashboard del piano</a>
+    <a href="index.html">← Fidippide</a> · <a href="dashboard.html">← Dashboard del piano</a>
     <h1>Progressi per tipo di seduta</h1>
     <p class="sub" id="subtitle"></p>
     <nav class="toc">
@@ -189,13 +189,25 @@ summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
         <div class="legend" id="l-tempo-hr"></div>
         <div class="chart" id="c-tempo-hr"></div>
       </div>
+      <div class="card">
+        <h3>Passo rispetto alla fascia</h3>
+        <p class="hint">passo medio dei blocchi (punto), km più veloce e più lento (barra), fascia attuale 6:15-6:35 dietro · più in alto = più veloce</p>
+        <div class="chart" id="c-tempo-band"></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3>Ogni km nella fascia <span class="badge decide">decisione</span></h3>
+      <p class="hint">una pallina per lap veloce (di solito 1 km), in ordine da sinistra a destra · +100% = limite veloce 6:15, 0 = metà fascia 6:25, -100% = limite lento 6:35</p>
+      <div class="chart" id="c-tempo-pos"></div>
+      <p class="read" id="r-tempo-pos"></p>
+      <p class="read">Le sedute fino a ottobre erano Tempo a ripetute con fascia 6:00-6:20: rispetto alla fascia di oggi stanno sul lato veloce o fuori, ed è giusto così. Da S9 il Tempo è continuo: qui conta se i km restano attorno alla metà fascia e se l'ultimo tiene come il primo. Il Tempo del 13/11 è stato interrotto dopo 1.4 km: il suo ultimo lap (6:45) pesa molto sulla media; senza quello il calo è di circa 6"/km (S9 4", S12 9").</p>
     </div>
     <div class="tw"><table id="t-tempo"></table></div>
   </section>
 
   <section id="ripetute">
     <h2>Ripetute</h2>
-    <p class="lead">Per ogni seduta: passo medio delle ripetute (punto), intervallo tra la più veloce e la più lenta (barra) e, dietro, la fascia di passo del piano per quella settimana: verde dentro la fascia, rosso fuori (sopra = troppo veloce, sotto = troppo lento). Una barra corta vuol dire ritmo regolare; una barra tutta nel verde vuol dire ripetute nella fascia. La FC qui viene dalla fascia H9: non va confrontata con le corse fatte col polso, e i picchi isolati sono artefatti.</p>
+    <p class="lead">Per ogni seduta: passo medio delle ripetute (punto), intervallo tra la più veloce e la più lenta (barra) e, dietro, la fascia attuale (200 m 5:10-5:30, metà 5:20; 400 m 5:20-5:40, metà 5:30; 800 m 5:35-5:55, metà 5:45), la stessa per tutte le sedute: verde dentro la fascia, rosso fuori (sopra = troppo veloce, sotto = troppo lento). Una barra corta vuol dire ritmo regolare; una barra tutta nel verde vuol dire ripetute nella fascia. La FC qui viene dalla fascia H9: non va confrontata con le corse fatte col polso, e i picchi isolati sono artefatti.</p>
     <div class="grid2">
       <div class="card">
         <h3>200 m</h3>
@@ -207,6 +219,19 @@ summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
         <p class="hint">passo · più in alto = più veloce</p>
         <div class="chart" id="c-int-400"></div>
       </div>
+      <div class="card">
+        <h3>800 m</h3>
+        <p class="hint">passo · più in alto = più veloce</p>
+        <div class="chart" id="c-int-800"></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3>Ogni ripetuta nella fascia <span class="badge decide">decisione</span></h3>
+      <p class="hint">una pallina per ripetuta, in ordine da sinistra a destra · +100% = limite veloce, 0 = metà fascia, -100% = limite lento</p>
+      <div class="legend" id="l-int-pos"></div>
+      <div class="chart" id="c-int-pos"></div>
+      <p class="read" id="r-int-pos"></p>
+      <p class="read">Il grafico sopra dice dove sta la seduta in media e quanto è regolare. Questo dice come la reggi: quante ripetute stanno sul lato veloce o su quello lento della metà fascia, e se le ultime scivolano verso il limite lento rispetto alle prime. Nelle ripetute la metà fascia è l'obiettivo; il lato veloce non è un merito (capitolo 12 della teoria).</p>
     </div>
     <div class="tw"><table id="t-int"></table></div>
   </section>
@@ -365,7 +390,7 @@ function timeDots(container, opts) {
     }
     for (const p of sp) {
       const g = el("g", {}, svg);
-      const cx = x(toDate(p.d).getTime());
+      const cx = x(toDate(p.d).getTime()) + (p.dx || 0);
       if (p.band) {
         // red outside the planned band (too fast above, too slow below), green inside it
         const ya = y(p.band[0]), yb = y(p.band[1]), top = Math.min(ya, yb), bottom = Math.max(ya, yb);
@@ -377,7 +402,7 @@ function timeDots(container, opts) {
       if (p.lo != null && p.hi != null) {
         el("line", { x1: cx, x2: cx, y1: y(p.lo), y2: y(p.hi), stroke: color, "stroke-width": 4, "stroke-linecap": "round", opacity: 0.45 }, g);
       }
-      el("circle", { cx, cy: y(p.y), r: 5, fill: p.hollow ? surface : color, stroke: p.hollow ? color : surface, "stroke-width": 2 }, g);
+      el("circle", { cx, cy: y(p.y), r: p.r || 5, fill: p.hollow ? surface : color, stroke: p.hollow ? color : surface, "stroke-width": p.r ? 1 : 2 }, g);
       const hit = el("circle", { cx, cy: y(p.y), r: 12, fill: "transparent" }, g);
       if (p.tip) bindTip(hit, p.tip);
     }
@@ -457,9 +482,23 @@ const aerobic = acts.filter(a => (a.type === "long" || a.type === "easy") && a.k
 const efOk = aerobic.filter(a => walkShare(a) <= 0.10 && metersPerBeat(a));
 const efExcluded = aerobic.filter(a => !efOk.includes(a));
 const tempoKm = a => sum((a.blocks || []).map(b => b.km));
-const repDist = a => { const m = a.name.match(/x\s*(\d+)/i); return m ? +m[1] : null; };
-const reps = a => (a.blocks || []).filter(b => Math.abs(b.km * 1000 - repDist(a)) <= 60);
-const bandOf = a => (a.target || {})[String(repDist(a))] || null;
+// every rep distance in the session name: "S13 Intervals 3x400+3x800" -> [400, 800]
+const dists = a => [...new Set([...a.name.matchAll(/\d+\s*x\s*(\d+)/gi)].map(m => +m[1]))];
+const reps = (a, d) => (a.blocks || []).filter(b => Math.abs(b.km * 1000 - d) <= Math.max(60, d * 0.08));
+const bandOf = (a, d) => (a.target || {})[String(d)] || null;
+// position of a pace in the band: +100 = fast edge, 0 = midpoint, -100 = slow edge
+const bandPos = (pace, band) => ((band[0] + band[1]) / 2 - pace) / ((band[1] - band[0]) / 2) * 100;
+// readout for band positions [{p, i, n}]: counts per side and last-vs-first drift
+function posLine(label, all) {
+  const fast = all.filter(v => v.p > 0 && v.p <= 100).length, slow = all.filter(v => v.p <= 0 && v.p >= -100).length;
+  const outF = all.filter(v => v.p > 100).length, outS = all.filter(v => v.p < -100).length;
+  const firsts = all.filter(v => v.i === 0 && v.n > 1).map(v => v.p), lasts = all.filter(v => v.i === v.n - 1 && v.n > 1).map(v => v.p);
+  const drift = firsts.length ? mean(lasts) - mean(firsts) : null;
+  return `<b>${label}</b> (${all.length}): lato veloce ${fast}, lato lento ${slow}, fuori veloce ${outF}, fuori lento ${outS}` +
+    // all bands are 20"/km wide, so 100 points = 10"/km
+    (drift != null ? `; l'ultima rispetto alla prima: ${Math.abs(drift / 10).toFixed(1)}"/km ${drift < 0 ? "più lenta" : "più veloce"}${drift < -25 ? " (le ultime calano)" : drift > 25 ? " (si chiude più forte)" : " (tenuta)"}` : "");
+}
+const REP_COLORS = { 200: "--s4", 400: "--s1", 800: "--s2" };
 const tempLabel = a => a.temp == null ? "" : ` · ${a.temp}°C`;
 
 /* ---------- render ---------- */
@@ -577,25 +616,68 @@ function render() {
       return [fmtDay(a.date), a.name, bl.map(b => fmtNum(b.km, 1)).join(" + "), fmtNum(km, 1), km ? fmtPace(sec / km) : "–", hr ?? "–", drift != null ? (drift > 0 ? "+" : "") + drift : "–", a.rpe ?? "–", a.temp ?? "–"];
     }));
 
+  /* tempo in the band */
+  const TB = DATA.tempoBand, tDomain = tempos.map(a => a.date);
+  const tempoLaps = a => a.workLaps || [];
+  timeDots(document.getElementById("c-tempo-band"), {
+    series: [{ color: "--s3", line: true, points: tempos.filter(a => tempoLaps(a).length).map(a => {
+      const l = tempoLaps(a), p = l.map(x => x.pace), avg = sum(l.map(x => x.sec || x.pace * x.km)) / sum(l.map(x => x.km));
+      return { d: a.date, y: avg, lo: Math.min(...p), hi: Math.max(...p), band: TB,
+        tip: `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${l.map(x => `${fmtNum(x.km, 1)} km a ${fmtPace(x.pace)}`).join(" · ")}<br>in fascia ${p.filter(v => v >= TB[0] && v <= TB[1]).length}/${p.length} · RPE ${a.rpe ?? "–"}` };
+    }) }], invert: true, yFmt: fmtPace, domain: tDomain, yMin: 345, yMax: 410,
+  });
+  timeDots(document.getElementById("c-tempo-pos"), {
+    series: [{ color: "--s3", points: tempos.flatMap(a => tempoLaps(a).map((x, i, arr) => ({ d: a.date, y: Math.max(-160, Math.min(160, bandPos(x.pace, TB))), dx: (i - (arr.length - 1) / 2) * 6, r: 4,
+      tip: `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>lap ${i + 1} di ${arr.length}: ${fmtNum(x.km, 2)} km a ${fmtPace(x.pace)}/km · FC ${x.hr ?? "–"}` }))) }],
+    yFmt: v => (v > 0 ? "+" : "") + Math.round(v) + "%", domain: tDomain, yMin: -160, yMax: 160, height: 240,
+    refs: [{ y: 100, label: "6:15" }, { y: 0, label: "metà fascia 6:25" }, { y: -100, label: "6:35" }],
+  });
+  const tRead = (label, list) => {
+    const all = list.flatMap(a => tempoLaps(a).map((x, i, arr) => ({ p: bandPos(x.pace, TB), i, n: arr.length })));
+    return all.length ? posLine(label, all) : "";
+  };
+  const contTempos = tempos.filter(a => a.date >= "2026-10-29");
+  document.getElementById("r-tempo-pos").innerHTML = [tRead("Tempo continuo (da S9)", contTempos), tRead("Tutti i Tempo", tempos)].filter(Boolean).join("<br>");
+
   /* intervals */
   const domain = intervals.map(a => a.date);
-  for (const dist of [200, 400]) {
-    const sess = intervals.filter(a => repDist(a) === dist && reps(a).length);
+  for (const dist of [200, 400, 800]) {
+    const sess = intervals.filter(a => dists(a).includes(dist) && reps(a, dist).length);
     const points = sess.map(a => {
-      const r = reps(a), p = r.map(b => b.pace), band = bandOf(a);
+      const r = reps(a, dist), p = r.map(b => b.pace), band = bandOf(a, dist);
       const inBand = band ? `<br>fascia del piano ${fmtPace(band[0])}-${fmtPace(band[1])} · in fascia ${p.filter(v => v >= band[0] && v <= band[1]).length}/${p.length}` : "";
       return { d: a.date, y: mean(p), lo: Math.min(...p), hi: Math.max(...p), band,
         tip: `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${r.length} ripetute · media ${fmtPace(mean(p))}/km<br>migliore ${fmtPace(Math.min(...p))} · peggiore ${fmtPace(Math.max(...p))}${inBand}<br>RPE ${a.rpe ?? "–"}` };
     });
     timeDots(document.getElementById("c-int-" + dist), {
-      series: [{ color: "--s4", line: true, points }], invert: true, yFmt: fmtPace, domain,
-      yMin: 280, yMax: 360,
+      series: [{ color: REP_COLORS[dist], line: true, points }], invert: true, yFmt: fmtPace, domain,
+      yMin: 280, yMax: 370,
     });
   }
+  /* every rep inside its band */
+  const posSeries = [200, 400, 800].map(dist => ({
+    color: REP_COLORS[dist],
+    points: intervals.flatMap(a => {
+      const band = bandOf(a, dist), r = band ? reps(a, dist) : [];
+      return r.map((b, i) => ({ d: a.date, y: Math.max(-160, Math.min(160, bandPos(b.pace, band))), dx: (i - (r.length - 1) / 2) * 5, r: 3.5,
+        tip: `<b>${a.name}</b><br><span class="m">${fmtDay(a.date)}${tempLabel(a)}</span><br>${dist} m n. ${i + 1} di ${r.length}: ${fmtPace(b.pace)}/km · FC ${b.hr ?? "–"}<br>fascia ${fmtPace(band[0])}-${fmtPace(band[1])}, metà ${fmtPace((band[0] + band[1]) / 2)}` }));
+    }),
+  })).filter(s => s.points.length);
+  legend("l-int-pos", posSeries.map(s => ({ name: { "--s4": "200 m", "--s1": "400 m", "--s2": "800 m" }[s.color], color: s.color, cls: "dot" })));
+  timeDots(document.getElementById("c-int-pos"), {
+    series: posSeries, yFmt: v => (v > 0 ? "+" : "") + Math.round(v) + "%", domain, yMin: -160, yMax: 160, height: 260,
+    refs: [{ y: 100, label: "limite veloce" }, { y: 0, label: "metà fascia" }, { y: -100, label: "limite lento" }],
+  });
+  const posRead = [200, 400, 800].map(dist => {
+    const all = intervals.flatMap(a => { const band = bandOf(a, dist); return band ? reps(a, dist).map((b, i, arr) => ({ p: bandPos(b.pace, band), i, n: arr.length })) : []; });
+    if (!all.length) return "";
+    return posLine(`${dist} m`, all);
+  }).filter(Boolean);
+  document.getElementById("r-int-pos").innerHTML = posRead.join("<br>");
   table("t-int", [{ t: "Data", l: 1 }, { t: "Seduta", l: 1 }, { t: "Rip." }, { t: "km veloci" }, { t: "Media" }, { t: "Migliore" }, { t: "Peggiore" }, { t: "Scarto" }, { t: "Fascia piano" }, { t: "In fascia" }, { t: "FC media rip. (fascia)" }, { t: "RPE" }],
-    intervals.map(a => {
-      const r = reps(a), p = r.map(b => b.pace), hrs = r.map(b => b.hr).filter(Boolean);
-      return [fmtDay(a.date), a.name, r.length, fmtNum(sum(r.map(b => b.km)), 1), fmtPace(mean(p)), fmtPace(Math.min(...p)), fmtPace(Math.max(...p)), (Math.max(...p) - Math.min(...p)) + "\"", bandOf(a) ? fmtPace(bandOf(a)[0]) + "-" + fmtPace(bandOf(a)[1]) : "–", bandOf(a) ? p.filter(v => v >= bandOf(a)[0] && v <= bandOf(a)[1]).length + "/" + p.length : "–", hrs.length ? Math.round(mean(hrs)) : "–", a.rpe ?? "–"];
+    intervals.flatMap(a => dists(a).map(d => [a, d])).filter(([a, d]) => reps(a, d).length).map(([a, d]) => {
+      const r = reps(a, d), p = r.map(b => b.pace), hrs = r.map(b => b.hr).filter(Boolean), band = bandOf(a, d);
+      return [fmtDay(a.date), `${a.name} · ${d} m`, r.length, fmtNum(sum(r.map(b => b.km)), 1), fmtPace(mean(p)), fmtPace(Math.min(...p)), fmtPace(Math.max(...p)), (Math.max(...p) - Math.min(...p)) + "\"", band ? fmtPace(band[0]) + "-" + fmtPace(band[1]) : "–", band ? p.filter(v => v >= band[0] && v <= band[1]).length + "/" + p.length : "–", hrs.length ? Math.round(mean(hrs)) : "–", a.rpe ?? "–"];
     }));
 
   /* volume */

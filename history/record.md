@@ -1,6 +1,6 @@
 # Record e numeri 2016-2026
 
-**Aggiornato al 25 ottobre 2026.** Calcolati su tutte le attività Garmin dal 24 aprile 2016 a oggi (`storico/<anno>/` e `training-log/`), camminate e run/walk compresi. Esclusi gli errori GPS di gennaio 2017 (passi sotto 5:10/km senza FC). Da aggiornare a ogni gara obiettivo e a fine anno.
+**Aggiornato al 25 ottobre 2026.** Calcolati su tutte le attività Garmin dal 24 aprile 2016 a oggi (`history/<anno>/` e `training-log/`), camminate e run/walk compresi. Esclusi gli errori GPS di gennaio 2017 (passi sotto 5:10/km senza FC). Da aggiornare a ogni gara obiettivo e a fine anno.
 
 ## Totali
 - **866 attività, 5.290 km, ~658 ore** in 10 anni e mezzo.

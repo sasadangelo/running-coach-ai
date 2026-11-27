@@ -17,7 +17,7 @@ aggiornato: 2026-11-27 · creato con l'onboarding (`.claude/skills/running-coach
 - Orologio: Forerunner 255 Music, potenza al polso (dati da giugno 2025); di notte quasi sempre, a volte no o allentato
 - FC: fascia Polar H9 solo nelle ripetute; polso per Tempo e lunghi
 - Forerunner 235 registrato su Garmin, non usato
-- Sync: training-log dal 2026-08-24; storico/ dal 2016-04-24 al 2026-08-23 (completo). 2014-2016 su Runtastic, non importato
+- Sync: training-log dal 2026-08-24; history/ dal 2016-04-24 al 2026-08-23 (completo). 2014-2016 su Runtastic, non importato
 
 ## Attrezzatura
 | Scarpa | Uso | Dal | km | Pensione a |
@@ -26,7 +26,7 @@ aggiornato: 2026-11-27 · creato con l'onboarding (`.claude/skills/running-coach
 - Ritirate: Glycerin 20 (992 km), 18 (1366), 14 (1787). Scarpa assegnata a mano a ogni corsa
 - Luoghi: ripetute al Parco Villa Guglielmi; Tempo e lungo con riscaldamento al parco, poi Lungomare della Salute; forza della domenica al parco
 
-## Storia di corsa (dettagli in storico/)
+## Storia di corsa (dettagli in history/)
 - Corre da ottobre 2014; 866 attività, 5290 km (2016-2026)
 - Migliori: 10K 53' ufficiali (Garmin 54:15 su 9.94 km), 2017-12-03, VDOT 37.4 · Roma 5K 2026-11-08: 5.17 km in 32:28 (GPS)
 - Massimi: settimana 36.4 km, corsa 15 km (nov 2017), anno 965 km (2017)

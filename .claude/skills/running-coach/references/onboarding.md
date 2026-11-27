@@ -11,7 +11,7 @@ than ~8 weeks, a goal date passed) and ask only about what changed.
 
 - **Pre-fill first.** Before asking anything, read what already exists: Garmin (once connected
   and synced), `nutrition-log/nutrition-profile.json`, `nutrition-log/measurements.md`,
-  `storico/`, `long-term-goals.md`. Show the pre-filled values and ask the athlete to
+  `history/`, `long-term-goals.md`. Show the pre-filled values and ask the athlete to
   confirm or correct them, rather than asking again.
 - **One section at a time**, in the order below. Wait for the answer before the next section.
   Sections 1-4 come first: the sync in section 4 pre-fills most of the rest.
@@ -65,11 +65,11 @@ A long Garmin history takes many calls and a long time. Don't download it all at
    data (resting HR, HRV, sleep) for the same days. This is enough to set the zones, read the
    current load and start coaching.
 2. **History afterwards, newest year first**, in small chunks over later sessions:
-   `garmin_sync.py --output-dir storico/<year> ...` one week at a time, never into
+   `garmin_sync.py --output-dir history/<year> ...` one week at a time, never into
    `training-log/`. Find the first activity date first, so the coach knows where the history
    ends. Stop and resume on Garmin errors or rate limits; skip years already present.
-3. **One analysis per year** (`storico/analisi-<year>.md`) as each year lands, and the overview
-   in `storico/README.md`. Ask the athlete about the gaps and the peaks while the year is fresh.
+3. **One analysis per year** (`history/analisi-<year>.md`) as each year lands, and the overview
+   in `history/README.md`. Ask the athlete about the gaps and the peaks while the year is fresh.
 
 Tell the athlete what was synced (date ranges, activity counts) and what is still to come.
 Earlier apps that are not in Garmin (e.g. phone apps) are noted in the history, not imported.
@@ -90,7 +90,7 @@ at onboarding and at each review.
 
 ## 6. Running history
 
-A short summary, not the whole archive (details stay in `storico/`):
+A short summary, not the whole archive (details stay in `history/`):
 
 - since when they run, and with what continuity;
 - best results: distance, time, date; watch time and official time when they differ;
@@ -101,7 +101,7 @@ A short summary, not the whole archive (details stay in `storico/`):
 - methods tried that didn't work for them, and what did;
 - other sports, past and present.
 
-Pre-fill from `storico/` when it exists, then ask about the *why* behind the gaps and peaks
+Pre-fill from `history/` when it exists, then ask about the *why* behind the gaps and peaks
 (two or three questions are enough). Comparisons with past years match blocks at the same
 stage and prior base, not calendar weeks.
 
@@ -180,7 +180,7 @@ updated: YYYY-MM-DD
 - Platforms: Garmin Connect (sync: garmin-sync, credentials in .env)
 - Watch: model, wrist power yes/no; worn at night: always / sometimes
 - HR: wrist for ...; chest strap (model) for ...
-- Sync: training-log from YYYY-MM-DD; history in storico/ YYYY-YYYY (still to sync: ...)
+- Sync: training-log from YYYY-MM-DD; history in history/ YYYY-YYYY (still to sync: ...)
 
 ## Gear
 | Shoe | Use | Since | km | Retire at |

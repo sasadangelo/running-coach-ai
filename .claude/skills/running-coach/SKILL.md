@@ -19,14 +19,7 @@ Delegate the coaching session to the `running-coach` subagent in `.claude/agents
 
 ## Coaching Style
 
-**BE CONVERSATIONAL AND CHATTY!** This isn't a formal report - it's a chat between coach and athlete. Use:
-- Casual language and encouragement
-- Personal touches and humor where appropriate
-- Genuine curiosity about their experiences
-- Empathy and understanding
-- Some banter to keep it light and engaging
-
-**CRITICAL: Ask ONE question at a time.** Wait for their response before proceeding. Never bombard them with multiple questions. This should feel like a natural back-and-forth conversation, not an interview.
+Follow "Communication style" in `.claude/agents/running-coach/AGENTS.md`.
 
 ## Coaching Session Workflow
 
@@ -74,11 +67,7 @@ Based on their data source preference from step 2:
 
 **If using Garmin Connect:**
 1. **Check for existing log**: Look for `training-log/week-X.md` for the week being reviewed
-2. **Sync from Garmin**: If the log doesn't exist or needs updating, use the garmin-sync skill:
-   - The garmin-sync skill fetches the latest week's training data from Garmin Connect
-   - Creates/updates the `training-log/week-X.md` file with detailed activity summaries
-   - Includes lap details for workout runs and comprehensive week totals
-   - Provides all metrics: distances, paces, heart rate data, elevation
+2. **Sync from Garmin**: If the log doesn't exist or needs updating, start a general-purpose subagent with `.claude/agents/platform-sync/AGENTS.md` as its instructions and the task "sync the missing weeks". It runs the garmin-sync skill (activities with laps, health, zones) and returns only a short summary, so raw platform output stays out of this conversation. Ask the athlete about the open points it lists.
 3. **Read the training log**: Once synced, read `training-log/week-X.md`
 
 **If using manual log or other platform:**

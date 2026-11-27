@@ -81,7 +81,7 @@ Due settimane leggere dopo la 10K. Domenica 9/5 la **Race for the Cure Roma** (1
 - **11 settimane** (17 maggio - 1 agosto). Unica gara: una 5K serale 🏃 per divertimento a giugno, se il caldo lo permette.
 - **Contenuto:** quasi tutto lento, al mattino presto; allunghi; forza; un solo lavoro di qualità leggero a settimana (fartlek o salite brevi).
 - **Volume:** 30 → ~32 km su 4 giorni; lungo 12-13 km.
-- **Il passo non conta:** d'estate si giudicano FC e sensazioni, e si confronta con l'estate prima, mai con la primavera. Il calo di passo col caldo è fisiologia, non forma persa ([pattern 6](storico/pattern-ricorrenti.md)).
+- **Il passo non conta:** d'estate si giudicano FC e sensazioni, e si confronta con l'estate prima, mai con la primavera. Il calo di passo col caldo è fisiologia, non forma persa ([pattern 6](history/pattern-ricorrenti.md)).
 - **Scopo:** costruire la base per l'autunno senza il carico delle gare. Se il caldo pesa, il volume si sposta su bici o ellittica.
 - **Perché conta:** nel 2026 l'ultima corsa è del 5 luglio, poi 7 settimane a 0 km. Lo stesso era successo nel 2016, 2017, 2019, 2021 e 2025. Lo scopo dell'estate è **non fermarsi**: il successo si misura in **settimane con almeno 2 corse**, non in km.
 - **All'alba:** da metà giugno la scuola è chiusa, quindi si esce alle 6:00-6:30 (22-24°C invece dei 28-30 delle 8:30). Anche il lungo del weekend parte a quell'ora.

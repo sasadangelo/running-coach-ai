@@ -62,7 +62,7 @@ Corro principalmente **per stare bene**. Faccio l'informatico: passo otto ore se
 E ho un'evidenza personale: **quando corro i malanni passano, mi ammalo di meno e sto meglio di umore**. Quando smetto ricominciano reflusso, tosse, influenze.
 
 ### Cosa dicono i miei dati
-La [mia storia](../storico/la-mia-storia.md) è coerente con questa osservazione:
+La [mia storia](../history/la-mia-storia.md) è coerente con questa osservazione:
 - **dal 2019 al 2024 mi sono fermato sei anni su sei tra fine ottobre e novembre**, e i malanni più lunghi sono arrivati in quei periodi o subito dopo;
 - **il periodo peggiore di salute** (primavera 2024: un malanno con 20 giorni di stop, l'intervento ai turbinati, tre settimane di tosse forte) è arrivato dopo cinque mesi senza corsa;
 - **i periodi migliori** (2017, maggio-ottobre 2024, autunno 2026) sono quelli in cui ho corso con continuità.

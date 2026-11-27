@@ -1,6 +1,6 @@
 # Periodizzazione pluriennale 2026-2028
 
-**Definita:** 25 ottobre 2026 · **Collegati:** [obiettivi a lungo termine](obiettivi-lungo-termine.md), [piano in corso](training-plan.md), teoria: [16 Periodizzazione](teoria/16-periodizzazione.md)
+**Definita:** 25 ottobre 2026 · **Collegati:** [obiettivi a lungo termine](long-term-goals.md), [piano in corso](training-plan.md), teoria: [16 Periodizzazione](teoria/16-periodizzazione.md)
 
 Come si arriva agli obiettivi a lungo termine, piano per piano. **Le date delle gare sono ipotetiche** e vanno verificate sui calendari FIDAL Lazio; quando una data cambia si spostano i confini dei piani, non la struttura. Ogni piano si scrive in dettaglio solo durante la transizione che lo precede, con il VDOT dell'ultima gara.
 
@@ -28,7 +28,7 @@ Come si arriva agli obiettivi a lungo termine, piano per piano. **Le date delle 
 | — | Transizione | 6-26 dic 2027 | 3 | | | | |
 | **P6** | Inverno: prima mezza maratona (RomaOstia) | 27 dic 2027 - fine feb 2028 | ~9 | 1 | 0 | ~38 km | 4 |
 
-**Totale 2027:** 4 piani più l'inizio di P6 (47 settimane, con 2 transizioni e 1 settimana di recupero), **3 gare obiettivo** e **7 gare allenanti**. È la regola di [obiettivi a lungo termine](obiettivi-lungo-termine.md#gare): circa una gara al mese escluso luglio-agosto, una su tre corsa al massimo, 3-4 obiettivi all'anno ad almeno 6-8 settimane di distanza (Acea → Tor Vergata 7 settimane, Best Woman → RomaOstia 12).
+**Totale 2027:** 4 piani più l'inizio di P6 (47 settimane, con 2 transizioni e 1 settimana di recupero), **3 gare obiettivo** e **7 gare allenanti**. È la regola di [obiettivi a lungo termine](long-term-goals.md#gare): circa una gara al mese escluso luglio-agosto, una su tre corsa al massimo, 3-4 obiettivi all'anno ad almeno 6-8 settimane di distanza (Acea → Tor Vergata 7 settimane, Best Woman → RomaOstia 12).
 
 **Revisione del 1/11/2026 (calendario gare del Lazio 2026-2027):** a febbraio non ci sono 5K, quindi l'obiettivo si sposta all'Acea Water Fun Run del 13/3 e P2 passa a 12 settimane. P3 si accorcia a 6 settimane, perché Tor Vergata (2/5) resta la 10K giusta: inizio maggio e al mattino. La Best Woman resta l'obiettivo di dicembre, essendo la 10K preferita e veloce. La Mezza di Fiumicino (~28/11) è esclusa perché cade una settimana prima; Sabaudia è troppo lontana (1h30 da casa), quindi la prima mezza passa alla **RomaOstia di fine febbraio 2028**: vicina, piatta, al fresco. L'autunno 2027 diventa un blocco lungo tutto per la Best Woman, senza il carico di una mezza nelle gambe.
 
@@ -128,7 +128,7 @@ Due macrocicli più lunghi, perché la base c'è:
 4. **Le gare allenanti sostituiscono una seduta del piano**, non si aggiungono. Se una gara allenante si corre al massimo diventa una gara obiettivo e costa una settimana.
 5. **Il volume cresce solo con corse facili:** la qualità resta 2 sedute a settimana.
 6. **La fascia plantare decide su tutto:** se il fastidio al mattino torna, si riducono i volumi prima di qualsiasi altra cosa.
-7. **Si rivede tutto dopo ogni gara obiettivo:** tempi, VDOT e probabilità in [obiettivi-lungo-termine.md](obiettivi-lungo-termine.md).
+7. **Si rivede tutto dopo ogni gara obiettivo:** tempi, VDOT e probabilità in [long-term-goals.md](long-term-goals.md).
 8. **La regola di novembre.** Dal 2019 al 2024 ogni stagione si è fermata tra fine ottobre e novembre: picchi di lavoro e, prima dello smart working, corse serali al buio dopo il cambio d'ora. Contromisure:
    - **correre al mattino** nei giorni fissi (oggi martedì e venerdì dopo l'accompagnamento a scuola, domenica mattina); la sera solo come eccezione. Il 4° giorno di P3 andrà trovato anche lui al mattino;
    - **settimana minima nei periodi di lavoro pesante:** invece di fermarsi, 2 dei 3 giorni fissi (es. martedì e domenica) con corse facili da 20-30', senza qualità. Il piano si mette in pausa, la corsa no;

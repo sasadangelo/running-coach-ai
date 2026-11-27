@@ -10,7 +10,7 @@
 
 | Quando | Obiettivo | Probabilità stimata | Stato |
 |---|---|---|---|
-| 8 novembre 2026 | Roma 5K tutta di corsa, al meglio (senza puntare al tempo) | ~95% | ⏳ |
+| 8 novembre 2026 | Roma 5K tutta di corsa, al meglio (senza puntare al tempo) | ~95% | ✅ 5.17 km in 32:28 (GPS) |
 | 6 dicembre 2026 | Best Woman 10K, corsa tutta o quasi (almeno 8-9 km continui) | ~70% tutta di corsa | ⏳ |
 | 13 marzo 2027 | **5K sotto 30'** (Acea Water Fun Run) | ~80% (12 settimane di preparazione; la partenza affollata può costare qualche secondo) | ⏳ |
 | 2 maggio 2027 | **10K sotto 1h** (Corri a Tor Vergata) | ~80-85% (7 settimane dopo la 5K) | ⏳ |
@@ -50,7 +50,7 @@
 
 ### Calendario indicativo
 
-Piani di allenamento, settimane e gare per ogni piano: [periodizzazione-pluriennale.md](periodizzazione-pluriennale.md).
+Piani di allenamento, settimane e gare per ogni piano: [multi-year-periodization.md](multi-year-periodization.md).
 
 *Date dal calendario gare del Lazio 2026-2027 (maratoneta.it, letto il 1/11/2026). Quelle dopo giugno 2027 sono stimate dalle edizioni precedenti: vanno verificate quando escono i calendari.*
 

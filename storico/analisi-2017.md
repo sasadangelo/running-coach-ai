@@ -37,5 +37,5 @@
 - **Il corpo risponde in fretta alla struttura**, ma su una base già costruita. L'autunno 2017 (+2.5 punti di VDOT in due-tre mesi) arrivava dopo 17 mesi di corsa e non si può confrontare con una ripresa da fermo.
 - **Il volume da solo non basta.** Il primo blocco con 3 uscite regolari (6 marzo - 21 maggio: 21 km a settimana, lunghi fino a 13.9 km, 135 km nelle 8 settimane prima) chiude con il VDOT **in calo** (34.9 → 33.3): il lento era in zona grigia e la qualità quasi assente. Il blocco S1-S11 del 2026, partito da fermo con 14 km a settimana, è salito di 2.5-3 punti. Dettagli nel [confronto tra i blocchi 2016, 2017 e 2026](confronto-blocchi-2016-2017-2026.md).
 - **Il lento vero è il pezzo che mancava:** è la differenza più grande tra il metodo di allora e quello di oggi, e probabilmente il margine più grande.
-- **L'estate va protetta** (P4 della [periodizzazione pluriennale](../periodizzazione-pluriennale.md)); **scarichi programmati** invece che imposti da malanni.
-- **Il PB vale VDOT 37.4 a 43 anni.** A 52 anni il confronto onesto è con l'età: batterlo è un bonus, non un obiettivo (vedi [obiettivi a lungo termine](../obiettivi-lungo-termine.md)).
+- **L'estate va protetta** (P4 della [periodizzazione pluriennale](../multi-year-periodization.md)); **scarichi programmati** invece che imposti da malanni.
+- **Il PB vale VDOT 37.4 a 43 anni.** A 52 anni il confronto onesto è con l'età: batterlo è un bonus, non un obiettivo (vedi [obiettivi a lungo termine](../long-term-goals.md)).

@@ -64,7 +64,7 @@ Gli stessi blocchi hanno nomi diversi nelle varie scuole:
 
 ### L'anno e il pluriennale
 - **Anno:** uno, due o tre macrocicli (periodizzazione **singola, doppia o tripla**). Per un amatore la doppia è la più comune: una stagione primaverile e una autunnale. Tra un macrociclo e l'altro c'è sempre una transizione.
-- **Pluriennale:** gli obiettivi a lungo termine (per l'autore: [obiettivi-lungo-termine.md](../obiettivi-lungo-termine.md)). Ogni anno costruisce la base del successivo: il volume e i tendini crescono in anni, non in settimane.
+- **Pluriennale:** gli obiettivi a lungo termine (per l'autore: [long-term-goals.md](../long-term-goals.md)). Ogni anno costruisce la base del successivo: il volume e i tendini crescono in anni, non in settimane.
 
 ## 3. Come ci si riposa alla fine di un macrociclo
 
@@ -128,7 +128,7 @@ Nella pratica i modelli si mescolano. Le regole comuni: **un focus per blocco**,
 
 **Limiti:** un solo macrociclo, con molte cose cambiate insieme (piano, ritmi, sonno, forza). Che gli scarichi abbiano aiutato è plausibile, ma con questi dati non è dimostrabile.
 
-**Il prossimo passo:** dopo la 10K del 6 dicembre, **2 settimane di transizione** (metà dicembre), poi un nuovo macrociclo verso la 5K sotto 30' (gennaio-febbraio 2027), con la forza in palestra da gennaio. Per l'età, valutare mesocicli 2+1 quando il volume supera quello di quest'autunno. Il piano completo 2026-2028 è in [periodizzazione-pluriennale.md](../periodizzazione-pluriennale.md).
+**Il prossimo passo:** dopo la 10K del 6 dicembre, **2 settimane di transizione** (metà dicembre), poi un nuovo macrociclo verso la 5K sotto 30' (gennaio-febbraio 2027), con la forza in palestra da gennaio. Per l'età, valutare mesocicli 2+1 quando il volume supera quello di quest'autunno. Il piano completo 2026-2028 è in [multi-year-periodization.md](../multi-year-periodization.md).
 
 ## 6. Cosa vale per tutti
 

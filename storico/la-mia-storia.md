@@ -59,7 +59,7 @@ Il 24 ottobre faccio il primo test di forza e mobilità: il lato debole è il **
 8. **Funziono quando misuro, scrivo e corro al mattino.**
 
 ## Lo sguardo avanti
-Il piano pluriennale ([periodizzazione](../periodizzazione-pluriennale.md)) porta, se c'è continuità:
+Il piano pluriennale ([periodizzazione](../multi-year-periodization.md)) porta, se c'è continuità:
 
 | Quando | Obiettivo | VDOT necessario | VDOT atteso |
 |---|---|---|---|

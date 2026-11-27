@@ -76,7 +76,7 @@ La [mia storia](../storico/la-mia-storia.md) è coerente con questa osservazione
 Quindi i miei dati **illustrano** quello che dice la letteratura, non lo dimostrano. Ma per decidere *perché* correre non serve una dimostrazione: basta sapere che la direzione è quella giusta.
 
 ### Il mio modo di correre
-Mi piace correre **in modo strutturato**: misurare, scrivere, pianificare. Per questo ho un piano a lungo termine, la [periodizzazione 2026-2028](../periodizzazione-pluriennale.md), diviso in obiettivi più piccoli da raggiungere uno alla volta. Ecco come i miei [obiettivi a lungo termine](../obiettivi-lungo-termine.md) passano il filtro SMART:
+Mi piace correre **in modo strutturato**: misurare, scrivere, pianificare. Per questo ho un piano a lungo termine, la [periodizzazione 2026-2028](../multi-year-periodization.md), diviso in obiettivi più piccoli da raggiungere uno alla volta. Ecco come i miei [obiettivi a lungo termine](../long-term-goals.md) passano il filtro SMART:
 
 | Obiettivo              | S                      | M                           | A                                                               | R                                                         | T                  |
 |------------------------|------------------------|-----------------------------|-----------------------------------------------------------------|-----------------------------------------------------------|--------------------|

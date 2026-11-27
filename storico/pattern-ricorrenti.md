@@ -19,7 +19,7 @@
 ## 1. Lo stop d'autunno
 - **Nei dati:** dal 2019 al 2024 l'ultima corsa prima di una pausa lunga cade sempre tra il 31 ottobre e il 25 novembre. Pause da 54 a 290 giorni.
 - **Perché (atleta):** picchi di lavoro (2024: un progetto "con gli occhi dell'intero team", "un incubo") e, prima dello smart working, corse solo serali al buio dopo il cambio d'ora.
-- **Antidoto:** corse al mattino (martedì, venerdì, domenica); settimana minima nelle settimane di lavoro pesante; mai più di 7 giorni senza correre ([regola 8](../periodizzazione-pluriennale.md)).
+- **Antidoto:** corse al mattino (martedì, venerdì, domenica); settimana minima nelle settimane di lavoro pesante; mai più di 7 giorni senza correre ([regola 8](../multi-year-periodization.md)).
 
 ## 2. "Dopo tre settimane di lento diventa faticoso e non mi diverto"
 - **Nei dati:** 2020, 2021 e 2023 sono pieni di run/walk con FC 120-136 (Maffetone): 212, 238 e 410 km. Sono gli anni con il VDOT più basso (~25-29) e con i lunghi più corti (8-10 km). Nel 2021 l'atleta passa due volte dal lentissimo al medio e ritorno.
@@ -62,7 +62,7 @@
 
 ## 7. Il metodo che cambia
 - **Nei dati e nel racconto:** Pizzolato (2017), Maffetone (2018-2023), corsa "normale" a ritmo medio (2022), un piano a zone fatto da sé (2023-2024), Garmin Coach (2025). Molti libri letti, ogni metodo provato per qualche settimana o mese e abbandonato quando i progressi tardavano.
-- **Antidoto:** un **piano pluriennale scritto** ([periodizzazione](../periodizzazione-pluriennale.md)) con fasi chiare e criteri di revisione fissi (dopo ogni gara obiettivo), invece di cambiare metodo quando la motivazione cala. La teoria si studia in [teoria/](../teoria/README.md), ma si cambia il piano solo con i dati.
+- **Antidoto:** un **piano pluriennale scritto** ([periodizzazione](../multi-year-periodization.md)) con fasi chiare e criteri di revisione fissi (dopo ogni gara obiettivo), invece di cambiare metodo quando la motivazione cala. La teoria si studia in [teoria/](../teoria/README.md), ma si cambia il piano solo con i dati.
 
 ## 8. Nessuno scarico programmato
 - **Nei dati:** fino al 2023 il volume sale e scende a caso (2017: 36 → 17 → 33 → 17 km a settimana). Le pause le decidono malanni e impegni. Le prime settimane di scarico volute compaiono a ottobre 2023 e ottobre 2024.

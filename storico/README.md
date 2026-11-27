@@ -45,4 +45,4 @@ I VDOT di 2019-2025 vengono spesso da corse in allenamento, non da gare: sono un
 3. **Gli anni del run/walk lento (2020, 2021, 2023)** sono anche quelli con il VDOT più basso (~25-29) e lunghi corti (8-10 km). Corrisponde al racconto dell'atleta: il metodo Maffetone con poco volume e molte interruzioni non dava progressi visibili e la voglia passava.
 4. **Ogni ripresa riparte da capo:** VDOT 25-29 quasi ogni anno, contro il 37.4 del 2017.
 
-**Rischio per l'autunno 2026:** il piano attuale arriva alla 10K del 6 dicembre proprio nella finestra in cui, negli ultimi sei anni, l'atleta si è sempre fermato. Contromisure in [periodizzazione-pluriennale.md](../periodizzazione-pluriennale.md) (regola 8).
+**Rischio per l'autunno 2026:** il piano attuale arriva alla 10K del 6 dicembre proprio nella finestra in cui, negli ultimi sei anni, l'atleta si è sempre fermato. Contromisure in [multi-year-periodization.md](../multi-year-periodization.md) (regola 8).

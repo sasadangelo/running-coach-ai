@@ -228,7 +228,7 @@ def fetch_weather(client: Garmin, activity_id: int) -> dict | None:
 
 
 def heat_band(weather: dict) -> str | None:
-    """Summer decision bands (periodizzazione-pluriennale.md, P4): apparent temperature or dew point."""
+    """Summer decision bands (multi-year-periodization.md, P4): apparent temperature or dew point."""
     apparent = weather["apparent_c"] if weather["apparent_c"] is not None else weather["temp_c"]
     dew = weather["dew_point_c"]
     if apparent > 28 or (dew is not None and dew > 21):

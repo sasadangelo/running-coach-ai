@@ -34,7 +34,7 @@ Nel 490 a.C. Fidippide corse da Maratona ad Atene per annunciare la vittoria, e 
 | | |
 |---|---|
 | 🏃 **Il piano attuale** | [training-plan.md](training-plan.md): Roma 5K (8 novembre 2026) + Best Woman 10K (6 dicembre 2026), 14 settimane |
-| 🎯 **Gli obiettivi a lungo termine** | [obiettivi-lungo-termine.md](obiettivi-lungo-termine.md): dal 5K sotto 30' alla mezza maratona, con probabilità stimate e tetti realistici |
+| 🎯 **Gli obiettivi a lungo termine** | [long-term-goals.md](long-term-goals.md): dal 5K sotto 30' alla mezza maratona, con probabilità stimate e tetti realistici |
 | 📊 **La dashboard** | [dashboard](https://sasadangelo.github.io/running-coach-ai/dashboard.html) e [progressi per tipo di seduta](https://sasadangelo.github.io/running-coach-ai/progressi.html), pubblicati sul sito ([sorgenti in docs/](docs/)): volume, sedute, ritmi, resistenza aerobica, profilo mensile, carico di allenamento |
 | 📚 **Teoria e appunti** | [teoria/](teoria/README.md): quello che imparo, usando me stesso come cavia (esperimento N=1) |
 
@@ -80,7 +80,7 @@ Le metriche si dividono in **decisionali** (FC, decoupling, fascia plantare, son
 ```
 running-coach-ai/               # Fidippide
 ├── training-plan.md            # il piano attuale
-├── obiettivi-lungo-termine.md  # la direzione per i piani successivi
+├── long-term-goals.md  # la direzione per i piani successivi
 ├── docs/                       # il sito (GitHub Pages): logo, dashboard e progressi
 ├── training-log/               # una pagina per settimana (da Garmin)
 ├── coaching-log/               # le note del coach, settimana per settimana

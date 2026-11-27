@@ -110,7 +110,7 @@ Saltelli a piedi pari, saltelli su una gamba, balzi, salti sul gradino. **Solo d
 - **Polpacci sotto il riferimento su entrambi i lati:** con una storia di fascite e il volume che cresce, è la priorità.
 - **Glutei buoni**, side plank da migliorare.
 
-**Cosa si fa (dal 1° novembre):** serie in più sul sinistro per calf raise, side plank e mezzo squat su una gamba, che sostituisce lo squat normale; equilibrio ogni giorno. **Da gennaio 2027: 2 sedute a settimana in palestra** con carichi veri (squat, stacco rumeno, affondi, calf raise con carico), come da [obiettivi a lungo termine](../obiettivi-lungo-termine.md).
+**Cosa si fa (dal 1° novembre):** serie in più sul sinistro per calf raise, side plank e mezzo squat su una gamba, che sostituisce lo squat normale; equilibrio ogni giorno. **Da gennaio 2027: 2 sedute a settimana in palestra** con carichi veri (squat, stacco rumeno, affondi, calf raise con carico), come da [obiettivi a lungo termine](../long-term-goals.md).
 
 **Limiti:** tre settimane di forza prima del primo test: i valori di partenza sono quelli di chi ha appena cominciato. A novembre i miglioramenti saranno in gran parte nervosi (si impara l'esercizio), non muscolari.
 

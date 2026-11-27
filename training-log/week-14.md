@@ -3,21 +3,54 @@
 ## Week Summary
 
 ### Overall Totals
-- **Total Activities**: 1
-- **Total Distance**: 7.69 km
-- **Total Time**: 0:57:01
-- **Total Elevation**: 8 m
-- **Total Calories**: 575 kcal (1/1 activities with data)
-- **Total TSS**: 80 (1/1 activities with a valid NGP/IF)
-- **Average RPE**: 4.0/10 (1/1 activities rated)
-- **Total sRPE**: 228 (RPE x minutes, rated activities only)
+- **Total Activities**: 2
+- **Total Distance**: 12.69 km
+- **Total Time**: 1:30:50
+- **Total Elevation**: 12 m
+- **Total Calories**: 952 kcal (2/2 activities with data)
+- **Total TSS**: 129 (2/2 activities with a valid NGP/IF)
+- **Average RPE**: 4.0/10 (2/2 activities rated)
+- **Total sRPE**: 363 (RPE x minutes, rated activities only)
 
 ### Running Totals
-- **Total Run Time**: 0:45:06
-- **Total Walk Time**: 0:12:01
+- **Total Run Time**: 1:18:48
+- **Total Walk Time**: 0:12:09
 
 ## Activities
 
+### 2026-11-27 11:18:29 - S13 Tempo 3000m
+
+**Type**: Run
+**Distance**: 5.00 km
+**Duration**: 0:33:49
+**Pace**: 6:46/km
+**NGP medio**: 6:42/km
+**IF**: 0.93
+**TSS**: 49
+**RPE**: 4/10
+**sRPE**: 135
+**Sensazione**: Forte (75/100)
+**Run time**: 0:33:42
+**Walk time**: 0:00:08
+**Elevation**: 4 m
+**Calories**: 377 kcal
+**Heart Rate**: 158 bpm (max: 172)
+**Power**: 270 W (NP: 274 W, 96% of threshold 285 W, P4 Threshold) · 3.48 W/kg
+**Meteo**: 17°C, rugiada 10°C, umidità 66% (stazione Roma Fiumicino, aria all'ombra)
+**Note**: Ottimo Allenamento. Mobilità,  riscaldamento poi via con il Tempo. Stavo molto bene tanto che ho dovuto frenare nel riscaldamento perché arrivavo con facilità a 6:35. Durante il Tempo non ho mai avvertito troppa fatica tranne che sul finale ed ad inizio defaticamento per recuperare. Ho fatto poi una passeggiata di 1.5km per vedere se con stretching allevia un po' i DOMS. Fascite plantare si è fatta sentire nel finale, poi sparita.
+
+#### Lap Details
+
+| Lap | Distance | Time    | Pace    | HR  | Power | Elevation |
+|-----|----------|---------|---------|-----|-------|-----------|
+| 1   | 1.00 km  | 0:06:59 | 7:00/km | 139 | 260 W | 2 m       |
+| 2   | 1.00 km  | 0:06:23 | 6:23/km | 159 | 289 W | 1 m       |
+| 3   | 1.00 km  | 0:06:23 | 6:23/km | 165 | 291 W | 1 m       |
+| 4   | 1.00 km  | 0:06:19 | 6:19/km | 167 | 281 W | 0 m       |
+| 5   | 1.00 km  | 0:07:44 | 7:44/km | 162 | 237 W | 0 m       |
+| 6   | 0.00 km  | 0:00:01 | 7:32/km | 160 | 239 W | 0 m       |
+
+---
 ### 2026-11-24 07:49:54 - S13 Intervals 3x400+3x800
 
 **Type**: Run
@@ -65,8 +98,8 @@
 
 - **Metodo**: Karvonen
 - **FC max**: 185 bpm
-- **FC riposo media**: 55.8 bpm
-- **Riserva cardiaca**: 129.2 bpm
+- **FC riposo media**: 55.2 bpm
+- **Riserva cardiaca**: 129.8 bpm
 
 | Zona | % HRR | FC |
 | --- | ---: | ---: |

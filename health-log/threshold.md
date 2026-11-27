@@ -3,7 +3,7 @@
 Passo di soglia: il passo sostenibile alla FC di soglia, oggi 165 bpm (`.claude/training-zones.yaml`, da verificare a ogni gara).
 
 - **Ultima stima da gara** (08/11): **6:18/km**, FC di soglia 168 bpm, VDOT 29.1 — passo medio Garmin di uno sforzo continuo di 30-60 minuti: la misura piu diretta.
-- **Ultima stima da tempo continuo** (29/10): **6:16/km** — misura quasi diretta.
+- **Ultima stima da tempo continuo** (27/11): **6:22/km** — misura quasi diretta.
 - **Ultima stima da tempo a ripetute** (13/11): **6:19/km** — ottimista: la FC non si stabilizza in frazioni brevi.
 
 - **Tempo:** solo i tratti di lavoro (sotto 6:40/km) a passo stabile e con la FC entro +/-6 bpm dalla soglia; ogni campione e riportato alla FC di soglia con la relazione lineare velocita-%FCR. Con un blocco continuo di almeno 12' la seduta conta come "Tempo continuo".
@@ -20,3 +20,4 @@ Passo di soglia: il passo sostenibile alla FC di soglia, oggi 165 bpm (`.claude/
 | 2026-10-29 | S9 Tempo 2000m   | Tempo continuo   | 11           | 6:16/km         | -                    | -    |
 | 2026-11-08 | Rome 5k          | Gara             | 33           | 6:18/km         | 168 bpm              | 29.1 |
 | 2026-11-13 | S11 Tempo 2500m  | Tempo a ripetute | 9            | 6:19/km         | -                    | -    |
+| 2026-11-27 | S13 Tempo 3000m  | Tempo continuo   | 17           | 6:22/km         | -                    | -    |

@@ -1,11 +1,11 @@
 # VO2max Log
 
-**Stima attuale: 40.8 ml/kg/min** (al 2026-11-22; controllo: mediana delle singole corse degli ultimi 28 giorni 40.8).
+**Stima attuale: 40.7 ml/kg/min** (al 2026-11-27; controllo: mediana delle singole corse degli ultimi 28 giorni 40.3).
 
 Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, corsa in piano, velocita corretta per la pendenza), `%FCR = (FC - FC riposo) / (185 - FC riposo)`, `VO2max = 3.5 + (VO2 - 3.5) / %FCR` (Swain).
 
 - **VO2max stimato:** ogni corsa aggiorna la stima senza sostituirla, come fa Garmin. E la media delle stime delle corse fatte fin li, pesata sui minuti stabili e sull'eta: il peso di una corsa si dimezza ogni 15 giorni (costante di tempo 21 giorni). Un lungo da 36' sposta la stima tre volte piu di un Tempo con 12' utili. La stima attuale e quella dopo l'ultima corsa.
-- **Perche non si usa la singola corsa:** con i valori dell'ultima corsa 1 bpm di FC vale 0.41 punti, quindi 2 bpm di variazione giornaliera (sonno, stress, caldo, sensore) sposterebbero la stima di ~0.8, mentre il VO2max vero cambia in settimane o mesi.
+- **Perche non si usa la singola corsa:** con i valori dell'ultima corsa 1 bpm di FC vale 0.34 punti, quindi 2 bpm di variazione giornaliera (sonno, stress, caldo, sensore) sposterebbero la stima di ~0.7, mentre il VO2max vero cambia in settimane o mesi.
 - **Tratti usati:** solo ritmo stabile (passo entro +/-6% per almeno 2 minuti), FC stabile (oscillazione massima 8 bpm), dopo i primi 10 minuti e con FC sopra il 50% della riserva. Recuperi, transizioni, defaticamenti dopo lavori intensi e ripetute brevi restano esclusi, cosi come le corse con piu del 10% di camminata.
 - **Per corsa:** mediana dei tratti stabili; servono almeno 5 minuti stabili.
 - **FC max 185** da `.claude/training-zones.yaml`: la stima dipende soprattutto dalla FC max. **FC a riposo** della settimana della corsa (media dei 7 giorni fino alla corsa da `daily-health.md`, notti senza orologio escluse): cosi le corse passate non cambiano quando cambia la FC a riposo di oggi.
@@ -32,3 +32,4 @@ Stima dalla relazione FC-passo: `VO2 = 0.2 x velocita (m/min) + 3.5` (ACSM, cors
 | 2026-11-10 | S11 Easy run       | 20             | 7:49/km           | 151 bpm  | 59.1      | 40.2           | 42.5          |
 | 2026-11-15 | S11 Long run 6.5km | 37             | 7:13/km           | 151 bpm  | 59.3      | 40.5           | 42.4          |
 | 2026-11-22 | S12 Long run 7.5km | 43             | 7:13/km           | 150 bpm  | 57.6      | 40.8           | 42.5          |
+| 2026-11-27 | S13 Tempo 3000m    | 22             | 6:40/km           | 164 bpm  | 55.2      | 40.7           | 42.7          |

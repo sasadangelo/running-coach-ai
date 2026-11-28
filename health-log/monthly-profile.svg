@@ -33,9 +33,9 @@
 <circle cx="329.0" cy="291.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · VO2max: 40.1 (indice 100)</title></circle>
 <circle cx="300.0" cy="303.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · EF: 0.915 (indice 100)</title></circle>
 <circle cx="271.0" cy="291.0" r="4" style="fill:var(--s3, #1baf7a);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Settembre 2026 · M: 0.918 (indice 100)</title></circle>
-<polygon points="300.0,133.1 344.8,262.0 331.5,293.5 300.0,302.2 270.1,291.9 259.0,262.0 271.0,233.0" style="fill:var(--s2, #eb6834);stroke:var(--s2, #eb6834)" fill-opacity="0.12" stroke-width="2"/>
+<polygon points="300.0,133.1 345.1,262.0 331.5,293.5 300.0,302.2 270.1,291.9 259.0,262.0 271.0,233.0" style="fill:var(--s2, #eb6834);stroke:var(--s2, #eb6834)" fill-opacity="0.12" stroke-width="2"/>
 <circle cx="300.0" cy="133.1" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · ES: 10.0 (indice 143)</title></circle>
-<circle cx="344.8" cy="262.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · Soglia: 6:16/km (indice 102)</title></circle>
+<circle cx="345.1" cy="262.0" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · Soglia: 6:15/km (indice 102)</title></circle>
 <circle cx="331.5" cy="293.5" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · VO2max: 40.8 (indice 102)</title></circle>
 <circle cx="300.0" cy="302.2" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · EF: 0.912 (indice 100)</title></circle>
 <circle cx="270.1" cy="291.9" r="4" style="fill:var(--s2, #eb6834);stroke:var(--surface-1, #fcfcfb)" stroke-width="2"><title>Ottobre 2026 · M: 0.924 (indice 101)</title></circle>
